@@ -68,61 +68,6 @@ run_task_phase() {
       >"${output_root}/work/logs/${phase}_${task}.log" 2>&1 &
     pids+=("$!")
   done
-  if [[ "${phase}" = branches ]]; then
-    first_marker=
-    marker_waits=0
-    while [[ -z "${first_marker}" ]]; do
-      first_marker=$(find "${output_root}/work/branch_shards" -type f -name '*.complete.json' -print -quit 2>/dev/null || true)
-      if [[ -z "${first_marker}" ]]; then
-        any_alive=0
-        for pid in "${pids[@]}"; do
-          if kill -0 "${pid}" 2>/dev/null; then
-            any_alive=1
-          fi
-        done
-        if [[ "${any_alive}" -eq 0 ]]; then
-          printf 'all branch workers exited before a committed shard appeared\n' >&2
-          return 1
-        fi
-        marker_waits=$((marker_waits + 1))
-        if [[ "${marker_waits}" -ge 360 ]]; then
-          printf 'no committed branch shard appeared within one hour\n' >&2
-          return 1
-        fi
-        sleep 10
-      fi
-    done
-    export PAI_FIRST_MARKER="${first_marker}"
-    export PAI_STAGE1_ARTIFACT_DIR="${artifact_dir}"
-    export PAI_STAGE1_RUN_ID="${run_id}"
-    export PAI_STAGE1_NONCE="${nonce}"
-    "${simulation_python}" - <<'PY'
-import json
-import os
-
-from caaa_libero.pipeline import utc_now
-from caaa_libero.storage import atomic_json, validate_complete
-
-marker = os.environ["PAI_FIRST_MARKER"]
-payload = marker[: -len(".complete.json")]
-valid, metadata = validate_complete(payload)
-if not valid:
-    raise RuntimeError("first shard failed hash validation: %s" % (metadata,))
-atomic_json(
-    os.path.join(os.environ["PAI_STAGE1_ARTIFACT_DIR"], "FIRST_COMMITTED_SHARD.json"),
-    {
-        "created_utc": utc_now(),
-        "run_id": os.environ["PAI_STAGE1_RUN_ID"],
-        "nonce": os.environ["PAI_STAGE1_NONCE"],
-        "payload": payload,
-        "completion_marker": marker,
-        "payload_sha256": metadata["payload_sha256"],
-        "status": "persisted_committed_sample_or_shard",
-    },
-)
-PY
-    sync -f "${artifact_dir}/FIRST_COMMITTED_SHARD.json"
-  fi
   local pid
   for pid in "${pids[@]}"; do
     if ! wait "${pid}"; then
@@ -131,6 +76,57 @@ PY
   done
   if [[ "${failed}" -ne 0 ]]; then
     return 1
+  fi
+  if [[ "${phase}" = branches ]]; then
+    export PAI_STAGE1_ARTIFACT_DIR="${artifact_dir}"
+    export PAI_STAGE1_RUN_ID="${run_id}"
+    export PAI_STAGE1_NONCE="${nonce}"
+    export PAI_STAGE1_OUTPUT_ROOT="${output_root}"
+    "${simulation_python}" - <<'PY'
+import glob
+import json
+import os
+
+from caaa_libero.pipeline import utc_now
+from caaa_libero.storage import atomic_json, validate_complete
+
+root = os.environ["PAI_STAGE1_OUTPUT_ROOT"]
+run_id = os.environ["PAI_STAGE1_RUN_ID"]
+nonce = os.environ["PAI_STAGE1_NONCE"]
+tasks = ("bowl_on_plate", "plate_push", "stove_turn_on", "wine_rack")
+manifest_paths = []
+for task in tasks:
+    path = os.path.join(root, "work", "branch_collection_%s.json" % task)
+    with open(path, "r", encoding="utf-8") as handle:
+        manifest = json.load(handle)
+    if manifest.get("pai_run_id") != run_id or manifest.get("pai_nonce") != nonce:
+        raise RuntimeError("branch manifest is not bound to the current launch: %s" % path)
+    if manifest.get("count") != 64:
+        raise RuntimeError("branch manifest is incomplete: %s" % path)
+    manifest_paths.append(path)
+shards = sorted(glob.glob(os.path.join(root, "work", "branch_shards", "*", "*.npz")))
+if len(shards) != 256:
+    raise RuntimeError("expected 256 branch shards, found %d" % len(shards))
+payload = shards[0]
+valid, metadata = validate_complete(payload)
+if not valid:
+    raise RuntimeError("committed shard failed hash validation: %s" % (metadata,))
+atomic_json(
+    os.path.join(os.environ["PAI_STAGE1_ARTIFACT_DIR"], "FIRST_COMMITTED_SHARD.json"),
+    {
+        "created_utc": utc_now(),
+        "run_id": run_id,
+        "nonce": nonce,
+        "payload": payload,
+        "completion_marker": payload + ".complete.json",
+        "payload_sha256": metadata["payload_sha256"],
+        "current_launch_manifests": manifest_paths,
+        "current_launch_manifest_status": "updated_after_hash_verified_collection_or_resume",
+        "status": "persisted_committed_sample_or_shard",
+    },
+)
+PY
+    sync -f "${artifact_dir}/FIRST_COMMITTED_SHARD.json"
   fi
 }
 

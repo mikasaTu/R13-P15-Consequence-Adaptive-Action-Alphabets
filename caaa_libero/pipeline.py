@@ -454,6 +454,8 @@ def collect_branches(
                             "snapshot_index": index,
                             "branches": len(rollouts),
                             "created_utc": utc_now(),
+                            "pai_run_id": os.environ.get("PAI_CANARY_RUN_ID"),
+                            "pai_nonce": os.environ.get("PAI_CANARY_NONCE"),
                         },
                     )
                     completed.append({"path": shard, "marker": marker, "status": "created"})
@@ -464,9 +466,23 @@ def collect_branches(
                     )
         finally:
             runtime.close()
+    manifest_suffix = "all"
+    if task_ids is not None:
+        manifest_suffix = "_".join(sorted(task["task_id"] for task in tasks))
     atomic_json(
-        os.path.join(output_root, "work", "branch_collection_manifest.json"),
-        {"created_utc": utc_now(), "shards": completed, "count": len(completed)},
+        os.path.join(
+            output_root,
+            "work",
+            "branch_collection_%s.json" % manifest_suffix,
+        ),
+        {
+            "created_utc": utc_now(),
+            "pai_run_id": os.environ.get("PAI_CANARY_RUN_ID"),
+            "pai_nonce": os.environ.get("PAI_CANARY_NONCE"),
+            "task_ids": [task["task_id"] for task in tasks],
+            "shards": completed,
+            "count": len(completed),
+        },
     )
     return completed
 
