@@ -11,6 +11,7 @@ import os
 import numpy as np
 
 from . import config
+from .analysis import BASELINE_METHODS
 from .pipeline import utc_now
 from .storage import atomic_json, atomic_text, sha256_file, sha256_tree, validate_complete
 

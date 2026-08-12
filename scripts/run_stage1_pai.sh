@@ -128,6 +128,37 @@ atomic_json(
 )
 PY
     sync -f "${artifact_dir}/FIRST_COMMITTED_SHARD.json"
+  elif [[ "${phase}" = quantized ]]; then
+    export PAI_STAGE1_RUN_ID="${run_id}"
+    export PAI_STAGE1_NONCE="${nonce}"
+    export PAI_STAGE1_OUTPUT_ROOT="${output_root}"
+    "${simulation_python}" - <<'PY'
+import glob
+import json
+import os
+
+from caaa_libero.storage import validate_complete
+
+root = os.environ["PAI_STAGE1_OUTPUT_ROOT"]
+run_id = os.environ["PAI_STAGE1_RUN_ID"]
+nonce = os.environ["PAI_STAGE1_NONCE"]
+tasks = ("bowl_on_plate", "plate_push", "stove_turn_on", "wine_rack")
+for task in tasks:
+    path = os.path.join(root, "work", "quantized_collection_%s.json" % task)
+    with open(path, "r", encoding="utf-8") as handle:
+        manifest = json.load(handle)
+    if manifest.get("pai_run_id") != run_id or manifest.get("pai_nonce") != nonce:
+        raise RuntimeError("quantized manifest is not bound to current launch: %s" % path)
+    if manifest.get("count") != 32:
+        raise RuntimeError("quantized manifest is incomplete: %s" % path)
+shards = sorted(glob.glob(os.path.join(root, "work", "quantized_shards", "*", "*.npz")))
+if len(shards) != 128:
+    raise RuntimeError("expected 128 quantized shards, found %d" % len(shards))
+for payload in shards:
+    valid, metadata = validate_complete(payload)
+    if not valid:
+        raise RuntimeError("committed quantized shard failed hash validation: %s %s" % (payload, metadata))
+PY
   fi
 }
 

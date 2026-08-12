@@ -35,6 +35,51 @@ def _quantized_path(output_root, task_id, plan_path):
     )
 
 
+def _validate_resumed_shard_against_plan(plan_path, destination):
+    """Require a resumed realized-rollout shard to match the current frozen plan."""
+    copied_fields = (
+        "task_id",
+        "episode_id",
+        "split",
+        "phase",
+        "snapshot_index",
+        "methods",
+        "k",
+        "direction",
+        "sign",
+        "radius",
+        "code_index",
+        "decoded_actions",
+        "original_actions",
+        "original_immediate",
+        "original_settled",
+        "original_mask",
+        "original_contact_mode",
+        "original_settled_progress",
+        "original_settled_success",
+    )
+    with np.load(plan_path, allow_pickle=False) as plan, np.load(destination, allow_pickle=False) as shard:
+        missing = [name for name in copied_fields if name not in plan.files or name not in shard.files]
+        if missing:
+            raise RuntimeError("resumed quantized shard is missing plan fields: %s" % missing)
+        mismatched = []
+        for name in copied_fields:
+            planned = np.asarray(plan[name])
+            realized = np.asarray(shard[name])
+            equal = (
+                np.array_equal(planned, realized, equal_nan=True)
+                if planned.dtype.kind in "fc" and realized.dtype.kind in "fc"
+                else np.array_equal(planned, realized)
+            )
+            if not equal:
+                mismatched.append(name)
+    if mismatched:
+        raise RuntimeError(
+            "resumed quantized shard does not match current frozen plan %s: %s"
+            % (plan_path, mismatched)
+        )
+
+
 def collect_quantized(paths, output_root, task_id=None, plan_limit=None):
     tasks = [task for task in config.TASKS if task_id is None or task["task_id"] == task_id]
     if not tasks:
@@ -53,6 +98,7 @@ def collect_quantized(paths, output_root, task_id=None, plan_limit=None):
                 destination = _quantized_path(output_root, task["task_id"], plan_path)
                 valid, evidence = validate_complete(destination)
                 if valid:
+                    _validate_resumed_shard_against_plan(plan_path, destination)
                     completed.append({"path": destination, "status": "resumed", "evidence": evidence})
                     continue
                 with np.load(plan_path, allow_pickle=False) as plan:
@@ -85,6 +131,8 @@ def collect_quantized(paths, output_root, task_id=None, plan_limit=None):
                         "rows": len(decoded_actions),
                         "source_plan": plan_path,
                         "created_utc": utc_now(),
+                        "pai_run_id": os.environ.get("PAI_CANARY_RUN_ID"),
+                        "pai_nonce": os.environ.get("PAI_CANARY_NONCE"),
                     },
                 )
                 completed.append({"path": destination, "marker": marker, "status": "created"})
@@ -102,7 +150,14 @@ def collect_quantized(paths, output_root, task_id=None, plan_limit=None):
     )
     atomic_json(
         manifest_path,
-        {"created_utc": utc_now(), "task_id": task_id, "shards": completed, "count": len(completed)},
+        {
+            "created_utc": utc_now(),
+            "pai_run_id": os.environ.get("PAI_CANARY_RUN_ID"),
+            "pai_nonce": os.environ.get("PAI_CANARY_NONCE"),
+            "task_id": task_id,
+            "shards": completed,
+            "count": len(completed),
+            "resume_validation": "payload_hash_and_exact_current_plan_arrays",
+        },
     )
     return completed
-
