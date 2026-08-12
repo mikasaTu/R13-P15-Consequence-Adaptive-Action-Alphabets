@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "caaa-libero-stage1"
+version = "0.1.0"
+description = "Oracle consequence-geometry audit for CAAA-v2 on LIBERO"
+requires-python = ">=3.8"
+
+[project.scripts]
+caaa-libero = "caaa_libero.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["caaa_libero*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
