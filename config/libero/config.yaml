@@ -1,0 +1,5 @@
+assets: /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original/libero/libero/assets
+bddl_files: /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original/libero/libero/bddl_files
+benchmark_root: /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original/libero/libero
+datasets: /mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO
+init_states: /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original/libero/libero/init_files

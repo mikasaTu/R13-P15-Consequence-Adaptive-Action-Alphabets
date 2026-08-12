@@ -45,6 +45,7 @@ test -z "$(git -C "${project_root}" status --porcelain)"
 export PYTHONPATH="${project_root}:${libero_source}"
 export MUJOCO_GL=glx
 export CUDA_VISIBLE_DEVICES=0
+export LIBERO_CONFIG_PATH="${project_root}/config/libero"
 export XDG_CACHE_HOME="${artifact_dir}/cache/xdg"
 export PYTHONPYCACHEPREFIX="${artifact_dir}/cache/pycache"
 export TMPDIR="${artifact_dir}/tmp"
