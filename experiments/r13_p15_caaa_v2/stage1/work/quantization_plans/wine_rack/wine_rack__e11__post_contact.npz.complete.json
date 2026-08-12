@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:05:03.953618+00:00",
+  "payload": "wine_rack__e11__post_contact.npz",
+  "payload_bytes": 114307,
+  "payload_sha256": "2d4fc19d024ffd293e879e84a47383910c1880f7922717a4e7a0161dfdcd1c59",
+  "rows": 432,
+  "snapshot_key": "wine_rack__e11__post_contact"
+}

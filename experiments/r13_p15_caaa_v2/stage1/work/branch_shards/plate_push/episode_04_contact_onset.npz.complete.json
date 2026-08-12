@@ -1,0 +1,14 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-12T14:45:22.422831+00:00",
+  "episode_id": 4,
+  "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+  "payload": "episode_04_contact_onset.npz",
+  "payload_bytes": 143588,
+  "payload_sha256": "6e40802aa7eb019bf6d9396b40e92f83f9b74c8ac6f14d6e4be0747eda7baa23",
+  "phase": "contact_onset",
+  "snapshot_index": 46,
+  "task_id": "plate_push"
+}

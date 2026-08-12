@@ -1,0 +1,14 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-12T14:47:53.373354+00:00",
+  "episode_id": 6,
+  "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+  "payload": "episode_06_post_contact.npz",
+  "payload_bytes": 156456,
+  "payload_sha256": "ea6f0894122c326600741dc093be901eb41f217f59b2ca7355517ab6692cbc03",
+  "phase": "post_contact",
+  "snapshot_index": 86,
+  "task_id": "bowl_on_plate"
+}

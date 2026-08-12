@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T14:58:34.043431+00:00",
+  "episode_id": 8,
+  "payload": "wine_rack__e08__contact_onset.npz",
+  "payload_bytes": 544423,
+  "payload_sha256": "0ab2068c6b88d471b2e1a485959efd8f4dccd3b4b90070402c5e3c7e0ca8f0a2",
+  "rows": 432,
+  "snapshot_index": 83,
+  "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e08__contact_onset.npz",
+  "task_id": "wine_rack"
+}

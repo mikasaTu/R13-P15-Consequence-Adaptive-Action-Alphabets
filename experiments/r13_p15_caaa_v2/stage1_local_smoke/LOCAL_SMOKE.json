@@ -1,0 +1,78 @@
+{
+  "action_shape": [
+    9,
+    4,
+    7
+  ],
+  "all_finite": true,
+  "branch_shape": [
+    9,
+    46
+  ],
+  "created_utc": "2026-08-12T13:55:48.678450+00:00",
+  "passed": true,
+  "replay_validation": {
+    "created_utc": "2026-08-12T13:55:41.011066+00:00",
+    "failed_tests": [],
+    "gate": "PASS",
+    "n_failed": 0,
+    "n_tests": 1,
+    "passed": true,
+    "tests": [
+      {
+        "a_after_b": {
+          "metrics": {
+            "contact_mode_equal": true,
+            "done_equal": true,
+            "final_state_l2": 0.0,
+            "final_state_max_abs": 0.0,
+            "immediate_consequence_l2": 0.0,
+            "immediate_consequence_max_abs": 0.0,
+            "reward_equal": true,
+            "settled_consequence_l2": 0.0,
+            "settled_consequence_max_abs": 0.0,
+            "success_equal": true
+          },
+          "passed": true
+        },
+        "b_after_a": {
+          "metrics": {
+            "contact_mode_equal": true,
+            "done_equal": true,
+            "final_state_l2": 0.0,
+            "final_state_max_abs": 0.0,
+            "immediate_consequence_l2": 0.0,
+            "immediate_consequence_max_abs": 0.0,
+            "reward_equal": true,
+            "settled_consequence_l2": 0.0,
+            "settled_consequence_max_abs": 0.0,
+            "success_equal": true
+          },
+          "passed": true
+        },
+        "episode_id": 0,
+        "passed": true,
+        "phase": "free_space",
+        "same_action_twice": {
+          "metrics": {
+            "contact_mode_equal": true,
+            "done_equal": true,
+            "final_state_l2": 0.0,
+            "final_state_max_abs": 0.0,
+            "immediate_consequence_l2": 0.0,
+            "immediate_consequence_max_abs": 0.0,
+            "reward_equal": true,
+            "settled_consequence_l2": 0.0,
+            "settled_consequence_max_abs": 0.0,
+            "success_equal": true
+          },
+          "passed": true
+        },
+        "snapshot_index": 2,
+        "task_id": "bowl_on_plate"
+      }
+    ],
+    "tolerance": 1e-12
+  },
+  "scope": "one task, one episode, one phase, two directions; CPU/no-render smoke"
+}

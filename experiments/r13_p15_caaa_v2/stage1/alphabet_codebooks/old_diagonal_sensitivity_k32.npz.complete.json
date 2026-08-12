@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:09.315189+00:00",
+  "k": 32,
+  "method": "old_diagonal_sensitivity",
+  "payload": "old_diagonal_sensitivity_k32.npz",
+  "payload_bytes": 7008,
+  "payload_sha256": "894a307f894dead83b1145231bfc50d26720a5c21ed9a55808ccf6f8029cc538"
+}

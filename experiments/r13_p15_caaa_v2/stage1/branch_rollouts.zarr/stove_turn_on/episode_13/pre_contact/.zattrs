@@ -1,0 +1,6 @@
+{
+    "snapshot_index": 49,
+    "source_npz": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/stove_turn_on/episode_13_pre_contact.npz",
+    "split": "test",
+    "task_name": "turn_on_the_stove"
+}

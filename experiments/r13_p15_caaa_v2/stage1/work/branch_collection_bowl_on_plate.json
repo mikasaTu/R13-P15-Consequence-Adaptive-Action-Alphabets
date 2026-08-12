@@ -1,0 +1,1163 @@
+{
+  "count": 64,
+  "created_utc": "2026-08-12T16:01:46.688835+00:00",
+  "pai_nonce": "ba11fa5b332d5b2514b0fd4521d550ea",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-f",
+  "shards": [
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:41:40.381600+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_free_space.npz",
+        "payload_bytes": 107403,
+        "payload_sha256": "74eb92d0cce2d51c2762c05926dcb44fc440e66e7f5cd8228ae20017d43188c0",
+        "phase": "free_space",
+        "snapshot_index": 2,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_00_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:41:52.634401+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_pre_contact.npz",
+        "payload_bytes": 151800,
+        "payload_sha256": "e0ac2cc82e641cb410bec89283c9921d90d2856aa5ec35e958833f87e6c92aba",
+        "phase": "pre_contact",
+        "snapshot_index": 30,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_00_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:06.192196+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_contact_onset.npz",
+        "payload_bytes": 152621,
+        "payload_sha256": "f479250c55c94936cb452609688fb277b84daa45f54b7865d57c21ced5cfbd85",
+        "phase": "contact_onset",
+        "snapshot_index": 34,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_00_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:20.718321+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_post_contact.npz",
+        "payload_bytes": 157988,
+        "payload_sha256": "3943f9629171744684bafac5dcf253f9b6777c7a563087c63c95d4c1f40d41d7",
+        "phase": "post_contact",
+        "snapshot_index": 70,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_00_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:33.085882+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_free_space.npz",
+        "payload_bytes": 112637,
+        "payload_sha256": "6c5f5e3e4bee6654b01b2d5e140aa0f73a01cc14d00f39de864c2725d61437ac",
+        "phase": "free_space",
+        "snapshot_index": 12,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_01_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:46.082103+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_pre_contact.npz",
+        "payload_bytes": 145885,
+        "payload_sha256": "ecd463a15b63ad43659d465db305970766cd403d7a9e91a106892eac72015640",
+        "phase": "pre_contact",
+        "snapshot_index": 34,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_01_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:01.907207+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_contact_onset.npz",
+        "payload_bytes": 152270,
+        "payload_sha256": "cb78ba7fd48d07c246914d3d6c67fd89e0d763a0f9fa1aaba1417b8b3773ce6b",
+        "phase": "contact_onset",
+        "snapshot_index": 38,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_01_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:19.133552+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_post_contact.npz",
+        "payload_bytes": 153475,
+        "payload_sha256": "6f7708e6a062e1c4a6c67d9a1aff17041f2d0d96aaf12db440624b075f5d5af4",
+        "phase": "post_contact",
+        "snapshot_index": 77,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_01_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:31.871135+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_free_space.npz",
+        "payload_bytes": 112624,
+        "payload_sha256": "bff5b1e7f26fdeb1fb8de4ad950af15783e23a96e5f101e7f1d8cf97e5d78cf8",
+        "phase": "free_space",
+        "snapshot_index": 13,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_02_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:44.669678+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_pre_contact.npz",
+        "payload_bytes": 146611,
+        "payload_sha256": "4dd8b76bd66224397ff2570c6dd07e37ce9732c3e15fbe625651e15c53e991c3",
+        "phase": "pre_contact",
+        "snapshot_index": 37,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_02_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:59.383022+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_contact_onset.npz",
+        "payload_bytes": 150126,
+        "payload_sha256": "f4b4efc2972b10df481d5ee26e85f10984b8b0c3a3a6d6b0d71dc239eae5f74c",
+        "phase": "contact_onset",
+        "snapshot_index": 41,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_02_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:16.301194+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_post_contact.npz",
+        "payload_bytes": 157446,
+        "payload_sha256": "4a978d6852d444e42fb50b8d5b9e169fda9468f914f85d10e161fe32b49d59ca",
+        "phase": "post_contact",
+        "snapshot_index": 81,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_02_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:28.742360+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_free_space.npz",
+        "payload_bytes": 109179,
+        "payload_sha256": "622de97a351b43d42da32b473aeec5f23d2be016f3115bd0f96b6217e6d0f15c",
+        "phase": "free_space",
+        "snapshot_index": 3,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_03_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:40.750067+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_pre_contact.npz",
+        "payload_bytes": 146046,
+        "payload_sha256": "4da1a7e18e8eed93401a3522288cc7edd73271c7d228f2073eac8661893546c1",
+        "phase": "pre_contact",
+        "snapshot_index": 38,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_03_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:52.965875+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_contact_onset.npz",
+        "payload_bytes": 148401,
+        "payload_sha256": "357ff857e66c2f8d83436dcdcbefa5c1bf2e1ba21a55c79d4ad81da847403f86",
+        "phase": "contact_onset",
+        "snapshot_index": 42,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_03_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:09.592790+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_post_contact.npz",
+        "payload_bytes": 153983,
+        "payload_sha256": "ac7527bd3a3e9b71b5b9a8e93d524054f9f36c714f09edc81fa39a3c9b272124",
+        "phase": "post_contact",
+        "snapshot_index": 73,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_03_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:22.100406+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_free_space.npz",
+        "payload_bytes": 113863,
+        "payload_sha256": "ef87ed52cee612c805459748e7b29337bc6ee4125f6feb652db2b283c8172674",
+        "phase": "free_space",
+        "snapshot_index": 11,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_04_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:34.785430+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_pre_contact.npz",
+        "payload_bytes": 147191,
+        "payload_sha256": "0b7619aad4486390e8d694e98ae22f5a7021d586abe5c8164c2bd0d9205f537b",
+        "phase": "pre_contact",
+        "snapshot_index": 32,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_04_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:49.664153+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_contact_onset.npz",
+        "payload_bytes": 146172,
+        "payload_sha256": "35ba2b921fe8fef805850d2facc93680158ef37d0b6c7be6ea9491e6e3c17759",
+        "phase": "contact_onset",
+        "snapshot_index": 36,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_04_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:06.629018+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_post_contact.npz",
+        "payload_bytes": 157937,
+        "payload_sha256": "ef32dea1d1ccaacd77af250b8e2a6062ca442bb098c9207222793b9e926d1103",
+        "phase": "post_contact",
+        "snapshot_index": 68,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_04_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:19.224352+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_free_space.npz",
+        "payload_bytes": 113458,
+        "payload_sha256": "a2a108eebdf0f8c6330a4dcda319ce5135254b8c08ce633ec2b1ffe64401250f",
+        "phase": "free_space",
+        "snapshot_index": 13,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_05_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:32.256491+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_pre_contact.npz",
+        "payload_bytes": 147805,
+        "payload_sha256": "8f43822379f9aec04fb874431328c5c62840ea4b1a2b05c65bea236d91102fdd",
+        "phase": "pre_contact",
+        "snapshot_index": 30,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_05_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:46.215025+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_contact_onset.npz",
+        "payload_bytes": 154647,
+        "payload_sha256": "cacb4444614ddfc4fdd8f56acf14743149bfa1668e57d3d1935937e68a08399c",
+        "phase": "contact_onset",
+        "snapshot_index": 34,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_05_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:00.943693+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_post_contact.npz",
+        "payload_bytes": 157641,
+        "payload_sha256": "2abae7687b64cbee6b9e1df5c2d7b19e3cba62e72f54a4c156f2d3ac3816a728",
+        "phase": "post_contact",
+        "snapshot_index": 71,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_05_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:13.418358+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_free_space.npz",
+        "payload_bytes": 117842,
+        "payload_sha256": "e06ae03a0b6b6f0f37fc17100ac4611200f45f492ec44f7b97105843ec7d8e9a",
+        "phase": "free_space",
+        "snapshot_index": 17,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_06_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:25.619303+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_pre_contact.npz",
+        "payload_bytes": 150965,
+        "payload_sha256": "a2f0afd5eed4350ae08ce646c13afa66f9736eb347f3e013bc36e5fbbfe82bca",
+        "phase": "pre_contact",
+        "snapshot_index": 48,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_06_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:38.307773+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_contact_onset.npz",
+        "payload_bytes": 157238,
+        "payload_sha256": "77d641c0500c3ac766be4f492ce3b1e39e16adef6a30cad43d84bd2e81960f51",
+        "phase": "contact_onset",
+        "snapshot_index": 52,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_06_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:53.373354+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_post_contact.npz",
+        "payload_bytes": 156456,
+        "payload_sha256": "ea6f0894122c326600741dc093be901eb41f217f59b2ca7355517ab6692cbc03",
+        "phase": "post_contact",
+        "snapshot_index": 86,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_06_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:06.255054+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_free_space.npz",
+        "payload_bytes": 114828,
+        "payload_sha256": "b4a13806d041f4020d5f42c857df93bcd15e99f6751779494ac02927f0845692",
+        "phase": "free_space",
+        "snapshot_index": 15,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_07_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:19.440109+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_pre_contact.npz",
+        "payload_bytes": 149791,
+        "payload_sha256": "a55e3feac66c131033415957ef38ede148629af27cbc4b5539cedd901c206191",
+        "phase": "pre_contact",
+        "snapshot_index": 37,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_07_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:34.756203+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_contact_onset.npz",
+        "payload_bytes": 150929,
+        "payload_sha256": "2f975ed47e7dc1c20dccfc2953a371ab52a1b4902b84010d2311cb2fbe6b237c",
+        "phase": "contact_onset",
+        "snapshot_index": 41,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_07_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:52.729323+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_post_contact.npz",
+        "payload_bytes": 158403,
+        "payload_sha256": "94fa927f06f51581c92b76b045d043a837ed8666b3d927dc0f9fec0418336871",
+        "phase": "post_contact",
+        "snapshot_index": 81,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_07_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:05.290193+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_free_space.npz",
+        "payload_bytes": 112797,
+        "payload_sha256": "e9d7455ccc53ac3537fd94e439bc52c4c9137c4955ad4d7d106348e8d167652a",
+        "phase": "free_space",
+        "snapshot_index": 13,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_08_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:19.210609+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_pre_contact.npz",
+        "payload_bytes": 147363,
+        "payload_sha256": "97b86aeb69c51596ffe444c1783badeb354815dc87b50744e0769824a23f069b",
+        "phase": "pre_contact",
+        "snapshot_index": 37,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_08_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:33.625891+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_contact_onset.npz",
+        "payload_bytes": 150129,
+        "payload_sha256": "9ce4b59ce46a998067605e0a21c0c04a66d3178d9b3a665a9b1580c2336f6eda",
+        "phase": "contact_onset",
+        "snapshot_index": 41,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_08_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:51.270147+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_post_contact.npz",
+        "payload_bytes": 152767,
+        "payload_sha256": "6c523bb0193be52c5db16fe01c068068bdb8d39bfb6be0e2a55c01fd72b5d138",
+        "phase": "post_contact",
+        "snapshot_index": 72,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_08_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:03.872342+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_free_space.npz",
+        "payload_bytes": 115805,
+        "payload_sha256": "0711ffba451fdb6e9bb0b8d76c514eef204551550e5c2fe0feca3e0499feaa80",
+        "phase": "free_space",
+        "snapshot_index": 15,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_09_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:16.170826+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_pre_contact.npz",
+        "payload_bytes": 150829,
+        "payload_sha256": "a90ded68c8784435bf99cf5d9bbf5ad954074fcf333a9bc7e3dcbbceba4252ba",
+        "phase": "pre_contact",
+        "snapshot_index": 42,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_09_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:29.043967+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_contact_onset.npz",
+        "payload_bytes": 151997,
+        "payload_sha256": "104746f960b12229eebecd807dcad6aaeca9831bc9e902eefd470c81bfdc4f98",
+        "phase": "contact_onset",
+        "snapshot_index": 46,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_09_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:45.383906+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_post_contact.npz",
+        "payload_bytes": 154189,
+        "payload_sha256": "26800d82d1e256066302030b3df48cae6611351c41f52a712094d3d1fe185999",
+        "phase": "post_contact",
+        "snapshot_index": 78,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_09_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:58.458916+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_free_space.npz",
+        "payload_bytes": 115609,
+        "payload_sha256": "434e2ee53421a4609fb50d514c3d80f9bef6b7cace166f67f4ce2c132883c374",
+        "phase": "free_space",
+        "snapshot_index": 19,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_10_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:10.997736+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_pre_contact.npz",
+        "payload_bytes": 151803,
+        "payload_sha256": "b1155615c95479679afefa37a153caefa43ddea1962b7a0b76354312f14a5e2c",
+        "phase": "pre_contact",
+        "snapshot_index": 53,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_10_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:23.492421+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_contact_onset.npz",
+        "payload_bytes": 155701,
+        "payload_sha256": "0d32128268162bb56ad13db6800c3561b02663e11759b6958337de6fc84894fa",
+        "phase": "contact_onset",
+        "snapshot_index": 57,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_10_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:40.700790+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_post_contact.npz",
+        "payload_bytes": 154855,
+        "payload_sha256": "a79d20d8b49a2f378180ccf4ee2df319e6f5ebb6fdced7121482dc2eb4f970ec",
+        "phase": "post_contact",
+        "snapshot_index": 93,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_10_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:53.339556+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_free_space.npz",
+        "payload_bytes": 112612,
+        "payload_sha256": "8d82e283bebb48fd09cab8449f92789b3016d3801916a6c2a98dc58e5944fbfc",
+        "phase": "free_space",
+        "snapshot_index": 14,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_11_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:06.239316+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_pre_contact.npz",
+        "payload_bytes": 148823,
+        "payload_sha256": "475db8c199bc3f3db92b1be1b14ae18926ee925fc53e60a28ef2d49aa6f89197",
+        "phase": "pre_contact",
+        "snapshot_index": 39,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_11_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:21.537661+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_contact_onset.npz",
+        "payload_bytes": 150611,
+        "payload_sha256": "09c14a0285e1b4923fbbd615ffb5d57d3fb9f35a1fc8e8c58230978368bc2ac4",
+        "phase": "contact_onset",
+        "snapshot_index": 43,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_11_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:38.546665+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_post_contact.npz",
+        "payload_bytes": 155872,
+        "payload_sha256": "9c483d734b9a6392c51b960190ac27557c1e815c8e59cb03907e643d652d057b",
+        "phase": "post_contact",
+        "snapshot_index": 73,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_11_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:51.273615+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_free_space.npz",
+        "payload_bytes": 112501,
+        "payload_sha256": "4a6f6b38da59d81b57c7e7558d510aa1b58404bc90862676dc0c2920ec37663b",
+        "phase": "free_space",
+        "snapshot_index": 29,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_12_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:03.161949+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_pre_contact.npz",
+        "payload_bytes": 143906,
+        "payload_sha256": "dff267435a4a3d3eab15a09ffd2c8cf07a6c1bcb1c4ff84c44e08b27f2c467c0",
+        "phase": "pre_contact",
+        "snapshot_index": 45,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_12_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:15.884740+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_contact_onset.npz",
+        "payload_bytes": 151625,
+        "payload_sha256": "da07752da21cfacc4723aa30f9f106151b9be8b0784cc6d6071871e7e9e6c163",
+        "phase": "contact_onset",
+        "snapshot_index": 49,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_12_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:28.634655+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_post_contact.npz",
+        "payload_bytes": 155680,
+        "payload_sha256": "b0c9aea4914d9a2768149d170ff5b2d03d527b6a6cd70eb00e605ea99f1ac671",
+        "phase": "post_contact",
+        "snapshot_index": 77,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_12_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:41.178814+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_free_space.npz",
+        "payload_bytes": 115384,
+        "payload_sha256": "50bfd5fb0c7a89f86ba7e9f80c596ae1eb2aa93f795b1f7db16504448a0a748b",
+        "phase": "free_space",
+        "snapshot_index": 14,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_13_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:54.018595+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_pre_contact.npz",
+        "payload_bytes": 141699,
+        "payload_sha256": "e4946b329b62639b2f70d0c8aa5346a60afa88e471f948a3e5e441b279e455d7",
+        "phase": "pre_contact",
+        "snapshot_index": 38,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_13_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:54:08.959569+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_contact_onset.npz",
+        "payload_bytes": 153128,
+        "payload_sha256": "3c28f590e7739b88b54739a8ed5bb09feec1f5086fedb9cc0782586674a745e1",
+        "phase": "contact_onset",
+        "snapshot_index": 42,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_13_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:54:27.227433+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_post_contact.npz",
+        "payload_bytes": 156665,
+        "payload_sha256": "c4de1e2c5b5236d1785abf25ab967814bce9474f3f30f34c95bef92410500d19",
+        "phase": "post_contact",
+        "snapshot_index": 86,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_13_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:54:39.829049+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_free_space.npz",
+        "payload_bytes": 114317,
+        "payload_sha256": "70145f4c32c5872c9b8e8e34e1024777b9ae7779418018908d48fa5b3ec19f87",
+        "phase": "free_space",
+        "snapshot_index": 13,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_14_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:54:53.604900+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_pre_contact.npz",
+        "payload_bytes": 154668,
+        "payload_sha256": "c0e6963e3910fe022fdc679f5227a6008ed10b4001fd0effd6ffaed831b4eee8",
+        "phase": "pre_contact",
+        "snapshot_index": 35,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_14_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:55:09.279664+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_contact_onset.npz",
+        "payload_bytes": 157127,
+        "payload_sha256": "b7a3fe594bc7dcc9123833cca05c20a8294b173fa3d9e7d7e9da82842017cbcb",
+        "phase": "contact_onset",
+        "snapshot_index": 39,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_14_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:55:27.788166+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_post_contact.npz",
+        "payload_bytes": 154277,
+        "payload_sha256": "8720bd3cef74a323b5893adc53b16e85725d2c2fd2b0d73d12b86691e383824b",
+        "phase": "post_contact",
+        "snapshot_index": 76,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_14_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:55:40.106333+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_free_space.npz",
+        "payload_bytes": 104556,
+        "payload_sha256": "0a35514bdabaef86dabeccfb58d71f690c2257fa49065f42483b65f959953caa",
+        "phase": "free_space",
+        "snapshot_index": 2,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_15_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:55:52.588912+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_pre_contact.npz",
+        "payload_bytes": 154539,
+        "payload_sha256": "60eee436a93586179f26ad45987fcc4b26485f33147901dfccfe8e141972e313",
+        "phase": "pre_contact",
+        "snapshot_index": 40,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_15_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:56:05.569138+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_contact_onset.npz",
+        "payload_bytes": 155416,
+        "payload_sha256": "669127ffdfb53018692d489de854ed85fcbce5f4e660e5105f842b0499e4a1c7",
+        "phase": "contact_onset",
+        "snapshot_index": 44,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_15_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:56:22.222825+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_post_contact.npz",
+        "payload_bytes": 154645,
+        "payload_sha256": "2816dc7018e9811e7f693d608791c96cd363a195e3108d607c074f7ccccee1cd",
+        "phase": "post_contact",
+        "snapshot_index": 73,
+        "task_id": "bowl_on_plate"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_15_post_contact.npz",
+      "status": "resumed"
+    }
+  ],
+  "task_ids": [
+    "bowl_on_plate"
+  ]
+}

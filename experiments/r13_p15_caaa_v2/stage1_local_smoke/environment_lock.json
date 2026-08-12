@@ -1,0 +1,181 @@
+{
+  "controller": {
+    "action_dim": 7,
+    "chunk_horizon": 4,
+    "continuous_chunk_dim": 24,
+    "frequency_hz": 20,
+    "gripper_policy": "copied unchanged from each demonstration chunk",
+    "mode": "OSC_POSE",
+    "robot": "Panda"
+  },
+  "created_utc": "2026-08-12T13:55:27.238140+00:00",
+  "cuda": {
+    "local_gpu_use_contract": "CPU smoke or at most one GPU; simulator launched with one visible GPU at most",
+    "nvidia_smi": "0, NVIDIA A800-SXM4-80GB, GPU-b495d752-69f9-157b-4879-85ce85bc7cfc, 81920 MiB, 580.95.05\n1, NVIDIA A800-SXM4-80GB, GPU-7f252b9e-77b9-fe59-b7c1-9036b14736a8, 81920 MiB, 580.95.05\n2, NVIDIA A800-SXM4-80GB, GPU-ff232f06-cc26-3877-3ec3-dc8976692e15, 81920 MiB, 580.95.05\n3, NVIDIA A800-SXM4-80GB, GPU-5e2c1741-410b-cc2b-0e35-e81604c50c97, 81920 MiB, 580.95.05"
+  },
+  "demonstrations": [
+    {
+      "bytes": 468246288,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "sha256": null,
+      "task_id": "bowl_on_plate"
+    }
+  ],
+  "libero": {
+    "source_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original",
+    "source_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "standard_libero_not_plus_perturbations": true,
+    "suite": "libero_goal",
+    "upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "upstream_comparison": "byte-identical diff -qr against a shallow official checkout; .git and __pycache__ excluded"
+  },
+  "packages": {
+    "h5py": "3.11.0",
+    "libero": null,
+    "mujoco": "2.3.7",
+    "numpy": "1.22.4",
+    "pandas": "1.5.3",
+    "pyarrow": null,
+    "robosuite": "1.4.0",
+    "scipy": "1.10.1",
+    "torch": "1.11.0+cu113",
+    "zarr": null
+  },
+  "paths": {
+    "dataset_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO",
+    "libero_env": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original",
+    "libero_source": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original",
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1_local_smoke"
+  },
+  "platform": {
+    "kernel": "5.10.134-013.9.kangaroo.al8.x86_64",
+    "machine": "x86_64",
+    "platform": "Linux-5.10.134-013.9.kangaroo.al8.x86_64-x86_64-with-glibc2.10"
+  },
+  "project_git_commit": "ERROR:Command '['git', '-C', '/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r13-p15-caaa-v2-libero', 'rev-parse', 'HEAD']' returned non-zero exit status 128.",
+  "project_git_status": "?? .gitignore\n?? PREREGISTRATION_TEMPLATE.md\n?? README.md\n?? caaa_libero/\n?? pyproject.toml",
+  "project_source_tree_sha256": "9549edeb3d342fa58ae4ba22de696ac81a7e26fa582d7bba5aaaf33557cc0ff1",
+  "project_version": "0.1.0",
+  "python": {
+    "executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python",
+    "implementation": "CPython",
+    "version": "3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:18) \n[GCC 10.3.0]"
+  },
+  "sapien": {
+    "applicable": false,
+    "reason": "LIBERO uses MuJoCo/robosuite"
+  },
+  "tasks": [
+    {
+      "dataset": {
+        "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+        "env_args": {
+          "bddl_file": "chiliocosm/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+          "env_kwargs": {
+            "bddl_file_name": "chiliocosm/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+            "camera_depths": false,
+            "camera_heights": 128,
+            "camera_names": [
+              "robot0_eye_in_hand",
+              "agentview"
+            ],
+            "camera_segmentations": null,
+            "camera_widths": 128,
+            "control_freq": 20,
+            "controller_configs": {
+              "control_delta": true,
+              "damping_ratio": 1,
+              "damping_ratio_limits": [
+                0,
+                10
+              ],
+              "impedance_mode": "fixed",
+              "input_max": 1,
+              "input_min": -1,
+              "interpolation": null,
+              "kp": 150,
+              "kp_limits": [
+                0,
+                300
+              ],
+              "orientation_limits": null,
+              "output_max": [
+                0.05,
+                0.05,
+                0.05,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "output_min": [
+                -0.05,
+                -0.05,
+                -0.05,
+                -0.5,
+                -0.5,
+                -0.5
+              ],
+              "position_limits": null,
+              "ramp_ratio": 0.2,
+              "type": "OSC_POSE",
+              "uncouple_pos_ori": true
+            },
+            "has_offscreen_renderer": true,
+            "has_renderer": false,
+            "ignore_done": true,
+            "reward_shaping": true,
+            "robots": [
+              "Panda"
+            ],
+            "use_camera_obs": true
+          },
+          "env_name": "Libero_Tabletop_Manipulation",
+          "problem_name": "libero_tabletop_manipulation",
+          "type": 1
+        },
+        "length_max": 126,
+        "length_median": 92.0,
+        "length_min": 79,
+        "num_demos": 50,
+        "problem_info": {
+          "domain_name": "robosuite",
+          "language_instruction": "put the bowl on the plate",
+          "problem_name": "libero_tabletop_manipulation"
+        },
+        "successful_demos": 50,
+        "tag": "libero-v1"
+      },
+      "frozen_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "task": {
+        "goal_predicate": "on",
+        "primary_object": "akita_black_bowl_1",
+        "role": "low_constraint_pick_place_control",
+        "target_contact_parent": "plate_1",
+        "target_object": "plate_1",
+        "task_id": "bowl_on_plate",
+        "task_name": "put_the_bowl_on_the_plate"
+      }
+    }
+  ],
+  "torch": {
+    "cuda_build": "11.3",
+    "version": "1.11.0+cu113"
+  }
+}

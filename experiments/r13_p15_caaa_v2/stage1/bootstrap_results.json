@@ -1,0 +1,168 @@
+{
+  "calibration_method_errors": {
+    "covariance_mahalanobis": 48716.51481247745,
+    "euclidean_farthest": 76684.9464732046,
+    "global_kmeans": 80381.11172362414,
+    "old_diagonal_sensitivity": 138561.7948797035,
+    "pca_kmeans": 56397.6695429662,
+    "phase_conditioned_kmeans": 74594.37896432017
+  },
+  "cluster_unit": "episode",
+  "created_utc": "2026-08-12T16:06:36.245961+00:00",
+  "frozen_calibration_baseline": "covariance_mahalanobis",
+  "per_task": {
+    "bowl_on_plate": {
+      "absolute_improvement": {
+        "ci95": [
+          -82104.88702013757,
+          -33494.199913554825
+        ],
+        "estimate": -59999.32862678959
+      },
+      "baseline_error": {
+        "ci95": [
+          33557.38106929937,
+          152126.24105792254
+        ],
+        "estimate": 92841.81106361095
+      },
+      "caaa_error": {
+        "ci95": [
+          93710.75652192859,
+          207668.5839496035
+        ],
+        "estimate": 152841.13969040054
+      },
+      "relative_improvement": {
+        "ci95": [
+          -1.9207790449674678,
+          -0.22626013809626336
+        ],
+        "estimate": -0.6462533199151059
+      }
+    },
+    "plate_push": {
+      "absolute_improvement": {
+        "ci95": [
+          -977.2985958509685,
+          -449.42284120794443
+        ],
+        "estimate": -713.3607185294563
+      },
+      "baseline_error": {
+        "ci95": [
+          216.99197090282811,
+          642.7154294415036
+        ],
+        "estimate": 429.8537001721659
+      },
+      "caaa_error": {
+        "ci95": [
+          982.614056715029,
+          1254.254429109934
+        ],
+        "estimate": 1143.2144187016222
+      },
+      "relative_improvement": {
+        "ci95": [
+          -4.5038468095605975,
+          -0.6992563436643751
+        ],
+        "estimate": -1.6595430450959003
+      }
+    },
+    "stove_turn_on": {
+      "absolute_improvement": {
+        "ci95": [
+          -4287.812653882054,
+          -249.36497939393246
+        ],
+        "estimate": -2268.5888166379937
+      },
+      "baseline_error": {
+        "ci95": [
+          266.2960936581825,
+          743.4886275029485
+        ],
+        "estimate": 522.2772567573882
+      },
+      "caaa_error": {
+        "ci95": [
+          806.4120285049659,
+          4798.265431604655
+        ],
+        "estimate": 2790.8660733953816
+      },
+      "relative_improvement": {
+        "ci95": [
+          -10.28219484452171,
+          -0.447655148325232
+        ],
+        "estimate": -4.343648488013359
+      }
+    },
+    "wine_rack": {
+      "absolute_improvement": {
+        "ci95": [
+          -150732.9526160602,
+          26639.489268471138
+        ],
+        "estimate": -53815.87014901341
+      },
+      "baseline_error": {
+        "ci95": [
+          27410.79429541826,
+          477010.0501093338
+        ],
+        "estimate": 200979.1018656885
+      },
+      "caaa_error": {
+        "ci95": [
+          86307.25974498372,
+          442190.3645620366
+        ],
+        "estimate": 254794.97201470193
+      },
+      "relative_improvement": {
+        "ci95": [
+          -2.944358903390817,
+          0.07475541147719003
+        ],
+        "estimate": -0.2677684876160796
+      }
+    }
+  },
+  "pooled": {
+    "absolute_improvement": {
+      "ci95": [
+        -54713.19803135954,
+        -7021.095159652404
+      ],
+      "estimate": -29199.287077742614
+    },
+    "baseline_error": {
+      "ci95": [
+        25304.793484145786,
+        143384.46117094412
+      ],
+      "estimate": 73693.26097155726
+    },
+    "caaa_error": {
+      "ci95": [
+        57699.24643356482,
+        156293.66750400202
+      ],
+      "estimate": 102892.54804929988
+    },
+    "relative_improvement": {
+      "ci95": [
+        -1.6841182126610532,
+        -0.05500006237271656
+      ],
+      "estimate": -0.3962273713062095
+    }
+  },
+  "primary_k": 64,
+  "replicates": 10000,
+  "resampling": "within-task paired episode clusters with replacement"
+}

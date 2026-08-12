@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T15:18:15.535127+00:00",
+  "episode_id": 13,
+  "payload": "stove_turn_on__e13__contact_onset.npz",
+  "payload_bytes": 503858,
+  "payload_sha256": "25cf2f5e4b8f5e7309260942034e236742bb9ecc88d6f92aa68ac26982817f94",
+  "rows": 648,
+  "snapshot_index": 53,
+  "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e13__contact_onset.npz",
+  "task_id": "stove_turn_on"
+}

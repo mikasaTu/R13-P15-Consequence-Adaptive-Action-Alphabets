@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "kind": "pytorchjob",
+  "name_prefix": "r13-p15-caaa-v2-libero-stage1",
+  "description": "Formal Stage-1 oracle mechanism audit for consequence-Riemannian action alphabets on four standard LIBERO-Goal tasks; deterministic branch collection, local ridge geometry, nine K=64 alphabets, K=32/128 sensitivity, realized decoded-action replay, and episode-clustered bootstrap; no policy or world-model training",
+  "resource_alias": "exp-efficiency",
+  "workspace_id": "179169",
+  "provenance": {
+    "contract_source_job_id": "dlcfp1szuc2cgqfp",
+    "submission_method": "cli_create",
+    "pai_clone_performed": false,
+    "source_role": "readback_reference"
+  },
+  "network": {},
+  "storage": {
+    "data_sources": [
+      {"id": "d-mkixtohdn75dp8x9tb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon", "options": ""},
+      {"id": "d-lg9t2b6xajpukeqqeb", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon", "options": ""},
+      {"id": "d-36p023eg0f2vuqny8y", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon", "options": ""},
+      {"id": "d-ejgj2ej7io1t2t32uc", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon", "options": ""},
+      {"id": "d-7fi8hehav247qi6x5o", "version": "v1", "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/", "options": ""}
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai"
+  },
+  "worker": {
+    "count": 1,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "gpu": 8,
+    "cpu": 92,
+    "memory": "1600Gi",
+    "shared_memory": "1600Gi"
+  },
+  "runtime": {
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry/launchers/r13_p15_caaa_v2_libero_stage1.sh",
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "uid": 2254,
+    "gid": 2254,
+    "pod_env": {},
+    "secret_env_names": [],
+    "write_paths": [
+      "{{ARTIFACT_DIR}}",
+      "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1"
+    ],
+    "output_mode": "resume",
+    "create_artifact_dir": true,
+    "recursive_repair": false,
+    "payload_transport": "base64"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "",
+    "maximum_platform_restarts": 0,
+    "expected_platform_restarts": 0,
+    "launcher_attempts": 1,
+    "pai_automatic_fault_tolerance": false
+  },
+  "evidence": {
+    "kind": "r13_p15_caaa_v2_libero_stage1_formal_collection",
+    "workload_type": "collection",
+    "task_id": "r13-p15-caaa-v2-libero-stage1-20260812",
+    "model_id": "caaa-v2-oracle-consequence-geometry-no-policy",
+    "success_gate": "persisted_committed_sample_or_shard",
+    "validation_method": "static+dev14_cpu_deterministic_branch_and_identity_decode_smoke+full_local_finalize+128_exact_plan_resume_checks",
+    "validation_status": "passed_no_pai_probe",
+    "validated_payload_sha256": "fb6e747b96693d8082a2ae9c87909299a45aee882d0085ee794ba243240ff804",
+    "pai_probe_created": false,
+    "first_work_evidence_path": "{{ARTIFACT_DIR}}/FIRST_COMMITTED_SHARD.json",
+    "completed_evidence_path": "{{ARTIFACT_DIR}}/STAGE1_COMPLETE.json",
+    "contract_ready": true,
+    "mount_contract": "exact_five_new_root_sources_from_live_readback",
+    "source_commit": "34995e8e7c3069b22785ad04536f0d429e75c0fc",
+    "source_tree": "ad6fa59b782f63624ee3ccef8e880a2398669ce8",
+    "stage1_launcher_sha256": "569d031517a581a080c3a68a46a67df76432318d5c9e35edb1983e7f3c617e6a",
+    "launcher_sha256": "fb6e747b96693d8082a2ae9c87909299a45aee882d0085ee794ba243240ff804",
+    "libero_upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "libero_source_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "demo_sha256": {
+      "bowl_on_plate": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+      "plate_push": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+      "stove_turn_on": "387fc10747696b80dea6ed8d7f2beaa162bf92ae11750b241073cbd33aac73d5",
+      "wine_rack": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e"
+    },
+    "suite": "libero_goal",
+    "task_count": 4,
+    "episodes_per_task": 16,
+    "phases_per_episode": 4,
+    "directions": 24,
+    "antithetic_signs": 2,
+    "radii": [0.05, 0.10],
+    "chunk_horizon": 4,
+    "primary_k": 64,
+    "sensitivity_k": [32, 128],
+    "checkpoint_contract": "not_applicable_collection_uses_atomic_hash_verified_npz_shards",
+    "resume_semantics": "stable_output_lineage_skip_only_hash_verified_complete_shards_and_require_exact_current_quantization_plan_arrays",
+    "gpu_execution": "only_gpu0_visible_to_four_cpu_parallel_simulators_no_rendering",
+    "formal_output_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1",
+    "policy_training": "none",
+    "wandb_mode": "disabled_stage1_uses_json_csv_npz_zarr_parquet_markdown",
+    "expected_first_work_uid": 2254,
+    "expected_first_work_gid": 2254,
+    "require_actual_idle": false
+  },
+  "submission": {
+    "priority": 9,
+    "disable_ecs_stock_check": false,
+    "job_reserved_policy": "",
+    "job_reserved_minutes": 0,
+    "job_max_running_time_minutes": 0,
+    "tags": {
+      "managed_by": "pai-job-registry",
+      "purpose": "formal-collection",
+      "task": "r13-p15-caaa-v2-libero-stage1-20260812",
+      "model": "caaa-v2-oracle-consequence-geometry-no-policy",
+      "dataset": "libero-goal-four-task-locked",
+      "hardware": "8xa800-dedicated",
+      "resource_pool": "exp-efficiency",
+      "experiment_role": "stage1-consequence-alphabet-mechanism-audit"
+    }
+  }
+}

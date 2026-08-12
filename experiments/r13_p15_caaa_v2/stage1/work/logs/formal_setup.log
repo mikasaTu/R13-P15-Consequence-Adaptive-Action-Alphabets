@@ -1,0 +1,10 @@
+{
+  "demo_count": 4,
+  "environment_lock": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/environment_lock.json",
+  "replay_gate": "PASS",
+  "replay_tests": 256,
+  "snapshots": 64
+}
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.

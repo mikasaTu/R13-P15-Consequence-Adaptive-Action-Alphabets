@@ -1,0 +1,168 @@
+{
+  "artifact_dir": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-c",
+  "controller_version": "5",
+  "description": "Formal Stage-1 oracle mechanism audit for consequence-Riemannian action alphabets on four standard LIBERO-Goal tasks; deterministic branch collection, local ridge geometry, nine K=64 alphabets, K=32/128 sensitivity, realized decoded-action replay, and episode-clustered bootstrap; no policy or world-model training; run_id=r13p15-caaa-v2-stage1-20260812-c; resource_alias=exp-efficiency; resource_id=quotakzri8a5wqcp; contract_source_job_id=dlcfp1szuc2cgqfp; resource_source_job_id=; submission_method=cli_create; pai_clone_performed=false; nonce=5e5e0b3c585665001d6bc65ebcebb0f2",
+  "evidence": {
+    "antithetic_signs": 2,
+    "checkpoint_contract": "not_applicable_collection_uses_atomic_hash_verified_npz_shards",
+    "chunk_horizon": 4,
+    "completed_evidence_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-c/STAGE1_COMPLETE.json",
+    "contract_ready": true,
+    "demo_sha256": {
+      "bowl_on_plate": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+      "plate_push": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+      "stove_turn_on": "387fc10747696b80dea6ed8d7f2beaa162bf92ae11750b241073cbd33aac73d5",
+      "wine_rack": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e"
+    },
+    "directions": 24,
+    "episodes_per_task": 16,
+    "expected_first_work_gid": 2254,
+    "expected_first_work_uid": 2254,
+    "first_work_evidence_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-c/FIRST_COMMITTED_SHARD.json",
+    "formal_output_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1",
+    "gpu_execution": "only_gpu0_visible_to_four_cpu_parallel_simulators_no_rendering",
+    "kind": "r13_p15_caaa_v2_libero_stage1_formal_collection",
+    "launcher_sha256": "6145fa1bb9a9c35de1cb639f3917977e052af247f5c7ab6f5d974475c5f7d5bf",
+    "libero_source_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "libero_upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "model_id": "caaa-v2-oracle-consequence-geometry-no-policy",
+    "mount_contract": "exact_five_new_root_sources_from_live_readback",
+    "pai_probe_created": false,
+    "phases_per_episode": 4,
+    "policy_training": "none",
+    "primary_k": 64,
+    "radii": [
+      0.05,
+      0.1
+    ],
+    "require_actual_idle": false,
+    "resume_semantics": "stable_output_lineage_skip_only_hash_verified_complete_shards",
+    "sensitivity_k": [
+      32,
+      128
+    ],
+    "source_commit": "ef5aa46daa43fadf05f9cb1bbb919d4bb6cfe2fb",
+    "source_tree": "55fd7e237606140d5968d2f77cfe7655e2ae4668",
+    "stage1_launcher_sha256": "a8f2367241b3f82cec83a90b743748169c7fa5c6d72d074ebc6842fe846d6628",
+    "success_gate": "persisted_committed_sample_or_shard",
+    "suite": "libero_goal",
+    "task_count": 4,
+    "task_id": "r13-p15-caaa-v2-libero-stage1-20260812",
+    "validated_payload_sha256": "6145fa1bb9a9c35de1cb639f3917977e052af247f5c7ab6f5d974475c5f7d5bf",
+    "validation_method": "static+dev14_cpu_deterministic_branch_and_identity_decode_smoke",
+    "validation_status": "passed_no_pai_probe",
+    "wandb_mode": "disabled_stage1_uses_json_csv_npz_zarr_parquet_markdown",
+    "workload_type": "collection"
+  },
+  "fault_tolerance": {
+    "aimaster_args": "",
+    "expected_platform_restarts": 0,
+    "launcher_attempts": 1,
+    "maximum_platform_restarts": 0,
+    "pai_automatic_fault_tolerance": false
+  },
+  "name": "r13-p15-caaa-v2-libe-r13p15-caaa-v2-stage1-20260812-c-n5e5e0b3c",
+  "network": {},
+  "provenance": {
+    "contract_source_job_id": "dlcfp1szuc2cgqfp",
+    "pai_clone_performed": false,
+    "source_role": "readback_reference",
+    "submission_method": "cli_create"
+  },
+  "resolved_at_utc": "2026-08-12T14:20:28Z",
+  "resource": {
+    "display_name": "exp-efficiency",
+    "evidence": "PAI task-list readback in workspace 179169; submit must still be followed by GetJob.",
+    "oversold_type": "ForbiddenQuotaOverSold",
+    "resource_id": "quotakzri8a5wqcp",
+    "resource_source": "resource_quota",
+    "verification_state": "same_day_ui_task_readback",
+    "verified_at": "2026-07-29T16:55:48+08:00"
+  },
+  "resource_alias": "exp-efficiency",
+  "run_id": "r13p15-caaa-v2-stage1-20260812-c",
+  "runtime": {
+    "canary_nonce": "5e5e0b3c585665001d6bc65ebcebb0f2",
+    "command": "exec /bin/bash --noprofile --norc -c '#!/usr/bin/env bash\nset -Eeuo pipefail\numask 077\nexport PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nunset BASH_ENV ENV CDPATH GLOBIGNORE\nLEON_UID=2254\nLEON_GID=2254\nNEW_ROOT=/mnt/cpfs/zbl-cpfs-new\nUSER_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon\nRUN_ID=r13p15-caaa-v2-stage1-20260812-c\nNONCE=5e5e0b3c585665001d6bc65ebcebb0f2\nEXPECTED_GPUS=8\nSENTINEL=/mnt/cpfs/zbl-cpfs-new/USERS/leon/.pai_mount_identity\nSENTINEL_SHA256=b3cc124ffbbebf8a12d52f70555b834f9c62a34ae09ff6ee397d0abbba600ef9\nEXPECTED_CPFS_ID=cpfs-29001v2qz7p5ag7gckzsw\nPAYLOAD_SHA256=6145fa1bb9a9c35de1cb639f3917977e052af247f5c7ab6f5d974475c5f7d5bf\nWRITE_PATHS=(/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-c /mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1)\nRECURSIVE_REPAIR=0\nCURRENT_UID=$(id -u)\nCURRENT_GID=$(id -g)\nif [[ \"$CURRENT_UID\" != 0 && \"$CURRENT_UID:$CURRENT_GID\" != \"$LEON_UID:$LEON_GID\" ]]; then\n  echo \"BOOTSTRAP_REFUSED unexpected identity $CURRENT_UID:$CURRENT_GID\" >&2\n  exit 50\nfi\nfor required in realpath findmnt sha256sum base64 mktemp stat dirname install setpriv env bash; do\n  command -v \"$required\" >/dev/null || {\n    echo \"BOOTSTRAP_REFUSED missing command: $required\" >&2\n    exit 51\n  }\ndone\ntest -d \"$NEW_ROOT\" || { echo \"BOOTSTRAP_REFUSED missing new root\" >&2; exit 52; }\n[[ \"$(realpath -e \"$NEW_ROOT\")\" == \"$NEW_ROOT\" ]] || {\n  echo \"BOOTSTRAP_REFUSED non-canonical new root\" >&2; exit 53;\n}\nassert_cpfs_path() {\n  local path=$1 resolved target fstype source\n  resolved=$(realpath -e -- \"$path\") || {\n    echo \"BOOTSTRAP_REFUSED cannot resolve CPFS path: $path\" >&2; exit 54;\n  }\n  case \"$resolved\" in \"$NEW_ROOT\"|\"$NEW_ROOT\"/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED path outside new root: $resolved\" >&2; exit 55 ;;\n  esac\n  target=$(findmnt -n -o TARGET -T \"$resolved\") || {\n    echo \"BOOTSTRAP_REFUSED path is not mounted: $resolved\" >&2; exit 56;\n  }\n  case \"$target\" in \"$NEW_ROOT\"|\"$NEW_ROOT\"/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED unexpected mount target: $target\" >&2; exit 57 ;;\n  esac\n  fstype=$(findmnt -n -o FSTYPE -T \"$resolved\")\n  case \"$fstype\" in *cpfs*|*aliyun-alinas*) ;;\n    *) echo \"BOOTSTRAP_REFUSED unexpected filesystem: $fstype\" >&2; exit 58 ;;\n  esac\n  source=$(findmnt -n -o SOURCE -T \"$resolved\")\n  [[ \"$source\" == *\"$EXPECTED_CPFS_ID\"* ]] || {\n    echo \"BOOTSTRAP_REFUSED unexpected CPFS source: $source\" >&2; exit 59;\n  }\n}\ntest -f \"$SENTINEL\" && test ! -L \"$SENTINEL\" || {\n  echo \"BOOTSTRAP_REFUSED mount sentinel missing\" >&2; exit 60;\n}\n[[ \"$(sha256sum \"$SENTINEL\" | awk '\"'\"'{print $1}'\"'\"')\" == \"$SENTINEL_SHA256\" ]] || {\n  echo \"BOOTSTRAP_REFUSED mount sentinel mismatch\" >&2; exit 61;\n}\nassert_cpfs_path \"$SENTINEL\"\nassert_write_path() {\n  local path=$1 resolved\n  [[ \"$path\" == /* && \"$path\" != *\"/../\"* && \"$path\" != */.. ]] || {\n    echo \"BOOTSTRAP_REFUSED invalid write path $path\" >&2; exit 62;\n  }\n  resolved=$(realpath -m -- \"$path\")\n  [[ \"$resolved\" == \"$path\" ]] || {\n    echo \"BOOTSTRAP_REFUSED non-canonical write path $path -> $resolved\" >&2; exit 63;\n  }\n  case \"$path\" in\n    /mnt/cpfs/zbl-cpfs-new/USERS/leon/cache/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/assets/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/artifacts/qpilots/wrc_task_success_q/*|/mnt/cpfs/zbl-cpfs-new/dataset/leon/*|/mnt/cpfs/zbl-cpfs-new/CKPT/leon/*|/mnt/cpfs/zbl-cpfs-new/SHARE/leon/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED write path outside Leon roots: $path\" >&2; exit 64 ;;\n  esac\n}\nfor path in \"${WRITE_PATHS[@]}\"; do\n  assert_write_path \"$path\"\n  anchor=\"$path\"\n  while [[ ! -e \"$anchor\" ]]; do\n    parent=$(dirname -- \"$anchor\")\n    [[ \"$parent\" != \"$anchor\" ]] || {\n      echo \"BOOTSTRAP_REFUSED no mounted ancestor for $path\" >&2; exit 65;\n    }\n    anchor=\"$parent\"\n  done\n  assert_cpfs_path \"$anchor\"\n  if [[ \"$CURRENT_UID\" == 0 ]]; then\n    install -d -m 0700 -o \"$LEON_UID\" -g \"$LEON_GID\" -- \"$path\"\n  else\n    mkdir -p -- \"$path\"\n    chmod 0700 -- \"$path\"\n  fi\n  assert_cpfs_path \"$path\"\n  [[ \"$(stat -c '\"'\"'%u:%g'\"'\"' \"$path\")\" == \"$LEON_UID:$LEON_GID\" ]] || {\n    echo \"BOOTSTRAP_REFUSED write directory owner mismatch: $path\" >&2; exit 66;\n  }\ndone\nif [[ \"$CURRENT_UID\" == 0 && \"$RECURSIVE_REPAIR\" == 1 ]]; then\n  chown -R --no-dereference \"$LEON_UID:$LEON_GID\" -- \"${WRITE_PATHS[@]}\"\nfi\npayload_dir=$(mktemp -d /tmp/pai-payload.XXXXXXXX) || exit 67\nif [[ \"$CURRENT_UID\" == 0 ]]; then chmod 0711 \"$payload_dir\"; fi\npayload_path=\"$payload_dir/payload.sh\"\npayload_b64=IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLUVldW8gcGlwZWZhaWwKCnVtYXNrIDA3NwoKcHJvamVjdF9yb290PS9tbnQvY3Bmcy96YmwtY3Bmcy1uZXcvVVNFUlMvbGVvbi9jb2RlL3IxMy1wMTUtY2FhYS12Mi1saWJlcm8Kc3RhZ2UxX2xhdW5jaGVyPSR7cHJvamVjdF9yb290fS9zY3JpcHRzL3J1bl9zdGFnZTFfcGFpLnNoCmV4cGVjdGVkX3Byb2plY3RfY29tbWl0PWVmNWFhNDZkYWE0M2ZhZGYwNWY5Y2IxYmJiOTE5ZDRiYjZjZmUyZmIKZXhwZWN0ZWRfcHJvamVjdF90cmVlPTU1ZmQ3ZTIzNzYwNjE0MGQ1OTY4ZDJmNzdjZmU3NjU1ZTJhZTQ2NjgKZXhwZWN0ZWRfc3RhZ2UxX2xhdW5jaGVyX3NoYTI1Nj1hOGYyMzY3MjQxYjNmODJjZWM4M2E5MGI3NDM3NDgxNjljN2ZhNWM2ZDcyZDA3NGViYzY4NDJmZTg0NmQ2NjI4Cgpmb3IgcmVxdWlyZWQgaW4gZ2l0IHNoYTI1NnN1bTsgZG8KICBjb21tYW5kIC12ICIke3JlcXVpcmVkfSIgPi9kZXYvbnVsbApkb25lCnRlc3QgIiQoaWQgLXUpOiQoaWQgLWcpIiA9IDIyNTQ6MjI1NAp0ZXN0ICIkKGdpdCAtQyAiJHtwcm9qZWN0X3Jvb3R9IiByZXYtcGFyc2UgSEVBRCkiID0gIiR7ZXhwZWN0ZWRfcHJvamVjdF9jb21taXR9Igp0ZXN0ICIkKGdpdCAtQyAiJHtwcm9qZWN0X3Jvb3R9IiByZXYtcGFyc2UgJ0hFQURee3RyZWV9JykiID0gIiR7ZXhwZWN0ZWRfcHJvamVjdF90cmVlfSIKdGVzdCAteiAiJChnaXQgLUMgIiR7cHJvamVjdF9yb290fSIgc3RhdHVzIC0tcG9yY2VsYWluKSIKdGVzdCAiJChzaGEyNTZzdW0gIiR7c3RhZ2UxX2xhdW5jaGVyfSIgfCBhd2sgJ3twcmludCAkMX0nKSIgPSAiJHtleHBlY3RlZF9zdGFnZTFfbGF1bmNoZXJfc2hhMjU2fSIKCmV4cG9ydCBDQUFBX0VYUEVDVEVEX1BST0pFQ1RfQ09NTUlUPSIke2V4cGVjdGVkX3Byb2plY3RfY29tbWl0fSIKZXhwb3J0IENBQUFfRVhQRUNURURfUFJPSkVDVF9UUkVFPSIke2V4cGVjdGVkX3Byb2plY3RfdHJlZX0iCmV4ZWMgIiR7c3RhZ2UxX2xhdW5jaGVyfSIK\n(umask 022; printf '\"'\"'%s'\"'\"' \"$payload_b64\" | base64 -d >\"$payload_path\")\nunset payload_b64\nchmod 0555 \"$payload_path\"\n[[ \"$(sha256sum \"$payload_path\" | awk '\"'\"'{print $1}'\"'\"')\" == \"$PAYLOAD_SHA256\" ]] || {\n  echo \"BOOTSTRAP_REFUSED payload hash mismatch\" >&2; exit 68;\n}\nHOME_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon\nXDG_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-c/xdg-cache\nsafe_env=(\n  HOME=\"$HOME_DIR\" USER=leon LOGNAME=leon XDG_CACHE_HOME=\"$XDG_DIR\"\n  PATH=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n  PAI_CANARY_RUN_ID=\"$RUN_ID\" PAI_CANARY_NONCE=\"$NONCE\"\n  PAI_CANARY_RUN_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-c\n  PAI_CANARY_EXPECTED_GPUS=\"$EXPECTED_GPUS\"\n  PAI_MOUNT_SENTINEL=\"$SENTINEL\"\n  PAI_MOUNT_SENTINEL_SHA256=\"$SENTINEL_SHA256\"\n)\nwhile IFS= read -r env_name; do\n  case \"$env_name\" in\n    CUDA_*|NVIDIA_*|NCCL_*|OMPI_*|PMI_*|PMIX_*|MASTER_ADDR|MASTER_PORT|WORLD_SIZE|RANK|LOCAL_RANK|NODE_RANK|GROUP_RANK|ROLE_RANK|TORCHELASTIC_*|LD_LIBRARY_PATH|HTTP_PROXY|HTTPS_PROXY|NO_PROXY|http_proxy|https_proxy|no_proxy|WANDB_*|HF_*|TRANSFORMERS_*|XLA_*|JAX_*|TORCH_*|OMP_*|MKL_*|PAI_TASK_*)\n      safe_env+=(\"$env_name=${!env_name}\") ;;\n  esac\ndone < <(compgen -e)\nif [[ \"$CURRENT_UID\" == 0 ]]; then\n  exec setpriv --reuid=\"$LEON_UID\" --regid=\"$LEON_GID\" --clear-groups -- \\\n    env -i \"${safe_env[@]}\" bash --noprofile --norc \"$payload_path\"\nfi\n[[ \"$CURRENT_UID:$CURRENT_GID\" == \"$LEON_UID:$LEON_GID\" ]] || exit 69\nexec env -i \"${safe_env[@]}\" bash --noprofile --norc \"$payload_path\"\n'",
+    "command_file": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry/launchers/r13_p15_caaa_v2_libero_stage1.sh",
+    "command_file_sha256": "6145fa1bb9a9c35de1cb639f3917977e052af247f5c7ab6f5d974475c5f7d5bf",
+    "create_artifact_dir": false,
+    "gid": 2254,
+    "identity_mechanism": "controller_inline_bootstrap_then_setpriv",
+    "output_mode": "new",
+    "payload_base64": "IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLUVldW8gcGlwZWZhaWwKCnVtYXNrIDA3NwoKcHJvamVjdF9yb290PS9tbnQvY3Bmcy96YmwtY3Bmcy1uZXcvVVNFUlMvbGVvbi9jb2RlL3IxMy1wMTUtY2FhYS12Mi1saWJlcm8Kc3RhZ2UxX2xhdW5jaGVyPSR7cHJvamVjdF9yb290fS9zY3JpcHRzL3J1bl9zdGFnZTFfcGFpLnNoCmV4cGVjdGVkX3Byb2plY3RfY29tbWl0PWVmNWFhNDZkYWE0M2ZhZGYwNWY5Y2IxYmJiOTE5ZDRiYjZjZmUyZmIKZXhwZWN0ZWRfcHJvamVjdF90cmVlPTU1ZmQ3ZTIzNzYwNjE0MGQ1OTY4ZDJmNzdjZmU3NjU1ZTJhZTQ2NjgKZXhwZWN0ZWRfc3RhZ2UxX2xhdW5jaGVyX3NoYTI1Nj1hOGYyMzY3MjQxYjNmODJjZWM4M2E5MGI3NDM3NDgxNjljN2ZhNWM2ZDcyZDA3NGViYzY4NDJmZTg0NmQ2NjI4Cgpmb3IgcmVxdWlyZWQgaW4gZ2l0IHNoYTI1NnN1bTsgZG8KICBjb21tYW5kIC12ICIke3JlcXVpcmVkfSIgPi9kZXYvbnVsbApkb25lCnRlc3QgIiQoaWQgLXUpOiQoaWQgLWcpIiA9IDIyNTQ6MjI1NAp0ZXN0ICIkKGdpdCAtQyAiJHtwcm9qZWN0X3Jvb3R9IiByZXYtcGFyc2UgSEVBRCkiID0gIiR7ZXhwZWN0ZWRfcHJvamVjdF9jb21taXR9Igp0ZXN0ICIkKGdpdCAtQyAiJHtwcm9qZWN0X3Jvb3R9IiByZXYtcGFyc2UgJ0hFQURee3RyZWV9JykiID0gIiR7ZXhwZWN0ZWRfcHJvamVjdF90cmVlfSIKdGVzdCAteiAiJChnaXQgLUMgIiR7cHJvamVjdF9yb290fSIgc3RhdHVzIC0tcG9yY2VsYWluKSIKdGVzdCAiJChzaGEyNTZzdW0gIiR7c3RhZ2UxX2xhdW5jaGVyfSIgfCBhd2sgJ3twcmludCAkMX0nKSIgPSAiJHtleHBlY3RlZF9zdGFnZTFfbGF1bmNoZXJfc2hhMjU2fSIKCmV4cG9ydCBDQUFBX0VYUEVDVEVEX1BST0pFQ1RfQ09NTUlUPSIke2V4cGVjdGVkX3Byb2plY3RfY29tbWl0fSIKZXhwb3J0IENBQUFfRVhQRUNURURfUFJPSkVDVF9UUkVFPSIke2V4cGVjdGVkX3Byb2plY3RfdHJlZX0iCmV4ZWMgIiR7c3RhZ2UxX2xhdW5jaGVyfSIK",
+    "payload_sha256": "6145fa1bb9a9c35de1cb639f3917977e052af247f5c7ab6f5d974475c5f7d5bf",
+    "payload_transport": "base64",
+    "pod_env": {},
+    "recursive_repair": false,
+    "secret_env_names": [],
+    "uid": 2254,
+    "write_paths": [
+      "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-c",
+      "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1"
+    ]
+  },
+  "schema_version": 2,
+  "source_template": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/pai-job-registry/templates/r13-p15-caaa-v2-libero-stage1-exp-efficiency-8gpu-formal.json",
+  "storage": {
+    "data_sources": [
+      {
+        "id": "d-mkixtohdn75dp8x9tb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-lg9t2b6xajpukeqqeb",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-36p023eg0f2vuqny8y",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-ejgj2ej7io1t2t32uc",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        "options": "",
+        "version": "v1"
+      },
+      {
+        "id": "d-7fi8hehav247qi6x5o",
+        "mount_path": "/mnt/cpfs/zbl-cpfs-new/Models/",
+        "options": "",
+        "version": "v1"
+      }
+    ],
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai"
+  },
+  "submission": {
+    "disable_ecs_stock_check": false,
+    "job_max_running_time_minutes": 0,
+    "job_reserved_minutes": 0,
+    "job_reserved_policy": "",
+    "priority": 9,
+    "tags": {
+      "dataset": "libero-goal-four-task-locked",
+      "experiment_role": "stage1-consequence-alphabet-mechanism-audit",
+      "hardware": "8xa800-dedicated",
+      "managed_by": "pai-job-registry",
+      "model": "caaa-v2-oracle-consequence-geometry-no-policy",
+      "purpose": "formal-collection",
+      "resource_pool": "exp-efficiency",
+      "task": "r13-p15-caaa-v2-libero-stage1-20260812"
+    }
+  },
+  "worker": {
+    "count": 1,
+    "cpu": 92,
+    "gpu": 8,
+    "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+    "memory": "1600Gi",
+    "shared_memory": "1600Gi"
+  },
+  "workspace_id": "179169"
+}

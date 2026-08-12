@@ -1,0 +1,154 @@
+{
+  "ClusterId": "asi_cn-wulanchabu_pai-serverless_prd01.1294336768262632",
+  "CodeSource": {
+    "CodeSourceId": "",
+    "MountPath": ""
+  },
+  "CredentialConfig": {
+    "AliyunEnvRoleKey": "",
+    "EnableCredentialInject": false
+  },
+  "DataSources": [
+    {
+      "DataSourceId": "d-mkixtohdn75dp8x9tb",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+      "DataSourceVersion": "v1",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-lg9t2b6xajpukeqqeb",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+      "DataSourceVersion": "v1",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-36p023eg0f2vuqny8y",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+      "DataSourceVersion": "v1",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-ejgj2ej7io1t2t32uc",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+      "DataSourceVersion": "v1",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-7fi8hehav247qi6x5o",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/Models/",
+      "DataSourceVersion": "v1",
+      "Options": "",
+      "Uri": ""
+    }
+  ],
+  "DisplayName": "r13-p15-caaa-v2-libe-r13p15-caaa-v2-stage1-20260812-d-n90e5b09f",
+  "Duration": 121,
+  "ElasticSpec": {
+    "AIMasterDockerImage": "",
+    "AIMasterType": "",
+    "ElasticStrategy": "",
+    "EnableAIMaster": false,
+    "EnableElasticInference": false,
+    "EnableElasticTraining": false,
+    "EnablePsJobElasticPS": false,
+    "EnablePsJobElasticWorker": false,
+    "EnablePsResourceEstimate": false,
+    "MaxParallelism": 0,
+    "MinParallelism": 0,
+    "PSMaxParallelism": 0,
+    "PSMinParallelism": 0
+  },
+  "EnabledDebugger": false,
+  "GmtCreateTime": "2026-08-12T14:21:11Z",
+  "GmtFailedTime": "2026-08-12T14:23:12Z",
+  "GmtFinishTime": "2026-08-12T14:23:12Z",
+  "GmtRunningTime": "2026-08-12T14:22:56Z",
+  "GmtSubmittedTime": "2026-08-12T14:21:16Z",
+  "JobId": "dlc1ngywaybfd122",
+  "JobSpecs": [
+    {
+      "AssignNodeSpec": {
+        "EnableAssignNode": false,
+        "NodeNames": "",
+        "AntiAffinityNodeNames": ""
+      },
+      "EcsSpec": "",
+      "Image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+      "ImageConfig": {
+        "Auth": "",
+        "DockerRegistry": "",
+        "Password": "",
+        "Username": ""
+      },
+      "PodCount": 1,
+      "ResourceConfig": {
+        "CPU": "92",
+        "GPU": "8",
+        "GPUType": "",
+        "Memory": "1600Gi",
+        "SharedMemory": "1600Gi"
+      },
+      "Type": "Worker"
+    }
+  ],
+  "JobType": "PyTorchJob",
+  "Pods": [
+    {
+      "GmtCreateTime": "2026-08-12T14:21:16Z",
+      "GmtFinishTime": "2026-08-12T14:23:11Z",
+      "GmtStartTime": "2026-08-12T14:22:55Z",
+      "Ip": "26.40.189.215",
+      "PodId": "dlc1ngywaybfd122-master-0",
+      "PodUid": "604e3b61-a0d5-415f-ae39-4fc480daf044",
+      "Status": "Failed",
+      "Type": "master"
+    }
+  ],
+  "Priority": 9,
+  "ReasonCode": "JobFailed",
+  "ReasonMessage": "{\"overview\":\"PyTorchJob dlc1ngywaybfd122 failed because 1 Master replica(s) failed.\",\"content\":[{\"time\":\"1786544592\",\"pods\":{\"Master\":[0]},\"reason\":\"1\"}]}",
+  "RequestId": "019FF67A-CCA8-58C5-B9B8-DACBAAB0BB3E",
+  "ResourceId": "quotakzri8a5wqcp",
+  "Settings": {
+    "BusinessUserId": "",
+    "Caller": "",
+    "EnableErrorMonitoringInAIMaster": false,
+    "EnableOssAppend": false,
+    "EnableRDMA": true,
+    "EnableTideResource": false,
+    "ErrorMonitoringArgs": "",
+    "PipelineId": "",
+    "Driver": "",
+    "OversoldType": "ForbiddenQuotaOverSold",
+    "Tags": {
+      "contract_source_job_id": "dlcfp1szuc2cgqfp",
+      "dataset": "libero-goal-four-task-locked",
+      "experiment_role": "stage1-consequence-alphabet-mechanism-audit",
+      "hardware": "8xa800-dedicated",
+      "managed_by": "pai-job-registry",
+      "model": "caaa-v2-oracle-consequence-geometry-no-policy",
+      "nonce": "90e5b09f964eb8849c1fc1d330bd6e05",
+      "purpose": "formal-collection",
+      "resource_pool": "exp-efficiency",
+      "run_id": "r13p15-caaa-v2-stage1-20260812-d",
+      "task": "r13-p15-caaa-v2-libero-stage1-20260812"
+    },
+    "JobReservedMinutes": 0,
+    "JobReservedPolicy": "",
+    "EnableDistributedTaskAssigment": false,
+    "QueueId": "",
+    "DisableEcsStockCheck": false,
+    "EnablePreemptibleJob": false
+  },
+  "Status": "Failed",
+  "ThirdpartyLibDir": "",
+  "UserCommand": "exec /bin/bash --noprofile --norc -c '#!/usr/bin/env bash\nset -Eeuo pipefail\numask 077\nexport PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\nunset BASH_ENV ENV CDPATH GLOBIGNORE\nLEON_UID=2254\nLEON_GID=2254\nNEW_ROOT=/mnt/cpfs/zbl-cpfs-new\nUSER_ROOT=/mnt/cpfs/zbl-cpfs-new/USERS/leon\nRUN_ID=r13p15-caaa-v2-stage1-20260812-d\nNONCE=90e5b09f964eb8849c1fc1d330bd6e05\nEXPECTED_GPUS=8\nSENTINEL=/mnt/cpfs/zbl-cpfs-new/USERS/leon/.pai_mount_identity\nSENTINEL_SHA256=b3cc124ffbbebf8a12d52f70555b834f9c62a34ae09ff6ee397d0abbba600ef9\nEXPECTED_CPFS_ID=cpfs-29001v2qz7p5ag7gckzsw\nPAYLOAD_SHA256=6145fa1bb9a9c35de1cb639f3917977e052af247f5c7ab6f5d974475c5f7d5bf\nWRITE_PATHS=(/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-d /mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1)\nRECURSIVE_REPAIR=0\nCURRENT_UID=$(id -u)\nCURRENT_GID=$(id -g)\nif [[ \"$CURRENT_UID\" != 0 && \"$CURRENT_UID:$CURRENT_GID\" != \"$LEON_UID:$LEON_GID\" ]]; then\n  echo \"BOOTSTRAP_REFUSED unexpected identity $CURRENT_UID:$CURRENT_GID\" >&2\n  exit 50\nfi\nfor required in realpath findmnt sha256sum base64 mktemp stat dirname install setpriv env bash; do\n  command -v \"$required\" >/dev/null || {\n    echo \"BOOTSTRAP_REFUSED missing command: $required\" >&2\n    exit 51\n  }\ndone\ntest -d \"$NEW_ROOT\" || { echo \"BOOTSTRAP_REFUSED missing new root\" >&2; exit 52; }\n[[ \"$(realpath -e \"$NEW_ROOT\")\" == \"$NEW_ROOT\" ]] || {\n  echo \"BOOTSTRAP_REFUSED non-canonical new root\" >&2; exit 53;\n}\nassert_cpfs_path() {\n  local path=$1 resolved target fstype source\n  resolved=$(realpath -e -- \"$path\") || {\n    echo \"BOOTSTRAP_REFUSED cannot resolve CPFS path: $path\" >&2; exit 54;\n  }\n  case \"$resolved\" in \"$NEW_ROOT\"|\"$NEW_ROOT\"/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED path outside new root: $resolved\" >&2; exit 55 ;;\n  esac\n  target=$(findmnt -n -o TARGET -T \"$resolved\") || {\n    echo \"BOOTSTRAP_REFUSED path is not mounted: $resolved\" >&2; exit 56;\n  }\n  case \"$target\" in \"$NEW_ROOT\"|\"$NEW_ROOT\"/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED unexpected mount target: $target\" >&2; exit 57 ;;\n  esac\n  fstype=$(findmnt -n -o FSTYPE -T \"$resolved\")\n  case \"$fstype\" in *cpfs*|*aliyun-alinas*) ;;\n    *) echo \"BOOTSTRAP_REFUSED unexpected filesystem: $fstype\" >&2; exit 58 ;;\n  esac\n  source=$(findmnt -n -o SOURCE -T \"$resolved\")\n  [[ \"$source\" == *\"$EXPECTED_CPFS_ID\"* ]] || {\n    echo \"BOOTSTRAP_REFUSED unexpected CPFS source: $source\" >&2; exit 59;\n  }\n}\ntest -f \"$SENTINEL\" && test ! -L \"$SENTINEL\" || {\n  echo \"BOOTSTRAP_REFUSED mount sentinel missing\" >&2; exit 60;\n}\n[[ \"$(sha256sum \"$SENTINEL\" | awk '\"'\"'{print $1}'\"'\"')\" == \"$SENTINEL_SHA256\" ]] || {\n  echo \"BOOTSTRAP_REFUSED mount sentinel mismatch\" >&2; exit 61;\n}\nassert_cpfs_path \"$SENTINEL\"\nassert_write_path() {\n  local path=$1 resolved\n  [[ \"$path\" == /* && \"$path\" != *\"/../\"* && \"$path\" != */.. ]] || {\n    echo \"BOOTSTRAP_REFUSED invalid write path $path\" >&2; exit 62;\n  }\n  resolved=$(realpath -m -- \"$path\")\n  [[ \"$resolved\" == \"$path\" ]] || {\n    echo \"BOOTSTRAP_REFUSED non-canonical write path $path -> $resolved\" >&2; exit 63;\n  }\n  case \"$path\" in\n    /mnt/cpfs/zbl-cpfs-new/USERS/leon/cache/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/assets/*|/mnt/cpfs/zbl-cpfs-new/USERS/leon/artifacts/qpilots/wrc_task_success_q/*|/mnt/cpfs/zbl-cpfs-new/dataset/leon/*|/mnt/cpfs/zbl-cpfs-new/CKPT/leon/*|/mnt/cpfs/zbl-cpfs-new/SHARE/leon/*) ;;\n    *) echo \"BOOTSTRAP_REFUSED write path outside Leon roots: $path\" >&2; exit 64 ;;\n  esac\n}\nfor path in \"${WRITE_PATHS[@]}\"; do\n  assert_write_path \"$path\"\n  anchor=\"$path\"\n  while [[ ! -e \"$anchor\" ]]; do\n    parent=$(dirname -- \"$anchor\")\n    [[ \"$parent\" != \"$anchor\" ]] || {\n      echo \"BOOTSTRAP_REFUSED no mounted ancestor for $path\" >&2; exit 65;\n    }\n    anchor=\"$parent\"\n  done\n  assert_cpfs_path \"$anchor\"\n  if [[ \"$CURRENT_UID\" == 0 ]]; then\n    install -d -m 0700 -o \"$LEON_UID\" -g \"$LEON_GID\" -- \"$path\"\n  else\n    mkdir -p -- \"$path\"\n    chmod 0700 -- \"$path\"\n  fi\n  assert_cpfs_path \"$path\"\n  [[ \"$(stat -c '\"'\"'%u:%g'\"'\"' \"$path\")\" == \"$LEON_UID:$LEON_GID\" ]] || {\n    echo \"BOOTSTRAP_REFUSED write directory owner mismatch: $path\" >&2; exit 66;\n  }\ndone\nif [[ \"$CURRENT_UID\" == 0 && \"$RECURSIVE_REPAIR\" == 1 ]]; then\n  chown -R --no-dereference \"$LEON_UID:$LEON_GID\" -- \"${WRITE_PATHS[@]}\"\nfi\npayload_dir=$(mktemp -d /tmp/pai-payload.XXXXXXXX) || exit 67\nif [[ \"$CURRENT_UID\" == 0 ]]; then chmod 0711 \"$payload_dir\"; fi\npayload_path=\"$payload_dir/payload.sh\"\npayload_b64=IyEvdXNyL2Jpbi9lbnYgYmFzaApzZXQgLUVldW8gcGlwZWZhaWwKCnVtYXNrIDA3NwoKcHJvamVjdF9yb290PS9tbnQvY3Bmcy96YmwtY3Bmcy1uZXcvVVNFUlMvbGVvbi9jb2RlL3IxMy1wMTUtY2FhYS12Mi1saWJlcm8Kc3RhZ2UxX2xhdW5jaGVyPSR7cHJvamVjdF9yb290fS9zY3JpcHRzL3J1bl9zdGFnZTFfcGFpLnNoCmV4cGVjdGVkX3Byb2plY3RfY29tbWl0PWVmNWFhNDZkYWE0M2ZhZGYwNWY5Y2IxYmJiOTE5ZDRiYjZjZmUyZmIKZXhwZWN0ZWRfcHJvamVjdF90cmVlPTU1ZmQ3ZTIzNzYwNjE0MGQ1OTY4ZDJmNzdjZmU3NjU1ZTJhZTQ2NjgKZXhwZWN0ZWRfc3RhZ2UxX2xhdW5jaGVyX3NoYTI1Nj1hOGYyMzY3MjQxYjNmODJjZWM4M2E5MGI3NDM3NDgxNjljN2ZhNWM2ZDcyZDA3NGViYzY4NDJmZTg0NmQ2NjI4Cgpmb3IgcmVxdWlyZWQgaW4gZ2l0IHNoYTI1NnN1bTsgZG8KICBjb21tYW5kIC12ICIke3JlcXVpcmVkfSIgPi9kZXYvbnVsbApkb25lCnRlc3QgIiQoaWQgLXUpOiQoaWQgLWcpIiA9IDIyNTQ6MjI1NAp0ZXN0ICIkKGdpdCAtQyAiJHtwcm9qZWN0X3Jvb3R9IiByZXYtcGFyc2UgSEVBRCkiID0gIiR7ZXhwZWN0ZWRfcHJvamVjdF9jb21taXR9Igp0ZXN0ICIkKGdpdCAtQyAiJHtwcm9qZWN0X3Jvb3R9IiByZXYtcGFyc2UgJ0hFQURee3RyZWV9JykiID0gIiR7ZXhwZWN0ZWRfcHJvamVjdF90cmVlfSIKdGVzdCAteiAiJChnaXQgLUMgIiR7cHJvamVjdF9yb290fSIgc3RhdHVzIC0tcG9yY2VsYWluKSIKdGVzdCAiJChzaGEyNTZzdW0gIiR7c3RhZ2UxX2xhdW5jaGVyfSIgfCBhd2sgJ3twcmludCAkMX0nKSIgPSAiJHtleHBlY3RlZF9zdGFnZTFfbGF1bmNoZXJfc2hhMjU2fSIKCmV4cG9ydCBDQUFBX0VYUEVDVEVEX1BST0pFQ1RfQ09NTUlUPSIke2V4cGVjdGVkX3Byb2plY3RfY29tbWl0fSIKZXhwb3J0IENBQUFfRVhQRUNURURfUFJPSkVDVF9UUkVFPSIke2V4cGVjdGVkX3Byb2plY3RfdHJlZX0iCmV4ZWMgIiR7c3RhZ2UxX2xhdW5jaGVyfSIK\n(umask 022; printf '\"'\"'%s'\"'\"' \"$payload_b64\" | base64 -d >\"$payload_path\")\nunset payload_b64\nchmod 0555 \"$payload_path\"\n[[ \"$(sha256sum \"$payload_path\" | awk '\"'\"'{print $1}'\"'\"')\" == \"$PAYLOAD_SHA256\" ]] || {\n  echo \"BOOTSTRAP_REFUSED payload hash mismatch\" >&2; exit 68;\n}\nHOME_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon\nXDG_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-d/xdg-cache\nsafe_env=(\n  HOME=\"$HOME_DIR\" USER=leon LOGNAME=leon XDG_CACHE_HOME=\"$XDG_DIR\"\n  PATH=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\n  PAI_CANARY_RUN_ID=\"$RUN_ID\" PAI_CANARY_NONCE=\"$NONCE\"\n  PAI_CANARY_RUN_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-d\n  PAI_CANARY_EXPECTED_GPUS=\"$EXPECTED_GPUS\"\n  PAI_MOUNT_SENTINEL=\"$SENTINEL\"\n  PAI_MOUNT_SENTINEL_SHA256=\"$SENTINEL_SHA256\"\n)\nwhile IFS= read -r env_name; do\n  case \"$env_name\" in\n    CUDA_*|NVIDIA_*|NCCL_*|OMPI_*|PMI_*|PMIX_*|MASTER_ADDR|MASTER_PORT|WORLD_SIZE|RANK|LOCAL_RANK|NODE_RANK|GROUP_RANK|ROLE_RANK|TORCHELASTIC_*|LD_LIBRARY_PATH|HTTP_PROXY|HTTPS_PROXY|NO_PROXY|http_proxy|https_proxy|no_proxy|WANDB_*|HF_*|TRANSFORMERS_*|XLA_*|JAX_*|TORCH_*|OMP_*|MKL_*|PAI_TASK_*)\n      safe_env+=(\"$env_name=${!env_name}\") ;;\n  esac\ndone < <(compgen -e)\nif [[ \"$CURRENT_UID\" == 0 ]]; then\n  exec setpriv --reuid=\"$LEON_UID\" --regid=\"$LEON_GID\" --clear-groups -- \\\n    env -i \"${safe_env[@]}\" bash --noprofile --norc \"$payload_path\"\nfi\n[[ \"$CURRENT_UID:$CURRENT_GID\" == \"$LEON_UID:$LEON_GID\" ]] || exit 69\nexec env -i \"${safe_env[@]}\" bash --noprofile --norc \"$payload_path\"\n'",
+  "UserId": "204304175653577039",
+  "WorkspaceId": "179169",
+  "WorkspaceName": "pai_52fx2u56uu44ih8p7z",
+  "Accessibility": "PRIVATE"
+}

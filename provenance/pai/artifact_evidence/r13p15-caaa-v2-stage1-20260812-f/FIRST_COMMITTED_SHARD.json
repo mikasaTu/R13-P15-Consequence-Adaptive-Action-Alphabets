@@ -1,0 +1,16 @@
+{
+  "completion_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_00_contact_onset.npz.complete.json",
+  "created_utc": "2026-08-12T16:01:48.052446+00:00",
+  "current_launch_manifest_status": "updated_after_hash_verified_collection_or_resume",
+  "current_launch_manifests": [
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_collection_bowl_on_plate.json",
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_collection_plate_push.json",
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_collection_stove_turn_on.json",
+    "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_collection_wine_rack.json"
+  ],
+  "nonce": "ba11fa5b332d5b2514b0fd4521d550ea",
+  "payload": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/bowl_on_plate/episode_00_contact_onset.npz",
+  "payload_sha256": "f479250c55c94936cb452609688fb277b84daa45f54b7865d57c21ced5cfbd85",
+  "run_id": "r13p15-caaa-v2-stage1-20260812-f",
+  "status": "persisted_committed_sample_or_shard"
+}

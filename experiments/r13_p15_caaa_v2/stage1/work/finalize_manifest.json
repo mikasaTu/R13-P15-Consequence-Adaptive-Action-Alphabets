@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-08-12T16:07:09.216478+00:00",
+  "disposition": "REJECT_CORE_HYPOTHESIS",
+  "frozen_calibration_baseline": "covariance_mahalanobis",
+  "quantized_rows": 69120,
+  "status": "STAGE1_COMPLETE"
+}

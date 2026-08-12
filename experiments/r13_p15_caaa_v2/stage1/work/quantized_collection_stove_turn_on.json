@@ -1,0 +1,522 @@
+{
+  "count": 32,
+  "created_utc": "2026-08-12T16:05:17.422932+00:00",
+  "pai_nonce": "ba11fa5b332d5b2514b0fd4521d550ea",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-f",
+  "resume_validation": "payload_hash_and_exact_current_plan_arrays",
+  "shards": [
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T14:58:30.040915+00:00",
+        "episode_id": 8,
+        "payload": "stove_turn_on__e08__contact_onset.npz",
+        "payload_bytes": 372854,
+        "payload_sha256": "cc9a214772e8b3ab824f709c45c9e23d75c4bf654798bbe4ff21f17787687655",
+        "rows": 432,
+        "snapshot_index": 47,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e08__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e08__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T14:59:19.989465+00:00",
+        "episode_id": 8,
+        "payload": "stove_turn_on__e08__free_space.npz",
+        "payload_bytes": 330394,
+        "payload_sha256": "14bce5db4e8964c8ddb7f664b91eae72325cc9b0bbfe9475930d5cb125373a1e",
+        "rows": 432,
+        "snapshot_index": 15,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e08__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e08__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:00:17.992048+00:00",
+        "episode_id": 8,
+        "payload": "stove_turn_on__e08__post_contact.npz",
+        "payload_bytes": 410578,
+        "payload_sha256": "35aaf9eaf3f6aacf5526916906508b6fb8a01d50e3832cecb052af9875b04114",
+        "rows": 432,
+        "snapshot_index": 68,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e08__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e08__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:01:08.199534+00:00",
+        "episode_id": 8,
+        "payload": "stove_turn_on__e08__pre_contact.npz",
+        "payload_bytes": 353767,
+        "payload_sha256": "364c2baa44ad272844e0005c04aa745ffb9914639afe99c728f0f56190298b90",
+        "rows": 432,
+        "snapshot_index": 43,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e08__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e08__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:02:01.749347+00:00",
+        "episode_id": 9,
+        "payload": "stove_turn_on__e09__contact_onset.npz",
+        "payload_bytes": 346891,
+        "payload_sha256": "ec4aa8ba55428624196f880ec9bbfc0bdd4040fb98d0031f3701763efdc5dad2",
+        "rows": 432,
+        "snapshot_index": 46,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e09__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e09__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:02:50.322497+00:00",
+        "episode_id": 9,
+        "payload": "stove_turn_on__e09__free_space.npz",
+        "payload_bytes": 323840,
+        "payload_sha256": "0068153e611c46a29922725b7c8a6be6697c1871837ed9c49b67e5579f6e1241",
+        "rows": 432,
+        "snapshot_index": 15,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e09__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e09__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:03:47.300583+00:00",
+        "episode_id": 9,
+        "payload": "stove_turn_on__e09__post_contact.npz",
+        "payload_bytes": 365420,
+        "payload_sha256": "85af9027fbd28fe5a445a670fdc626906c94897a05f31a34023829c7e86159ed",
+        "rows": 432,
+        "snapshot_index": 62,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e09__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e09__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:04:37.961916+00:00",
+        "episode_id": 9,
+        "payload": "stove_turn_on__e09__pre_contact.npz",
+        "payload_bytes": 308115,
+        "payload_sha256": "d6c606747a2ba7eb38ee871b28bced748d6fd3b538bea820737b35a612325b5e",
+        "rows": 432,
+        "snapshot_index": 42,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e09__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e09__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:05:31.635049+00:00",
+        "episode_id": 10,
+        "payload": "stove_turn_on__e10__contact_onset.npz",
+        "payload_bytes": 330474,
+        "payload_sha256": "26be4a35d4c239a36ee43fa74078bf7e13e85a307431382a7b79a4ae21736292",
+        "rows": 432,
+        "snapshot_index": 55,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e10__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e10__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:06:20.086138+00:00",
+        "episode_id": 10,
+        "payload": "stove_turn_on__e10__free_space.npz",
+        "payload_bytes": 330605,
+        "payload_sha256": "17a7106047873b9bd861d9db0d92a56f1d457a88b110d6ccac8721270c22b749",
+        "rows": 432,
+        "snapshot_index": 18,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e10__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e10__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:07:15.743053+00:00",
+        "episode_id": 10,
+        "payload": "stove_turn_on__e10__post_contact.npz",
+        "payload_bytes": 343873,
+        "payload_sha256": "b20e63caccf96b45be025188698311035cbd567ac3072cad1a30e5eaf4658f06",
+        "rows": 432,
+        "snapshot_index": 77,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e10__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e10__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:08:06.648363+00:00",
+        "episode_id": 10,
+        "payload": "stove_turn_on__e10__pre_contact.npz",
+        "payload_bytes": 388986,
+        "payload_sha256": "28c7642dc848e14bddf7d3ab716889c3edcfc38fa9fa011f2804842a3598dfc1",
+        "rows": 432,
+        "snapshot_index": 51,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e10__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e10__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:08:59.467184+00:00",
+        "episode_id": 11,
+        "payload": "stove_turn_on__e11__contact_onset.npz",
+        "payload_bytes": 366367,
+        "payload_sha256": "0504a4a87b05f6254697c9567efd566aca72ffdc33586809ef0cf79d8e07b420",
+        "rows": 432,
+        "snapshot_index": 43,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e11__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e11__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:09:48.763893+00:00",
+        "episode_id": 11,
+        "payload": "stove_turn_on__e11__free_space.npz",
+        "payload_bytes": 291572,
+        "payload_sha256": "31912f74eac99cbda91cf10c4293980943d597ef466bbcb825eb12cb1bdcffab",
+        "rows": 432,
+        "snapshot_index": 14,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e11__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e11__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:10:44.871737+00:00",
+        "episode_id": 11,
+        "payload": "stove_turn_on__e11__post_contact.npz",
+        "payload_bytes": 380673,
+        "payload_sha256": "5b5af2301428ab09f0d57cde1572267d7c803c3335b9b5349b4c2e22b3c8c11c",
+        "rows": 432,
+        "snapshot_index": 66,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e11__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e11__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:11:36.458660+00:00",
+        "episode_id": 11,
+        "payload": "stove_turn_on__e11__pre_contact.npz",
+        "payload_bytes": 331024,
+        "payload_sha256": "dae83e7db9e9e9805146ad576114f2334ff6cc00cf6ab2a966e68f24e0968f41",
+        "rows": 432,
+        "snapshot_index": 39,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e11__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e11__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:13:03.777226+00:00",
+        "episode_id": 12,
+        "payload": "stove_turn_on__e12__contact_onset.npz",
+        "payload_bytes": 504715,
+        "payload_sha256": "cd37a42ee865d3bc21ccaedd53742cf6182e2e5279b15ea4278180d085c2f642",
+        "rows": 648,
+        "snapshot_index": 46,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e12__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e12__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:14:14.974443+00:00",
+        "episode_id": 12,
+        "payload": "stove_turn_on__e12__free_space.npz",
+        "payload_bytes": 472670,
+        "payload_sha256": "483ffde00fda319ae940b3c248d08543758799f888befea9eae1350bc154d4c8",
+        "rows": 648,
+        "snapshot_index": 15,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e12__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e12__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:15:37.057946+00:00",
+        "episode_id": 12,
+        "payload": "stove_turn_on__e12__post_contact.npz",
+        "payload_bytes": 497146,
+        "payload_sha256": "46d5fa592db317ce46d160cc1612ce7141c51c98bbb1a4140f6d9d376f1b2152",
+        "rows": 648,
+        "snapshot_index": 77,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e12__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e12__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:16:55.965625+00:00",
+        "episode_id": 12,
+        "payload": "stove_turn_on__e12__pre_contact.npz",
+        "payload_bytes": 467987,
+        "payload_sha256": "6c44efbeae5f955cf5d392f77346c5bba278486a78db5fdddbcf767b07d86c5b",
+        "rows": 648,
+        "snapshot_index": 42,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e12__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e12__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:18:15.535127+00:00",
+        "episode_id": 13,
+        "payload": "stove_turn_on__e13__contact_onset.npz",
+        "payload_bytes": 503858,
+        "payload_sha256": "25cf2f5e4b8f5e7309260942034e236742bb9ecc88d6f92aa68ac26982817f94",
+        "rows": 648,
+        "snapshot_index": 53,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e13__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e13__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:19:27.697738+00:00",
+        "episode_id": 13,
+        "payload": "stove_turn_on__e13__free_space.npz",
+        "payload_bytes": 431129,
+        "payload_sha256": "d92e36260447db8650e18504036fa1bd09fca551c7e12bf258be58e654d5e568",
+        "rows": 648,
+        "snapshot_index": 17,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e13__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e13__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:20:52.587976+00:00",
+        "episode_id": 13,
+        "payload": "stove_turn_on__e13__post_contact.npz",
+        "payload_bytes": 485805,
+        "payload_sha256": "983e56549535a3495d0f13997d2df3f18fdb6f5467cc24c3e4421290256befe1",
+        "rows": 648,
+        "snapshot_index": 72,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e13__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e13__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:22:08.522320+00:00",
+        "episode_id": 13,
+        "payload": "stove_turn_on__e13__pre_contact.npz",
+        "payload_bytes": 466111,
+        "payload_sha256": "3be4e10da390d6e085e312f7f00d32a7e146f22d24890cdf9e31d8952cf23d28",
+        "rows": 648,
+        "snapshot_index": 49,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e13__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e13__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:23:30.687152+00:00",
+        "episode_id": 14,
+        "payload": "stove_turn_on__e14__contact_onset.npz",
+        "payload_bytes": 508886,
+        "payload_sha256": "4b78e83348531ac13b3d5015a4b69aa049079a3600c52be83ece2b463aa2675b",
+        "rows": 648,
+        "snapshot_index": 53,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e14__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e14__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:24:42.077742+00:00",
+        "episode_id": 14,
+        "payload": "stove_turn_on__e14__free_space.npz",
+        "payload_bytes": 426529,
+        "payload_sha256": "ba19a6f48ff0a37208b5dc8c81dd62c70bd8af165730027bb95b08f3797e5278",
+        "rows": 648,
+        "snapshot_index": 17,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e14__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e14__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:26:06.813249+00:00",
+        "episode_id": 14,
+        "payload": "stove_turn_on__e14__post_contact.npz",
+        "payload_bytes": 428229,
+        "payload_sha256": "5bc912129f94e1302c8d5c4298981336fda01b2a3457668a5a6f0b8885176b07",
+        "rows": 648,
+        "snapshot_index": 72,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e14__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e14__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:27:26.814141+00:00",
+        "episode_id": 14,
+        "payload": "stove_turn_on__e14__pre_contact.npz",
+        "payload_bytes": 481353,
+        "payload_sha256": "12b0210b060fb4cf013c28ed534036624d7a8033a97fc310c03996377aaf575b",
+        "rows": 648,
+        "snapshot_index": 49,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e14__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e14__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:28:42.556208+00:00",
+        "episode_id": 15,
+        "payload": "stove_turn_on__e15__contact_onset.npz",
+        "payload_bytes": 481104,
+        "payload_sha256": "383b68cc5d9c82e3e5192b18c38c7422c385d38d050c81171d1e4aac7a7fd03f",
+        "rows": 648,
+        "snapshot_index": 55,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e15__contact_onset.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e15__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:29:51.712059+00:00",
+        "episode_id": 15,
+        "payload": "stove_turn_on__e15__free_space.npz",
+        "payload_bytes": 444547,
+        "payload_sha256": "0bc8284dc0865268c872e147cb0bb19b8f51d725c291319d0f73b901ea9962b2",
+        "rows": 648,
+        "snapshot_index": 18,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e15__free_space.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e15__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:31:12.431668+00:00",
+        "episode_id": 15,
+        "payload": "stove_turn_on__e15__post_contact.npz",
+        "payload_bytes": 467966,
+        "payload_sha256": "bca5cd970cd208007fb7ab056cc707a763d4e7c6a81b4744be392eb95508b3e4",
+        "rows": 648,
+        "snapshot_index": 79,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e15__post_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e15__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:32:25.324209+00:00",
+        "episode_id": 15,
+        "payload": "stove_turn_on__e15__pre_contact.npz",
+        "payload_bytes": 523641,
+        "payload_sha256": "5efa90b26ccde3621935c1536cd3c2f542d291dbe212af239dcc3b238a474984",
+        "rows": 648,
+        "snapshot_index": 51,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e15__pre_contact.npz",
+        "task_id": "stove_turn_on"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/stove_turn_on/stove_turn_on__e15__pre_contact.npz",
+      "status": "resumed"
+    }
+  ],
+  "task_id": "stove_turn_on"
+}

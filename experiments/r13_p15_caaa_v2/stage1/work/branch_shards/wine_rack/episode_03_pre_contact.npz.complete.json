@@ -1,0 +1,14 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-12T14:44:28.995513+00:00",
+  "episode_id": 3,
+  "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+  "payload": "episode_03_pre_contact.npz",
+  "payload_bytes": 147125,
+  "payload_sha256": "bd049f10d69bf3b7f744f3129973a0fac0b9140b4a54423a7e5a75a8f80cc608",
+  "phase": "pre_contact",
+  "snapshot_index": 84,
+  "task_id": "wine_rack"
+}

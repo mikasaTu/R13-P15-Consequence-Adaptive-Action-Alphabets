@@ -1,0 +1,6 @@
+{
+    "snapshot_index": 131,
+    "source_npz": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/wine_rack/episode_00_post_contact.npz",
+    "split": "train",
+    "task_name": "put_the_wine_bottle_on_the_rack"
+}

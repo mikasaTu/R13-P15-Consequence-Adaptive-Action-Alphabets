@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:05:01.921832+00:00",
+  "payload": "wine_rack__e08__free_space.npz",
+  "payload_bytes": 90981,
+  "payload_sha256": "d093a357e0ff9066eb67c0a6701b3592d3cabb5582093508c3d664c828567e1a",
+  "rows": 432,
+  "snapshot_key": "wine_rack__e08__free_space"
+}

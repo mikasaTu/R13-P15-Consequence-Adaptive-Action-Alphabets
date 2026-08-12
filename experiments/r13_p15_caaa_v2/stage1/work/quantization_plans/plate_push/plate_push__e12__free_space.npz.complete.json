@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:04:54.211504+00:00",
+  "payload": "plate_push__e12__free_space.npz",
+  "payload_bytes": 105159,
+  "payload_sha256": "810c0a502f659d8f4f11c544824b70202c38d476255910947faaaa5909f91bce",
+  "rows": 648,
+  "snapshot_key": "plate_push__e12__free_space"
+}

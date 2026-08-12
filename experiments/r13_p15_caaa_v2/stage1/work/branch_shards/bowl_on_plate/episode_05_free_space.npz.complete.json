@@ -1,0 +1,14 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-12T14:46:19.224352+00:00",
+  "episode_id": 5,
+  "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+  "payload": "episode_05_free_space.npz",
+  "payload_bytes": 113458,
+  "payload_sha256": "a2a108eebdf0f8c6330a4dcda319ce5135254b8c08ce633ec2b1ffe64401250f",
+  "phase": "free_space",
+  "snapshot_index": 13,
+  "task_id": "bowl_on_plate"
+}

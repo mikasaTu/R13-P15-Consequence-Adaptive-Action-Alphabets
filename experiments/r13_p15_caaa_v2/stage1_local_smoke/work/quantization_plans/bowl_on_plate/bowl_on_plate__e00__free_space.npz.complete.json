@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "payload": "bowl_on_plate__e00__free_space.npz",
+  "payload_bytes": 5855,
+  "payload_sha256": "d15da14fdd31b4d5cd12e446b925cc4fe1a53101a1ebae337e2294b21ec4e87c",
+  "scope": "identity decoded replay smoke"
+}

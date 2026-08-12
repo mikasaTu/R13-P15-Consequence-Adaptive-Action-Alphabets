@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:07.475368+00:00",
+  "k": 64,
+  "method": "global_kmeans",
+  "payload": "global_kmeans_k64.npz",
+  "payload_bytes": 12789,
+  "payload_sha256": "7df0c6ed90f4f55d52936e9568dc8d244f2a214a5cdce08812d5a198193f4778"
+}

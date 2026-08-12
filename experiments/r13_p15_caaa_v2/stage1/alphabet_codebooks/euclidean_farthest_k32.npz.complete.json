@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:05.951953+00:00",
+  "k": 32,
+  "method": "euclidean_farthest",
+  "payload": "euclidean_farthest_k32.npz",
+  "payload_bytes": 6933,
+  "payload_sha256": "aa7faddbea759bea829b3bb5ad2fb565d2c60574610b1022dcc69fa6fd9cd008"
+}

@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T15:19:27.697738+00:00",
+  "episode_id": 13,
+  "payload": "stove_turn_on__e13__free_space.npz",
+  "payload_bytes": 431129,
+  "payload_sha256": "d92e36260447db8650e18504036fa1bd09fca551c7e12bf258be58e654d5e568",
+  "rows": 648,
+  "snapshot_index": 17,
+  "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/stove_turn_on/stove_turn_on__e13__free_space.npz",
+  "task_id": "stove_turn_on"
+}

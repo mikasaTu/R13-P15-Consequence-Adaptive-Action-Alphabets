@@ -1,0 +1,77 @@
+{
+  "checked_at_utc": "2026-08-12T15:51:18Z",
+  "complete": true,
+  "roles": {
+    "contract": {
+      "checks": {
+        "data_sources": true,
+        "empty_driver": true,
+        "exact_job_object": true,
+        "job_id": true,
+        "no_user_vpc": true,
+        "single_worker_spec": true,
+        "worker_count": true,
+        "worker_cpu": true,
+        "worker_gpu": true,
+        "worker_image": true,
+        "worker_memory": true,
+        "worker_shared_memory": true,
+        "workspace_id": true
+      },
+      "complete": true,
+      "data_sources": [
+        [
+          "d-36p023eg0f2vuqny8y",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+          ""
+        ],
+        [
+          "d-7fi8hehav247qi6x5o",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/Models/",
+          ""
+        ],
+        [
+          "d-ejgj2ej7io1t2t32uc",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+          ""
+        ],
+        [
+          "d-lg9t2b6xajpukeqqeb",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+          ""
+        ],
+        [
+          "d-mkixtohdn75dp8x9tb",
+          "v1",
+          "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+          ""
+        ]
+      ],
+      "job_id": "dlcfp1szuc2cgqfp",
+      "job_spec_count": 1,
+      "resource_id": "quotakzri8a5wqcp",
+      "settings": {
+        "aimaster_args": "",
+        "aimaster_enabled": false,
+        "driver": "",
+        "oversold_type": "ForbiddenQuotaOverSold"
+      },
+      "status": "Failed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7b2806c08f6016202dc81647b14e7fcd1aae4a27f95be5d27f08c8fabe107195",
+      "worker": {
+        "cpu": "92",
+        "gpu": "8",
+        "image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+        "memory": "1600Gi",
+        "pod_count": 1,
+        "shared_memory": "1600Gi"
+      },
+      "worker_spec_count": 1
+    }
+  }
+}

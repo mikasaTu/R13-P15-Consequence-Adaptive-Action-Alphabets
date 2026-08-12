@@ -1,0 +1,4037 @@
+{
+  "created_utc": "2026-08-12T15:56:13.880402+00:00",
+  "episode_split": {
+    "calibration": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "test": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "global_seed": 13150015,
+  "records": [
+    {
+      "contact_fraction": 0.6111111111111112,
+      "episode_id": 0,
+      "episode_length": 90,
+      "phase_indices": {
+        "contact_onset": 34,
+        "free_space": 2,
+        "post_contact": 70,
+        "pre_contact": 30
+      },
+      "progress_min_max": [
+        0.29945265969968576,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 11,
+          "fallback": false,
+          "max_abs_pose_action": 0.80625,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.35901680479014186,
+          "selected_index": 2,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 30,
+          "fallback": false,
+          "max_abs_pose_action": 0.7232142857142858,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.3590172557965117,
+          "selected_index": 30,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 34,
+          "fallback": false,
+          "max_abs_pose_action": 0.14464285714285713,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.3590276402868274,
+          "selected_index": 34,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 70,
+          "fallback": false,
+          "max_abs_pose_action": 0.6455357142857143,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 70,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.2222222222222222,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5681818181818182,
+      "episode_id": 1,
+      "episode_length": 88,
+      "phase_indices": {
+        "contact_onset": 38,
+        "free_space": 12,
+        "post_contact": 77,
+        "pre_contact": 34
+      },
+      "progress_min_max": [
+        0.24540122088052718,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 12,
+          "fallback": false,
+          "max_abs_pose_action": 0.8357142857142857,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.27375426548563414,
+          "selected_index": 12,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 34,
+          "fallback": false,
+          "max_abs_pose_action": 0.5383928571428572,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.2737542654862748,
+          "selected_index": 34,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 38,
+          "fallback": false,
+          "max_abs_pose_action": 0.1285714285714286,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.27380218794147704,
+          "selected_index": 38,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 77,
+          "fallback": false,
+          "max_abs_pose_action": 0.6723214285714286,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 77,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.125,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5434782608695652,
+      "episode_id": 2,
+      "episode_length": 92,
+      "phase_indices": {
+        "contact_onset": 41,
+        "free_space": 13,
+        "post_contact": 81,
+        "pre_contact": 37
+      },
+      "progress_min_max": [
+        0.2747995382233136,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.8705357142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.2773174506484579,
+          "selected_index": 13,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 37,
+          "fallback": false,
+          "max_abs_pose_action": 0.40982142857142867,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.2773174506486371,
+          "selected_index": 37,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 41,
+          "fallback": false,
+          "max_abs_pose_action": 0.07767857142857143,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.2773167141758223,
+          "selected_index": 41,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 81,
+          "fallback": false,
+          "max_abs_pose_action": 0.6160714285714286,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 81,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.11956521739130435,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5531914893617021,
+      "episode_id": 3,
+      "episode_length": 94,
+      "phase_indices": {
+        "contact_onset": 42,
+        "free_space": 3,
+        "post_contact": 73,
+        "pre_contact": 38
+      },
+      "progress_min_max": [
+        0.314355631683093,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.8089285714285713,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.31436024249593897,
+          "selected_index": 3,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 38,
+          "fallback": false,
+          "max_abs_pose_action": 0.058928571428571434,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.3143603382445051,
+          "selected_index": 38,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.61875,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.3144897021190967,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 73,
+          "fallback": false,
+          "max_abs_pose_action": 0.7767857142857144,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 73,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.18085106382978725,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.55,
+      "episode_id": 4,
+      "episode_length": 80,
+      "phase_indices": {
+        "contact_onset": 36,
+        "free_space": 11,
+        "post_contact": 68,
+        "pre_contact": 32
+      },
+      "progress_min_max": [
+        0.2733966308558968,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 12,
+          "fallback": false,
+          "max_abs_pose_action": 0.8571428571428572,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.2803822283737713,
+          "selected_index": 11,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 32,
+          "fallback": false,
+          "max_abs_pose_action": 0.40714285714285714,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.2803822283762146,
+          "selected_index": 32,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 36,
+          "fallback": false,
+          "max_abs_pose_action": 0.16607142857142856,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.2803763579646499,
+          "selected_index": 36,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 68,
+          "fallback": false,
+          "max_abs_pose_action": 0.7205357142857144,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 68,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.15,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5842696629213483,
+      "episode_id": 5,
+      "episode_length": 89,
+      "phase_indices": {
+        "contact_onset": 34,
+        "free_space": 13,
+        "post_contact": 71,
+        "pre_contact": 30
+      },
+      "progress_min_max": [
+        0.28640022292453027,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 11,
+          "fallback": false,
+          "max_abs_pose_action": 0.8678571428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.2890904984545827,
+          "selected_index": 13,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 30,
+          "fallback": false,
+          "max_abs_pose_action": 0.7366071428571429,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.28909049845477586,
+          "selected_index": 30,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 34,
+          "fallback": false,
+          "max_abs_pose_action": 0.5303571428571429,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.2890535403452059,
+          "selected_index": 34,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 71,
+          "fallback": false,
+          "max_abs_pose_action": 0.6803571428571429,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 71,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.19101123595505617,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.49523809523809526,
+      "episode_id": 6,
+      "episode_length": 105,
+      "phase_indices": {
+        "contact_onset": 52,
+        "free_space": 17,
+        "post_contact": 86,
+        "pre_contact": 48
+      },
+      "progress_min_max": [
+        0.2521380996293367,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 17,
+          "fallback": false,
+          "max_abs_pose_action": 0.7419642857142859,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.2522160484287184,
+          "selected_index": 17,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 48,
+          "fallback": false,
+          "max_abs_pose_action": 0.11517857142857144,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.2522160484287193,
+          "selected_index": 48,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 52,
+          "fallback": false,
+          "max_abs_pose_action": 0.7901785714285714,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.2521380996293367,
+          "selected_index": 52,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 86,
+          "fallback": false,
+          "max_abs_pose_action": 0.6107142857142858,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 86,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.1523809523809524,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5434782608695652,
+      "episode_id": 7,
+      "episode_length": 92,
+      "phase_indices": {
+        "contact_onset": 41,
+        "free_space": 15,
+        "post_contact": 81,
+        "pre_contact": 37
+      },
+      "progress_min_max": [
+        0.2874333165503672,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.8946428571428571,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.31814687720572665,
+          "selected_index": 15,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 37,
+          "fallback": false,
+          "max_abs_pose_action": 0.8383928571428572,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.31814687720574397,
+          "selected_index": 37,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 41,
+          "fallback": false,
+          "max_abs_pose_action": 0.4125,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.31822695234906334,
+          "selected_index": 41,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 81,
+          "fallback": false,
+          "max_abs_pose_action": 0.8142857142857143,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 81,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.11956521739130435,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5119047619047619,
+      "episode_id": 8,
+      "episode_length": 84,
+      "phase_indices": {
+        "contact_onset": 41,
+        "free_space": 13,
+        "post_contact": 72,
+        "pre_contact": 37
+      },
+      "progress_min_max": [
+        0.3159439082525228,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.7982142857142857,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.32167889533904237,
+          "selected_index": 13,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 37,
+          "fallback": false,
+          "max_abs_pose_action": 0.23303571428571432,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.3216788953392776,
+          "selected_index": 37,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 41,
+          "fallback": false,
+          "max_abs_pose_action": 0.20089285714285718,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.32522250620693316,
+          "selected_index": 41,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 72,
+          "fallback": false,
+          "max_abs_pose_action": 0.6508928571428572,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 72,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.14285714285714285,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.4888888888888889,
+      "episode_id": 9,
+      "episode_length": 90,
+      "phase_indices": {
+        "contact_onset": 46,
+        "free_space": 15,
+        "post_contact": 78,
+        "pre_contact": 42
+      },
+      "progress_min_max": [
+        0.2856122280527485,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.8678571428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.31151877255139226,
+          "selected_index": 15,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.22232142857142861,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.3115187725514088,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 46,
+          "fallback": false,
+          "max_abs_pose_action": 0.5116071428571428,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.3125838507630776,
+          "selected_index": 46,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 78,
+          "fallback": false,
+          "max_abs_pose_action": 0.5303571428571429,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 78,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.13333333333333333,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.48214285714285715,
+      "episode_id": 10,
+      "episode_length": 112,
+      "phase_indices": {
+        "contact_onset": 57,
+        "free_space": 19,
+        "post_contact": 93,
+        "pre_contact": 53
+      },
+      "progress_min_max": [
+        0.2951780340892851,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 19,
+          "fallback": false,
+          "max_abs_pose_action": 0.6883928571428571,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.30636351718365007,
+          "selected_index": 19,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 53,
+          "fallback": false,
+          "max_abs_pose_action": 0.24642857142857144,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.30636351718365024,
+          "selected_index": 53,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 57,
+          "fallback": false,
+          "max_abs_pose_action": 0.39375,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.30355836497291555,
+          "selected_index": 57,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 93,
+          "fallback": false,
+          "max_abs_pose_action": 0.675,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 93,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.15178571428571427,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.49411764705882355,
+      "episode_id": 11,
+      "episode_length": 85,
+      "phase_indices": {
+        "contact_onset": 43,
+        "free_space": 14,
+        "post_contact": 73,
+        "pre_contact": 39
+      },
+      "progress_min_max": [
+        0.32446956242933084,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.8330357142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.3591085499628194,
+          "selected_index": 14,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 39,
+          "fallback": false,
+          "max_abs_pose_action": 0.3669642857142857,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.35910854996289887,
+          "selected_index": 39,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.24642857142857144,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.35912245664267695,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 73,
+          "fallback": false,
+          "max_abs_pose_action": 0.6991071428571428,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 73,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.1411764705882353,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.4431818181818182,
+      "episode_id": 12,
+      "episode_length": 88,
+      "phase_indices": {
+        "contact_onset": 49,
+        "free_space": 29,
+        "post_contact": 77,
+        "pre_contact": 45
+      },
+      "progress_min_max": [
+        0.3083547787718234,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 16,
+          "fallback": false,
+          "max_abs_pose_action": 0.8732142857142857,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.3083593231222246,
+          "selected_index": 29,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 45,
+          "fallback": false,
+          "max_abs_pose_action": 0.2142857142857143,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.3083593231222246,
+          "selected_index": 45,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 49,
+          "fallback": false,
+          "max_abs_pose_action": 0.7339285714285714,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.3093696246663355,
+          "selected_index": 49,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 77,
+          "fallback": false,
+          "max_abs_pose_action": 0.28660714285714284,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 77,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.125,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5612244897959183,
+      "episode_id": 13,
+      "episode_length": 98,
+      "phase_indices": {
+        "contact_onset": 42,
+        "free_space": 14,
+        "post_contact": 86,
+        "pre_contact": 38
+      },
+      "progress_min_max": [
+        0.2588974981058034,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.6642857142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.26478647837162606,
+          "selected_index": 14,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 38,
+          "fallback": false,
+          "max_abs_pose_action": 0.61875,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.2647864783716709,
+          "selected_index": 38,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.35892857142857143,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.2647864783716709,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 86,
+          "fallback": false,
+          "max_abs_pose_action": 0.8303571428571429,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 86,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.11224489795918367,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.5517241379310345,
+      "episode_id": 14,
+      "episode_length": 87,
+      "phase_indices": {
+        "contact_onset": 39,
+        "free_space": 13,
+        "post_contact": 76,
+        "pre_contact": 35
+      },
+      "progress_min_max": [
+        0.24832495563694912,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.8892857142857145,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.31239091236934047,
+          "selected_index": 13,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 35,
+          "fallback": false,
+          "max_abs_pose_action": 0.46339285714285716,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.31239091236956323,
+          "selected_index": 35,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 39,
+          "fallback": false,
+          "max_abs_pose_action": 0.40714285714285714,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.3124243150908666,
+          "selected_index": 39,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 75,
+          "fallback": false,
+          "max_abs_pose_action": 0.8651785714285715,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 76,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.13793103448275862,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.47619047619047616,
+      "episode_id": 15,
+      "episode_length": 84,
+      "phase_indices": {
+        "contact_onset": 44,
+        "free_space": 2,
+        "post_contact": 73,
+        "pre_contact": 40
+      },
+      "progress_min_max": [
+        0.2660800556420367,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.8624999999999999,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.2969225912443778,
+          "selected_index": 2,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 40,
+          "fallback": false,
+          "max_abs_pose_action": 0.14732142857142858,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.29692290633283613,
+          "selected_index": 40,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 44,
+          "fallback": false,
+          "max_abs_pose_action": 0.7044642857142857,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.29478728655114983,
+          "selected_index": 44,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 73,
+          "fallback": false,
+          "max_abs_pose_action": 0.7125,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 73,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.13095238095238096,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "contact_fraction": 0.6838709677419355,
+      "episode_id": 0,
+      "episode_length": 155,
+      "phase_indices": {
+        "contact_onset": 47,
+        "free_space": 19,
+        "post_contact": 101,
+        "pre_contact": 43
+      },
+      "progress_min_max": [
+        0.015580445874625867,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.8517857142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.015580445874625894,
+          "selected_index": 19,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.6080357142857142,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.015580445874625867,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 47,
+          "fallback": false,
+          "max_abs_pose_action": 0.5758928571428572,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.015616720307991766,
+          "selected_index": 47,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 101,
+          "fallback": false,
+          "max_abs_pose_action": 0.8866071428571427,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.11369883887213118,
+          "selected_index": 101,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.625,
+      "episode_id": 1,
+      "episode_length": 128,
+      "phase_indices": {
+        "contact_onset": 40,
+        "free_space": 19,
+        "post_contact": 86,
+        "pre_contact": 36
+      },
+      "progress_min_max": [
+        0.012787382813082272,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.7687499999999999,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.012787382813082296,
+          "selected_index": 19,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 36,
+          "fallback": false,
+          "max_abs_pose_action": 0.7875,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.012787382813082272,
+          "selected_index": 36,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 40,
+          "fallback": false,
+          "max_abs_pose_action": 0.6803571428571429,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.012799066897767638,
+          "selected_index": 40,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 82,
+          "fallback": false,
+          "max_abs_pose_action": 0.8919642857142858,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.0680850723179817,
+          "selected_index": 86,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.632,
+      "episode_id": 2,
+      "episode_length": 125,
+      "phase_indices": {
+        "contact_onset": 46,
+        "free_space": 21,
+        "post_contact": 87,
+        "pre_contact": 42
+      },
+      "progress_min_max": [
+        0.009990644736315574,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.8678571428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009990644736315574,
+          "selected_index": 21,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.6562499999999999,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009990644736315574,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 46,
+          "fallback": false,
+          "max_abs_pose_action": 0.6991071428571428,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.010063266562896245,
+          "selected_index": 46,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 86,
+          "fallback": false,
+          "max_abs_pose_action": 0.8892857142857145,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.048120910076503806,
+          "selected_index": 87,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.615,
+      "episode_id": 3,
+      "episode_length": 200,
+      "phase_indices": {
+        "contact_onset": 39,
+        "free_space": 19,
+        "post_contact": 101,
+        "pre_contact": 35
+      },
+      "progress_min_max": [
+        0.014116824556292776,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.7982142857142857,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.014116824556292788,
+          "selected_index": 19,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 35,
+          "fallback": false,
+          "max_abs_pose_action": 0.7285714285714285,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.014116824556292776,
+          "selected_index": 35,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 39,
+          "fallback": false,
+          "max_abs_pose_action": 0.6616071428571428,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.01411904236324554,
+          "selected_index": 39,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 101,
+          "fallback": false,
+          "max_abs_pose_action": 0.8892857142857145,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.040634166324673246,
+          "selected_index": 101,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.6062176165803109,
+      "episode_id": 4,
+      "episode_length": 193,
+      "phase_indices": {
+        "contact_onset": 46,
+        "free_space": 20,
+        "post_contact": 104,
+        "pre_contact": 42
+      },
+      "progress_min_max": [
+        0.015142645234747787,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.811607142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.015142645234747787,
+          "selected_index": 20,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.61875,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.015142645234747787,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 46,
+          "fallback": false,
+          "max_abs_pose_action": 0.5973214285714286,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.01515016086457563,
+          "selected_index": 46,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 105,
+          "fallback": false,
+          "max_abs_pose_action": 0.8866071428571427,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.09065899279041809,
+          "selected_index": 104,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.6239316239316239,
+      "episode_id": 5,
+      "episode_length": 117,
+      "phase_indices": {
+        "contact_onset": 44,
+        "free_space": 21,
+        "post_contact": 81,
+        "pre_contact": 40
+      },
+      "progress_min_max": [
+        0.014648793418138956,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.8571428571428572,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.014699029624917963,
+          "selected_index": 21,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 40,
+          "fallback": false,
+          "max_abs_pose_action": 0.7553571428571428,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.014699029624917963,
+          "selected_index": 40,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 44,
+          "fallback": false,
+          "max_abs_pose_action": 0.7258928571428571,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.014648793418138956,
+          "selected_index": 44,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 81,
+          "fallback": false,
+          "max_abs_pose_action": 0.8892857142857145,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.07852207386554841,
+          "selected_index": 81,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.6688311688311688,
+      "episode_id": 6,
+      "episode_length": 154,
+      "phase_indices": {
+        "contact_onset": 47,
+        "free_space": 20,
+        "post_contact": 106,
+        "pre_contact": 43
+      },
+      "progress_min_max": [
+        0.01334635773127426,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.8196428571428573,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.01334635773127426,
+          "selected_index": 20,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.5973214285714286,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.01334635773127426,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 47,
+          "fallback": false,
+          "max_abs_pose_action": 0.5276785714285714,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.013408602254281555,
+          "selected_index": 47,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 101,
+          "fallback": false,
+          "max_abs_pose_action": 0.8892857142857145,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.06055716509848209,
+          "selected_index": 106,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.6178861788617886,
+      "episode_id": 7,
+      "episode_length": 123,
+      "phase_indices": {
+        "contact_onset": 46,
+        "free_space": 19,
+        "post_contact": 85,
+        "pre_contact": 42
+      },
+      "progress_min_max": [
+        0.014166325140305691,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.8491071428571428,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.014166325140305717,
+          "selected_index": 19,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.6776785714285715,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.014166325140305691,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 46,
+          "fallback": false,
+          "max_abs_pose_action": 0.6562499999999999,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.014212309864410513,
+          "selected_index": 46,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 85,
+          "fallback": false,
+          "max_abs_pose_action": 0.8946428571428571,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.0859969924186607,
+          "selected_index": 85,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.7050359712230215,
+      "episode_id": 8,
+      "episode_length": 139,
+      "phase_indices": {
+        "contact_onset": 41,
+        "free_space": 18,
+        "post_contact": 91,
+        "pre_contact": 37
+      },
+      "progress_min_max": [
+        0.013597745883212596,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.8678571428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.01359774588321268,
+          "selected_index": 18,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 37,
+          "fallback": false,
+          "max_abs_pose_action": 0.7044642857142857,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.013597745883212596,
+          "selected_index": 37,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 41,
+          "fallback": false,
+          "max_abs_pose_action": 0.7098214285714286,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.013599189657029144,
+          "selected_index": 41,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 91,
+          "fallback": false,
+          "max_abs_pose_action": 0.7687499999999999,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.05147820037869518,
+          "selected_index": 91,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.7397260273972602,
+      "episode_id": 9,
+      "episode_length": 146,
+      "phase_indices": {
+        "contact_onset": 37,
+        "free_space": 18,
+        "post_contact": 106,
+        "pre_contact": 35
+      },
+      "progress_min_max": [
+        0.013715506936111312,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 12,
+          "fallback": false,
+          "max_abs_pose_action": 0.8946428571428571,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.013903858595673071,
+          "selected_index": 18,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 33,
+          "fallback": false,
+          "max_abs_pose_action": 0.8866071428571427,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.013903858595672985,
+          "selected_index": 35,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 37,
+          "fallback": false,
+          "max_abs_pose_action": 0.7580357142857144,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.013951351830018275,
+          "selected_index": 37,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 92,
+          "fallback": false,
+          "max_abs_pose_action": 0.8919642857142858,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.07633840613651784,
+          "selected_index": 106,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.5302325581395348,
+      "episode_id": 10,
+      "episode_length": 215,
+      "phase_indices": {
+        "contact_onset": 45,
+        "free_space": 22,
+        "post_contact": 104,
+        "pre_contact": 41
+      },
+      "progress_min_max": [
+        0.011518764140997409,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.8839285714285714,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.011518764140997409,
+          "selected_index": 22,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 41,
+          "fallback": false,
+          "max_abs_pose_action": 0.7419642857142859,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.011518764140997409,
+          "selected_index": 41,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 45,
+          "fallback": false,
+          "max_abs_pose_action": 0.6508928571428572,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.011609526107605071,
+          "selected_index": 45,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 104,
+          "fallback": false,
+          "max_abs_pose_action": 0.8678571428571429,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.0453985840478119,
+          "selected_index": 104,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.6319444444444444,
+      "episode_id": 11,
+      "episode_length": 144,
+      "phase_indices": {
+        "contact_onset": 41,
+        "free_space": 17,
+        "post_contact": 89,
+        "pre_contact": 37
+      },
+      "progress_min_max": [
+        0.014802532664488251,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.8330357142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.014820275734219972,
+          "selected_index": 17,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 37,
+          "fallback": false,
+          "max_abs_pose_action": 0.8223214285714285,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.014820275734219603,
+          "selected_index": 37,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 41,
+          "fallback": false,
+          "max_abs_pose_action": 0.7660714285714286,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.014802532664488251,
+          "selected_index": 41,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 89,
+          "fallback": false,
+          "max_abs_pose_action": 0.8705357142857143,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.08285820410194367,
+          "selected_index": 89,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.647887323943662,
+      "episode_id": 12,
+      "episode_length": 142,
+      "phase_indices": {
+        "contact_onset": 49,
+        "free_space": 26,
+        "post_contact": 96,
+        "pre_contact": 45
+      },
+      "progress_min_max": [
+        0.01297318125750489,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 16,
+          "fallback": false,
+          "max_abs_pose_action": 0.7767857142857144,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.01297318125750489,
+          "selected_index": 26,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 45,
+          "fallback": false,
+          "max_abs_pose_action": 0.80625,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.01297318125750489,
+          "selected_index": 45,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 49,
+          "fallback": false,
+          "max_abs_pose_action": 0.7071428571428573,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.01297877082886561,
+          "selected_index": 49,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 96,
+          "fallback": false,
+          "max_abs_pose_action": 0.8357142857142857,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.09568508505947342,
+          "selected_index": 96,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.6423841059602649,
+      "episode_id": 13,
+      "episode_length": 151,
+      "phase_indices": {
+        "contact_onset": 47,
+        "free_space": 20,
+        "post_contact": 102,
+        "pre_contact": 43
+      },
+      "progress_min_max": [
+        0.01109228440407417,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.811607142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.01118986139963755,
+          "selected_index": 20,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.6589285714285714,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.01118986139963755,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 47,
+          "fallback": false,
+          "max_abs_pose_action": 0.61875,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.011190169514230333,
+          "selected_index": 47,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 100,
+          "fallback": false,
+          "max_abs_pose_action": 0.8946428571428571,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.05813753460062257,
+          "selected_index": 102,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.5842696629213483,
+      "episode_id": 14,
+      "episode_length": 178,
+      "phase_indices": {
+        "contact_onset": 42,
+        "free_space": 20,
+        "post_contact": 99,
+        "pre_contact": 38
+      },
+      "progress_min_max": [
+        0.01116931161281346,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.8598214285714285,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.01116931161281346,
+          "selected_index": 20,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 38,
+          "fallback": false,
+          "max_abs_pose_action": 0.6267857142857143,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.01116931161281346,
+          "selected_index": 38,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.7232142857142858,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.011213591805458277,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 95,
+          "fallback": false,
+          "max_abs_pose_action": 0.8678571428571429,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.14344013298797625,
+          "selected_index": 99,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.6102941176470589,
+      "episode_id": 15,
+      "episode_length": 136,
+      "phase_indices": {
+        "contact_onset": 43,
+        "free_space": 20,
+        "post_contact": 87,
+        "pre_contact": 39
+      },
+      "progress_min_max": [
+        0.013710140012629624,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.8437500000000001,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.013710140012629624,
+          "selected_index": 20,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 39,
+          "fallback": false,
+          "max_abs_pose_action": 0.7071428571428573,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.013710140012629624,
+          "selected_index": 39,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.5651785714285715,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.013721338717680828,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 87,
+          "fallback": false,
+          "max_abs_pose_action": 0.8758928571428571,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.047999327757234776,
+          "selected_index": 87,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "contact_fraction": 0.475,
+      "episode_id": 0,
+      "episode_length": 80,
+      "phase_indices": {
+        "contact_onset": 41,
+        "free_space": 13,
+        "post_contact": 62,
+        "pre_contact": 37
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 13,
+          "fallback": false,
+          "max_abs_pose_action": 0.8491071428571428,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 13,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 37,
+          "fallback": false,
+          "max_abs_pose_action": 0.40982142857142867,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 37,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 41,
+          "fallback": false,
+          "max_abs_pose_action": 0.4125,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.008206729730601207,
+          "selected_index": 41,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 62,
+          "fallback": false,
+          "max_abs_pose_action": 0.4982142857142858,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.5579901876499045,
+          "selected_index": 62,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.4583333333333333,
+      "episode_id": 1,
+      "episode_length": 96,
+      "phase_indices": {
+        "contact_onset": 51,
+        "free_space": 17,
+        "post_contact": 75,
+        "pre_contact": 47
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 17,
+          "fallback": false,
+          "max_abs_pose_action": 0.6428571428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 17,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 47,
+          "fallback": false,
+          "max_abs_pose_action": 0.39107142857142857,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 47,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 51,
+          "fallback": false,
+          "max_abs_pose_action": 0.13125,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.008406781181593296,
+          "selected_index": 51,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 75,
+          "fallback": false,
+          "max_abs_pose_action": 0.4419642857142857,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.3336213519046383,
+          "selected_index": 75,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.3707865168539326,
+      "episode_id": 2,
+      "episode_length": 89,
+      "phase_indices": {
+        "contact_onset": 48,
+        "free_space": 16,
+        "post_contact": 73,
+        "pre_contact": 44
+      },
+      "progress_min_max": [
+        0.005664539904364518,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 16,
+          "fallback": false,
+          "max_abs_pose_action": 0.6803571428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 16,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 44,
+          "fallback": false,
+          "max_abs_pose_action": 0.19017857142857145,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 44,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 48,
+          "fallback": false,
+          "max_abs_pose_action": 0.1285714285714286,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.009576647355571913,
+          "selected_index": 48,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 73,
+          "fallback": false,
+          "max_abs_pose_action": 0.39107142857142857,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.6800072419330292,
+          "selected_index": 73,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.3953488372093023,
+      "episode_id": 3,
+      "episode_length": 86,
+      "phase_indices": {
+        "contact_onset": 47,
+        "free_space": 15,
+        "post_contact": 69,
+        "pre_contact": 43
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.7312500000000001,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 15,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.23303571428571432,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 47,
+          "fallback": false,
+          "max_abs_pose_action": 0.23571428571428574,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.013320733171106044,
+          "selected_index": 47,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 69,
+          "fallback": false,
+          "max_abs_pose_action": 0.375,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.6072002103298131,
+          "selected_index": 69,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.40860215053763443,
+      "episode_id": 4,
+      "episode_length": 93,
+      "phase_indices": {
+        "contact_onset": 55,
+        "free_space": 18,
+        "post_contact": 75,
+        "pre_contact": 51
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 18,
+          "fallback": false,
+          "max_abs_pose_action": 0.6482142857142857,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 18,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 51,
+          "fallback": false,
+          "max_abs_pose_action": 0.3616071428571429,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 51,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 55,
+          "fallback": false,
+          "max_abs_pose_action": 0.3080357142857143,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.005417874972823395,
+          "selected_index": 55,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 75,
+          "fallback": false,
+          "max_abs_pose_action": 0.375,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.5584447513432667,
+          "selected_index": 75,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.43478260869565216,
+      "episode_id": 5,
+      "episode_length": 92,
+      "phase_indices": {
+        "contact_onset": 49,
+        "free_space": 16,
+        "post_contact": 72,
+        "pre_contact": 45
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 16,
+          "fallback": false,
+          "max_abs_pose_action": 0.7848214285714286,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 16,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 45,
+          "fallback": false,
+          "max_abs_pose_action": 0.46339285714285716,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 45,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 49,
+          "fallback": false,
+          "max_abs_pose_action": 0.17410714285714288,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.009721350472041996,
+          "selected_index": 49,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 72,
+          "fallback": false,
+          "max_abs_pose_action": 0.4285714285714286,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.41141765321761636,
+          "selected_index": 72,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.44680851063829785,
+      "episode_id": 6,
+      "episode_length": 94,
+      "phase_indices": {
+        "contact_onset": 52,
+        "free_space": 17,
+        "post_contact": 74,
+        "pre_contact": 48
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 17,
+          "fallback": false,
+          "max_abs_pose_action": 0.7928571428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 17,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 48,
+          "fallback": false,
+          "max_abs_pose_action": 0.35357142857142865,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 48,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 52,
+          "fallback": false,
+          "max_abs_pose_action": 0.3294642857142857,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.009852951252954038,
+          "selected_index": 52,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 74,
+          "fallback": false,
+          "max_abs_pose_action": 0.3707142857142857,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.4050481418296749,
+          "selected_index": 74,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.4479166666666667,
+      "episode_id": 7,
+      "episode_length": 96,
+      "phase_indices": {
+        "contact_onset": 48,
+        "free_space": 16,
+        "post_contact": 75,
+        "pre_contact": 44
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 16,
+          "fallback": false,
+          "max_abs_pose_action": 0.7366071428571429,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 16,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 44,
+          "fallback": false,
+          "max_abs_pose_action": 0.5330357142857143,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 44,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 48,
+          "fallback": false,
+          "max_abs_pose_action": 0.47946428571428573,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.009832354234329925,
+          "selected_index": 48,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 75,
+          "fallback": false,
+          "max_abs_pose_action": 0.5491071428571428,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.38152073218740734,
+          "selected_index": 75,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.43023255813953487,
+      "episode_id": 8,
+      "episode_length": 86,
+      "phase_indices": {
+        "contact_onset": 47,
+        "free_space": 15,
+        "post_contact": 68,
+        "pre_contact": 43
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.6857142857142857,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 15,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.3991071428571428,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 47,
+          "fallback": false,
+          "max_abs_pose_action": 0.2491071428571429,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.008080605722829991,
+          "selected_index": 47,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 68,
+          "fallback": false,
+          "max_abs_pose_action": 0.3803571428571429,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.539776549932738,
+          "selected_index": 68,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.4025974025974026,
+      "episode_id": 9,
+      "episode_length": 77,
+      "phase_indices": {
+        "contact_onset": 46,
+        "free_space": 15,
+        "post_contact": 62,
+        "pre_contact": 42
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.7258928571428571,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 15,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.6000000000000001,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 46,
+          "fallback": false,
+          "max_abs_pose_action": 0.2839285714285715,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.009797278520177017,
+          "selected_index": 46,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 62,
+          "fallback": false,
+          "max_abs_pose_action": 0.5008928571428571,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.6983240332303738,
+          "selected_index": 62,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.4329896907216495,
+      "episode_id": 10,
+      "episode_length": 97,
+      "phase_indices": {
+        "contact_onset": 55,
+        "free_space": 18,
+        "post_contact": 77,
+        "pre_contact": 51
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 18,
+          "fallback": false,
+          "max_abs_pose_action": 0.5705357142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 18,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 51,
+          "fallback": false,
+          "max_abs_pose_action": 0.5785714285714285,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 51,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 55,
+          "fallback": false,
+          "max_abs_pose_action": 0.4821428571428571,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.011540012478415067,
+          "selected_index": 55,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 77,
+          "fallback": false,
+          "max_abs_pose_action": 0.45535714285714285,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.43758723327898286,
+          "selected_index": 77,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.5113636363636364,
+      "episode_id": 11,
+      "episode_length": 88,
+      "phase_indices": {
+        "contact_onset": 43,
+        "free_space": 14,
+        "post_contact": 66,
+        "pre_contact": 39
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 14,
+          "fallback": false,
+          "max_abs_pose_action": 0.75,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 14,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 39,
+          "fallback": false,
+          "max_abs_pose_action": 0.8598214285714285,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 39,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 43,
+          "fallback": false,
+          "max_abs_pose_action": 0.5517857142857143,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.010028125218560188,
+          "selected_index": 43,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 66,
+          "fallback": false,
+          "max_abs_pose_action": 0.375,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.3065202468799667,
+          "selected_index": 66,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.5048543689320388,
+      "episode_id": 12,
+      "episode_length": 103,
+      "phase_indices": {
+        "contact_onset": 46,
+        "free_space": 15,
+        "post_contact": 77,
+        "pre_contact": 42
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 15,
+          "fallback": false,
+          "max_abs_pose_action": 0.7205357142857144,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 15,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 42,
+          "fallback": false,
+          "max_abs_pose_action": 0.6562499999999999,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 42,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 46,
+          "fallback": false,
+          "max_abs_pose_action": 0.38571428571428573,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.008930775781579199,
+          "selected_index": 46,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 77,
+          "fallback": false,
+          "max_abs_pose_action": 0.41517857142857145,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.16380922819746752,
+          "selected_index": 77,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.4111111111111111,
+      "episode_id": 13,
+      "episode_length": 90,
+      "phase_indices": {
+        "contact_onset": 53,
+        "free_space": 17,
+        "post_contact": 72,
+        "pre_contact": 49
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 17,
+          "fallback": false,
+          "max_abs_pose_action": 0.7741071428571428,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 17,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 49,
+          "fallback": false,
+          "max_abs_pose_action": 0.3723214285714286,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 49,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 53,
+          "fallback": false,
+          "max_abs_pose_action": 0.21964285714285717,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.009044967127724107,
+          "selected_index": 53,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 72,
+          "fallback": false,
+          "max_abs_pose_action": 0.5142857142857143,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.5467021513404011,
+          "selected_index": 72,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.4044943820224719,
+      "episode_id": 14,
+      "episode_length": 89,
+      "phase_indices": {
+        "contact_onset": 53,
+        "free_space": 17,
+        "post_contact": 72,
+        "pre_contact": 49
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 17,
+          "fallback": false,
+          "max_abs_pose_action": 0.6589285714285714,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 17,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 49,
+          "fallback": false,
+          "max_abs_pose_action": 0.24107142857142855,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 49,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 53,
+          "fallback": false,
+          "max_abs_pose_action": 0.1392857142857143,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.00884533790515173,
+          "selected_index": 53,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 72,
+          "fallback": false,
+          "max_abs_pose_action": 0.37285714285714294,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.6318379432376263,
+          "selected_index": 72,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.41414141414141414,
+      "episode_id": 15,
+      "episode_length": 99,
+      "phase_indices": {
+        "contact_onset": 55,
+        "free_space": 18,
+        "post_contact": 79,
+        "pre_contact": 51
+      },
+      "progress_min_max": [
+        0.0,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 18,
+          "fallback": false,
+          "max_abs_pose_action": 0.6401785714285715,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 18,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 51,
+          "fallback": false,
+          "max_abs_pose_action": 0.42589285714285713,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.009900990099009901,
+          "selected_index": 51,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 55,
+          "fallback": false,
+          "max_abs_pose_action": 0.20892857142857144,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.009695492397429109,
+          "selected_index": 55,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 79,
+          "fallback": false,
+          "max_abs_pose_action": 0.5517857142857143,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.45925398580972654,
+          "selected_index": 79,
+          "target_contact_at_snapshot": false
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.0,
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "contact_fraction": 0.729106628242075,
+      "episode_id": 0,
+      "episode_length": 347,
+      "phase_indices": {
+        "contact_onset": 78,
+        "free_space": 26,
+        "post_contact": 131,
+        "pre_contact": 74
+      },
+      "progress_min_max": [
+        0.07171933920983078,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 26,
+          "fallback": false,
+          "max_abs_pose_action": 0.35571428571428576,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.07182313313815461,
+          "selected_index": 26,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 74,
+          "fallback": false,
+          "max_abs_pose_action": 0.35357142857142865,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.07182313313815461,
+          "selected_index": 74,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 78,
+          "fallback": false,
+          "max_abs_pose_action": 0.24642857142857144,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.07207075916750785,
+          "selected_index": 78,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 131,
+          "fallback": false,
+          "max_abs_pose_action": 0.5383928571428572,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 131,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.5561959654178674,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5402298850574713,
+      "episode_id": 1,
+      "episode_length": 174,
+      "phase_indices": {
+        "contact_onset": 80,
+        "free_space": 26,
+        "post_contact": 162,
+        "pre_contact": 76
+      },
+      "progress_min_max": [
+        0.06731674980984015,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 26,
+          "fallback": false,
+          "max_abs_pose_action": 0.3460714285714286,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06760918558819624,
+          "selected_index": 26,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 76,
+          "fallback": false,
+          "max_abs_pose_action": 0.23839285714285713,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06760918558819624,
+          "selected_index": 76,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 80,
+          "fallback": false,
+          "max_abs_pose_action": 0.23035714285714287,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.06731674980984015,
+          "selected_index": 80,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 162,
+          "fallback": false,
+          "max_abs_pose_action": 0.23035714285714287,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.46158591919047526,
+          "selected_index": 162,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.06896551724137931,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.592391304347826,
+      "episode_id": 2,
+      "episode_length": 184,
+      "phase_indices": {
+        "contact_onset": 66,
+        "free_space": 22,
+        "post_contact": 78,
+        "pre_contact": 62
+      },
+      "progress_min_max": [
+        0.06702679066776641,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 22,
+          "fallback": false,
+          "max_abs_pose_action": 0.31285714285714283,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06712136157586437,
+          "selected_index": 22,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 62,
+          "fallback": false,
+          "max_abs_pose_action": 0.46875,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06734683326574244,
+          "selected_index": 62,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 66,
+          "fallback": false,
+          "max_abs_pose_action": 0.41517857142857145,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.068264360766382,
+          "selected_index": 66,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 78,
+          "fallback": false,
+          "max_abs_pose_action": 0.3026785714285714,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.07218682102548646,
+          "selected_index": 78,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.2554347826086957,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.6395348837209303,
+      "episode_id": 3,
+      "episode_length": 258,
+      "phase_indices": {
+        "contact_onset": 88,
+        "free_space": 29,
+        "post_contact": 158,
+        "pre_contact": 84
+      },
+      "progress_min_max": [
+        0.06840387425053374,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 29,
+          "fallback": false,
+          "max_abs_pose_action": 0.3042857142857143,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06850112077122725,
+          "selected_index": 29,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 84,
+          "fallback": false,
+          "max_abs_pose_action": 0.21160714285714283,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06850112077122725,
+          "selected_index": 84,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 88,
+          "fallback": false,
+          "max_abs_pose_action": 0.6026785714285715,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.06912949716316841,
+          "selected_index": 88,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 158,
+          "fallback": false,
+          "max_abs_pose_action": 0.20785714285714288,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.3426493134677209,
+          "selected_index": 158,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.3682170542635659,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5379746835443038,
+      "episode_id": 4,
+      "episode_length": 158,
+      "phase_indices": {
+        "contact_onset": 66,
+        "free_space": 22,
+        "post_contact": 133,
+        "pre_contact": 62
+      },
+      "progress_min_max": [
+        0.06709593562084643,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 22,
+          "fallback": false,
+          "max_abs_pose_action": 0.3675,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06719064058451006,
+          "selected_index": 22,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 62,
+          "fallback": false,
+          "max_abs_pose_action": 0.225,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06719064058451006,
+          "selected_index": 62,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 66,
+          "fallback": false,
+          "max_abs_pose_action": 0.17142857142857143,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.0674097758896878,
+          "selected_index": 66,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 133,
+          "fallback": false,
+          "max_abs_pose_action": 0.23303571428571432,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 133,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.11392405063291139,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5058823529411764,
+      "episode_id": 5,
+      "episode_length": 170,
+      "phase_indices": {
+        "contact_onset": 84,
+        "free_space": 28,
+        "post_contact": 135,
+        "pre_contact": 80
+      },
+      "progress_min_max": [
+        0.06564045892390026,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 28,
+          "fallback": false,
+          "max_abs_pose_action": 0.36214285714285716,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06659993705024408,
+          "selected_index": 28,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 80,
+          "fallback": false,
+          "max_abs_pose_action": 0.15000000000000002,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06686342216601664,
+          "selected_index": 80,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 84,
+          "fallback": false,
+          "max_abs_pose_action": 0.18482142857142855,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.06590392172674965,
+          "selected_index": 84,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 135,
+          "fallback": false,
+          "max_abs_pose_action": 0.5732142857142857,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 135,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.09411764705882353,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5197368421052632,
+      "episode_id": 6,
+      "episode_length": 152,
+      "phase_indices": {
+        "contact_onset": 73,
+        "free_space": 24,
+        "post_contact": 123,
+        "pre_contact": 69
+      },
+      "progress_min_max": [
+        0.07251821073742373,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 24,
+          "fallback": false,
+          "max_abs_pose_action": 0.31392857142857145,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.07286252523363713,
+          "selected_index": 24,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 69,
+          "fallback": false,
+          "max_abs_pose_action": 0.31339285714285714,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.07286252523363713,
+          "selected_index": 69,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 73,
+          "fallback": false,
+          "max_abs_pose_action": 0.15000000000000002,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.07294823361851979,
+          "selected_index": 73,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 123,
+          "fallback": false,
+          "max_abs_pose_action": 0.5035714285714286,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 123,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.09210526315789473,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5064102564102564,
+      "episode_id": 7,
+      "episode_length": 156,
+      "phase_indices": {
+        "contact_onset": 74,
+        "free_space": 24,
+        "post_contact": 146,
+        "pre_contact": 70
+      },
+      "progress_min_max": [
+        0.057709505724592616,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 24,
+          "fallback": false,
+          "max_abs_pose_action": 0.35571428571428576,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.05778665373144451,
+          "selected_index": 24,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 70,
+          "fallback": false,
+          "max_abs_pose_action": 0.2785714285714286,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.05802972549019516,
+          "selected_index": 70,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 74,
+          "fallback": false,
+          "max_abs_pose_action": 0.2598214285714286,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.05845553999564076,
+          "selected_index": 74,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 146,
+          "fallback": false,
+          "max_abs_pose_action": 0.12321428571428572,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 146,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.0641025641025641,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5671641791044776,
+      "episode_id": 8,
+      "episode_length": 201,
+      "phase_indices": {
+        "contact_onset": 83,
+        "free_space": 27,
+        "post_contact": 190,
+        "pre_contact": 79
+      },
+      "progress_min_max": [
+        0.06520792328490879,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 27,
+          "fallback": false,
+          "max_abs_pose_action": 0.36107142857142854,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06529899984928095,
+          "selected_index": 27,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 79,
+          "fallback": false,
+          "max_abs_pose_action": 0.2625,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06548750997342079,
+          "selected_index": 79,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 83,
+          "fallback": false,
+          "max_abs_pose_action": 0.2517857142857143,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.06577626082271174,
+          "selected_index": 83,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 190,
+          "fallback": false,
+          "max_abs_pose_action": 0.12589285714285714,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 190,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.05472636815920398,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.39644970414201186,
+      "episode_id": 9,
+      "episode_length": 169,
+      "phase_indices": {
+        "contact_onset": 101,
+        "free_space": 33,
+        "post_contact": 142,
+        "pre_contact": 97
+      },
+      "progress_min_max": [
+        0.06839216100024044,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 33,
+          "fallback": false,
+          "max_abs_pose_action": 0.31178571428571433,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06848938509204754,
+          "selected_index": 33,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 97,
+          "fallback": false,
+          "max_abs_pose_action": 0.13125,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06848938509204754,
+          "selected_index": 97,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 101,
+          "fallback": false,
+          "max_abs_pose_action": 0.45,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.0691601020441581,
+          "selected_index": 101,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 142,
+          "fallback": false,
+          "max_abs_pose_action": 0.45267857142857143,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 142,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.13609467455621302,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.37579617834394907,
+      "episode_id": 10,
+      "episode_length": 157,
+      "phase_indices": {
+        "contact_onset": 93,
+        "free_space": 31,
+        "post_contact": 146,
+        "pre_contact": 89
+      },
+      "progress_min_max": [
+        0.07611996115918168,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 31,
+          "fallback": false,
+          "max_abs_pose_action": 0.36214285714285716,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.07623267402124194,
+          "selected_index": 31,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 89,
+          "fallback": false,
+          "max_abs_pose_action": 0.3803571428571429,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.07623267402124194,
+          "selected_index": 89,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 93,
+          "fallback": false,
+          "max_abs_pose_action": 0.17946428571428572,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.07674689854694636,
+          "selected_index": 93,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 146,
+          "fallback": false,
+          "max_abs_pose_action": 0.6241071428571429,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 146,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.07006369426751592,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5337837837837838,
+      "episode_id": 11,
+      "episode_length": 148,
+      "phase_indices": {
+        "contact_onset": 67,
+        "free_space": 22,
+        "post_contact": 117,
+        "pre_contact": 63
+      },
+      "progress_min_max": [
+        0.07027610601400214,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 22,
+          "fallback": false,
+          "max_abs_pose_action": 0.2914285714285714,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.07106102136881949,
+          "selected_index": 22,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 63,
+          "fallback": false,
+          "max_abs_pose_action": 0.40446428571428567,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.07106102136881949,
+          "selected_index": 63,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 67,
+          "fallback": false,
+          "max_abs_pose_action": 0.33214285714285713,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.07106102136881949,
+          "selected_index": 67,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 117,
+          "fallback": false,
+          "max_abs_pose_action": 0.46875,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 117,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "calibration",
+      "target_contact_fraction": 0.16216216216216217,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5028248587570622,
+      "episode_id": 12,
+      "episode_length": 177,
+      "phase_indices": {
+        "contact_onset": 74,
+        "free_space": 24,
+        "post_contact": 165,
+        "pre_contact": 70
+      },
+      "progress_min_max": [
+        0.07139787199609335,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 24,
+          "fallback": false,
+          "max_abs_pose_action": 0.375,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.07167841332915274,
+          "selected_index": 24,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 70,
+          "fallback": false,
+          "max_abs_pose_action": 0.2598214285714286,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.07167841332915274,
+          "selected_index": 70,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 74,
+          "fallback": false,
+          "max_abs_pose_action": 0.3026785714285714,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.07157511213951828,
+          "selected_index": 74,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 165,
+          "fallback": false,
+          "max_abs_pose_action": 0.1360714285714286,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 165,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.062146892655367235,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.45161290322580644,
+      "episode_id": 13,
+      "episode_length": 155,
+      "phase_indices": {
+        "contact_onset": 81,
+        "free_space": 27,
+        "post_contact": 128,
+        "pre_contact": 77
+      },
+      "progress_min_max": [
+        0.07149157616272635,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 27,
+          "fallback": false,
+          "max_abs_pose_action": 0.36214285714285716,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.07248757063999633,
+          "selected_index": 27,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 77,
+          "fallback": false,
+          "max_abs_pose_action": 0.3267857142857143,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.07248757063999633,
+          "selected_index": 77,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 81,
+          "fallback": false,
+          "max_abs_pose_action": 0.16339285714285715,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.07169584833433915,
+          "selected_index": 81,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 128,
+          "fallback": false,
+          "max_abs_pose_action": 0.5839285714285714,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 128,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.07741935483870968,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5577889447236181,
+      "episode_id": 14,
+      "episode_length": 199,
+      "phase_indices": {
+        "contact_onset": 87,
+        "free_space": 29,
+        "post_contact": 154,
+        "pre_contact": 83
+      },
+      "progress_min_max": [
+        0.06741606101471688,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 29,
+          "fallback": false,
+          "max_abs_pose_action": 0.35250000000000004,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.06770042598561556,
+          "selected_index": 29,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 83,
+          "fallback": false,
+          "max_abs_pose_action": 0.1875,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.06770042598561556,
+          "selected_index": 83,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 87,
+          "fallback": false,
+          "max_abs_pose_action": 0.19017857142857145,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.06778899661235772,
+          "selected_index": 87,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 154,
+          "fallback": false,
+          "max_abs_pose_action": 0.3508928571428571,
+          "phase": "post_contact",
+          "progress_at_snapshot": 0.29217944417511355,
+          "selected_index": 154,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.17587939698492464,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "contact_fraction": 0.5369127516778524,
+      "episode_id": 15,
+      "episode_length": 149,
+      "phase_indices": {
+        "contact_onset": 69,
+        "free_space": 23,
+        "post_contact": 119,
+        "pre_contact": 65
+      },
+      "progress_min_max": [
+        0.06034885637651122,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 23,
+          "fallback": false,
+          "max_abs_pose_action": 0.36,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.060567573303418706,
+          "selected_index": 23,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 65,
+          "fallback": false,
+          "max_abs_pose_action": 0.39375,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.060567573303418706,
+          "selected_index": 65,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 69,
+          "fallback": false,
+          "max_abs_pose_action": 0.20089285714285718,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.060357505377465794,
+          "selected_index": 69,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 119,
+          "fallback": false,
+          "max_abs_pose_action": 0.48482142857142857,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 119,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "test",
+      "target_contact_fraction": 0.087248322147651,
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    }
+  ],
+  "suite": "libero_goal",
+  "tasks": [
+    {
+      "goal_predicate": "on",
+      "primary_object": "akita_black_bowl_1",
+      "role": "low_constraint_pick_place_control",
+      "target_contact_parent": "plate_1",
+      "target_object": "plate_1",
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    },
+    {
+      "goal_predicate": "on",
+      "primary_object": "plate_1",
+      "role": "sustained_sliding_contact",
+      "target_contact_parent": null,
+      "target_object": "main_table_stove_front_region",
+      "task_id": "plate_push",
+      "task_name": "push_the_plate_to_the_front_of_the_stove"
+    },
+    {
+      "goal_predicate": "turnon",
+      "primary_object": "flat_stove_1",
+      "role": "small_articulated_contact",
+      "target_contact_parent": null,
+      "target_object": "flat_stove_1",
+      "task_id": "stove_turn_on",
+      "task_name": "turn_on_the_stove"
+    },
+    {
+      "goal_predicate": "on",
+      "primary_object": "wine_bottle_1",
+      "role": "precision_oriented_receptacle",
+      "target_contact_parent": "wine_rack_1",
+      "target_object": "wine_rack_1_top_region",
+      "task_id": "wine_rack",
+      "task_name": "put_the_wine_bottle_on_the_rack"
+    }
+  ]
+}

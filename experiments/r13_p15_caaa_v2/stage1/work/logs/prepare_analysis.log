@@ -1,0 +1,143 @@
+{
+  "created_utc": "2026-08-12T16:05:07.247989+00:00",
+  "jacobian_metric_rows": 2304,
+  "quantization_plans": 128,
+  "selection": {
+    "calibration_sample_count": 3072,
+    "covariance_regularization": 1e-08,
+    "covariance_trace": [
+      {
+        "calibration_linear_effect_error": 371039.3505139164,
+        "regularization": 1e-08
+      },
+      {
+        "calibration_linear_effect_error": 371039.3505139164,
+        "regularization": 1e-06
+      },
+      {
+        "calibration_linear_effect_error": 371039.3505139164,
+        "regularization": 0.0001
+      },
+      {
+        "calibration_linear_effect_error": 396745.8906431971,
+        "regularization": 0.01
+      }
+    ],
+    "created_utc": "2026-08-12T16:01:54.717258+00:00",
+    "metric_regularization": 1e-08,
+    "metric_regularization_trace": [
+      {
+        "median_metric_to_unscaled_consequence_spearman": 0.2739518287685676,
+        "regularization": 1e-08
+      },
+      {
+        "median_metric_to_unscaled_consequence_spearman": 0.2739518287685676,
+        "regularization": 1e-06
+      },
+      {
+        "median_metric_to_unscaled_consequence_spearman": 0.2739518287685676,
+        "regularization": 0.0001
+      },
+      {
+        "median_metric_to_unscaled_consequence_spearman": 0.2739518287685676,
+        "regularization": 0.01
+      }
+    ],
+    "pca_rank": 12,
+    "pca_trace": [
+      {
+        "calibration_linear_effect_error": 409451.4126435505,
+        "rank": 4
+      },
+      {
+        "calibration_linear_effect_error": 388483.13339902577,
+        "rank": 8
+      },
+      {
+        "calibration_linear_effect_error": 351095.56616563443,
+        "rank": 12
+      },
+      {
+        "calibration_linear_effect_error": 369469.2600067612,
+        "rank": 16
+      },
+      {
+        "calibration_linear_effect_error": 414444.5006256749,
+        "rank": 20
+      },
+      {
+        "calibration_linear_effect_error": 365014.9649164837,
+        "rank": 24
+      }
+    ],
+    "ridge": 0.001,
+    "ridge_trace": [
+      {
+        "median_normalized_rmse": 0.5633508515010641,
+        "median_r2": 0.6809858569901494,
+        "median_spearman": 0.8033892646995741,
+        "ridge": 1e-08
+      },
+      {
+        "median_normalized_rmse": 0.5632692402784607,
+        "median_r2": 0.6810088021781227,
+        "median_spearman": 0.8033892646995741,
+        "ridge": 1e-06
+      },
+      {
+        "median_normalized_rmse": 0.5556026350612528,
+        "median_r2": 0.6829340994652351,
+        "median_spearman": 0.8033892646995741,
+        "ridge": 0.0001
+      },
+      {
+        "median_normalized_rmse": 0.5213244451167629,
+        "median_r2": 0.6941290207417381,
+        "median_spearman": 0.8033892646995741,
+        "ridge": 0.001
+      },
+      {
+        "median_normalized_rmse": 0.736023630169313,
+        "median_r2": 0.39836218505596466,
+        "median_spearman": 0.8033892646995741,
+        "ridge": 0.01
+      },
+      {
+        "median_normalized_rmse": 0.9587636222100915,
+        "median_r2": 0.018545963360865572,
+        "median_spearman": 0.8033892646995741,
+        "ridge": 0.1
+      }
+    ],
+    "selection_split": "calibration_only",
+    "singular_cutoff": 0.0001,
+    "singular_cutoff_trace": [
+      {
+        "median_condition_number": 5820.241896018829,
+        "median_projected_normalized_rmse": 0.5213284078357627,
+        "median_rank": 10.5,
+        "singular_cutoff": 0.0001
+      },
+      {
+        "median_condition_number": 508.634195040123,
+        "median_projected_normalized_rmse": 0.5213308465973042,
+        "median_rank": 9.0,
+        "singular_cutoff": 0.001
+      },
+      {
+        "median_condition_number": 57.2391180869394,
+        "median_projected_normalized_rmse": 0.5213840938338885,
+        "median_rank": 6.0,
+        "singular_cutoff": 0.01
+      },
+      {
+        "median_condition_number": 11.315060653542558,
+        "median_projected_normalized_rmse": 0.5220360981583083,
+        "median_rank": 4.5,
+        "singular_cutoff": 0.05
+      }
+    ],
+    "train_sample_count": 6144
+  },
+  "status": "READY_FOR_REALIZED_QUANTIZATION_REPLAY"
+}

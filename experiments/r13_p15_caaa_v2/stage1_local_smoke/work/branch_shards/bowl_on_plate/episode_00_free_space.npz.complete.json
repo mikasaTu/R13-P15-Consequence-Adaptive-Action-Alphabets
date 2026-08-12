@@ -1,0 +1,12 @@
+{
+  "branches": 9,
+  "complete": true,
+  "created_utc": "2026-08-12T13:55:48.446136+00:00",
+  "episode_id": 0,
+  "payload": "episode_00_free_space.npz",
+  "payload_bytes": 16704,
+  "payload_sha256": "f2a4c669807ac8530ed40f2b10fb08225cac500251190b21e1f47843c12a7372",
+  "phase": "free_space",
+  "snapshot_index": 2,
+  "task_id": "bowl_on_plate"
+}

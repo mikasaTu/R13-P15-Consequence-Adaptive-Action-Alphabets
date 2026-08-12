@@ -1,0 +1,36 @@
+{
+  "active_superseded_cleanup_target_count": 0,
+  "active_superseded_cleanup_target_job_ids": [],
+  "created_utc": "2026-08-12T16:02:39.128901+00:00",
+  "known_same_experiment_predecessors": [
+    {
+      "cleanup_action": "none_already_terminal_before_replacement_first_work",
+      "finished_at_utc": "2026-08-12T14:23:11Z",
+      "first_work_evidence_exists": false,
+      "job_id": "dlc1ngywaybfd122",
+      "job_status": "Failed",
+      "pod_statuses": [
+        "Failed"
+      ],
+      "run_id": "r13p15-caaa-v2-stage1-20260812-d"
+    },
+    {
+      "cleanup_action": "none_already_terminal_before_replacement_first_work",
+      "finished_at_utc": "2026-08-12T15:40:13Z",
+      "first_work_evidence_exists": true,
+      "job_id": "dlcnyj30quijfvx9",
+      "job_status": "Failed",
+      "pod_statuses": [
+        "Failed"
+      ],
+      "run_id": "r13p15-caaa-v2-stage1-20260812-e"
+    }
+  ],
+  "replacement": {
+    "first_work_evidence": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/r13-p15-caaa-v2-stage1-pai/r13p15-caaa-v2-stage1-20260812-f/FIRST_COMMITTED_SHARD.json",
+    "first_work_status": "persisted_committed_sample_or_shard",
+    "job_id": "dlc1wxel8qjf7ck8",
+    "run_id": "r13p15-caaa-v2-stage1-20260812-f"
+  },
+  "status": "EXPLICIT_ZERO_ACTIVE_CLEANUP_TARGETS"
+}

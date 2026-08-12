@@ -1,0 +1,11 @@
+{
+  "count": 1,
+  "created_utc": "2026-08-12T13:55:48.574688+00:00",
+  "shards": [
+    {
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1_local_smoke/work/branch_shards/bowl_on_plate/episode_00_free_space.npz.complete.json",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1_local_smoke/work/branch_shards/bowl_on_plate/episode_00_free_space.npz",
+      "status": "created"
+    }
+  ]
+}

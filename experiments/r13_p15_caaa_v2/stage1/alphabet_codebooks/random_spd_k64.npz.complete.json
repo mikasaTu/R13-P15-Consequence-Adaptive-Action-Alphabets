@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:12.996928+00:00",
+  "k": 64,
+  "method": "random_spd",
+  "payload": "random_spd_k64.npz",
+  "payload_bytes": 12982,
+  "payload_sha256": "b5ebe624321a1bb1106ca05dcceb35fc94f862705c4b73bbe30a2e5e801388a5"
+}

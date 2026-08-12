@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-08-12T13:55:34.162637+00:00",
+  "episode_split": {
+    "calibration": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "test": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "global_seed": 13150015,
+  "records": [
+    {
+      "contact_fraction": 0.6111111111111112,
+      "episode_id": 0,
+      "episode_length": 90,
+      "phase_indices": {
+        "contact_onset": 34,
+        "free_space": 2,
+        "post_contact": 70,
+        "pre_contact": 30
+      },
+      "progress_min_max": [
+        0.29945265969968576,
+        1.0
+      ],
+      "recorded_success": true,
+      "selection_notes": [
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 11,
+          "fallback": false,
+          "max_abs_pose_action": 0.80625,
+          "phase": "free_space",
+          "progress_at_snapshot": 0.35901680479014186,
+          "selected_index": 2,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": false,
+          "desired_index": 30,
+          "fallback": false,
+          "max_abs_pose_action": 0.7232142857142858,
+          "phase": "pre_contact",
+          "progress_at_snapshot": 0.3590172557965117,
+          "selected_index": 30,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 34,
+          "fallback": false,
+          "max_abs_pose_action": 0.14464285714285713,
+          "phase": "contact_onset",
+          "progress_at_snapshot": 0.3590276402868274,
+          "selected_index": 34,
+          "target_contact_at_snapshot": false
+        },
+        {
+          "contact_at_snapshot": true,
+          "desired_index": 70,
+          "fallback": false,
+          "max_abs_pose_action": 0.6455357142857143,
+          "phase": "post_contact",
+          "progress_at_snapshot": 1.0,
+          "selected_index": 70,
+          "target_contact_at_snapshot": true
+        }
+      ],
+      "split": "train",
+      "target_contact_fraction": 0.2222222222222222,
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    }
+  ],
+  "suite": "libero_goal",
+  "tasks": [
+    {
+      "goal_predicate": "on",
+      "primary_object": "akita_black_bowl_1",
+      "role": "low_constraint_pick_place_control",
+      "target_contact_parent": "plate_1",
+      "target_object": "plate_1",
+      "task_id": "bowl_on_plate",
+      "task_name": "put_the_bowl_on_the_plate"
+    }
+  ]
+}

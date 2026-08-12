@@ -1,0 +1,522 @@
+{
+  "count": 32,
+  "created_utc": "2026-08-12T16:05:17.387697+00:00",
+  "pai_nonce": "ba11fa5b332d5b2514b0fd4521d550ea",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-f",
+  "resume_validation": "payload_hash_and_exact_current_plan_arrays",
+  "shards": [
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T14:58:34.043431+00:00",
+        "episode_id": 8,
+        "payload": "wine_rack__e08__contact_onset.npz",
+        "payload_bytes": 544423,
+        "payload_sha256": "0ab2068c6b88d471b2e1a485959efd8f4dccd3b4b90070402c5e3c7e0ca8f0a2",
+        "rows": 432,
+        "snapshot_index": 83,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e08__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e08__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T14:59:22.664103+00:00",
+        "episode_id": 8,
+        "payload": "wine_rack__e08__free_space.npz",
+        "payload_bytes": 336749,
+        "payload_sha256": "6b0f3c9e52cc273d34f1ffedd7841520a1e1c52d10a7afd99f9cdf9256b1995a",
+        "rows": 432,
+        "snapshot_index": 27,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e08__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e08__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:00:17.304347+00:00",
+        "episode_id": 8,
+        "payload": "wine_rack__e08__post_contact.npz",
+        "payload_bytes": 411361,
+        "payload_sha256": "5b084fadc2ae49642793aaaec3d322c47e9bb8f953e0430f4cef564e9cfd12d3",
+        "rows": 432,
+        "snapshot_index": 190,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e08__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e08__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:01:14.348696+00:00",
+        "episode_id": 8,
+        "payload": "wine_rack__e08__pre_contact.npz",
+        "payload_bytes": 536052,
+        "payload_sha256": "aa00b486cf3f7575abead432ba7b12804fb3a9cf2dba4e6a7577a147b7ada8cf",
+        "rows": 432,
+        "snapshot_index": 79,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e08__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e08__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:02:18.193516+00:00",
+        "episode_id": 9,
+        "payload": "wine_rack__e09__contact_onset.npz",
+        "payload_bytes": 526466,
+        "payload_sha256": "1755a6ade46ff733f8ebb0afc414a614eca527508b625adeb011951564476858",
+        "rows": 432,
+        "snapshot_index": 101,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e09__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e09__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:03:06.191684+00:00",
+        "episode_id": 9,
+        "payload": "wine_rack__e09__free_space.npz",
+        "payload_bytes": 402741,
+        "payload_sha256": "cb70681e6bd48240df4463889dbba0528bc5946326e077150a75f991c9858d91",
+        "rows": 432,
+        "snapshot_index": 33,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e09__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e09__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:04:09.052653+00:00",
+        "episode_id": 9,
+        "payload": "wine_rack__e09__post_contact.npz",
+        "payload_bytes": 480140,
+        "payload_sha256": "0066348caa8262631776ebfe9526e9e775c3bc25c9cc23bb31cd755b0aa1149d",
+        "rows": 432,
+        "snapshot_index": 142,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e09__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e09__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:05:08.589046+00:00",
+        "episode_id": 9,
+        "payload": "wine_rack__e09__pre_contact.npz",
+        "payload_bytes": 530333,
+        "payload_sha256": "b2ded080cdd735a727da77c363dd03e1163ca25ed73a17af3d1d96061453dec0",
+        "rows": 432,
+        "snapshot_index": 97,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e09__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e09__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:06:02.677296+00:00",
+        "episode_id": 10,
+        "payload": "wine_rack__e10__contact_onset.npz",
+        "payload_bytes": 525956,
+        "payload_sha256": "048449c7b2d62e92198c5f49bf77b9c818a21b4db25e34f67805280c40fee17f",
+        "rows": 432,
+        "snapshot_index": 93,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e10__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e10__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:06:51.285600+00:00",
+        "episode_id": 10,
+        "payload": "wine_rack__e10__free_space.npz",
+        "payload_bytes": 337197,
+        "payload_sha256": "fd43495b84ec808a0cdbde2b304a0ac1bc3a661fd929da482f121b8f02c23f2e",
+        "rows": 432,
+        "snapshot_index": 31,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e10__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e10__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:07:59.049407+00:00",
+        "episode_id": 10,
+        "payload": "wine_rack__e10__post_contact.npz",
+        "payload_bytes": 577298,
+        "payload_sha256": "f7c59886328241f625a4b1e1dde0735ceffc104ade42b18edf10df8982575682",
+        "rows": 432,
+        "snapshot_index": 146,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e10__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e10__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:08:51.389913+00:00",
+        "episode_id": 10,
+        "payload": "wine_rack__e10__pre_contact.npz",
+        "payload_bytes": 453804,
+        "payload_sha256": "68b02cb8af68e0525fdfacad06ae38f5245bbc9f79ea7bbfdda9db030c82603f",
+        "rows": 432,
+        "snapshot_index": 89,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e10__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e10__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:09:49.629888+00:00",
+        "episode_id": 11,
+        "payload": "wine_rack__e11__contact_onset.npz",
+        "payload_bytes": 539089,
+        "payload_sha256": "a25805669f93444261f37d32f7e19a03a1b924aa5f2207870178028e6d852cda",
+        "rows": 432,
+        "snapshot_index": 67,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e11__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e11__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:10:38.610271+00:00",
+        "episode_id": 11,
+        "payload": "wine_rack__e11__free_space.npz",
+        "payload_bytes": 335140,
+        "payload_sha256": "09fe4cefb069447265cdbaafba676daeff81d937d0f20aeb5ed9951d7d785d1c",
+        "rows": 432,
+        "snapshot_index": 22,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e11__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e11__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:11:40.679697+00:00",
+        "episode_id": 11,
+        "payload": "wine_rack__e11__post_contact.npz",
+        "payload_bytes": 535388,
+        "payload_sha256": "68c67392ce13dfa2b1de3fc9650193cb90251ec2b3b905fd84a2c85cd92bf562",
+        "rows": 432,
+        "snapshot_index": 117,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e11__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e11__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:12:31.972833+00:00",
+        "episode_id": 11,
+        "payload": "wine_rack__e11__pre_contact.npz",
+        "payload_bytes": 433843,
+        "payload_sha256": "80ed1ea0f1056aa87026391089ef4ad857d2804b1754c356f1b24cbd9ed51ca0",
+        "rows": 432,
+        "snapshot_index": 63,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e11__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e11__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:13:49.858749+00:00",
+        "episode_id": 12,
+        "payload": "wine_rack__e12__contact_onset.npz",
+        "payload_bytes": 754558,
+        "payload_sha256": "9877d1a0622017e4ac9205171b42d08db952eb11cf10752bbac8e05ad54e7c25",
+        "rows": 648,
+        "snapshot_index": 74,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e12__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e12__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:15:02.798401+00:00",
+        "episode_id": 12,
+        "payload": "wine_rack__e12__free_space.npz",
+        "payload_bytes": 523339,
+        "payload_sha256": "01abc346b3b697440c4d15b19c682babe36acc2d8d86075fecd1f550822b76e9",
+        "rows": 648,
+        "snapshot_index": 24,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e12__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e12__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:16:31.229016+00:00",
+        "episode_id": 12,
+        "payload": "wine_rack__e12__post_contact.npz",
+        "payload_bytes": 792219,
+        "payload_sha256": "ebd3f27bbfb1129a2b28e1adc93a6396b1e1d20b0e651d1cbf7601da2d4b4dda",
+        "rows": 648,
+        "snapshot_index": 165,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e12__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e12__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:17:49.160584+00:00",
+        "episode_id": 12,
+        "payload": "wine_rack__e12__pre_contact.npz",
+        "payload_bytes": 709036,
+        "payload_sha256": "e3aa950a619bc03eeed7460f23a651ac20f731cc3b764c763850308108e075d1",
+        "rows": 648,
+        "snapshot_index": 70,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e12__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e12__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:19:17.168562+00:00",
+        "episode_id": 13,
+        "payload": "wine_rack__e13__contact_onset.npz",
+        "payload_bytes": 771479,
+        "payload_sha256": "f517bdeee528ab749f9080a802112717ef71f857a0ffb77e46f3d8de3018a89b",
+        "rows": 648,
+        "snapshot_index": 81,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e13__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e13__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:20:28.417423+00:00",
+        "episode_id": 13,
+        "payload": "wine_rack__e13__free_space.npz",
+        "payload_bytes": 533101,
+        "payload_sha256": "7d1defc3aeff3ded1dbc6df9827a78bdde9d738bb7efd23d7500e6a5fef2f0e8",
+        "rows": 648,
+        "snapshot_index": 27,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e13__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e13__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:22:12.535661+00:00",
+        "episode_id": 13,
+        "payload": "wine_rack__e13__post_contact.npz",
+        "payload_bytes": 751174,
+        "payload_sha256": "944bc2338c7cc593905cffe3d965babd63b25484599f12ea477f358d46aabefa",
+        "rows": 648,
+        "snapshot_index": 128,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e13__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e13__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:23:32.522169+00:00",
+        "episode_id": 13,
+        "payload": "wine_rack__e13__pre_contact.npz",
+        "payload_bytes": 759847,
+        "payload_sha256": "8b847496fbdb447576806ce05e1c86615229af754ef708279b4b0e508131b103",
+        "rows": 648,
+        "snapshot_index": 77,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e13__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e13__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:25:04.396459+00:00",
+        "episode_id": 14,
+        "payload": "wine_rack__e14__contact_onset.npz",
+        "payload_bytes": 767013,
+        "payload_sha256": "a3fe10625f86a92201e7718825484a842281eb50c68f2e9afb807d8b2c251745",
+        "rows": 648,
+        "snapshot_index": 87,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e14__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e14__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:26:16.088509+00:00",
+        "episode_id": 14,
+        "payload": "wine_rack__e14__free_space.npz",
+        "payload_bytes": 464996,
+        "payload_sha256": "585fba67c61b6fc2c5d55954dd545a6488d98ff0d35a3d9be547033c8e082470",
+        "rows": 648,
+        "snapshot_index": 29,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e14__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e14__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:27:51.299139+00:00",
+        "episode_id": 14,
+        "payload": "wine_rack__e14__post_contact.npz",
+        "payload_bytes": 782682,
+        "payload_sha256": "854ef8f76766cd799b9f380bd819f98977b81e87e4674304a3ebb39450c634ec",
+        "rows": 648,
+        "snapshot_index": 154,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e14__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e14__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:29:14.861765+00:00",
+        "episode_id": 14,
+        "payload": "wine_rack__e14__pre_contact.npz",
+        "payload_bytes": 746717,
+        "payload_sha256": "fa575187012f0f1de6769d72b822a89982d4951887e097ce56e8e20364904db2",
+        "rows": 648,
+        "snapshot_index": 83,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e14__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e14__pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:30:51.106816+00:00",
+        "episode_id": 15,
+        "payload": "wine_rack__e15__contact_onset.npz",
+        "payload_bytes": 778928,
+        "payload_sha256": "c45ec1fc66f620eb8c375d211fb454f567b730e7dc9ff5a432a094df60b539a9",
+        "rows": 648,
+        "snapshot_index": 69,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e15__contact_onset.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e15__contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:32:04.196414+00:00",
+        "episode_id": 15,
+        "payload": "wine_rack__e15__free_space.npz",
+        "payload_bytes": 530941,
+        "payload_sha256": "cb813ce0f8322492cfd73090c439ce9c1c4701f1e8d98605f2784106737925a6",
+        "rows": 648,
+        "snapshot_index": 23,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e15__free_space.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e15__free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:33:40.494916+00:00",
+        "episode_id": 15,
+        "payload": "wine_rack__e15__post_contact.npz",
+        "payload_bytes": 734011,
+        "payload_sha256": "855f1131a44cb4606712b110a3cb771e091bba5d780ad626310001adf8e58318",
+        "rows": 648,
+        "snapshot_index": 119,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e15__post_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e15__post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "complete": true,
+        "created_utc": "2026-08-12T15:35:06.138231+00:00",
+        "episode_id": 15,
+        "payload": "wine_rack__e15__pre_contact.npz",
+        "payload_bytes": 775331,
+        "payload_sha256": "9f5d9f9263f13a4394ceb93fccaf39a7021af4d2d85a116b5d6be89b0e9fc5fd",
+        "rows": 648,
+        "snapshot_index": 65,
+        "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/wine_rack/wine_rack__e15__pre_contact.npz",
+        "task_id": "wine_rack"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantized_shards/wine_rack/wine_rack__e15__pre_contact.npz",
+      "status": "resumed"
+    }
+  ],
+  "task_id": "wine_rack"
+}

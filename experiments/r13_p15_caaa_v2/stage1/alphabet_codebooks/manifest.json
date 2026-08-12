@@ -1,0 +1,194 @@
+{
+  "codebooks": [
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/euclidean_farthest_k32.npz.complete.json",
+      "method": "euclidean_farthest",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/euclidean_farthest_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/euclidean_farthest_k64.npz.complete.json",
+      "method": "euclidean_farthest",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/euclidean_farthest_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/euclidean_farthest_k128.npz.complete.json",
+      "method": "euclidean_farthest",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/euclidean_farthest_k128.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/covariance_mahalanobis_k32.npz.complete.json",
+      "method": "covariance_mahalanobis",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/covariance_mahalanobis_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/covariance_mahalanobis_k64.npz.complete.json",
+      "method": "covariance_mahalanobis",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/covariance_mahalanobis_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/covariance_mahalanobis_k128.npz.complete.json",
+      "method": "covariance_mahalanobis",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/covariance_mahalanobis_k128.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/global_kmeans_k32.npz.complete.json",
+      "method": "global_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/global_kmeans_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/global_kmeans_k64.npz.complete.json",
+      "method": "global_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/global_kmeans_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/global_kmeans_k128.npz.complete.json",
+      "method": "global_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/global_kmeans_k128.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/phase_conditioned_kmeans_k32.npz.complete.json",
+      "method": "phase_conditioned_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/phase_conditioned_kmeans_k32.npz",
+      "train_utilization": NaN
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/phase_conditioned_kmeans_k64.npz.complete.json",
+      "method": "phase_conditioned_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/phase_conditioned_kmeans_k64.npz",
+      "train_utilization": NaN
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/phase_conditioned_kmeans_k128.npz.complete.json",
+      "method": "phase_conditioned_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/phase_conditioned_kmeans_k128.npz",
+      "train_utilization": NaN
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/pca_kmeans_k32.npz.complete.json",
+      "method": "pca_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/pca_kmeans_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/pca_kmeans_k64.npz.complete.json",
+      "method": "pca_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/pca_kmeans_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/pca_kmeans_k128.npz.complete.json",
+      "method": "pca_kmeans",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/pca_kmeans_k128.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/old_diagonal_sensitivity_k32.npz.complete.json",
+      "method": "old_diagonal_sensitivity",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/old_diagonal_sensitivity_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/old_diagonal_sensitivity_k64.npz.complete.json",
+      "method": "old_diagonal_sensitivity",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/old_diagonal_sensitivity_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/old_diagonal_sensitivity_k128.npz.complete.json",
+      "method": "old_diagonal_sensitivity",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/old_diagonal_sensitivity_k128.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/random_spd_k32.npz.complete.json",
+      "method": "random_spd",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/random_spd_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/random_spd_k64.npz.complete.json",
+      "method": "random_spd",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/random_spd_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/random_spd_k128.npz.complete.json",
+      "method": "random_spd",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/random_spd_k128.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/permuted_j_k32.npz.complete.json",
+      "method": "permuted_j",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/permuted_j_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/permuted_j_k64.npz.complete.json",
+      "method": "permuted_j",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/permuted_j_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/permuted_j_k128.npz.complete.json",
+      "method": "permuted_j",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/permuted_j_k128.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 32,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/caaa_v2_k32.npz.complete.json",
+      "method": "caaa_v2",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/caaa_v2_k32.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 64,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/caaa_v2_k64.npz.complete.json",
+      "method": "caaa_v2",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/caaa_v2_k64.npz",
+      "train_utilization": 1.0
+    },
+    {
+      "k": 128,
+      "marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/caaa_v2_k128.npz.complete.json",
+      "method": "caaa_v2",
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/alphabet_codebooks/caaa_v2_k128.npz",
+      "train_utilization": 1.0
+    }
+  ],
+  "created_utc": "2026-08-12T16:02:16.131296+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T15:19:02.154720+00:00",
+  "episode_id": 13,
+  "payload": "plate_push__e13__contact_onset.npz",
+  "payload_bytes": 656895,
+  "payload_sha256": "c991ff981f2526255539cc9e6f6f1686cf97096bda133a6887af256cfa131031",
+  "rows": 648,
+  "snapshot_index": 47,
+  "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/plate_push/plate_push__e13__contact_onset.npz",
+  "task_id": "plate_push"
+}

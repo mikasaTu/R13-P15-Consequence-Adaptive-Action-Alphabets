@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:00.952678+00:00",
+  "payload": "stove_turn_on__e02__free_space.npz",
+  "payload_bytes": 13971,
+  "payload_sha256": "d4b7bb5b924c8399de6d20b9683e95b9a6b819409a86604e1d9deeece72b382a",
+  "snapshot_key": "stove_turn_on__e02__free_space"
+}

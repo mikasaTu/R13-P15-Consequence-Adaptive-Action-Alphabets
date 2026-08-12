@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:08.667762+00:00",
+  "k": 128,
+  "method": "phase_conditioned_kmeans",
+  "payload": "phase_conditioned_kmeans_k128.npz",
+  "payload_bytes": 95278,
+  "payload_sha256": "4194aec8797b72e32cd8f1dfcae15132c6d55a3db483f330069e8bef09c405f4"
+}

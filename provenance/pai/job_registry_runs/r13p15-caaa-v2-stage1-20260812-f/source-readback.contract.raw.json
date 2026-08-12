@@ -1,0 +1,144 @@
+{
+  "Accessibility": "PRIVATE",
+  "ClusterId": "asi_cn-wulanchabu_pai-serverless_prd01.1294336768262632",
+  "CodeSource": {
+    "CodeSourceId": "",
+    "MountPath": ""
+  },
+  "CredentialConfig": {
+    "AliyunEnvRoleKey": "",
+    "EnableCredentialInject": false
+  },
+  "DataSources": [
+    {
+      "DataSourceId": "d-mkixtohdn75dp8x9tb",
+      "DataSourceVersion": "v1",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-lg9t2b6xajpukeqqeb",
+      "DataSourceVersion": "v1",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-36p023eg0f2vuqny8y",
+      "DataSourceVersion": "v1",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-ejgj2ej7io1t2t32uc",
+      "DataSourceVersion": "v1",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+      "Options": "",
+      "Uri": ""
+    },
+    {
+      "DataSourceId": "d-7fi8hehav247qi6x5o",
+      "DataSourceVersion": "v1",
+      "MountPath": "/mnt/cpfs/zbl-cpfs-new/Models/",
+      "Options": "",
+      "Uri": ""
+    }
+  ],
+  "DisplayName": "vlajepa_hiw4tasks_vjepa21_resume_safe_dir_probe2",
+  "Duration": 265025,
+  "ElasticSpec": {
+    "AIMasterDockerImage": "",
+    "AIMasterType": "",
+    "ElasticStrategy": "",
+    "EnableAIMaster": false,
+    "EnableElasticInference": false,
+    "EnableElasticTraining": false,
+    "EnablePsJobElasticPS": false,
+    "EnablePsJobElasticWorker": false,
+    "EnablePsResourceEstimate": false,
+    "MaxParallelism": 0,
+    "MinParallelism": 0,
+    "PSMaxParallelism": 0,
+    "PSMinParallelism": 0
+  },
+  "EnabledDebugger": false,
+  "GmtCreateTime": "2026-07-27T02:00:25Z",
+  "GmtFailedTime": "2026-07-30T03:37:30Z",
+  "GmtFinishTime": "2026-07-30T03:37:30Z",
+  "GmtRunningTime": "2026-07-27T02:02:18Z",
+  "GmtSubmittedTime": "2026-07-27T02:00:30Z",
+  "JobId": "dlcfp1szuc2cgqfp",
+  "JobSpecs": [
+    {
+      "AssignNodeSpec": {
+        "AntiAffinityNodeNames": "",
+        "EnableAssignNode": false,
+        "NodeNames": ""
+      },
+      "EcsSpec": "",
+      "Image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+      "ImageConfig": {
+        "Auth": "",
+        "DockerRegistry": "",
+        "Password": "",
+        "Username": ""
+      },
+      "PodCount": 1,
+      "ResourceConfig": {
+        "CPU": "92",
+        "GPU": "8",
+        "GPUType": "",
+        "Memory": "1600Gi",
+        "SharedMemory": "1600Gi"
+      },
+      "Type": "Worker"
+    }
+  ],
+  "JobType": "PyTorchJob",
+  "Pods": [
+    {
+      "GmtCreateTime": "2026-07-27T02:00:30Z",
+      "GmtFinishTime": "2026-07-30T03:36:55Z",
+      "GmtStartTime": "2026-07-27T02:02:17Z",
+      "Ip": "26.40.190.231",
+      "PodId": "dlcfp1szuc2cgqfp-master-0",
+      "PodUid": "efc2c3ad-4b42-4418-965a-88df52e1f289",
+      "Status": "Failed",
+      "Type": "master"
+    }
+  ],
+  "Priority": 9,
+  "ReasonCode": "JobFailed",
+  "ReasonMessage": "{\"overview\":\"PyTorchJob dlcfp1szuc2cgqfp failed because 1 Master replica(s) failed.\",\"content\":[{\"time\":\"1785382650\",\"pods\":{\"Master\":[0]},\"reason\":\"1\"}]}",
+  "RequestId": "019FF6AB-BE41-515F-9DB9-F2B5789DE959",
+  "ResourceId": "quotakzri8a5wqcp",
+  "Settings": {
+    "BusinessUserId": "",
+    "Caller": "",
+    "DisableEcsStockCheck": false,
+    "Driver": "",
+    "EnableDistributedTaskAssigment": false,
+    "EnableErrorMonitoringInAIMaster": false,
+    "EnableOssAppend": false,
+    "EnablePreemptibleJob": false,
+    "EnableRDMA": true,
+    "EnableTideResource": false,
+    "ErrorMonitoringArgs": "",
+    "JobReservedMinutes": 0,
+    "JobReservedPolicy": "",
+    "OversoldType": "ForbiddenQuotaOverSold",
+    "PipelineId": "",
+    "QueueId": "",
+    "Tags": {
+      "CloneFromJobID": "dlc5d0c22qbwqzvt"
+    }
+  },
+  "Status": "Failed",
+  "ThirdpartyLibDir": "",
+  "UserCommand": "bash -lc 'set -Eeuo pipefail; export WANDB_API_KEY=\"${WANDB_API_KEY:?WANDB_API_KEY is required}\"; export WANDB_ENTITY=\"${WANDB_ENTITY:-chen_jian-cj-workspace}\"; export WANDB_PROJECT=vlajepa_hiw4tasks_official_vjepa21_pretrain; export WANDB_MODE=online; export RUN_ID=vlajepa_hiw4tasks_official_vjepa21_pretrain50k_save1kopt_v1_20260724_015242; export RUN_PREFIX=vlajepa_hiw4tasks_official_vjepa21_pretrain50k_save1kopt_v1; export EXPECTED_CODE_REV=6759531f26c229cd385432f2c72db59fe26af8c6; export RESUME_COMPATIBLE_CONTRACT_SHAS=1b4612a40ee4ac03c2a010684af2bf674300e1c1dab1af71bd728bfb1d8d2202; export TRAIN_MODE=formal; export NUM_GPUS=8; export MAX_TRAIN_STEPS=50000; export SAVE_INTERVAL=500; export KEEP_LAST_NON_MILESTONE_CHECKPOINTS=3; export KEEP_EVERY_OPTIMIZER_UPDATES=10000; export LOG_DIR=/mnt/cpfs/zbl-cpfs-new/USERS/leon/logs/vlajepa/vjepa21/vlajepa_hiw4tasks_official_vjepa21_pretrain50k_save1kopt_v1; mkdir -p \"$LOG_DIR\"; exec > >(tee -a \"$LOG_DIR/train-${PAI_JOB_ID:-pai}-${AIMASTER_RESTART_COUNT:-0}.log\") 2>&1; exec bash /mnt/cpfs/zbl-cpfs-new/USERS/leon/code/VLA-JEPA-HIW500-vjepa21-official/scripts/pai_vlajepa_hiw500_official_vjepa21_pretrain50k_spot.sh'",
+  "UserId": "204304175653577039",
+  "WorkspaceId": "179169",
+  "WorkspaceName": "pai_52fx2u56uu44ih8p7z"
+}

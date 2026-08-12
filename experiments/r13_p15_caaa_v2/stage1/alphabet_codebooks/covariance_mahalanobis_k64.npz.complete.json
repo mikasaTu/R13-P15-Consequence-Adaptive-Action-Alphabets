@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:06.747771+00:00",
+  "k": 64,
+  "method": "covariance_mahalanobis",
+  "payload": "covariance_mahalanobis_k64.npz",
+  "payload_bytes": 12866,
+  "payload_sha256": "e9f5fe183e06458ee2dd5bc137853a95e08f9a9777218a62ba679be5e5472f2d"
+}

@@ -1,0 +1,1163 @@
+{
+  "count": 64,
+  "created_utc": "2026-08-12T16:01:46.705317+00:00",
+  "pai_nonce": "ba11fa5b332d5b2514b0fd4521d550ea",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-f",
+  "shards": [
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:41:40.142083+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_free_space.npz",
+        "payload_bytes": 111234,
+        "payload_sha256": "be0da63e4bf5599937219c2822c4e99dbc90b1971ded8ff44d9427b5359ff7f8",
+        "phase": "free_space",
+        "snapshot_index": 19,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_00_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:41:51.874424+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_pre_contact.npz",
+        "payload_bytes": 145115,
+        "payload_sha256": "c062b0b2b95c539ab0d08bcc2e9f86393db2f80f68de3cbc9d63a4389e0f3d39",
+        "phase": "pre_contact",
+        "snapshot_index": 43,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_00_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:05.501115+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_contact_onset.npz",
+        "payload_bytes": 145844,
+        "payload_sha256": "77baf00b4d16382ca36af9d6b92d2c00939c234be2e0cbed848d5390b33280a2",
+        "phase": "contact_onset",
+        "snapshot_index": 47,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_00_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:17.427119+00:00",
+        "episode_id": 0,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_00_post_contact.npz",
+        "payload_bytes": 139655,
+        "payload_sha256": "fde9d882ea468df4ebbc3b15526e2ffcde4712f15dcd08a3a4bb2f77c5a8c0c9",
+        "phase": "post_contact",
+        "snapshot_index": 101,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_00_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:29.837381+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_free_space.npz",
+        "payload_bytes": 108488,
+        "payload_sha256": "b6afaa5e236ff8adf2dc85244a6ff008254458ed94b9c747637f9f4c7f03d08c",
+        "phase": "free_space",
+        "snapshot_index": 19,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_01_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:41.776588+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_pre_contact.npz",
+        "payload_bytes": 146300,
+        "payload_sha256": "65a9f364b6207d51ec3d85359beef96933470363f28e98bfb3fb69ee59aecf82",
+        "phase": "pre_contact",
+        "snapshot_index": 36,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_01_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:42:55.468535+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_contact_onset.npz",
+        "payload_bytes": 142431,
+        "payload_sha256": "e962a228f0b83950310def620a6d4b6e93868fdb4548d0a7277aacd7d570ff7d",
+        "phase": "contact_onset",
+        "snapshot_index": 40,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_01_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:06.963780+00:00",
+        "episode_id": 1,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_01_post_contact.npz",
+        "payload_bytes": 145709,
+        "payload_sha256": "0ae22dac9a09f9553121f39fbafda65352fda84d6f1aaabba97c2fb636e56d0f",
+        "phase": "post_contact",
+        "snapshot_index": 86,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_01_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:19.109901+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_free_space.npz",
+        "payload_bytes": 111275,
+        "payload_sha256": "087fde14ea08b40cc25128d571b2cff02ba475a0e83d13fcdbbbcdd99be5e564",
+        "phase": "free_space",
+        "snapshot_index": 21,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_02_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:31.084631+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_pre_contact.npz",
+        "payload_bytes": 146822,
+        "payload_sha256": "a56fddbe4471af18b3bbc229a07e06755dc9daa38db44716b65e50887c5f1f6c",
+        "phase": "pre_contact",
+        "snapshot_index": 42,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_02_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:44.183234+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_contact_onset.npz",
+        "payload_bytes": 147652,
+        "payload_sha256": "25f18ecf56787fbb28be68114090914afd22e81135af28760ede361034d643ac",
+        "phase": "contact_onset",
+        "snapshot_index": 46,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_02_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:43:55.850114+00:00",
+        "episode_id": 2,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_02_post_contact.npz",
+        "payload_bytes": 140888,
+        "payload_sha256": "fa1e2b4a2eaad634332e1624f07323abfbb3b9eeaec5bddaff8ada4657752da5",
+        "phase": "post_contact",
+        "snapshot_index": 87,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_02_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:08.034744+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_free_space.npz",
+        "payload_bytes": 111019,
+        "payload_sha256": "8ae37c0162891589ed5d90645904f198d17f155770f6460048c5a2a9c1eb5e03",
+        "phase": "free_space",
+        "snapshot_index": 19,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_03_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:19.747382+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_pre_contact.npz",
+        "payload_bytes": 134399,
+        "payload_sha256": "e296f01e6bfe4cf1aab3cb0b7c7bf7617e990bdb96e8e8257ff5e90dc7d561da",
+        "phase": "pre_contact",
+        "snapshot_index": 35,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_03_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:34.064384+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_contact_onset.npz",
+        "payload_bytes": 140816,
+        "payload_sha256": "c9c4c134d91ce9493e314d468deb46b50ee648f159e1bc9624a13437850c4853",
+        "phase": "contact_onset",
+        "snapshot_index": 39,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_03_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:45.949657+00:00",
+        "episode_id": 3,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_03_post_contact.npz",
+        "payload_bytes": 142193,
+        "payload_sha256": "3a6e379fd748f218f1bba3f0aa83d21e18f2525cc9910471d3ec01c7dd4d613c",
+        "phase": "post_contact",
+        "snapshot_index": 101,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_03_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:44:58.060000+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_free_space.npz",
+        "payload_bytes": 107964,
+        "payload_sha256": "14ffa1221da3db7d6af453871d27f26d9c6d5db79ecd2e608ae660f7cfae1179",
+        "phase": "free_space",
+        "snapshot_index": 20,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_04_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:09.549621+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_pre_contact.npz",
+        "payload_bytes": 138731,
+        "payload_sha256": "462c515414ac7b8432ca5ad88a9512c1b1067f69d6b226b9daac2b03cd612455",
+        "phase": "pre_contact",
+        "snapshot_index": 42,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_04_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:22.422831+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_contact_onset.npz",
+        "payload_bytes": 143588,
+        "payload_sha256": "6e40802aa7eb019bf6d9396b40e92f83f9b74c8ac6f14d6e4be0747eda7baa23",
+        "phase": "contact_onset",
+        "snapshot_index": 46,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_04_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:33.963356+00:00",
+        "episode_id": 4,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_04_post_contact.npz",
+        "payload_bytes": 147864,
+        "payload_sha256": "bceb83eb068fb75040c4842d060a5ac626a42ad26488c69c1ae13fc3aa6a4c4c",
+        "phase": "post_contact",
+        "snapshot_index": 104,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_04_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:46.561837+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_free_space.npz",
+        "payload_bytes": 112759,
+        "payload_sha256": "bbdcf34307aebcbce8d15c5b7a6b6f93a789d1c285e626be67daaf466420c0fa",
+        "phase": "free_space",
+        "snapshot_index": 21,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_05_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:45:58.182288+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_pre_contact.npz",
+        "payload_bytes": 145392,
+        "payload_sha256": "ccc5aef85fb85cba61bff8199bbb075e89935b5bee9d1b9a618e2e3f1f9be421",
+        "phase": "pre_contact",
+        "snapshot_index": 40,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_05_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:10.725955+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_contact_onset.npz",
+        "payload_bytes": 143802,
+        "payload_sha256": "8d485f57352e42d8d6b0bb20af8ab4c6b5569895739515db7b7c52638fefb3ef",
+        "phase": "contact_onset",
+        "snapshot_index": 44,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_05_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:22.837164+00:00",
+        "episode_id": 5,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_05_post_contact.npz",
+        "payload_bytes": 140125,
+        "payload_sha256": "cd999750685f352b98a3c9aec93ab06d86fdab7f3e750e9eac287ccce4e0c92b",
+        "phase": "post_contact",
+        "snapshot_index": 81,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_05_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:35.068663+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_free_space.npz",
+        "payload_bytes": 114192,
+        "payload_sha256": "6465ae4c9a797cdf89bc9d3458a0edd4cafd4fe59d8e679ae82f7631e5ee5a04",
+        "phase": "free_space",
+        "snapshot_index": 20,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_06_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:46.441935+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_pre_contact.npz",
+        "payload_bytes": 144915,
+        "payload_sha256": "895b97a73deef32313f669d6514b32085c203bd8b193c8f339b3f3acebef093a",
+        "phase": "pre_contact",
+        "snapshot_index": 43,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_06_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:46:58.494110+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_contact_onset.npz",
+        "payload_bytes": 142020,
+        "payload_sha256": "9790deb63480537feeae9e6c584c8d69c436b44cb094cf51767214d49f786e0a",
+        "phase": "contact_onset",
+        "snapshot_index": 47,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_06_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:10.081991+00:00",
+        "episode_id": 6,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_06_post_contact.npz",
+        "payload_bytes": 146727,
+        "payload_sha256": "d51b6899df1356ecf62e669e6f4f9f240e904de5a363742cbce3066a4422148d",
+        "phase": "post_contact",
+        "snapshot_index": 106,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_06_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:22.353084+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_free_space.npz",
+        "payload_bytes": 107050,
+        "payload_sha256": "6e0b28027648d0aaf6a6e2949eb27df0a185b2a3a9566029a93f215a14ea8b17",
+        "phase": "free_space",
+        "snapshot_index": 19,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_07_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:33.804946+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_pre_contact.npz",
+        "payload_bytes": 140593,
+        "payload_sha256": "b035c4b6817d0ee04a13906a11e2af4280cc5866d5ac0a33d4af3cdd1c931063",
+        "phase": "pre_contact",
+        "snapshot_index": 42,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_07_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:46.230442+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_contact_onset.npz",
+        "payload_bytes": 145437,
+        "payload_sha256": "743355fc0cfd85821608b09c28b828852923525e73c372a04f8bcf26472fdc1f",
+        "phase": "contact_onset",
+        "snapshot_index": 46,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_07_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:47:57.916575+00:00",
+        "episode_id": 7,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_07_post_contact.npz",
+        "payload_bytes": 141037,
+        "payload_sha256": "5c646c18b66063e595976fecf55677c10cdbce71320dd230de19ca4de792912b",
+        "phase": "post_contact",
+        "snapshot_index": 85,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_07_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:10.531479+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_free_space.npz",
+        "payload_bytes": 113842,
+        "payload_sha256": "a7fa8dfe847aed887e6fc88558983512b9e582e1b1a49f52a2e2ce0b2a837a87",
+        "phase": "free_space",
+        "snapshot_index": 18,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_08_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:22.234047+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_pre_contact.npz",
+        "payload_bytes": 133086,
+        "payload_sha256": "7867f8ccfe02869d26dc1428a34c0033e7dd68b603c692f574796299b1e61d00",
+        "phase": "pre_contact",
+        "snapshot_index": 37,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_08_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:35.564185+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_contact_onset.npz",
+        "payload_bytes": 144495,
+        "payload_sha256": "be29d42cd8c3ec53cad466885900c8b9e07a8379e1ae9356a95fda1f5bcbac6a",
+        "phase": "contact_onset",
+        "snapshot_index": 41,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_08_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:48:47.873618+00:00",
+        "episode_id": 8,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_08_post_contact.npz",
+        "payload_bytes": 142566,
+        "payload_sha256": "9008af7b9289ac018921103194d26ed4fc13d26cc1740e9e5e88c37b041cb407",
+        "phase": "post_contact",
+        "snapshot_index": 91,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_08_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:00.018911+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_free_space.npz",
+        "payload_bytes": 111539,
+        "payload_sha256": "185db7e631f596eed250566d3efbfe59aecd85fdd6a4fe460c45282a39e3aa07",
+        "phase": "free_space",
+        "snapshot_index": 18,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_09_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:12.140448+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_pre_contact.npz",
+        "payload_bytes": 144253,
+        "payload_sha256": "84cd776db000f949d1c9bcd86d87585d9b4fc2d34bc94a7168f852f3971f7d7f",
+        "phase": "pre_contact",
+        "snapshot_index": 35,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_09_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:24.984689+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_contact_onset.npz",
+        "payload_bytes": 141940,
+        "payload_sha256": "882681f083da753b2ab7f512e174de337575d91f0f0c40f663d880c046cdcc25",
+        "phase": "contact_onset",
+        "snapshot_index": 37,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_09_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:36.228625+00:00",
+        "episode_id": 9,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_09_post_contact.npz",
+        "payload_bytes": 142938,
+        "payload_sha256": "1d705ddd490686faa4b8e1bc8fe8bcc7593dbb833770061c866f47c96762ed47",
+        "phase": "post_contact",
+        "snapshot_index": 106,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_09_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:48.473242+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_free_space.npz",
+        "payload_bytes": 111729,
+        "payload_sha256": "d962c3acfdcf703e08f8bfa1cfea664fd92f854f308e2376c3fe7704b856e5c7",
+        "phase": "free_space",
+        "snapshot_index": 22,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_10_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:49:59.939367+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_pre_contact.npz",
+        "payload_bytes": 147685,
+        "payload_sha256": "6271c61cf3476fd50ddb38255ba33f4f34c45b41e42d9c50c8473d44d6739ca0",
+        "phase": "pre_contact",
+        "snapshot_index": 41,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_10_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:12.305031+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_contact_onset.npz",
+        "payload_bytes": 147569,
+        "payload_sha256": "41ea2b3665e78d2fbd2f6276962c9b1b902bd6498b302ab3db807828f2474d0f",
+        "phase": "contact_onset",
+        "snapshot_index": 45,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_10_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:23.951874+00:00",
+        "episode_id": 10,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_10_post_contact.npz",
+        "payload_bytes": 142697,
+        "payload_sha256": "7561dbde8244726f593d592dbf08f71fa72b662f515d49eacffd6ce2ec4bdae6",
+        "phase": "post_contact",
+        "snapshot_index": 104,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_10_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:36.087528+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_free_space.npz",
+        "payload_bytes": 112699,
+        "payload_sha256": "3e2c3dec9be02f12a82187cb3290022370ee456689cf3ba6c12f23e82d38cff5",
+        "phase": "free_space",
+        "snapshot_index": 17,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_11_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:50:47.612261+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_pre_contact.npz",
+        "payload_bytes": 146996,
+        "payload_sha256": "42b0709841df02725ef15bf50e8fb66635e66b8e55651c2ab7e353baa3164b36",
+        "phase": "pre_contact",
+        "snapshot_index": 37,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_11_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:00.336667+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_contact_onset.npz",
+        "payload_bytes": 147911,
+        "payload_sha256": "0ac1a81f0e25a016f0d23d9de13b8642062138afb1004cb9b02f82e309ba9187",
+        "phase": "contact_onset",
+        "snapshot_index": 41,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_11_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:12.503875+00:00",
+        "episode_id": 11,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_11_post_contact.npz",
+        "payload_bytes": 139714,
+        "payload_sha256": "8b257aa791db99a1a514a20b71eca3878ac9f84b944aeda975375ead320e643c",
+        "phase": "post_contact",
+        "snapshot_index": 89,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_11_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:24.560272+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_free_space.npz",
+        "payload_bytes": 113666,
+        "payload_sha256": "bc1fbb77b7d4ac9692ae7e6851b7eccd9ba04e85e7c3c6321abecae4b847e0eb",
+        "phase": "free_space",
+        "snapshot_index": 26,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_12_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:36.212332+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_pre_contact.npz",
+        "payload_bytes": 139969,
+        "payload_sha256": "741d79d20afdc3d23d7034fbdd6d5fa390ad90ac33d45268496e2204984825cd",
+        "phase": "pre_contact",
+        "snapshot_index": 45,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_12_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:51:49.263093+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_contact_onset.npz",
+        "payload_bytes": 140541,
+        "payload_sha256": "40dd1d23d6a74dade169a7ebf4a149730c23bb0cb57aada9847bf80cfe575c88",
+        "phase": "contact_onset",
+        "snapshot_index": 49,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_12_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:01.279311+00:00",
+        "episode_id": 12,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_12_post_contact.npz",
+        "payload_bytes": 145593,
+        "payload_sha256": "346f1a8733994b46ef376984be7e76ec611d6359da67798d382b2673736359f4",
+        "phase": "post_contact",
+        "snapshot_index": 96,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_12_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:13.433508+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_free_space.npz",
+        "payload_bytes": 117196,
+        "payload_sha256": "654b868caba044f828d6dbba92893cf460e00feb4f5d059766ab7cd993a2183e",
+        "phase": "free_space",
+        "snapshot_index": 20,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_13_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:24.919937+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_pre_contact.npz",
+        "payload_bytes": 145535,
+        "payload_sha256": "cb6e54d774acbe33c25f44a9a3e452ab22b8979345e387e31624859602d2216b",
+        "phase": "pre_contact",
+        "snapshot_index": 43,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_13_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:37.733559+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_contact_onset.npz",
+        "payload_bytes": 145313,
+        "payload_sha256": "2b6a21384fb019ac5870e48f289005b8666b3ac1250bcb1afa56641a3900e1db",
+        "phase": "contact_onset",
+        "snapshot_index": 47,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_13_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:52:49.728536+00:00",
+        "episode_id": 13,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_13_post_contact.npz",
+        "payload_bytes": 142334,
+        "payload_sha256": "e7ce15e6d67139073faddb1b559d9bfd38c1815b89f5b101deff9927c9547e8e",
+        "phase": "post_contact",
+        "snapshot_index": 102,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_13_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:01.906594+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_free_space.npz",
+        "payload_bytes": 108446,
+        "payload_sha256": "458bd48b9aa2d3b3b7864bcf723c2a21caed16abeb12e05fb7103603ce305a60",
+        "phase": "free_space",
+        "snapshot_index": 20,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_14_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:13.051033+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_pre_contact.npz",
+        "payload_bytes": 143430,
+        "payload_sha256": "0c9aaea229134ab2c02e4e724fa11302b4bab49ca075f608ad0bb06a8ffc5c32",
+        "phase": "pre_contact",
+        "snapshot_index": 38,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_14_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:25.650671+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_contact_onset.npz",
+        "payload_bytes": 144559,
+        "payload_sha256": "f6fb9d8ce1424da053b64d6bf2c4aa1c2d3f66c93125215b2d15a5740eb39e94",
+        "phase": "contact_onset",
+        "snapshot_index": 42,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_14_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:36.924020+00:00",
+        "episode_id": 14,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_14_post_contact.npz",
+        "payload_bytes": 141259,
+        "payload_sha256": "b48af518bbd85937cfbc881771c4e595516019eb9b078adf833b47eadd282cb1",
+        "phase": "post_contact",
+        "snapshot_index": 99,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_14_post_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:53:49.343669+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_free_space.npz",
+        "payload_bytes": 109159,
+        "payload_sha256": "2f47662821c2c097bc1ab16de19985f185cc70efec3f67e4d927d115debdbb71",
+        "phase": "free_space",
+        "snapshot_index": 20,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_15_free_space.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:54:00.923778+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_pre_contact.npz",
+        "payload_bytes": 146737,
+        "payload_sha256": "9f932b0b8a315502630bf8bd5e777f1315aab16bf343504b610257444f756005",
+        "phase": "pre_contact",
+        "snapshot_index": 39,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_15_pre_contact.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:54:13.543711+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_contact_onset.npz",
+        "payload_bytes": 145569,
+        "payload_sha256": "0bacd9fb54456b67acc870c5ea6f4a97fba07a910883c151fa28b9109c577ae1",
+        "phase": "contact_onset",
+        "snapshot_index": 43,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_15_contact_onset.npz",
+      "status": "resumed"
+    },
+    {
+      "evidence": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-12T14:54:25.124084+00:00",
+        "episode_id": 15,
+        "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+        "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+        "payload": "episode_15_post_contact.npz",
+        "payload_bytes": 142719,
+        "payload_sha256": "ccbd84456b4d5da0ed5c237a68d486afb72cb1bb99a9506ec81ad7791bbd69af",
+        "phase": "post_contact",
+        "snapshot_index": 87,
+        "task_id": "plate_push"
+      },
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_15_post_contact.npz",
+      "status": "resumed"
+    }
+  ],
+  "task_ids": [
+    "plate_push"
+  ]
+}

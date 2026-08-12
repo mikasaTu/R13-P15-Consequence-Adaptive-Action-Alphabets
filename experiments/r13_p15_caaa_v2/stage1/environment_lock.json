@@ -1,0 +1,520 @@
+{
+  "controller": {
+    "action_dim": 7,
+    "chunk_horizon": 4,
+    "continuous_chunk_dim": 24,
+    "frequency_hz": 20,
+    "gripper_policy": "copied unchanged from each demonstration chunk",
+    "mode": "OSC_POSE",
+    "robot": "Panda"
+  },
+  "created_utc": "2026-08-12T15:54:03.881432+00:00",
+  "cuda": {
+    "local_gpu_use_contract": "CPU smoke or at most one GPU; simulator launched with one visible GPU at most",
+    "nvidia_smi": "0, NVIDIA A800-SXM4-80GB, GPU-224dd495-515c-8ee7-1d5d-b8af6acb5d03, 81920 MiB, 550.54.15\n1, NVIDIA A800-SXM4-80GB, GPU-50127e29-7c74-c6f9-24bd-bae5035229ad, 81920 MiB, 550.54.15\n2, NVIDIA A800-SXM4-80GB, GPU-f063b630-b77f-61c1-1655-58f6f5e30ad7, 81920 MiB, 550.54.15\n3, NVIDIA A800-SXM4-80GB, GPU-36344031-0c3a-81e7-a864-711c3c5a6a67, 81920 MiB, 550.54.15\n4, NVIDIA A800-SXM4-80GB, GPU-0ef145ac-744a-89dd-2f35-cec87b9ae153, 81920 MiB, 550.54.15\n5, NVIDIA A800-SXM4-80GB, GPU-48654527-08cb-83a5-bd11-f70b1b18cf42, 81920 MiB, 550.54.15\n6, NVIDIA A800-SXM4-80GB, GPU-ab1fb935-e90a-c40f-b69c-6ffe3b70fd56, 81920 MiB, 550.54.15\n7, NVIDIA A800-SXM4-80GB, GPU-15563417-56e9-bc70-c8f2-1749c9116ce9, 81920 MiB, 550.54.15"
+  },
+  "demonstrations": [
+    {
+      "bytes": 468246288,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "bytes": 762855139,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+      "sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+      "task_id": "plate_push"
+    },
+    {
+      "bytes": 447509922,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/turn_on_the_stove_demo.hdf5",
+      "sha256": "387fc10747696b80dea6ed8d7f2beaa162bf92ae11750b241073cbd33aac73d5",
+      "task_id": "stove_turn_on"
+    },
+    {
+      "bytes": 878958730,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5",
+      "sha256": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e",
+      "task_id": "wine_rack"
+    }
+  ],
+  "libero": {
+    "source_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original",
+    "source_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "standard_libero_not_plus_perturbations": true,
+    "suite": "libero_goal",
+    "upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "upstream_comparison": "byte-identical diff -qr against a shallow official checkout; .git and __pycache__ excluded"
+  },
+  "packages": {
+    "h5py": "3.11.0",
+    "libero": null,
+    "mujoco": "2.3.7",
+    "numpy": "1.22.4",
+    "pandas": "1.5.3",
+    "pyarrow": null,
+    "robosuite": "1.4.0",
+    "scipy": "1.10.1",
+    "torch": "1.11.0+cu113",
+    "zarr": null
+  },
+  "paths": {
+    "dataset_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO",
+    "libero_env": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original",
+    "libero_source": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original",
+    "output_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1"
+  },
+  "platform": {
+    "kernel": "5.10.134-013.9.kangaroo.al8.x86_64",
+    "machine": "x86_64",
+    "platform": "Linux-5.10.134-013.9.kangaroo.al8.x86_64-x86_64-with-glibc2.10"
+  },
+  "project_git_commit": "34995e8e7c3069b22785ad04536f0d429e75c0fc",
+  "project_git_status": "",
+  "project_source_tree_sha256": "df66a9429fe2a36cbca2947b0bbdf7e1dfee80f514a0160ce22be986ea0ff3da",
+  "project_version": "0.1.0",
+  "python": {
+    "executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python",
+    "implementation": "CPython",
+    "version": "3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:18) \n[GCC 10.3.0]"
+  },
+  "sapien": {
+    "applicable": false,
+    "reason": "LIBERO uses MuJoCo/robosuite"
+  },
+  "tasks": [
+    {
+      "dataset": {
+        "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+        "env_args": {
+          "bddl_file": "chiliocosm/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+          "env_kwargs": {
+            "bddl_file_name": "chiliocosm/bddl_files/libero_goal/put_the_bowl_on_the_plate.bddl",
+            "camera_depths": false,
+            "camera_heights": 128,
+            "camera_names": [
+              "robot0_eye_in_hand",
+              "agentview"
+            ],
+            "camera_segmentations": null,
+            "camera_widths": 128,
+            "control_freq": 20,
+            "controller_configs": {
+              "control_delta": true,
+              "damping_ratio": 1,
+              "damping_ratio_limits": [
+                0,
+                10
+              ],
+              "impedance_mode": "fixed",
+              "input_max": 1,
+              "input_min": -1,
+              "interpolation": null,
+              "kp": 150,
+              "kp_limits": [
+                0,
+                300
+              ],
+              "orientation_limits": null,
+              "output_max": [
+                0.05,
+                0.05,
+                0.05,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "output_min": [
+                -0.05,
+                -0.05,
+                -0.05,
+                -0.5,
+                -0.5,
+                -0.5
+              ],
+              "position_limits": null,
+              "ramp_ratio": 0.2,
+              "type": "OSC_POSE",
+              "uncouple_pos_ori": true
+            },
+            "has_offscreen_renderer": true,
+            "has_renderer": false,
+            "ignore_done": true,
+            "reward_shaping": true,
+            "robots": [
+              "Panda"
+            ],
+            "use_camera_obs": true
+          },
+          "env_name": "Libero_Tabletop_Manipulation",
+          "problem_name": "libero_tabletop_manipulation",
+          "type": 1
+        },
+        "length_max": 126,
+        "length_median": 92.0,
+        "length_min": 79,
+        "num_demos": 50,
+        "problem_info": {
+          "domain_name": "robosuite",
+          "language_instruction": "put the bowl on the plate",
+          "problem_name": "libero_tabletop_manipulation"
+        },
+        "successful_demos": 50,
+        "tag": "libero-v1"
+      },
+      "frozen_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "task": {
+        "goal_predicate": "on",
+        "primary_object": "akita_black_bowl_1",
+        "role": "low_constraint_pick_place_control",
+        "target_contact_parent": "plate_1",
+        "target_object": "plate_1",
+        "task_id": "bowl_on_plate",
+        "task_name": "put_the_bowl_on_the_plate"
+      }
+    },
+    {
+      "dataset": {
+        "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+        "env_args": {
+          "bddl_file": "chiliocosm/bddl_files/libero_goal/push_the_plate_to_the_front_of_the_stove.bddl",
+          "env_kwargs": {
+            "bddl_file_name": "chiliocosm/bddl_files/libero_goal/push_the_plate_to_the_front_of_the_stove.bddl",
+            "camera_depths": false,
+            "camera_heights": 128,
+            "camera_names": [
+              "robot0_eye_in_hand",
+              "agentview"
+            ],
+            "camera_segmentations": null,
+            "camera_widths": 128,
+            "control_freq": 20,
+            "controller_configs": {
+              "control_delta": true,
+              "damping_ratio": 1,
+              "damping_ratio_limits": [
+                0,
+                10
+              ],
+              "impedance_mode": "fixed",
+              "input_max": 1,
+              "input_min": -1,
+              "interpolation": null,
+              "kp": 150,
+              "kp_limits": [
+                0,
+                300
+              ],
+              "orientation_limits": null,
+              "output_max": [
+                0.05,
+                0.05,
+                0.05,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "output_min": [
+                -0.05,
+                -0.05,
+                -0.05,
+                -0.5,
+                -0.5,
+                -0.5
+              ],
+              "position_limits": null,
+              "ramp_ratio": 0.2,
+              "type": "OSC_POSE",
+              "uncouple_pos_ori": true
+            },
+            "has_offscreen_renderer": true,
+            "has_renderer": false,
+            "ignore_done": true,
+            "reward_shaping": true,
+            "robots": [
+              "Panda"
+            ],
+            "use_camera_obs": true
+          },
+          "env_name": "Libero_Tabletop_Manipulation",
+          "problem_name": "libero_tabletop_manipulation",
+          "type": 1
+        },
+        "length_max": 220,
+        "length_median": 145.5,
+        "length_min": 115,
+        "num_demos": 50,
+        "problem_info": {
+          "domain_name": "robosuite",
+          "language_instruction": "push the plate to the front of the stove",
+          "problem_name": "libero_tabletop_manipulation"
+        },
+        "successful_demos": 50,
+        "tag": "libero-v1"
+      },
+      "frozen_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "task": {
+        "goal_predicate": "on",
+        "primary_object": "plate_1",
+        "role": "sustained_sliding_contact",
+        "target_contact_parent": null,
+        "target_object": "main_table_stove_front_region",
+        "task_id": "plate_push",
+        "task_name": "push_the_plate_to_the_front_of_the_stove"
+      }
+    },
+    {
+      "dataset": {
+        "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/turn_on_the_stove_demo.hdf5",
+        "env_args": {
+          "bddl_file": "chiliocosm/bddl_files/libero_goal/turn_on_the_stove.bddl",
+          "env_kwargs": {
+            "bddl_file_name": "chiliocosm/bddl_files/libero_goal/turn_on_the_stove.bddl",
+            "camera_depths": false,
+            "camera_heights": 128,
+            "camera_names": [
+              "robot0_eye_in_hand",
+              "agentview"
+            ],
+            "camera_segmentations": null,
+            "camera_widths": 128,
+            "control_freq": 20,
+            "controller_configs": {
+              "control_delta": true,
+              "damping_ratio": 1,
+              "damping_ratio_limits": [
+                0,
+                10
+              ],
+              "impedance_mode": "fixed",
+              "input_max": 1,
+              "input_min": -1,
+              "interpolation": null,
+              "kp": 150,
+              "kp_limits": [
+                0,
+                300
+              ],
+              "orientation_limits": null,
+              "output_max": [
+                0.05,
+                0.05,
+                0.05,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "output_min": [
+                -0.05,
+                -0.05,
+                -0.05,
+                -0.5,
+                -0.5,
+                -0.5
+              ],
+              "position_limits": null,
+              "ramp_ratio": 0.2,
+              "type": "OSC_POSE",
+              "uncouple_pos_ori": true
+            },
+            "has_offscreen_renderer": true,
+            "has_renderer": false,
+            "ignore_done": true,
+            "reward_shaping": true,
+            "robots": [
+              "Panda"
+            ],
+            "use_camera_obs": true
+          },
+          "env_name": "Libero_Tabletop_Manipulation",
+          "problem_name": "libero_tabletop_manipulation",
+          "type": 1
+        },
+        "length_max": 119,
+        "length_median": 89.5,
+        "length_min": 75,
+        "num_demos": 50,
+        "problem_info": {
+          "domain_name": "robosuite",
+          "language_instruction": "turn on the stove",
+          "problem_name": "libero_tabletop_manipulation"
+        },
+        "successful_demos": 50,
+        "tag": "libero-v1"
+      },
+      "frozen_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "task": {
+        "goal_predicate": "turnon",
+        "primary_object": "flat_stove_1",
+        "role": "small_articulated_contact",
+        "target_contact_parent": null,
+        "target_object": "flat_stove_1",
+        "task_id": "stove_turn_on",
+        "task_name": "turn_on_the_stove"
+      }
+    },
+    {
+      "dataset": {
+        "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5",
+        "env_args": {
+          "bddl_file": "chiliocosm/bddl_files/libero_goal/put_the_wine_bottle_on_the_rack.bddl",
+          "env_kwargs": {
+            "bddl_file_name": "chiliocosm/bddl_files/libero_goal/put_the_wine_bottle_on_the_rack.bddl",
+            "camera_depths": false,
+            "camera_heights": 128,
+            "camera_names": [
+              "robot0_eye_in_hand",
+              "agentview"
+            ],
+            "camera_segmentations": null,
+            "camera_widths": 128,
+            "control_freq": 20,
+            "controller_configs": {
+              "control_delta": true,
+              "damping_ratio": 1,
+              "damping_ratio_limits": [
+                0,
+                10
+              ],
+              "impedance_mode": "fixed",
+              "input_max": 1,
+              "input_min": -1,
+              "interpolation": null,
+              "kp": 150,
+              "kp_limits": [
+                0,
+                300
+              ],
+              "orientation_limits": null,
+              "output_max": [
+                0.05,
+                0.05,
+                0.05,
+                0.5,
+                0.5,
+                0.5
+              ],
+              "output_min": [
+                -0.05,
+                -0.05,
+                -0.05,
+                -0.5,
+                -0.5,
+                -0.5
+              ],
+              "position_limits": null,
+              "ramp_ratio": 0.2,
+              "type": "OSC_POSE",
+              "uncouple_pos_ori": true
+            },
+            "has_offscreen_renderer": true,
+            "has_renderer": false,
+            "ignore_done": true,
+            "reward_shaping": true,
+            "robots": [
+              "Panda"
+            ],
+            "use_camera_obs": true
+          },
+          "env_name": "Libero_Tabletop_Manipulation",
+          "problem_name": "libero_tabletop_manipulation",
+          "type": 1
+        },
+        "length_max": 347,
+        "length_median": 169.5,
+        "length_min": 138,
+        "num_demos": 50,
+        "problem_info": {
+          "domain_name": "robosuite",
+          "language_instruction": "put the wine bottle on the rack",
+          "problem_name": "libero_tabletop_manipulation"
+        },
+        "successful_demos": 50,
+        "tag": "libero-v1"
+      },
+      "frozen_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "task": {
+        "goal_predicate": "on",
+        "primary_object": "wine_bottle_1",
+        "role": "precision_oriented_receptacle",
+        "target_contact_parent": "wine_rack_1",
+        "target_object": "wine_rack_1_top_region",
+        "task_id": "wine_rack",
+        "task_name": "put_the_wine_bottle_on_the_rack"
+      }
+    }
+  ],
+  "torch": {
+    "cuda_build": "11.3",
+    "version": "1.11.0+cu113"
+  }
+}

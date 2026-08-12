@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:15.405384+00:00",
+  "k": 128,
+  "method": "permuted_j",
+  "payload": "permuted_j_k128.npz",
+  "payload_bytes": 67094,
+  "payload_sha256": "47cf2f6034b224369d992302a9b34a0427d2bb30ba6a57065c8835acf2cb3112"
+}

@@ -1,0 +1,6 @@
+*.npz binary
+*.parquet binary
+*.hdf5 binary
+*.csv -text whitespace=cr-at-eol
+experiments/**/branch_rollouts.zarr/** binary
+experiments/**/work/quantization_results.jsonl -diff

@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:05:00.811471+00:00",
+  "payload": "stove_turn_on__e14__post_contact.npz",
+  "payload_bytes": 109797,
+  "payload_sha256": "b2d7954c280bb4121571f8a8fd56f82f6d72766bfc389965439188cbc999b95c",
+  "rows": 648,
+  "snapshot_key": "stove_turn_on__e14__post_contact"
+}

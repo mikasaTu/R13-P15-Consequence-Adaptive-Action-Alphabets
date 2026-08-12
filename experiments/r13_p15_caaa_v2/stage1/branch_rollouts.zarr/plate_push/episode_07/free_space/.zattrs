@@ -1,0 +1,6 @@
+{
+    "snapshot_index": 19,
+    "source_npz": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/branch_shards/plate_push/episode_07_free_space.npz",
+    "split": "train",
+    "task_name": "push_the_plate_to_the_front_of_the_stove"
+}

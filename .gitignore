@@ -7,7 +7,9 @@ __pycache__/
 build/
 dist/
 smoke_output/
-experiments/**/branch_rollouts.zarr/
-experiments/**/shards/
-experiments/**/work/
 
+# Official LIBERO demonstration files are external inputs. Their source and
+# SHA-256 locks live in environment_lock.json; do not vendor the HDF5 corpus.
+data/
+datasets/
+*.hdf5

@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:08.802560+00:00",
+  "k": 32,
+  "method": "pca_kmeans",
+  "payload": "pca_kmeans_k32.npz",
+  "payload_bytes": 3987,
+  "payload_sha256": "3c83782d0feae051faa3d33ebb1a6ee06c3916784a4c2629e88dfb391c5f517e"
+}

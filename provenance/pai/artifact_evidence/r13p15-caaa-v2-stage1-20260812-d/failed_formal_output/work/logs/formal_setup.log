@@ -1,0 +1,18 @@
+Do you want to specify a custom path for the dataset folder? (Y/N): Traceback (most recent call last):
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r13-p15-caaa-v2-libero/caaa_libero/cli.py", line 132, in <module>
+    main()
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r13-p15-caaa-v2-libero/caaa_libero/cli.py", line 92, in main
+    result = formal_setup(paths, output_root)
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r13-p15-caaa-v2-libero/caaa_libero/cli.py", line 27, in formal_setup
+    lock = freeze_environment(paths, _project_root(), output_root, hash_demos=True)
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r13-p15-caaa-v2-libero/caaa_libero/pipeline.py", line 96, in freeze_environment
+    runtime = LiberoTaskRuntime(task, paths["libero_source"], paths["dataset_root"])
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r13-p15-caaa-v2-libero/caaa_libero/env_adapter.py", line 121, in __init__
+    from libero.libero.envs.env_wrapper import ControlEnv
+  File "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original/libero/libero/__init__.py", line 69, in <module>
+    answer = input(
+EOFError: EOF when reading a line

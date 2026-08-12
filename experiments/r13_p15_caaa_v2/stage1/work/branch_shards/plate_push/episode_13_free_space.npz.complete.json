@@ -1,0 +1,14 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-12T14:52:13.433508+00:00",
+  "episode_id": 13,
+  "pai_nonce": "449a8a6b55be5902f6df61c08395cff5",
+  "pai_run_id": "r13p15-caaa-v2-stage1-20260812-e",
+  "payload": "episode_13_free_space.npz",
+  "payload_bytes": 117196,
+  "payload_sha256": "654b868caba044f828d6dbba92893cf460e00feb4f5d059766ab7cd993a2183e",
+  "phase": "free_space",
+  "snapshot_index": 20,
+  "task_id": "plate_push"
+}

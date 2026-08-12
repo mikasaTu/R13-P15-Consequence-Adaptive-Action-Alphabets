@@ -1,0 +1,14 @@
+{
+  "failed_test": {
+    "episode_id": 0,
+    "final_state_max_abs": 0.012277476686433508,
+    "immediate_consequence_max_abs": 0.01192543045445929,
+    "phase": "free_space",
+    "settled_consequence_max_abs": 0.0022943595780261228,
+    "task_id": "bowl_on_plate"
+  },
+  "fix": "restore gripper action history plus MuJoCo control and solver auxiliary arrays",
+  "post_fix_formal_gate": "PASS",
+  "root_cause": "Panda gripper.current_action is integrated across MuJoCo substeps and is omitted from flattened simulator state",
+  "scope": "local_development_smoke_before_formal_submission"
+}

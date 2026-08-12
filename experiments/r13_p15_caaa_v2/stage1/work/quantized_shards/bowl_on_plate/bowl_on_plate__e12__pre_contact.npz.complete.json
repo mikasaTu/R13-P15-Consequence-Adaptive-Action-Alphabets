@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T15:20:09.670170+00:00",
+  "episode_id": 12,
+  "payload": "bowl_on_plate__e12__pre_contact.npz",
+  "payload_bytes": 704538,
+  "payload_sha256": "59c681f477238622e8b94f1ece25cff9760c3f4c2aba9e35bf73fe4d65be1efa",
+  "rows": 648,
+  "snapshot_index": 45,
+  "source_plan": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1/work/quantization_plans/bowl_on_plate/bowl_on_plate__e12__pre_contact.npz",
+  "task_id": "bowl_on_plate"
+}

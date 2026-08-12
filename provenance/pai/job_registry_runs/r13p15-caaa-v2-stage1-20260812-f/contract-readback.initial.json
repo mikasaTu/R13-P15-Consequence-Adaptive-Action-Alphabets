@@ -1,0 +1,129 @@
+{
+  "checks": {
+    "aimaster_args": true,
+    "aimaster_enabled": true,
+    "data_sources": true,
+    "disable_ecs_stock_check": true,
+    "display_name": true,
+    "driver": true,
+    "empty_network": true,
+    "exact_job_object": true,
+    "extended_cidrs": true,
+    "job_id": true,
+    "job_reserved_minutes": true,
+    "job_reserved_policy": true,
+    "oversold_type": true,
+    "pod_env": true,
+    "priority": true,
+    "resource_id": true,
+    "security_group_id": true,
+    "single_worker_spec": true,
+    "switch_id": true,
+    "tags": true,
+    "user_command": true,
+    "vpc_id": true,
+    "worker_count": true,
+    "worker_cpu": true,
+    "worker_gpu": true,
+    "worker_image": true,
+    "worker_memory": true,
+    "worker_shared_memory": true,
+    "workspace_id": true
+  },
+  "complete": true,
+  "observed": {
+    "data_sources": [
+      [
+        "d-36p023eg0f2vuqny8y",
+        "v1",
+        "/mnt/cpfs/zbl-cpfs-new/CKPT/leon",
+        ""
+      ],
+      [
+        "d-7fi8hehav247qi6x5o",
+        "v1",
+        "/mnt/cpfs/zbl-cpfs-new/Models",
+        ""
+      ],
+      [
+        "d-ejgj2ej7io1t2t32uc",
+        "v1",
+        "/mnt/cpfs/zbl-cpfs-new/dataset/leon",
+        ""
+      ],
+      [
+        "d-lg9t2b6xajpukeqqeb",
+        "v1",
+        "/mnt/cpfs/zbl-cpfs-new/SHARE/leon",
+        ""
+      ],
+      [
+        "d-mkixtohdn75dp8x9tb",
+        "v1",
+        "/mnt/cpfs/zbl-cpfs-new/USERS/leon",
+        ""
+      ]
+    ],
+    "display_name": "r13-p15-caaa-v2-libe-r13p15-caaa-v2-stage1-20260812-f-nba11fa5b",
+    "pod_env": {},
+    "resource_id": "quotakzri8a5wqcp",
+    "settings": {
+      "BusinessUserId": "",
+      "Caller": "",
+      "DisableEcsStockCheck": false,
+      "Driver": "",
+      "EnableDistributedTaskAssigment": false,
+      "EnableErrorMonitoringInAIMaster": false,
+      "EnableOssAppend": false,
+      "EnablePreemptibleJob": false,
+      "EnableRDMA": true,
+      "EnableTideResource": false,
+      "ErrorMonitoringArgs": "",
+      "JobReservedMinutes": 0,
+      "JobReservedPolicy": "",
+      "OversoldType": "ForbiddenQuotaOverSold",
+      "PipelineId": "",
+      "QueueId": "",
+      "Tags": {
+        "contract_source_job_id": "dlcfp1szuc2cgqfp",
+        "dataset": "libero-goal-four-task-locked",
+        "experiment_role": "stage1-consequence-alphabet-mechanism-audit",
+        "hardware": "8xa800-dedicated",
+        "managed_by": "pai-job-registry",
+        "model": "caaa-v2-oracle-consequence-geometry-no-policy",
+        "nonce": "ba11fa5b332d5b2514b0fd4521d550ea",
+        "purpose": "formal-collection",
+        "resource_pool": "exp-efficiency",
+        "run_id": "r13p15-caaa-v2-stage1-20260812-f",
+        "task": "r13-p15-caaa-v2-libero-stage1-20260812"
+      }
+    },
+    "user_command_sha256": "3ee8a18fee59cfc67d61611c4c461d8d2f3a636f7ba169f056b132f76e98d47c",
+    "user_vpc": {},
+    "worker_spec": {
+      "AssignNodeSpec": {
+        "AntiAffinityNodeNames": "",
+        "EnableAssignNode": false,
+        "NodeNames": ""
+      },
+      "EcsSpec": "",
+      "Image": "dsw-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/pai/modelscope:1.29.0-pytorch2.3.1tensorflow2.16.1-gpu-py311-cu121-ubuntu22.04",
+      "ImageConfig": {
+        "Auth": "",
+        "DockerRegistry": "",
+        "Password": "",
+        "Username": ""
+      },
+      "PodCount": 1,
+      "ResourceConfig": {
+        "CPU": "92",
+        "GPU": "8",
+        "GPUType": "",
+        "Memory": "1600Gi",
+        "SharedMemory": "1600Gi"
+      },
+      "Type": "Worker"
+    },
+    "workspace_id": "179169"
+  }
+}

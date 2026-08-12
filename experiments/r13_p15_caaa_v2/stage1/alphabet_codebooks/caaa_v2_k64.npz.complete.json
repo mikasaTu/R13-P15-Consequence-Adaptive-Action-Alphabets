@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-12T16:02:15.820424+00:00",
+  "k": 64,
+  "method": "caaa_v2",
+  "payload": "caaa_v2_k64.npz",
+  "payload_bytes": 34109,
+  "payload_sha256": "06cc7c6ba30568fba99b5c622a6f5f16ba025e1d3bc7106eb82ba759c3b49d45"
+}
