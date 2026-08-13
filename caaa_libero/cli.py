@@ -79,6 +79,7 @@ def build_parser():
         "stage2-collect-support",
         "stage2-collect-candidates",
         "stage2-export-rollouts",
+        "stage2-run-development",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -97,6 +98,11 @@ def build_parser():
         "--confirmation",
         action="store_true",
         help="Export the locked Stage 2 confirmation rollouts instead of development rollouts.",
+    )
+    parser.add_argument(
+        "--device",
+        default=None,
+        help="Analysis device such as cuda:0 or cpu (Stage 2 permits at most one GPU).",
     )
     return parser
 
@@ -219,6 +225,10 @@ def main(argv=None):
             }
         elif args.command == "stage2-export-rollouts":
             result = export_rollouts_zarr(output_root, confirmation=args.confirmation)
+        elif args.command == "stage2-run-development":
+            from .stage2_analysis import run_development
+
+            result = run_development(output_root, device_name=args.device)
         else:
             raise AssertionError(args.command)
     else:

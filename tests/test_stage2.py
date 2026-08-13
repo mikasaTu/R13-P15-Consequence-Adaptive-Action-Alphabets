@@ -9,6 +9,7 @@ from caaa_libero.stage2_config import (
     consequence_metric_definition,
     split_for_episode,
 )
+from caaa_libero.stage2_analysis import _gate_a, balanced_error
 
 
 def test_stage2_episode_splits_are_disjoint_and_historical_ids_are_rejected():
@@ -66,3 +67,36 @@ def test_balanced_metric_has_five_equal_groups_and_excludes_raw_force():
     assert set(metric["group_weights"].values()) == {0.2}
     predicted = set(metric["predicted_continuous_indices"])
     assert predicted.isdisjoint(metric["contact_force_indices_excluded_from_primary"])
+
+
+def test_balanced_error_is_zero_on_identity_and_penalizes_mode_mismatch():
+    target = np.zeros(46)
+    mask = np.ones(46, dtype=bool)
+    scale = np.ones(46)
+    assert balanced_error(target, target, mask, mask, 0, 0, scale).item() == 0.0
+    assert balanced_error(target, target, mask, mask, 0, 1, scale).item() > 0.0
+
+
+def test_gate_a_uses_strongest_baseline_and_three_task_rule():
+    rows = []
+    for task_id in ("bowl_on_plate", "plate_push", "stove_turn_on", "wine_rack"):
+        for method, error in (
+            ("B1_centered_covariance", 1.0),
+            ("B2_phase_residual", 0.9),
+            ("B3_dynamic_action_medoids", 1.1),
+            ("O1_true_effect_oracle", 0.7 if task_id != "wine_rack" else 1.0),
+        ):
+            rows.append(
+                {
+                    "task_id": task_id,
+                    "episode_id": 28,
+                    "phase": "free_space",
+                    "target_id": 0,
+                    "method": method,
+                    "balanced_task_effect_error": error,
+                }
+            )
+    gate = _gate_a(rows)
+    assert gate["strongest_baseline"] == "B2_phase_residual"
+    assert gate["tasks_improved"] == 3
+    assert gate["passed"]
