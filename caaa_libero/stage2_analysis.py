@@ -17,7 +17,7 @@ from collections import defaultdict
 import numpy as np
 
 from .env_adapter import FEATURE_NAMES
-from .math_utils import covariance_whitener, ridge_jacobian, spearmanr
+from .math_utils import covariance_whitener, kmeans, ridge_jacobian, spearmanr
 from .pipeline import utc_now
 from .stage2 import _array_hash, _candidate_shard, _fps_indices, _support_shard
 from .stage2_config import (
@@ -256,17 +256,44 @@ def _nearest_rows(target, centers):
     return np.argmin(distance, axis=1)
 
 
+def _kmeans_medoids(values, k, seed):
+    """Map deterministic k-means centers to unique executable bank members."""
+    values = np.asarray(values, dtype=np.float64)
+    centers, _, _ = kmeans(values, k, seed)
+    distances = np.sum((centers[:, None, :] - values[None, :, :]) ** 2, axis=2)
+    selected = []
+    for center_id in range(len(centers)):
+        for index in np.argsort(distances[center_id], kind="mergesort"):
+            if int(index) not in selected:
+                selected.append(int(index))
+                break
+    if len(selected) < int(k):
+        minimum = np.min(
+            np.sum((values[:, None, :] - values[np.asarray(selected)][None, :, :]) ** 2, axis=2),
+            axis=1,
+        )
+        minimum[np.asarray(selected, dtype=np.int64)] = -1.0
+        while len(selected) < int(k):
+            index = int(np.argmax(minimum))
+            selected.append(index)
+            minimum = np.minimum(minimum, np.sum((values - values[index]) ** 2, axis=1))
+            minimum[np.asarray(selected, dtype=np.int64)] = -1.0
+    return np.asarray(selected, dtype=np.int64)
+
+
 def build_action_baseline_codebooks(output_root):
     with np.load(os.path.join(output_root, "action_bank.npz"), allow_pickle=False) as data:
         residuals = np.asarray(data["residuals"], dtype=np.float64)
         phases = data["source_phase"].astype(str)
     _, whitening, _, eigenvalues = covariance_whitener(residuals, regularization=1e-6)
     whitened = residuals.dot(whitening.T)
-    b1 = _fps_tie_stable(whitened, PRIMARY_K)
+    b1 = _kmeans_medoids(whitened, PRIMARY_K, _seed(GLOBAL_SEED, "B1_kmeans"))
     b2 = {}
     for phase in PHASES:
         pool = np.flatnonzero(phases == phase)
-        chosen_local = _fps_tie_stable(residuals[pool], min(PRIMARY_K, len(pool)))
+        chosen_local = _kmeans_medoids(
+            residuals[pool], min(PRIMARY_K, len(pool)), _seed(GLOBAL_SEED, "B2_kmeans", phase)
+        )
         b2[phase] = pool[chosen_local]
     b3 = _fps_tie_stable(residuals, PRIMARY_K)
     return {
@@ -529,7 +556,7 @@ def build_predictor_samples(records, consequence_scale):
         "state": np.concatenate(state, axis=0),
         "residual": np.concatenate(residual, axis=0),
         "target": np.concatenate(target, axis=0),
-        "contact": np.asarray(contact, dtype=object) if False else np.concatenate(contact),
+        "contact": np.concatenate(contact),
         "task_id": np.asarray(task_id, dtype=np.int64),
         "phase_id": np.asarray(phase_id, dtype=np.int64),
         "episode_id": np.asarray(episode_id, dtype=np.int64),

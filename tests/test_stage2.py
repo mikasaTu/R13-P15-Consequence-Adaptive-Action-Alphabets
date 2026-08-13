@@ -9,7 +9,7 @@ from caaa_libero.stage2_config import (
     consequence_metric_definition,
     split_for_episode,
 )
-from caaa_libero.stage2_analysis import _gate_a, balanced_error
+from caaa_libero.stage2_analysis import _gate_a, _kmeans_medoids, balanced_error
 
 
 def test_stage2_episode_splits_are_disjoint_and_historical_ids_are_rejected():
@@ -100,3 +100,11 @@ def test_gate_a_uses_strongest_baseline_and_three_task_rule():
     assert gate["strongest_baseline"] == "B2_phase_residual"
     assert gate["tasks_improved"] == 3
     assert gate["passed"]
+
+
+def test_kmeans_centers_map_to_unique_executable_medoids():
+    values = np.random.RandomState(3).normal(size=(128, 5))
+    selected = _kmeans_medoids(values, 16, 9)
+    assert selected.shape == (16,)
+    assert len(np.unique(selected)) == 16
+    assert np.all((selected >= 0) & (selected < len(values)))

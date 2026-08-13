@@ -12,8 +12,8 @@
   },
   "methods": {
     "B0_continuous_target": "Unquantized target branch; upper bound only.",
-    "B1_centered_covariance": "K=64 bank medoids under train-only covariance-whitened residual distance.",
-    "B2_phase_residual": "Four phase-specific K=64 bank medoid sets under raw residual distance.",
+    "B1_centered_covariance": "K=64 deterministic k-means in train-only covariance-whitened residual space; centers map to unique executable bank medoids.",
+    "B2_phase_residual": "Four phase-specific deterministic K=64 residual k-means fits; centers map to unique executable bank medoids.",
     "B3_dynamic_action_medoids": "Per-state K=64 deterministic action-space FPS medoids from the valid common bank.",
     "B4_state_action_vq": "Per-state K=64 FPS in a state-conditioned action-autoencoder latent trained only for action reconstruction.",
     "LJ_linear_j_atlas": "State-neighbor interpolated train-only local Jacobian predictions; bank actions only and no pseudoinversion.",
