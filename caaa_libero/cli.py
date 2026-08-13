@@ -70,13 +70,18 @@ def build_parser():
         "prepare-analysis",
         "collect-quantized",
         "finalize",
+        "stage1-5-prepare-old",
+        "stage1-5-collect-old",
+        "stage1-5-screen-old",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
     parser.add_argument("--dataset-root", default=None)
     parser.add_argument("--output-root", default=None)
+    parser.add_argument("--stage1-root", default=None)
     parser.add_argument("--task-id", choices=[task["task_id"] for task in config.TASKS])
     parser.add_argument("--plan-limit", type=int, default=None)
+    parser.add_argument("--bootstrap-replicates", type=int, default=10000)
     return parser
 
 
@@ -123,6 +128,36 @@ def main(argv=None):
         from .reporting import finalize
 
         result = finalize(output_root)
+    elif args.command.startswith("stage1-5-"):
+        from .stage1_5 import collect_old_test, prepare_old_test, screen_old_test
+
+        stage1_root = args.stage1_root or os.path.join(
+            _project_root(), "experiments", "r13_p15_caaa_v2", "stage1"
+        )
+        stage1_5_root = args.output_root or os.path.join(
+            _project_root(), "experiments", "r13_p15_caaa_v2", "stage1_5"
+        )
+        if args.command == "stage1-5-prepare-old":
+            result = prepare_old_test(stage1_root, stage1_5_root)
+        elif args.command == "stage1-5-collect-old":
+            result = {
+                "shards": len(
+                    collect_old_test(
+                        paths,
+                        stage1_5_root,
+                        task_id=args.task_id,
+                        plan_limit=args.plan_limit,
+                    )
+                )
+            }
+        elif args.command == "stage1-5-screen-old":
+            result = screen_old_test(
+                stage1_root,
+                stage1_5_root,
+                replicates=args.bootstrap_replicates,
+            )
+        else:
+            raise AssertionError(args.command)
     else:
         raise AssertionError(args.command)
     print(json.dumps(result, indent=2, sort_keys=True), flush=True)
@@ -130,4 +165,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
-

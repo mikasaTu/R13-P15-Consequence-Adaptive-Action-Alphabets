@@ -1,0 +1,467 @@
+{
+  "codebooks": {
+    "complete_marker": "experiments/r13_p15_caaa_v2/stage1_5/work/stage1_5_codebooks.npz.complete.json",
+    "path": "work/stage1_5_codebooks.npz",
+    "sha256": "1c44e6da845a03234467a65457cc1303a17eb233df386c41630bce4e82351fb6"
+  },
+  "constrained_solver": {
+    "algorithm": "FISTA with exact Euclidean projection onto box intersect L2 ball",
+    "beta_grid": [
+      1e-06,
+      0.0001,
+      0.01,
+      1.0
+    ],
+    "calibration_trace": [
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.028665032923556193,
+        "calibration_linear_effect_error": 48821.8662482813,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.498117501,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.028665032923556193,
+        "calibration_linear_effect_error": 48821.8662482813,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0115536507,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.028665032923556193,
+        "calibration_linear_effect_error": 48821.8662482813,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3394431896,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.04541817703167517,
+        "calibration_linear_effect_error": 48822.06333641295,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.4980554823,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.04541817703167517,
+        "calibration_linear_effect_error": 48822.06333641295,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.01123838,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.04541817703167517,
+        "calibration_linear_effect_error": 48822.06333641295,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3252963987,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.08392706500679818,
+        "calibration_linear_effect_error": 48822.2298750667,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.492573192,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.08392706500679818,
+        "calibration_linear_effect_error": 48822.2298750667,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0111323707,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1e-06,
+        "calibration_action_reconstruction_error": 0.08392706500679818,
+        "calibration_linear_effect_error": 48822.2298750667,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.304277165,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.028664652586618822,
+        "calibration_linear_effect_error": 48821.86629643579,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.498117501,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.028664652586618822,
+        "calibration_linear_effect_error": 48821.86629643579,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0115536507,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.028664652586618822,
+        "calibration_linear_effect_error": 48821.86629643579,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3394431896,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.045433395090695494,
+        "calibration_linear_effect_error": 48822.06309026457,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.4980554683,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.045433395090695494,
+        "calibration_linear_effect_error": 48822.06309026457,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.01123838,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.045433395090695494,
+        "calibration_linear_effect_error": 48822.06309026457,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3252963987,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.08394601334081737,
+        "calibration_linear_effect_error": 48822.22908527352,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.492573184,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.08394601334081737,
+        "calibration_linear_effect_error": 48822.22908527352,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0111323707,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.0001,
+        "calibration_action_reconstruction_error": 0.08394601334081737,
+        "calibration_linear_effect_error": 48822.22908527352,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.304277165,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.028328378805312887,
+        "calibration_linear_effect_error": 48821.86627703913,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.4981175,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.028328378805312887,
+        "calibration_linear_effect_error": 48821.86627703913,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0115536507,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.028328378805312887,
+        "calibration_linear_effect_error": 48821.86627703913,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3394431896,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.04344489110996307,
+        "calibration_linear_effect_error": 48822.06266430431,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.4980553295,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.04344489110996307,
+        "calibration_linear_effect_error": 48822.06266430431,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.01123838,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.04344489110996307,
+        "calibration_linear_effect_error": 48822.06266430431,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3252963987,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.07549517088671037,
+        "calibration_linear_effect_error": 48822.22786191146,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.4925731765,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.07549517088671037,
+        "calibration_linear_effect_error": 48822.22786191146,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0111323707,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 0.01,
+        "calibration_action_reconstruction_error": 0.07549517088671037,
+        "calibration_linear_effect_error": 48822.22786191146,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.304277165,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.02545787162751408,
+        "calibration_linear_effect_error": 48821.866512778455,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.4981174795,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.02545787162751408,
+        "calibration_linear_effect_error": 48821.866512778455,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0115536507,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.02545787162751408,
+        "calibration_linear_effect_error": 48821.866512778455,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3394431896,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.1,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.034611128587898866,
+        "calibration_linear_effect_error": 48822.06426674434,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.4980534045,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.034611128587898866,
+        "calibration_linear_effect_error": 48822.06426674434,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.01123838,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.034611128587898866,
+        "calibration_linear_effect_error": 48822.06426674434,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.3252963987,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.2,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.05486320110895776,
+        "calibration_linear_effect_error": 48822.23211750537,
+        "feasibility_quantile": 0.9,
+        "feasibility_threshold": 3136586.492573173,
+        "infeasible_token_rate": 0.10009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.05486320110895776,
+        "calibration_linear_effect_error": 48822.23211750537,
+        "feasibility_quantile": 0.95,
+        "feasibility_threshold": 3389839.0111323697,
+        "infeasible_token_rate": 0.050048828125,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      },
+      {
+        "beta": 1.0,
+        "calibration_action_reconstruction_error": 0.05486320110895776,
+        "calibration_linear_effect_error": 48822.23211750537,
+        "feasibility_quantile": 0.99,
+        "feasibility_threshold": 3628425.304277165,
+        "infeasible_token_rate": 0.010009765625,
+        "radius_cap": 0.4,
+        "states_without_feasible_token": 0
+      }
+    ],
+    "feasibility_quantiles": [
+      0.9,
+      0.95,
+      0.99
+    ],
+    "max_iterations": 300,
+    "radius_grid": [
+      0.1,
+      0.2,
+      0.4
+    ],
+    "selected": {
+      "beta": 1e-06,
+      "calibration_action_reconstruction_error": 0.028665032923556193,
+      "calibration_linear_effect_error": 48821.8662482813,
+      "control_thresholds": {
+        "M4_reca": 3628425.3394431896,
+        "M6_permuted_j_reca": 3628425.3394431896,
+        "M7_random_spd_constrained": 3278121.5979384407
+      },
+      "feasibility_quantile": 0.99,
+      "feasibility_threshold": 3628425.3394431896,
+      "infeasible_token_rate": 0.010009765625,
+      "radius_cap": 0.1,
+      "states_without_feasible_token": 0
+    },
+    "selection_split": "stage1_calibration_only"
+  },
+  "created_utc": "2026-08-13T07:51:32.020802+00:00",
+  "frozen_stage1_parameters": {
+    "consequence_scale_sha256": "cb151358bbebe6c40e938f472f59f6106138618adfeaa87a3d32035bc2cca7f0",
+    "covariance_regularization": 1e-08,
+    "metric_regularization": 1e-08,
+    "ridge": 0.001,
+    "singular_cutoff": 0.0001
+  },
+  "internal_screen": {
+    "confirmatory": false,
+    "control_reproduction_rule": "M6 and M7 may each retain at most 25% of a positive candidate gain",
+    "maximum_action_reconstruction_degradation_vs_m1": 0.15,
+    "minimum_clipping_reduction_vs_m0": 0.8,
+    "minimum_pooled_improvement_vs_m1": 0.05,
+    "minimum_tasks_improved": 2
+  },
+  "k32_or_k128_inspected": false,
+  "matched_contract": {
+    "action_bounds": [
+      -1.0,
+      1.0
+    ],
+    "calibration_episodes": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "consequence_schema": "frozen Stage 1 caaa-libero-consequence-v1",
+    "gripper": "copied unchanged",
+    "old_test_episodes": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "target_rows": "all 48 signed radius-0.10 branches at every state",
+    "train_episodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "methods": {
+    "M0_frozen_caaa_v2": "byte-frozen Stage 1 CAAA-v2 K=64 realized rows",
+    "M1_covariance_mahalanobis": "byte-frozen Stage 1 covariance-Mahalanobis K=64 realized rows",
+    "M2_centered_covariance_residual": "global covariance-whitened K=64 k-means on train radius-0.10 residual actions; add state a0",
+    "M3_cara": "global K=64 k-means on T_s delta_a; state pseudoinverse then add a0",
+    "M4_reca": "global K=64 train realized-effect prototypes; bounded/radius-constrained local ridge decode",
+    "M5_phase_residual_kmeans": "four phase-specific K=64 raw residual-action codebooks",
+    "M6_permuted_j_reca": "M4 with Jacobians cyclically permuted within task/split/phase",
+    "M7_random_spd_constrained": "matched-spectrum deterministic random transform with the M4 constrained decoder",
+    "O1_true_effect_oracle": "same-state radius-0.05 dictionary selected by true settled consequence",
+    "O2_linear_j_oracle": "same dictionary selected by frozen local linear J delta_a"
+  },
+  "primary_k": 64,
+  "schema_version": "r13-p15-stage1.5-methods-v1"
+}

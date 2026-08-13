@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-13T07:50:24.209685+00:00",
+  "methods": [
+    "M2_centered_covariance_residual",
+    "M3_cara",
+    "M4_reca",
+    "M5_phase_residual_kmeans",
+    "M6_permuted_j_reca",
+    "M7_random_spd_constrained"
+  ],
+  "payload": "bowl_on_plate__e14__pre_contact.npz",
+  "payload_bytes": 62567,
+  "payload_sha256": "8eb58e17b19f28e6fe7dd4eab1979c4cf5331573fc4483f243aba61fd03ff407",
+  "rows": 288,
+  "snapshot_key": "bowl_on_plate__e14__pre_contact"
+}

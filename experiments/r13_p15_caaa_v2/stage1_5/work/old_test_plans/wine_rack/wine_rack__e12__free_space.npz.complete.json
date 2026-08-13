@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-13T07:51:13.073427+00:00",
+  "methods": [
+    "M2_centered_covariance_residual",
+    "M3_cara",
+    "M4_reca",
+    "M5_phase_residual_kmeans",
+    "M6_permuted_j_reca",
+    "M7_random_spd_constrained"
+  ],
+  "payload": "wine_rack__e12__free_space.npz",
+  "payload_bytes": 47827,
+  "payload_sha256": "19a0ee5877ba838ae1001597d9d475c113347f5cb81b5e232e45f135725d8055",
+  "rows": 288,
+  "snapshot_key": "wine_rack__e12__free_space"
+}

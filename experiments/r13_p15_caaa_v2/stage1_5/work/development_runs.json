@@ -1,0 +1,22 @@
+{
+  "runs": [
+    {
+      "command": "stage1-5-prepare-old",
+      "evidence_inspected": false,
+      "exit_code": 130,
+      "outcome": "INTERRUPTED_IMPLEMENTATION_PERFORMANCE_FAILURE",
+      "reason": "The first constrained-decoder implementation redundantly recomputed the same matrix spectral norm and normal equations for every prototype at a state. It was interrupted before method definitions, codebooks, plans, or revised-method result summaries were written.",
+      "remediation": "Vectorized the 64 prototype solves while preserving the preregistered objective, constraints, grids, iteration limit and convergence tolerance. Added box-plus-L2 projection and constrained-ridge tests in both supported Python environments."
+    },
+    {
+      "command": "stage1-5-prepare-old",
+      "evidence_inspected": true,
+      "exit_code": 0,
+      "outcome": "READY_FOR_OLD_TEST_INTERNAL_SCREEN_COLLECTION",
+      "retrospective_states": 256,
+      "old_test_plans": 64,
+      "planned_rows": 18432
+    }
+  ],
+  "schema_version": "r13-p15-stage1.5-development-runs-v1"
+}

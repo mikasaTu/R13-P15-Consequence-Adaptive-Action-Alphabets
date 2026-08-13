@@ -1,0 +1,326 @@
+{
+  "count": 64,
+  "created_utc": "2026-08-13T07:51:31.994292+00:00",
+  "plans": [
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e12__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e13__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e14__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e12__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e13__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e15__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e12__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e14__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e15__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e12__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e13__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__pre_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__contact_onset.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__free_space.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__post_contact.npz",
+      "rows": 288
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e15__pre_contact.npz",
+      "rows": 288
+    }
+  ]
+}

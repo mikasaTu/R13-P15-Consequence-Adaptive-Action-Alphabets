@@ -1,0 +1,10 @@
+{
+  "codebook_sha256": "1c44e6da845a03234467a65457cc1303a17eb233df386c41630bce4e82351fb6",
+  "created_utc": "2026-08-13T07:51:32.057110+00:00",
+  "decomposition_rows": 59,
+  "method_definitions": "experiments/r13_p15_caaa_v2/stage1_5/method_definitions.json",
+  "plans": 64,
+  "retrospective_states": 256,
+  "rows_planned": 18432,
+  "status": "READY_FOR_OLD_TEST_INTERNAL_SCREEN_COLLECTION"
+}

@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-13T07:50:09.082232+00:00",
+  "fit_split": "stage1_train",
+  "payload": "stage1_5_codebooks.npz",
+  "payload_bytes": 84802,
+  "payload_sha256": "1c44e6da845a03234467a65457cc1303a17eb233df386c41630bce4e82351fb6",
+  "primary_k": 64
+}
