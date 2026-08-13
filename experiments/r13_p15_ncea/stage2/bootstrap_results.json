@@ -1,0 +1,107 @@
+{
+  "confirmation_results_accessed": false,
+  "development_gate": {
+    "confirmation_unlocked": false,
+    "created_utc": "2026-08-13T18:51:50.353948+00:00",
+    "development_disposition": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+    "gate_A": {
+      "baseline_error": 0.3325983705199762,
+      "baseline_errors": {
+        "B1_centered_covariance": 0.3996930898256925,
+        "B2_phase_residual": 0.3325983705199762,
+        "B3_dynamic_action_medoids": 0.37265372914567313
+      },
+      "oracle_error": 0.13340993830639972,
+      "passed": true,
+      "per_task": {
+        "bowl_on_plate": {
+          "baseline": 0.357182458174685,
+          "improved": true,
+          "oracle": 0.12608012216660766,
+          "relative_gain": 0.6470147979525175
+        },
+        "plate_push": {
+          "baseline": 0.28732616777489545,
+          "improved": true,
+          "oracle": 0.12539106608199788,
+          "relative_gain": 0.5635932951981073
+        },
+        "stove_turn_on": {
+          "baseline": 0.37061748285074253,
+          "improved": true,
+          "oracle": 0.1293543824399148,
+          "relative_gain": 0.6509760374903598
+        },
+        "wine_rack": {
+          "baseline": 0.3152673732795818,
+          "improved": true,
+          "oracle": 0.15281418253707857,
+          "relative_gain": 0.5152870373251036
+        }
+      },
+      "relative_gain": 0.5988857729584488,
+      "requirements": {
+        "failure_disposition": "REJECT_BROAD_CONSEQUENCE_HYPOTHESIS",
+        "oracle_relative_gain_min": 0.1,
+        "tasks_improved_min": 3
+      },
+      "strongest_baseline": "B2_phase_residual",
+      "tasks_improved": 4
+    },
+    "gate_B": {
+      "beats_all_controls": false,
+      "best_nonlinear": "NCEA",
+      "contact_sensitive_tasks_improved": 0,
+      "control_prediction_errors": {
+        "P3_mode_shuffled_atlas": 2.2630666903818004,
+        "P4_state_shuffled_atlas": 1.9197516452041283,
+        "P5_effect_shuffled_atlas": 1.88416094968754,
+        "P6_random_latent_atlas": 1134.8556218892352
+      },
+      "linear_prediction_error": 1.691440456749019,
+      "nonlinear_realized_error": 0.35507444399906724,
+      "o1_error": 0.13340993830639972,
+      "o2_error": 0.353479254099923,
+      "oracle_gap_fraction_closed": -0.007248579355065197,
+      "passed": false,
+      "per_contact_task": {
+        "plate_push": {
+          "improved": false,
+          "linear": 2.0853055763191013,
+          "nonlinear": 2.372162504205209
+        },
+        "stove_turn_on": {
+          "improved": false,
+          "linear": 0.7170867669031263,
+          "nonlinear": 1.0477484996343298
+        },
+        "wine_rack": {
+          "improved": false,
+          "linear": 2.1868907547261336,
+          "nonlinear": 2.4751471786549444
+        }
+      },
+      "prediction_errors": {
+        "MC_NCEA": 6.745261254372475,
+        "NCEA": 1.9448522252801606
+      },
+      "prediction_relative_gain": -0.14982009418067468,
+      "requirements": {
+        "contact_sensitive_tasks_improved_min": 2,
+        "failure_disposition": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+        "must_beat_all_shuffled_and_random_controls": true,
+        "oracle_gap_fraction_closed_min": 0.5,
+        "prediction_relative_gain_vs_linear_min": 0.2
+      }
+    },
+    "gate_C": {
+      "status": "NOT_RUN_GATE_B_FAILED"
+    },
+    "sequential_testing": true
+  },
+  "disposition": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+  "observations": 0,
+  "replicates_executed": 0,
+  "replicates_preregistered": 10000,
+  "status": "NOT_RUN_DEVELOPMENT_GATE_FAILED"
+}

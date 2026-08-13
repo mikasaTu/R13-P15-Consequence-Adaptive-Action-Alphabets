@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:28:29.326819+00:00",
+  "episode_id": 25,
+  "kind": "stage2_split_specific_support",
+  "payload": "plate_push__e25__contact_onset.npz",
+  "payload_bytes": 127910,
+  "payload_sha256": "976a1a6923f1de2e53d61fc55e12b9f44fe80d2db3d0ddd5fe7555c4caa627e9",
+  "phase": "contact_onset",
+  "split": "calibration",
+  "task_id": "plate_push"
+}

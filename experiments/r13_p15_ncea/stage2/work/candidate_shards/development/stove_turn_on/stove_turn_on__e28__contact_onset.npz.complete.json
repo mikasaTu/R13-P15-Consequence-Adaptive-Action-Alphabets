@@ -1,0 +1,14 @@
+{
+  "branches": 257,
+  "complete": true,
+  "created_utc": "2026-08-13T18:31:54.942032+00:00",
+  "episode_id": 28,
+  "kind": "stage2_common_action_bank_effects",
+  "payload": "stove_turn_on__e28__contact_onset.npz",
+  "payload_bytes": 264541,
+  "payload_sha256": "9f8f95d1d54abca2da7b1728e15ec6c21c2d6edb740d2d44a3e16ad31aafad7d",
+  "phase": "contact_onset",
+  "split": "development",
+  "task_id": "stove_turn_on",
+  "valid_bank_size": 256
+}

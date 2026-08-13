@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:33:12.939278+00:00",
+  "episode_id": 30,
+  "kind": "stage2_split_specific_support",
+  "payload": "plate_push__e30__free_space.npz",
+  "payload_bytes": 97390,
+  "payload_sha256": "604f80b9df38c881ade4d3376ca6e126b00c889d7ec9d000044d69b16279b474",
+  "phase": "free_space",
+  "split": "development",
+  "task_id": "plate_push"
+}

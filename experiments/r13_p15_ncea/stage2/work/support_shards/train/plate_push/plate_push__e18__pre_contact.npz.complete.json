@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:21:22.554173+00:00",
+  "episode_id": 18,
+  "kind": "stage2_split_specific_support",
+  "payload": "plate_push__e18__pre_contact.npz",
+  "payload_bytes": 127100,
+  "payload_sha256": "4ca5f558f60e60c297da193df824fa6e21d441b66ab3c1245141a9750430d935",
+  "phase": "pre_contact",
+  "split": "train",
+  "task_id": "plate_push"
+}

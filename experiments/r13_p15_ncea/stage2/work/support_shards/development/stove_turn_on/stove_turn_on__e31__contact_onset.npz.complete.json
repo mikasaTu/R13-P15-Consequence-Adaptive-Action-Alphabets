@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:34:34.675025+00:00",
+  "episode_id": 31,
+  "kind": "stage2_split_specific_support",
+  "payload": "stove_turn_on__e31__contact_onset.npz",
+  "payload_bytes": 101656,
+  "payload_sha256": "608b4c9ff28008381e286f2d692e3b11be0dac830328d66adc5ff4ab7eec393b",
+  "phase": "contact_onset",
+  "split": "development",
+  "task_id": "stove_turn_on"
+}

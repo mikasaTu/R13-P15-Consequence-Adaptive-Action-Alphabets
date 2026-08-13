@@ -1,0 +1,9 @@
+{
+    "episode_id": 27,
+    "phase": "free_space",
+    "snapshot_index": 22,
+    "source_npz": "work/support_shards/calibration/plate_push/plate_push__e27__free_space.npz",
+    "source_sha256": "767e0f4c3b51bffedf99c9f32101bdab5cd416922c8ac6b224a42b725c73ebf8",
+    "split": "calibration",
+    "task_id": "plate_push"
+}

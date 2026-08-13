@@ -511,7 +511,7 @@ def evaluate_linear_atlas(records, models, center, state_scale, neighbors, scale
                     "squared_error": float(np.mean((true_target[index] - predicted_target[index]) ** 2)),
                     "true_norm": float(np.linalg.norm(true_target[index])),
                     "predicted_norm": float(np.linalg.norm(predicted_target[index])),
-                    "contact_correct": 0,
+                    "contact_correct": float("nan"),
                     "uncertainty": float("nan"),
                 }
             )
@@ -1020,6 +1020,20 @@ def _prediction_metric_rows(record, method, prediction, consequence_scale):
     true = _effect(record["support"])[1:][:, CONTINUOUS_INDICES]
     true_normalized = true / consequence_scale[CONTINUOUS_INDICES][None, :]
     target_mode = np.asarray(record["support"]["contact_mode"][1:], dtype=np.int64)
+    target_mask = np.asarray(record["support"]["mask"][1:], dtype=bool)
+    predicted_full = np.zeros_like(_effect(record["support"])[1:])
+    predicted_full[:, CONTINUOUS_INDICES] = (
+        prediction["mean"] * consequence_scale[CONTINUOUS_INDICES][None, :]
+    )
+    balanced = balanced_error(
+        _effect(record["support"])[1:],
+        predicted_full,
+        target_mask,
+        target_mask,
+        target_mode,
+        prediction["mode"],
+        consequence_scale,
+    )
     rows = []
     for index in range(len(true)):
         squared = float(np.mean((true_normalized[index] - prediction["mean"][index]) ** 2))
@@ -1033,6 +1047,7 @@ def _prediction_metric_rows(record, method, prediction, consequence_scale):
                 "target_id": index,
                 "method": method,
                 "squared_error": squared,
+                "balanced_prediction_error": float(balanced[index]),
                 "nrmse": math.sqrt(squared / denom),
                 "true_norm": float(np.linalg.norm(true_normalized[index])),
                 "predicted_norm": float(np.linalg.norm(prediction["mean"][index])),
@@ -1118,6 +1133,33 @@ def evaluate_predictor_atlases(
             _prediction_metric_rows(record, method, target_prediction, consequence_scale)
         )
     return quantization_rows, prediction_rows
+
+
+def evaluate_predictors_only(
+    records,
+    families,
+    random_members,
+    center,
+    input_scale,
+    consequence_scale,
+    device,
+):
+    rows = []
+    for record in records:
+        target_residual = np.asarray(record["support"]["residual_action"][1:], dtype=np.float64)
+        samples = _query_samples(record, target_residual)
+        for method, family in families.items():
+            prediction = _predict_ensemble(
+                family["models"], samples, center, input_scale, device
+            )
+            rows.extend(_prediction_metric_rows(record, method, prediction, consequence_scale))
+        prediction = _random_feature_predict(random_members, samples, center, input_scale)
+        rows.extend(
+            _prediction_metric_rows(
+                record, "P6_random_latent_atlas", prediction, consequence_scale
+            )
+        )
+    return rows
 
 
 def train_action_autoencoder(train_records, calibration_records, action_bank, center, input_scale, hidden, output_root, device):
@@ -1307,9 +1349,16 @@ def _predictor_metric_summary(rows):
                         "n": len(selected),
                         "mse": float(np.mean(errors)),
                         "rmse": float(np.sqrt(np.mean(errors))),
+                        "balanced_prediction_error": float(
+                            np.mean([row.get("balanced_prediction_error", float("nan")) for row in selected])
+                        ),
                         "mean_nrmse": float(np.mean([row.get("nrmse", float("nan")) for row in selected])),
                         "contact_accuracy": float(np.mean([row["contact_correct"] for row in selected])),
                         "effect_norm_spearman": spearmanr(true_norm, pred_norm),
+                        "mean_true_effect_norm": float(np.mean(true_norm)),
+                        "mean_predicted_effect_norm": float(np.mean(pred_norm)),
+                        "predicted_to_true_norm_ratio": float(np.mean(pred_norm))
+                        / max(float(np.mean(true_norm)), 1e-12),
                         "uncertainty_error_spearman": spearmanr(uncertainties, errors),
                     }
                 )
@@ -1338,6 +1387,17 @@ def _quantization_summary(rows):
             counts = np.bincount(decoded, minlength=ACTION_BANK_SIZE)
             probability = counts[counts > 0] / max(np.sum(counts), 1)
             perplexity = float(np.exp(-np.sum(probability * np.log(probability)))) if len(probability) else 0.0
+            state_perplexities = []
+            state_groups = defaultdict(list)
+            for row in selected:
+                if int(row["decoded_bank_index"]) >= 0:
+                    state_groups[(row["task_id"], int(row["episode_id"]), row["phase"])].append(
+                        int(row["decoded_bank_index"])
+                    )
+            for decoded_state in state_groups.values():
+                state_counts = np.bincount(np.asarray(decoded_state, dtype=np.int64), minlength=ACTION_BANK_SIZE)
+                state_probability = state_counts[state_counts > 0] / np.sum(state_counts)
+                state_perplexities.append(float(np.exp(-np.sum(state_probability * np.log(state_probability)))))
             output.append(
                 {
                     "split": selected[0]["split"],
@@ -1364,7 +1424,9 @@ def _quantization_summary(rows):
                     "clipping_rate": float(np.mean([row["clipped"] for row in selected])),
                     "unique_codes": int(np.sum(counts > 0)),
                     "code_perplexity": perplexity,
-                    "normalized_code_utilization": perplexity / PRIMARY_K,
+                    "normalized_code_utilization": float(np.mean(state_perplexities)) / PRIMARY_K
+                    if state_perplexities
+                    else 0.0,
                 }
             )
     return output
@@ -1955,4 +2017,125 @@ def run_development(output_root, device_name=None):
         "gate_A": gate_a,
         "gate_B": gate["gate_B"],
         "gate_C": gate["gate_C"],
+    }
+
+
+def _load_frozen_predictors(output_root, device, input_dim, continuous_dim):
+    import torch
+
+    with open(os.path.join(output_root, "work", "predictor_freeze.json"), "r", encoding="utf-8") as handle:
+        freeze = json.load(handle)
+    families = {}
+    for family, metadata in freeze["selected"].items():
+        conditioned = bool(metadata["mode_conditioned"])
+        factory = _ModePredictor if conditioned else _GlobalPredictor
+        models = []
+        for member in range(PREDICTOR_ENSEMBLE_SIZE):
+            model = factory.create(input_dim, tuple(metadata["hidden"]), continuous_dim).to(device)
+            checkpoint = torch.load(
+                os.path.join(output_root, "work", "predictors", "%s_member_%d.pt" % (family, member)),
+                map_location=device,
+                weights_only=False,
+            )
+            model.load_state_dict(checkpoint["state_dict"])
+            model.eval()
+            models.append(model)
+        families[family] = {
+            "models": models,
+            "hidden": tuple(metadata["hidden"]),
+            "mode_conditioned": conditioned,
+        }
+    random_path = os.path.join(output_root, "work", "predictors", "P6_random_latent.npz")
+    with np.load(random_path, allow_pickle=False) as data:
+        random_members = [
+            {
+                "weight": np.asarray(data["weight"][index]),
+                "bias": np.asarray(data["bias"][index]),
+                "readout": np.asarray(data["readout"][index]),
+                "calibration_mse": float(data["calibration_mse"][index]),
+            }
+            for index in range(len(data["weight"]))
+        ]
+    return families, random_members
+
+
+def refresh_derived_summaries(output_root, device_name=None):
+    """Recompute report-only summaries from frozen models and raw result rows."""
+    import pandas as pd
+
+    device = _torch_device(device_name)
+    with np.load(os.path.join(output_root, "work", "predictor_scalers.npz"), allow_pickle=False) as data:
+        input_center = np.asarray(data["input_center"], dtype=np.float64)
+        input_scale = np.asarray(data["input_scale"], dtype=np.float64)
+        consequence_scale = np.asarray(data["consequence_scale"], dtype=np.float64)
+    families, random_members = _load_frozen_predictors(
+        output_root, device, len(input_center) + 24, len(CONTINUOUS_INDICES)
+    )
+    train_records = load_state_records(output_root, {"train"})
+    calibration_records = load_state_records(output_root, {"calibration"})
+    development_records = load_state_records(output_root, {"development"})
+    with open(os.path.join(output_root, "work", "calibration_choices.json"), "r", encoding="utf-8") as handle:
+        choices = json.load(handle)
+    linear_models, linear_center, linear_scale = fit_local_jacobians(
+        train_records, consequence_scale, choices["linear_choice"]["ridge"]
+    )
+    prediction_rows = []
+    for records in (calibration_records, development_records):
+        _, linear = evaluate_linear_atlas(
+            records,
+            linear_models,
+            linear_center,
+            linear_scale,
+            int(choices["linear_choice"]["neighbors"]),
+            consequence_scale,
+        )
+        # Linear predictor has no categorical head; record balanced continuous
+        # MSE and leave categorical balanced error undefined rather than inventing it.
+        for row in linear:
+            row["balanced_prediction_error"] = float("nan")
+        prediction_rows += linear
+        prediction_rows += evaluate_predictors_only(
+            records,
+            families,
+            random_members,
+            input_center,
+            input_scale,
+            consequence_scale,
+            device,
+        )
+    predictor_summary = _predictor_metric_summary(prediction_rows)
+    write_csv(os.path.join(output_root, "predictor_metrics.csv"), predictor_summary)
+
+    raw = pd.read_csv(os.path.join(output_root, "development_quantization.csv"))
+    quantization_rows = raw.to_dict(orient="records")
+    quantization_summary = _quantization_summary(quantization_rows)
+    summary_path = os.path.join(output_root, "work", "development_summary.json")
+    with open(summary_path, "r", encoding="utf-8") as handle:
+        summary = json.load(handle)
+    summary["quantization_summary"] = quantization_summary
+    summary["predictor_summary"] = predictor_summary
+
+    geometry = []
+    for model in linear_models:
+        singular = np.linalg.svd(model["j"], compute_uv=False)
+        energy = singular * singular
+        probability = energy / max(np.sum(energy), 1e-12)
+        effective_rank = float(np.exp(-np.sum(probability[probability > 0] * np.log(probability[probability > 0]))))
+        geometry.append(
+            {
+                "task_id": model["task_id"],
+                "phase": model["phase"],
+                "episode_id": model["episode_id"],
+                "rank": int(np.linalg.matrix_rank(model["j"])),
+                "effective_rank": effective_rank,
+                "condition_number": float(singular[0] / max(singular[-1], 1e-12)),
+            }
+        )
+    summary["linear_j_geometry"] = geometry
+    atomic_json(summary_path, summary)
+    return {
+        "device": str(device),
+        "predictor_summary_rows": len(predictor_summary),
+        "quantization_summary_rows": len(quantization_summary),
+        "linear_j_geometry_rows": len(geometry),
     }

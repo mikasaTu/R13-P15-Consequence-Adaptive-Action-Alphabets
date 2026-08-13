@@ -80,6 +80,7 @@ def build_parser():
         "stage2-collect-candidates",
         "stage2-export-rollouts",
         "stage2-run-development",
+        "stage2-refresh-summaries",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -229,6 +230,10 @@ def main(argv=None):
             from .stage2_analysis import run_development
 
             result = run_development(output_root, device_name=args.device)
+        elif args.command == "stage2-refresh-summaries":
+            from .stage2_analysis import refresh_derived_summaries
+
+            result = refresh_derived_summaries(output_root, device_name=args.device)
         else:
             raise AssertionError(args.command)
     else:

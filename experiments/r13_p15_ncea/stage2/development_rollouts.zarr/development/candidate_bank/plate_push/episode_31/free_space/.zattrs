@@ -1,0 +1,9 @@
+{
+    "episode_id": 31,
+    "phase": "free_space",
+    "snapshot_index": 21,
+    "source_npz": "work/candidate_shards/development/plate_push/plate_push__e31__free_space.npz",
+    "source_sha256": "3f1fc9b91fd2fb71ba9c393b59599492bfe1d9d458a3529232674788c8f79afb",
+    "split": "development",
+    "task_id": "plate_push"
+}

@@ -1,0 +1,170 @@
+{
+  "created_utc": "2026-08-13T18:42:03.709251+00:00",
+  "shards": [
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e24__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e25__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e26__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e29__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e30__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__free_space.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__pre_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__contact_onset.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__post_contact.npz.complete.json",
+      "path": "/workspace/leon/r13-p15-caaa-v2-libero/experiments/r13_p15_ncea/stage2/work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e31__post_contact.npz",
+      "status": "created"
+    }
+  ],
+  "splits": [
+    "calibration",
+    "development"
+  ],
+  "task_id": "bowl_on_plate"
+}

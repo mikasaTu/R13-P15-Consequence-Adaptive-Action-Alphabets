@@ -1,0 +1,9 @@
+{
+    "episode_id": 25,
+    "phase": "free_space",
+    "snapshot_index": 18,
+    "source_npz": "work/candidate_shards/calibration/plate_push/plate_push__e25__free_space.npz",
+    "source_sha256": "50c4db03026a078c6c7bdfffe1de8c2e8c3ffca82807d848e9e6e7a3692a0e67",
+    "split": "calibration",
+    "task_id": "plate_push"
+}

@@ -1,0 +1,9 @@
+{
+    "episode_id": 28,
+    "phase": "free_space",
+    "snapshot_index": 14,
+    "source_npz": "work/support_shards/development/bowl_on_plate/bowl_on_plate__e28__free_space.npz",
+    "source_sha256": "d08816d0dc9d437c5018ab39f8ca7f216fed6bb52f1df4babe495744a067f2cd",
+    "split": "development",
+    "task_id": "bowl_on_plate"
+}

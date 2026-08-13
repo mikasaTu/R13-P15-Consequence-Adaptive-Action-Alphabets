@@ -1,0 +1,9 @@
+{
+    "episode_id": 25,
+    "phase": "contact_onset",
+    "snapshot_index": 40,
+    "source_npz": "work/support_shards/calibration/stove_turn_on/stove_turn_on__e25__contact_onset.npz",
+    "source_sha256": "d540b5327c75b7dd42799f80f858c480f324f440ae97fc14ff16b9a330948edd",
+    "split": "calibration",
+    "task_id": "stove_turn_on"
+}

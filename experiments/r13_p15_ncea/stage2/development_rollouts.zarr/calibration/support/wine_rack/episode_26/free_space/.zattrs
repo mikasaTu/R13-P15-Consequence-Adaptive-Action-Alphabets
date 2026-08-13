@@ -1,0 +1,9 @@
+{
+    "episode_id": 26,
+    "phase": "free_space",
+    "snapshot_index": 22,
+    "source_npz": "work/support_shards/calibration/wine_rack/wine_rack__e26__free_space.npz",
+    "source_sha256": "c00e930e04e5e8e0b630e91d2ae598a508e1d12858e46f5f2102b06ca5181ddb",
+    "split": "calibration",
+    "task_id": "wine_rack"
+}

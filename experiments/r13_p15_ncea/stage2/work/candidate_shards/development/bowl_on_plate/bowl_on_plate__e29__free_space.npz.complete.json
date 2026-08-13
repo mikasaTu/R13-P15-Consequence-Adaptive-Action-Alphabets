@@ -1,0 +1,14 @@
+{
+  "branches": 257,
+  "complete": true,
+  "created_utc": "2026-08-13T18:34:31.242342+00:00",
+  "episode_id": 29,
+  "kind": "stage2_common_action_bank_effects",
+  "payload": "bowl_on_plate__e29__free_space.npz",
+  "payload_bytes": 247963,
+  "payload_sha256": "1aae608fe8f8d4cdda580f83181acee762aed8e1717607bb9449f426c5459a01",
+  "phase": "free_space",
+  "split": "development",
+  "task_id": "bowl_on_plate",
+  "valid_bank_size": 256
+}

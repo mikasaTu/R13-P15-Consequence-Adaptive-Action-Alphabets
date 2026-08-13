@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:34:06.734127+00:00",
+  "episode_id": 29,
+  "kind": "stage2_split_specific_support",
+  "payload": "bowl_on_plate__e29__post_contact.npz",
+  "payload_bytes": 141114,
+  "payload_sha256": "5d3d9c3090a44c52193bbb28fd01fbc0d55e0ff93b296b979befa499a333da02",
+  "phase": "post_contact",
+  "split": "development",
+  "task_id": "bowl_on_plate"
+}

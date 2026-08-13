@@ -1,0 +1,9 @@
+{
+    "episode_id": 27,
+    "phase": "pre_contact",
+    "snapshot_index": 70,
+    "source_npz": "work/support_shards/calibration/wine_rack/wine_rack__e27__pre_contact.npz",
+    "source_sha256": "bac6fda4b264a8eb3a80a4eb22c218823e0f8cb105432cebd9d30fcb0c42681b",
+    "split": "calibration",
+    "task_id": "wine_rack"
+}

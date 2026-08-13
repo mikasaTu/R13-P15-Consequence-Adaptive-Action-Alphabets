@@ -1,0 +1,9 @@
+{
+    "episode_id": 27,
+    "phase": "post_contact",
+    "snapshot_index": 139,
+    "source_npz": "work/candidate_shards/calibration/wine_rack/wine_rack__e27__post_contact.npz",
+    "source_sha256": "270fababea4c61f6e382242b7d1c52fe5683e8461c7a0752149979e4712ce2b8",
+    "split": "calibration",
+    "task_id": "wine_rack"
+}

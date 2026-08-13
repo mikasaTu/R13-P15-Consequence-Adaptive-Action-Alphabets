@@ -1,0 +1,9 @@
+{
+    "episode_id": 24,
+    "phase": "contact_onset",
+    "snapshot_index": 54,
+    "source_npz": "work/support_shards/calibration/plate_push/plate_push__e24__contact_onset.npz",
+    "source_sha256": "d774943d80793606793d67301ba2b12802ead13d88ca85fa43c7e9927c3deb17",
+    "split": "calibration",
+    "task_id": "plate_push"
+}

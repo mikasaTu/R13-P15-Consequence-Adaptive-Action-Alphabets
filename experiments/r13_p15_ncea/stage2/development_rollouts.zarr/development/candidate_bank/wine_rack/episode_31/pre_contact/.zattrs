@@ -1,0 +1,9 @@
+{
+    "episode_id": 31,
+    "phase": "pre_contact",
+    "snapshot_index": 93,
+    "source_npz": "work/candidate_shards/development/wine_rack/wine_rack__e31__pre_contact.npz",
+    "source_sha256": "b6aafe08ec17d1df58a4eedf0b84bef3a2b974d51894a1f06bd144a125ceb50a",
+    "split": "development",
+    "task_id": "wine_rack"
+}

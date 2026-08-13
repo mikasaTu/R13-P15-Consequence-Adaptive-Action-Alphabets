@@ -1,0 +1,9 @@
+{
+    "episode_id": 17,
+    "phase": "contact_onset",
+    "snapshot_index": 50,
+    "source_npz": "work/support_shards/train/plate_push/plate_push__e17__contact_onset.npz",
+    "source_sha256": "f2a6bbc86ad59a6dbb849de28ff9f5b379c5dde67d5fb31d8cb70dc003914d13",
+    "split": "train",
+    "task_id": "plate_push"
+}

@@ -1,0 +1,9 @@
+{
+    "episode_id": 30,
+    "phase": "free_space",
+    "snapshot_index": 18,
+    "source_npz": "work/candidate_shards/development/stove_turn_on/stove_turn_on__e30__free_space.npz",
+    "source_sha256": "47c52d1bbbbc404a304d5a9dd1da725cf02096e5667635a5d1507182675ba5a0",
+    "split": "development",
+    "task_id": "stove_turn_on"
+}

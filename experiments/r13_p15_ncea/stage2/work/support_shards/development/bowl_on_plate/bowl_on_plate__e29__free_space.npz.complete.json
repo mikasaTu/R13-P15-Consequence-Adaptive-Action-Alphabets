@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:33:22.354594+00:00",
+  "episode_id": 29,
+  "kind": "stage2_split_specific_support",
+  "payload": "bowl_on_plate__e29__free_space.npz",
+  "payload_bytes": 92701,
+  "payload_sha256": "846bc1b301c11bc14eaae37b1bb5d3a1c5a686896459327a9bdf7dce7d49b3a1",
+  "phase": "free_space",
+  "split": "development",
+  "task_id": "bowl_on_plate"
+}

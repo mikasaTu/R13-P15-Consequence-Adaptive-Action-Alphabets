@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:20:20.095057+00:00",
+  "episode_id": 17,
+  "kind": "stage2_split_specific_support",
+  "payload": "bowl_on_plate__e17__free_space.npz",
+  "payload_bytes": 97620,
+  "payload_sha256": "23bc084b77710d618d4b26804baf1d09db9954749552997dbc12b5d84df650bc",
+  "phase": "free_space",
+  "split": "train",
+  "task_id": "bowl_on_plate"
+}

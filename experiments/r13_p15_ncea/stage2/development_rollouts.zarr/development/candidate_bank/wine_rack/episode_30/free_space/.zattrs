@@ -1,0 +1,9 @@
+{
+    "episode_id": 30,
+    "phase": "free_space",
+    "snapshot_index": 27,
+    "source_npz": "work/candidate_shards/development/wine_rack/wine_rack__e30__free_space.npz",
+    "source_sha256": "a87e9b220fcb18fbd18c18dd25bcd4d0dcaf632da1caf9a21988ccca0d068fb3",
+    "split": "development",
+    "task_id": "wine_rack"
+}

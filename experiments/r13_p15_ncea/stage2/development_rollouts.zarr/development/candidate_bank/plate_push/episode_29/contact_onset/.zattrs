@@ -1,0 +1,9 @@
+{
+    "episode_id": 29,
+    "phase": "contact_onset",
+    "snapshot_index": 46,
+    "source_npz": "work/candidate_shards/development/plate_push/plate_push__e29__contact_onset.npz",
+    "source_sha256": "aa01249ce3e2ee441338b856e4bc770ce1b4c6a5f48cda7c971f4de929485722",
+    "split": "development",
+    "task_id": "plate_push"
+}

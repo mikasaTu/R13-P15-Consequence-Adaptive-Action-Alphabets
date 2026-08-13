@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:30:06.730168+00:00",
+  "episode_id": 27,
+  "kind": "stage2_split_specific_support",
+  "payload": "stove_turn_on__e27__free_space.npz",
+  "payload_bytes": 92780,
+  "payload_sha256": "8901faa676a5713a80047ff971ddc3bad52e8802eaccd50d2eedea71020e30f6",
+  "phase": "free_space",
+  "split": "calibration",
+  "task_id": "stove_turn_on"
+}

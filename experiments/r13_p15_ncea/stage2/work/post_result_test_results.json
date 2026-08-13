@@ -1,0 +1,22 @@
+{
+  "scope": "post-result full repository regression and Stage 2 implementation",
+  "analysis_environment": {
+    "python": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python",
+    "command": "python -m pytest -q",
+    "result": "18 passed in 0.57s",
+    "passed": true
+  },
+  "frozen_simulation_environment": {
+    "python": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python",
+    "command": "python -m pytest -q",
+    "result": "18 passed in 0.62s",
+    "passed": true
+  },
+  "single_gpu_smoke": {
+    "physical_gpu": 1,
+    "visible_device": "cuda:0",
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "result": "42 epochs, finite calibration loss, CUDA parameters verified",
+    "passed": true
+  }
+}

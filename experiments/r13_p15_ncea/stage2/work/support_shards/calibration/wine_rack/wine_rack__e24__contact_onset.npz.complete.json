@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:27:39.877882+00:00",
+  "episode_id": 24,
+  "kind": "stage2_split_specific_support",
+  "payload": "wine_rack__e24__contact_onset.npz",
+  "payload_bytes": 132285,
+  "payload_sha256": "8e6063762a8ad400fd94348c1f0428e71b87cbc9f4a7008d79c01622a01708bb",
+  "phase": "contact_onset",
+  "split": "calibration",
+  "task_id": "wine_rack"
+}

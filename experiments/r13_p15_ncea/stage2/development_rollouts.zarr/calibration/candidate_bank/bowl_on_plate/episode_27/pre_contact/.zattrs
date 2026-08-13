@@ -1,0 +1,9 @@
+{
+    "episode_id": 27,
+    "phase": "pre_contact",
+    "snapshot_index": 35,
+    "source_npz": "work/candidate_shards/calibration/bowl_on_plate/bowl_on_plate__e27__pre_contact.npz",
+    "source_sha256": "382474e486a69962c42783da4b6da2dac0092e3abad953e4417260ab1b1feb02",
+    "split": "calibration",
+    "task_id": "bowl_on_plate"
+}

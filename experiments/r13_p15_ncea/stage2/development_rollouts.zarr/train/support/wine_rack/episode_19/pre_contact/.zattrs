@@ -1,0 +1,9 @@
+{
+    "episode_id": 19,
+    "phase": "pre_contact",
+    "snapshot_index": 77,
+    "source_npz": "work/support_shards/train/wine_rack/wine_rack__e19__pre_contact.npz",
+    "source_sha256": "d58dbc76ec35c945179196b5e089349f9f471d847039d63ee3b6d0f1b0390fef",
+    "split": "train",
+    "task_id": "wine_rack"
+}

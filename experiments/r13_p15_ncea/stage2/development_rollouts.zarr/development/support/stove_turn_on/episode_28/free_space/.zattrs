@@ -1,0 +1,9 @@
+{
+    "episode_id": 28,
+    "phase": "free_space",
+    "snapshot_index": 17,
+    "source_npz": "work/support_shards/development/stove_turn_on/stove_turn_on__e28__free_space.npz",
+    "source_sha256": "cf658662baf580a020bb675c2570385ed59f002c0b558cf4671927688c9ab4bd",
+    "split": "development",
+    "task_id": "stove_turn_on"
+}

@@ -1,0 +1,9 @@
+{
+    "episode_id": 28,
+    "phase": "pre_contact",
+    "snapshot_index": 40,
+    "source_npz": "work/candidate_shards/development/bowl_on_plate/bowl_on_plate__e28__pre_contact.npz",
+    "source_sha256": "cf3cdef78e02480250238832c135dc8f190b7a9bc861a2d644ee11e801aba6c4",
+    "split": "development",
+    "task_id": "bowl_on_plate"
+}

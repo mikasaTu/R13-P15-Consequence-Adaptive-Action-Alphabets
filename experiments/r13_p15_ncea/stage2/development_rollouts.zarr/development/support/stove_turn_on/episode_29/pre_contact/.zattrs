@@ -1,0 +1,9 @@
+{
+    "episode_id": 29,
+    "phase": "pre_contact",
+    "snapshot_index": 53,
+    "source_npz": "work/support_shards/development/stove_turn_on/stove_turn_on__e29__pre_contact.npz",
+    "source_sha256": "0179046bf1c07637b5525659c54902938cd054e3c6ea6f74d69a6be44b7f0889",
+    "split": "development",
+    "task_id": "stove_turn_on"
+}

@@ -1,0 +1,9 @@
+{
+    "episode_id": 22,
+    "phase": "free_space",
+    "snapshot_index": 16,
+    "source_npz": "work/support_shards/train/plate_push/plate_push__e22__free_space.npz",
+    "source_sha256": "fc594eaa3d5707b46fc7e41da618e9a4d3a1327c5b6c18f640b34760cd200f43",
+    "split": "train",
+    "task_id": "plate_push"
+}

@@ -1,0 +1,9 @@
+{
+    "episode_id": 25,
+    "phase": "free_space",
+    "snapshot_index": 13,
+    "source_npz": "work/candidate_shards/calibration/stove_turn_on/stove_turn_on__e25__free_space.npz",
+    "source_sha256": "89d8299ff8539eb71f72441169cbd34e595b56e8591a774343c7b2557ccf47d7",
+    "split": "calibration",
+    "task_id": "stove_turn_on"
+}

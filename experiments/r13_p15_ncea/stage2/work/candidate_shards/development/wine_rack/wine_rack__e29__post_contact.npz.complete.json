@@ -1,0 +1,14 @@
+{
+  "branches": 257,
+  "complete": true,
+  "created_utc": "2026-08-13T18:35:48.403395+00:00",
+  "episode_id": 29,
+  "kind": "stage2_common_action_bank_effects",
+  "payload": "wine_rack__e29__post_contact.npz",
+  "payload_bytes": 267249,
+  "payload_sha256": "d3843d451ae71e19b3b20ba1183645d66537b49af4a85816d0572ba0d465dbf4",
+  "phase": "post_contact",
+  "split": "development",
+  "task_id": "wine_rack",
+  "valid_bank_size": 256
+}

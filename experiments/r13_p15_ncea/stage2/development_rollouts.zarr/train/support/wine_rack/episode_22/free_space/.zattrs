@@ -1,0 +1,9 @@
+{
+    "episode_id": 22,
+    "phase": "free_space",
+    "snapshot_index": 28,
+    "source_npz": "work/support_shards/train/wine_rack/wine_rack__e22__free_space.npz",
+    "source_sha256": "37bb13123fe4ad89725059e681f9e90e0f85d331ac8db07dc98f8d0ca186d5a7",
+    "split": "train",
+    "task_id": "wine_rack"
+}

@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:30:21.448193+00:00",
+  "episode_id": 26,
+  "kind": "stage2_split_specific_support",
+  "payload": "bowl_on_plate__e26__pre_contact.npz",
+  "payload_bytes": 134373,
+  "payload_sha256": "efbcbb38cfcf4dfa53771ba475150056517fe2ad49ff3d925120a47482ffbb4f",
+  "phase": "pre_contact",
+  "split": "calibration",
+  "task_id": "bowl_on_plate"
+}

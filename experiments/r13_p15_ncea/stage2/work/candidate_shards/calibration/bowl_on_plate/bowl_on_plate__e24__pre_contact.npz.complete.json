@@ -1,0 +1,14 @@
+{
+  "branches": 257,
+  "complete": true,
+  "created_utc": "2026-08-13T18:21:30.394811+00:00",
+  "episode_id": 24,
+  "kind": "stage2_common_action_bank_effects",
+  "payload": "bowl_on_plate__e24__pre_contact.npz",
+  "payload_bytes": 331952,
+  "payload_sha256": "58b40655c1e62e17b5b3f16c987769c7f8dfa9367f2d15624c65a0dd21fe1c22",
+  "phase": "pre_contact",
+  "split": "calibration",
+  "task_id": "bowl_on_plate",
+  "valid_bank_size": 256
+}

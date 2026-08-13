@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:21:03.780077+00:00",
+  "episode_id": 18,
+  "kind": "stage2_split_specific_support",
+  "payload": "stove_turn_on__e18__free_space.npz",
+  "payload_bytes": 90633,
+  "payload_sha256": "837dae62c09d706e96ec4f5b0b7521f9983f0d73621e307f0f2033661ef55068",
+  "phase": "free_space",
+  "split": "train",
+  "task_id": "stove_turn_on"
+}

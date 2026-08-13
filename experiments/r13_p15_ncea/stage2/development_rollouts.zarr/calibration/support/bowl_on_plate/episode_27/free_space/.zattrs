@@ -1,0 +1,9 @@
+{
+    "episode_id": 27,
+    "phase": "free_space",
+    "snapshot_index": 16,
+    "source_npz": "work/support_shards/calibration/bowl_on_plate/bowl_on_plate__e27__free_space.npz",
+    "source_sha256": "3d40ed7931f3970d240fc3ad4d669aeb60902d94aff17460bbac008521c07bb5",
+    "split": "calibration",
+    "task_id": "bowl_on_plate"
+}

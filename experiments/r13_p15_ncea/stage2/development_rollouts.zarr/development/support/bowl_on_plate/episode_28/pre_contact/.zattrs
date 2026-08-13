@@ -1,0 +1,9 @@
+{
+    "episode_id": 28,
+    "phase": "pre_contact",
+    "snapshot_index": 40,
+    "source_npz": "work/support_shards/development/bowl_on_plate/bowl_on_plate__e28__pre_contact.npz",
+    "source_sha256": "a570124c51cc03ac0c445b55a1906e167622015cf9b309e65a8cb599853db579",
+    "split": "development",
+    "task_id": "bowl_on_plate"
+}

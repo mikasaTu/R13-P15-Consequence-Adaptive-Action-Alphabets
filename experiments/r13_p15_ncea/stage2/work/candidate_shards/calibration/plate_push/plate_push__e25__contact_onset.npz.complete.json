@@ -1,0 +1,14 @@
+{
+  "branches": 257,
+  "complete": true,
+  "created_utc": "2026-08-13T18:24:52.018485+00:00",
+  "episode_id": 25,
+  "kind": "stage2_common_action_bank_effects",
+  "payload": "plate_push__e25__contact_onset.npz",
+  "payload_bytes": 339387,
+  "payload_sha256": "82004c7b4475038922ddfdcb91ee657cf4ebd96f54f0f33d19da44d4e3e608f8",
+  "phase": "contact_onset",
+  "split": "calibration",
+  "task_id": "plate_push",
+  "valid_bank_size": 256
+}

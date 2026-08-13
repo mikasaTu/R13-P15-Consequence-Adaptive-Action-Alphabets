@@ -1,0 +1,13 @@
+{
+  "branches": 97,
+  "complete": true,
+  "created_utc": "2026-08-13T18:22:16.775096+00:00",
+  "episode_id": 19,
+  "kind": "stage2_split_specific_support",
+  "payload": "stove_turn_on__e19__pre_contact.npz",
+  "payload_bytes": 98161,
+  "payload_sha256": "2ee07e4dc0490b51103e59659e0f9f4e9759a25233cc8179d17721c1438bf652",
+  "phase": "pre_contact",
+  "split": "train",
+  "task_id": "stove_turn_on"
+}
