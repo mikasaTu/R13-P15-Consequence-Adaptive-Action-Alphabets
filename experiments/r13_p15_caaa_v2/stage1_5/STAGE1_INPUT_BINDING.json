@@ -1,0 +1,52 @@
+{
+  "binding_created_utc": "2026-08-13T07:05:04Z",
+  "binding_schema": "r13-p15-stage1.5-input-binding-v1",
+  "evidence_boundary": {
+    "revised_method_results_inspected_before_binding": false,
+    "stage1_disposition_is_confirmatory_for_stage1_only": true,
+    "stage1_test_is_internal_screen_only_for_stage1_5": true
+  },
+  "repository": {
+    "branch": "r13-p15-stage1_5-failure-localization",
+    "input_commit": "434427af0f8adc844851c27cfc050b2c9c6752dc",
+    "input_tree": "3d3c93ab3903b5fc3be67c50ef16478be2de7503",
+    "origin": "git@github.com:mikasaTu/R13-P15-Consequence-Adaptive-Action-Alphabets.git",
+    "stage1_formal_commit": "34995e8e7c3069b22785ad04536f0d429e75c0fc",
+    "stage1_formal_git_tree": "ad6fa59b782f63624ee3ccef8e880a2398669ce8"
+  },
+  "simulator": {
+    "benchmark": "LIBERO",
+    "libero_suite": "libero_goal",
+    "libero_upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "libero_source_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "environment_lock_sha256": "f4421974cf948bfa765098e24819d445b209589611cbc3fe11e04c30fb0f0d3e"
+  },
+  "stage1": {
+    "directory": "experiments/r13_p15_caaa_v2/stage1",
+    "directory_tree_sha256": "047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c",
+    "directory_tree_hash_algorithm": "sha256 over sorted relative path NUL file bytes NUL; excludes .git, __pycache__, *.pyc and *.pyo",
+    "final_disposition": "REJECT_CORE_HYPOTHESIS",
+    "final_disposition_file_sha256": "37e036c90b816d62b20aefb5b948ffab89f212529845a227c06912732060bce5",
+    "report_sha256": "5924ee1a77bc8c9339c5f450a8be87b9f8ad1e1a91b683fbf848f5f3f2047dd5",
+    "release_verification_status": "PASS",
+    "artifacts": {
+      "alphabet_codebooks_tree_sha256": "56cbc8d020c8dcad14713acbd416ded890ac63783429907198bdd31e233187d3",
+      "bootstrap_results_json_sha256": "919fc0dcfd3fba71cc64fa7c8ba07d8ef013b14742322b137feff320899fb9fb",
+      "branch_rollouts_zarr_tree_sha256": "083893fd04a7e8282fc1ae0ba8ad2d362a87070c92f0bc780b672d8f818df59e",
+      "jacobian_metrics_parquet_sha256": "901f33cccf0378184c2d19303a4e1a433d7dfbab4e1abf9370371b3902bcc1ff",
+      "quantization_results_jsonl_sha256": "9ac24b739273216cf2465652dc68cab8cb47956eabd131769a16336e14de2190",
+      "quantized_shards_tree_sha256": "3385afd0b6e06567f2e2ad380c83e47937617ddbd8a39bc8cb859bc86d5d0167",
+      "results_by_phase_csv_sha256": "78fc2d836ff83223e5f32341cedf307ab5e60f55f439c105b8a99a27d1ff9ad9",
+      "results_by_task_csv_sha256": "7b4a190e03d4134463d10e64870d157217f62a9210587c88330d0c747ee4953b"
+    },
+    "counts": {
+      "branch_shards": 256,
+      "formal_replay_failures": 0,
+      "formal_replay_tests": 256,
+      "jacobian_shards": 256,
+      "quantization_plans": 128,
+      "quantization_result_rows": 69120,
+      "quantized_shards": 128
+    }
+  }
+}
