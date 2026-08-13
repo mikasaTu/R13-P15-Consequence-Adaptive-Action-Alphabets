@@ -1,0 +1,101 @@
+{
+  "created_utc": "2026-08-13T18:16:39.664328+00:00",
+  "hard_scope": {
+    "cpu_simulation": true,
+    "historical_episode_ids_excluded": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "k_primary_only": 64,
+    "pai_jobs_submitted": 0,
+    "policy_training": false,
+    "predictor_gpu_max": 1
+  },
+  "historical_evidence": {
+    "git_paths_byte_identical_to_input_commit": true,
+    "stage1": {
+      "disposition": "REJECT_CORE_HYPOTHESIS",
+      "expected_full_tree_sha256": "047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c",
+      "formal_commit": "34995e8e7c3069b22785ad04536f0d429e75c0fc",
+      "observed_full_tree_sha256": "047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c",
+      "published_commit": "434427af0f8adc844851c27cfc050b2c9c6752dc",
+      "release_verifier_sha256": "737ea992afc6d542d0bdebd62f46d580bfe542be8d81fcd80ce3489bbc80acd3",
+      "required_artifact_hashes": {
+        "PREREGISTRATION.md": "07e0ac3123dea4c51b18d41c5a8f989e8a18fb7b61a028e08e977a261f274856",
+        "STAGE1_REPORT.md": "5924ee1a77bc8c9339c5f450a8be87b9f8ad1e1a91b683fbf848f5f3f2047dd5",
+        "alphabet_codebooks": "56cbc8d020c8dcad14713acbd416ded890ac63783429907198bdd31e233187d3",
+        "bootstrap_results.json": "919fc0dcfd3fba71cc64fa7c8ba07d8ef013b14742322b137feff320899fb9fb",
+        "branch_replay_validation.json": "7ae428605a824ba7f36786ccffa7ef32e7a7bf795fa8f866b29d099baacb5cf9",
+        "branch_rollouts.zarr": "083893fd04a7e8282fc1ae0ba8ad2d362a87070c92f0bc780b672d8f818df59e",
+        "consequence_schema.json": "0d6545ef9917a2cd25f0016547a67157c674628d9cae79bca0b8a6fde66fced1",
+        "environment_lock.json": "f4421974cf948bfa765098e24819d445b209589611cbc3fe11e04c30fb0f0d3e",
+        "jacobian_metrics.parquet": "901f33cccf0378184c2d19303a4e1a433d7dfbab4e1abf9370371b3902bcc1ff",
+        "mechanism_controls.csv": "e505cd93d56881d97be5bd535c3fa8e702dc91bbead20dea7b65ef232adbbba6",
+        "results_by_phase.csv": "78fc2d836ff83223e5f32341cedf307ab5e60f55f439c105b8a99a27d1ff9ad9",
+        "results_by_task.csv": "7b4a190e03d4134463d10e64870d157217f62a9210587c88330d0c747ee4953b",
+        "task_and_seed_split.json": "7b11ac5dc44877d0b5011c355d178dda44558b35d33e4af7f705fba1bfe1cc22"
+      }
+    },
+    "stage1_5": {
+      "disposition": "REJECT_P15_FAMILY",
+      "frozen_method_commit": "aa82d46c5e0828956aef15918c2aa7656844472f",
+      "observed_full_tree_sha256": "b5f1c40c32711c5e34ec0d5d2fce175c8642d11f60b5c45af1c6dddc46897b24",
+      "preregistration_commit": "9a3ac1a4c774103fe618bd283909c2793ed581ec",
+      "release_verifier_sha256": "d87fe0f474a62f86fcf26974ad4a0e8e53b7ff8db93271b790df0f44adb017aa",
+      "required_artifact_hashes": {
+        "PREREGISTRATION.md": "6f13cdeceda9c782f63e20fcea3d085db33b1adabf5a4d0b945b54db7d88b135",
+        "STAGE1_5_REPORT.md": "2a40c1e2731fd778f6e247f11d18d8fc4b15ca8b80324536d5f0f7ed0f4fb9ed",
+        "STAGE1_INPUT_BINDING.json": "ed5d4e87b75442c0d6efbaa9232552ee01b9c959a94f2df110fa849c0acf5810",
+        "bootstrap_results.json": "f9e0f24b9559c74d2b82e1889e6ebda752407a40725cc17f915647d5ad2aeba6",
+        "error_decomposition.csv": "64175a1e7ead5c6ca3a1eef1f216671d9b569cce127dc6cf8fb72cc0e25fab65",
+        "fresh_branch_rollouts.zarr": "f1741bf70e6a114859fa2455ef41b6464afd6320cac4e3ba7e8607d910354f9c",
+        "fresh_holdout_split.json": "19211f3dd56cae72311982c7bafd7ae1a72f6a6acfdd4aa39ddc501702884c47",
+        "mechanism_controls.csv": "f5284680c1476bc5701c883ccacbb2f64022d568ff18f6dd9b049e866436799b",
+        "method_definitions.json": "a8c659eb1fa1a48ddbd715c1b2749048b24abd5867546c3f12f985b16c5e38ec",
+        "quantization_results_by_phase.csv": "20e7654bb903361d166a07d122c8aa95dec7d43b2dd4eb147020b599ff57f8d0",
+        "quantization_results_by_task.csv": "26c0b895be9675b2ae5b4c89ca6797789e88835713ac33002b39d48ea47f27b7",
+        "retrospective_diagnostics.parquet": "04aa9f6a47284e83d0cd033360fe72d2b5f7719f4a5c12a9ae78c1da64f85a15"
+      },
+      "result_commit": "76433b6e58196ceeedc4ad005a1110ea8e343ae2"
+    }
+  },
+  "repository_input": {
+    "branch": "r13-p15-stage2-nonlinear-consequence-atlas",
+    "commit": "154d4a89e071d94208f5302955c55c13e3cff7f3",
+    "observed_head_before_stage2_result": "154d4a89e071d94208f5302955c55c13e3cff7f3",
+    "tree": "4199a6280cfb8f5e43b04547291fa792d132b725"
+  },
+  "simulator": {
+    "controller": {
+      "action_dim": 7,
+      "continuous_chunk_dim": 24,
+      "frequency_hz": 20,
+      "gripper": "unchanged nominal demonstration command",
+      "horizon": 4,
+      "mode": "OSC_POSE",
+      "robot": "Panda",
+      "settle_steps": 3
+    },
+    "environment_lock_path": "experiments/r13_p15_caaa_v2/stage1/environment_lock.json",
+    "environment_lock_sha256": "f4421974cf948bfa765098e24819d445b209589611cbc3fe11e04c30fb0f0d3e",
+    "expected_libero_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "git_metadata_status": "UNAVAILABLE_MIGRATED_SUBMODULE_GITDIR",
+    "libero_source_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original",
+    "libero_upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "observed_libero_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f"
+  }
+}

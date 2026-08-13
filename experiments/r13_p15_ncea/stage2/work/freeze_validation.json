@@ -1,0 +1,2350 @@
+{
+  "action_bank_validity": {
+    "maximum_valid_bank_size": 256,
+    "minimum_valid_bank_size": 256,
+    "passed": true,
+    "rows": [
+      {
+        "key": "bowl_on_plate__e16__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e16__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e16__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e16__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e17__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e17__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e17__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e17__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e18__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e18__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e18__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e18__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e19__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e19__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e19__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e19__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e20__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e20__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e20__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e20__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e21__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e21__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e21__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e21__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e22__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e22__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e22__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e22__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e23__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e23__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e23__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e23__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e24__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e24__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e24__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e24__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e25__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e25__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e25__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e25__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e26__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e26__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e26__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e26__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e27__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e27__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e27__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e27__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e28__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e28__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e28__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e28__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e29__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e29__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e29__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e29__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e30__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e30__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e30__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e30__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e31__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e31__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e31__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e31__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e32__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e32__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e32__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e32__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e33__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e33__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e33__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e33__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e34__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e34__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e34__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e34__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e35__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e35__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e35__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e35__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e36__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e36__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e36__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e36__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e37__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e37__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e37__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e37__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e38__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e38__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e38__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e38__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e39__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e39__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e39__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "bowl_on_plate__e39__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e16__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e16__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e16__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e16__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e17__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e17__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e17__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e17__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e18__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e18__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e18__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e18__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e19__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e19__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e19__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e19__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e20__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e20__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e20__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e20__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e21__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e21__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e21__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e21__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e22__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e22__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e22__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e22__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e23__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e23__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e23__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e23__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e24__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e24__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e24__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e24__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e25__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e25__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e25__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e25__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e26__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e26__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e26__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e26__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e27__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e27__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e27__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e27__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e28__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e28__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e28__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e28__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e29__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e29__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e29__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e29__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e30__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e30__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e30__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e30__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e31__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e31__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e31__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e31__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e32__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e32__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e32__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e32__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e33__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e33__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e33__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e33__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e34__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e34__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e34__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e34__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e35__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e35__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e35__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e35__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e36__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e36__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e36__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e36__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e37__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e37__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e37__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e37__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e38__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e38__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e38__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e38__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e39__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e39__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e39__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "plate_push__e39__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e16__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e16__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e16__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e16__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e17__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e17__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e17__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e17__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e18__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e18__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e18__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e18__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e19__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e19__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e19__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e19__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e20__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e20__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e20__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e20__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e21__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e21__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e21__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e21__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e22__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e22__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e22__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e22__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e23__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e23__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e23__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e23__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e24__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e24__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e24__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e24__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e25__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e25__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e25__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e25__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e26__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e26__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e26__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e26__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e27__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e27__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e27__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e27__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e28__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e28__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e28__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e28__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e29__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e29__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e29__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e29__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e30__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e30__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e30__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e30__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e31__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e31__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e31__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e31__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e32__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e32__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e32__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e32__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e33__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e33__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e33__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e33__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e34__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e34__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e34__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e34__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e35__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e35__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e35__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e35__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e36__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e36__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e36__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e36__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e37__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e37__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e37__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e37__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e38__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e38__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e38__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e38__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e39__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e39__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e39__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "stove_turn_on__e39__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e16__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e16__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e16__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e16__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e17__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e17__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e17__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e17__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e18__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e18__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e18__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e18__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e19__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e19__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e19__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e19__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e20__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e20__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e20__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e20__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e21__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e21__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e21__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e21__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e22__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e22__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e22__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e22__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e23__free_space",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e23__pre_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e23__contact_onset",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e23__post_contact",
+        "passed": true,
+        "split": "train",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e24__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e24__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e24__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e24__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e25__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e25__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e25__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e25__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e26__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e26__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e26__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e26__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e27__free_space",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e27__pre_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e27__contact_onset",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e27__post_contact",
+        "passed": true,
+        "split": "calibration",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e28__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e28__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e28__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e28__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e29__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e29__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e29__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e29__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e30__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e30__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e30__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e30__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e31__free_space",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e31__pre_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e31__contact_onset",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e31__post_contact",
+        "passed": true,
+        "split": "development",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e32__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e32__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e32__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e32__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e33__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e33__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e33__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e33__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e34__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e34__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e34__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e34__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e35__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e35__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e35__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e35__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e36__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e36__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e36__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e36__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e37__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e37__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e37__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e37__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e38__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e38__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e38__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e38__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e39__free_space",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e39__pre_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e39__contact_onset",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      },
+      {
+        "key": "wine_rack__e39__post_contact",
+        "passed": true,
+        "split": "confirmation",
+        "valid_bank_size": 256
+      }
+    ],
+    "states_below_128": [],
+    "target_residual_exact_action_bank_matches": []
+  },
+  "all_fresh_demos_successful": true,
+  "created_utc": "2026-08-13T18:17:30.890932+00:00",
+  "input_binding_sha256": "033a29585367ea3a03af17c7b824b6eb0cdf3f25e2c71c50398cb3a6d371a538",
+  "passed": true,
+  "replay_failure_count": 0,
+  "replay_failures": [],
+  "replay_test_count": 384,
+  "snapshot_count": 384,
+  "support_overlap": {
+    "exact_direction_overlap": {
+      "calibration__confirmation": 0,
+      "calibration__development": 0,
+      "development__confirmation": 0,
+      "train__calibration": 0,
+      "train__confirmation": 0,
+      "train__development": 0
+    },
+    "exact_residual_overlap": {
+      "calibration__confirmation": 0,
+      "calibration__development": 0,
+      "development__confirmation": 0,
+      "train__calibration": 0,
+      "train__confirmation": 0,
+      "train__development": 0
+    },
+    "maximum_cross_split_absolute_cosine_similarity": {
+      "calibration__confirmation": 0.9936909153577659,
+      "calibration__development": 0.9935216799885249,
+      "development__confirmation": 0.9949907689159488,
+      "train__calibration": 0.9972720487111445,
+      "train__confirmation": 0.9946902195088939,
+      "train__development": 0.9926980866376129
+    },
+    "passed": true
+  }
+}

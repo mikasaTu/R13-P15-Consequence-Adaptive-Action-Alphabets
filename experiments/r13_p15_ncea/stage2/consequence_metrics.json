@@ -1,0 +1,155 @@
+{
+  "contact_force_indices_excluded_from_primary": [
+    41,
+    42,
+    43
+  ],
+  "error": {
+    "absolute_normalized_cap": 4.0,
+    "active_groups_averaged_equally": true,
+    "contact_mode_mismatch": "0/1 term averaged with normalized penetration inside group 3",
+    "delta": 1.5,
+    "dimensions_averaged_within_group": true,
+    "type": "capped_huber"
+  },
+  "feature_groups": {
+    "contact_mode_and_penetration": [
+      44
+    ],
+    "gripper_and_articulation": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "object_pose": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "task_progress_and_constraint": [
+      40,
+      45
+    ],
+    "tcp_object_relative_pose": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  "group_weights": {
+    "contact_mode_and_penetration": 0.2,
+    "gripper_and_articulation": 0.2,
+    "object_pose": 0.2,
+    "task_progress_and_constraint": 0.2,
+    "tcp_object_relative_pose": 0.2
+  },
+  "methods": {
+    "common_candidate_bank_size": 256,
+    "hard_rules": {
+      "common_bank_only": true,
+      "gripper_command": "copied unchanged from nominal demonstration chunk",
+      "invalid_action_clipping": false,
+      "k_sensitivity_locked_until_disposition": [
+        32,
+        128
+      ],
+      "pseudoinversion": false
+    },
+    "methods": {
+      "B0_continuous_target": "Unquantized target branch; upper bound only.",
+      "B1_centered_covariance": "K=64 bank medoids under train-only covariance-whitened residual distance.",
+      "B2_phase_residual": "Four phase-specific K=64 bank medoid sets under raw residual distance.",
+      "B3_dynamic_action_medoids": "Per-state K=64 deterministic action-space FPS medoids from the valid common bank.",
+      "B4_state_action_vq": "Per-state K=64 FPS in a state-conditioned action-autoencoder latent trained only for action reconstruction.",
+      "LJ_linear_j_atlas": "State-neighbor interpolated train-only local Jacobian predictions; bank actions only and no pseudoinversion.",
+      "MC_NCEA": "Five-member shared-trunk predictor with four phase heads; dynamic mode-conditioned predicted-effect atlas.",
+      "NCEA": "Five-member global nonlinear consequence ensemble; dynamic predicted-effect atlas over valid bank actions.",
+      "O1_true_effect_oracle": "Per-state K=64 atlas and target assignment using true simulator effects for the common bank and target.",
+      "O2_linear_j_oracle": "Diagnostic alias for the LJ predicted-effect atlas used to define the O1-O2 gap.",
+      "P3_mode_shuffled_atlas": "MC-NCEA architecture trained with task-stratified shuffled phase/head assignments.",
+      "P4_state_shuffled_atlas": "NCEA architecture trained after shuffling state features within task and phase.",
+      "P5_effect_shuffled_atlas": "NCEA architecture trained after shuffling continuous effects and contact labels within task and phase.",
+      "P6_random_latent_atlas": "Frozen random trunk with ridge readout, matched hidden width and ensemble count.",
+      "UG_NCEA": "Calibration-frozen uncertainty score; NCEA/MC-NCEA used on the lowest-risk 50/70/90 percent and the frozen strongest baseline elsewhere."
+    },
+    "primary_k": 64,
+    "selection_operator": "deterministic_farthest_point_medoid"
+  },
+  "predicted_continuous_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    44,
+    45
+  ],
+  "primary": "BALANCED_TASK_EFFECT",
+  "scale_floors": {
+    "articulation": 0.001,
+    "gripper_width": 0.001,
+    "joint_violation": 0.0001,
+    "log_contact_force": 0.05,
+    "penetration": 1e-05,
+    "position": 0.001,
+    "rotation6d": 0.01,
+    "task_progress": 0.01
+  },
+  "secondary": [
+    "CONTACT_FORCE_EFFECT",
+    "FROZEN_STAGE1_CONSEQUENCE_METRIC_CONTINUITY_ONLY",
+    "contact_mode_preservation",
+    "task_progress_preservation",
+    "action_reconstruction_error"
+  ],
+  "train_only_scaling": "max(1.4826*MAD, IQR/1.349, preregistered physical-unit floor)"
+}

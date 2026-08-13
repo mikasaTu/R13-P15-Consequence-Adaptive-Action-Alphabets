@@ -1,0 +1,803 @@
+{
+  "all_selected_demos_successful": true,
+  "created_utc": "2026-08-13T18:13:56.031187+00:00",
+  "episode_count_per_task": 24,
+  "historical_ids_excluded": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "replacement_used": false,
+  "selection_rule": "preferred IDs 16-39; smallest ascending unused successful replacement only if invalid",
+  "tasks": [
+    {
+      "demo": {
+        "bytes": 468246288,
+        "episodes": [
+          {
+            "episode_id": 16,
+            "length": 95,
+            "sha256": "9674db19e1ea3093864cf92df50ec57d0c12f1bc24fc09d52aa5edd77953b6a6",
+            "successful": true
+          },
+          {
+            "episode_id": 17,
+            "length": 88,
+            "sha256": "cec538cb3f67c8983142608f2fbc1525a0b7540e4a39d50afad09c0853e4c908",
+            "successful": true
+          },
+          {
+            "episode_id": 18,
+            "length": 93,
+            "sha256": "242075f311de25c7a51ede73bb384deb6b3f7067b3c4700cd8b6a86fd4f310fb",
+            "successful": true
+          },
+          {
+            "episode_id": 19,
+            "length": 95,
+            "sha256": "b47094e1b808cb3e04b82fd44755fb105a014501cc0cd6f2ba320ed0f082e7ca",
+            "successful": true
+          },
+          {
+            "episode_id": 20,
+            "length": 95,
+            "sha256": "58e5b219601af9566f592f10f19b76057bd8be573c2a06806db699d1af2be72c",
+            "successful": true
+          },
+          {
+            "episode_id": 21,
+            "length": 106,
+            "sha256": "030e31bcc3c6dc4591e24d7bb868926c7509b6254aae83a217bc429b8bd102ae",
+            "successful": true
+          },
+          {
+            "episode_id": 22,
+            "length": 80,
+            "sha256": "ec866a735766ac7552fc2ed26df23bb2761845243e4dd8b27b4aa8aae251c564",
+            "successful": true
+          },
+          {
+            "episode_id": 23,
+            "length": 107,
+            "sha256": "2b0dd410796d2e93d1e9f5ff8c56f9765cfbddf4fdd18f39762889a74f66dc72",
+            "successful": true
+          },
+          {
+            "episode_id": 24,
+            "length": 90,
+            "sha256": "ba1b8226c1ca6310967d2e0d86d14da941eb87ebb68c06fe8a1bde4bc1a7d296",
+            "successful": true
+          },
+          {
+            "episode_id": 25,
+            "length": 103,
+            "sha256": "9631114bde85f8045f68d4048f39b3ce6ad5b38fbea9818b075152fe956d4a75",
+            "successful": true
+          },
+          {
+            "episode_id": 26,
+            "length": 96,
+            "sha256": "b1016bac6b447a2c23b46b48b267c3c2166d3bf79470f0d6a0a6f5e2064216b3",
+            "successful": true
+          },
+          {
+            "episode_id": 27,
+            "length": 87,
+            "sha256": "3e8afa427d6e3708cb9d27e86cad0ab4131c415493e47dbec17c5fcc4048cf3e",
+            "successful": true
+          },
+          {
+            "episode_id": 28,
+            "length": 87,
+            "sha256": "ca6e85246dd5dd88f80724073f3294f1928e03cf1ca7443472421d0c6965bbee",
+            "successful": true
+          },
+          {
+            "episode_id": 29,
+            "length": 103,
+            "sha256": "09d6198ff66effa08fcbbf9eda940ea9025ffb3005fcb75d1d852b4291f75398",
+            "successful": true
+          },
+          {
+            "episode_id": 30,
+            "length": 103,
+            "sha256": "e2cc890be672544a409c461cdebb9dc71ce48f15f7d20f0c13970ff43cce38f5",
+            "successful": true
+          },
+          {
+            "episode_id": 31,
+            "length": 97,
+            "sha256": "6e6933a6d76a162970d1327ce17ca88bd52b497b31caebbfe5fff06a551a45ec",
+            "successful": true
+          },
+          {
+            "episode_id": 32,
+            "length": 92,
+            "sha256": "49bc0cc81926ae64871b4ae3966405f0554f6aa221270259470a74a50d6d13ee",
+            "successful": true
+          },
+          {
+            "episode_id": 33,
+            "length": 86,
+            "sha256": "657c102521f0bbb2303f4f83bb8556c8c10b146fab4b14b7e76751746a442cf1",
+            "successful": true
+          },
+          {
+            "episode_id": 34,
+            "length": 92,
+            "sha256": "0df322d96811895dcb66cd1fe5cd3a17bc0adfc80afb58c6733aa4cd5e38e229",
+            "successful": true
+          },
+          {
+            "episode_id": 35,
+            "length": 94,
+            "sha256": "541974d567a4aa2337f7ec5b18d6b6dea4d9b8ca836ad7ed21b0b631af4c36de",
+            "successful": true
+          },
+          {
+            "episode_id": 36,
+            "length": 79,
+            "sha256": "32de6ae886b7cb9df7db8f96f6f6d2231b0b2b094ca6ce4df568f8f0c2ba6b03",
+            "successful": true
+          },
+          {
+            "episode_id": 37,
+            "length": 96,
+            "sha256": "ad88c7f08134fc378ab01021eb3887d2addfb94f982a215bd5a9d9d488558d2c",
+            "successful": true
+          },
+          {
+            "episode_id": 38,
+            "length": 106,
+            "sha256": "7356c3dd10a4ca4600e43988018a0a4c1a5058f4d61d5109801b56d85ba7addd",
+            "successful": true
+          },
+          {
+            "episode_id": 39,
+            "length": 83,
+            "sha256": "08b6eb875914abc2e3cb6cea262b657e345da0358d04b028712109d54f14355b",
+            "successful": true
+          }
+        ],
+        "num_demos": 50,
+        "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+        "sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+        "successful_fresh_ids": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      "replay": {
+        "n_failed": 0,
+        "n_tests": 96,
+        "passed": true
+      },
+      "task": {
+        "goal_predicate": "on",
+        "primary_object": "akita_black_bowl_1",
+        "role": "low_constraint_pick_place_control",
+        "target_contact_parent": "plate_1",
+        "target_object": "plate_1",
+        "task_id": "bowl_on_plate",
+        "task_name": "put_the_bowl_on_the_plate"
+      }
+    },
+    {
+      "demo": {
+        "bytes": 762855139,
+        "episodes": [
+          {
+            "episode_id": 16,
+            "length": 206,
+            "sha256": "d61d67835263d0f3e312e0e8a8345fb98f1349ebf095bbbb9977d447fcc4e72c",
+            "successful": true
+          },
+          {
+            "episode_id": 17,
+            "length": 134,
+            "sha256": "9d660d605f8b4da6dff34f291b9f46a032336743d488792f18eda55a6c275e64",
+            "successful": true
+          },
+          {
+            "episode_id": 18,
+            "length": 167,
+            "sha256": "57651aaf188e7e5ed3c6fff176344ae25dd39207eec4f6484dd4ca406ccecf6a",
+            "successful": true
+          },
+          {
+            "episode_id": 19,
+            "length": 163,
+            "sha256": "54fa125fc95502372cba03c7f66065d1f57c1f0099e4e1e8a6ed211b509d2882",
+            "successful": true
+          },
+          {
+            "episode_id": 20,
+            "length": 175,
+            "sha256": "8e6881a1840c6b1a94a2bec7352b4d70c07c35afd8bb338cabdae671bc7745c0",
+            "successful": true
+          },
+          {
+            "episode_id": 21,
+            "length": 149,
+            "sha256": "e60602a2810b021faf355da4dd40937997ebc46f48d44eda88ea5eab3e5590c2",
+            "successful": true
+          },
+          {
+            "episode_id": 22,
+            "length": 147,
+            "sha256": "e6c892fc09e79a45ce13068229f0a62ec1ff363a884c637827b7832aa888cfea",
+            "successful": true
+          },
+          {
+            "episode_id": 23,
+            "length": 129,
+            "sha256": "77e88698cc34515a1300923f5e47a5a2db4c4b2d1441c7f0787a88f190916f45",
+            "successful": true
+          },
+          {
+            "episode_id": 24,
+            "length": 169,
+            "sha256": "13d824119295ef3c23ee2ecef5c4d9a74ec6a1654d95f90183d1601ac546ec5e",
+            "successful": true
+          },
+          {
+            "episode_id": 25,
+            "length": 153,
+            "sha256": "29573bff135d704a1a74506321398935a69fcba4069ed19de84ca09bc834e750",
+            "successful": true
+          },
+          {
+            "episode_id": 26,
+            "length": 145,
+            "sha256": "256bb513a410c74a053f117a3d8e715711ba2e690010770493f49bfc0ed35810",
+            "successful": true
+          },
+          {
+            "episode_id": 27,
+            "length": 220,
+            "sha256": "ac268d5a6a65cf16fee25a9d8b9e90215e5ff3a0c57b9b9970fc62f1a6a59c30",
+            "successful": true
+          },
+          {
+            "episode_id": 28,
+            "length": 147,
+            "sha256": "95658cdb18388cdf76b9ca1ec902822deb07f8ca08293472e4f3249ecb7fdd86",
+            "successful": true
+          },
+          {
+            "episode_id": 29,
+            "length": 136,
+            "sha256": "837b876c241257f66b24c6debf0c14ed2d95d3af31b8a3498c4049cdc8308a50",
+            "successful": true
+          },
+          {
+            "episode_id": 30,
+            "length": 142,
+            "sha256": "c8868bdd66fb1cee6bd052e0549086bc6cd3fd5d5d63e5e83e6f4382bef8e5fe",
+            "successful": true
+          },
+          {
+            "episode_id": 31,
+            "length": 135,
+            "sha256": "e01ea93118800415156d76236365d355a9a918d6e45e52be94f077223d61a926",
+            "successful": true
+          },
+          {
+            "episode_id": 32,
+            "length": 115,
+            "sha256": "e67f4b611eaa48dda82d4dab35ba15a72bc68bcefe345479349659a722573059",
+            "successful": true
+          },
+          {
+            "episode_id": 33,
+            "length": 126,
+            "sha256": "f3881ac801c816b9ce1a8e644dcd2a417daa5991ebc9703d219ea30397acdbb4",
+            "successful": true
+          },
+          {
+            "episode_id": 34,
+            "length": 154,
+            "sha256": "d03cdb7bbc7e4167115e484eb3ff12781e540c9eec682055d2679d8b223706c7",
+            "successful": true
+          },
+          {
+            "episode_id": 35,
+            "length": 169,
+            "sha256": "be632430395f98a6f125adc67aba016f6b08d24215f9a4a972008a8c11bec434",
+            "successful": true
+          },
+          {
+            "episode_id": 36,
+            "length": 145,
+            "sha256": "af2753b08da5bd1e7f7c297b5b44dfaa9d0fbfa40ce2d9c42ae04c943edc4570",
+            "successful": true
+          },
+          {
+            "episode_id": 37,
+            "length": 203,
+            "sha256": "37ee56f5da6fc052ff0ed02938020280334ba3a969965021187959793947817c",
+            "successful": true
+          },
+          {
+            "episode_id": 38,
+            "length": 134,
+            "sha256": "ae1602ecebcb93a4656dde0be2d351e94de47a69d8b09f0a0f8d69cf64f28489",
+            "successful": true
+          },
+          {
+            "episode_id": 39,
+            "length": 146,
+            "sha256": "af7d41b5fd5c2145548e81697d28247b24b000332cbe88b9337a4935d665d61e",
+            "successful": true
+          }
+        ],
+        "num_demos": 50,
+        "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+        "sha256": "36b4e1bced49d2f4ff6b2fce6b1596a63978e14199e2513cd0df71e127bf47a6",
+        "successful_fresh_ids": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      "replay": {
+        "n_failed": 0,
+        "n_tests": 96,
+        "passed": true
+      },
+      "task": {
+        "goal_predicate": "on",
+        "primary_object": "plate_1",
+        "role": "sustained_sliding_contact",
+        "target_contact_parent": null,
+        "target_object": "main_table_stove_front_region",
+        "task_id": "plate_push",
+        "task_name": "push_the_plate_to_the_front_of_the_stove"
+      }
+    },
+    {
+      "demo": {
+        "bytes": 447509922,
+        "episodes": [
+          {
+            "episode_id": 16,
+            "length": 91,
+            "sha256": "91247b8946d47a2a2ab96d7a7516a11b333f378f8b524c76ba4d7bcb0f208b0f",
+            "successful": true
+          },
+          {
+            "episode_id": 17,
+            "length": 86,
+            "sha256": "a090e3699e01b9736314797185950a1885f7444c257c224ce1055232f800e84c",
+            "successful": true
+          },
+          {
+            "episode_id": 18,
+            "length": 77,
+            "sha256": "e8acdc1b66a40219755f2d37f5d9612966f0af6020c0a194088871cb5711dad1",
+            "successful": true
+          },
+          {
+            "episode_id": 19,
+            "length": 81,
+            "sha256": "5ae58c8c4f1b1a7dd5f27b644cdc7f2b920637ae3c83d2af2bea2df26bed3d00",
+            "successful": true
+          },
+          {
+            "episode_id": 20,
+            "length": 85,
+            "sha256": "df073b589ea380c5c04a7e415a0ee5087a2a88c7475c7990f8747899bdecab27",
+            "successful": true
+          },
+          {
+            "episode_id": 21,
+            "length": 88,
+            "sha256": "70fa2627611a2883c3a4a59fe858dde3e04bba5875ed26def30b1ea59d79a3cc",
+            "successful": true
+          },
+          {
+            "episode_id": 22,
+            "length": 79,
+            "sha256": "5097803d0b6fc3065e2d1bcf0a80ea22ece6c23f430c2809bb5a3fed538425a9",
+            "successful": true
+          },
+          {
+            "episode_id": 23,
+            "length": 92,
+            "sha256": "1a9ffe35c45dc1cbc64ee2b5c3faf6dbe0e5bda81e4106514961841a7eb6d9f9",
+            "successful": true
+          },
+          {
+            "episode_id": 24,
+            "length": 92,
+            "sha256": "1942d25cf63acf7e6f92e94ee32c3c8f64562597897c9ed79de14bd38105b613",
+            "successful": true
+          },
+          {
+            "episode_id": 25,
+            "length": 90,
+            "sha256": "9fe5a1ced4ae410a8cf77a4f8c278f5418f7144d03a9b1130a3126394e1e1602",
+            "successful": true
+          },
+          {
+            "episode_id": 26,
+            "length": 85,
+            "sha256": "a7b3927b1977cc085bcfaeea36cb6538d576c550cc355eef50e2f05be147450d",
+            "successful": true
+          },
+          {
+            "episode_id": 27,
+            "length": 100,
+            "sha256": "933604a642e14431bd209395907c31bc73e3c69cee11b4b789d7b17e09590bb1",
+            "successful": true
+          },
+          {
+            "episode_id": 28,
+            "length": 95,
+            "sha256": "f64076439d9fc8d2edb6ee071ca2d6d2ef7348bb87fc9ffaf4f7650109a7665a",
+            "successful": true
+          },
+          {
+            "episode_id": 29,
+            "length": 96,
+            "sha256": "2dfdba496ba8ed5b79da83504c7d75975084e5f09d2b783f87e829f438ee9d30",
+            "successful": true
+          },
+          {
+            "episode_id": 30,
+            "length": 95,
+            "sha256": "da64cac541a8a4242128557678ce082b2d234ca328c84ad2032c3950bdc8d085",
+            "successful": true
+          },
+          {
+            "episode_id": 31,
+            "length": 81,
+            "sha256": "db4347232c578229a2a8c86ec8dda3b6c2204ff405cbcb6584fa84ba64466b01",
+            "successful": true
+          },
+          {
+            "episode_id": 32,
+            "length": 85,
+            "sha256": "36a33569cb7480a91ec9fa081d9d421dfa4ad4ba50ba354cf1aaf71dd919c3af",
+            "successful": true
+          },
+          {
+            "episode_id": 33,
+            "length": 79,
+            "sha256": "49e2fbf3024720503fb47034f08c49a91efd79d0efe2fdff6997f80d684bb984",
+            "successful": true
+          },
+          {
+            "episode_id": 34,
+            "length": 75,
+            "sha256": "eb32d9676a1e273dba681f13527bae2b6eb0f38ebd64c19f92e5d988e44a1478",
+            "successful": true
+          },
+          {
+            "episode_id": 35,
+            "length": 86,
+            "sha256": "09090ffae15a676de6994538c8b47625e4c6be761728042751ba56b3773ad763",
+            "successful": true
+          },
+          {
+            "episode_id": 36,
+            "length": 84,
+            "sha256": "0d59ee538a9b7841796edd5f77c76564f2880564a2c1d3291cbeedffb2bf9ab7",
+            "successful": true
+          },
+          {
+            "episode_id": 37,
+            "length": 85,
+            "sha256": "49d813434dc93839b080b8cf3b8f5848a0f9d011079b1f13c1eebe19a6b9f883",
+            "successful": true
+          },
+          {
+            "episode_id": 38,
+            "length": 90,
+            "sha256": "32a476f221a1a30f756ad31837d335d6d48617444602b53487b48f8cb4c5e8a6",
+            "successful": true
+          },
+          {
+            "episode_id": 39,
+            "length": 93,
+            "sha256": "90e111daa707f48b49f809ce0cf5c9025ca2119808e9f67331076a4ae7604053",
+            "successful": true
+          }
+        ],
+        "num_demos": 50,
+        "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/turn_on_the_stove_demo.hdf5",
+        "sha256": "387fc10747696b80dea6ed8d7f2beaa162bf92ae11750b241073cbd33aac73d5",
+        "successful_fresh_ids": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      "replay": {
+        "n_failed": 0,
+        "n_tests": 96,
+        "passed": true
+      },
+      "task": {
+        "goal_predicate": "turnon",
+        "primary_object": "flat_stove_1",
+        "role": "small_articulated_contact",
+        "target_contact_parent": null,
+        "target_object": "flat_stove_1",
+        "task_id": "stove_turn_on",
+        "task_name": "turn_on_the_stove"
+      }
+    },
+    {
+      "demo": {
+        "bytes": 878958730,
+        "episodes": [
+          {
+            "episode_id": 16,
+            "length": 163,
+            "sha256": "ecd21300ba31ae0d0b87d4fd8ad43ce3c4d4b8e2da3c68f6943959db86677292",
+            "successful": true
+          },
+          {
+            "episode_id": 17,
+            "length": 218,
+            "sha256": "002c3c6b7897b12fd9f8985d3dea49fc70a9bcd5f7dab8908dfbe6270092c835",
+            "successful": true
+          },
+          {
+            "episode_id": 18,
+            "length": 184,
+            "sha256": "4b657eb8202bc991094982057d8e0d03d18e3395e9d11c721d38031886bc6f89",
+            "successful": true
+          },
+          {
+            "episode_id": 19,
+            "length": 170,
+            "sha256": "3cdaa3b057e853e1ed4625f875664a8a609e15e254ecd0d6d6917a2130262946",
+            "successful": true
+          },
+          {
+            "episode_id": 20,
+            "length": 182,
+            "sha256": "f2a739fbdcc0b35084c4865cea00857a2b5da9fd44634b56770c442f2000ae27",
+            "successful": true
+          },
+          {
+            "episode_id": 21,
+            "length": 153,
+            "sha256": "9b31ee360f4a28a4e8fd4e6b2d34cdd8648662b49d8e98b9c801a3cd742cb090",
+            "successful": true
+          },
+          {
+            "episode_id": 22,
+            "length": 155,
+            "sha256": "4b4ae553788d3338aa4892339dd89933d1c1f71a4993a9e9ab60fb6f698d78ed",
+            "successful": true
+          },
+          {
+            "episode_id": 23,
+            "length": 204,
+            "sha256": "6bb6c3c8ea5e65c96688677b98438e92c41f69a192d16d6764fc2bbb8d78f437",
+            "successful": true
+          },
+          {
+            "episode_id": 24,
+            "length": 152,
+            "sha256": "0f10a3a2d4b8fc24e8aae8b7f9ac52d7bdc81686cd99fe02546d1a0bb025c61c",
+            "successful": true
+          },
+          {
+            "episode_id": 25,
+            "length": 172,
+            "sha256": "8288c8146910ed477b9e6756e508b54973bda5aead47b9cd400040e291887884",
+            "successful": true
+          },
+          {
+            "episode_id": 26,
+            "length": 152,
+            "sha256": "c8a79366e59bed2e0f213742069383a485d270a26c0eef30710b33b26eb2420c",
+            "successful": true
+          },
+          {
+            "episode_id": 27,
+            "length": 177,
+            "sha256": "4587394b3304c47f112e761c8f57e55e709bd60052c20344dda308a68ae684db",
+            "successful": true
+          },
+          {
+            "episode_id": 28,
+            "length": 170,
+            "sha256": "1fe99d763bc4230fdbaf8653c167a2da90a4853a40ca1e537413af85baedcdb6",
+            "successful": true
+          },
+          {
+            "episode_id": 29,
+            "length": 160,
+            "sha256": "8b39cf94457deaba5a1684305648861ffff6e2214686b868379dda559a1294c0",
+            "successful": true
+          },
+          {
+            "episode_id": 30,
+            "length": 155,
+            "sha256": "cc1eb9ac81b143cf7e40bba6d08832cf86656533f9b42a10d991977b7387d4b1",
+            "successful": true
+          },
+          {
+            "episode_id": 31,
+            "length": 192,
+            "sha256": "8d5fe6aa7f1fb539d06e86fb0585dd8adf4e297df1fe427cb10c54a25ee0ce37",
+            "successful": true
+          },
+          {
+            "episode_id": 32,
+            "length": 173,
+            "sha256": "703fb1e218c39c48255fcd078a57d4eb02d0cf2b42faf827525692b140619578",
+            "successful": true
+          },
+          {
+            "episode_id": 33,
+            "length": 179,
+            "sha256": "34b2f89e8028fb8224634db8ccf0165bc1ae484bd078e08c35b409c69c553210",
+            "successful": true
+          },
+          {
+            "episode_id": 34,
+            "length": 151,
+            "sha256": "be16af95eac6b1978794837b53722577d66f457f2993511501a9d638f12b8dcf",
+            "successful": true
+          },
+          {
+            "episode_id": 35,
+            "length": 158,
+            "sha256": "d7641a584870236a2b3c514127ac894d09e797521efe7d4bde311d3bdd8d4bdc",
+            "successful": true
+          },
+          {
+            "episode_id": 36,
+            "length": 153,
+            "sha256": "a541cc97268d30848a9a4ff10f364d3b64eb138b06b738805df68f63877c2e40",
+            "successful": true
+          },
+          {
+            "episode_id": 37,
+            "length": 162,
+            "sha256": "918965ac0ba9590b2df874fad34fe9494ba12a3def230254fd0951580d04f1fa",
+            "successful": true
+          },
+          {
+            "episode_id": 38,
+            "length": 167,
+            "sha256": "3c8e326d78195f93f712d3f12decd123aaffcf64f00f2da41b8a70c613e3d4da",
+            "successful": true
+          },
+          {
+            "episode_id": 39,
+            "length": 164,
+            "sha256": "c6735e4e4aab156bc1474ce6468aa33d34362be14ed291e2c12c597f584984c6",
+            "successful": true
+          }
+        ],
+        "num_demos": 50,
+        "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5",
+        "sha256": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e",
+        "successful_fresh_ids": [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      },
+      "replay": {
+        "n_failed": 0,
+        "n_tests": 96,
+        "passed": true
+      },
+      "task": {
+        "goal_predicate": "on",
+        "primary_object": "wine_bottle_1",
+        "role": "precision_oriented_receptacle",
+        "target_contact_parent": "wine_rack_1",
+        "target_object": "wine_rack_1_top_region",
+        "task_id": "wine_rack",
+        "task_name": "put_the_wine_bottle_on_the_rack"
+      }
+    }
+  ]
+}

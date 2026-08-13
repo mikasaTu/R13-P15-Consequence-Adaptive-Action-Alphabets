@@ -1,0 +1,32 @@
+{
+  "common_candidate_bank_size": 256,
+  "hard_rules": {
+    "common_bank_only": true,
+    "gripper_command": "copied unchanged from nominal demonstration chunk",
+    "invalid_action_clipping": false,
+    "k_sensitivity_locked_until_disposition": [
+      32,
+      128
+    ],
+    "pseudoinversion": false
+  },
+  "methods": {
+    "B0_continuous_target": "Unquantized target branch; upper bound only.",
+    "B1_centered_covariance": "K=64 bank medoids under train-only covariance-whitened residual distance.",
+    "B2_phase_residual": "Four phase-specific K=64 bank medoid sets under raw residual distance.",
+    "B3_dynamic_action_medoids": "Per-state K=64 deterministic action-space FPS medoids from the valid common bank.",
+    "B4_state_action_vq": "Per-state K=64 FPS in a state-conditioned action-autoencoder latent trained only for action reconstruction.",
+    "LJ_linear_j_atlas": "State-neighbor interpolated train-only local Jacobian predictions; bank actions only and no pseudoinversion.",
+    "MC_NCEA": "Five-member shared-trunk predictor with four phase heads; dynamic mode-conditioned predicted-effect atlas.",
+    "NCEA": "Five-member global nonlinear consequence ensemble; dynamic predicted-effect atlas over valid bank actions.",
+    "O1_true_effect_oracle": "Per-state K=64 atlas and target assignment using true simulator effects for the common bank and target.",
+    "O2_linear_j_oracle": "Diagnostic alias for the LJ predicted-effect atlas used to define the O1-O2 gap.",
+    "P3_mode_shuffled_atlas": "MC-NCEA architecture trained with task-stratified shuffled phase/head assignments.",
+    "P4_state_shuffled_atlas": "NCEA architecture trained after shuffling state features within task and phase.",
+    "P5_effect_shuffled_atlas": "NCEA architecture trained after shuffling continuous effects and contact labels within task and phase.",
+    "P6_random_latent_atlas": "Frozen random trunk with ridge readout, matched hidden width and ensemble count.",
+    "UG_NCEA": "Calibration-frozen uncertainty score; NCEA/MC-NCEA used on the lowest-risk 50/70/90 percent and the frozen strongest baseline elsewhere."
+  },
+  "primary_k": 64,
+  "selection_operator": "deterministic_farthest_point_medoid"
+}

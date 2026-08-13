@@ -1,4 +1,4 @@
-"""Command-line entry points for local smoke and resumable PAI Stage 1."""
+"""Command-line entry points for the frozen LIBERO experiments."""
 
 from __future__ import annotations
 
@@ -74,6 +74,11 @@ def build_parser():
         "stage1-5-collect-old",
         "stage1-5-screen-old",
         "stage1-5-finalize",
+        "stage2-freeze-task",
+        "stage2-finalize-freeze",
+        "stage2-collect-support",
+        "stage2-collect-candidates",
+        "stage2-export-rollouts",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -83,11 +88,25 @@ def build_parser():
     parser.add_argument("--task-id", choices=[task["task_id"] for task in config.TASKS])
     parser.add_argument("--plan-limit", type=int, default=None)
     parser.add_argument("--bootstrap-replicates", type=int, default=10000)
+    parser.add_argument(
+        "--splits",
+        default=None,
+        help="Comma-separated Stage 2 splits (train,calibration,development,confirmation).",
+    )
+    parser.add_argument(
+        "--confirmation",
+        action="store_true",
+        help="Export the locked Stage 2 confirmation rollouts instead of development rollouts.",
+    )
     return parser
 
 
 def main(argv=None):
     args = build_parser().parse_args(argv)
+    if args.command.startswith("stage2-") and not args.output_root:
+        from .stage2_config import OUTPUT_RELATIVE
+
+        args.output_root = os.path.join(_project_root(), OUTPUT_RELATIVE)
     paths = _paths(args)
     output_root = paths["output_root"]
     if args.command == "smoke":
@@ -164,6 +183,42 @@ def main(argv=None):
             )
         elif args.command == "stage1-5-finalize":
             result = finalize_stage1_5(stage1_root, stage1_5_root)
+        else:
+            raise AssertionError(args.command)
+    elif args.command.startswith("stage2-"):
+        from .stage2 import (
+            collect_candidates_task,
+            collect_support_task,
+            export_rollouts_zarr,
+            finalize_freeze,
+            freeze_task,
+        )
+
+        splits = tuple(
+            value.strip()
+            for value in (args.splits or "").split(",")
+            if value.strip()
+        )
+        if args.command == "stage2-freeze-task":
+            if not args.task_id:
+                raise ValueError("--task-id is required")
+            result = freeze_task(paths, output_root, args.task_id)
+        elif args.command == "stage2-finalize-freeze":
+            result = finalize_freeze(_project_root(), paths, output_root)
+        elif args.command == "stage2-collect-support":
+            if not args.task_id or not splits:
+                raise ValueError("--task-id and --splits are required")
+            result = {
+                "shards": len(collect_support_task(paths, output_root, args.task_id, splits))
+            }
+        elif args.command == "stage2-collect-candidates":
+            if not args.task_id or not splits:
+                raise ValueError("--task-id and --splits are required")
+            result = {
+                "shards": len(collect_candidates_task(paths, output_root, args.task_id, splits))
+            }
+        elif args.command == "stage2-export-rollouts":
+            result = export_rollouts_zarr(output_root, confirmation=args.confirmation)
         else:
             raise AssertionError(args.command)
     else:
