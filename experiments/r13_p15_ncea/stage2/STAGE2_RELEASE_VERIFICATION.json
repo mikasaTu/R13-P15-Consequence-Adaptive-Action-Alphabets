@@ -1,0 +1,305 @@
+{
+  "check_count": 49,
+  "checks": [
+    {
+      "expected": null,
+      "name": "required_artifact:PREREGISTRATION.md",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:INPUT_BINDING.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:fresh_episode_inventory.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:development_split.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:confirmation_split.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:perturbation_banks.npz",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:action_bank.npz",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:consequence_metrics.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:development_rollouts.zarr",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:predictor_metrics.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:development_quantization.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:development_controls.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:confirmation_rollouts.zarr",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:confirmation_quantization.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:bootstrap_results.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:STAGE2_REPORT.md",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": "047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c",
+      "name": "stage1_tree_unchanged",
+      "observed": "047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c",
+      "passed": true
+    },
+    {
+      "expected": "b5f1c40c32711c5e34ec0d5d2fce175c8642d11f60b5c45af1c6dddc46897b24",
+      "name": "stage1_5_tree_unchanged",
+      "observed": "b5f1c40c32711c5e34ec0d5d2fce175c8642d11f60b5c45af1c6dddc46897b24",
+      "passed": true
+    },
+    {
+      "expected": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+      "name": "libero_tree_unchanged",
+      "observed": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "historical_git_paths_identical_to_input_commit",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "freeze_validation_passed",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 384,
+      "name": "snapshot_count",
+      "observed": 384,
+      "passed": true
+    },
+    {
+      "expected": 0,
+      "name": "replay_failure_count",
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "no_exact_cross_split_directions",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "no_exact_cross_split_residuals",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": ">=128",
+      "name": "minimum_valid_bank",
+      "observed": 256,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "no_target_bank_exact_match",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 256,
+      "name": "support_shard_count",
+      "observed": 256,
+      "passed": true
+    },
+    {
+      "expected": 128,
+      "name": "candidate_shard_count",
+      "observed": 128,
+      "passed": true
+    },
+    {
+      "expected": [],
+      "name": "all_branch_shards_complete",
+      "observed": [],
+      "passed": true
+    },
+    {
+      "expected": [],
+      "name": "no_confirmation_branch_shards",
+      "observed": [],
+      "passed": true
+    },
+    {
+      "expected": 256,
+      "name": "development_zarr:support_states",
+      "observed": 256,
+      "passed": true
+    },
+    {
+      "expected": 128,
+      "name": "development_zarr:candidate_states",
+      "observed": 128,
+      "passed": true
+    },
+    {
+      "expected": 57728,
+      "name": "development_zarr:branches",
+      "observed": 57728,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "gate_A_passed",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "gate_B_failed",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "gate_C_not_run",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "confirmation_locked",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+      "name": "exact_disposition",
+      "observed": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "confirmation_observations_zero",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "confirmation_results_not_accessed",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "confirmation_csv_rows_zero",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "confirmation_bootstrap_not_run",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "development_quantization_rows",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "predictor_summary_rows",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "pai_jobs_zero",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "policy_training_false",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "tests:pre_result_test_results.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "tests:post_result_test_results.json",
+      "observed": null,
+      "passed": true
+    }
+  ],
+  "created_utc": "2026-08-13T19:14:21.362057+00:00",
+  "disposition": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+  "failure_count": 0,
+  "failures": [],
+  "passed": true,
+  "result_commit": "7e8b6bc00177a21e205442c0113ca2584cce084c"
+}

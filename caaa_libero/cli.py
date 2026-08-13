@@ -81,6 +81,7 @@ def build_parser():
         "stage2-export-rollouts",
         "stage2-run-development",
         "stage2-refresh-summaries",
+        "stage2-verify",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -234,6 +235,10 @@ def main(argv=None):
             from .stage2_analysis import refresh_derived_summaries
 
             result = refresh_derived_summaries(output_root, device_name=args.device)
+        elif args.command == "stage2-verify":
+            from .stage2_reporting import verify_stage2
+
+            result = verify_stage2(_project_root(), output_root)
         else:
             raise AssertionError(args.command)
     else:

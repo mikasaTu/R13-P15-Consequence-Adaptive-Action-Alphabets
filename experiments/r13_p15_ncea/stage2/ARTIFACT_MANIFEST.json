@@ -1,0 +1,87 @@
+{
+  "artifacts": {
+    "INPUT_BINDING.json": {
+      "bytes": 5357,
+      "sha256": "033a29585367ea3a03af17c7b824b6eb0cdf3f25e2c71c50398cb3a6d371a538",
+      "type": "file"
+    },
+    "PREREGISTRATION.md": {
+      "bytes": 13690,
+      "sha256": "614a6655e1a2c4df68b79aecfa7c5a745a491cd9719830f3a56c4111ca8aad59",
+      "type": "file"
+    },
+    "STAGE2_REPORT.md": {
+      "bytes": 18433,
+      "sha256": "feff89766443e434d9661f6fcf809bb97d51b6c7bc4705ee1866aaf1a72ad645",
+      "type": "file"
+    },
+    "action_bank.npz": {
+      "bytes": 53820,
+      "sha256": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b",
+      "type": "file"
+    },
+    "bootstrap_results.json": {
+      "bytes": 3547,
+      "sha256": "06e4cefd1c57a104c7a3d3171901b97ea912301a1b7ac4d8ca6ec308b76a3c70",
+      "type": "file"
+    },
+    "confirmation_quantization.csv": {
+      "bytes": 33,
+      "sha256": "9a44edb88ed4d9fc1a7742ecd8a7c5ee9a55f51f084b8349d77297d6f7abdef4",
+      "type": "file"
+    },
+    "confirmation_rollouts.zarr": {
+      "bytes": null,
+      "sha256": "28e6ea1e54996989e75484cafa4d4a2e1b81799b34f203f79a8d376424e9ff8c",
+      "type": "directory"
+    },
+    "confirmation_split.json": {
+      "bytes": 316894,
+      "sha256": "4275a3bb1003c7edb3644839049a335ced93c9ec1164114449b5fb098db4b420",
+      "type": "file"
+    },
+    "consequence_metrics.json": {
+      "bytes": 4378,
+      "sha256": "efef61178d084717819df11437d2da395d386391c28f73bae1357bd14429688e",
+      "type": "file"
+    },
+    "development_controls.csv": {
+      "bytes": 48574,
+      "sha256": "7b4ae7e758235b8ed8f1c7d4dde428cd09dc1994b1f4eb98fc32365d7abd83a9",
+      "type": "file"
+    },
+    "development_quantization.csv": {
+      "bytes": 28653221,
+      "sha256": "97caa4e5c4a3d5378c7b5e386b662267d2056dbbf83141cdcd4d35d5d1c02018",
+      "type": "file"
+    },
+    "development_rollouts.zarr": {
+      "bytes": null,
+      "sha256": "ee5420ba32c1a478059f49322cd58185d8ea8bd93697588627c2f7c510646bdd",
+      "type": "directory"
+    },
+    "development_split.json": {
+      "bytes": 631511,
+      "sha256": "bd78ca719cd8892573e9130473b1866c0300339e89f99f895a5b48a2aafa5657",
+      "type": "file"
+    },
+    "fresh_episode_inventory.json": {
+      "bytes": 24477,
+      "sha256": "54a60a5ed1716d3aa88f3f27d2c44cf100e0eeb2167f3fd6c46ff7c1c7006e65",
+      "type": "file"
+    },
+    "perturbation_banks.npz": {
+      "bytes": 1695866,
+      "sha256": "dc4db5d1a7bd6892dcc2283a97fe8b63ee2aafe4be7cf4afbf2b896886bbab40",
+      "type": "file"
+    },
+    "predictor_metrics.csv": {
+      "bytes": 29730,
+      "sha256": "1f361c3c064b648f9efc7b268469c64d71a29ac5ac25552bd2f9a317a56ca346",
+      "type": "file"
+    }
+  },
+  "created_utc": "2026-08-13T19:14:21.274386+00:00",
+  "disposition": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+  "result_commit": "7e8b6bc00177a21e205442c0113ca2584cce084c"
+}

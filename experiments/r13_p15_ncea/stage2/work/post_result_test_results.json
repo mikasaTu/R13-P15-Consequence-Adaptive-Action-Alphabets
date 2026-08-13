@@ -3,13 +3,13 @@
   "analysis_environment": {
     "python": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python",
     "command": "python -m pytest -q",
-    "result": "18 passed in 0.57s",
+    "result": "18 passed in 0.53s",
     "passed": true
   },
   "frozen_simulation_environment": {
     "python": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python",
     "command": "python -m pytest -q",
-    "result": "18 passed in 0.62s",
+    "result": "18 passed in 0.90s",
     "passed": true
   },
   "single_gpu_smoke": {
