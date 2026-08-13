@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-13T08:05:28.721849+00:00",
+  "episode_id": 15,
+  "identical_restore_per_row": true,
+  "offscreen_renderer": false,
+  "payload": "bowl_on_plate__e15__post_contact.npz",
+  "payload_bytes": 242705,
+  "payload_sha256": "eb05d60bdd5f81f5689207c2bd22c924837470861f6291276840f37c5b01ddd9",
+  "renderer": false,
+  "rows": 288,
+  "snapshot_index": 73,
+  "source_plan": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/bowl_on_plate/bowl_on_plate__e15__post_contact.npz",
+  "task_id": "bowl_on_plate"
+}

@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 
 from caaa_libero import config
@@ -98,3 +100,4 @@ def test_internal_screen_requires_geometry_controls_not_to_reproduce_gain():
     reproduced = internal_screen(_screen_rows(control_error=80.0))
     assert reproduced["passing_methods"] == []
     assert reproduced["decision"] == "REJECT_P15_FAMILY"
+    json.dumps(reproduced, allow_nan=False)

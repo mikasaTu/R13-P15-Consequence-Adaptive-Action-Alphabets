@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-08-13T08:21:30.108215+00:00",
+  "preferred_episode_ids": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "reason": "no revised deployable method passed every Part E gate",
+  "records": [],
+  "status": "NOT_COLLECTED_INTERNAL_SCREEN_FAILED"
+}

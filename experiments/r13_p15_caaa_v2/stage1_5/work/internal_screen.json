@@ -1,0 +1,94 @@
+{
+  "baseline": "M1_covariance_mahalanobis",
+  "bootstrap_replicates": 10000,
+  "candidates": [
+    {
+      "action_reconstruction_degradation_vs_m1": -0.9999999999999994,
+      "clipping_reduction_vs_m0": 1.0,
+      "control_gain_retention": {
+        "M6_permuted_j_reca": 0.5998101313726415,
+        "M7_random_spd_constrained": 0.524357474075626
+      },
+      "gates": {
+        "action_reconstruction_degradation_at_most_015": true,
+        "at_least_two_tasks_improve": true,
+        "clipping_reduction_at_least_080": true,
+        "controls_do_not_reproduce": false,
+        "pooled_improvement_at_least_005": true
+      },
+      "method": "M2_centered_covariance_residual",
+      "passes": false,
+      "relative_improvement_vs_m1": 0.9699862888597972,
+      "settled_effect_error": 2211.808247779896,
+      "tasks_improved": 4
+    },
+    {
+      "action_reconstruction_degradation_vs_m1": 0.07721568599769853,
+      "clipping_reduction_vs_m0": 0.8979591836734694,
+      "control_gain_retention": {
+        "M6_permuted_j_reca": null,
+        "M7_random_spd_constrained": null
+      },
+      "gates": {
+        "action_reconstruction_degradation_at_most_015": true,
+        "at_least_two_tasks_improve": true,
+        "clipping_reduction_at_least_080": true,
+        "controls_do_not_reproduce": false,
+        "pooled_improvement_at_least_005": false
+      },
+      "method": "M3_cara",
+      "passes": false,
+      "relative_improvement_vs_m1": -1.2423971277839472,
+      "settled_effect_error": 165249.55673965285,
+      "tasks_improved": 2
+    },
+    {
+      "action_reconstruction_degradation_vs_m1": -0.6985958249658846,
+      "clipping_reduction_vs_m0": 1.0,
+      "control_gain_retention": {
+        "M6_permuted_j_reca": 1.1437162545037476,
+        "M7_random_spd_constrained": 0.9998433419228757
+      },
+      "gates": {
+        "action_reconstruction_degradation_at_most_015": true,
+        "at_least_two_tasks_improve": true,
+        "clipping_reduction_at_least_080": true,
+        "controls_do_not_reproduce": false,
+        "pooled_improvement_at_least_005": true
+      },
+      "method": "M4_reca",
+      "passes": false,
+      "relative_improvement_vs_m1": 0.5086992521611919,
+      "settled_effect_error": 36205.55422600653,
+      "tasks_improved": 4
+    },
+    {
+      "action_reconstruction_degradation_vs_m1": -0.9999999999999999,
+      "clipping_reduction_vs_m0": 1.0,
+      "control_gain_retention": {
+        "M6_permuted_j_reca": 0.5948345393277994,
+        "M7_random_spd_constrained": 0.5200077828313425
+      },
+      "gates": {
+        "action_reconstruction_degradation_at_most_015": true,
+        "at_least_two_tasks_improve": true,
+        "clipping_reduction_at_least_080": true,
+        "controls_do_not_reproduce": false,
+        "pooled_improvement_at_least_005": true
+      },
+      "method": "M5_phase_residual_kmeans",
+      "passes": false,
+      "relative_improvement_vs_m1": 0.978099899861456,
+      "settled_effect_error": 1613.889794812955,
+      "tasks_improved": 4
+    }
+  ],
+  "created_utc": "2026-08-13T08:21:29.886249+00:00",
+  "decision": "REJECT_P15_FAMILY",
+  "evidence_status": "retrospective_internal_screen_not_confirmatory",
+  "o1_relative_improvement_vs_m1": 0.9663491015544747,
+  "o1_upper_bound_gate_at_least_010": true,
+  "passing_methods": [],
+  "row_count": 30720,
+  "shard_count": 64
+}

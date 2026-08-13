@@ -5,13 +5,13 @@ integrity, and the formal PAI outcome.
 
 ## Code tests
 
-On 2026-08-13 UTC, the unchanged seven-test suite passed in both relevant
+On 2026-08-13 UTC, the eleven-test suite passed in both relevant
 interpreters:
 
 | Environment | Command | Result |
 | --- | --- | --- |
-| frozen LIBERO Python 3.8.13 | `/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python -m pytest -q` | 7 passed in 0.59 s |
-| release-check Python 3.10.19 | `python -m pytest -q` | 7 passed in 0.22 s |
+| frozen LIBERO Python 3.8.13 | `/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python -m pytest -q` | 11 passed in 1.31 s |
+| release-check Python 3.10.19 | `python -m pytest -q` | 11 passed in 0.83 s |
 
 The clean system Python initially had no `pytest`; after installing it, test
 collection exposed missing `numpy` and then `h5py`. Those test dependencies
@@ -21,7 +21,9 @@ not assertion failures. JUnit XML from the passing runs is retained in
 
 The suite covers deterministic perturbation directions and ridge math,
 coordinate transforms, calibration-only baseline selection, strict resumed
-quantized-plan identity, report logic, and the PAI launcher contract.
+quantized-plan identity, constrained box/ball decoding, within-stratum
+Jacobian permutation, strict-JSON screen output, report logic, and the PAI
+launcher contract.
 
 ## Formal simulator replay gate
 
@@ -53,3 +55,35 @@ The published formal Stage 1 tree contains 28,068 files and 209,699,045
 logical bytes. Its largest file is the 44,498,042-byte realized-quantization
 JSONL, below GitHub's 100 MB single-file ceiling, so no Git LFS indirection is
 required.
+
+## Stage 1.5 validation
+
+The Stage 1.5 simulator run used CPU only (`CUDA_VISIBLE_DEVICES` empty,
+`MUJOCO_GL=glx`, all renderers disabled). Four tasks ran in task-level CPU
+parallelism. The corrected shard validator passed:
+
+- 64 frozen old-test plans and 64 realized result shards;
+- 288 rows per shard, K=64 only, for 18,432 revised branches total;
+- every completion marker and payload SHA-256;
+- exact equality of every plan-bound field in its realized shard;
+- finite initial, immediate, settled and final-state arrays;
+- zero collection failures.
+
+`scripts/verify_stage1_5_artifacts.py --full-stage1-hash` completed with
+`PASS`. The machine-readable record is
+`provenance/stage1_5_release_verification.json`. It additionally verifies:
+
+- all 12 required Stage 1.5 artifacts and every report-declared hash;
+- 143 strict JSON files with zero invalid constants;
+- the two-file preregistration commit preceded revised results;
+- 256 retrospective diagnostic rows and 59/40/160/45 expected CSV rows;
+- a 30,720-row internal screen and nine 10,000-replicate bootstrap comparisons;
+- `NOT_COLLECTED_INTERNAL_SCREEN_FAILED` with zero fresh records/states;
+- Stage 1 Git path identity and the complete bound Stage 1 tree SHA-256
+  `047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c`;
+- final disposition `REJECT_P15_FAMILY`.
+
+The report retains all development failures: one interrupted inefficient
+decoder implementation, one dtype bug in an ad-hoc validator, and one
+successful-but-non-strict JSON screen superseded by a deterministic strict
+JSON rerun. None changed a simulator payload or the scientific disposition.

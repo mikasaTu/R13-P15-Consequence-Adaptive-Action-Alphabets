@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-13T08:00:03.891844+00:00",
+  "episode_id": 14,
+  "identical_restore_per_row": true,
+  "offscreen_renderer": false,
+  "payload": "wine_rack__e14__contact_onset.npz",
+  "payload_bytes": 175667,
+  "payload_sha256": "95d42ef571b266336b690c55f73a5289e68fd59872043d141eeadf2799b8a841",
+  "renderer": false,
+  "rows": 288,
+  "snapshot_index": 87,
+  "source_plan": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/wine_rack/wine_rack__e14__contact_onset.npz",
+  "task_id": "wine_rack"
+}

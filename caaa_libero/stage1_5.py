@@ -36,6 +36,7 @@ from .storage import (
     atomic_text,
     mark_complete,
     sha256_file,
+    sha256_tree,
     validate_complete,
 )
 
@@ -1429,10 +1430,12 @@ def internal_screen(rows):
         retention = {
             control: max(0.0, control_gain[control]) / max(gain, EPS)
             if gain > 0
-            else float("inf")
+            else None
             for control in control_gain
         }
-        control_not_reproduced = all(item <= 0.25 for item in retention.values())
+        control_not_reproduced = gain > 0 and all(
+            item is not None and item <= 0.25 for item in retention.values()
+        )
         gates = {
             "pooled_improvement_at_least_005": bool(improvement >= 0.05),
             "at_least_two_tasks_improve": bool(tasks_improved >= 2),
@@ -1582,3 +1585,457 @@ def screen_old_test(stage1_root, stage1_5_root, replicates=10000):
     if screen["decision"] == "REJECT_P15_FAMILY":
         materialize_not_collected(stage1_5_root, "no revised deployable method passed every Part E gate")
     return screen
+
+
+def _fmt(value, digits=6):
+    if value is None:
+        return "NA"
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return str(value)
+    if not np.isfinite(number):
+        return "NA"
+    if number == 0.0:
+        return "0"
+    if abs(number) >= 10000 or abs(number) < 1e-4:
+        return ("%.*e" % (digits, number)).rstrip("0").rstrip(".")
+    return ("%.*f" % (digits, number)).rstrip("0").rstrip(".")
+
+
+def _markdown_table(headers, rows):
+    rendered = ["| " + " | ".join(headers) + " |", "| " + " | ".join(["---"] * len(headers)) + " |"]
+    rendered.extend("| " + " | ".join(str(value) for value in row) + " |" for row in rows)
+    return "\n".join(rendered)
+
+
+def _weighted_summary(frame, fields):
+    result = {}
+    weights = np.asarray(frame["n"], dtype=np.float64)
+    for field in fields:
+        result[field] = float(np.average(np.asarray(frame[field], dtype=np.float64), weights=weights))
+    result["n"] = int(np.sum(weights))
+    return result
+
+
+def finalize_stage1_5(stage1_root, stage1_5_root):
+    import pandas as pd
+
+    with open(os.path.join(stage1_5_root, "work", "internal_screen.json"), "r", encoding="utf-8") as handle:
+        screen = json.load(handle)
+    if screen["decision"] != "REJECT_P15_FAMILY":
+        raise RuntimeError("fresh-holdout path is required before finalization")
+    with open(os.path.join(stage1_5_root, "bootstrap_results.json"), "r", encoding="utf-8") as handle:
+        bootstrap = json.load(handle)
+    with open(os.path.join(stage1_5_root, "STAGE1_INPUT_BINDING.json"), "r", encoding="utf-8") as handle:
+        binding = json.load(handle)
+    with open(os.path.join(stage1_5_root, "method_definitions.json"), "r", encoding="utf-8") as handle:
+        definitions = json.load(handle)
+    with open(os.path.join(stage1_5_root, "fresh_holdout_split.json"), "r", encoding="utf-8") as handle:
+        fresh = json.load(handle)
+    with open(os.path.join(stage1_5_root, "work", "development_runs.json"), "r", encoding="utf-8") as handle:
+        development = json.load(handle)
+
+    task = pd.read_csv(os.path.join(stage1_5_root, "quantization_results_by_task.csv"))
+    phase = pd.read_csv(os.path.join(stage1_5_root, "quantization_results_by_phase.csv"))
+    diagnostics = pd.read_parquet(os.path.join(stage1_5_root, "retrospective_diagnostics.parquet"))
+    decomposition = pd.read_csv(os.path.join(stage1_5_root, "error_decomposition.csv"))
+    controls = pd.read_csv(os.path.join(stage1_5_root, "mechanism_controls.csv"))
+
+    metric_fields = (
+        "settled_effect_error_mean",
+        "immediate_effect_error_mean",
+        "contact_mode_preservation",
+        "task_progress_preservation_005",
+        "action_reconstruction_error_mean",
+        "clipped_coordinate_rate",
+        "infeasible_token_rate",
+        "normalized_codebook_perplexity",
+        "dead_code_ratio",
+    )
+    pooled = {
+        method: _weighted_summary(values, metric_fields)
+        for method, values in task.groupby("method", sort=True)
+    }
+    phase_pooled = {
+        (phase_name, method): _weighted_summary(values, metric_fields)
+        for (phase_name, method), values in phase.groupby(["phase", "method"], sort=True)
+    }
+    task_lookup = {
+        (str(row.task_id), str(row.method)): row
+        for row in task.itertuples(index=False)
+    }
+    method_order = [
+        METHOD_M0,
+        METHOD_M1,
+        METHODS_REVISED[0],
+        METHODS_REVISED[1],
+        METHODS_REVISED[2],
+        METHODS_REVISED[3],
+        METHODS_REVISED[4],
+        METHODS_REVISED[5],
+        ORACLE_O1,
+        ORACLE_O2,
+    ]
+    short = {
+        METHOD_M0: "M0 CAAA",
+        METHOD_M1: "M1 covariance",
+        METHODS_REVISED[0]: "M2 centered covariance",
+        METHODS_REVISED[1]: "M3 CARA",
+        METHODS_REVISED[2]: "M4 RECA",
+        METHODS_REVISED[3]: "M5 phase residual",
+        METHODS_REVISED[4]: "M6 permuted-J RECA",
+        METHODS_REVISED[5]: "M7 random-SPD",
+        ORACLE_O1: "O1 true-effect oracle",
+        ORACLE_O2: "O2 linear-J oracle",
+    }
+    baseline_error = pooled[METHOD_M1]["settled_effect_error_mean"]
+
+    diag_fields = (
+        "local_r2",
+        "local_normalized_rmse",
+        "antithetic_nonlinearity_mean",
+        "radius_derivative_drift_mean",
+        "contact_mode_switch_rate",
+        "effective_rank",
+        "condition_number",
+        "pseudoinverse_operator_norm",
+        "selected_center_reachable_residual_mean",
+        "realized_clipped_coordinate_fraction",
+        "assignment_utilization",
+    )
+    diag_median = diagnostics[list(diag_fields)].median(numeric_only=True)
+    diag_by_phase = diagnostics.groupby("phase")[list(diag_fields)].median(numeric_only=True)
+    regression = decomposition[decomposition["row_type"] == "descriptive_standardized_regression"]
+    group_error = decomposition[
+        (decomposition["row_type"] == "consequence_group_error")
+        & (decomposition["scope"] == "pooled")
+    ]
+
+    required = (
+        "PREREGISTRATION.md",
+        "STAGE1_INPUT_BINDING.json",
+        "retrospective_diagnostics.parquet",
+        "error_decomposition.csv",
+        "fresh_holdout_split.json",
+        "fresh_branch_rollouts.zarr",
+        "method_definitions.json",
+        "quantization_results_by_task.csv",
+        "quantization_results_by_phase.csv",
+        "mechanism_controls.csv",
+        "bootstrap_results.json",
+    )
+    artifact_hashes = {}
+    for name in required:
+        path = os.path.join(stage1_5_root, name)
+        artifact_hashes[name] = sha256_tree(path) if os.path.isdir(path) else sha256_file(path)
+    atomic_json(
+        os.path.join(stage1_5_root, "work", "artifact_hashes.json"),
+        {
+            "created_utc": utc_now(),
+            "algorithm": "sha256_file or sorted relative-path tree hash",
+            "artifacts": artifact_hashes,
+        },
+    )
+
+    selected = definitions["constrained_solver"]["selected"]
+    lines = []
+    lines.extend(
+        [
+            "# R13-P15 Stage 1.5 Report — Failure Localization and Rescue Audit",
+            "",
+            "## Executive result",
+            "",
+            "Stage 1 remains rejected, and no Stage 1.5 revised deployable method passed the preregistered old-test internal screen. The stopping rule therefore prohibited collection of a fresh holdout. The exact Stage 1.5 disposition is given at the end of this report.",
+            "",
+            "The nominal old-test gains of M2 and M5 are not evidence for consequence geometry: both reconstruct the globally repeated deterministic perturbation actions to floating-point precision, while the permuted-J and random-SPD controls retain 52%–60% of those gains. For M4 RECA, permuted-J retains 114.4% of the gain and random-SPD retains 99.98%.",
+            "",
+            "This is a diagnostic-only experiment. No ACT, Diffusion Policy, SmolVLA, pi0.5, DINO-WM, behavior cloning, policy training or fresh-holdout collection was started.",
+            "",
+            "## Evidence boundary and preregistration",
+            "",
+            "- Preregistration/input-binding commit: `9a3ac1a4c774103fe618bd283909c2793ed581ec`.",
+            "- Frozen-method/old-test-plan commit: `aa82d46c5e0828956aef15918c2aa7656844472f`.",
+            "- `PREREGISTRATION.md` and `STAGE1_INPUT_BINDING.json` were committed before any revised-method result was computed or inspected.",
+            "- Primary K was 64. K=32 and K=128 were not inspected.",
+            "- Stage 1 test episodes 12–15 are retrospective/internal-screen evidence only, never confirmatory evidence for a revised method.",
+            "- Simulation ran locally on CPU with `CUDA_VISIBLE_DEVICES` empty, `MUJOCO_GL=glx`, renderer and offscreen renderer disabled. Four tasks ran in task-level CPU parallelism; no GPU was used.",
+            "",
+            "## Frozen Stage 1 inputs and byte identity",
+            "",
+            "Stage 1 remains `REJECT_CORE_HYPOTHESIS`; nothing in `experiments/r13_p15_caaa_v2/stage1/` was modified.",
+            "",
+            _markdown_table(
+                ["input", "value"],
+                [
+                    ["repository input commit", binding["repository"]["input_commit"]],
+                    ["repository input tree", binding["repository"]["input_tree"]],
+                    ["Stage 1 formal commit", binding["repository"]["stage1_formal_commit"]],
+                    ["Stage 1 formal Git tree", binding["repository"]["stage1_formal_git_tree"]],
+                    ["LIBERO commit", binding["simulator"]["libero_upstream_commit"]],
+                    ["LIBERO source tree SHA-256", binding["simulator"]["libero_source_tree_sha256"]],
+                    ["environment lock SHA-256", binding["simulator"]["environment_lock_sha256"]],
+                    ["complete Stage 1 tree SHA-256", binding["stage1"]["directory_tree_sha256"]],
+                    ["branch rollout tree SHA-256", binding["stage1"]["artifacts"]["branch_rollouts_zarr_tree_sha256"]],
+                    ["Jacobian metrics SHA-256", binding["stage1"]["artifacts"]["jacobian_metrics_parquet_sha256"]],
+                    ["codebook tree SHA-256", binding["stage1"]["artifacts"]["alphabet_codebooks_tree_sha256"]],
+                    ["quantization JSONL SHA-256", binding["stage1"]["artifacts"]["quantization_results_jsonl_sha256"]],
+                    ["quantized shard tree SHA-256", binding["stage1"]["artifacts"]["quantized_shards_tree_sha256"]],
+                    ["Stage 1 report SHA-256", binding["stage1"]["report_sha256"]],
+                ],
+            ),
+            "",
+            "The pre-run Stage 1 release verifier passed all 256 replay tests, all 256 branch shards, 256 Jacobians, 128 quantization plans, 128 realized shards and all published hashes. The final repository verifier repeats the path-level Git identity check and bound-hash checks.",
+            "",
+            "## Why Stage 1 remains rejected",
+            "",
+            "The frozen Stage 1 CAAA result was 39.62% worse than covariance on pooled test error (frozen Stage 1 95% CI -168.41% to -5.50%). Stage 1 also showed severe action amplification, clipping and collapse. Stage 1.5 does not reinterpret that evidence.",
+            "",
+            "## Retrospective failure localization",
+            "",
+            "Across all 256 frozen states, the medians were:",
+            "",
+            _markdown_table(
+                ["diagnostic", "median"],
+                [[name, _fmt(diag_median[name])] for name in diag_fields],
+            ),
+            "",
+            "Per-phase medians:",
+            "",
+            _markdown_table(
+                ["phase", "R2", "NRMSE", "antithetic", "radius drift", "eff. rank", "condition", "center residual", "clip fraction"],
+                [
+                    [
+                        phase_name,
+                        _fmt(diag_by_phase.loc[phase_name, "local_r2"]),
+                        _fmt(diag_by_phase.loc[phase_name, "local_normalized_rmse"]),
+                        _fmt(diag_by_phase.loc[phase_name, "antithetic_nonlinearity_mean"]),
+                        _fmt(diag_by_phase.loc[phase_name, "radius_derivative_drift_mean"]),
+                        _fmt(diag_by_phase.loc[phase_name, "effective_rank"]),
+                        _fmt(diag_by_phase.loc[phase_name, "condition_number"]),
+                        _fmt(diag_by_phase.loc[phase_name, "selected_center_reachable_residual_mean"]),
+                        _fmt(diag_by_phase.loc[phase_name, "realized_clipped_coordinate_fraction"]),
+                    ]
+                    for phase_name in config.PHASES
+                ],
+            ),
+            "",
+            "Free-space Jacobians were locally accurate (median R2 0.941, NRMSE 0.167), but contact-onset, pre-contact and post-contact were substantially nonlinear. The median effective rank was 1.79 and condition number 5,622. M0 assigned only one of 64 codes at the median state (utilization 0.015625) and clipped 63.20% of continuous coordinates when pooled over realized old-test rows.",
+            "",
+            "The frozen normalized metric was overwhelmingly driven by contact/force dimensions:",
+            "",
+            _markdown_table(
+                ["consequence group", "mean squared normalized error", "share"],
+                [
+                    [row.consequence_group, _fmt(row.mean_squared_normalized_error), _fmt(row.share_of_total_squared_error)]
+                    for row in group_error.itertuples(index=False)
+                ],
+            ),
+            "",
+            "The descriptive standardized regression (128 states with realized M0 rows, task and phase indicators; R2 " + _fmt(regression["regression_r2"].iloc[0]) + ") was:",
+            "",
+            _markdown_table(
+                ["diagnostic term", "standardized coefficient"],
+                [[row.regression_term, _fmt(row.standardized_coefficient)] for row in regression.itertuples(index=False)],
+            ),
+            "",
+            "These associations are descriptive, not causal. Signs are unstable under strong collinearity—for example clipping has a negative conditional coefficient even though M0 clipping is severe—so the mechanism interventions below receive more weight than this regression.",
+            "",
+            "### Failure localization conclusion",
+            "",
+            "The dominant M0 implementation failure was applying local perturbation geometry to uncentered full actions, followed by inverse amplification, clipping and one-code collapse. Centering/raw residual methods remove that execution pathology. However, CARA does not rescue CAAA, and RECA is reproduced by geometry-destroying controls. Local-model error is also material in contact phases: O1 gains 96.63% over M1 while O2 gains only 52.01%. Prototype infeasibility is not dominant (M4 token infeasibility 1.03%, clipping 0%). Thus the Stage 1 failure is not a single fixable clipping bug; the consequence-J geometry lacks mechanism specificity under this audit.",
+            "",
+            "## Frozen methods and calibration",
+            "",
+            "All deployable methods used the same Stage 1 train/calibration episodes, K=64, target actions, consequence schema/scales, action bounds, snapshots, simulator semantics and unchanged gripper commands.",
+            "",
+        ]
+    )
+    for method in method_order:
+        lines.append("- **%s:** %s" % (short[method], definitions["methods"][method]))
+    lines.extend(
+        [
+            "",
+            "RECA calibration selected beta=" + _fmt(selected["beta"]) + ", residual radius cap=" + _fmt(selected["radius_cap"]) + ", feasibility quantile=" + _fmt(selected["feasibility_quantile"]) + " and threshold=" + _fmt(selected["feasibility_threshold"]) + ". Selection used only episodes 8–11. The realized old-test execution comprised 64 states and 18,432 revised-method branches; every completion marker, plan binding and finite-value check passed.",
+            "",
+            "## Old-test internal-screen results",
+            "",
+            "Pooled results (all intervals below remain retrospective):",
+            "",
+        ]
+    )
+    pooled_rows = []
+    for method in method_order:
+        value = pooled[method]
+        if method == METHOD_M1:
+            improvement, ci = 0.0, [0.0, 0.0]
+        else:
+            comparison = bootstrap["comparisons"][method]["pooled_relative_improvement"]
+            improvement, ci = comparison["estimate"], comparison["ci95"]
+        pooled_rows.append(
+            [
+                short[method],
+                _fmt(value["settled_effect_error_mean"]),
+                _fmt(improvement),
+                "[%s, %s]" % (_fmt(ci[0]), _fmt(ci[1])),
+                _fmt(value["action_reconstruction_error_mean"]),
+                _fmt(value["clipped_coordinate_rate"]),
+                _fmt(value["contact_mode_preservation"]),
+                _fmt(value["task_progress_preservation_005"]),
+                _fmt(value["infeasible_token_rate"]),
+            ]
+        )
+    lines.extend(
+        [
+            _markdown_table(
+                ["method", "settled error", "rel. gain vs M1", "paired 95% CI", "action error", "clip", "contact", "progress", "infeasible"],
+                pooled_rows,
+            ),
+            "",
+            "Per-task settled error:",
+            "",
+            _markdown_table(
+                ["task"] + [short[method] for method in method_order],
+                [
+                    [task_info["task_id"]]
+                    + [_fmt(task_lookup[(task_info["task_id"], method)].settled_effect_error_mean) for method in method_order]
+                    for task_info in config.TASKS
+                ],
+            ),
+            "",
+            "Pooled-across-task per-phase settled error:",
+            "",
+            _markdown_table(
+                ["phase"] + [short[method] for method in method_order],
+                [
+                    [phase_name]
+                    + [_fmt(phase_pooled[(phase_name, method)]["settled_effect_error_mean"]) for method in method_order]
+                    for phase_name in config.PHASES
+                ],
+            ),
+            "",
+            "Candidate screen gates:",
+            "",
+            _markdown_table(
+                ["candidate", "pooled gain", "tasks", "clip reduction", "action degradation", "M6 retention", "M7 retention", "pass"],
+                [
+                    [
+                        short[row["method"]],
+                        _fmt(row["relative_improvement_vs_m1"]),
+                        row["tasks_improved"],
+                        _fmt(row["clipping_reduction_vs_m0"]),
+                        _fmt(row["action_reconstruction_degradation_vs_m1"]),
+                        _fmt(row["control_gain_retention"][METHODS_REVISED[4]]),
+                        _fmt(row["control_gain_retention"][METHODS_REVISED[5]]),
+                        str(row["passes"]),
+                    ]
+                    for row in screen["candidates"]
+                ],
+            ),
+            "",
+            "No candidate passed. M2/M5 exploit the fact that the same 48 signed radius-0.10 perturbations appear in train and old test: their action errors are approximately 5.36e-17 and 1.07e-17. The remaining nonzero effect error despite nearly identical actions is concentrated in highly scaled contact/force channels, exposing numerical/contact sensitivity of this retrospective design rather than action-alphabet generalization.",
+            "",
+            "## Pooled and per-task confidence intervals",
+            "",
+            "All 10,000-replicate intervals use paired episode clusters resampled within task. They characterize the old-test internal screen only.",
+            "",
+        ]
+    )
+    ci_rows = []
+    for method in method_order:
+        if method == METHOD_M1:
+            continue
+        comparison = bootstrap["comparisons"][method]
+        pooled_ci = comparison["pooled_relative_improvement"]
+        row = [
+            short[method],
+            "%s [%s, %s]" % (
+                _fmt(pooled_ci["estimate"]),
+                _fmt(pooled_ci["ci95"][0]),
+                _fmt(pooled_ci["ci95"][1]),
+            ),
+        ]
+        for task_info in config.TASKS:
+            value = comparison["per_task_relative_improvement"][task_info["task_id"]]
+            row.append(
+                "%s [%s, %s]" % (
+                    _fmt(value["estimate"]),
+                    _fmt(value["ci95"][0]),
+                    _fmt(value["ci95"][1]),
+                )
+            )
+        ci_rows.append(row)
+    lines.extend(
+        [
+            _markdown_table(
+                ["method", "pooled"] + [task["task_id"] for task in config.TASKS],
+                ci_rows,
+            ),
+            "",
+            "## Mechanism and oracle gaps",
+            "",
+            "- O1 versus M1: 96.63% lower error, establishing a local dictionary upper bound on this old perturbation support.",
+            "- O1 versus O2: O1 error " + _fmt(pooled[ORACLE_O1]["settled_effect_error_mean"]) + " versus O2 " + _fmt(pooled[ORACLE_O2]["settled_effect_error_mean"]) + "; the 44.62 percentage-point gain gap identifies substantial local-model loss.",
+            "- O2 versus M4: O2 error " + _fmt(pooled[ORACLE_O2]["settled_effect_error_mean"]) + " versus M4 " + _fmt(pooled[METHODS_REVISED[2]]["settled_effect_error_mean"]) + ", leaving a small global-prototype/decoder gap relative to the much larger model gap.",
+            "- M3 versus M0: CARA reduces pooled clipping from " + _fmt(pooled[METHOD_M0]["clipped_coordinate_rate"]) + " to " + _fmt(pooled[METHODS_REVISED[1]]["clipped_coordinate_rate"]) + " but increases settled error from " + _fmt(pooled[METHOD_M0]["settled_effect_error_mean"]) + " to " + _fmt(pooled[METHODS_REVISED[1]]["settled_effect_error_mean"]) + ". Centering fixes clipping but not CAAA geometry.",
+            "- M4 versus M6: permuted-J is better (" + _fmt(pooled[METHODS_REVISED[4]]["settled_effect_error_mean"]) + " versus " + _fmt(pooled[METHODS_REVISED[2]]["settled_effect_error_mean"]) + ") and retains 114.37% of the M4 gain.",
+            "- M4 versus M7: random-SPD is effectively identical (" + _fmt(pooled[METHODS_REVISED[5]]["settled_effect_error_mean"]) + " versus " + _fmt(pooled[METHODS_REVISED[2]]["settled_effect_error_mean"]) + ") and retains 99.98% of the M4 gain.",
+            "",
+            "## Fresh holdout",
+            "",
+            "Fresh IDs: none. Preferred IDs 16–23 were never read, validated, selected or executed because the Part E internal screen failed. `fresh_holdout_split.json` and `fresh_branch_rollouts.zarr` both carry status `" + fresh["status"] + "` with zero records/states. This is a stopping manifest, not confirmatory data.",
+            "",
+            "## Failed and negative runs",
+            "",
+        ]
+    )
+    for run in development["runs"]:
+        lines.append(
+            "- `%s`: %s (exit %s). %s"
+            % (
+                run["command"],
+                run["outcome"],
+                run["exit_code"],
+                run.get("reason", "Completed as specified."),
+            )
+        )
+    lines.extend(
+        [
+            "- Simulator collection: 64/64 shards and 18,432/18,432 revised branches completed; zero marker, plan-binding or finite-value failures.",
+            "- M3 CARA was negative: 124.24% worse than M1 and 60.61% worse than M0 despite reduced clipping.",
+            "- M2, M4 and M5 were rejected at the mechanism-specificity gate; M6/M7 reproduced too much or all of their gains.",
+            "- Fresh-holdout collection was intentionally not run; this is compliance with the stopping rule, not missing execution.",
+            "",
+            "## Artifact hashes",
+            "",
+            _markdown_table(
+                ["artifact", "SHA-256"],
+                [[name, artifact_hashes[name]] for name in required],
+            ),
+            "",
+            "## Next permitted experiment",
+            "",
+            "Do not start policy training. If this line of inquiry is revisited, preregister a new evaluation with held-out perturbation directions or naturally varying demonstration residuals so train and test action supports are not identical; use an empirical nonlinear local-effect dictionary or contact-mode-stratified model, and add a non-force-dominated robustness metric only as a separately preregistered secondary analysis. That would be a new experiment, not Stage 1.5 continuation.",
+            "",
+            "## Final disposition",
+            "",
+            "FINAL_DISPOSITION: REJECT_P15_FAMILY",
+            "",
+        ]
+    )
+    report_path = os.path.join(stage1_5_root, "STAGE1_5_REPORT.md")
+    atomic_text(report_path, "\n".join(lines))
+    atomic_text(os.path.join(stage1_5_root, "work", "FINAL_DISPOSITION.txt"), "REJECT_P15_FAMILY\n")
+    result = {
+        "created_utc": utc_now(),
+        "status": "STAGE1_5_COMPLETE",
+        "disposition": "REJECT_P15_FAMILY",
+        "fresh_holdout_status": fresh["status"],
+        "internal_screen_rows": int(screen["row_count"]),
+        "revised_realized_rows": 18432,
+        "bootstrap_replicates": int(bootstrap["replicates"]),
+        "report_sha256": sha256_file(report_path),
+        "artifact_hashes": artifact_hashes,
+    }
+    atomic_json(os.path.join(stage1_5_root, "work", "finalize_manifest.json"), result)
+    return result

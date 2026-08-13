@@ -1,0 +1,89 @@
+{
+  "count": 16,
+  "created_utc": "2026-08-13T08:06:11.500274+00:00",
+  "gpu_visible": "",
+  "mujoco_gl": "glx",
+  "shards": [
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e12__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e13__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e14__pre_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__contact_onset.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__contact_onset.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__free_space.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__free_space.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__post_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__post_contact.npz",
+      "status": "created"
+    },
+    {
+      "marker": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__pre_contact.npz.complete.json",
+      "path": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_quantized_shards/bowl_on_plate/bowl_on_plate__e15__pre_contact.npz",
+      "status": "created"
+    }
+  ],
+  "task_id": "bowl_on_plate"
+}

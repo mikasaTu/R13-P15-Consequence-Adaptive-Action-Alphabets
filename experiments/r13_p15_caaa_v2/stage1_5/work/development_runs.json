@@ -16,6 +16,26 @@
       "retrospective_states": 256,
       "old_test_plans": 64,
       "planned_rows": 18432
+    },
+    {
+      "command": "old-test shard validation",
+      "exit_code": 1,
+      "outcome": "VALIDATOR_IMPLEMENTATION_FAILURE",
+      "reason": "The first ad-hoc validator passed equal_nan=True to NumPy array_equal for string arrays, which raises TypeError. No payload was changed.",
+      "remediation": "Use equal_nan only for floating or complex arrays and exact array equality for strings and integers. The corrected validator passed 64 plans, 64 realized shards, 18,432 rows, all completion markers, all plan bindings and all finite-value checks with zero failures."
+    },
+    {
+      "command": "stage1-5-screen-old",
+      "exit_code": 0,
+      "outcome": "SUPERSEDED_NON_STRICT_JSON",
+      "reason": "The first successful screen encoded undefined gain retention for the negative-gain M3 candidate as Python Infinity. Although Python could read it, Infinity is not strict JSON.",
+      "remediation": "Encode undefined retention as JSON null and force the mechanism-specificity gate false for non-positive candidate gain. Re-ran the same deterministic 10,000-replicate screen; numeric results and disposition were unchanged."
+    },
+    {
+      "command": "stage1-5-screen-old",
+      "exit_code": 0,
+      "outcome": "REJECT_P15_FAMILY_STRICT_JSON",
+      "reason": "No revised deployable method passed all Part E gates; fresh holdout collection was prohibited."
     }
   ],
   "schema_version": "r13-p15-stage1.5-development-runs-v1"

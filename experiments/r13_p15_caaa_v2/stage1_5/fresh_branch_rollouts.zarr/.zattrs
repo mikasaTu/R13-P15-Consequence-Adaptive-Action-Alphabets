@@ -1,0 +1,7 @@
+{
+    "created_utc": "2026-08-13T08:21:48.685623+00:00",
+    "reason": "no revised deployable method passed every Part E gate",
+    "schema": "r13-p15-stage1.5-fresh-rollouts-v1",
+    "states": 0,
+    "status": "NOT_COLLECTED_INTERNAL_SCREEN_FAILED"
+}

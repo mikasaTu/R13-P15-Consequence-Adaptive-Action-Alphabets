@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-13T08:01:10.520123+00:00",
+  "episode_id": 14,
+  "identical_restore_per_row": true,
+  "offscreen_renderer": false,
+  "payload": "plate_push__e14__post_contact.npz",
+  "payload_bytes": 163393,
+  "payload_sha256": "140957d552d3468a637588b2560f9e7d4a63aaf7074e07c78ffd8ecac63ac11e",
+  "renderer": false,
+  "rows": 288,
+  "snapshot_index": 99,
+  "source_plan": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/plate_push/plate_push__e14__post_contact.npz",
+  "task_id": "plate_push"
+}

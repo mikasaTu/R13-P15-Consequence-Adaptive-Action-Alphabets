@@ -1,10 +1,10 @@
-# R13-P15 CAAA-v2 — LIBERO Stage 1
+# R13-P15 CAAA-v2 — LIBERO Stage 1 and Stage 1.5
 
 This repository contains the complete Stage 1 mechanism audit for
 **Consequence-Riemannian Action Alphabets (CAAA-v2)** on LIBERO. It includes
 the implementation, tests, frozen preregistration, deterministic replay data,
 all intermediate shards, fitted Jacobians and codebooks, realized simulation
-results, bootstrap output, PAI launch provenance, and the final report.
+results, bootstrap output, PAI launch provenance, and the Stage 1/1.5 reports.
 
 ## Result
 
@@ -19,6 +19,22 @@ behavior cloning, or other policy training was launched.
 
 The full scientific account is in
 [`STAGE1_REPORT.md`](experiments/r13_p15_caaa_v2/stage1/STAGE1_REPORT.md).
+
+## Stage 1.5 failure-localization result
+
+**`REJECT_P15_FAMILY`**
+
+Stage 1.5 preserved Stage 1 byte-for-byte and tested centered residual,
+reachability-constrained effect, phase-conditioned, permuted-J and random-SPD
+constructions at K=64. It executed 18,432 revised old-test branches from 64
+identical restored snapshots and used 10,000 paired episode-cluster bootstrap
+replicates. No revised deployable method passed the internal screen: the
+permuted-J and random-SPD controls reproduced too much or all of the nominal
+gain. The preregistered stopping rule therefore prohibited fresh episodes
+16–23; no policy training was launched.
+
+The complete account is in
+[`STAGE1_5_REPORT.md`](experiments/r13_p15_caaa_v2/stage1_5/STAGE1_5_REPORT.md).
 
 ## Frozen scope
 
@@ -53,10 +69,12 @@ scripts/                             local, PAI, and release verification tools
 pai/                                 exact Stage 1 PAI launcher and job template
 experiments/r13_p15_caaa_v2/
   stage1/                            complete formal outputs and intermediates
+  stage1_5/                          failure-localization outputs and intermediates
   stage1_local_smoke/                development-machine smoke evidence
 provenance/
   tests/                             machine-readable pytest results
   pai/                               submitted/read-back PAI records and sentinels
+  stage1_5_release_verification.json complete Stage 1.5 validation record
 ```
 
 The formal code snapshot is commit
@@ -68,12 +86,16 @@ artifacts and documentation without rewriting the frozen formal outputs.
 
 ```bash
 python scripts/verify_published_artifacts.py
+python scripts/verify_stage1_5_artifacts.py --full-stage1-hash
 python -m pytest -q
 ```
 
-The first command is standard-library only. It checks the report-declared
+The Stage 1 command is standard-library only. It checks the report-declared
 artifact hashes, every atomic NPZ completion marker, formal replay counts,
 result-table row counts, PAI completion evidence, and the final disposition.
+The Stage 1.5 verifier additionally needs NumPy and pandas/pyarrow for NPZ and
+Parquet validation. It checks strict JSON, preregistration order, frozen Stage
+1 identity, all old-test plans/results, bootstrap and stopping manifests.
 See [`TESTING.md`](TESTING.md) for the exact recorded checks.
 
 ## Reproduce simulation collection

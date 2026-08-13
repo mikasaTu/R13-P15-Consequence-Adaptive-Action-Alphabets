@@ -10,6 +10,8 @@ of the scientific result tables themselves.
   completion sentinels written to durable storage by the jobs.
 - `release_verification.json` is generated from the published tree by
   `scripts/verify_published_artifacts.py`.
+- `stage1_5_release_verification.json` is the full-hash Stage 1.5 verifier
+  output, including the final byte-identity check of the frozen Stage 1 tree.
 
 No credentials or secret environment values were injected into these PAI jobs.
 The copied records were scanned before publication; empty credential fields and

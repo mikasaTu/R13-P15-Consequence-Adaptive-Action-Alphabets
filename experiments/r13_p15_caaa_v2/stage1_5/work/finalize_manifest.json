@@ -1,0 +1,23 @@
+{
+  "artifact_hashes": {
+    "PREREGISTRATION.md": "6f13cdeceda9c782f63e20fcea3d085db33b1adabf5a4d0b945b54db7d88b135",
+    "STAGE1_INPUT_BINDING.json": "ed5d4e87b75442c0d6efbaa9232552ee01b9c959a94f2df110fa849c0acf5810",
+    "bootstrap_results.json": "f9e0f24b9559c74d2b82e1889e6ebda752407a40725cc17f915647d5ad2aeba6",
+    "error_decomposition.csv": "64175a1e7ead5c6ca3a1eef1f216671d9b569cce127dc6cf8fb72cc0e25fab65",
+    "fresh_branch_rollouts.zarr": "f1741bf70e6a114859fa2455ef41b6464afd6320cac4e3ba7e8607d910354f9c",
+    "fresh_holdout_split.json": "19211f3dd56cae72311982c7bafd7ae1a72f6a6acfdd4aa39ddc501702884c47",
+    "mechanism_controls.csv": "f5284680c1476bc5701c883ccacbb2f64022d568ff18f6dd9b049e866436799b",
+    "method_definitions.json": "a8c659eb1fa1a48ddbd715c1b2749048b24abd5867546c3f12f985b16c5e38ec",
+    "quantization_results_by_phase.csv": "20e7654bb903361d166a07d122c8aa95dec7d43b2dd4eb147020b599ff57f8d0",
+    "quantization_results_by_task.csv": "26c0b895be9675b2ae5b4c89ca6797789e88835713ac33002b39d48ea47f27b7",
+    "retrospective_diagnostics.parquet": "04aa9f6a47284e83d0cd033360fe72d2b5f7719f4a5c12a9ae78c1da64f85a15"
+  },
+  "bootstrap_replicates": 10000,
+  "created_utc": "2026-08-13T08:23:01.214757+00:00",
+  "disposition": "REJECT_P15_FAMILY",
+  "fresh_holdout_status": "NOT_COLLECTED_INTERNAL_SCREEN_FAILED",
+  "internal_screen_rows": 30720,
+  "report_sha256": "2a40c1e2731fd778f6e247f11d18d8fc4b15ca8b80324536d5f0f7ed0f4fb9ed",
+  "revised_realized_rows": 18432,
+  "status": "STAGE1_5_COMPLETE"
+}

@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "created_utc": "2026-08-13T07:58:38.153396+00:00",
+  "episode_id": 13,
+  "identical_restore_per_row": true,
+  "offscreen_renderer": false,
+  "payload": "stove_turn_on__e13__post_contact.npz",
+  "payload_bytes": 121876,
+  "payload_sha256": "e55d883fe66306d018ca72223a05e6368b6621375c8c4f8a7ca89b5586b1879c",
+  "renderer": false,
+  "rows": 288,
+  "snapshot_index": 72,
+  "source_plan": "experiments/r13_p15_caaa_v2/stage1_5/work/old_test_plans/stove_turn_on/stove_turn_on__e13__post_contact.npz",
+  "task_id": "stove_turn_on"
+}
