@@ -12,6 +12,8 @@ of the scientific result tables themselves.
   `scripts/verify_published_artifacts.py`.
 - `stage1_5_release_verification.json` is the full-hash Stage 1.5 verifier
   output, including the final byte-identity check of the frozen Stage 1 tree.
+- `feishu_stage1_5_report.json` records the step2 child-document binding,
+  source-report hash, revision, and post-publication full-document readback.
 
 No credentials or secret environment values were injected into these PAI jobs.
 The copied records were scanned before publication; empty credential fields and

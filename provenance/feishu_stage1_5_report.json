@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "published_at_utc": "2026-08-13",
+  "source_commit": "76433b6e58196ceeedc4ad005a1110ea8e343ae2",
+  "source_path": "experiments/r13_p15_caaa_v2/stage1_5/STAGE1_5_REPORT.md",
+  "source_sha256": "2a40c1e2731fd778f6e247f11d18d8fc4b15ca8b80324536d5f0f7ed0f4fb9ed",
+  "feishu": {
+    "space_id": "7599097990090853600",
+    "parent_node_token": "EZcewp9DsiCbXjkaOubc9qsynJf",
+    "node_token": "UAJwwiNTcijYibkHKRDcRk9onOe",
+    "obj_token": "R6Rddtj37oT5RwxOnH1cEtlAnmL",
+    "obj_type": "docx",
+    "title_after_markdown_import": "R13-P15 Stage 1.5 Report — Failure Localization and Rescue Audit",
+    "wiki_url": "https://icnbwz7kd1ui.feishu.cn/wiki/UAJwwiNTcijYibkHKRDcRk9onOe",
+    "docx_url": "https://icnbwz7kd1ui.feishu.cn/docx/R6Rddtj37oT5RwxOnH1cEtlAnmL",
+    "revision_id": 4
+  },
+  "readback": {
+    "format": "xml_with_block_ids",
+    "content_length": 55279,
+    "parent_child_binding_verified": true,
+    "contains_branch_count_18432": true,
+    "contains_fresh_holdout_stop_marker": true,
+    "contains_final_disposition_reject_p15_family": true
+  }
+}
