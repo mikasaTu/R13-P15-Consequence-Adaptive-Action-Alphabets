@@ -846,6 +846,11 @@ def train_predictor_families(train_records, calibration_records, consequence_sca
                 )
                 models.append(model)
                 metadata.append(meta)
+                print(
+                    "STAGE2_PREDICTOR_COMPLETE family=%s hidden=%s member=%d epoch=%d cal_loss=%.9g"
+                    % (family, "x".join(str(x) for x in hidden), ensemble_id, meta["best_epoch"], meta["best_calibration_loss"]),
+                    flush=True,
+                )
             score = float(np.mean([row["best_calibration_loss"] for row in metadata]))
             candidates.append((score, tuple(hidden), models, metadata))
             selection_trace.append({"family": family, "hidden": list(hidden), "mean_calibration_loss": score})
@@ -888,6 +893,11 @@ def train_predictor_families(train_records, calibration_records, consequence_sca
             )
             models.append(model)
             metadata.append(meta)
+            print(
+                "STAGE2_CONTROL_COMPLETE family=%s member=%d epoch=%d cal_loss=%.9g"
+                % (family, ensemble_id, meta["best_epoch"], meta["best_calibration_loss"]),
+                flush=True,
+            )
             _save_torch_model(
                 os.path.join(model_root, "%s_member_%d.pt" % (family, ensemble_id)), model, meta
             )
@@ -1186,6 +1196,11 @@ def train_action_autoencoder(train_records, calibration_records, action_bank, ce
         "trace": trace,
     }
     _save_torch_model(os.path.join(output_root, "work", "predictors", "B4_state_action_vq.pt"), model, metadata)
+    print(
+        "STAGE2_AUTOENCODER_COMPLETE epoch=%d cal_loss=%.9g"
+        % (best_epoch, best_loss),
+        flush=True,
+    )
     return model, metadata
 
 
