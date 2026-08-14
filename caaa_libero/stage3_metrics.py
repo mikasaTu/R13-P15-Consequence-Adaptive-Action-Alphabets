@@ -296,7 +296,14 @@ def summarize_realized(rows, k=PRIMARY_K):
     return output
 
 
-def write_csv(path, rows, fieldnames=None):
+def write_csv(path, rows, fieldnames=None, float_significant_digits=12):
+    """Write ordinary CSV while keeping large row-level artifacts Git-friendly.
+
+    Twelve significant digits preserve substantially more precision than the
+    simulator/replay tolerances used for statistical reporting, while avoiding
+    Python's variable 17-digit float representation in hundreds of thousands
+    of repeated quantization rows.
+    """
     os.makedirs(os.path.dirname(path), exist_ok=True)
     if fieldnames is None:
         fieldnames = sorted({name for row in rows for name in row})
@@ -304,7 +311,15 @@ def write_csv(path, rows, fieldnames=None):
         writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         for row in rows:
-            writer.writerow(row)
+            serialized = {
+                name: (
+                    format(value, ".%dg" % int(float_significant_digits))
+                    if isinstance(value, (float, np.floating)) and np.isfinite(value)
+                    else value
+                )
+                for name, value in row.items()
+            }
+            writer.writerow(serialized)
 
 
 def paired_episode_bootstrap(rows, method, baseline, replicates, seed):

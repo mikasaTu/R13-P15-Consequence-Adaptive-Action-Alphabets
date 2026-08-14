@@ -1,8 +1,10 @@
+import csv
+
 import numpy as np
 import torch
 
 from caaa_libero.stage3 import generate_support_codebooks, support_separation_evidence
-from caaa_libero.stage3_metrics import ranking_metrics, stable_fps
+from caaa_libero.stage3_metrics import ranking_metrics, stable_fps, write_csv
 from caaa_libero.stage3_models import create_pair_ranker
 from caaa_libero.stage3_config import (
     CONFIRMATION_INTEGRITY_AMENDMENT,
@@ -95,3 +97,15 @@ def test_ranking_metrics_are_exact_for_an_ideal_order():
     assert metrics["oracle_neighbor_recall_at_1"] == 1
     assert metrics["oracle_neighbor_recall_at_8"] == 1.0
     assert metrics["oracle_regret"] == 0.0
+
+
+def test_stage3_csv_uses_frozen_compact_float_precision(tmp_path):
+    path = tmp_path / "metrics.csv"
+    write_csv(
+        str(path),
+        [{"metric": 0.12345678901234567, "bank_index": 17}],
+    )
+    with path.open(newline="", encoding="utf-8") as handle:
+        row = next(csv.DictReader(handle))
+    assert row["metric"] == "0.123456789012"
+    assert row["bank_index"] == "17"
