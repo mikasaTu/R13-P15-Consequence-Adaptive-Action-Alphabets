@@ -128,3 +128,10 @@ def test_stage3_release_method_inventory_is_exact():
     assert "C5_NCER_AA" in EXPECTED_METHODS
     assert "O_K64_true_effect_atlas" in EXPECTED_METHODS
     assert "candidate_order_permutation" in EXPECTED_METHODS
+
+
+def test_constant_ranking_scores_are_frozen_as_zero_correlation():
+    metrics = ranking_metrics(np.arange(256, dtype=np.float64), np.ones(256))
+    assert metrics["candidate_distance_spearman"] == 0.0
+    assert metrics["kendall_tau"] == 0.0
+    assert metrics["pairwise_accuracy"] == 0.5

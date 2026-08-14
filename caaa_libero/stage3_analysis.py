@@ -642,7 +642,9 @@ def train_all(project_root, output_root, device_name=None, scratch_root=SCRATCH_
 def _load_torch_state(path, model, device):
     import torch
 
-    payload = torch.load(path, map_location=device)
+    # All Stage 3 checkpoints are tensor state plus primitive metadata; use the
+    # restricted loader instead of Python's general pickle path.
+    payload = torch.load(path, map_location=device, weights_only=True)
     model.load_state_dict(payload["state_dict"])
     model.to(device)
     model.eval()

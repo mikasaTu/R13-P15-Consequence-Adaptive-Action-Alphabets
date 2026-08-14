@@ -126,8 +126,12 @@ def ranking_metrics(true_distance, predicted_distance, selected_bank_index=None,
         if selected_bank_index is None
         else int(selected_bank_index)
     )
-    spear = spearmanr(true_distance, predicted_distance).statistic
-    kendall = kendalltau(true_distance, predicted_distance, variant="b").statistic
+    if np.ptp(true_distance) == 0.0 or np.ptp(predicted_distance) == 0.0:
+        spear = 0.0
+        kendall = 0.0
+    else:
+        spear = spearmanr(true_distance, predicted_distance).statistic
+        kendall = kendalltau(true_distance, predicted_distance, variant="b").statistic
     if not np.isfinite(spear):
         spear = 0.0
     if not np.isfinite(kendall):
