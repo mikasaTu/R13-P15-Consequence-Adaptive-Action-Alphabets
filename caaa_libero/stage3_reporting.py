@@ -12,7 +12,7 @@ import sys
 import numpy as np
 
 from .pipeline import utc_now
-from .stage3_config import PRIMARY_K, TASK_IDS
+from .stage3_config import GATES, PRIMARY_K, TASK_IDS
 from .storage import atomic_json, atomic_text, sha256_file
 
 
@@ -98,17 +98,26 @@ def _table(headers, rows):
     return "\n".join(lines)
 
 
-def _summary(rows, method, level="pooled", task="ALL", phase="ALL", split=None):
+def _summary(
+    rows,
+    method,
+    level="pooled",
+    task="ALL",
+    phase="ALL",
+    split=None,
+    family="ALL",
+):
     for row in rows:
         if (
             row.get("method") == method
             and row.get("level") == level
             and row.get("task_id", "ALL") == task
             and row.get("phase", "ALL") == phase
+            and row.get("direction_family_id", "ALL") == family
             and (split is None or row.get("split") == split)
         ):
             return row
-    raise KeyError((method, level, task, phase, split))
+    raise KeyError((method, level, task, phase, split, family))
 
 
 def _relative_improvement(reference, method):
@@ -195,6 +204,9 @@ def _mechanism_audit(output_root, gate, bootstrap, retrieval_rows):
     realized = gate["development_realized_summary"]
     c5_r = _summary(retrieval_rows, "C5_NCER_AA", split=split)
     c5_q = _summary(realized, "C5_NCER_AA")
+    c3_r = _summary(retrieval_rows, "C3_NC_BIENCODER", split=split)
+    c3_q = _summary(realized, "C3_NC_BIENCODER")
+    baseline_q = _summary(realized, "B2_current_contact_kmeans")
 
     def comparison(label, control, code_path):
         control_r = _summary(retrieval_rows, control, split=split)
@@ -233,6 +245,36 @@ def _mechanism_audit(output_root, gate, bootstrap, retrieval_rows):
     c6_r = _summary(retrieval_rows, "C6_SOFT_MIXTURE_NCER_AA", split=split)
     c6_q = _summary(realized, "C6_SOFT_MIXTURE_NCER_AA")
     c4_q = _summary(realized, "C4_NC_PAIR_RANKER")
+    family_names = {
+        "0": "smooth DCT (train overrepresented)",
+        "1": "suffix-localized contact",
+        "2": "low-rank temporal-action",
+    }
+    family_rows = []
+    for family, label in family_names.items():
+        c3_family = _summary(
+            retrieval_rows,
+            "C3_NC_BIENCODER",
+            level="direction_family",
+            split=split,
+            family=family,
+        )
+        c4_family = _summary(
+            retrieval_rows,
+            "C4_NC_PAIR_RANKER",
+            level="direction_family",
+            split=split,
+            family=family,
+        )
+        family_rows.append(
+            (
+                label,
+                _fmt(c3_family["oracle_regret"]),
+                _fmt(c4_family["oracle_regret"]),
+                _fmt(c3_family["ndcg_at_16"]),
+                _fmt(c4_family["ndcg_at_16"]),
+            )
+        )
     audit = f"""# Stage 3 mechanism reverse audit
 
 This is a code-to-result localization audit of the frozen NCER-AA implementation. It does not propose a new idea.
@@ -253,12 +295,19 @@ Positive percentages mean C5 is better (lower error) than the named control.
 
 Direct pair ranking versus the best vector regressor ({best_vector}) changes oracle regret from {_fmt(vector['oracle_regret'])} to {_fmt(c4['oracle_regret'])} ({_pct(_relative_improvement(vector['oracle_regret'], c4['oracle_regret']))}). At realized execution, full-bank C4 error is {_fmt(c4_q['balanced_task_effect_error'])}; K=64 C5 error is {_fmt(c5_q['balanced_task_effect_error'])}. The difference between C4 and C5 localizes loss introduced by C3/FPS alphabet compression, not the pair scorer.
 
+The dominant signed transition is C3→C4, not vector→ranker: C3 regret {_fmt(c3_r['oracle_regret'])}, Spearman {_fmt(c3_r['candidate_distance_spearman'])}, NDCG@16 {_fmt(c3_r['ndcg_at_16'])}, and realized error {_fmt(c3_q['balanced_task_effect_error'])}; C4 changes these to {_fmt(c4['oracle_regret'])}, {_fmt(c4['candidate_distance_spearman'])}, {_fmt(c4['ndcg_at_16'])}, and {_fmt(c4_q['balanced_task_effect_error'])}. C3 alone improves realized error over B2 from {_fmt(baseline_q['balanced_task_effect_error'])} to {_fmt(c3_q['balanced_task_effect_error'])}, but the frozen C5 implementation discards C3 target-candidate distance after using C3 only to choose the 64-code atlas. C4 then reranks that atlas and reverses the C3 gain. Compression adds a smaller second loss: C4 {_fmt(c4_q['balanced_task_effect_error'])} → C5 {_fmt(c5_q['balanced_task_effect_error'])}, while normalized utilization collapses from {_fmt(c3_q['normalized_code_utilization'])} (C3) to {_fmt(c5_q['normalized_code_utilization'])} (C5).
+
+{_table(["Fresh support family", "C3 regret", "C4 regret", "C3 NDCG@16", "C4 NDCG@16"], family_rows)}
+
+Training reuse supplied 48/24/24 branches per state for smooth/suffix/low-rank families, while fresh development is 32/32/32. The largest C3→C4 regret increase is on suffix-localized contact support. Because C3 sees the same training distribution and remains strong across all three families, imbalance can amplify but cannot by itself explain the cross-encoder failure.
+
 The soft mixture changes K=64 realized error from {_fmt(c5_q['balanced_task_effect_error'])} (C5) to {_fmt(c6_q['balanced_task_effect_error'])} (C6), and oracle regret from {_fmt(c5_r['oracle_regret'])} to {_fmt(c6_r['oracle_regret'])}. Its router sees only permitted observable context and uses no hard demonstration phase.
 
 ## What the code can and cannot establish
 
 - Nominal conditioning can help because the same residual has different consequences under different base chunks; the nominal slice enters every proposed scorer before target/candidate comparison. A loss under no-nominal/shuffle controls supports this mechanism only if it is larger than run variance.
 - Pair/listwise training optimizes candidate ordering directly, whereas C1/C2 first reconstruct a masked multi-group consequence vector and only then induce distances. A ranking gain therefore localizes avoidance of vector-reconstruction error accumulation.
+- Here, that expected ranking advantage does not materialize consistently: C4 has slightly lower regret than the best vector regressor but worse NDCG/Recall, and it is much worse than the jointly trained C3 metric. All four calibration objective tuples produced poor C3-atlas+C4 regret, so the failure is not caused by one post-development objective choice.
 - History can matter near contact because two observable deltas and previous actions distinguish approach, sustained contact and departure without using a future phase label. The history control permutes values and masks as one bundle.
 - C3/FPS can lower performance when its learned embedding spreads candidates along directions irrelevant to the target-specific C4 scorer. C4 sees all 256 candidates; C5 sees only the 64 retained by C3, so C4→C5 degradation is the clean compression bottleneck.
 - C6 can help only when the observable router separates regimes that need different pairwise scalings. If C6 or its shuffled-route control matches C5, the extra experts did not provide mechanism-specific routing.
@@ -328,17 +377,23 @@ def write_stage3_report(project_root, output_root):
     gate_rows = []
     for name in ("A", "B", "C"):
         row = gates[name]
-        gate_rows.append((name, "PASS" if row["passed"] else "FAIL", gates["development_disposition"] if not row["passed"] else "—"))
+        gate_rows.append(
+            (
+                name,
+                "PASS" if row["passed"] else "FAIL",
+                GATES[name]["failure_disposition"],
+            )
+        )
     support = binding["support_separation"]
     max_cosine = max(support["maximum_cross_split_absolute_cosine_similarity"].values())
     answers = [
         ("1", "Nominal a0 materially improves prediction?", "YES" if gates["B"]["gain_retention"]["nominal_action_shuffled_within_task"] <= 0.5 else "NO", "Development nominal-shuffle gain retention=" + _fmt(gates["B"]["gain_retention"]["nominal_action_shuffled_within_task"])),
-        ("2", "Pair/listwise ranking beats vector regression?", "YES" if _number(_summary(retrieval, "C4_NC_PAIR_RANKER", split="development")["oracle_regret"]) < min(_number(_summary(retrieval, name, split="development")["oracle_regret"]) for name in ("C1_NC_VECTOR", "C2_NC_TEMPORAL_VECTOR")) else "NO", "Compare the learned-retrieval table."),
+        ("2", "Pair/listwise ranking beats vector regression?", "YES" if (_number(_summary(retrieval, "C4_NC_PAIR_RANKER", split="development")["oracle_regret"]) < min(_number(_summary(retrieval, name, split="development")["oracle_regret"]) for name in ("C1_NC_VECTOR", "C2_NC_TEMPORAL_VECTOR")) and _number(_summary(retrieval, "C4_NC_PAIR_RANKER", split="development")["ndcg_at_16"]) > max(_number(_summary(retrieval, name, split="development")["ndcg_at_16"]) for name in ("C1_NC_VECTOR", "C2_NC_TEMPORAL_VECTOR"))) else "NO", "C4 regret is slightly lower, but NDCG/Recall are worse and C3 is decisively better."),
         ("3", "Short observable history necessary?", "YES" if _number(_summary(retrieval, "history_shuffled", split="development")["oracle_regret"]) > _number(_summary(retrieval, "C5_NCER_AA", split="development")["oracle_regret"]) else "NO", "History bundle includes values and availability masks."),
         ("4", "Soft mixture beats one global model?", "YES" if _number(_summary(dev, "C6_SOFT_MIXTURE_NCER_AA")["balanced_task_effect_error"]) < _number(dev_c5["balanced_task_effect_error"]) else "NO", "Realized development effect."),
         ("5", "Learned retrieval recovers meaningful oracle fraction?", "YES" if gates["B"]["passed"] else "NO", "Frozen Gate B."),
         ("6", "Gain survives K=64 compression?", "YES" if gates["C"]["passed"] else "NO", "Frozen Gate C."),
-        ("7", "State/nominal/label shuffles destroy gain?", "YES" if max(gates["B"]["gain_retention"].values()) <= 0.5 else "NO", json.dumps(gates["B"]["gain_retention"], sort_keys=True)),
+        ("7", "State/nominal/label shuffles destroy gain?", "YES" if (gates["B"]["gain_retention"]["joint_state_nominal_shuffled_within_task"] <= 0.25 and gates["B"]["gain_retention"]["state_shuffled_within_task"] <= 0.50 and gates["B"]["gain_retention"]["nominal_action_shuffled_within_task"] <= 0.50 and gates["B"]["gain_retention"]["consequence_labels_shuffled"] <= 0.25) else "NO", json.dumps(gates["B"]["gain_retention"], sort_keys=True)),
         ("8", "Confirmed on episodes 40–49?", "NO", "Executed as " + bootstrap["evidence_label"] + "; strict untouched confirmation is false."),
         ("9", "Ready for small state-based BC?", "NO", "go_to_small_bc_available=false; final disposition=" + final),
     ]
@@ -429,7 +484,7 @@ K=32 and K=128 were evaluated only after `{final}` was frozen. Results are in `k
 
 - All failed gates and all negative control runs remain reported; no gate stopped later experiments.
 - One initial no-result local training process was interrupted before development inspection to make state/history shuffle controls permute their masks and contact indicator with the semantic bundle. It was rerun from scratch; no model-selection result was read from that interrupted process.
-- Constant-score predictors make rank correlation undefined; the frozen metric implementation records Spearman/Kendall as zero and retains the warning as a negative diagnostic.
+- Constant-score predictors make rank correlation undefined; the frozen metric implementation records Spearman/Kendall as zero. A diagnostic warning in the first development run led only to an explicit constant-range check with identical numeric semantics.
 - Controls use one member versus three-member primary ensembles, so small ablation differences are not cleanly attributable to one input.
 - C0 is a privileged hard-phase reproduction and only a conservative diagnostic/comparator; C5/C6 never consume the phase label.
 - Raw branch arrays are too large for ordinary Git and remain at the bound scratch paths; repository JSON records their byte sizes and SHA-256 markers, while all row-level decoded-action results are committed as CSV.
