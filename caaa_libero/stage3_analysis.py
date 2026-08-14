@@ -2155,7 +2155,13 @@ def evaluate_k_sensitivity(
                     )
                 )
     path = os.path.join(output_root, "k_sensitivity.csv")
-    write_csv(path, summarize_realized(rows, k=PRIMARY_K))
+    summaries = []
+    for k in (32, 128):
+        selected = [row for row in rows if row["method"].endswith("_K%d" % k)]
+        for summary in summarize_realized(selected, k=k):
+            summary["alphabet_k"] = int(k)
+            summaries.append(summary)
+    write_csv(path, summaries)
     return {
         "path": path,
         "primary_disposition": final["final_disposition"],

@@ -137,10 +137,26 @@ def _recorded_measure(runtime, episode, index):
     return runtime.measure()
 
 
-def _context_arrays(runtime, episode, record, base_actions):
+CONTEXT_SCHEMA_VERSION = "stage3-observable-context-v3-support-reference-initial"
+
+
+def _context_arrays(
+    runtime,
+    episode,
+    record,
+    base_actions,
+    current_vector,
+    current_mask,
+    current_contact,
+):
     index = int(record["snapshot_index"])
-    measured = []
-    for offset in (0, 1, 2):
+    measured = [
+        {
+            "vector": np.asarray(current_vector, dtype=np.float64),
+            "mask": np.asarray(current_mask, dtype=bool),
+        }
+    ]
+    for offset in (1, 2):
         source = max(index - offset, 0)
         measured.append(_recorded_measure(runtime, episode, source))
     current = measured[0]
@@ -153,6 +169,12 @@ def _context_arrays(runtime, episode, record, base_actions):
         else:
             deltas.append(measured[left]["vector"] - measured[right]["vector"])
             delta_masks.append(measured[left]["mask"] & measured[right]["mask"])
+    # Flattened LIBERO states omit solver warm starts, so historical contact
+    # force magnitudes cannot be reconstructed exactly.  Mark only those three
+    # delta coordinates unavailable instead of leaking restoration-order noise.
+    for delta, delta_mask in zip(deltas, delta_masks):
+        delta[41:44] = 0.0
+        delta_mask[41:44] = False
     previous_actions = np.zeros((2, config.ACTION_DIM), dtype=np.float64)
     previous_action_mask = np.zeros(2, dtype=bool)
     for slot, source in enumerate((index - 1, index - 2)):
@@ -166,7 +188,7 @@ def _context_arrays(runtime, episode, record, base_actions):
         "history_delta_mask": np.asarray(delta_masks, dtype=bool),
         "previous_action": previous_actions,
         "previous_action_mask": previous_action_mask,
-        "current_contact": np.asarray(current["contacts"]["relevant"], dtype=bool),
+        "current_contact": np.asarray(current_contact, dtype=bool),
         "nominal_continuous": runtime.continuous_chunk(base_actions),
         "nominal_full": np.asarray(base_actions, dtype=np.float64),
     }
@@ -186,6 +208,7 @@ def _write_context(path, record, arrays):
         path,
         {
             "kind": "stage3_observable_context",
+            "schema_version": CONTEXT_SCHEMA_VERSION,
             "task_id": record["task_id"],
             "episode_id": int(record["episode_id"]),
             "split": record["split"],
@@ -343,6 +366,9 @@ def collect_task(project_root, paths, output_root, task_id, splits, scratch_root
                 project_root, scratch_root, split, task_id, episode_id, phase
             )
             context_valid, context_evidence = validate_complete(context_path)
+            if context_valid and context_evidence.get("schema_version") != CONTEXT_SCHEMA_VERSION:
+                context_valid = False
+                context_evidence = "obsolete_context_schema"
             support_valid, support_evidence = validate_complete(support_path)
             candidate_valid, candidate_evidence = validate_complete(candidate_path)
             # Train support is always reused.  Train candidates 24-31 are reused.
@@ -368,11 +394,6 @@ def collect_task(project_root, paths, output_root, task_id, splits, scratch_root
             base_actions = np.asarray(
                 episode["actions"][index : index + config.CHUNK_HORIZON], dtype=np.float64
             )
-            if need_context:
-                arrays = _context_arrays(runtime, episode, record, base_actions)
-                context_marker = _write_context(context_path, record, arrays)
-            else:
-                context_marker = context_path + ".complete.json"
             snapshot = None
             nominal = None
             if need_support or need_candidate:
@@ -392,6 +413,20 @@ def collect_task(project_root, paths, output_root, task_id, splits, scratch_root
                 )
             else:
                 support_marker = support_path + ".complete.json"
+            if need_context:
+                with np.load(support_path, allow_pickle=False) as support_reference:
+                    arrays = _context_arrays(
+                        runtime,
+                        episode,
+                        record,
+                        base_actions,
+                        support_reference["initial"][0],
+                        support_reference["mask"][0],
+                        support_reference["contact_sequence"][0, 0],
+                    )
+                context_marker = _write_context(context_path, record, arrays)
+            else:
+                context_marker = context_path + ".complete.json"
             if need_candidate:
                 candidate_marker = _write_candidates(
                     candidate_path,
@@ -461,6 +496,13 @@ def verify_training_reuse(project_root, output_root, scratch_root=SCRATCH_ROOT):
         evidence = {}
         for kind, path in paths.items():
             valid, detail = validate_complete(path)
+            if (
+                valid
+                and kind == "context"
+                and detail.get("schema_version") != CONTEXT_SCHEMA_VERSION
+            ):
+                valid = False
+                detail = "obsolete_context_schema"
             evidence[kind] = {"path": path, "valid": bool(valid), "detail": detail}
             if not valid:
                 failures.append({"key": record["key"], "kind": kind, "detail": detail})

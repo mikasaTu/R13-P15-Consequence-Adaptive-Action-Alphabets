@@ -707,4 +707,3 @@ def save_model(path, model, metadata):
     torch = _torch()
     os.makedirs(os.path.dirname(path), exist_ok=True)
     torch.save({"state_dict": model.state_dict(), "metadata": metadata}, path)
-
