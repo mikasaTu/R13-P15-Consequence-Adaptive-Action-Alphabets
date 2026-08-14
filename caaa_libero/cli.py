@@ -103,6 +103,11 @@ def build_parser():
     parser.add_argument("--plan-limit", type=int, default=None)
     parser.add_argument("--bootstrap-replicates", type=int, default=10000)
     parser.add_argument(
+        "--episode-ids",
+        default=None,
+        help="Optional comma-separated episode IDs for resumable Stage 3 collection partitioning.",
+    )
+    parser.add_argument(
         "--splits",
         default=None,
         help="Comma-separated Stage 2 splits (train,calibration,development,confirmation).",
@@ -276,7 +281,20 @@ def main(argv=None):
             if not args.task_id or not splits:
                 raise ValueError("--task-id and --splits are required")
             result = collect_task(
-                _project_root(), paths, output_root, args.task_id, splits
+                _project_root(),
+                paths,
+                output_root,
+                args.task_id,
+                splits,
+                episode_ids=(
+                    None
+                    if not args.episode_ids
+                    else tuple(
+                        int(value.strip())
+                        for value in args.episode_ids.split(",")
+                        if value.strip()
+                    )
+                ),
             )
         elif args.command == "stage3-verify-training-reuse":
             from .stage3_collection import verify_training_reuse

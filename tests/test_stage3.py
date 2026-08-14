@@ -8,6 +8,7 @@ from caaa_libero.stage3_metrics import ranking_metrics, stable_fps, write_csv
 from caaa_libero.stage3_models import create_pair_ranker
 from caaa_libero.stage3_data import HISTORY_CONTROL_SLICES, STATE_CONTROL_SLICES
 from caaa_libero.stage3_reporting import EXPECTED_METHODS
+from caaa_libero.cli import build_parser
 from caaa_libero.stage3_config import (
     CONFIRMATION_INTEGRITY_AMENDMENT,
     DIRECTION_FAMILY_COUNTS,
@@ -135,3 +136,18 @@ def test_constant_ranking_scores_are_frozen_as_zero_correlation():
     assert metrics["candidate_distance_spearman"] == 0.0
     assert metrics["kendall_tau"] == 0.0
     assert metrics["pairwise_accuracy"] == 0.5
+
+
+def test_stage3_collection_episode_partition_is_explicit():
+    args = build_parser().parse_args(
+        [
+            "stage3-collect",
+            "--task-id",
+            "bowl_on_plate",
+            "--splits",
+            "confirmation",
+            "--episode-ids",
+            "45,46,47,48,49",
+        ]
+    )
+    assert args.episode_ids == "45,46,47,48,49"

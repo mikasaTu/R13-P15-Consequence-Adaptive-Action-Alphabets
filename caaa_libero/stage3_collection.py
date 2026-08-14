@@ -332,7 +332,15 @@ def _confirmation_collection_allowed(output_root):
     return bool(payload.get("method_settings_frozen_before_holdout"))
 
 
-def collect_task(project_root, paths, output_root, task_id, splits, scratch_root=SCRATCH_ROOT):
+def collect_task(
+    project_root,
+    paths,
+    output_root,
+    task_id,
+    splits,
+    scratch_root=SCRATCH_ROOT,
+    episode_ids=None,
+):
     """Collect all required target/bank branches for one task and split set."""
     requested = set(str(value) for value in splits)
     allowed = {"train", "calibration", "development", "confirmation"}
@@ -341,11 +349,21 @@ def collect_task(project_root, paths, output_root, task_id, splits, scratch_root
     if "confirmation" in requested and not _confirmation_collection_allowed(output_root):
         raise RuntimeError("Stage 3 holdout remains locked until method settings are frozen")
 
+    requested_episodes = (
+        None if episode_ids is None else {int(value) for value in episode_ids}
+    )
     records = [
         row
         for row in _load_records(output_root)
-        if row["task_id"] == task_id and row["split"] in requested
+        if row["task_id"] == task_id
+        and row["split"] in requested
+        and (
+            requested_episodes is None
+            or int(row["episode_id"]) in requested_episodes
+        )
     ]
+    if requested_episodes is not None and not records:
+        raise ValueError("episode filter selected no Stage 3 records")
     records.sort(key=lambda row: (int(row["episode_id"]), PHASES.index(row["phase"])))
     codebooks = _load_codebooks(output_root)
     action_bank = _load_action_bank(project_root)
@@ -456,10 +474,16 @@ def collect_task(project_root, paths, output_root, task_id, splits, scratch_root
     finally:
         runtime.close()
 
+    episode_label = (
+        "all"
+        if requested_episodes is None
+        else "episodes_" + "_".join(str(value) for value in sorted(requested_episodes))
+    )
     manifest_path = os.path.join(
         output_root,
         "work_manifests",
-        "collection_%s_%s.json" % (task_id, "_".join(sorted(requested))),
+        "collection_%s_%s_%s.json"
+        % (task_id, "_".join(sorted(requested)), episode_label),
     )
     atomic_json(
         manifest_path,
@@ -467,6 +491,11 @@ def collect_task(project_root, paths, output_root, task_id, splits, scratch_root
             "created_utc": utc_now(),
             "task_id": task_id,
             "splits": sorted(requested),
+            "episode_ids": (
+                None
+                if requested_episodes is None
+                else sorted(requested_episodes)
+            ),
             "scratch_root": scratch_root,
             "records": completed,
         },
