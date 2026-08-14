@@ -7,6 +7,7 @@ from caaa_libero.stage3 import generate_support_codebooks, support_separation_ev
 from caaa_libero.stage3_metrics import ranking_metrics, stable_fps, write_csv
 from caaa_libero.stage3_models import create_pair_ranker
 from caaa_libero.stage3_data import HISTORY_CONTROL_SLICES, STATE_CONTROL_SLICES
+from caaa_libero.stage3_reporting import EXPECTED_METHODS
 from caaa_libero.stage3_config import (
     CONFIRMATION_INTEGRITY_AMENDMENT,
     DIRECTION_FAMILY_COUNTS,
@@ -120,3 +121,10 @@ def test_shuffle_controls_include_semantic_availability_indicators():
         "previous_actions",
         "previous_action_mask",
     )
+
+
+def test_stage3_release_method_inventory_is_exact():
+    assert len(EXPECTED_METHODS) == 24
+    assert "C5_NCER_AA" in EXPECTED_METHODS
+    assert "O_K64_true_effect_atlas" in EXPECTED_METHODS
+    assert "candidate_order_permutation" in EXPECTED_METHODS

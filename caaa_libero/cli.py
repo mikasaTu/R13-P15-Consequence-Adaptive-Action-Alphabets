@@ -92,6 +92,7 @@ def build_parser():
         "stage3-evaluate-development",
         "stage3-evaluate-holdout",
         "stage3-k-sensitivity",
+        "stage3-finalize",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -318,6 +319,10 @@ def main(argv=None):
             result = evaluate_k_sensitivity(
                 _project_root(), output_root, device_name=args.device
             )
+        elif args.command == "stage3-finalize":
+            from .stage3_reporting import finalize_stage3
+
+            result = finalize_stage3(_project_root(), output_root)
         else:
             raise AssertionError(args.command)
     else:
