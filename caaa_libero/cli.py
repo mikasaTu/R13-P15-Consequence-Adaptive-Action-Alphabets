@@ -86,6 +86,11 @@ def build_parser():
         "stage3-refresh-freeze",
         "stage3-collect",
         "stage3-verify-training-reuse",
+        "stage3-train",
+        "stage3-freeze-calibration",
+        "stage3-evaluate-development",
+        "stage3-evaluate-holdout",
+        "stage3-k-sensitivity",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -275,6 +280,39 @@ def main(argv=None):
             from .stage3_collection import verify_training_reuse
 
             result = verify_training_reuse(_project_root(), output_root)
+        elif args.command == "stage3-train":
+            from .stage3_analysis import train_all
+
+            result = train_all(
+                _project_root(), output_root, device_name=args.device
+            )
+        elif args.command == "stage3-freeze-calibration":
+            from .stage3_analysis import freeze_calibration_selection
+
+            result = freeze_calibration_selection(
+                _project_root(), output_root, device_name=args.device
+            )
+        elif args.command == "stage3-evaluate-development":
+            from .stage3_analysis import evaluate_development
+
+            result = evaluate_development(
+                _project_root(), output_root, device_name=args.device
+            )
+        elif args.command == "stage3-evaluate-holdout":
+            from .stage3_analysis import evaluate_holdout
+
+            result = evaluate_holdout(
+                _project_root(),
+                output_root,
+                device_name=args.device,
+                bootstrap_replicates=args.bootstrap_replicates,
+            )
+        elif args.command == "stage3-k-sensitivity":
+            from .stage3_analysis import evaluate_k_sensitivity
+
+            result = evaluate_k_sensitivity(
+                _project_root(), output_root, device_name=args.device
+            )
         else:
             raise AssertionError(args.command)
     else:

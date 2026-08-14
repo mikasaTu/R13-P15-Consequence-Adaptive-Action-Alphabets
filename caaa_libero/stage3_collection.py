@@ -480,4 +480,3 @@ def verify_training_reuse(project_root, output_root, scratch_root=SCRATCH_ROOT):
     if failures:
         raise RuntimeError("Stage 3 training reuse validation failed")
     return {"path": destination, "states": len(rows), "passed": True}
-

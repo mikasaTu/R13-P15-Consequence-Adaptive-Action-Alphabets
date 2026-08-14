@@ -1,6 +1,9 @@
 import numpy as np
+import torch
 
 from caaa_libero.stage3 import generate_support_codebooks, support_separation_evidence
+from caaa_libero.stage3_metrics import ranking_metrics, stable_fps
+from caaa_libero.stage3_models import create_pair_ranker
 from caaa_libero.stage3_config import (
     CONFIRMATION_INTEGRITY_AMENDMENT,
     DIRECTION_FAMILY_COUNTS,
@@ -60,3 +63,35 @@ def test_stage3_user_amendment_preserves_scientific_labeling():
         "strict_untouched_confirmation_available"
     ]
     assert not CONFIRMATION_INTEGRITY_AMENDMENT["go_to_small_bc_available"]
+
+
+def test_pair_ranker_is_exactly_symmetric_and_zero_on_self():
+    torch.manual_seed(7)
+    model = create_pair_ranker(11)
+    context = torch.randn(5, 11)
+    left = torch.randn(5, 24)
+    right = torch.randn(5, 24)
+    assert torch.equal(model(context, left, right), model(context, right, left))
+    assert torch.equal(model(context, left, left), torch.zeros(5))
+
+
+def test_fps_is_invariant_to_candidate_order_when_ids_are_frozen():
+    rng = np.random.RandomState(8)
+    values = rng.normal(size=(40, 6))
+    ids = np.arange(40)
+    expected = stable_fps(values, 12, frozen_ids=ids)
+    permutation = rng.permutation(len(values))
+    observed = stable_fps(values[permutation], 12, frozen_ids=ids[permutation])
+    assert np.array_equal(expected, observed)
+
+
+def test_ranking_metrics_are_exact_for_an_ideal_order():
+    distance = np.linspace(0.0, 1.0, 256)
+    metrics = ranking_metrics(distance, distance)
+    assert metrics["pairwise_accuracy"] == 1.0
+    assert abs(metrics["candidate_distance_spearman"] - 1.0) < 1e-12
+    assert abs(metrics["kendall_tau"] - 1.0) < 1e-12
+    assert abs(metrics["ndcg_at_16"] - 1.0) < 1e-12
+    assert metrics["oracle_neighbor_recall_at_1"] == 1
+    assert metrics["oracle_neighbor_recall_at_8"] == 1.0
+    assert metrics["oracle_regret"] == 0.0
