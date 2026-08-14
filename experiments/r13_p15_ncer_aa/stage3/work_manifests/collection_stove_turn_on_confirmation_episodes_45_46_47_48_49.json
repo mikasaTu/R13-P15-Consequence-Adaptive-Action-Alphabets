@@ -1,0 +1,157 @@
+{
+  "created_utc": "2026-08-14T07:29:02.250521+00:00",
+  "episode_ids": [
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "records": [
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e45__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e45__free_space.npz.complete.json",
+      "key": "stove_turn_on__e45__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e45__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e45__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e45__pre_contact.npz.complete.json",
+      "key": "stove_turn_on__e45__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e45__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e45__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e45__contact_onset.npz.complete.json",
+      "key": "stove_turn_on__e45__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e45__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e45__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e45__post_contact.npz.complete.json",
+      "key": "stove_turn_on__e45__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e45__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e46__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e46__free_space.npz.complete.json",
+      "key": "stove_turn_on__e46__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e46__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e46__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e46__pre_contact.npz.complete.json",
+      "key": "stove_turn_on__e46__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e46__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e46__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e46__contact_onset.npz.complete.json",
+      "key": "stove_turn_on__e46__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e46__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e46__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e46__post_contact.npz.complete.json",
+      "key": "stove_turn_on__e46__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e46__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e47__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e47__free_space.npz.complete.json",
+      "key": "stove_turn_on__e47__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e47__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e47__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e47__pre_contact.npz.complete.json",
+      "key": "stove_turn_on__e47__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e47__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e47__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e47__contact_onset.npz.complete.json",
+      "key": "stove_turn_on__e47__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e47__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e47__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e47__post_contact.npz.complete.json",
+      "key": "stove_turn_on__e47__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e47__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e48__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e48__free_space.npz.complete.json",
+      "key": "stove_turn_on__e48__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e48__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e48__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e48__pre_contact.npz.complete.json",
+      "key": "stove_turn_on__e48__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e48__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e48__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e48__contact_onset.npz.complete.json",
+      "key": "stove_turn_on__e48__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e48__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e48__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e48__post_contact.npz.complete.json",
+      "key": "stove_turn_on__e48__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e48__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e49__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e49__free_space.npz.complete.json",
+      "key": "stove_turn_on__e49__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e49__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e49__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e49__pre_contact.npz.complete.json",
+      "key": "stove_turn_on__e49__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e49__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e49__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e49__contact_onset.npz.complete.json",
+      "key": "stove_turn_on__e49__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e49__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/stove_turn_on/stove_turn_on__e49__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/stove_turn_on/stove_turn_on__e49__post_contact.npz.complete.json",
+      "key": "stove_turn_on__e49__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/stove_turn_on/stove_turn_on__e49__post_contact.npz.complete.json"
+    }
+  ],
+  "scratch_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work",
+  "splits": [
+    "confirmation"
+  ],
+  "task_id": "stove_turn_on"
+}

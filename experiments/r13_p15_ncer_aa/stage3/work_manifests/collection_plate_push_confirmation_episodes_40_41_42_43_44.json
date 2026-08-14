@@ -1,0 +1,537 @@
+{
+  "created_utc": "2026-08-14T07:21:26.091970+00:00",
+  "episode_ids": [
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "records": [
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:03:53.516467+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e40__free_space.npz",
+        "payload_bytes": 254632,
+        "payload_sha256": "3c838ce68124b1167fe548fd409ca7b96b4ef761a03976a30543e37dc4269fe0",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:03:24.108556+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e40__free_space.npz",
+        "payload_bytes": 3893,
+        "payload_sha256": "e65f3b206020ceaaaa6c89bf6af64f876419556cf17047cc6b09385f97228e52",
+        "phase": "free_space",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e40__free_space",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:03:24.041865+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e40__free_space.npz",
+        "payload_bytes": 94134,
+        "payload_sha256": "a6f51234bf2e7425ca591221f8a7cfbddc403455b0ea2851068dc1468c2a739e",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:38.200492+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e40__pre_contact.npz",
+        "payload_bytes": 333140,
+        "payload_sha256": "ea8832e8b0b568388f10dcaf4e7ac6ec37553de4d86114d794cbe67a172df3ed",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:06.268480+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e40__pre_contact.npz",
+        "payload_bytes": 3789,
+        "payload_sha256": "3db02e3f6ef30357add0358e32864f6db2bcada65af1c0eaaad6c4707d1e8757",
+        "phase": "pre_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e40__pre_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:06.223007+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e40__pre_contact.npz",
+        "payload_bytes": 125067,
+        "payload_sha256": "56f676d777b7bd97445f0c978641d16d1cf79438436e43609b71dc5120bf5300",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:26.207412+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e40__contact_onset.npz",
+        "payload_bytes": 340126,
+        "payload_sha256": "1b30e6da234887c99b01b79f4312950d677d8591ce679dac5603a8a2cbbccd62",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:51.406919+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e40__contact_onset.npz",
+        "payload_bytes": 4038,
+        "payload_sha256": "4636813a7fc55c5f2114bea335fe67da019c4aaed9541ef8c9723732310edb71",
+        "phase": "contact_onset",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e40__contact_onset",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:51.332612+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e40__contact_onset.npz",
+        "payload_bytes": 128438,
+        "payload_sha256": "7f829e21843d30c334df68ab69ab3e2ec7058b00fd70f923f70986d58b38341f",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:06:12.125676+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e40__post_contact.npz",
+        "payload_bytes": 341039,
+        "payload_sha256": "5c1753ff3c46aab01ccac1d809b46aa01d8b9f72e5955190047adfcf72ca977f",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:38.891303+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e40__post_contact.npz",
+        "payload_bytes": 4031,
+        "payload_sha256": "da7b552713d41952078ac624c7cf9f3e7cca6e563974fdcbf2033b42ee6cf390",
+        "phase": "post_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e40__post_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:38.840498+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e40__post_contact.npz",
+        "payload_bytes": 127579,
+        "payload_sha256": "5fb191d6722d3d3ea4a6f22afbe765d7b44e78051eb9e7f70beaed02a363b9ed",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:06:56.058853+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e41__free_space.npz",
+        "payload_bytes": 259610,
+        "payload_sha256": "850217b6add6784d1b7c3a87898dc96a4956ea1aa18647831da52b1aec319cca",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:06:26.786315+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e41__free_space.npz",
+        "payload_bytes": 3933,
+        "payload_sha256": "e53c953a5c1fd658614ccb83d448d5e38484d658f2bb20108cb3d0c3c345dc67",
+        "phase": "free_space",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e41__free_space",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:06:26.696100+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e41__free_space.npz",
+        "payload_bytes": 98213,
+        "payload_sha256": "3d3093a59c36f082d9843bc9e27916706a4a4c488cfa146b9515a882f7249b49",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:39.749301+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e41__pre_contact.npz",
+        "payload_bytes": 324401,
+        "payload_sha256": "0e13f572ee316da785804d3f9f704fed2241d4ea823b31e037a96d264bdca526",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:08.152390+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e41__pre_contact.npz",
+        "payload_bytes": 3920,
+        "payload_sha256": "d78951b4c291e6049c39853fdb01260a49abe35ba54a836348b875be6c04b007",
+        "phase": "pre_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e41__pre_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:08.072960+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e41__pre_contact.npz",
+        "payload_bytes": 121536,
+        "payload_sha256": "99052a3018ae96a4fd7d585515b9ffbe1399c4fbf4ddd6759a2b4422acb921ff",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:08:31.921901+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e41__contact_onset.npz",
+        "payload_bytes": 339975,
+        "payload_sha256": "fe6f2c1e07e34b16329e9a1e7429eb7a188b570f5d09795e237dc8470b147332",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:54.630501+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e41__contact_onset.npz",
+        "payload_bytes": 3985,
+        "payload_sha256": "368d198e240647d0fd79c2f86f62160edb9e6129ae04f5ac4a8c8fa2e3b6d4f4",
+        "phase": "contact_onset",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e41__contact_onset",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:53.577192+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e41__contact_onset.npz",
+        "payload_bytes": 127688,
+        "payload_sha256": "998958161c099e988ca8b1a923d4bfdb3d8eee2e428c0f25f15a226fce85a7e9",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:09:21.832449+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e41__post_contact.npz",
+        "payload_bytes": 342341,
+        "payload_sha256": "22df06aee41c608d6b0376aea128ae863edd9d761f8ffd122e5704c9f6917757",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:08:45.573661+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e41__post_contact.npz",
+        "payload_bytes": 4123,
+        "payload_sha256": "04f6834a95b0c17751095ce25df76d1c2f4c739c130da5b2a7a892ea5cd56c42",
+        "phase": "post_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e41__post_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:08:45.535719+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e41__post_contact.npz",
+        "payload_bytes": 129384,
+        "payload_sha256": "ab2aedd1d6f2371ca2a4be4521046f68721114b40f5dd6ca0aa0a1ce3a37722a",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:04.045047+00:00",
+        "episode_id": 42,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e42__free_space.npz",
+        "payload_bytes": 258996,
+        "payload_sha256": "f1300a9955dbde0fdaf96402bdc252d91bf92c042276c47fb00e9b472a947395",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:09:35.118061+00:00",
+        "episode_id": 42,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e42__free_space.npz",
+        "payload_bytes": 3881,
+        "payload_sha256": "433e4bbc8e2599809242c27c56c69076993fee3076374dd8d26df8792fa95d50",
+        "phase": "free_space",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e42__free_space",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:09:35.045398+00:00",
+        "episode_id": 42,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e42__free_space.npz",
+        "payload_bytes": 97574,
+        "payload_sha256": "246ff43fe0f0191bb40d27fef032235eddd69ca5c71b07b96b9b9f7710606776",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:46.168237+00:00",
+        "episode_id": 42,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "plate_push__e42__pre_contact.npz",
+        "payload_bytes": 259302,
+        "payload_sha256": "1f12b6d8639887023b9dfa294ec2720f82e30d210e68e5db6d65cb9cd085da68",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "plate_push",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:16.527407+00:00",
+        "episode_id": 42,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "plate_push__e42__pre_contact.npz",
+        "payload_bytes": 3870,
+        "payload_sha256": "826a033d435242ad39da9f82f9d4c5b41f6ae1f27efe6e1bf449569a754e7332",
+        "phase": "pre_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      },
+      "key": "plate_push__e42__pre_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:16.460732+00:00",
+        "episode_id": 42,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "plate_push__e42__pre_contact.npz",
+        "payload_bytes": 97723,
+        "payload_sha256": "d44c3e530dc2bef74e12988469ca45237c950c105256f85552eed900d1e07606",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "plate_push"
+      }
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e42__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e42__contact_onset.npz.complete.json",
+      "key": "plate_push__e42__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e42__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e42__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e42__post_contact.npz.complete.json",
+      "key": "plate_push__e42__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e42__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e43__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e43__free_space.npz.complete.json",
+      "key": "plate_push__e43__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e43__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e43__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e43__pre_contact.npz.complete.json",
+      "key": "plate_push__e43__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e43__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e43__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e43__contact_onset.npz.complete.json",
+      "key": "plate_push__e43__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e43__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e43__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e43__post_contact.npz.complete.json",
+      "key": "plate_push__e43__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e43__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e44__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e44__free_space.npz.complete.json",
+      "key": "plate_push__e44__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e44__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e44__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e44__pre_contact.npz.complete.json",
+      "key": "plate_push__e44__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e44__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e44__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e44__contact_onset.npz.complete.json",
+      "key": "plate_push__e44__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e44__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/plate_push/plate_push__e44__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/plate_push/plate_push__e44__post_contact.npz.complete.json",
+      "key": "plate_push__e44__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/plate_push/plate_push__e44__post_contact.npz.complete.json"
+    }
+  ],
+  "scratch_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work",
+  "splits": [
+    "confirmation"
+  ],
+  "task_id": "plate_push"
+}

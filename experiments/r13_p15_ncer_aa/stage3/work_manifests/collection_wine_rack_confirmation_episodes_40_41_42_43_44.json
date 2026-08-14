@@ -1,0 +1,499 @@
+{
+  "created_utc": "2026-08-14T07:22:55.889600+00:00",
+  "episode_ids": [
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "records": [
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:03:54.832132+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e40__free_space.npz",
+        "payload_bytes": 267033,
+        "payload_sha256": "6ebee1254c6ca914dc5697dccc5bda5f79e52d6e602563ec998536b38b173521",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:03:24.580809+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e40__free_space.npz",
+        "payload_bytes": 3974,
+        "payload_sha256": "49dbfe13ac179af121ab7451cf1a326a2f5f9a1d57fd759e2597ec552880f7d4",
+        "phase": "free_space",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e40__free_space",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:03:24.495235+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e40__free_space.npz",
+        "payload_bytes": 101326,
+        "payload_sha256": "ccf2dad6816c558e0c7d7947314498eb9cb780700ef4932104d6dc4328669004",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:43.714490+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e40__pre_contact.npz",
+        "payload_bytes": 359521,
+        "payload_sha256": "2fdf32f5ecb0fd379fa0bccd25d5a72351d67b7d8564e0abec98fbf3fd39f876",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:08.272900+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e40__pre_contact.npz",
+        "payload_bytes": 3920,
+        "payload_sha256": "5ffa4c698636288c3605e55d39b81c0a518fcf8dde389967c801a2f4dfc1fd20",
+        "phase": "pre_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e40__pre_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:04:08.198610+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e40__pre_contact.npz",
+        "payload_bytes": 135281,
+        "payload_sha256": "892ca0f501c116f7533a168192d3c3b126cf154131481948c26995a432d055b6",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:41.217505+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e40__contact_onset.npz",
+        "payload_bytes": 356029,
+        "payload_sha256": "c8d6ca351058a2e27b20a32a4edec74f55882d1b8c85cac44641394fb2334b8e",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:00.615943+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e40__contact_onset.npz",
+        "payload_bytes": 4132,
+        "payload_sha256": "fc3311da29a7eb11b09f51e5d2be5b9912a825c91467e1af574f9da5e326786a",
+        "phase": "contact_onset",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e40__contact_onset",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:00.558824+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e40__contact_onset.npz",
+        "payload_bytes": 132555,
+        "payload_sha256": "5d62ba6771facc0b70127711a8ead615f29d21c60e8168de239fbea98a1b70f2",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:06:42.847838+00:00",
+        "episode_id": 40,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e40__post_contact.npz",
+        "payload_bytes": 362065,
+        "payload_sha256": "c7ee3d5b8ba7ef458d202b0ea8a0a37d7e7634fb2504d8418e8fa40a168be778",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:58.693415+00:00",
+        "episode_id": 40,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e40__post_contact.npz",
+        "payload_bytes": 4235,
+        "payload_sha256": "652205f24f0e8e19214ae17872ddf55c687162f6a4d5b2187b6cea2851c7f743",
+        "phase": "post_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e40__post_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:05:58.633811+00:00",
+        "episode_id": 40,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e40__post_contact.npz",
+        "payload_bytes": 136804,
+        "payload_sha256": "56a8b244f66cb0b716da0f188387106d084215b45b685c623f234e2bea33a32a",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:25.836984+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e41__free_space.npz",
+        "payload_bytes": 265487,
+        "payload_sha256": "f18c050182d257297b23fac897ee8fb16a8158a1e69c9cf2e433c5d5f581e17a",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:06:56.426313+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e41__free_space.npz",
+        "payload_bytes": 3768,
+        "payload_sha256": "2b2f0680b25e9d35bb6d1085c5e2ba661e26c6a6ededf76c11096919b7da6812",
+        "phase": "free_space",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e41__free_space",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:06:56.381929+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e41__free_space.npz",
+        "payload_bytes": 100038,
+        "payload_sha256": "9c57716933c789d3a7521455f376ecdcb54dfe3a793206054900ec6f042dade8",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:08:21.187238+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e41__pre_contact.npz",
+        "payload_bytes": 357985,
+        "payload_sha256": "8a928386df9fa7589fda55a35132e4f38f7f6edb764e349029b6226d8e09a2d5",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:38.867472+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e41__pre_contact.npz",
+        "payload_bytes": 4248,
+        "payload_sha256": "e7a5eb8669af421db3174acf27c1bebc2dd7128e8991b116bae979e8cc97128b",
+        "phase": "pre_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e41__pre_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:07:38.731061+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e41__pre_contact.npz",
+        "payload_bytes": 135292,
+        "payload_sha256": "2176b7b81c875911b04f59b7c2306f63b2a2aecb70ea0559f346b30281efb87a",
+        "phase": "pre_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:09:18.405481+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e41__contact_onset.npz",
+        "payload_bytes": 356434,
+        "payload_sha256": "508fe00532525764b60dbf8474e248d57abf05df5430e5a6f8b0841580f98c7c",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:08:43.987834+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e41__contact_onset.npz",
+        "payload_bytes": 4186,
+        "payload_sha256": "79af20772dbfad16ec341a58aa1f13271589e3143dbc1cab08f1f4b0dcd960a9",
+        "phase": "contact_onset",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e41__contact_onset",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:08:43.758639+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e41__contact_onset.npz",
+        "payload_bytes": 133801,
+        "payload_sha256": "a8c97d2fabc569073dd67c33a2ff6d2ce522b406bfba9275b784ad8adc068966",
+        "phase": "contact_onset",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:13.522726+00:00",
+        "episode_id": 41,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e41__post_contact.npz",
+        "payload_bytes": 357292,
+        "payload_sha256": "05387b12977fdcd03739daf061d27b2c9de4590143d4bf7139feb5875d03d255",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:09:33.375432+00:00",
+        "episode_id": 41,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e41__post_contact.npz",
+        "payload_bytes": 4178,
+        "payload_sha256": "4847dcd7721550aa180f769e7bf7af848ce664aae417532bdacb34434f7c0904",
+        "phase": "post_contact",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e41__post_contact",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:09:33.284698+00:00",
+        "episode_id": 41,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e41__post_contact.npz",
+        "payload_bytes": 134245,
+        "payload_sha256": "d48d97ac022a17e74adcf917bca5de3ea299cdcd1f83b59e16c9df1d1e1da13b",
+        "phase": "post_contact",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate": {
+        "branches": 257,
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:59.511114+00:00",
+        "episode_id": 42,
+        "kind": "stage3_common_action_bank_effects",
+        "payload": "wine_rack__e42__free_space.npz",
+        "payload_bytes": 266620,
+        "payload_sha256": "cbad3772eca1b0de05bf14a09bcff9585c18e942f7be81174c59734221f3dacb",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "wine_rack",
+        "valid_bank_size": 256
+      },
+      "context": {
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:29.863712+00:00",
+        "episode_id": 42,
+        "future_or_outcome_input_present": false,
+        "kind": "stage3_observable_context",
+        "payload": "wine_rack__e42__free_space.npz",
+        "payload_bytes": 3851,
+        "payload_sha256": "f2e136db10f937d00b8ef481e675b6f80e4e454b38b15fbf2d4016d4c93e49cc",
+        "phase": "free_space",
+        "schema_version": "stage3-observable-context-v3-support-reference-initial",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      },
+      "key": "wine_rack__e42__free_space",
+      "status": "resumed",
+      "support": {
+        "branches": 97,
+        "complete": true,
+        "created_utc": "2026-08-14T07:10:29.816777+00:00",
+        "episode_id": 42,
+        "kind": "stage3_split_fixed_fresh_support",
+        "payload": "wine_rack__e42__free_space.npz",
+        "payload_bytes": 101114,
+        "payload_sha256": "96b029f16ca7261e2f2d9f58a168d762558dcc77df0765e449394db03dc46526",
+        "phase": "free_space",
+        "split": "confirmation",
+        "task_id": "wine_rack"
+      }
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e42__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e42__pre_contact.npz.complete.json",
+      "key": "wine_rack__e42__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e42__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e42__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e42__contact_onset.npz.complete.json",
+      "key": "wine_rack__e42__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e42__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e42__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e42__post_contact.npz.complete.json",
+      "key": "wine_rack__e42__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e42__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e43__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e43__free_space.npz.complete.json",
+      "key": "wine_rack__e43__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e43__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e43__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e43__pre_contact.npz.complete.json",
+      "key": "wine_rack__e43__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e43__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e43__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e43__contact_onset.npz.complete.json",
+      "key": "wine_rack__e43__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e43__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e43__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e43__post_contact.npz.complete.json",
+      "key": "wine_rack__e43__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e43__post_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e44__free_space.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e44__free_space.npz.complete.json",
+      "key": "wine_rack__e44__free_space",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e44__free_space.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e44__pre_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e44__pre_contact.npz.complete.json",
+      "key": "wine_rack__e44__pre_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e44__pre_contact.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e44__contact_onset.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e44__contact_onset.npz.complete.json",
+      "key": "wine_rack__e44__contact_onset",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e44__contact_onset.npz.complete.json"
+    },
+    {
+      "candidate_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/candidate_shards/confirmation/wine_rack/wine_rack__e44__post_contact.npz.complete.json",
+      "context_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/context_shards/wine_rack/wine_rack__e44__post_contact.npz.complete.json",
+      "key": "wine_rack__e44__post_contact",
+      "status": "created",
+      "support_marker": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work/support_shards/confirmation/wine_rack/wine_rack__e44__post_contact.npz.complete.json"
+    }
+  ],
+  "scratch_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work",
+  "splits": [
+    "confirmation"
+  ],
+  "task_id": "wine_rack"
+}
