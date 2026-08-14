@@ -87,3 +87,28 @@ The report retains all development failures: one interrupted inefficient
 decoder implementation, one dtype bug in an ad-hoc validator, and one
 successful-but-non-strict JSON screen superseded by a deterministic strict
 JSON rerun. None changed a simulator payload or the scientific disposition.
+
+## Stage 3 validation
+
+On 2026-08-14 UTC, after the full confirmation collection and before release,
+the current suite passed in both relevant runtimes:
+
+| Environment | Command | Result |
+| --- | --- | --- |
+| analysis Python 3.11 | `CUDA_VISIBLE_DEVICES='' PYTHONPATH=. /mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python -m pytest -q` | 30 passed in 10.86 s |
+| frozen LIBERO Python 3.8 | `MUJOCO_GL=glx CUDA_VISIBLE_DEVICES='' PYTHONPATH=. /mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python -m pytest -q tests/test_stage3.py` | 12 passed in 4.12 s |
+| analysis Python 3.11 | `python -m py_compile caaa_libero/*.py` | passed |
+
+The Stage 3 release verifier additionally checks all 544 bound states and
+their context/support/candidate shard hashes; 256/256 reused training states;
+pair-score symmetry and exact zero self-distance; the exact 147,456
+development and 368,640 holdout row counts; all 24 methods; candidate-order
+invariance; 10,000 episode-clustered bootstrap replicates; post-disposition
+K=32/128 sensitivity; one-visible-GPU provenance; zero PAI jobs; and no policy
+training. Its machine-readable output is
+`experiments/r13_p15_ncer_aa/stage3/STAGE3_RELEASE_VERIFICATION.json`.
+
+The confirmation collection completed all 160 states (4 tasks x 10 episodes x
+4 phases), but is deliberately labeled `FORCED_EXPLORATORY_HOLDOUT` because a
+pre-result deterministic replay probe violated the literal untouched rule.
+This integrity failure is retained and `GO_TO_SMALL_BC` remains unavailable.

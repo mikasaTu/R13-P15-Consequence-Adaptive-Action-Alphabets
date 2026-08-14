@@ -1,10 +1,11 @@
-# R13-P15 CAAA-v2 — LIBERO Stage 1 and Stage 1.5
+# R13-P15 consequence-adaptive action alphabets — LIBERO Stages 1–3
 
-This repository contains the complete Stage 1 mechanism audit for
-**Consequence-Riemannian Action Alphabets (CAAA-v2)** on LIBERO. It includes
-the implementation, tests, frozen preregistration, deterministic replay data,
-all intermediate shards, fitted Jacobians and codebooks, realized simulation
-results, bootstrap output, PAI launch provenance, and the Stage 1/1.5 reports.
+This repository contains the complete staged audit of consequence-adaptive
+action alphabets on LIBERO: CAAA-v2 (Stage 1), failure localization (Stage
+1.5), the nonlinear consequence atlas (Stage 2), and nominal-conditioned
+effect ranking (Stage 3). It includes implementations, frozen protocols,
+deterministic replay evidence, learned models, row-level realized simulation
+results, controls, bootstrap output, and reports.
 
 ## Result
 
@@ -35,6 +36,35 @@ gain. The preregistered stopping rule therefore prohibited fresh episodes
 
 The complete account is in
 [`STAGE1_5_REPORT.md`](experiments/r13_p15_caaa_v2/stage1_5/STAGE1_5_REPORT.md).
+
+## Stage 2 fresh-support result
+
+**`ORACLE_ONLY_NO_DEPLOYABLE_MODEL`**
+
+The true-effect oracle generalized strongly to fresh episodes and directions:
+balanced realized-effect error fell from 0.332598 to 0.133410 (59.89%; 4/4
+tasks). The learned NCEA predictor nevertheless lost 14.98% prediction MSE
+against linear-J, improved 0/3 contact-sensitive tasks, and closed -0.72% of
+the oracle gap. Gate B failed, so confirmation and policy training stayed
+locked. See
+[`STAGE2_REPORT.md`](experiments/r13_p15_ncea/stage2/STAGE2_REPORT.md).
+
+## Stage 3 nominal-conditioned ranking result
+
+**`ORACLE_ONLY_NO_LEARNABLE_RANKER`**
+
+All planned experiments were executed even after a gate failed. On development
+episodes, the K=64 true-effect oracle improved over B2 by 55.32% (4/4 tasks),
+but the selected C4 pair ranker worsened oracle regret by 31.18% relative to
+C3 and reduced NDCG@16 by 0.17468. C5 then worsened realized effect error by
+21.68% versus B2. The required episodes 40–49 run was completed as
+`FORCED_EXPLORATORY_HOLDOUT`: C5 was 22.90% worse than B2 and the pooled paired
+95% CI for `B2 error - C5 error` was [-0.07588, -0.04945]. K=32/128 did not
+rescue the result. No policy or VLA was trained and no PAI job was submitted.
+
+The scientific report and code-to-result mechanism localization are in
+[`STAGE3_REPORT.md`](experiments/r13_p15_ncer_aa/stage3/STAGE3_REPORT.md) and
+[`MECHANISM_REVERSE_AUDIT.md`](experiments/r13_p15_ncer_aa/stage3/MECHANISM_REVERSE_AUDIT.md).
 
 ## Frozen scope
 
@@ -71,6 +101,8 @@ experiments/r13_p15_caaa_v2/
   stage1/                            complete formal outputs and intermediates
   stage1_5/                          failure-localization outputs and intermediates
   stage1_local_smoke/                development-machine smoke evidence
+experiments/r13_p15_ncea/stage2/     fresh-support nonlinear-atlas audit
+experiments/r13_p15_ncer_aa/stage3/  nominal-conditioned ranking audit
 provenance/
   tests/                             machine-readable pytest results
   pai/                               submitted/read-back PAI records and sentinels
@@ -88,6 +120,7 @@ artifacts and documentation without rewriting the frozen formal outputs.
 python scripts/verify_published_artifacts.py
 python scripts/verify_stage1_5_artifacts.py --full-stage1-hash
 python -m pytest -q
+python -m caaa_libero.cli stage3-finalize
 ```
 
 The Stage 1 command is standard-library only. It checks the report-declared

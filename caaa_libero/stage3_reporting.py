@@ -577,7 +577,7 @@ K=32 and K=128 were evaluated only after `{final}` was frozen. Results are in `k
 
 ## Recommended next experiment
 
-Do not start BC from this audit. Follow the exact final disposition: if a development gate failed, localize that first failed mechanism using the frozen per-task/per-phase/family tables; if all development gates passed, repeat the holdout with a genuinely untouched episode set before considering a small state-based BC. Do not launch ACT, Diffusion Policy, SmolVLA or pi0.5 automatically.
+Do not start BC from this audit. The bounded next validation is a preregistered C3-only decoder diagnostic on genuinely untouched episodes: retain the already implemented bi-encoder distance through final action selection, compare it directly with B2 and the true-effect oracle, and separately audit the existing C4 hard-negative/objective path on suffix-localized support. This tests the localized C3-to-C4 reversal without introducing a new policy or claiming a new idea. Do not launch ACT, Diffusion Policy, SmolVLA or pi0.5 automatically.
 """
     atomic_text(os.path.join(output_root, "STAGE3_REPORT.md"), report)
     feishu_report = f"""# 实验报告
