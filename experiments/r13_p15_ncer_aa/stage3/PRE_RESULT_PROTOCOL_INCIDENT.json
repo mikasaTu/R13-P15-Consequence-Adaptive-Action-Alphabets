@@ -1,0 +1,40 @@
+{
+  "incident_id": "stage3-pre-result-confirmation-replay-001",
+  "discovered_utc": "2026-08-14T05:17:05Z",
+  "stage": "pre-result protocol freeze",
+  "scope": {
+    "task_count": 4,
+    "episode_ids": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+    "phases_per_episode": 4,
+    "snapshot_count": 160,
+    "fixed_support_direction_id": 0,
+    "fixed_support_radius_id": 0,
+    "fixed_support_sign": 1,
+    "perturbed_executions_per_snapshot": 2,
+    "total_perturbed_branch_executions": 320
+  },
+  "trigger": "The initial deterministic replay implementation compared a fixed perturbed branch before and after nominal executions.",
+  "data_exposure": {
+    "target_to_candidate_effect_distance_computed": false,
+    "method_metric_computed": false,
+    "selected_bank_action_computed": false,
+    "individual_physical_effect_result_displayed_or_inspected": false,
+    "aggregate_method_result_displayed_or_inspected": false,
+    "deterministic_equality_metrics_persisted": true
+  },
+  "literal_protocol_rule_violated": "Do not execute confirmation target or candidate branches until all development gates pass.",
+  "immediate_action": "The run was interrupted before INPUT_BINDING completion and the replay implementation was changed to nominal-only repetitions.",
+  "corrected_replay_contract": {
+    "nominal_executions_per_snapshot": 3,
+    "target_or_candidate_executions_per_snapshot": 0,
+    "checks": ["same_action_twice", "same_action_third_execution"]
+  },
+  "frozen_evidentiary_consequence": {
+    "strict_untouched_confirmation_available": false,
+    "all_development_gates_pass_label": "PRE_RESULT_REPLAY_EXPOSED_HOLDOUT",
+    "any_development_gate_fail_label": "FORCED_EXPLORATORY_HOLDOUT",
+    "go_to_small_bc_available": false
+  },
+  "method_selection_influence": "none; no method result existed or was inspected before this incident was frozen",
+  "remediation_does_not_delete_or_relabel_the_incident": true
+}

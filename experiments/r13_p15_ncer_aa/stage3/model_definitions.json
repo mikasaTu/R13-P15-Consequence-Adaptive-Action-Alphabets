@@ -1,0 +1,237 @@
+{
+  "candidate_bank_size": 256,
+  "candidate_permutation": {
+    "required_exact_selected_bank_index_invariance": true,
+    "tie_break": "lowest frozen bank index"
+  },
+  "comparison_selection": {
+    "development_or_holdout_cannot_select_a_comparator": true,
+    "strongest_deployable_baseline": "lowest pooled calibration BALANCED_TASK_EFFECT among B1-B5 and C0",
+    "strongest_learned_or_action_baseline_for_gate_b": "lowest pooled calibration oracle regret among B3-B5, C0-C3"
+  },
+  "confirmation_integrity_amendment": {
+    "all_development_gates_pass_label": "PRE_RESULT_REPLAY_EXPOSED_HOLDOUT",
+    "any_development_gate_fail_label": "FORCED_EXPLORATORY_HOLDOUT",
+    "go_to_small_bc_available": false,
+    "incident_id": "stage3-pre-result-confirmation-replay-001",
+    "reason": "A fixed confirmation support perturbation was executed twice per snapshot for deterministic replay before development gates. No effect distance, method score, or selected action was computed or inspected, but branch execution alone breaks the frozen untouched rule.",
+    "strict_untouched_confirmation_available": false
+  },
+  "execution_amendment": {
+    "execute_all_development_methods_after_gate_failure": true,
+    "execute_episodes_40_49_after_gate_failure": true,
+    "failed_gate_holdout_can_unlock_small_bc": false,
+    "failed_gate_holdout_is_confirmatory": false,
+    "failed_gate_holdout_label": "FORCED_EXPLORATORY_HOLDOUT",
+    "reason": "The user explicitly required every planned experiment to be run and forbade gate-triggered early stopping."
+  },
+  "forbidden_inputs": [
+    "future state or consequence",
+    "target/candidate simulator outcome at inference",
+    "episode outcome",
+    "target ID or bank ID",
+    "demonstration-derived future phase label",
+    "confirmation result",
+    "post-execution oracle contact mode"
+  ],
+  "gates": {
+    "A": {
+      "contact_sensitive_tasks_improved_min": 2,
+      "failure_disposition": "REJECT_CONSEQUENCE_EQUIVALENCE_ON_STRICT_SUPPORT",
+      "oracle_relative_gain_min": 0.2,
+      "tasks_improved_min": 3
+    },
+    "B": {
+      "candidate_permutation_exact_invariance": true,
+      "contact_sensitive_tasks_improved_min": 2,
+      "failure_disposition": "ORACLE_ONLY_NO_LEARNABLE_RANKER",
+      "joint_state_nominal_shuffle_gain_retention_max": 0.25,
+      "label_shuffle_must_not_reproduce_gain": true,
+      "ndcg16_absolute_gain_min": 0.1,
+      "nominal_shuffle_gain_retention_max": 0.5,
+      "oracle_regret_relative_gain_min": 0.25,
+      "recall8_min": 0.5,
+      "state_shuffle_gain_retention_max": 0.5,
+      "tasks_improved_min": 3
+    },
+    "C": {
+      "action_rmse_degradation_max": 0.2,
+      "bowl_on_plate_max_degradation": 0.05,
+      "clipping_rate_max": 0.0,
+      "contact_preservation_drop_max_points": 0.01,
+      "contact_sensitive_tasks_improved_min": 2,
+      "failure_disposition": "LEARNABLE_RETRIEVAL_BUT_ALPHABET_COMPRESSION_FAILED",
+      "normalized_utilization_min": 0.25,
+      "oracle_gap_fraction_closed_min": 0.25,
+      "pass_disposition": "DEVELOPMENT_PASSED_CONFIRMATION_REQUIRED",
+      "privileged_phase_forbidden": true,
+      "realized_relative_gain_min": 0.1,
+      "tasks_improved_min": 3
+    },
+    "GO": {
+      "action_rmse_degradation_max": 0.2,
+      "clipping_rate_max": 0.0,
+      "contact_preservation_drop_max_points": 0.01,
+      "contact_sensitive_tasks_improved_min": 2,
+      "failure_disposition": "CONFIRMATION_FAILED",
+      "normalized_utilization_min": 0.25,
+      "paired_ci_lower_bound_exclusive": 0.0,
+      "pass_disposition": "GO_TO_SMALL_BC",
+      "pooled_gain_min": 0.1,
+      "shuffle_gain_retention_max": 0.25,
+      "tasks_improved_min": 3
+    }
+  },
+  "mechanism_controls": [
+    "no_nominal_action",
+    "nominal_action_shuffled_within_task",
+    "state_shuffled_within_task",
+    "joint_state_nominal_shuffled_within_task",
+    "history_shuffled",
+    "consequence_labels_shuffled",
+    "soft_routing_labels_shuffled",
+    "action_only_pair_ranker",
+    "candidate_order_permutation"
+  ],
+  "models": {
+    "B1": "Train-only covariance-whitened residual K=64 medoids.",
+    "B2": "Current observable contact-conditioned residual K=64 k-means medoids.",
+    "B2_PRIV": "Demonstration hard-phase residual k-means; diagnostic only.",
+    "B3": "Per-state valid-bank deterministic action-space FPS medoids.",
+    "B4": "State-conditioned action-only VQ trained for action reconstruction.",
+    "B5": "Local kernel consequence interpolation over state, nominal chunk, and residual.",
+    "C0": "Exact Stage 2 NCEA input and smooth-L1 plus contact loss reproduction.",
+    "C1": "Observable history, nominal chunk and residual to balanced consequence vector/contact logits.",
+    "C2": "C1 with separate small temporal encoders for nominal and residual Hx6 sequences.",
+    "C3": "Nominal-conditioned bi-encoder with symmetric Euclidean effect-equivalence distance.",
+    "C4": "Nominal-conditioned symmetric pair cross-encoder with exact self-distance zero.",
+    "C5": "C3 effect-space K=64 FPS/medoids followed by C4 reranking.",
+    "C6": "Observable-history soft mixture of pair-ranker experts; no true phase routing."
+  },
+  "pair_construction": {
+    "contact_change_max": 8,
+    "easy_random_negatives_primary": false,
+    "hard_negative_ranks_inclusive": [
+      9,
+      32
+    ],
+    "oracle_top_positives": 8,
+    "random_negatives": 8,
+    "self_distance_target": 0.0,
+    "symmetric": true
+  },
+  "permitted_inputs": [
+    "current observable state vector and mask",
+    "previous two observable state deltas and masks",
+    "previous two executed actions and availability masks",
+    "current observable contact indicator",
+    "nominal H=4 action chunk",
+    "target/candidate residual chunks",
+    "task identity"
+  ],
+  "primary_k": 64,
+  "primary_metric": "BALANCED_TASK_EFFECT",
+  "project_id": "r13_p15_ncer_aa_stage3",
+  "training": {
+    "B4": {
+      "consequence_labels_used": false,
+      "hidden": [
+        128,
+        128
+      ],
+      "latent_dim": 32
+    },
+    "B5": {
+      "bandwidths": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "neighbors": [
+        3,
+        5,
+        9
+      ],
+      "selection": "calibration BALANCED_TASK_EFFECT"
+    },
+    "C0_stage2_reproduction": {
+      "batch_size": 512,
+      "ensemble_size": 5,
+      "hidden": [
+        128,
+        128
+      ],
+      "learning_rate": 0.001,
+      "loss": "smooth_l1 normalized effect + 0.25 contact cross entropy",
+      "max_epochs": 160,
+      "patience": 20,
+      "weight_decay": 1e-05
+    },
+    "architecture_selection": "one frozen seed evaluates each candidate; two additional members are trained only for the selected candidate",
+    "control_ensemble_size": 1,
+    "embedding_dim": 32,
+    "ensemble_size": 3,
+    "learning_rate": 0.0003,
+    "max_epochs": 60,
+    "pair_hidden": [
+      192,
+      192
+    ],
+    "patience": 8,
+    "ranking_objective_candidates": [
+      {
+        "lambda_distance": 1.0,
+        "lambda_listwise": 0.5,
+        "lambda_pairwise": 0.5,
+        "name": "balanced",
+        "tau_model": 0.15,
+        "tau_true": 0.15
+      },
+      {
+        "lambda_distance": 1.0,
+        "lambda_listwise": 0.25,
+        "lambda_pairwise": 0.25,
+        "name": "distance_heavy",
+        "tau_model": 0.2,
+        "tau_true": 0.15
+      },
+      {
+        "lambda_distance": 0.5,
+        "lambda_listwise": 0.5,
+        "lambda_pairwise": 1.0,
+        "name": "ranking_heavy",
+        "tau_model": 0.1,
+        "tau_true": 0.1
+      },
+      {
+        "lambda_distance": 0.5,
+        "lambda_listwise": 1.0,
+        "lambda_pairwise": 0.5,
+        "name": "listwise_heavy",
+        "tau_model": 0.2,
+        "tau_true": 0.2
+      }
+    ],
+    "router_hidden": 64,
+    "selection_data": "calibration episodes 32-35 only",
+    "selection_rule": "lowest calibration mean true oracle regret; then highest NDCG@16; then lowest candidate tuple order",
+    "soft_experts": 4,
+    "soft_routing_label": "2*current_observable_contact + 1[previous task-progress delta is nonnegative]",
+    "soft_routing_label_uses_future_or_phase": false,
+    "temporal_hidden_candidates": [
+      96,
+      160
+    ],
+    "vector_hidden_candidates": [
+      [
+        128,
+        128
+      ],
+      [
+        256,
+        256
+      ]
+    ],
+    "weight_decay": 1e-05
+  }
+}

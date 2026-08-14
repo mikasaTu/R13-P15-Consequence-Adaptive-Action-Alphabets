@@ -1,0 +1,19 @@
+{
+  "action_semantics": "H=4 flattened 6-D OSC_POSE residual; gripper copied from nominal",
+  "all_544_stage3_snapshot_banks_fully_valid": true,
+  "k_sensitivity_locked_until_final_disposition": [
+    32,
+    128
+  ],
+  "max_absolute_component": 0.0884226600085422,
+  "max_l2_norm": 0.11996038370387122,
+  "min_l2_norm": 0.04145389401775591,
+  "primary_k": 64,
+  "residual_hashes_sha256": "a7d080565bcf1cb08aed6f107651a358f67a41678fd584cdfaaa44da8c6e19eb",
+  "sha256": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b",
+  "shape": [
+    256,
+    24
+  ],
+  "source": "experiments/r13_p15_ncea/stage2/action_bank.npz"
+}

@@ -82,6 +82,10 @@ def build_parser():
         "stage2-run-development",
         "stage2-refresh-summaries",
         "stage2-verify",
+        "stage3-freeze",
+        "stage3-refresh-freeze",
+        "stage3-collect",
+        "stage3-verify-training-reuse",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -113,6 +117,10 @@ def main(argv=None):
     args = build_parser().parse_args(argv)
     if args.command.startswith("stage2-") and not args.output_root:
         from .stage2_config import OUTPUT_RELATIVE
+
+        args.output_root = os.path.join(_project_root(), OUTPUT_RELATIVE)
+    if args.command.startswith("stage3-") and not args.output_root:
+        from .stage3_config import OUTPUT_RELATIVE
 
         args.output_root = os.path.join(_project_root(), OUTPUT_RELATIVE)
     paths = _paths(args)
@@ -239,6 +247,34 @@ def main(argv=None):
             from .stage2_reporting import verify_stage2
 
             result = verify_stage2(_project_root(), output_root)
+        else:
+            raise AssertionError(args.command)
+    elif args.command.startswith("stage3-"):
+        splits = tuple(
+            value.strip()
+            for value in (args.splits or "").split(",")
+            if value.strip()
+        )
+        if args.command == "stage3-freeze":
+            from .stage3 import freeze_protocol
+
+            result = freeze_protocol(_project_root(), paths, output_root)
+        elif args.command == "stage3-refresh-freeze":
+            from .stage3 import refresh_frozen_metadata
+
+            result = refresh_frozen_metadata(output_root)
+        elif args.command == "stage3-collect":
+            from .stage3_collection import collect_task
+
+            if not args.task_id or not splits:
+                raise ValueError("--task-id and --splits are required")
+            result = collect_task(
+                _project_root(), paths, output_root, args.task_id, splits
+            )
+        elif args.command == "stage3-verify-training-reuse":
+            from .stage3_collection import verify_training_reuse
+
+            result = verify_training_reuse(_project_root(), output_root)
         else:
             raise AssertionError(args.command)
     else:

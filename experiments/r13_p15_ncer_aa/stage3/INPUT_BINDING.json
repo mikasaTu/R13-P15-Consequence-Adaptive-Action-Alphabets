@@ -1,0 +1,96 @@
+{
+  "confirmation_integrity_amendment": {
+    "all_development_gates_pass_label": "PRE_RESULT_REPLAY_EXPOSED_HOLDOUT",
+    "any_development_gate_fail_label": "FORCED_EXPLORATORY_HOLDOUT",
+    "go_to_small_bc_available": false,
+    "incident_id": "stage3-pre-result-confirmation-replay-001",
+    "reason": "A fixed confirmation support perturbation was executed twice per snapshot for deterministic replay before development gates. No effect distance, method score, or selected action was computed or inspected, but branch execution alone breaks the frozen untouched rule.",
+    "strict_untouched_confirmation_available": false
+  },
+  "controller": {
+    "frequency_hz": 20,
+    "gripper": "copied unchanged from nominal demonstration",
+    "horizon": 4,
+    "mode": "OSC_POSE",
+    "robot": "Panda",
+    "settle_steps": 3
+  },
+  "created_utc": "2026-08-14T05:22:08.809333+00:00",
+  "execution_amendment": {
+    "execute_all_development_methods_after_gate_failure": true,
+    "execute_episodes_40_49_after_gate_failure": true,
+    "failed_gate_holdout_can_unlock_small_bc": false,
+    "failed_gate_holdout_is_confirmatory": false,
+    "failed_gate_holdout_label": "FORCED_EXPLORATORY_HOLDOUT",
+    "reason": "The user explicitly required every planned experiment to be run and forbade gate-triggered early stopping."
+  },
+  "historical_evidence": {
+    "stage1_5_disposition": "REJECT_P15_FAMILY",
+    "stage1_5_result_commit": "76433b6e58196ceeedc4ad005a1110ea8e343ae2",
+    "stage1_disposition": "REJECT_CORE_HYPOTHESIS",
+    "stage1_published_commit": "434427af0f8adc844851c27cfc050b2c9c6752dc",
+    "stage2_disposition": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+    "stage2_input_commit": "154d4a89e071d94208f5302955c55c13e3cff7f3",
+    "stage2_published_commit": "74c98979910a3831d0abeb8d13111a7c9294b067"
+  },
+  "libero": {
+    "dataset_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO",
+    "expected_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "observed_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "source_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original",
+    "upstream_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01"
+  },
+  "pai_jobs_submitted_before_freeze": 0,
+  "pre_result_artifacts": {
+    "PRE_RESULT_PROTOCOL_INCIDENT.json": "6baee6754c6c542cc98a7b3e9a4c53e5ed013ed865da9b06b866d91b8ec40061",
+    "action_bank_binding.json": "3566dd8496c215199e286ff575f7c0300a5bb18266227aeb86bc5ab2a9aa0e4d",
+    "episode_split.json": "7d40a7b4ca06bcee307c06b633e2491888705a16940e577b36482911bdb10aef",
+    "model_definitions.json": "dbc8687cd520eae2065dc4e95c4bc709937f93047f3c9c186202e56ac76b6300",
+    "support_codebooks.npz": "3908c7fa136d130d7d55af100f2bf5f2adf4be651f8fa00e9e313707e8dd3d37"
+  },
+  "pre_result_metadata_refresh_before_method_results": true,
+  "pre_result_metadata_refresh_utc": "2026-08-14T05:26:14.556438+00:00",
+  "scratch_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_ncer_aa/stage3_work",
+  "stage2_reuse": {
+    "action_bank_sha256": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b",
+    "candidate_effects_missing_episode_range": [
+      16,
+      23
+    ],
+    "candidate_effects_reused_episode_range": [
+      24,
+      31
+    ],
+    "root": "experiments/r13_p15_ncea/stage2",
+    "root_tree_sha256": "0d6caf6ef4acd3b262cbbcc2c4fb30e20a94d8b7156fd8ba0a1df50e91d8f5b3",
+    "support_episode_range": [
+      16,
+      31
+    ]
+  },
+  "stage3_input_commit": "74c98979910a3831d0abeb8d13111a7c9294b067",
+  "support_separation": {
+    "exact_direction_overlap": {
+      "calibration__confirmation": 0,
+      "calibration__development": 0,
+      "development__confirmation": 0
+    },
+    "exact_residual_overlap": {
+      "calibration__confirmation": 0,
+      "calibration__development": 0,
+      "development__confirmation": 0
+    },
+    "maximum_allowed": 0.9,
+    "maximum_cross_split_absolute_cosine_similarity": {
+      "calibration__confirmation": 0.8098511597674982,
+      "calibration__development": 0.897367942097252,
+      "development__confirmation": 0.8876970937687381
+    },
+    "passed": true,
+    "target_residual_matches_action_bank": {
+      "calibration": 0,
+      "confirmation": 0,
+      "development": 0
+    }
+  }
+}
