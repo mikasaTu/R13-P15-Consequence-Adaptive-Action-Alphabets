@@ -175,10 +175,32 @@ def capture_execution_environment(project_root, output_root):
         simulation = {"python_executable": sim_python, "capture_output": sim_raw}
     binding = _json(os.path.join(output_root, "INPUT_BINDING.json"))
     registry = _json(os.path.join(output_root, "trained_model_registry.json"))
+    cleanliness_scope = (
+        "README.md",
+        "TESTING.md",
+        "caaa_libero",
+        "config",
+        "tests",
+        "experiments/r13_p15_ncer_aa/stage3",
+    )
+    dirty_paths = _command(
+        [
+            "git",
+            "-C",
+            project_root,
+            "diff",
+            "--name-only",
+            "HEAD",
+            "--",
+            *cleanliness_scope,
+        ]
+    )
     payload = {
         "created_utc": utc_now(),
         "repository_code_commit": _command(["git", "-C", project_root, "rev-parse", "HEAD"]),
-        "repository_dirty": bool(_command(["git", "-C", project_root, "status", "--porcelain", "--untracked-files=no"])),
+        "repository_dirty": bool(dirty_paths),
+        "repository_dirty_paths": dirty_paths.splitlines() if dirty_paths else [],
+        "repository_cleanliness_scope": list(cleanliness_scope),
         "libero_commit": binding["libero"]["upstream_commit"],
         "libero_tree_sha256": binding["libero"]["observed_tree_sha256"],
         "analysis_runtime": analysis,
