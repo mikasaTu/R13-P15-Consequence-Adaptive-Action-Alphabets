@@ -309,6 +309,26 @@ def _mechanism_audit(output_root, gate, bootstrap, retrieval_rows):
     c6_r = _summary(retrieval_rows, "C6_SOFT_MIXTURE_NCER_AA", split=split)
     c6_q = _summary(realized, "C6_SOFT_MIXTURE_NCER_AA")
     c4_q = _summary(realized, "C4_NC_PAIR_RANKER")
+    nominal_shuffle_r = _summary(
+        retrieval_rows,
+        "nominal_action_shuffled_within_task",
+        split=split,
+    )
+    state_shuffle_r = _summary(
+        retrieval_rows,
+        "state_shuffled_within_task",
+        split=split,
+    )
+    history_shuffle_r = _summary(
+        retrieval_rows,
+        "history_shuffled",
+        split=split,
+    )
+    label_shuffle_r = _summary(
+        retrieval_rows,
+        "consequence_labels_shuffled",
+        split=split,
+    )
     family_names = {
         "0": "smooth DCT (train overrepresented)",
         "1": "suffix-localized contact",
@@ -366,6 +386,8 @@ The dominant signed transition is C3→C4, not vector→ranker: C3 regret {_fmt(
 Training reuse supplied 48/24/24 branches per state for smooth/suffix/low-rank families, while fresh development is 32/32/32. The largest C3→C4 regret increase is on suffix-localized contact support. Because C3 sees the same training distribution and remains strong across all three families, imbalance can amplify but cannot by itself explain the cross-encoder failure.
 
 The soft mixture changes K=64 realized error from {_fmt(c5_q['balanced_task_effect_error'])} (C5) to {_fmt(c6_q['balanced_task_effect_error'])} (C6), and oracle regret from {_fmt(c5_r['oracle_regret'])} to {_fmt(c6_r['oracle_regret'])}. Its router sees only permitted observable context and uses no hard demonstration phase.
+
+The pair scorer does not show mechanism-specific context dependence: C5 regret is {_fmt(c5_r['oracle_regret'])}; nominal-shuffled={_fmt(nominal_shuffle_r['oracle_regret'])}, state-shuffled={_fmt(state_shuffle_r['oracle_regret'])}, history-shuffled={_fmt(history_shuffle_r['oracle_regret'])}, and label-shuffled={_fmt(label_shuffle_r['oracle_regret'])}. Several destructive controls are equal or better, so the absence of a positive Gate-B denominator—not a numerical division bug—is why gain retention is frozen to 1e9.
 
 ## What the code can and cannot establish
 
