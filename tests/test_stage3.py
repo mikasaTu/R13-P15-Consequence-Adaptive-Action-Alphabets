@@ -6,6 +6,7 @@ import torch
 from caaa_libero.stage3 import generate_support_codebooks, support_separation_evidence
 from caaa_libero.stage3_metrics import ranking_metrics, stable_fps, write_csv
 from caaa_libero.stage3_models import create_pair_ranker
+from caaa_libero.stage3_data import HISTORY_CONTROL_SLICES, STATE_CONTROL_SLICES
 from caaa_libero.stage3_config import (
     CONFIRMATION_INTEGRITY_AMENDMENT,
     DIRECTION_FAMILY_COUNTS,
@@ -109,3 +110,13 @@ def test_stage3_csv_uses_frozen_compact_float_precision(tmp_path):
         row = next(csv.DictReader(handle))
     assert row["metric"] == "0.123456789012"
     assert row["bank_index"] == "17"
+
+
+def test_shuffle_controls_include_semantic_availability_indicators():
+    assert STATE_CONTROL_SLICES == ("state", "state_mask", "current_contact")
+    assert HISTORY_CONTROL_SLICES == (
+        "history",
+        "history_mask",
+        "previous_actions",
+        "previous_action_mask",
+    )

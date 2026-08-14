@@ -52,6 +52,8 @@ from .stage3_config import (
 )
 from .stage3_data import (
     CONTEXT_SLICES,
+    HISTORY_CONTROL_SLICES,
+    STATE_CONTROL_SLICES,
     build_branch_dataset,
     build_pair_dataset,
     effect,
@@ -306,6 +308,13 @@ def train_all(project_root, output_root, device_name=None, scratch_root=SCRATCH_
         "calibration_states": len(calibration_records),
         "training_pairs": training_pairs_result,
         "models": {},
+        "control_context_slices": {
+            "state_shuffled_within_task": list(STATE_CONTROL_SLICES),
+            "joint_state_nominal_shuffled_within_task": list(
+                STATE_CONTROL_SLICES + ("nominal_action",)
+            ),
+            "history_shuffled": list(HISTORY_CONTROL_SLICES),
+        },
     }
 
     # C1 / C2 architecture selection uses one seed per candidate, then adds

@@ -51,6 +51,16 @@ CONTEXT_SLICES = {
 }
 CONTEXT_DIM = 321
 
+# Controls permute semantic input bundles, including their availability masks,
+# so an ablation cannot recover phase/contact structure from an unshuffled mask.
+STATE_CONTROL_SLICES = ("state", "state_mask", "current_contact")
+HISTORY_CONTROL_SLICES = (
+    "history",
+    "history_mask",
+    "previous_actions",
+    "previous_action_mask",
+)
+
 
 def _seed(*parts):
     value = "|".join(str(part) for part in parts).encode("utf-8")
@@ -200,14 +210,15 @@ def transformed_contexts(records, center, scale, control=None, seed=13150300):
             start, stop = CONTEXT_SLICES["nominal_action"]
             raw[:, start:stop] = raw[order, start:stop]
         elif control == "state_shuffled_within_task":
-            start, stop = CONTEXT_SLICES["state"]
-            raw[:, start:stop] = raw[order, start:stop]
+            for name in STATE_CONTROL_SLICES:
+                start, stop = CONTEXT_SLICES[name]
+                raw[:, start:stop] = raw[order, start:stop]
         elif control == "joint_state_nominal_shuffled_within_task":
-            for name in ("state", "nominal_action"):
+            for name in STATE_CONTROL_SLICES + ("nominal_action",):
                 start, stop = CONTEXT_SLICES[name]
                 raw[:, start:stop] = raw[order, start:stop]
         elif control == "history_shuffled":
-            for name in ("history", "previous_actions"):
+            for name in HISTORY_CONTROL_SLICES:
                 start, stop = CONTEXT_SLICES[name]
                 raw[:, start:stop] = raw[order, start:stop]
         elif control in ("consequence_labels_shuffled", "action_only_pair_ranker"):
