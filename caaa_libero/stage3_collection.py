@@ -522,3 +522,71 @@ def verify_training_reuse(project_root, output_root, scratch_root=SCRATCH_ROOT):
     if failures:
         raise RuntimeError("Stage 3 training reuse validation failed")
     return {"path": destination, "states": len(rows), "passed": True}
+
+
+def validate_full_collection(project_root, output_root, scratch_root=SCRATCH_ROOT):
+    """Hash-check every nonhistorical context, support, and candidate shard.
+
+    Raw simulator arrays remain in the frozen scratch root; this ordinary JSON
+    inventory is the repository-sized binding that records their paths, byte
+    sizes, payload hashes, and split-wise completeness.
+    """
+    rows = []
+    failures = []
+    counts = {}
+    for record in _load_records(output_root):
+        if record["split"] == "historical":
+            continue
+        task_id = record["task_id"]
+        episode_id = int(record["episode_id"])
+        phase = record["phase"]
+        split = record["split"]
+        paths = {
+            "context": context_shard(scratch_root, task_id, episode_id, phase),
+            "support": resolved_support_shard(
+                project_root, scratch_root, split, task_id, episode_id, phase
+            ),
+            "candidate": resolved_candidate_shard(
+                project_root, scratch_root, split, task_id, episode_id, phase
+            ),
+        }
+        artifacts = {}
+        for kind, path in paths.items():
+            valid, detail = validate_complete(path)
+            if (
+                valid
+                and kind == "context"
+                and detail.get("schema_version") != CONTEXT_SCHEMA_VERSION
+            ):
+                valid = False
+                detail = "obsolete_context_schema"
+            artifacts[kind] = {
+                "path": path,
+                "valid": bool(valid),
+                "detail": detail,
+            }
+            counts.setdefault(split, {}).setdefault(kind, 0)
+            counts[split][kind] += int(bool(valid))
+            if not valid:
+                failures.append(
+                    {"key": record["key"], "kind": kind, "detail": detail}
+                )
+        rows.append({"key": record["key"], "split": split, "artifacts": artifacts})
+    destination = os.path.join(output_root, "branch_collection_validation.json")
+    atomic_json(
+        destination,
+        {
+            "created_utc": utc_now(),
+            "scratch_root": scratch_root,
+            "states": len(rows),
+            "expected_states": 544,
+            "counts_by_split": counts,
+            "failed": len(failures),
+            "passed": not failures and len(rows) == 544,
+            "failures": failures,
+            "rows": rows,
+        },
+    )
+    if failures or len(rows) != 544:
+        raise RuntimeError("Stage 3 full collection validation failed")
+    return {"path": destination, "states": len(rows), "passed": True}

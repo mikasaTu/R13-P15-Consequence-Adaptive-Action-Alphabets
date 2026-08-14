@@ -86,6 +86,7 @@ def build_parser():
         "stage3-refresh-freeze",
         "stage3-collect",
         "stage3-verify-training-reuse",
+        "stage3-validate-full-collection",
         "stage3-train",
         "stage3-freeze-calibration",
         "stage3-evaluate-development",
@@ -280,6 +281,10 @@ def main(argv=None):
             from .stage3_collection import verify_training_reuse
 
             result = verify_training_reuse(_project_root(), output_root)
+        elif args.command == "stage3-validate-full-collection":
+            from .stage3_collection import validate_full_collection
+
+            result = validate_full_collection(_project_root(), output_root)
         elif args.command == "stage3-train":
             from .stage3_analysis import train_all
 
