@@ -199,6 +199,70 @@ def capture_execution_environment(project_root, output_root):
     return payload
 
 
+def validate_pair_invariants(output_root):
+    """Empirically confirm the architectural symmetry/self-distance contract."""
+    import torch
+
+    from .stage3_analysis import load_trained_models
+
+    device = torch.device("cpu")
+    _, scalers, models = load_trained_models(output_root, device)
+    generator = torch.Generator(device="cpu").manual_seed(13150377)
+    context = torch.randn(
+        32, len(scalers["context_center"]), generator=generator
+    )
+    left = torch.randn(32, 24, generator=generator)
+    right = torch.randn(32, 24, generator=generator)
+    families = (
+        "C3_NC_BIENCODER",
+        "C4_NC_PAIR_RANKER",
+        "C6_SOFT_MIXTURE_NCER_AA",
+        "no_nominal_action",
+        "nominal_action_shuffled_within_task",
+        "state_shuffled_within_task",
+        "joint_state_nominal_shuffled_within_task",
+        "history_shuffled",
+        "consequence_labels_shuffled",
+        "action_only_pair_ranker",
+        "soft_routing_labels_shuffled",
+    )
+    rows = []
+    with torch.no_grad():
+        for family in families:
+            for member, model in enumerate(models[family]):
+                forward = model(context, left, right)
+                reverse = model(context, right, left)
+                self_distance = model(context, left, left)
+                rows.append(
+                    {
+                        "family": family,
+                        "member": member,
+                        "symmetry_max_abs": float(
+                            torch.max(torch.abs(forward - reverse)).item()
+                        ),
+                        "self_distance_max_abs": float(
+                            torch.max(torch.abs(self_distance)).item()
+                        ),
+                    }
+                )
+    passed = all(
+        row["symmetry_max_abs"] == 0.0
+        and row["self_distance_max_abs"] == 0.0
+        for row in rows
+    )
+    payload = {
+        "created_utc": utc_now(),
+        "seed": 13150377,
+        "samples_per_model": len(context),
+        "passed": passed,
+        "rows": rows,
+    }
+    atomic_json(os.path.join(output_root, "pair_invariant_validation.json"), payload)
+    if not passed:
+        raise RuntimeError("pair symmetry/self-distance validation failed")
+    return payload
+
+
 def _mechanism_audit(output_root, gate, bootstrap, retrieval_rows):
     split = "development"
     realized = gate["development_realized_summary"]
@@ -513,6 +577,8 @@ def verify_stage3_release(project_root, output_root):
     check("training_reuse", reuse["passed"] and reuse["states"] == 256, reuse.get("states"), 256)
     collection = _json(os.path.join(output_root, "branch_collection_validation.json"))
     check("full_collection", collection["passed"] and collection["states"] == 544, collection.get("states"), 544)
+    invariants = _json(os.path.join(output_root, "pair_invariant_validation.json"))
+    check("pair_invariants", invariants["passed"])
     registry = _json(os.path.join(output_root, "trained_model_registry.json"))
     check("one_visible_gpu", registry["visible_gpu_count"] == 1, registry["visible_gpu_count"], 1)
     check("settings_frozen_before_development", registry["method_settings_frozen_before_development"])
@@ -575,6 +641,7 @@ def verify_stage3_release(project_root, output_root):
 
 
 def finalize_stage3(project_root, output_root):
+    validate_pair_invariants(output_root)
     report = write_stage3_report(project_root, output_root)
     verification = verify_stage3_release(project_root, output_root)
     return {

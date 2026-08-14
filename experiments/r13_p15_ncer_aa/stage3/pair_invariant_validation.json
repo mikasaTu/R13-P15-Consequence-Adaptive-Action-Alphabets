@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-08-14T07:10:17.115024+00:00",
+  "passed": true,
+  "rows": [
+    {
+      "family": "C3_NC_BIENCODER",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C3_NC_BIENCODER",
+      "member": 1,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C3_NC_BIENCODER",
+      "member": 2,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C4_NC_PAIR_RANKER",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C4_NC_PAIR_RANKER",
+      "member": 1,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C4_NC_PAIR_RANKER",
+      "member": 2,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C6_SOFT_MIXTURE_NCER_AA",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C6_SOFT_MIXTURE_NCER_AA",
+      "member": 1,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "C6_SOFT_MIXTURE_NCER_AA",
+      "member": 2,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "no_nominal_action",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "nominal_action_shuffled_within_task",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "state_shuffled_within_task",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "joint_state_nominal_shuffled_within_task",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "history_shuffled",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "consequence_labels_shuffled",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "action_only_pair_ranker",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    },
+    {
+      "family": "soft_routing_labels_shuffled",
+      "member": 0,
+      "self_distance_max_abs": 0.0,
+      "symmetry_max_abs": 0.0
+    }
+  ],
+  "samples_per_model": 32,
+  "seed": 13150377
+}
