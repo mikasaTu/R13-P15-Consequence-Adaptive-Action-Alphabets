@@ -181,7 +181,6 @@ def capture_execution_environment(project_root, output_root):
         "caaa_libero",
         "config",
         "tests",
-        "experiments/r13_p15_ncer_aa/stage3",
     )
     dirty_paths = _command(
         [
@@ -438,7 +437,9 @@ def write_stage3_report(project_root, output_root):
     bootstrap = _json(os.path.join(output_root, "bootstrap_results.json"))
     registry = _json(os.path.join(output_root, "trained_model_registry.json"))
     environment = capture_execution_environment(project_root, output_root)
+    predictor = _csv(os.path.join(output_root, "predictor_metrics.csv"))
     retrieval = _csv(os.path.join(output_root, "retrieval_metrics.csv"))
+    k_sensitivity = _csv(os.path.join(output_root, "k_sensitivity.csv"))
     mechanism = _mechanism_audit(output_root, gate, bootstrap, retrieval)
     del mechanism
 
@@ -449,6 +450,66 @@ def write_stage3_report(project_root, output_root):
     baseline = selection["strongest_deployable_baseline"]
     rank_baseline = selection["strongest_gate_b_learned_or_action_baseline"]
     ranker = selection["selected_learned_ranker"]
+    breakdown_specs = [("pooled", "ALL", "ALL", "ALL", "ALL")]
+    breakdown_specs.extend(
+        ("task", task, task, "ALL", "ALL") for task in TASK_IDS
+    )
+    breakdown_specs.extend(
+        ("phase", phase, "ALL", phase, "ALL")
+        for phase in ("free_space", "pre_contact", "contact_onset", "post_contact")
+    )
+    breakdown_specs.extend(
+        ("direction_family", family, "ALL", "ALL", family)
+        for family in ("0", "1", "2")
+    )
+    predictor_breakdown_rows = []
+    for method in (
+        "C0_stage2_ncea_reproduction",
+        "C1_NC_VECTOR",
+        "C2_NC_TEMPORAL_VECTOR",
+    ):
+        for level, label, task, phase, family in breakdown_specs:
+            row = _summary(
+                predictor,
+                method,
+                level=level,
+                task=task,
+                phase=phase,
+                family=family,
+                split="development",
+            )
+            predictor_breakdown_rows.append(
+                (
+                    method,
+                    level,
+                    label,
+                    _fmt(row["normalized_effect_rmse"]),
+                    _fmt(row["balanced_prediction_error"]),
+                    _fmt(row["contact_accuracy"]),
+                )
+            )
+    retrieval_breakdown_rows = []
+    for method in ("C3_NC_BIENCODER", "C4_NC_PAIR_RANKER", "C5_NCER_AA"):
+        for level, label, task, phase, family in breakdown_specs:
+            row = _summary(
+                retrieval,
+                method,
+                level=level,
+                task=task,
+                phase=phase,
+                family=family,
+                split="development",
+            )
+            retrieval_breakdown_rows.append(
+                (
+                    method,
+                    level,
+                    label,
+                    _fmt(row["oracle_regret"]),
+                    _fmt(row["ndcg_at_16"]),
+                    _fmt(row["oracle_neighbor_recall_at_8"]),
+                )
+            )
     task_rows = []
     for task in TASK_IDS:
         base = _summary(dev, baseline, level="task", task=task)
@@ -482,6 +543,52 @@ def write_stage3_report(project_root, output_root):
     dev_c5 = _summary(dev, "C5_NCER_AA")
     hold_base = _summary(hold, baseline)
     hold_c5 = _summary(hold, "C5_NCER_AA")
+    deployable_rows = []
+    for method in (
+        baseline,
+        "C3_NC_BIENCODER",
+        "C4_NC_PAIR_RANKER",
+        "C5_NCER_AA",
+        "C6_SOFT_MIXTURE_NCER_AA",
+    ):
+        row = _summary(dev, method)
+        deployable_rows.append(
+            (
+                method,
+                _fmt(row["balanced_task_effect_error"]),
+                _fmt(row["action_reconstruction_rmse"]),
+                _fmt(row["contact_mode_preserved"]),
+                _fmt(row["normalized_code_utilization"]),
+                _fmt(row["clipped"]),
+            )
+        )
+    privileged_rows = []
+    for method in ("B2_PRIV_hard_phase_kmeans", "C0_stage2_ncea_reproduction"):
+        row = _summary(dev, method)
+        privileged_rows.append(
+            (
+                method,
+                _fmt(row["balanced_task_effect_error"]),
+                _fmt(row["action_reconstruction_rmse"]),
+                _fmt(row["contact_mode_preserved"]),
+                _fmt(row["normalized_code_utilization"]),
+            )
+        )
+    k_rows = []
+    for row in sorted(
+        (row for row in k_sensitivity if row["level"] == "pooled"),
+        key=lambda row: (int(row["alphabet_k"]), row["method"]),
+    ):
+        k_rows.append(
+            (
+                row["alphabet_k"],
+                row["method"],
+                _fmt(row["balanced_task_effect_error"]),
+                _fmt(row["action_reconstruction_rmse"]),
+                _fmt(row["contact_mode_preserved"]),
+                _fmt(row["normalized_code_utilization"]),
+            )
+        )
     gate_rows = []
     for name in ("A", "B", "C"):
         row = gates[name]
@@ -513,7 +620,17 @@ def write_stage3_report(project_root, output_root):
 
 `GO_TO_SMALL_BC` is unavailable. Stage 1 remains `REJECT_CORE_HYPOTHESIS`, Stage 1.5 remains `REJECT_P15_FAMILY`, and Stage 2 remains `ORACLE_ONLY_NO_DEPLOYABLE_MODEL`. No policy or VLA was trained.
 
-## Evidence integrity and scope
+## Historical evidence (read-only)
+
+{_table(["Stage", "Frozen disposition", "Published commit"], [
+    ("Stage 1", binding['historical_evidence']['stage1_disposition'], binding['historical_evidence']['stage1_published_commit']),
+    ("Stage 1.5", binding['historical_evidence']['stage1_5_disposition'], binding['historical_evidence']['stage1_5_result_commit']),
+    ("Stage 2", binding['historical_evidence']['stage2_disposition'], binding['historical_evidence']['stage2_published_commit']),
+])}
+
+These artifacts are inputs only. Stage 3 neither rewrites nor relabels them.
+
+## Stage 3 evidence integrity and scope
 
 - LIBERO tasks: bowl_on_plate, plate_push, stove_turn_on, wine_rack; Panda OSC_POSE at 20 Hz; H=4; three settle steps.
 - Episodes: historical 0–15, train 16–31, calibration 32–35, development 36–39, holdout 40–49. All demonstrations were successful; {split['snapshot_count']} four-phase snapshots were frozen.
@@ -550,6 +667,14 @@ The simulator and analysis package versions are frozen in `execution_environment
 - Gate B: regret gain={_pct(gates['B']['oracle_regret_relative_gain'])}, NDCG@16 gain={_fmt(gates['B']['ndcg_at_16_absolute_gain'])}, Recall@8={_fmt(gates['B']['recall_at_8'])}, tasks={gates['B']['tasks_improved']}/4, contact tasks={gates['B']['contact_sensitive_tasks_improved']}/3, exact permutation={gates['B']['candidate_permutation_exact']}.
 - Gate C: realized gain={_pct(gates['C']['realized_relative_gain'])}, oracle gap closed={_pct(gates['C']['oracle_gap_fraction_closed'])}, utilization={_fmt(gates['C']['normalized_utilization'])}, clipping={_fmt(gates['C']['clipping_rate'])}, action-RMSE degradation={_pct(gates['C']['action_rmse_degradation'])}, contact drop={_fmt(gates['C']['contact_preservation_drop_points'])}.
 
+### Oracle-only result
+
+Gate A is a simulator-outcome upper bound, not a deployable method. The K=64 true-effect atlas improves all four tasks and all three contact-sensitive tasks, but it consumes candidate consequences unavailable at deployment.
+
+## K=64 alphabet and deployable results
+
+{_table(["Method", "Effect error", "Action RMSE", "Contact preserved", "Normalized utilization", "Clipping"], deployable_rows)}
+
 ### Realized K=64 effect by task
 
 {_table(["Task", baseline, "C5", "C5 improvement", "True-effect K64 oracle"], task_rows)}
@@ -560,11 +685,25 @@ The simulator and analysis package versions are frozen in `execution_environment
 
 Pooled development realized error is {_fmt(dev_base['balanced_task_effect_error'])} for `{baseline}` and {_fmt(dev_c5['balanced_task_effect_error'])} for C5. C5 action RMSE={_fmt(dev_c5['action_reconstruction_rmse'])}, contact preservation={_fmt(dev_c5['contact_mode_preserved'])}, normalized utilization={_fmt(dev_c5['normalized_code_utilization'])}, code perplexity={_fmt(dev_c5['code_perplexity'])}, clipping={_fmt(dev_c5['clipped'])}.
 
+## Privileged diagnostic upper bounds
+
+{_table(["Diagnostic", "Effect error", "Action RMSE", "Contact preserved", "Normalized utilization"], privileged_rows)}
+
+`B2_PRIV` and C0 consume the frozen demonstration hard-phase construction and are diagnostics only. Neither is the deployable NCER-AA result.
+
 ## Learned prediction and retrieval
 
 {_table(["Method", "Oracle regret", "Spearman", "Kendall", "NDCG@16", "Recall@8", "ms/target"], retrieval_rows)}
 
 `predictor_metrics.csv` additionally reports balanced vector error/contact accuracy per task, phase and support family. `retrieval_metrics.csv` reports pairwise accuracy, Spearman, Kendall tau, NDCG@16, Recall@1/8, regret and latency for every learned method and direction family.
+
+### Vector predictor breakdown
+
+{_table(["Method", "Level", "Slice", "Normalized RMSE", "Balanced prediction error", "Contact accuracy"], predictor_breakdown_rows)}
+
+### Learned retrieval breakdown
+
+{_table(["Method", "Level", "Slice", "Oracle regret", "NDCG@16", "Recall@8"], retrieval_breakdown_rows)}
 
 ## Mechanism controls
 
@@ -583,6 +722,8 @@ Replicates={bootstrap['paired_episode_cluster_bootstrap']['replicates']}. Counte
 ## K sensitivity
 
 K=32 and K=128 were evaluated only after `{final}` was frozen. Results are in `k_sensitivity.csv`; they cannot change the primary K=64 disposition.
+
+{_table(["K", "Method", "Effect error", "Action RMSE", "Contact preserved", "Normalized utilization"], k_rows)}
 
 ## Direct answers
 
