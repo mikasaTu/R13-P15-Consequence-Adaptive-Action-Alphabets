@@ -1,0 +1,40 @@
+{
+  "analysis_runtime": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1",
+    "python_executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python",
+    "python_version": "3.11.11 (main, Mar 17 2025, 21:02:09) [Clang 20.1.0 ]",
+    "scipy": "1.17.1",
+    "torch": "2.4.1+cu121",
+    "torch_cuda": "12.1",
+    "zarr": "2.18.3"
+  },
+  "created_utc": "2026-08-14T08:37:21.269078+00:00",
+  "gpu_training": {
+    "cuda_version": "12.1",
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA A800-SXM4-80GB",
+    "torch_version": "2.4.1+cu121",
+    "visible_gpu_count": 1
+  },
+  "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "libero_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+  "local_gpu_limit_respected": true,
+  "pai_jobs_submitted": 0,
+  "policy_training_performed": false,
+  "repository_cleanliness_scope": [
+    "README.md",
+    "TESTING.md",
+    "caaa_libero",
+    "config",
+    "tests"
+  ],
+  "repository_code_commit": "04e95630aee87f356940b2522f2025faa8c7c209",
+  "repository_dirty": false,
+  "repository_dirty_paths": [],
+  "simulation_runtime": {
+    "capture_output": "ERROR:Command '['/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python', '-c', \"import json,sys,numpy; import mujoco_py,robosuite; print(json.dumps({'python_executable':sys.executable,'python_version':sys.version,'numpy':numpy.__version__,'mujoco_py':getattr(mujoco_py,'__version__','unknown'),'robosuite':getattr(robosuite,'__version__','unknown')}))\"]' returned non-zero exit status 1.",
+    "python_executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python"
+  }
+}

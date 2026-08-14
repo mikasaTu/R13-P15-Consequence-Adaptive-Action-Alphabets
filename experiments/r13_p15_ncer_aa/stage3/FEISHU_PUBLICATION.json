@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-08-14T08:41:17Z",
+  "space_id": "7599097990090853600",
+  "step4_parent_node_token": "TR13wgC6YigXUykvpIkcB11hnZc",
+  "title": "实验报告",
+  "node_token": "TOubw1id8iFJdxkEK5GcynkVnGb",
+  "obj_token": "CfpFdiST6o006rxGu5QchDt4nmg",
+  "wiki_url": "https://icnbwz7kd1ui.feishu.cn/wiki/TOubw1id8iFJdxkEK5GcynkVnGb",
+  "docx_url": "https://icnbwz7kd1ui.feishu.cn/docx/CfpFdiST6o006rxGu5QchDt4nmg",
+  "revision_id": 3,
+  "source": "FEISHU_EXPERIMENT_REPORT.md",
+  "import_result": "partial_success",
+  "import_warning": "degrade_code=1011: one generated instruction produced no changes",
+  "readback_verified": true,
+  "readback_checks": {
+    "title": true,
+    "final_disposition": true,
+    "development_gates": true,
+    "forced_exploratory_holdout": true,
+    "mechanism_reverse_explanation": true,
+    "github_main_link": true,
+    "full_report_tail": true
+  },
+  "lark_cli": {
+    "current_version": "1.0.86",
+    "update_available": "1.0.87",
+    "updated_during_run": false
+  }
+}

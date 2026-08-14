@@ -95,8 +95,8 @@ the current suite passed in both relevant runtimes:
 
 | Environment | Command | Result |
 | --- | --- | --- |
-| analysis Python 3.11 | `CUDA_VISIBLE_DEVICES='' PYTHONPATH=. /mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python -m pytest -q` | 30 passed in 10.86 s |
-| frozen LIBERO Python 3.8 | `MUJOCO_GL=glx CUDA_VISIBLE_DEVICES='' PYTHONPATH=. /mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python -m pytest -q tests/test_stage3.py` | 12 passed in 4.12 s |
+| analysis Python 3.11 | `CUDA_VISIBLE_DEVICES='' PYTHONPATH=. /mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python -m pytest -q` | 30 passed in 49.85 s |
+| frozen LIBERO Python 3.8 | `MUJOCO_GL=glx CUDA_VISIBLE_DEVICES='' PYTHONPATH=. /mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python -m pytest -q tests/test_stage3.py` | 12 passed in 16.74 s |
 | analysis Python 3.11 | `python -m py_compile caaa_libero/*.py` | passed |
 
 The Stage 3 release verifier additionally checks all 544 bound states and

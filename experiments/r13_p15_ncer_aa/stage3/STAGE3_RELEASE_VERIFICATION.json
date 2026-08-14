@@ -1,0 +1,399 @@
+{
+  "check_count": 44,
+  "checks": [
+    {
+      "expected": null,
+      "name": "required_artifact:PREREGISTRATION.md",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:INPUT_BINDING.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:episode_split.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:support_codebooks.npz",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:action_bank_binding.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:model_definitions.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:training_pairs.parquet",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:predictor_metrics.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:retrieval_metrics.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:development_quantization.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:mechanism_controls.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:development_gate.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:confirmation_quantization.csv",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:bootstrap_results.json",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "required_artifact:STAGE3_REPORT.md",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 544,
+      "name": "snapshot_count",
+      "observed": 544,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all_episodes_successful",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "support_separation",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 256,
+      "name": "training_reuse",
+      "observed": 256,
+      "passed": true
+    },
+    {
+      "expected": 544,
+      "name": "full_collection",
+      "observed": 544,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "pair_invariants",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 1,
+      "name": "one_visible_gpu",
+      "observed": 1,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "settings_frozen_before_development",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 1010096,
+      "name": "training_pair_rows",
+      "observed": 1010096,
+      "passed": true
+    },
+    {
+      "expected": 147456,
+      "name": "development_quantization.csv:rows",
+      "observed": 147456,
+      "passed": true
+    },
+    {
+      "expected": [
+        "B1_centered_covariance",
+        "B2_PRIV_hard_phase_kmeans",
+        "B2_current_contact_kmeans",
+        "B3_dynamic_action_medoids",
+        "B4_state_action_vq",
+        "B5_local_knn_consequence",
+        "C0_stage2_ncea_reproduction",
+        "C1_NC_VECTOR",
+        "C2_NC_TEMPORAL_VECTOR",
+        "C3_NC_BIENCODER",
+        "C4_NC_PAIR_RANKER",
+        "C5_NCER_AA",
+        "C6_SOFT_MIXTURE_NCER_AA",
+        "O_FULL_true_effect_full_bank",
+        "O_K64_true_effect_atlas",
+        "action_only_pair_ranker",
+        "candidate_order_permutation",
+        "consequence_labels_shuffled",
+        "history_shuffled",
+        "joint_state_nominal_shuffled_within_task",
+        "no_nominal_action",
+        "nominal_action_shuffled_within_task",
+        "soft_routing_labels_shuffled",
+        "state_shuffled_within_task"
+      ],
+      "name": "development_quantization.csv:methods",
+      "observed": [
+        "B1_centered_covariance",
+        "B2_PRIV_hard_phase_kmeans",
+        "B2_current_contact_kmeans",
+        "B3_dynamic_action_medoids",
+        "B4_state_action_vq",
+        "B5_local_knn_consequence",
+        "C0_stage2_ncea_reproduction",
+        "C1_NC_VECTOR",
+        "C2_NC_TEMPORAL_VECTOR",
+        "C3_NC_BIENCODER",
+        "C4_NC_PAIR_RANKER",
+        "C5_NCER_AA",
+        "C6_SOFT_MIXTURE_NCER_AA",
+        "O_FULL_true_effect_full_bank",
+        "O_K64_true_effect_atlas",
+        "action_only_pair_ranker",
+        "candidate_order_permutation",
+        "consequence_labels_shuffled",
+        "history_shuffled",
+        "joint_state_nominal_shuffled_within_task",
+        "no_nominal_action",
+        "nominal_action_shuffled_within_task",
+        "soft_routing_labels_shuffled",
+        "state_shuffled_within_task"
+      ],
+      "passed": true
+    },
+    {
+      "expected": [
+        "development"
+      ],
+      "name": "development_quantization.csv:split",
+      "observed": [
+        "development"
+      ],
+      "passed": true
+    },
+    {
+      "expected": 368640,
+      "name": "confirmation_quantization.csv:rows",
+      "observed": 368640,
+      "passed": true
+    },
+    {
+      "expected": [
+        "B1_centered_covariance",
+        "B2_PRIV_hard_phase_kmeans",
+        "B2_current_contact_kmeans",
+        "B3_dynamic_action_medoids",
+        "B4_state_action_vq",
+        "B5_local_knn_consequence",
+        "C0_stage2_ncea_reproduction",
+        "C1_NC_VECTOR",
+        "C2_NC_TEMPORAL_VECTOR",
+        "C3_NC_BIENCODER",
+        "C4_NC_PAIR_RANKER",
+        "C5_NCER_AA",
+        "C6_SOFT_MIXTURE_NCER_AA",
+        "O_FULL_true_effect_full_bank",
+        "O_K64_true_effect_atlas",
+        "action_only_pair_ranker",
+        "candidate_order_permutation",
+        "consequence_labels_shuffled",
+        "history_shuffled",
+        "joint_state_nominal_shuffled_within_task",
+        "no_nominal_action",
+        "nominal_action_shuffled_within_task",
+        "soft_routing_labels_shuffled",
+        "state_shuffled_within_task"
+      ],
+      "name": "confirmation_quantization.csv:methods",
+      "observed": [
+        "B1_centered_covariance",
+        "B2_PRIV_hard_phase_kmeans",
+        "B2_current_contact_kmeans",
+        "B3_dynamic_action_medoids",
+        "B4_state_action_vq",
+        "B5_local_knn_consequence",
+        "C0_stage2_ncea_reproduction",
+        "C1_NC_VECTOR",
+        "C2_NC_TEMPORAL_VECTOR",
+        "C3_NC_BIENCODER",
+        "C4_NC_PAIR_RANKER",
+        "C5_NCER_AA",
+        "C6_SOFT_MIXTURE_NCER_AA",
+        "O_FULL_true_effect_full_bank",
+        "O_K64_true_effect_atlas",
+        "action_only_pair_ranker",
+        "candidate_order_permutation",
+        "consequence_labels_shuffled",
+        "history_shuffled",
+        "joint_state_nominal_shuffled_within_task",
+        "no_nominal_action",
+        "nominal_action_shuffled_within_task",
+        "soft_routing_labels_shuffled",
+        "state_shuffled_within_task"
+      ],
+      "passed": true
+    },
+    {
+      "expected": [
+        "confirmation"
+      ],
+      "name": "confirmation_quantization.csv:split",
+      "observed": [
+        "confirmation"
+      ],
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all_development_methods",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "settings_frozen_before_holdout",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "strict_confirmation_false",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "go_locked_at_development",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "candidate_permutation_exact",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": 10000,
+      "name": "bootstrap_replicates",
+      "observed": 10000,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "all_holdout_methods",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "untouched_confirmation_false",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "go_to_small_bc_false",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "k_after_disposition",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "k_sensitivity_values",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "pai_jobs_zero",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "policy_training_false",
+      "observed": null,
+      "passed": true
+    },
+    {
+      "expected": null,
+      "name": "local_gpu_limit",
+      "observed": null,
+      "passed": true
+    }
+  ],
+  "created_utc": "2026-08-14T08:37:23.923947+00:00",
+  "failure_count": 0,
+  "failures": [],
+  "final_disposition": "ORACLE_ONLY_NO_LEARNABLE_RANKER",
+  "passed": true,
+  "required_artifact_sha256": {
+    "INPUT_BINDING.json": "6cf0d7e9aaeb43ce16b2213e15836a8d3b8eabf89299af95f38bef4b933d2172",
+    "PREREGISTRATION.md": "ee1270f0e530acddea281eb56bbf62dac87b6f5cb61c16142d4f80aaf5afbc79",
+    "STAGE3_REPORT.md": "623e14a5473d3e67b175e9fdefae6951a9634c18b8bb227cab14c8dc355f7bde",
+    "action_bank_binding.json": "3566dd8496c215199e286ff575f7c0300a5bb18266227aeb86bc5ab2a9aa0e4d",
+    "bootstrap_results.json": "718a96718ff9f66c7ca15869dacc037ec632cc5bdbdbd0f16eaaa03f22aa6cc4",
+    "confirmation_quantization.csv": "8e08469f688a19a632a17cb622e2b42756cde25c61d3cbe2c55348e85c3e6776",
+    "development_gate.json": "21a5f633762b3c959643048d6aa8b507fac5665de832900c6e4f601324753dd4",
+    "development_quantization.csv": "5c1d77b24aaeb6c20703ec7fda8072eea15c70fa30afef25d4f2d5c920c40e81",
+    "episode_split.json": "7d40a7b4ca06bcee307c06b633e2491888705a16940e577b36482911bdb10aef",
+    "mechanism_controls.csv": "7716b3a81ce60f8dc127934e2a7293d830b8e12494b970c64269eafec265d591",
+    "model_definitions.json": "dbc8687cd520eae2065dc4e95c4bc709937f93047f3c9c186202e56ac76b6300",
+    "predictor_metrics.csv": "132c1aad795b215398ce20ee96040be37aa72f8d9c3ce4a929fae7dfac95e0f1",
+    "retrieval_metrics.csv": "822705b83f9132a4d5015cf2cd0d1209c689c0e2d3b43b189a4b2e3e5c5f34db",
+    "support_codebooks.npz": "3908c7fa136d130d7d55af100f2bf5f2adf4be651f8fa00e9e313707e8dd3d37",
+    "training_pairs.parquet": "d8e9b05f198b27b5cab58504a2674e0ced9d0b94ee7304e6df18bd77a6567427"
+  }
+}
