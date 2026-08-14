@@ -580,6 +580,36 @@ K=32 and K=128 were evaluated only after `{final}` was frozen. Results are in `k
 Do not start BC from this audit. Follow the exact final disposition: if a development gate failed, localize that first failed mechanism using the frozen per-task/per-phase/family tables; if all development gates passed, repeat the holdout with a genuinely untouched episode set before considering a small state-based BC. Do not launch ACT, Diffusion Policy, SmolVLA or pi0.5 automatically.
 """
     atomic_text(os.path.join(output_root, "STAGE3_REPORT.md"), report)
+    feishu_report = f"""# 实验报告
+
+## 中文结论摘要
+
+最终处置：**`{final}`**。
+
+- Stage 3 的严格支持 oracle 仍然有价值：Gate A 提升 {_pct(gates['A']['pooled_relative_gain'])}，4/4 任务、3/3 接触敏感任务改善。
+- 学习排序没有通过：C4 相对 `{rank_baseline}` 的 oracle regret 变化为 {_pct(gates['B']['oracle_regret_relative_gain'])}，NDCG@16 变化 {_fmt(gates['B']['ndcg_at_16_absolute_gain'])}，Recall@8={_fmt(gates['B']['recall_at_8'])}，所以 Gate B 失败。
+- 主方法 C5 没有保住 C3 的收益：相对 `{baseline}` 的真实物理效应误差变化为 {_pct(gates['C']['realized_relative_gain'])}，K=64 利用率 {_fmt(gates['C']['normalized_utilization'])}，action RMSE 退化 {_pct(gates['C']['action_rmse_degradation'])}；Gate C 失败。
+- episodes 40–49 已按要求全部执行，但证据标签是 `{bootstrap['evidence_label']}`，不是 untouched confirmation，不能解锁 BC。
+- 没有训练 ACT、Diffusion Policy、SmolVLA、pi0.5 或任何策略；PAI 作业数为 0；预测器训练仅使用一张本地 A800。
+
+## 机理反解
+
+代码与控制实验共同指向同一条下降链：C3 bi-encoder 本身能学到较强的效果几何，并把 development 真实误差从 B2 的 {_fmt(dev_base['balanced_task_effect_error'])} 降到 {_fmt(_summary(dev, 'C3_NC_BIENCODER')['balanced_task_effect_error'])}。但是 C5 只用 C3 做 K=64 FPS 覆盖，最终选择完全由表现较差的 C4 pair ranker 决定；C4 把 C3 的排序收益逆转，K=64 压缩再带来较小的二次损失。nominal/state/history/label shuffle 没有摧毁正收益，因为 C4/C5 相对 C3 本来就是负收益。详细逐代码路径、support-family 分解和限制见下方完整报告及 `MECHANISM_REVERSE_AUDIT.md`。
+
+## 代码与制品
+
+GitHub 主分支：<https://github.com/mikasaTu/R13-P15-Consequence-Adaptive-Action-Alphabets/tree/main>
+
+本页以下内容是仓库内冻结的 `STAGE3_REPORT.md` 完整正文。
+
+---
+
+{report}
+"""
+    atomic_text(
+        os.path.join(output_root, "FEISHU_EXPERIMENT_REPORT.md"),
+        feishu_report,
+    )
     return {"path": os.path.join(output_root, "STAGE3_REPORT.md"), "disposition": final}
 
 
