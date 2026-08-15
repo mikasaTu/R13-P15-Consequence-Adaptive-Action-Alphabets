@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import copy
 import json
+import math
 import os
 import time
 
@@ -307,6 +308,15 @@ def train_model(cache, base_pairs, family, control, seed, device):
     trace = []
     global_step = 0
     started = time.perf_counter()
+    ranking_batches_per_epoch = len(contexts) * (
+        SUPPORT_TARGET_COUNT // CR_BATCH_SIZE
+    )
+    reversal_batches_per_epoch = int(
+        math.ceil(len(pairs["state_s1"]) / float(CR_BATCH_SIZE))
+    )
+    if ranking_batches_per_epoch % reversal_batches_per_epoch:
+        raise RuntimeError("reversal batches must divide ranking batches exactly")
+    reversal_interval = ranking_batches_per_epoch // reversal_batches_per_epoch
     for epoch in range(CR_MAX_EPOCHS):
         model.train()
         state_order = np.random.RandomState(_seed(seed, control, epoch, "state")).permutation(
@@ -317,6 +327,8 @@ def train_model(cache, base_pairs, family, control, seed, device):
         )
         pair_cursor = 0
         epoch_parts = []
+        epoch_reversal = []
+        epoch_step = 0
         for state in state_order:
             target_order = np.random.RandomState(
                 _seed(seed, control, epoch, int(state), "target")
@@ -331,16 +343,20 @@ def train_model(cache, base_pairs, family, control, seed, device):
                     true_distance[state, query_ids], device=device
                 )
                 listwise, pairwise = _ranking_losses(score, truth)
-                reversal_ids = np.take(
-                    pair_order,
-                    np.arange(pair_cursor, pair_cursor + CR_BATCH_SIZE)
-                    % len(pair_order),
+                use_reversal = (
+                    control != "NO_REVERSAL_LOSS"
+                    and epoch_step % reversal_interval == 0
                 )
-                pair_cursor = (pair_cursor + CR_BATCH_SIZE) % len(pair_order)
-                if control == "NO_REVERSAL_LOSS":
+                if not use_reversal:
                     reversal = torch.zeros((), device=device)
                     reversal_weight = 0.0
                 else:
+                    reversal_ids = pair_order[
+                        pair_cursor : pair_cursor + CR_BATCH_SIZE
+                    ]
+                    if len(reversal_ids) != CR_BATCH_SIZE:
+                        raise RuntimeError("partial reversal batch is forbidden")
+                    pair_cursor += CR_BATCH_SIZE
                     reversal = _reversal_loss(
                         model,
                         contexts,
@@ -350,7 +366,12 @@ def train_model(cache, base_pairs, family, control, seed, device):
                         reversal_ids,
                         device,
                     )
-                    reversal_weight = CR_REVERSAL_WEIGHT
+                    # Each reversal example is consumed exactly once per
+                    # epoch.  The interval factor makes the mean SGD objective
+                    # equal to listwise + .5 pairwise + .5 reversal instead of
+                    # silently downweighting the smaller reversal table.
+                    reversal_weight = CR_REVERSAL_WEIGHT * reversal_interval
+                    epoch_reversal.append(float(reversal.detach().cpu()))
                 total = (
                     CR_LISTWISE_WEIGHT * listwise
                     + CR_PAIRWISE_WEIGHT * pairwise
@@ -367,6 +388,9 @@ def train_model(cache, base_pairs, family, control, seed, device):
                     )
                 )
                 global_step += 1
+                epoch_step += 1
+        if control != "NO_REVERSAL_LOSS" and pair_cursor != len(pair_order):
+            raise RuntimeError("not every reversal pair was consumed exactly once")
         mean = np.mean(np.asarray(epoch_parts, dtype=np.float64), axis=0)
         trace.append(
             {
@@ -374,7 +398,10 @@ def train_model(cache, base_pairs, family, control, seed, device):
                 "total": float(mean[0]),
                 "listwise": float(mean[1]),
                 "pairwise": float(mean[2]),
-                "reversal": float(mean[3]),
+                "reversal": (
+                    float(np.mean(epoch_reversal)) if epoch_reversal else 0.0
+                ),
+                "reversal_batches": len(epoch_reversal),
                 "optimizer_steps": len(epoch_parts),
             }
         )
@@ -393,6 +420,13 @@ def train_model(cache, base_pairs, family, control, seed, device):
         "queries_per_epoch": len(contexts) * SUPPORT_TARGET_COUNT,
         "full_bank_candidates_per_query": ACTION_BANK_SIZE,
         "optimizer_steps": global_step,
+        "ranking_batches_per_epoch": ranking_batches_per_epoch,
+        "reversal_batches_per_epoch": (
+            0 if control == "NO_REVERSAL_LOSS" else reversal_batches_per_epoch
+        ),
+        "reversal_examples_consumed_per_epoch": (
+            0 if control == "NO_REVERSAL_LOSS" else len(pairs["state_s1"])
+        ),
         "parameter_count": parameter_count(model),
         "wall_seconds": float(time.perf_counter() - started),
         "loss_weights": {
