@@ -601,6 +601,17 @@ def evaluate_split(
         retrieval_name = "calibration_retrieval.csv"
         realized_name = "calibration_realized.csv"
         summary_name = "calibration_evaluation_summary.json"
+    # One historical state exists for every (task, episode, phase) tuple, so
+    # the verbose state key is a lossless join to the frozen split manifest,
+    # not an independent measurement.  Avoid repeating it in large ordinary
+    # CSV artifacts so they remain publishable with normal Git.
+    omitted_redundant_fields = ("state_key",)
+    for row in retrieval:
+        for field in omitted_redundant_fields:
+            row.pop(field, None)
+    for row in realized:
+        for field in omitted_redundant_fields:
+            row.pop(field, None)
     write_csv(os.path.join(output_root, retrieval_name), retrieval)
     write_csv(os.path.join(output_root, realized_name), realized)
     realized_summary = summarize_realized(realized, PRIMARY_K)
@@ -625,6 +636,8 @@ def evaluate_split(
         "methods": len(methods),
         "retrieval_rows": len(retrieval),
         "realized_rows": len(realized),
+        "csv_omitted_redundant_fields": list(omitted_redundant_fields),
+        "csv_join_key": ["task_id", "episode_id", "phase"],
         "wall_seconds_excluding_model_scoring": elapsed,
         "method_balanced_task_effect": method_means,
         "realized_summary": realized_summary,
@@ -927,6 +940,23 @@ def evaluate_fresh_confirmation(
                 realized.append(row)
     retrieval_path = os.path.join(output_root, "CONFIRMATION_RETRIEVAL.csv")
     realized_path = os.path.join(output_root, "CONFIRMATION_REALIZED.csv")
+    # The evidence label and no-new-episode assertion are constants frozen in
+    # the split and summary manifests.  The long state key is losslessly joined
+    # from (task, episode, phase) because the confirmation split has exactly
+    # one state per such tuple.  Do not repeat those strings in ~450k CSV rows:
+    # preserving only non-redundant columns keeps the required ordinary CSVs
+    # below GitHub's normal-Git per-file limit without compression or LFS.
+    omitted_redundant_fields = (
+        "evidence_label",
+        "new_episode_claim",
+        "state_key",
+    )
+    for row in retrieval:
+        for field in omitted_redundant_fields:
+            row.pop(field, None)
+    for row in realized:
+        for field in omitted_redundant_fields:
+            row.pop(field, None)
     write_csv(retrieval_path, retrieval)
     write_csv(realized_path, realized)
     summary_rows = summarize_realized(realized, PRIMARY_K)
@@ -981,6 +1011,8 @@ def evaluate_fresh_confirmation(
         "realized_summary": summary_rows,
         "retrieval_rows": len(retrieval),
         "realized_rows": len(realized),
+        "csv_omitted_redundant_fields": list(omitted_redundant_fields),
+        "csv_join_key": ["task_id", "episode_id", "phase"],
         "retrieval_sha256": sha256_file(retrieval_path),
         "realized_sha256": sha256_file(realized_path),
     }

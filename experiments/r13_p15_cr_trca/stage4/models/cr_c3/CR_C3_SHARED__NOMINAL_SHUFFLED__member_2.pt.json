@@ -1,0 +1,295 @@
+{
+  "checkpoint_sha256": "363644d28fa0db619d99155ca25c7b88e75b442879a273fef6c87fc00811f118",
+  "control": "NOMINAL_SHUFFLED",
+  "epochs": 30,
+  "family": "CR_C3_SHARED",
+  "full_bank_candidates_per_query": 256,
+  "loss_weights": {
+    "listwise": 1.0,
+    "pairwise": 0.5,
+    "reversal": 0.5
+  },
+  "optimizer_steps": 138240,
+  "parameter_count": 138112,
+  "queries_per_epoch": 73728,
+  "query_batch_size": 16,
+  "ranking_batches_per_epoch": 4608,
+  "reversal_batches_per_epoch": 218,
+  "reversal_examples_consumed_per_epoch": 3488,
+  "seed": 13150443,
+  "strict_reversal_examples_available": 3494,
+  "strict_reversal_examples_dropped_for_complete_batch": 6,
+  "trace": [
+    {
+      "epoch": 0,
+      "listwise": 5.4186984581044975,
+      "optimizer_steps": 4608,
+      "pairwise": 0.644864039004056,
+      "reversal": 1.465527812275318,
+      "reversal_batches": 218,
+      "total": 6.47389439969427
+    },
+    {
+      "epoch": 1,
+      "listwise": 5.411321171041992,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6414801996434107,
+      "reversal": 1.4660011447897745,
+      "reversal_batches": 218,
+      "total": 6.465061858399874
+    },
+    {
+      "epoch": 2,
+      "listwise": 5.410370639111433,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6409119124291465,
+      "reversal": 1.4661139774759975,
+      "reversal_batches": 218,
+      "total": 6.463883600404693
+    },
+    {
+      "epoch": 3,
+      "listwise": 5.410198498620755,
+      "optimizer_steps": 4608,
+      "pairwise": 0.640973432481082,
+      "reversal": 1.4662764389580543,
+      "reversal_batches": 218,
+      "total": 6.463823445658717
+    },
+    {
+      "epoch": 4,
+      "listwise": 5.409286228836411,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6406133804832481,
+      "reversal": 1.4663072638555403,
+      "reversal_batches": 218,
+      "total": 6.462746562850144
+    },
+    {
+      "epoch": 5,
+      "listwise": 5.409281647557186,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6405691456618823,
+      "reversal": 1.4662514257868495,
+      "reversal_batches": 218,
+      "total": 6.462691942229867
+    },
+    {
+      "epoch": 6,
+      "listwise": 5.408654185529384,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6405320021116899,
+      "reversal": 1.4663864844435945,
+      "reversal_batches": 218,
+      "total": 6.462113440554175
+    },
+    {
+      "epoch": 7,
+      "listwise": 5.409028174562587,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6405086726752214,
+      "reversal": 1.4665273854491907,
+      "reversal_batches": 218,
+      "total": 6.462546221291025
+    },
+    {
+      "epoch": 8,
+      "listwise": 5.407540167992313,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6402481009718031,
+      "reversal": 1.4661604439446685,
+      "reversal_batches": 218,
+      "total": 6.460744450800121
+    },
+    {
+      "epoch": 9,
+      "listwise": 5.408249598203434,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6401699433853436,
+      "reversal": 1.4662275642430016,
+      "reversal_batches": 218,
+      "total": 6.461448365925914
+    },
+    {
+      "epoch": 10,
+      "listwise": 5.4089387755634055,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6404077421822068,
+      "reversal": 1.4662231228767184,
+      "reversal_batches": 218,
+      "total": 6.462254221137199
+    },
+    {
+      "epoch": 11,
+      "listwise": 5.4081786110376315,
+      "optimizer_steps": 4608,
+      "pairwise": 0.640193285769783,
+      "reversal": 1.4662378430366516,
+      "reversal_batches": 218,
+      "total": 6.461394189753467
+    },
+    {
+      "epoch": 12,
+      "listwise": 5.407836822172006,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6400859883805323,
+      "reversal": 1.4662048849490805,
+      "reversal_batches": 218,
+      "total": 6.460982267227438
+    },
+    {
+      "epoch": 13,
+      "listwise": 5.40773519842575,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6402110687146584,
+      "reversal": 1.4662486265558716,
+      "reversal_batches": 218,
+      "total": 6.460965060111549
+    },
+    {
+      "epoch": 14,
+      "listwise": 5.407139040943649,
+      "optimizer_steps": 4608,
+      "pairwise": 0.640120189766296,
+      "reversal": 1.4661977580927927,
+      "reversal_batches": 218,
+      "total": 6.46029802535971
+    },
+    {
+      "epoch": 15,
+      "listwise": 5.408002624081241,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6400596860977303,
+      "reversal": 1.46622260502719,
+      "reversal_batches": 218,
+      "total": 6.461143784845869
+    },
+    {
+      "epoch": 16,
+      "listwise": 5.407941908575594,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6403018076800637,
+      "reversal": 1.4661207210033311,
+      "reversal_batches": 218,
+      "total": 6.461153188616866
+    },
+    {
+      "epoch": 17,
+      "listwise": 5.408226665316357,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6404609780681009,
+      "reversal": 1.4661549253201267,
+      "reversal_batches": 218,
+      "total": 6.4615346261610584
+    },
+    {
+      "epoch": 18,
+      "listwise": 5.40733320855846,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6402044854928843,
+      "reversal": 1.4662366487564298,
+      "reversal_batches": 218,
+      "total": 6.460553790132205
+    },
+    {
+      "epoch": 19,
+      "listwise": 5.40790505696916,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6402541273661578,
+      "reversal": 1.4662068573706741,
+      "reversal_batches": 218,
+      "total": 6.461135559611851
+    },
+    {
+      "epoch": 20,
+      "listwise": 5.407525220885873,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6402580776743384,
+      "reversal": 1.4662377096097403,
+      "reversal_batches": 218,
+      "total": 6.460773121772541
+    },
+    {
+      "epoch": 21,
+      "listwise": 5.407392315152618,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6400676962867793,
+      "reversal": 1.466244849043155,
+      "reversal_batches": 218,
+      "total": 6.460548598629733
+    },
+    {
+      "epoch": 22,
+      "listwise": 5.40732343091319,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6400930664062293,
+      "reversal": 1.4662055734100692,
+      "reversal_batches": 218,
+      "total": 6.460472761446403
+    },
+    {
+      "epoch": 23,
+      "listwise": 5.407115884849595,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6399925358903905,
+      "reversal": 1.4662504650037222,
+      "reversal_batches": 218,
+      "total": 6.460237397708827
+    },
+    {
+      "epoch": 24,
+      "listwise": 5.4075325521537,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6399344730630724,
+      "reversal": 1.4661827738131952,
+      "reversal_batches": 218,
+      "total": 6.460591183975339
+    },
+    {
+      "epoch": 25,
+      "listwise": 5.407563688233495,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6401119471475896,
+      "reversal": 1.4662293064484901,
+      "reversal_batches": 218,
+      "total": 6.460734328255057
+    },
+    {
+      "epoch": 26,
+      "listwise": 5.406908666818506,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6397990581657117,
+      "reversal": 1.4662975761868537,
+      "reversal_batches": 218,
+      "total": 6.459956998108989
+    },
+    {
+      "epoch": 27,
+      "listwise": 5.407166272194849,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6399508334644552,
+      "reversal": 1.4662499296555824,
+      "reversal_batches": 218,
+      "total": 6.4602666683495045
+    },
+    {
+      "epoch": 28,
+      "listwise": 5.406986886221501,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6399176638030136,
+      "reversal": 1.4661045326005429,
+      "reversal_batches": 218,
+      "total": 6.459997992341717
+    },
+    {
+      "epoch": 29,
+      "listwise": 5.407069777759413,
+      "optimizer_steps": 4608,
+      "pairwise": 0.6400368961039931,
+      "reversal": 1.466212964932853,
+      "reversal_batches": 218,
+      "total": 6.4601947223353715
+    }
+  ],
+  "wall_seconds": 476.46009209100157
+}
