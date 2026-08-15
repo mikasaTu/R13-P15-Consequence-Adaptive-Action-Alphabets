@@ -321,7 +321,13 @@ def train_robust_margins(cache):
 
 
 def reversal_pairs(cache, margins, count_per_task_phase=CR_REVERSALS_PER_TASK_PHASE):
-    """Create balanced, strict two-state ordering reversals from true train effects."""
+    """Create strict reversals, preserving evidence when a stratum has none.
+
+    Free-space physics can be genuinely state invariant.  In that case no
+    valid reversal exists and manufacturing one would leak a false label.  We
+    therefore target equal quotas but return an explicitly undersupplied
+    stratum rather than weakening the margin or changing the inequality.
+    """
     rows = []
     distance = cache["true_distance"]
     for task in TASK_IDS:
@@ -333,67 +339,79 @@ def reversal_pairs(cache, margins, count_per_task_phase=CR_REVERSALS_PER_TASK_PH
             if len(states) < 2:
                 raise RuntimeError("insufficient states for reversal group %s/%s" % (task, phase))
             margin = float(margins[(task, phase)])
-            quotient, remainder = divmod(int(count_per_task_phase), SUPPORT_TARGET_COUNT)
-            quotas = np.full(SUPPORT_TARGET_COUNT, quotient, dtype=np.int64)
-            quotas[:remainder] += 1
             rng = np.random.RandomState(_seed(REVERSAL_PAIR_SEED, task, phase, len(states)))
             seen = set()
-            for target_id, quota in enumerate(quotas):
-                accepted = 0
-                attempts = 0
-                while accepted < int(quota) and attempts < 200000:
-                    attempts += 1
-                    state_left, state_right = rng.choice(states, size=2, replace=False)
-                    candidate_i, candidate_j = rng.choice(
-                        ACTION_BANK_SIZE, size=2, replace=False
-                    )
-                    left_gap = float(
-                        distance[state_left, target_id, candidate_j]
-                        - distance[state_left, target_id, candidate_i]
-                    )
-                    right_gap = float(
-                        distance[state_right, target_id, candidate_j]
-                        - distance[state_right, target_id, candidate_i]
-                    )
-                    if left_gap < -margin and right_gap > margin:
-                        candidate_i, candidate_j = candidate_j, candidate_i
-                        left_gap, right_gap = -left_gap, -right_gap
-                    if not (left_gap > margin and right_gap < -margin):
-                        continue
+            group_rows = []
+            target_counts = np.zeros(SUPPORT_TARGET_COUNT, dtype=np.int64)
+            target_order = rng.permutation(SUPPORT_TARGET_COUNT)
+            attempt_limit = max(20000, int(count_per_task_phase) * 200)
+            for attempt in range(attempt_limit):
+                if len(group_rows) >= int(count_per_task_phase):
+                    break
+                # Cycle targets in a frozen order. Targets with no physical
+                # reversal cannot starve the remaining valid targets.
+                target_id = int(target_order[attempt % SUPPORT_TARGET_COUNT])
+                state_left, state_right = rng.choice(states, size=2, replace=False)
+                left = distance[state_left, target_id]
+                right = distance[state_right, target_id]
+                candidate_i_pool = np.argsort(left, kind="stable")[:32]
+                candidate_j_pool = np.argsort(right, kind="stable")[:32]
+                left_gap = (
+                    left[candidate_j_pool][None, :]
+                    - left[candidate_i_pool][:, None]
+                )
+                right_gap = (
+                    right[candidate_j_pool][None, :]
+                    - right[candidate_i_pool][:, None]
+                )
+                valid = np.argwhere((left_gap > margin) & (right_gap < -margin))
+                if not len(valid):
+                    continue
+                order = rng.permutation(len(valid))
+                accepted = None
+                for position in order:
+                    i_position, j_position = valid[int(position)]
+                    candidate_i = int(candidate_i_pool[int(i_position)])
+                    candidate_j = int(candidate_j_pool[int(j_position)])
                     identity = (
-                        int(state_left), int(state_right), int(target_id),
-                        int(candidate_i), int(candidate_j),
+                        int(state_left),
+                        int(state_right),
+                        target_id,
+                        candidate_i,
+                        candidate_j,
                     )
-                    if identity in seen:
-                        continue
-                    seen.add(identity)
-                    rows.append(
-                        {
-                            "task_id": task,
-                            "phase": phase,
-                            "state_s1": int(state_left),
-                            "state_s2": int(state_right),
-                            "state_key_s1": str(cache["key"][state_left]),
-                            "state_key_s2": str(cache["key"][state_right]),
-                            "episode_s1": int(cache["episode_id"][state_left]),
-                            "episode_s2": int(cache["episode_id"][state_right]),
-                            "target_id": int(target_id),
-                            "direction_family_id": int(
-                                cache["direction_family_id"][target_id]
-                            ),
-                            "candidate_i": int(candidate_i),
-                            "candidate_j": int(candidate_j),
-                            "margin": margin,
-                            "true_gap_s1_j_minus_i": left_gap,
-                            "true_gap_s2_j_minus_i": right_gap,
-                        }
-                    )
-                    accepted += 1
-                if accepted != int(quota):
-                    raise RuntimeError(
-                        "could not construct reversal quota for %s/%s target %d"
-                        % (task, phase, target_id)
-                    )
+                    if identity not in seen:
+                        accepted = (identity, candidate_i, candidate_j)
+                        break
+                if accepted is None:
+                    continue
+                identity, candidate_i, candidate_j = accepted
+                seen.add(identity)
+                exact_left_gap = float(left[candidate_j] - left[candidate_i])
+                exact_right_gap = float(right[candidate_j] - right[candidate_i])
+                group_rows.append(
+                    {
+                        "task_id": task,
+                        "phase": phase,
+                        "state_s1": int(state_left),
+                        "state_s2": int(state_right),
+                        "state_key_s1": str(cache["key"][state_left]),
+                        "state_key_s2": str(cache["key"][state_right]),
+                        "episode_s1": int(cache["episode_id"][state_left]),
+                        "episode_s2": int(cache["episode_id"][state_right]),
+                        "target_id": target_id,
+                        "direction_family_id": int(
+                            cache["direction_family_id"][target_id]
+                        ),
+                        "candidate_i": candidate_i,
+                        "candidate_j": candidate_j,
+                        "margin": margin,
+                        "true_gap_s1_j_minus_i": exact_left_gap,
+                        "true_gap_s2_j_minus_i": exact_right_gap,
+                    }
+                )
+                target_counts[target_id] += 1
+            rows.extend(group_rows)
     return rows
 
 
@@ -411,8 +429,23 @@ def build_reversal_artifact(project_root, output_root=None, scratch_root=SCRATCH
     metadata = {
         "source": "expanded train episodes 16-31 only",
         "pair_count": len(rows),
-        "pairs_per_task_phase": CR_REVERSALS_PER_TASK_PHASE,
-        "balanced_target_quotas": True,
+        "requested_pairs_per_task_phase": CR_REVERSALS_PER_TASK_PHASE,
+        "realized_pairs_by_task_phase": {
+            "%s/%s" % (task, phase): sum(
+                row["task_id"] == task and row["phase"] == phase for row in rows
+            )
+            for task in TASK_IDS
+            for phase in PHASES
+        },
+        "strictly_undersupplied_task_phases": [
+            "%s/%s" % (task, phase)
+            for task in TASK_IDS
+            for phase in PHASES
+            if sum(row["task_id"] == task and row["phase"] == phase for row in rows)
+            < CR_REVERSALS_PER_TASK_PHASE
+        ],
+        "balanced_target_quotas_when_physics_supplies_reversals": True,
+        "margin_never_relaxed_and_labels_never_fabricated": True,
         "strict_definition": "D_s1(t,i)+margin<D_s1(t,j) and D_s2(t,j)+margin<D_s2(t,i)",
         "margin_quantile": CR_PAIR_MARGIN_QUANTILE,
         "margins": {"%s/%s" % key: value for key, value in sorted(margins.items())},

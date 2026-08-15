@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import copy
 import json
-import math
 import os
 import time
 
@@ -311,20 +310,29 @@ def train_model(cache, base_pairs, family, control, seed, device):
     ranking_batches_per_epoch = len(contexts) * (
         SUPPORT_TARGET_COUNT // CR_BATCH_SIZE
     )
-    reversal_batches_per_epoch = int(
-        math.ceil(len(pairs["state_s1"]) / float(CR_BATCH_SIZE))
-    )
-    if ranking_batches_per_epoch % reversal_batches_per_epoch:
-        raise RuntimeError("reversal batches must divide ranking batches exactly")
-    reversal_interval = ranking_batches_per_epoch // reversal_batches_per_epoch
+    usable_reversal_examples = (
+        len(pairs["state_s1"]) // CR_BATCH_SIZE
+    ) * CR_BATCH_SIZE
+    reversal_batches_per_epoch = usable_reversal_examples // CR_BATCH_SIZE
+    if reversal_batches_per_epoch <= 0:
+        raise RuntimeError("strict reversal evidence contains no complete query batch")
+    reversal_steps = np.floor(
+        np.arange(reversal_batches_per_epoch, dtype=np.float64)
+        * ranking_batches_per_epoch
+        / reversal_batches_per_epoch
+    ).astype(np.int64)
+    if len(np.unique(reversal_steps)) != reversal_batches_per_epoch:
+        raise RuntimeError("too many reversal batches for the ranking schedule")
+    reversal_step_set = set(reversal_steps.tolist())
+    reversal_scale = ranking_batches_per_epoch / float(reversal_batches_per_epoch)
     for epoch in range(CR_MAX_EPOCHS):
         model.train()
         state_order = np.random.RandomState(_seed(seed, control, epoch, "state")).permutation(
             len(contexts)
         )
-        pair_order = np.random.RandomState(_seed(seed, control, epoch, "reversal")).permutation(
-            len(pairs["state_s1"])
-        )
+        pair_order = np.random.RandomState(
+            _seed(seed, control, epoch, "reversal")
+        ).permutation(len(pairs["state_s1"]))[:usable_reversal_examples]
         pair_cursor = 0
         epoch_parts = []
         epoch_reversal = []
@@ -345,7 +353,7 @@ def train_model(cache, base_pairs, family, control, seed, device):
                 listwise, pairwise = _ranking_losses(score, truth)
                 use_reversal = (
                     control != "NO_REVERSAL_LOSS"
-                    and epoch_step % reversal_interval == 0
+                    and epoch_step in reversal_step_set
                 )
                 if not use_reversal:
                     reversal = torch.zeros((), device=device)
@@ -370,7 +378,7 @@ def train_model(cache, base_pairs, family, control, seed, device):
                     # epoch.  The interval factor makes the mean SGD objective
                     # equal to listwise + .5 pairwise + .5 reversal instead of
                     # silently downweighting the smaller reversal table.
-                    reversal_weight = CR_REVERSAL_WEIGHT * reversal_interval
+                    reversal_weight = CR_REVERSAL_WEIGHT * reversal_scale
                     epoch_reversal.append(float(reversal.detach().cpu()))
                 total = (
                     CR_LISTWISE_WEIGHT * listwise
@@ -389,7 +397,7 @@ def train_model(cache, base_pairs, family, control, seed, device):
                 )
                 global_step += 1
                 epoch_step += 1
-        if control != "NO_REVERSAL_LOSS" and pair_cursor != len(pair_order):
+        if control != "NO_REVERSAL_LOSS" and pair_cursor != usable_reversal_examples:
             raise RuntimeError("not every reversal pair was consumed exactly once")
         mean = np.mean(np.asarray(epoch_parts, dtype=np.float64), axis=0)
         trace.append(
@@ -425,7 +433,13 @@ def train_model(cache, base_pairs, family, control, seed, device):
             0 if control == "NO_REVERSAL_LOSS" else reversal_batches_per_epoch
         ),
         "reversal_examples_consumed_per_epoch": (
-            0 if control == "NO_REVERSAL_LOSS" else len(pairs["state_s1"])
+            0 if control == "NO_REVERSAL_LOSS" else usable_reversal_examples
+        ),
+        "strict_reversal_examples_available": len(pairs["state_s1"]),
+        "strict_reversal_examples_dropped_for_complete_batch": (
+            0
+            if control == "NO_REVERSAL_LOSS"
+            else len(pairs["state_s1"]) - usable_reversal_examples
         ),
         "parameter_count": parameter_count(model),
         "wall_seconds": float(time.perf_counter() - started),
