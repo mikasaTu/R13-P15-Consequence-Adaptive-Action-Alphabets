@@ -601,11 +601,25 @@ def evaluate_split(
         retrieval_name = "calibration_retrieval.csv"
         realized_name = "calibration_realized.csv"
         summary_name = "calibration_evaluation_summary.json"
+    # Compute summaries before removing row-level aliases/constants.
+    realized_summary = summarize_realized(realized, PRIMARY_K)
     # One historical state exists for every (task, episode, phase) tuple, so
     # the verbose state key is a lossless join to the frozen split manifest,
     # not an independent measurement.  Avoid repeating it in large ordinary
     # CSV artifacts so they remain publishable with normal Git.
     omitted_redundant_fields = ("state_key",)
+    if split == "confirmation":
+        # This split has 2.5x as many states as development.  These columns are
+        # either constant for the file or exact aliases of retained per-group
+        # metrics; their values remain in the JSON summary.  Omitting them keeps
+        # the exploratory row artifact below normal Git's per-file ceiling.
+        omitted_redundant_fields += (
+            "split",
+            "inference_latency_ms",
+            "clipped",
+            "object_pose_error",
+            "tcp_object_relative_pose_error",
+        )
     for row in retrieval:
         for field in omitted_redundant_fields:
             row.pop(field, None)
@@ -614,7 +628,6 @@ def evaluate_split(
             row.pop(field, None)
     write_csv(os.path.join(output_root, retrieval_name), retrieval)
     write_csv(os.path.join(output_root, realized_name), realized)
-    realized_summary = summarize_realized(realized, PRIMARY_K)
     method_means = {
         method: float(
             np.mean(
@@ -938,6 +951,8 @@ def evaluate_fresh_confirmation(
                 row["direction_family_id"] = int(family_ids[target])
                 row["target_id"] = target
                 realized.append(row)
+    # Compute summaries before removing row-level aliases/constants.
+    summary_rows = summarize_realized(realized, PRIMARY_K)
     retrieval_path = os.path.join(output_root, "CONFIRMATION_RETRIEVAL.csv")
     realized_path = os.path.join(output_root, "CONFIRMATION_REALIZED.csv")
     # The evidence label and no-new-episode assertion are constants frozen in
@@ -950,6 +965,11 @@ def evaluate_fresh_confirmation(
         "evidence_label",
         "new_episode_claim",
         "state_key",
+        "split",
+        "inference_latency_ms",
+        "clipped",
+        "object_pose_error",
+        "tcp_object_relative_pose_error",
     )
     for row in retrieval:
         for field in omitted_redundant_fields:
@@ -959,7 +979,6 @@ def evaluate_fresh_confirmation(
             row.pop(field, None)
     write_csv(retrieval_path, retrieval)
     write_csv(realized_path, realized)
-    summary_rows = summarize_realized(realized, PRIMARY_K)
     method_means = {
         method: float(
             np.mean(

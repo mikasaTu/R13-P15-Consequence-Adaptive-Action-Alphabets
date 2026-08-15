@@ -1,0 +1,27 @@
+{
+  "confirmation": {
+    "CR_C3_FULL": {
+      "joint_context_reversal_accuracy": 0.005533854166666667,
+      "pair_count": 3072,
+      "side_context_reversal_accuracy": 0.5
+    },
+    "FROZEN_C3_FULL": {
+      "joint_context_reversal_accuracy": 0.0615234375,
+      "pair_count": 3072,
+      "side_context_reversal_accuracy": 0.5081380208333334
+    }
+  },
+  "development": {
+    "CR_C3_FULL": {
+      "joint_context_reversal_accuracy": 0.004212572909915748,
+      "pair_count": 3086,
+      "side_context_reversal_accuracy": 0.5008101101749838
+    },
+    "FROZEN_C3_FULL": {
+      "joint_context_reversal_accuracy": 0.059948152948801035,
+      "pair_count": 3086,
+      "side_context_reversal_accuracy": 0.5076150356448477
+    }
+  },
+  "selected_cr_family": "CR_C3_SHARED"
+}

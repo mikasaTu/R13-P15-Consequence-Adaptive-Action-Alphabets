@@ -1,0 +1,53 @@
+{
+  "all_experiments_continue_after_failure": true,
+  "confirmation_not_yet_used": true,
+  "gate_A_oracle_headroom": {
+    "contact_tasks_improved": 3,
+    "passed": true,
+    "relative_gain": 0.5532020701970476,
+    "task_relative_gains": {
+      "bowl_on_plate": 0.5404455604149832,
+      "plate_push": 0.45840557775613994,
+      "stove_turn_on": 0.6565070160044958,
+      "wine_rack": 0.5767862385672002
+    },
+    "tasks_improved": 4
+  },
+  "gate_B_learned_consequence_metric": {
+    "action_only_gain": 0.16639634585533142,
+    "consequence_label_shuffled_gain": 0.1904745534893511,
+    "contact_tasks_improved": 3,
+    "context_independent": true,
+    "context_reversal_accuracy_gain_points": -0.05573558003888529,
+    "development_relative_gain": 0.18035246992332482,
+    "frozen_c3_relative_gain": -0.10056148704812114,
+    "historical_exploratory_relative_gain": 0.1822339761091427,
+    "joint_state_nominal_shuffle_gain": 0.1817725158385453,
+    "joint_state_nominal_shuffle_gain_retention": 1.0078737259091834,
+    "passed": false,
+    "task_relative_gains": {
+      "bowl_on_plate": 0.12262999270757567,
+      "plate_push": 0.18804859085987746,
+      "stove_turn_on": 0.2813354975029569,
+      "wine_rack": 0.18711435440395957
+    },
+    "tasks_improved": 4
+  },
+  "gate_C_k64_alphabet": {
+    "action_rmse_degradation": 0.22524150878390065,
+    "clipping_rate": 0.0,
+    "contact_preservation_drop_points": 0.0068359375,
+    "contact_tasks_improved": 3,
+    "full_gain_retention": 0.6214745596810429,
+    "normalized_code_utilization": 0.24388040427547533,
+    "passed": false,
+    "relative_gain": 0.11208447183298684,
+    "task_relative_gains": {
+      "bowl_on_plate": 0.07198054029310634,
+      "plate_push": 0.1327887888053644,
+      "stove_turn_on": 0.19778795510633698,
+      "wine_rack": 0.07672444024820423
+    },
+    "tasks_improved": 4
+  }
+}
