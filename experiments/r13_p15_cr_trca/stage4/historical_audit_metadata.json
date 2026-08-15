@@ -1,0 +1,34 @@
+{
+  "device": "cpu",
+  "frozen_c3_members": [
+    "models/C3_NC_BIENCODER_member_0.pt",
+    "models/C3_NC_BIENCODER_member_1.pt",
+    "models/C3_NC_BIENCODER_member_2.pt"
+  ],
+  "frozen_c4_members": [
+    "models/C4_NC_PAIR_RANKER_member_0.pt",
+    "models/C4_NC_PAIR_RANKER_member_1.pt",
+    "models/C4_NC_PAIR_RANKER_member_2.pt"
+  ],
+  "no_retraining": true,
+  "no_simulator_execution": true,
+  "outputs": {
+    "C3_CONTEXT_INTERVENTIONS.csv": "db6319ca40cab8b6208743714c4fd9a7ce939b5e9e1f0f5b2e27bf67e120a68b",
+    "C3_FAILURE_DECOMPOSITION.csv": "d74f07f2e47dd71595da1511083df0d436b06a08d735b538aefaa23650db6fcd",
+    "CONTEXT_DEPENDENCE_AUDIT.csv": "063f59a68b4326c91509d97427929804f8a1c6ba190d5d1b0b34a0059919db9c"
+  },
+  "splits": {
+    "DEVELOPMENT_EPISODES_36_39": {
+      "candidate_count": 256,
+      "states": 64,
+      "targets_per_state": 96
+    },
+    "HISTORICAL_EXPLORATORY_EPISODES_40_49": {
+      "candidate_count": 256,
+      "states": 160,
+      "targets_per_state": 96
+    }
+  },
+  "stage3_registry_sha256": "7b8f87f31e21d6c5441b7560d7bcd2e23449267b7f6d21a5c2c53aea2c32f8ff",
+  "train_margin_quantile": 0.25
+}

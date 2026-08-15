@@ -1,0 +1,326 @@
+{
+  "calibration_metrics": {
+    "c3_full_mean_ndcg_at_16": 0.5735032172284086,
+    "c3_full_mean_oracle_regret": 0.20606681828727838,
+    "targets": 6144
+  },
+  "checkpoint_sha256": "113f921e74e36b0cfe13c9e86627763a2fb47aa69108c178a7e5e7d92c7fb0ec",
+  "development_or_historical_used": false,
+  "objective": {
+    "lambda_distance": 1.0,
+    "lambda_listwise": 0.5,
+    "lambda_pairwise": 0.5,
+    "name": "balanced",
+    "tau_model": 0.15,
+    "tau_true": 0.15
+  },
+  "objective_index": 0,
+  "screening_seed": 56229435,
+  "training_metadata": {
+    "best_calibration_loss": 2.196410945943884,
+    "best_epoch": 8,
+    "epochs_ran": 17,
+    "family": "C3_NC_BIENCODER",
+    "objective": {
+      "lambda_distance": 1.0,
+      "lambda_listwise": 0.5,
+      "lambda_pairwise": 0.5,
+      "name": "balanced",
+      "tau_model": 0.15,
+      "tau_true": 0.15
+    },
+    "seed": 56229435,
+    "trace": [
+      {
+        "calibration_loss": 2.208697235262072,
+        "calibration_parts": {
+          "distance": 0.03619111023490896,
+          "listwise": 3.677108829085891,
+          "pairwise": 0.6679034023671537,
+          "routing": 0.0
+        },
+        "epoch": 0,
+        "train_loss": 2.2191122910072063,
+        "train_parts": {
+          "distance": 0.04135102105551752,
+          "listwise": 3.682415301224281,
+          "pairwise": 0.6731072495723592,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.2054637638298242,
+        "calibration_parts": {
+          "distance": 0.03480064558066629,
+          "listwise": 3.6743478452837146,
+          "pairwise": 0.666978391441139,
+          "routing": 0.0
+        },
+        "epoch": 1,
+        "train_loss": 2.2068769701595965,
+        "train_parts": {
+          "distance": 0.03526582511077667,
+          "listwise": 3.675699174815211,
+          "pairwise": 0.6675231201895352,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.204380679774929,
+        "calibration_parts": {
+          "distance": 0.03419291635824216,
+          "listwise": 3.673286689294351,
+          "pairwise": 0.6670888179057354,
+          "routing": 0.0
+        },
+        "epoch": 2,
+        "train_loss": 2.203570132419981,
+        "train_parts": {
+          "distance": 0.034011351638312995,
+          "listwise": 3.672489312599445,
+          "pairwise": 0.6666282403058019,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.201761348827465,
+        "calibration_parts": {
+          "distance": 0.03363692953024764,
+          "listwise": 3.6699647259067847,
+          "pairwise": 0.6662841326481587,
+          "routing": 0.0
+        },
+        "epoch": 3,
+        "train_loss": 2.2005575870645457,
+        "train_parts": {
+          "distance": 0.032928994362210404,
+          "listwise": 3.66941447093569,
+          "pairwise": 0.6658427032931098,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.2011067416216874,
+        "calibration_parts": {
+          "distance": 0.03323428145282575,
+          "listwise": 3.6696342068749503,
+          "pairwise": 0.6661106976302894,
+          "routing": 0.0
+        },
+        "epoch": 4,
+        "train_loss": 2.198689215758751,
+        "train_parts": {
+          "distance": 0.03228507228195667,
+          "listwise": 3.6676982468572157,
+          "pairwise": 0.6651100487544619,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.199519898440387,
+        "calibration_parts": {
+          "distance": 0.03283079967808884,
+          "listwise": 3.6679581629263387,
+          "pairwise": 0.665420058611277,
+          "routing": 0.0
+        },
+        "epoch": 5,
+        "train_loss": 2.196738205284908,
+        "train_parts": {
+          "distance": 0.03163080641935612,
+          "listwise": 3.665686301527352,
+          "pairwise": 0.6645285133657785,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.1970302736437,
+        "calibration_parts": {
+          "distance": 0.03222810912474587,
+          "listwise": 3.6648407497921505,
+          "pairwise": 0.6647635875521479,
+          "routing": 0.0
+        },
+        "epoch": 6,
+        "train_loss": 2.1943347766481596,
+        "train_parts": {
+          "distance": 0.03090996354304511,
+          "listwise": 3.663112888665035,
+          "pairwise": 0.6637367301973803,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.1973159699826628,
+        "calibration_parts": {
+          "distance": 0.032161765442406,
+          "listwise": 3.6658905583458976,
+          "pairwise": 0.6644178661140235,
+          "routing": 0.0
+        },
+        "epoch": 7,
+        "train_loss": 2.1931645640011492,
+        "train_parts": {
+          "distance": 0.030430828664323378,
+          "listwise": 3.6622563789630758,
+          "pairwise": 0.663211072724441,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.196410945943884,
+        "calibration_parts": {
+          "distance": 0.03161614754463773,
+          "listwise": 3.6659648418426514,
+          "pairwise": 0.6636247264372336,
+          "routing": 0.0
+        },
+        "epoch": 8,
+        "train_loss": 2.1918283150113864,
+        "train_parts": {
+          "distance": 0.03005012913510717,
+          "listwise": 3.660864387709519,
+          "pairwise": 0.6626919721734935,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.197710739599692,
+        "calibration_parts": {
+          "distance": 0.03189484445327843,
+          "listwise": 3.6679685695751294,
+          "pairwise": 0.663663261645549,
+          "routing": 0.0
+        },
+        "epoch": 9,
+        "train_loss": 2.191670399698718,
+        "train_parts": {
+          "distance": 0.02998440466050444,
+          "listwise": 3.660822398087074,
+          "pairwise": 0.6625495832541893,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.1978926272005648,
+        "calibration_parts": {
+          "distance": 0.031985229258803094,
+          "listwise": 3.66783932737402,
+          "pairwise": 0.6639754659420735,
+          "routing": 0.0
+        },
+        "epoch": 10,
+        "train_loss": 2.1914584176293737,
+        "train_parts": {
+          "distance": 0.029984760695490345,
+          "listwise": 3.66042312589185,
+          "pairwise": 0.6625241842763178,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.1997695420239425,
+        "calibration_parts": {
+          "distance": 0.03178667055593955,
+          "listwise": 3.672435418979542,
+          "pairwise": 0.6635303706736178,
+          "routing": 0.0
+        },
+        "epoch": 11,
+        "train_loss": 2.190757600192366,
+        "train_parts": {
+          "distance": 0.02976577960211655,
+          "listwise": 3.659528064727783,
+          "pairwise": 0.6624555776859152,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.1981737871427796,
+        "calibration_parts": {
+          "distance": 0.03167113149538636,
+          "listwise": 3.669247382395976,
+          "pairwise": 0.6637578993230253,
+          "routing": 0.0
+        },
+        "epoch": 12,
+        "train_loss": 2.1900034707168055,
+        "train_parts": {
+          "distance": 0.02946577541016299,
+          "listwise": 3.659022773545364,
+          "pairwise": 0.6620526169908458,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.199510149053625,
+        "calibration_parts": {
+          "distance": 0.03148212217146883,
+          "listwise": 3.673480459161707,
+          "pairwise": 0.6625756105861148,
+          "routing": 0.0
+        },
+        "epoch": 13,
+        "train_loss": 2.1888012343439565,
+        "train_parts": {
+          "distance": 0.029101045147098343,
+          "listwise": 3.657917173977556,
+          "pairwise": 0.6614832240959694,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.1989027938327275,
+        "calibration_parts": {
+          "distance": 0.03126375126727932,
+          "listwise": 3.6723880059010274,
+          "pairwise": 0.6628901040231859,
+          "routing": 0.0
+        },
+        "epoch": 14,
+        "train_loss": 2.187797865374335,
+        "train_parts": {
+          "distance": 0.02879649359604408,
+          "listwise": 3.6568854085330305,
+          "pairwise": 0.6611173424227484,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.199794273118715,
+        "calibration_parts": {
+          "distance": 0.031209577718195883,
+          "listwise": 3.6746157117792078,
+          "pairwise": 0.6625536857424555,
+          "routing": 0.0
+        },
+        "epoch": 15,
+        "train_loss": 2.1872907572779163,
+        "train_parts": {
+          "distance": 0.028666663401085753,
+          "listwise": 3.6563772152210103,
+          "pairwise": 0.6608709845049628,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 2.19944412643845,
+        "calibration_parts": {
+          "distance": 0.031287311463037856,
+          "listwise": 3.673881131249505,
+          "pairwise": 0.6624325223871179,
+          "routing": 0.0
+        },
+        "epoch": 16,
+        "train_loss": 2.186899786982043,
+        "train_parts": {
+          "distance": 0.028536780833684165,
+          "listwise": 3.656007061333492,
+          "pairwise": 0.6607189700521272,
+          "routing": 0.0
+        }
+      }
+    ],
+    "wall_seconds": 27.554001130047254
+  }
+}

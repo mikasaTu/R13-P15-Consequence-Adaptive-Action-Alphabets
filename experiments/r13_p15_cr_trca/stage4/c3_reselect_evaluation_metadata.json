@@ -1,0 +1,8 @@
+{
+  "development_or_historical_used_for_selection": false,
+  "device": "cuda:0",
+  "realized_parquet_sha256": "96399a51f7c00971f7ae45b6c111bbe4ee49391977d35b68e81f36a9b65e8ca2",
+  "retrieval_parquet_sha256": "4e8eb83c4fba7cde1f1119115e0bcf2941c9b0d5db1f11944c5bdb8eb5a3f08d",
+  "selection_sha256": "fe3d5abb323195e157e019c0c56adc9e4c412b6fbd293edd17b4a75938433ac3",
+  "summary_sha256": "544dc68259c27624560a54ac8b1b2ee7e48ee5a54eceacac85be6804bad5a048"
+}

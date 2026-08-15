@@ -1,0 +1,338 @@
+{
+  "checkpoint_sha256": "7db8c52e1c31153482e708a4f3734e6e99ad5af83270cab85ef75fcb46900da2",
+  "member_index": 1,
+  "seed": 2279153700,
+  "selected_objective": {
+    "lambda_distance": 0.5,
+    "lambda_listwise": 1.0,
+    "lambda_pairwise": 0.5,
+    "name": "listwise_heavy",
+    "tau_model": 0.2,
+    "tau_true": 0.2
+  },
+  "selected_objective_index": 3,
+  "training_metadata": {
+    "best_calibration_loss": 4.023137356783892,
+    "best_epoch": 9,
+    "epochs_ran": 18,
+    "family": "C3_NC_BIENCODER",
+    "objective": {
+      "lambda_distance": 0.5,
+      "lambda_listwise": 1.0,
+      "lambda_pairwise": 0.5,
+      "name": "listwise_heavy",
+      "tau_model": 0.2,
+      "tau_true": 0.2
+    },
+    "seed": 2279153700,
+    "trace": [
+      {
+        "calibration_loss": 4.034653579866564,
+        "calibration_parts": {
+          "distance": 0.03735939238371479,
+          "listwise": 3.681933931402258,
+          "pairwise": 0.6680798868875246,
+          "routing": 0.0
+        },
+        "epoch": 0,
+        "train_loss": 4.047923245923273,
+        "train_parts": {
+          "distance": 0.042947062490315276,
+          "listwise": 3.689436577106344,
+          "pairwise": 0.6740263153766763,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.030062056876518,
+        "calibration_parts": {
+          "distance": 0.03594110742513392,
+          "listwise": 3.6785738919232345,
+          "pairwise": 0.6670352494394457,
+          "routing": 0.0
+        },
+        "epoch": 1,
+        "train_loss": 4.033666327904011,
+        "train_parts": {
+          "distance": 0.03624452330685895,
+          "listwise": 3.681994915008545,
+          "pairwise": 0.6670983466608771,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.028126271995339,
+        "calibration_parts": {
+          "distance": 0.035055915346822224,
+          "listwise": 3.677515120119662,
+          "pairwise": 0.6661664054200456,
+          "routing": 0.0
+        },
+        "epoch": 2,
+        "train_loss": 4.030243400047565,
+        "train_parts": {
+          "distance": 0.03504809405783127,
+          "listwise": 3.6796698340054217,
+          "pairwise": 0.6660990188861715,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.027342261494817,
+        "calibration_parts": {
+          "distance": 0.035018282590081565,
+          "listwise": 3.6766245236267916,
+          "pairwise": 0.6664171138325253,
+          "routing": 0.0
+        },
+        "epoch": 3,
+        "train_loss": 4.027907381386592,
+        "train_parts": {
+          "distance": 0.034152850739914795,
+          "listwise": 3.67811666850386,
+          "pairwise": 0.6654285714544099,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.025929889163455,
+        "calibration_parts": {
+          "distance": 0.03417316274214033,
+          "listwise": 3.676338324675689,
+          "pairwise": 0.6650099593239862,
+          "routing": 0.0
+        },
+        "epoch": 4,
+        "train_loss": 4.025925494884622,
+        "train_parts": {
+          "distance": 0.03359012515123548,
+          "listwise": 3.676672047582166,
+          "pairwise": 0.6649167792550449,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.027982582917085,
+        "calibration_parts": {
+          "distance": 0.03458320622558932,
+          "listwise": 3.6779003465497815,
+          "pairwise": 0.6655812279598133,
+          "routing": 0.0
+        },
+        "epoch": 5,
+        "train_loss": 4.024471818989721,
+        "train_parts": {
+          "distance": 0.03320107119607514,
+          "listwise": 3.675656027629458,
+          "pairwise": 0.66443054429416,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.025498061566739,
+        "calibration_parts": {
+          "distance": 0.03356118018210337,
+          "listwise": 3.6766345307633683,
+          "pairwise": 0.6641658947274491,
+          "routing": 0.0
+        },
+        "epoch": 6,
+        "train_loss": 4.022959814400508,
+        "train_parts": {
+          "distance": 0.03253310966337549,
+          "listwise": 3.674835775638449,
+          "pairwise": 0.6637149930000306,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.02410736599484,
+        "calibration_parts": {
+          "distance": 0.033179821018633,
+          "listwise": 3.6754566012202083,
+          "pairwise": 0.6641217325184796,
+          "routing": 0.0
+        },
+        "epoch": 7,
+        "train_loss": 4.021461157963194,
+        "train_parts": {
+          "distance": 0.03197936979604178,
+          "listwise": 3.673846825237932,
+          "pairwise": 0.6632492924558705,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.0238815964879215,
+        "calibration_parts": {
+          "distance": 0.03287280944956315,
+          "listwise": 3.6754462396776355,
+          "pairwise": 0.6639978692338273,
+          "routing": 0.0
+        },
+        "epoch": 8,
+        "train_loss": 4.020520137918407,
+        "train_parts": {
+          "distance": 0.031762553237635514,
+          "listwise": 3.673102888567694,
+          "pairwise": 0.663071987135657,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.023137356783892,
+        "calibration_parts": {
+          "distance": 0.032617952888579785,
+          "listwise": 3.675159505895666,
+          "pairwise": 0.6633377316835765,
+          "routing": 0.0
+        },
+        "epoch": 9,
+        "train_loss": 4.019405608341612,
+        "train_parts": {
+          "distance": 0.03142248020860656,
+          "listwise": 3.6723443080639018,
+          "pairwise": 0.662700120745034,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.028345455994478,
+        "calibration_parts": {
+          "distance": 0.033848260139190664,
+          "listwise": 3.6787812838683256,
+          "pairwise": 0.6652800521335086,
+          "routing": 0.0
+        },
+        "epoch": 10,
+        "train_loss": 4.019026516223776,
+        "train_parts": {
+          "distance": 0.031323648436829964,
+          "listwise": 3.6720764801420014,
+          "pairwise": 0.6625764271308636,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.025218712316977,
+        "calibration_parts": {
+          "distance": 0.03265801468562033,
+          "listwise": 3.677431583404541,
+          "pairwise": 0.6629162672403697,
+          "routing": 0.0
+        },
+        "epoch": 11,
+        "train_loss": 4.019215675880169,
+        "train_parts": {
+          "distance": 0.031557069667454425,
+          "listwise": 3.6720664139451653,
+          "pairwise": 0.6627414477282557,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.024457950849791,
+        "calibration_parts": {
+          "distance": 0.03276859651747588,
+          "listwise": 3.6763698861405656,
+          "pairwise": 0.6634075770506987,
+          "routing": 0.0
+        },
+        "epoch": 12,
+        "train_loss": 4.017646128555824,
+        "train_parts": {
+          "distance": 0.031128161233560794,
+          "listwise": 3.6709513335392394,
+          "pairwise": 0.6622614544013451,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.024088466489637,
+        "calibration_parts": {
+          "distance": 0.032492086404582135,
+          "listwise": 3.6763044241312386,
+          "pairwise": 0.6630759174759323,
+          "routing": 0.0
+        },
+        "epoch": 13,
+        "train_loss": 4.0163147942773225,
+        "train_parts": {
+          "distance": 0.03074192055340471,
+          "listwise": 3.670064122101356,
+          "pairwise": 0.6617594340751911,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.023505249538937,
+        "calibration_parts": {
+          "distance": 0.03206008111403601,
+          "listwise": 3.676358732017311,
+          "pairwise": 0.662232970869219,
+          "routing": 0.0
+        },
+        "epoch": 14,
+        "train_loss": 4.015625491635553,
+        "train_parts": {
+          "distance": 0.03072376362979412,
+          "listwise": 3.669455518393681,
+          "pairwise": 0.6616161679399425,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.026739172033362,
+        "calibration_parts": {
+          "distance": 0.032370126277611065,
+          "listwise": 3.6795583415675805,
+          "pairwise": 0.6619915205079157,
+          "routing": 0.0
+        },
+        "epoch": 15,
+        "train_loss": 4.015164740332242,
+        "train_parts": {
+          "distance": 0.030438032258173514,
+          "listwise": 3.669309145828773,
+          "pairwise": 0.6612731645847189,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.024475967561877,
+        "calibration_parts": {
+          "distance": 0.03210658454210372,
+          "listwise": 3.677103841626966,
+          "pairwise": 0.6626377202369071,
+          "routing": 0.0
+        },
+        "epoch": 16,
+        "train_loss": 4.015418527866232,
+        "train_parts": {
+          "distance": 0.03036270758201336,
+          "listwise": 3.6696022181675354,
+          "pairwise": 0.6612698912620545,
+          "routing": 0.0
+        }
+      },
+      {
+        "calibration_loss": 4.025953982327436,
+        "calibration_parts": {
+          "distance": 0.03223005838289454,
+          "listwise": 3.6786610693544954,
+          "pairwise": 0.6623557000546842,
+          "routing": 0.0
+        },
+        "epoch": 17,
+        "train_loss": 4.014167617929393,
+        "train_parts": {
+          "distance": 0.03004345842476549,
+          "listwise": 3.6686285166904846,
+          "pairwise": 0.6610347061321653,
+          "routing": 0.0
+        }
+      }
+    ],
+    "wall_seconds": 13.405096247093752
+  }
+}

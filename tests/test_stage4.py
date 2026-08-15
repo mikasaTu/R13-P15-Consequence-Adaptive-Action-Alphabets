@@ -5,14 +5,18 @@ from caaa_libero.stage4_config import (
     SUPPORT_DIRECTION_COUNT,
     SUPPORT_DIRECTION_FAMILIES,
     SUPPORT_TARGET_COUNT,
+    TASKS,
+    TRAIN_EPISODES,
     TRAIN_STATE_COUNT,
     method_definitions,
 )
+from caaa_libero.stage4_collection import _worker_unit
 from caaa_libero.stage4_freeze import (
     _phase_windows,
     _valid_action_chunk,
     generate_training_support_bank,
 )
+from caaa_libero.stage4_reselect import deterministic_kmedoids
 
 
 def test_stage4_support_bank_is_balanced_deterministic_and_antithetic():
@@ -70,3 +74,27 @@ def test_stage4_method_contract_forbids_pai_policy_and_synthesis():
     assert methods["execute_all_experiments_after_gate_failure"] is True
     assert methods["final_dispositions"] == list(FINAL_DISPOSITIONS)
     assert TRAIN_STATE_COUNT == 768
+
+
+def test_stage4_episode_workers_are_disjoint_and_balanced():
+    units = []
+    for task in TASKS:
+        for episode_id in TRAIN_EPISODES:
+            unit = _worker_unit(
+                {"task_id": task["task_id"], "episode_id": episode_id}
+            )
+            units.append(unit)
+    assert sorted(units) == list(range(64))
+    assignments = [unit % 16 for unit in units]
+    assert np.bincount(assignments, minlength=16).tolist() == [4] * 16
+
+
+def test_stage4_predicted_space_kmedoids_is_deterministic_and_unique():
+    rng = np.random.default_rng(13150400)
+    values = rng.normal(size=(32, 5))
+    left = deterministic_kmedoids(values, k=8)
+    right = deterministic_kmedoids(values, k=8)
+    assert np.array_equal(left, right)
+    assert left.shape == (8,)
+    assert len(np.unique(left)) == 8
+    assert np.all((left >= 0) & (left < len(values)))

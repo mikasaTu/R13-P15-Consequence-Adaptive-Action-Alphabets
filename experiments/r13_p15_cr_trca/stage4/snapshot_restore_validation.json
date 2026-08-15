@@ -1,0 +1,150 @@
+{
+  "confirmation_state_executed": false,
+  "failed_tests": [],
+  "fresh_confirmation_state_executed": false,
+  "passed": true,
+  "scope": "sacrificial calibration episode 32 only",
+  "tests": [
+    {
+      "candidate_bank_index": 17,
+      "episode_id": 32,
+      "nominal": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "order": "nominal,perturbed,nominal,perturbed",
+      "passed": true,
+      "perturbed": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "phase": "pre_contact",
+      "snapshot_index": 37,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "candidate_bank_index": 70,
+      "episode_id": 32,
+      "nominal": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "order": "nominal,perturbed,nominal,perturbed",
+      "passed": true,
+      "perturbed": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "phase": "pre_contact",
+      "snapshot_index": 35,
+      "task_id": "plate_push"
+    },
+    {
+      "candidate_bank_index": 123,
+      "episode_id": 32,
+      "nominal": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "order": "nominal,perturbed,nominal,perturbed",
+      "passed": true,
+      "perturbed": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "phase": "pre_contact",
+      "snapshot_index": 37,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "candidate_bank_index": 176,
+      "episode_id": 32,
+      "nominal": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "order": "nominal,perturbed,nominal,perturbed",
+      "passed": true,
+      "perturbed": {
+        "contact_mode_equal": true,
+        "done_equal": true,
+        "final_state_l2": 0.0,
+        "final_state_max_abs": 0.0,
+        "immediate_consequence_l2": 0.0,
+        "immediate_consequence_max_abs": 0.0,
+        "passed": true,
+        "reward_equal": true,
+        "settled_consequence_l2": 0.0,
+        "settled_consequence_max_abs": 0.0,
+        "success_equal": true
+      },
+      "phase": "pre_contact",
+      "snapshot_index": 75,
+      "task_id": "wine_rack"
+    }
+  ],
+  "tolerance": 1e-12
+}
