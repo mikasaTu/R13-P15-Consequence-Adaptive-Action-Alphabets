@@ -16,6 +16,8 @@ from caaa_libero.stage4_freeze import (
     _valid_action_chunk,
     generate_training_support_bank,
 )
+from caaa_libero.stage4_data import reversal_pairs
+from caaa_libero.stage4_models import create_cr_model, parameter_count
 from caaa_libero.stage4_reselect import deterministic_kmedoids
 
 
@@ -98,3 +100,56 @@ def test_stage4_predicted_space_kmedoids_is_deterministic_and_unique():
     assert left.shape == (8,)
     assert len(np.unique(left)) == 8
     assert np.all((left >= 0) & (left < len(values)))
+
+
+def test_stage4_reversal_pairs_are_balanced_and_strict():
+    phases = ("free_space", "pre_contact", "contact_onset", "post_contact")
+    tasks = tuple(task["task_id"] for task in TASKS)
+    task_id, phase, keys, episode, snapshot, distances = [], [], [], [], [], []
+    for task in tasks:
+        for phase_name in phases:
+            for side in range(2):
+                task_id.append(task)
+                phase.append(phase_name)
+                keys.append(f"{task}__{phase_name}__{side}")
+                episode.append(16 + side)
+                snapshot.append(side)
+                candidate = np.arange(256, dtype=np.float32)
+                if side:
+                    candidate = candidate[::-1].copy()
+                distances.append(np.repeat(candidate[None, :], 96, axis=0))
+    cache = {
+        "true_distance": np.asarray(distances),
+        "task_id": np.asarray(task_id),
+        "phase": np.asarray(phase),
+        "key": np.asarray(keys),
+        "episode_id": np.asarray(episode),
+        "snapshot_index": np.asarray(snapshot),
+        "direction_family_id": np.repeat(np.arange(3), 32),
+    }
+    margins = {(task, phase_name): 0.1 for task in tasks for phase_name in phases}
+    rows = reversal_pairs(cache, margins, count_per_task_phase=96)
+    assert len(rows) == len(tasks) * len(phases) * 96
+    counts = {}
+    for row in rows:
+        key = (row["task_id"], row["phase"])
+        counts[key] = counts.get(key, 0) + 1
+        assert row["true_gap_s1_j_minus_i"] > row["margin"]
+        assert row["true_gap_s2_j_minus_i"] < -row["margin"]
+    assert set(counts.values()) == {96}
+
+
+def test_stage4_cr_families_expose_equal_group_distance_contract():
+    import torch
+
+    context = torch.zeros((3, 321))
+    target = torch.zeros((3, 24))
+    candidate = torch.ones((3, 24))
+    shared = create_cr_model("CR_C3_SHARED")
+    grouped = create_cr_model("CR_C3_GROUP")
+    assert shared.embed(context, target).shape == (3, 1, 32)
+    assert grouped.embed(context, target).shape == (3, 5, 16)
+    assert shared.pair_distance(context, target, candidate).shape == (3,)
+    assert grouped.pair_distance(context, target, candidate).shape == (3,)
+    assert parameter_count(shared) > 0
+    assert parameter_count(grouped) > 0
