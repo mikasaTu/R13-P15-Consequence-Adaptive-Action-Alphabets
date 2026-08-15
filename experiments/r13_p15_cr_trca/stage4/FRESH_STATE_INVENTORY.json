@@ -1,0 +1,104 @@
+{
+  "audit_only_no_branch_execution": true,
+  "confirmation_execution_allowed": false,
+  "confirmation_split_frozen": false,
+  "freeze_condition": "Only after all development methods, selected model/ensemble, atlas algorithm, K, L, metrics and thresholds are frozen.",
+  "preferred_source_order": [
+    "unused successful demonstrations with IDs >= 50",
+    "new successful trajectories from a frozen nominal generator and new seeds",
+    "bounded physical perturbations of previously unused timesteps"
+  ],
+  "schema_version": "stage4-fresh-state-inventory-v1",
+  "source_1_available": false,
+  "source_1_result": "UNAVAILABLE_OFFICIAL_FILES_END_AT_DEMO_49",
+  "source_2_status": "NO_FROZEN_NOMINAL_GENERATOR_AVAILABLE_AT_PREREGISTRATION",
+  "source_3_available_for_later_freeze": true,
+  "source_3_is_new_episode_claim": false,
+  "source_3_required_label": "FRESH_PERTURBED_STATE_CONFIRMATION",
+  "tasks": [
+    {
+      "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "maximum_demo_id": 49,
+      "minimum_demo_id": 0,
+      "num_demos": 50,
+      "successful_ids_ge_50": [],
+      "task_id": "bowl_on_plate",
+      "unused_h4_timestep_count_episodes_40_49": 888,
+      "unused_h4_timesteps_in_episodes_40_49": {
+        "40": 83,
+        "41": 83,
+        "42": 96,
+        "43": 119,
+        "44": 82,
+        "45": 102,
+        "46": 72,
+        "47": 86,
+        "48": 83,
+        "49": 82
+      }
+    },
+    {
+      "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/push_the_plate_to_the_front_of_the_stove_demo.hdf5",
+      "maximum_demo_id": 49,
+      "minimum_demo_id": 0,
+      "num_demos": 50,
+      "successful_ids_ge_50": [],
+      "task_id": "plate_push",
+      "unused_h4_timestep_count_episodes_40_49": 1413,
+      "unused_h4_timesteps_in_episodes_40_49": {
+        "40": 121,
+        "41": 181,
+        "42": 123,
+        "43": 175,
+        "44": 136,
+        "45": 125,
+        "46": 131,
+        "47": 134,
+        "48": 176,
+        "49": 111
+      }
+    },
+    {
+      "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/turn_on_the_stove_demo.hdf5",
+      "maximum_demo_id": 49,
+      "minimum_demo_id": 0,
+      "num_demos": 50,
+      "successful_ids_ge_50": [],
+      "task_id": "stove_turn_on",
+      "unused_h4_timestep_count_episodes_40_49": 845,
+      "unused_h4_timesteps_in_episodes_40_49": {
+        "40": 89,
+        "41": 89,
+        "42": 80,
+        "43": 86,
+        "44": 112,
+        "45": 72,
+        "46": 86,
+        "47": 70,
+        "48": 78,
+        "49": 83
+      }
+    },
+    {
+      "demo_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/embodied_benchmark/datasets/LIBERO/libero_goal/put_the_wine_bottle_on_the_rack_demo.hdf5",
+      "maximum_demo_id": 49,
+      "minimum_demo_id": 0,
+      "num_demos": 50,
+      "successful_ids_ge_50": [],
+      "task_id": "wine_rack",
+      "unused_h4_timestep_count_episodes_40_49": 1718,
+      "unused_h4_timesteps_in_episodes_40_49": {
+        "40": 170,
+        "41": 162,
+        "42": 131,
+        "43": 172,
+        "44": 166,
+        "45": 182,
+        "46": 247,
+        "47": 189,
+        "48": 142,
+        "49": 157
+      }
+    }
+  ]
+}

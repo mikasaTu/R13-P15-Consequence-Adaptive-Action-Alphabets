@@ -1,0 +1,224 @@
+{
+  "all_hashes_match": true,
+  "binding_kind": "stage4_pre_result_read_only_historical_binding",
+  "historical_evidence": {
+    "stage1": {
+      "disposition": "REJECT_CORE_HYPOTHESIS",
+      "formal_commit": "34995e8e7c3069b22785ad04536f0d429e75c0fc",
+      "published_commit": "434427af0f8adc844851c27cfc050b2c9c6752dc"
+    },
+    "stage1_5": {
+      "disposition": "REJECT_P15_FAMILY",
+      "method_commit": "aa82d46c5e0828956aef15918c2aa7656844472f",
+      "preregistration_commit": "9a3ac1a4c774103fe618bd283909c2793ed581ec",
+      "result_commit": "76433b6e58196ceeedc4ad005a1110ea8e343ae2"
+    },
+    "stage2": {
+      "disposition": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+      "published_commit": "74c98979910a3831d0abeb8d13111a7c9294b067"
+    },
+    "stage3": {
+      "code_commit": "04e95630aee87f356940b2522f2025faa8c7c209",
+      "disposition": "ORACLE_ONLY_NO_LEARNABLE_RANKER",
+      "published_commit": "beb63576e91307260b64687e58ea99e6da93c478"
+    }
+  },
+  "historical_files": {
+    "C3_NC_BIENCODER_member_0.pt": {
+      "bytes": 527554,
+      "expected_sha256": "b10f3e5def68a89ad33918fbbd9c0435f8de36215a1bf74d6e1f95e42e5d6b5d",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/models/C3_NC_BIENCODER_member_0.pt",
+      "sha256": "b10f3e5def68a89ad33918fbbd9c0435f8de36215a1bf74d6e1f95e42e5d6b5d"
+    },
+    "C3_NC_BIENCODER_member_1.pt": {
+      "bytes": 527554,
+      "expected_sha256": "539c3ef4c2e4854265b61791f6f1c2e949b6ed86120c10d7df464dbf6fc8676b",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/models/C3_NC_BIENCODER_member_1.pt",
+      "sha256": "539c3ef4c2e4854265b61791f6f1c2e949b6ed86120c10d7df464dbf6fc8676b"
+    },
+    "C3_NC_BIENCODER_member_2.pt": {
+      "bytes": 527682,
+      "expected_sha256": "fb314c29cda098357de70996dd9ae1071812dc2aa51634fa8ad4c8e664c82ced",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/models/C3_NC_BIENCODER_member_2.pt",
+      "sha256": "fb314c29cda098357de70996dd9ae1071812dc2aa51634fa8ad4c8e664c82ced"
+    },
+    "C4_NC_PAIR_RANKER_member_0.pt": {
+      "bytes": 460230,
+      "expected_sha256": "e68d43f3b5374bcff9f13ee3639dc934d5483bef4ca57a6fbc5145414c2cc1cd",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/models/C4_NC_PAIR_RANKER_member_0.pt",
+      "sha256": "e68d43f3b5374bcff9f13ee3639dc934d5483bef4ca57a6fbc5145414c2cc1cd"
+    },
+    "C4_NC_PAIR_RANKER_member_1.pt": {
+      "bytes": 459270,
+      "expected_sha256": "83c725da1b00af57b7780cd3422707db059e09f5f2f84589a43aba412881eff7",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/models/C4_NC_PAIR_RANKER_member_1.pt",
+      "sha256": "83c725da1b00af57b7780cd3422707db059e09f5f2f84589a43aba412881eff7"
+    },
+    "C4_NC_PAIR_RANKER_member_2.pt": {
+      "bytes": 460998,
+      "expected_sha256": "5b98effd13607de8a5e9e37c42ac42a031a6835292d6485c8bde549bc1ca7c56",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/models/C4_NC_PAIR_RANKER_member_2.pt",
+      "sha256": "5b98effd13607de8a5e9e37c42ac42a031a6835292d6485c8bde549bc1ca7c56"
+    },
+    "STAGE3_REPORT.md": {
+      "bytes": 17786,
+      "expected_sha256": "623e14a5473d3e67b175e9fdefae6951a9634c18b8bb227cab14c8dc355f7bde",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/STAGE3_REPORT.md",
+      "sha256": "623e14a5473d3e67b175e9fdefae6951a9634c18b8bb227cab14c8dc355f7bde"
+    },
+    "action_bank.npz": {
+      "bytes": 53820,
+      "expected_sha256": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncea/stage2/action_bank.npz",
+      "sha256": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b"
+    },
+    "bootstrap_results.json": {
+      "bytes": 397680,
+      "expected_sha256": "718a96718ff9f66c7ca15869dacc037ec632cc5bdbdbd0f16eaaa03f22aa6cc4",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/bootstrap_results.json",
+      "sha256": "718a96718ff9f66c7ca15869dacc037ec632cc5bdbdbd0f16eaaa03f22aa6cc4"
+    },
+    "confirmation_quantization.csv": {
+      "bytes": 96395592,
+      "expected_sha256": "8e08469f688a19a632a17cb622e2b42756cde25c61d3cbe2c55348e85c3e6776",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/confirmation_quantization.csv",
+      "sha256": "8e08469f688a19a632a17cb622e2b42756cde25c61d3cbe2c55348e85c3e6776"
+    },
+    "development_gate.json": {
+      "bytes": 235264,
+      "expected_sha256": "21a5f633762b3c959643048d6aa8b507fac5665de832900c6e4f601324753dd4",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/development_gate.json",
+      "sha256": "21a5f633762b3c959643048d6aa8b507fac5665de832900c6e4f601324753dd4"
+    },
+    "development_quantization.csv": {
+      "bytes": 38510468,
+      "expected_sha256": "5c1d77b24aaeb6c20703ec7fda8072eea15c70fa30afef25d4f2d5c920c40e81",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/development_quantization.csv",
+      "sha256": "5c1d77b24aaeb6c20703ec7fda8072eea15c70fa30afef25d4f2d5c920c40e81"
+    },
+    "model_scalers.npz": {
+      "bytes": 2531,
+      "expected_sha256": "df8e0a9f4ea24c67e9305d8459a40ea50745c4b1a75060743d3798acbbcafda5",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/model_scalers.npz",
+      "sha256": "df8e0a9f4ea24c67e9305d8459a40ea50745c4b1a75060743d3798acbbcafda5"
+    },
+    "retrieval_metrics.csv": {
+      "bytes": 86375,
+      "expected_sha256": "822705b83f9132a4d5015cf2cd0d1209c689c0e2d3b43b189a4b2e3e5c5f34db",
+      "matched": true,
+      "relative_path": "experiments/r13_p15_ncer_aa/stage3/retrieval_metrics.csv",
+      "sha256": "822705b83f9132a4d5015cf2cd0d1209c689c0e2d3b43b189a4b2e3e5c5f34db"
+    }
+  },
+  "historical_files_modified": false,
+  "historical_stage_trees": {
+    "stage1": {
+      "expected_git_tree_object": "e00831263060b67d05f11483bf17fe42a4b57dbe",
+      "git_tree_object": "e00831263060b67d05f11483bf17fe42a4b57dbe",
+      "matched": true,
+      "path": "experiments/r13_p15_caaa_v2/stage1"
+    },
+    "stage1_5": {
+      "expected_git_tree_object": "cd55cd0af69e8c8c1955182f7b459f712759e267",
+      "git_tree_object": "cd55cd0af69e8c8c1955182f7b459f712759e267",
+      "matched": true,
+      "path": "experiments/r13_p15_caaa_v2/stage1_5"
+    },
+    "stage2": {
+      "expected_git_tree_object": "ba2cdd070e8d27bcd69a79cefdc8259770b1af27",
+      "git_tree_object": "ba2cdd070e8d27bcd69a79cefdc8259770b1af27",
+      "matched": true,
+      "path": "experiments/r13_p15_ncea/stage2"
+    },
+    "stage3": {
+      "expected_git_tree_object": "2ca0d9bd79d7486bfa6ac1876ddae349b86008eb",
+      "git_tree_object": "2ca0d9bd79d7486bfa6ac1876ddae349b86008eb",
+      "matched": true,
+      "path": "experiments/r13_p15_ncer_aa/stage3"
+    }
+  },
+  "libero": {
+    "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "commit_source": "published_stage3_environment_broken_worktree_pointer",
+    "source_path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/LIBERO-original",
+    "source_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f"
+  },
+  "pai_jobs_submitted": 0,
+  "policy_training_performed": false,
+  "stage3_c5_composite": {
+    "candidate_bank_sha256": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b",
+    "composition": "C3 predicted-embedding deterministic K=64 atlas followed by C4 symmetric pair-ranker reranking",
+    "kind": "frozen_stage3_composite_no_standalone_checkpoint",
+    "manifest_sha256": "6a4d57ef7611f12eafa1c8feb1aea1cf5b88ddc1e07fcbead26e375e1f2af125",
+    "ordered_c3_ensemble_sha256": [
+      "b10f3e5def68a89ad33918fbbd9c0435f8de36215a1bf74d6e1f95e42e5d6b5d",
+      "539c3ef4c2e4854265b61791f6f1c2e949b6ed86120c10d7df464dbf6fc8676b",
+      "fb314c29cda098357de70996dd9ae1071812dc2aa51634fa8ad4c8e664c82ced"
+    ],
+    "ordered_c4_ensemble_sha256": [
+      "e68d43f3b5374bcff9f13ee3639dc934d5483bef4ca57a6fbc5145414c2cc1cd",
+      "83c725da1b00af57b7780cd3422707db059e09f5f2f84589a43aba412881eff7",
+      "5b98effd13607de8a5e9e37c42ac42a031a6835292d6485c8bde549bc1ca7c56"
+    ],
+    "scaler_sha256": "df8e0a9f4ea24c67e9305d8459a40ea50745c4b1a75060743d3798acbbcafda5"
+  },
+  "stage3_environment": {
+    "analysis_runtime": {
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "pyarrow": "23.0.1",
+      "python_executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python",
+      "python_version": "3.11.11 (main, Mar 17 2025, 21:02:09) [Clang 20.1.0 ]",
+      "scipy": "1.17.1",
+      "torch": "2.4.1+cu121",
+      "torch_cuda": "12.1",
+      "zarr": "2.18.3"
+    },
+    "created_utc": "2026-08-14T08:37:21.269078+00:00",
+    "gpu_training": {
+      "cuda_version": "12.1",
+      "device": "cuda:0",
+      "gpu_name": "NVIDIA A800-SXM4-80GB",
+      "torch_version": "2.4.1+cu121",
+      "visible_gpu_count": 1
+    },
+    "libero_commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+    "libero_tree_sha256": "e9197ca08fe4d7325f561fc40d7425167830253e0f0fceb1af2663b23292f71f",
+    "local_gpu_limit_respected": true,
+    "pai_jobs_submitted": 0,
+    "policy_training_performed": false,
+    "repository_cleanliness_scope": [
+      "README.md",
+      "TESTING.md",
+      "caaa_libero",
+      "config",
+      "tests"
+    ],
+    "repository_code_commit": "04e95630aee87f356940b2522f2025faa8c7c209",
+    "repository_dirty": false,
+    "repository_dirty_paths": [],
+    "simulation_runtime": {
+      "capture_output": "ERROR:Command '['/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python', '-c', \"import json,sys,numpy; import mujoco_py,robosuite; print(json.dumps({'python_executable':sys.executable,'python_version':sys.version,'numpy':numpy.__version__,'mujoco_py':getattr(mujoco_py,'__version__','unknown'),'robosuite':getattr(robosuite,'__version__','unknown')}))\"]' returned non-zero exit status 1.",
+      "python_executable": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/libero-original/bin/python"
+    }
+  },
+  "stage4_input": {
+    "branch_requested": "r13-p15-stage4-c3-context-trust-region",
+    "commit": "beb63576e91307260b64687e58ea99e6da93c478",
+    "tree": "cd3f67314435103405a4df8fa597076a5a47d386"
+  },
+  "stage4_method_result_inspected_before_freeze": false
+}

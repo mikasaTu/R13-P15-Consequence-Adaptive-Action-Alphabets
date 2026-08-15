@@ -1,0 +1,273 @@
+{
+  "bounded_correction_diagnostic": {
+    "calibration_only": true,
+    "formula": "d_C3 * exp(gamma * tanh(g_symmetric))",
+    "gamma": [
+      0.0,
+      0.1,
+      0.2
+    ],
+    "gamma_0_exact_sham": true,
+    "required_for_success": false
+  },
+  "c3_objective_candidates": [
+    {
+      "lambda_distance": 1.0,
+      "lambda_listwise": 0.5,
+      "lambda_pairwise": 0.5,
+      "name": "balanced",
+      "tau_model": 0.15,
+      "tau_true": 0.15
+    },
+    {
+      "lambda_distance": 1.0,
+      "lambda_listwise": 0.25,
+      "lambda_pairwise": 0.25,
+      "name": "distance_heavy",
+      "tau_model": 0.2,
+      "tau_true": 0.15
+    },
+    {
+      "lambda_distance": 0.5,
+      "lambda_listwise": 0.5,
+      "lambda_pairwise": 1.0,
+      "name": "ranking_heavy",
+      "tau_model": 0.1,
+      "tau_true": 0.1
+    },
+    {
+      "lambda_distance": 0.5,
+      "lambda_listwise": 1.0,
+      "lambda_pairwise": 0.5,
+      "name": "listwise_heavy",
+      "tau_model": 0.2,
+      "tau_true": 0.2
+    }
+  ],
+  "c3_reselection": {
+    "development_or_historical_exploratory_selection_forbidden": true,
+    "ensemble_seeds": [
+      56229435,
+      2279153700,
+      2652429101
+    ],
+    "screening_seed": 56229435,
+    "selection": [
+      "lowest calibration C3_FULL oracle regret",
+      "highest calibration C3_FULL NDCG@16",
+      "lowest frozen tuple index"
+    ]
+  },
+  "candidate_bank_size": 256,
+  "context_interventions": [
+    "correct_context",
+    "nominal_zeroed",
+    "nominal_shuffled_within_task",
+    "state_mask_contact_shuffled_within_task",
+    "history_actions_masks_shuffled_within_task",
+    "state_and_nominal_jointly_shuffled",
+    "all_context_zeroed_action_pair_retained"
+  ],
+  "controller": {
+    "continuous_action_semantics": "4x6 normalized OSC_POSE coordinates",
+    "frequency_hz": 20,
+    "gripper_semantics": "copied stepwise from the nominal demonstration",
+    "horizon": 4,
+    "mode": "OSC_POSE",
+    "robot": "Panda",
+    "settle_steps": 3
+  },
+  "cr_c3": {
+    "batch_size_queries": 16,
+    "controls": [
+      "ACTION_ONLY",
+      "CONTEXT_SHUFFLED",
+      "NOMINAL_SHUFFLED",
+      "CONSEQUENCE_LABEL_SHUFFLED",
+      "REVERSAL_LABEL_SHUFFLED",
+      "NO_REVERSAL_LOSS"
+    ],
+    "controls_use_same_seeds_architecture_parameters_and_budget": true,
+    "epochs": 30,
+    "families": [
+      "CR_C3_SHARED",
+      "CR_C3_GROUP"
+    ],
+    "family_selection": [
+      "lowest calibration full-bank oracle regret",
+      "highest calibration context-reversal accuracy",
+      "highest calibration NDCG@16",
+      "lowest frozen family index"
+    ],
+    "learning_rate": 0.0003,
+    "loss_weights": {
+      "context_reversal": 0.5,
+      "full_bank_listwise": 1.0,
+      "pairwise": 0.5
+    },
+    "reversal_loss": "softplus(m+d_s1(t,i)-d_s1(t,j)) + softplus(m+d_s2(t,j)-d_s2(t,i))",
+    "seeds": [
+      13150417,
+      13150429,
+      13150443
+    ],
+    "temperatures": {
+      "model": 0.15,
+      "true": 0.15
+    },
+    "weight_decay": 1e-05
+  },
+  "execute_all_experiments_after_gate_failure": true,
+  "failure_decomposition": {
+    "c4_override_loss": "C5 - C3_K64",
+    "learned_compression_loss": "C3_K64 - C3_FULL",
+    "learned_metric_loss": "C3_FULL - O_FULL",
+    "oracle_bank_compression_loss": "O_K64 - O_FULL"
+  },
+  "final_dispositions": [
+    "REJECT_CONSEQUENCE_HEADROOM",
+    "REJECT_LEARNED_CONSEQUENCE_METRIC",
+    "STATIC_EFFECT_METRIC_ONLY",
+    "PIVOT_TO_CONSEQUENCE_RETRIEVAL_STEERING",
+    "NARROW_TO_CONTACT_CONSEQUENCE_METRIC",
+    "BLOCKED_NO_FRESH_CONFIRMATION",
+    "CONFIRMATION_FAILED",
+    "GO_TO_SMALL_BC"
+  ],
+  "forbidden_inputs": [
+    "future state or consequence at inference",
+    "candidate or target simulator outcome at inference",
+    "demonstration phase label",
+    "episode outcome",
+    "target ID",
+    "candidate ID"
+  ],
+  "gates": {
+    "A": {
+      "contact_sensitive_tasks_improved_min": 2,
+      "failure_disposition": "REJECT_CONSEQUENCE_HEADROOM",
+      "oracle_relative_gain_min": 0.2,
+      "tasks_improved_min": 3
+    },
+    "B": {
+      "action_only_must_not_reproduce": true,
+      "contact_sensitive_tasks_improved_min": 2,
+      "context_independent_disposition": "STATIC_EFFECT_METRIC_ONLY",
+      "episodes_36_39_gain_min": 0.05,
+      "failure_disposition": "REJECT_LEARNED_CONSEQUENCE_METRIC",
+      "frozen_c3_gain_min": 0.05,
+      "historical_episodes_40_49_gain_min": 0.05,
+      "joint_state_nominal_shuffle_gain_retention_max": 0.5,
+      "label_shuffled_must_not_reproduce": true,
+      "pooled_development_gain_min": 0.08,
+      "reversal_accuracy_gain_points_min": 0.1,
+      "tasks_improved_min": 3
+    },
+    "C": {
+      "action_rmse_degradation_max": 0.2,
+      "clipping_rate_max": 0.0,
+      "contact_only_disposition": "NARROW_TO_CONTACT_CONSEQUENCE_METRIC",
+      "contact_preservation_drop_max_points": 0.01,
+      "contact_sensitive_tasks_improved_min": 2,
+      "full_gain_retention_min": 0.75,
+      "full_only_disposition": "PIVOT_TO_CONSEQUENCE_RETRIEVAL_STEERING",
+      "normalized_utilization_min": 0.25,
+      "realized_relative_gain_min": 0.08,
+      "tasks_improved_min": 3
+    },
+    "GO": {
+      "action_rmse_degradation_max": 0.2,
+      "all_seed_directions_same": true,
+      "clipping_rate_max": 0.0,
+      "contact_preservation_drop_max_points": 0.01,
+      "contact_sensitive_tasks_improved_min": 2,
+      "context_shuffled_gain_retention_max": 0.25,
+      "failure_disposition": "CONFIRMATION_FAILED",
+      "normalized_utilization_min": 0.25,
+      "paired_ci_lower_bound_exclusive": 0.0,
+      "pass_disposition": "GO_TO_SMALL_BC",
+      "pooled_gain_min": 0.1,
+      "tasks_improved_min": 3
+    }
+  },
+  "historical_methods": {
+    "B2": "Frozen Stage 3 current-contact K=64 residual k-means.",
+    "C3_FULL": "Frozen Stage 3 3-member C3 embedding and full-bank nearest neighbor.",
+    "C3_K64": "Frozen Stage 3 C3 predicted-embedding FPS K=64 atlas and C3 decoding.",
+    "C5": "Frozen C3 K=64 atlas followed by frozen Stage 3 C4 reranking.",
+    "O_FULL": "Per-state true-effect nearest executable member over M=256.",
+    "O_K64": "Per-state true-effect FPS K=64 atlas and true-effect decoding."
+  },
+  "maximum_local_training_gpus": 1,
+  "new_methods": {
+    "C3_RESELECT_FPS64": "C3-alone reselected embedding with deterministic predicted-space FPS.",
+    "C3_RESELECT_FULL": "Stage 3 architecture, C3-alone calibration objective selection, full bank.",
+    "C3_RESELECT_KMEDOIDS64": "C3-alone reselected embedding with deterministic predicted-space k-medoids.",
+    "CR_C3_GROUP": "Five factorized consequence-group embeddings with frozen equal-weight mean distance.",
+    "CR_C3_SHARED": "One context-conditioned effect embedding trained with full-bank listwise, pairwise, and context-reversal losses.",
+    "CR_TR_C3_K64": "Whitened action-local top-L filter over executable atlas members, then CR-C3 distance."
+  },
+  "pai_jobs_allowed": false,
+  "permitted_inputs": [
+    "current observable state and availability mask",
+    "two prior observable state deltas and masks",
+    "two previous executed actions and masks",
+    "current observable contact",
+    "nominal H=4 action chunk",
+    "task identity",
+    "target or candidate residual"
+  ],
+  "policy_training_allowed": false,
+  "pre_result_artifact_contract": {
+    "fresh_confirmation_may_be_executed_only_after_FRESH_CONFIRMATION_SPLIT_commit": true,
+    "results_may_be_computed_only_after_git_commit": true,
+    "sacrificial_replay_states_must_not_be_confirmation_states": true
+  },
+  "pre_result_data_selection": {
+    "base_action_absolute_limit": 0.875,
+    "episodes": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "phase_balance": "exact",
+    "same_frozen_m256_action_bank": true,
+    "stage3_snapshots_excluded": true,
+    "states_per_task_episode_phase": 3,
+    "support_family_balance": "1:1:1 exact",
+    "training_state_count": 768
+  },
+  "primary_k": 64,
+  "primary_metric": "BALANCED_TASK_EFFECT",
+  "project_id": "r13_p15_cr_trca_stage4",
+  "trust_region": {
+    "candidates_l": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "clipping_or_action_synthesis_forbidden": true,
+    "distance": "train-covariance-whitened residual action distance",
+    "l_64_is_no_trust_region_control": true,
+    "outputs_executable_bank_member": true,
+    "selection": [
+      "lowest calibration realized BALANCED_TASK_EFFECT",
+      "lowest calibration action reconstruction RMSE",
+      "smallest L"
+    ]
+  }
+}

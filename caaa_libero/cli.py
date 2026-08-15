@@ -93,6 +93,7 @@ def build_parser():
         "stage3-evaluate-holdout",
         "stage3-k-sensitivity",
         "stage3-finalize",
+        "stage4-freeze",
     ))
     parser.add_argument("--libero-source", default=None)
     parser.add_argument("--libero-env", default=None)
@@ -133,6 +134,10 @@ def main(argv=None):
         args.output_root = os.path.join(_project_root(), OUTPUT_RELATIVE)
     if args.command.startswith("stage3-") and not args.output_root:
         from .stage3_config import OUTPUT_RELATIVE
+
+        args.output_root = os.path.join(_project_root(), OUTPUT_RELATIVE)
+    if args.command.startswith("stage4-") and not args.output_root:
+        from .stage4_config import OUTPUT_RELATIVE
 
         args.output_root = os.path.join(_project_root(), OUTPUT_RELATIVE)
     paths = _paths(args)
@@ -343,6 +348,10 @@ def main(argv=None):
             result = finalize_stage3(_project_root(), output_root)
         else:
             raise AssertionError(args.command)
+    elif args.command == "stage4-freeze":
+        from .stage4_freeze import freeze
+
+        result = freeze(_project_root())
     else:
         raise AssertionError(args.command)
     print(json.dumps(result, indent=2, sort_keys=True), flush=True)
