@@ -1,0 +1,94 @@
+{
+  "confirmation_gate": {
+    "action_rmse_degradation": 0.3007737596266949,
+    "all_seed_directions_same": true,
+    "clipping_rate": 0.0,
+    "contact_preservation_drop_points": 0.001953125,
+    "contact_tasks_improved": 3,
+    "context_shuffled_gain": 0.08689579525603155,
+    "context_shuffled_gain_retention": 0.7021088519532681,
+    "member_relative_gains": {
+      "member_0": 0.10778895557120605,
+      "member_1": 0.09252554721022845,
+      "member_2": 0.09738504627404956
+    },
+    "normalized_code_utilization": 0.29707568453107625,
+    "paired_ci95": [
+      0.017726746891936217,
+      0.030640305876879322
+    ],
+    "passed": false,
+    "pooled_relative_gain": 0.12376399330999359,
+    "task_relative_gains": {
+      "bowl_on_plate": 0.027236271318107734,
+      "plate_push": 0.13100087401576563,
+      "stove_turn_on": 0.19336223554625476,
+      "wine_rack": 0.12070670170004684
+    },
+    "tasks_improved": 4
+  },
+  "contact_only_pattern": false,
+  "development_gates": {
+    "all_experiments_continue_after_failure": true,
+    "confirmation_not_yet_used": true,
+    "gate_A_oracle_headroom": {
+      "contact_tasks_improved": 3,
+      "passed": true,
+      "relative_gain": 0.5532020701970476,
+      "task_relative_gains": {
+        "bowl_on_plate": 0.5404455604149832,
+        "plate_push": 0.45840557775613994,
+        "stove_turn_on": 0.6565070160044958,
+        "wine_rack": 0.5767862385672002
+      },
+      "tasks_improved": 4
+    },
+    "gate_B_learned_consequence_metric": {
+      "action_only_gain": 0.16639634585533142,
+      "consequence_label_shuffled_gain": 0.1904745534893511,
+      "contact_tasks_improved": 3,
+      "context_independent": true,
+      "context_reversal_accuracy_gain_points": -0.05573558003888529,
+      "development_relative_gain": 0.18035246992332482,
+      "frozen_c3_relative_gain": -0.10056148704812114,
+      "historical_exploratory_relative_gain": 0.1822339761091427,
+      "joint_state_nominal_shuffle_gain": 0.1817725158385453,
+      "joint_state_nominal_shuffle_gain_retention": 1.0078737259091834,
+      "passed": false,
+      "task_relative_gains": {
+        "bowl_on_plate": 0.12262999270757567,
+        "plate_push": 0.18804859085987746,
+        "stove_turn_on": 0.2813354975029569,
+        "wine_rack": 0.18711435440395957
+      },
+      "tasks_improved": 4
+    },
+    "gate_C_k64_alphabet": {
+      "action_rmse_degradation": 0.22524150878390065,
+      "clipping_rate": 0.0,
+      "contact_preservation_drop_points": 0.0068359375,
+      "contact_tasks_improved": 3,
+      "full_gain_retention": 0.6214745596810429,
+      "normalized_code_utilization": 0.24388040427547533,
+      "passed": false,
+      "relative_gain": 0.11208447183298684,
+      "task_relative_gains": {
+        "bowl_on_plate": 0.07198054029310634,
+        "plate_push": 0.1327887888053644,
+        "stove_turn_on": 0.19778795510633698,
+        "wine_rack": 0.07672444024820423
+      },
+      "tasks_improved": 4
+    }
+  },
+  "development_phase_relative_gains": {
+    "contact_onset": 0.10237146415489673,
+    "free_space": 0.41224883055703687,
+    "post_contact": 0.1271168187304436,
+    "pre_contact": 0.0854418797586445
+  },
+  "evidence_label": "FRESH_PERTURBED_STATE_CONFIRMATION",
+  "exact_one_disposition": true,
+  "final_disposition": "STATIC_EFFECT_METRIC_ONLY",
+  "new_episode_claim": false
+}

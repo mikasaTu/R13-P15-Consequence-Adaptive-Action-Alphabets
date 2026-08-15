@@ -942,6 +942,7 @@ def evaluate_fresh_confirmation(
                 consequence_scale,
                 latency_ms=0.0,
                 extra={
+                    "snapshot_index": int(cache["snapshot_index"][state]),
                     "state_key": str(cache["key"][state]),
                     "evidence_label": FRESH_LABEL,
                     "new_episode_claim": False,
@@ -957,8 +958,10 @@ def evaluate_fresh_confirmation(
     realized_path = os.path.join(output_root, "CONFIRMATION_REALIZED.csv")
     # The evidence label and no-new-episode assertion are constants frozen in
     # the split and summary manifests.  The long state key is losslessly joined
-    # from (task, episode, phase) because the confirmation split has exactly
-    # one state per such tuple.  Do not repeat those strings in ~450k CSV rows:
+    # from (task, episode, phase, snapshot_index).  One preregistered stratum
+    # needed a second timestep from the same source episode, so the snapshot is
+    # deliberately retained in both CSVs.  Do not repeat constant strings in
+    # ~450k CSV rows:
     # preserving only non-redundant columns keeps the required ordinary CSVs
     # below GitHub's normal-Git per-file limit without compression or LFS.
     omitted_redundant_fields = (
@@ -1031,7 +1034,7 @@ def evaluate_fresh_confirmation(
         "retrieval_rows": len(retrieval),
         "realized_rows": len(realized),
         "csv_omitted_redundant_fields": list(omitted_redundant_fields),
-        "csv_join_key": ["task_id", "episode_id", "phase"],
+        "csv_join_key": ["task_id", "episode_id", "phase", "snapshot_index"],
         "retrieval_sha256": sha256_file(retrieval_path),
         "realized_sha256": sha256_file(realized_path),
     }

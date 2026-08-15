@@ -1,0 +1,140 @@
+{
+  "cluster_unit": "source task/episode; all four states and targets resampled together",
+  "context_shuffled_control": {
+    "baseline": "B2",
+    "by_task": {
+      "bowl_on_plate": {
+        "ci95": [
+          -0.017822061364460847,
+          0.008455658242127136
+        ],
+        "point": -0.0035969826946537996
+      },
+      "plate_push": {
+        "ci95": [
+          0.0019013726346223726,
+          0.03694698451996188
+        ],
+        "point": 0.02119094484442426
+      },
+      "stove_turn_on": {
+        "ci95": [
+          0.022319162902317724,
+          0.0581258748089737
+        ],
+        "point": 0.03850515775345357
+      },
+      "wine_rack": {
+        "ci95": [
+          0.004510295239160366,
+          0.01700737628168739
+        ],
+        "point": 0.010975542857119543
+      }
+    },
+    "method": "CONTEXT_SHUFFLED_TR_K64",
+    "paired_difference_definition": "baseline error - method error",
+    "pooled": {
+      "ci95": [
+        0.009408309280475162,
+        0.02409311956398192
+      ],
+      "point": 0.016768665690085893,
+      "probability_positive": 1.0
+    },
+    "replicates": 10000,
+    "seed": 13150406
+  },
+  "evidence_label": "FRESH_PERTURBED_STATE_CONFIRMATION",
+  "full_bank": {
+    "baseline": "B2",
+    "by_task": {
+      "bowl_on_plate": {
+        "ci95": [
+          0.02226810559611258,
+          0.044545629458409994
+        ],
+        "point": 0.033350391641126145
+      },
+      "plate_push": {
+        "ci95": [
+          0.0378420925769621,
+          0.06322649296097214
+        ],
+        "point": 0.05030467768269457
+      },
+      "stove_turn_on": {
+        "ci95": [
+          0.06445146360236345,
+          0.13215124827824562
+        ],
+        "point": 0.09702759618680544
+      },
+      "wine_rack": {
+        "ci95": [
+          0.021766928483416784,
+          0.033185110086909976
+        ],
+        "point": 0.02694635620840118
+      }
+    },
+    "method": "CR_C3_FULL",
+    "paired_difference_definition": "baseline error - method error",
+    "pooled": {
+      "ci95": [
+        0.042500440733892995,
+        0.061740837468448266
+      ],
+      "point": 0.05190725542975683,
+      "probability_positive": 1.0
+    },
+    "replicates": 10000,
+    "seed": 13150405
+  },
+  "new_episode_claim": false,
+  "primary": {
+    "baseline": "B2",
+    "by_task": {
+      "bowl_on_plate": {
+        "ci95": [
+          -0.0021596086928834996,
+          0.012183236238158618
+        ],
+        "point": 0.005597994478273515
+      },
+      "plate_push": {
+        "ci95": [
+          0.013733448336470326,
+          0.0434802465362757
+        ],
+        "point": 0.02888171788507433
+      },
+      "stove_turn_on": {
+        "ci95": [
+          0.033355827770186544,
+          0.07176580773117461
+        ],
+        "point": 0.05135304880422233
+      },
+      "wine_rack": {
+        "ci95": [
+          0.0060783194744932125,
+          0.014409825772214975
+        ],
+        "point": 0.01029778449841024
+      }
+    },
+    "method": "CR_TR_C3_K64",
+    "paired_difference_definition": "baseline error - method error",
+    "pooled": {
+      "ci95": [
+        0.017726746891936217,
+        0.030640305876879322
+      ],
+      "point": 0.024032636416495105,
+      "probability_positive": 1.0
+    },
+    "replicates": 10000,
+    "seed": 13150404
+  }
+}

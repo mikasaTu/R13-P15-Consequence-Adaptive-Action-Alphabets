@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+from glob import glob
 
 import numpy as np
 
@@ -52,6 +53,36 @@ def _table(headers, rows):
     return "\n".join(lines)
 
 
+def _training_trace_summary(output_root, family, control):
+    pattern = os.path.join(
+        output_root,
+        "models",
+        "cr_c3",
+        "%s__%s__member_*.pt.json" % (family, control),
+    )
+    runs = [_json(path) for path in sorted(glob(pattern))]
+    if len(runs) != 3:
+        raise RuntimeError(
+            "expected three matched %s/%s training traces, found %d"
+            % (family, control, len(runs))
+        )
+    result = {
+        "members": len(runs),
+        "parameter_count": int(runs[0]["parameter_count"]),
+        "optimizer_steps_per_member": int(runs[0]["optimizer_steps"]),
+        "checkpoint_sha256": [run["checkpoint_sha256"] for run in runs],
+    }
+    for point, index in (("initial", 0), ("final", -1)):
+        result[point] = {
+            metric: float(np.mean([run["trace"][index][metric] for run in runs]))
+            for metric in ("listwise", "pairwise", "reversal", "total")
+        }
+    result["reversal_change"] = (
+        result["final"]["reversal"] - result["initial"]["reversal"]
+    )
+    return result
+
+
 def generate_report(project_root, output_root=None):
     import pandas as pd
 
@@ -61,6 +92,7 @@ def generate_report(project_root, output_root=None):
     replay = _json(os.path.join(output_root, "snapshot_restore_validation.json"))
     collection = _json(os.path.join(output_root, "expanded_training_collection.json"))
     reversal_meta = _json(os.path.join(output_root, "context_reversal_metadata.json"))
+    reversal_eval = _json(os.path.join(output_root, "context_reversal_evaluation.json"))
     selection = _json(os.path.join(output_root, "MODEL_SELECTION.json"))
     dev = _json(os.path.join(output_root, "development_evaluation_summary.json"))
     hist = _json(os.path.join(output_root, "historical_exploratory_evaluation_summary.json"))
@@ -132,6 +164,15 @@ def generate_report(project_root, output_root=None):
     selected_gamma = float(
         selection["bounded_correction_selection"]["selected_gamma"]
     )
+    training_controls = ["PROPOSED"] + [
+        row["control"] for row in selection["cr_c3_controls"]["controls"]
+    ]
+    training_trace = {
+        control: _training_trace_summary(output_root, selected_family, control)
+        for control in training_controls
+    }
+    proposed_trace = training_trace["PROPOSED"]
+    action_only_trace = training_trace["ACTION_ONLY"]
 
     mechanism = {
         "method": "code-first mechanism reverse engineering; no new idea generated",
@@ -163,6 +204,44 @@ def generate_report(project_root, output_root=None):
                 "most genuine state-dependent ordering. No margin was relaxed."
             ),
         },
+        "code_level_context_cancellation": {
+            "source_symbols": [
+                "caaa_libero.stage4_models.create_cr_model.ContextReversalEmbedding.embed",
+                "caaa_libero.stage4_models.create_cr_model.ContextReversalEmbedding.pair_distance",
+                "caaa_libero.stage4_models._reversal_loss",
+            ],
+            "implemented_path": (
+                "Both target and candidate use the same embed(context, residual) "
+                "network and are compared by a squared embedding difference."
+            ),
+            "identified_failure_mode": (
+                "The low-complexity solution embed(s,a)=f(s)+g(a) cancels f(s) "
+                "exactly in the target-candidate subtraction. Context can matter "
+                "only through learned context-action interactions, which the "
+                "observed reversal objective did not establish."
+            ),
+            "matched_training_trace": training_trace,
+            "development_joint_reversal_accuracy": reversal_eval["development"],
+            "historical_joint_reversal_accuracy": reversal_eval["confirmation"],
+            "causal_control_observation": {
+                "proposed_development_effect_error": dev_means["CR_C3_FULL"],
+                "action_only_development_effect_error": dev_means["ACTION_ONLY_FULL"],
+                "context_shuffled_development_effect_error": dev_means[
+                    "CONTEXT_SHUFFLED_FULL"
+                ],
+                "no_reversal_development_effect_error": dev_means[
+                    "NO_REVERSAL_LOSS_FULL"
+                ],
+                "shuffled_consequence_development_effect_error": dev_means[
+                    "SHUFFLED_EFFECT_FULL"
+                ],
+            },
+            "conclusion": (
+                "The positive B2-relative result is a static action/effect "
+                "ranking signal, not evidence that the learned score uses the "
+                "registered state, nominal-action, or history context."
+            ),
+        },
         "cr_controls_development": {
             name: dev_means[name]
             for name in dev_means
@@ -185,6 +264,16 @@ def generate_report(project_root, output_root=None):
             }
             for name in ("CR_C3_FULL", "CR_C3_K64", "CR_TR_C3_K64")
         },
+        "trust_region_calibration": {
+            "trace": selection["trust_region_selection"]["trace"],
+            "selected_L": selected_l,
+            "mechanism": (
+                "Smaller L removes effect-nearest atlas members and lowers "
+                "action RMSE only by accepting larger realized effect error. "
+                "The registered primary selection therefore chose L=64, the "
+                "explicit no-trust-region control."
+            ),
+        },
         "fresh_confirmation": {
             "label": confirm["evidence_label"],
             "new_episode_claim": False,
@@ -193,6 +282,17 @@ def generate_report(project_root, output_root=None):
             "all_seed_directions_same": final["confirmation_gate"][
                 "all_seed_directions_same"
             ],
+            "method_effect_errors": {
+                name: conf_means[name]
+                for name in (
+                    "B2",
+                    "CR_C3_FULL",
+                    "CR_TR_C3_K64",
+                    "ACTION_ONLY_TR_K64",
+                    "CONTEXT_SHUFFLED_TR_K64",
+                    "SHUFFLED_EFFECT_TR_K64",
+                )
+            },
         },
         "final_disposition": disposition,
     }
@@ -201,7 +301,7 @@ def generate_report(project_root, output_root=None):
 
     historical_rows = []
     for stage in ("stage1", "stage1_5", "stage2", "stage3"):
-        value = binding["historical_stages"][stage]
+        value = binding["historical_evidence"][stage]
         commit = (
             value.get("published_commit")
             or value.get("result_commit")
@@ -366,6 +466,15 @@ def generate_report(project_root, output_root=None):
         "",
         "所有 control 与选中 family 使用相同 architecture、parameter count、3 seeds、30 epochs 与 query batch 16。完整机制数值见 `MECHANISM_REVERSE_ENGINEERING.json`。",
         "",
+        "代码级反解：target 和 candidate 共用 `embed(context, residual)` 后做差；当网络采用最容易的加性解 `f(context)+g(action)` 时，`f(context)` 在距离中精确抵消。PROPOSED 的三 seed 平均 reversal loss 从 %s 到 %s（变化 %s），ACTION_ONLY 最终为 %s；development joint reversal accuracy 仅 %s，反而低于 frozen C3 的 %s。与此同时 context-shuffled/no-reversal/shuffled-effect controls 没有系统性恶化。因此 B2-relative 提升来自静态 action/effect 排序，不是 context-reversal 机制。" % (
+            _num(proposed_trace["initial"]["reversal"]),
+            _num(proposed_trace["final"]["reversal"]),
+            _num(proposed_trace["reversal_change"]),
+            _num(action_only_trace["final"]["reversal"]),
+            _num(reversal_eval["development"]["CR_C3_FULL"]["joint_context_reversal_accuracy"]),
+            _num(reversal_eval["development"]["FROZEN_C3_FULL"]["joint_context_reversal_accuracy"]),
+        ),
+        "",
         "## 4. Trust region 的作用",
         "",
         _table(
@@ -382,7 +491,12 @@ def generate_report(project_root, output_root=None):
             ],
         ),
         "",
-        "Trust region 只在 executable atlas members 中筛选，不做 clipping、synthesis 或 pseudoinverse。效果提升/降低的直接原因是 action-local 过滤改变了可选集合；它是否保留 FULL gain 由 Gate C 明确衡量。",
+        "Trust region 只在 executable atlas members 中筛选，不做 clipping、synthesis 或 pseudoinverse。Calibration 从 L=8 到 64 时 effect error 由 %s 降到 %s，而 action RMSE 由 %s 升到 %s；注册的 effect-first 规则因此选择 L=64（明确的 no-trust control）。也就是说，更强 action locality 的确缩短动作距离，但通过删除 consequence-nearest candidates 擦除了效果收益；最终方法并未获得真正的 trust-region 修复。" % (
+            _num(selection["trust_region_selection"]["trace"][0]["balanced_task_effect_error"]),
+            _num(selection["trust_region_selection"]["trace"][-1]["balanced_task_effect_error"]),
+            _num(selection["trust_region_selection"]["trace"][0]["action_reconstruction_rmse"]),
+            _num(selection["trust_region_selection"]["trace"][-1]["action_reconstruction_rmse"]),
+        ),
         "",
         "## 5. Gates 与 fresh confirmation",
         "",
@@ -395,6 +509,13 @@ def generate_report(project_root, output_root=None):
             final["confirmation_gate"]["member_relative_gains"],
         ),
         "",
+        "Fresh gate 仍失败：action RMSE 恶化 %s（阈值 20%%），context-shuffled 保留 %s 的主收益（阈值 25%%）；utilization=%s、contact drop=%s、clipping=0。正 CI 只证明静态选择相关性可复现，不能挽救 context-specific 机制。" % (
+            _pct(final["confirmation_gate"]["action_rmse_degradation"]),
+            _pct(final["confirmation_gate"]["context_shuffled_gain_retention"]),
+            _num(final["confirmation_gate"]["normalized_code_utilization"]),
+            _num(final["confirmation_gate"]["contact_preservation_drop_points"]),
+        ),
+        "",
         "## 6. 11 个直接回答",
         "",
         _table(
@@ -403,7 +524,7 @@ def generate_report(project_root, output_root=None):
                 (1, "bank/metric/K64/C4 各贡献多少？", "见第1节精确加性分解。"),
                 (2, "Frozen C3 development gain 是否在历史探索集复现？", "Dev C3_FULL=%s；Hist C3_FULL=%s；两者均与各自 B2 分开报告。" % (_num(dev_means["FROZEN_C3_FULL"]), _num(hist_means["FROZEN_C3_FULL"]))),
                 (3, "真实 consequence ordering 是否 state-dependent？", "接触阶段是；free-space 基本否，严格 reversal 缺失被保留。"),
-                (4, "模型是否使用 state/nominal/history？", "state/history 有明显作用；nominal 作用弱；CR controls 给出因果对照。"),
+                (4, "模型是否使用 state/nominal/history？", "Frozen C3 对 state/history 有一定敏感性、对 nominal 很弱；新 CR 模型的 shuffle/action-only controls 表明其收益并不因果依赖这些 context。"),
                 (5, "C3 独立 objective selection 是否改善？", "C3_RESELECT_FULL=%s vs frozen C3_FULL=%s。" % (_num(dev_means["C3_RESELECT_FULL"]), _num(dev_means["FROZEN_C3_FULL"]))),
                 (6, "CR training 是否改善 ordering？", "Gate B reversal gain=%s，完整 accuracy 见 context_reversal_evaluation.json。" % _num(gates["gate_B_learned_consequence_metric"]["context_reversal_accuracy_gain_points"])),
                 (7, "Trust region 是否减少动作偏差且保留 gain？", "Action degradation=%s；FULL gain retention=%s。" % (_pct(gates["gate_C_k64_alphabet"]["action_rmse_degradation"]), _pct(gates["gate_C_k64_alphabet"]["full_gain_retention"]))),
@@ -422,7 +543,8 @@ def generate_report(project_root, output_root=None):
         "",
         "- episodes 40–49 的旧 snapshot 仍只是 historical exploratory；fresh evidence 来自同些 source episodes 的未用 timestep 加预注册小关节扰动，因此不是新 episode 证据。",
         "- State-based metric audit 不是 VLA、不是 policy evaluation，也不能声称 paper readiness。",
-        "- 若结论不是 GO_TO_SMALL_BC，下一实验应只做与该 disposition 对应的严格 paired mechanism replication；不得自动启动 ACT、Diffusion Policy、SmolVLA 或 pi0.5。",
+        "- 下一推荐实验仅是严格 paired 的静态度量复现：优先取得 episode ID >=50 的成功轨迹，在完全相同的 K64 bank 上直接比较 frozen C3、CR、action-only、context-shuffled 与 consequence-label-shuffled；不改变架构、不训练 policy。",
+        "- 本轮在 Stage 4 停止；不得自动启动 ACT、Diffusion Policy、SmolVLA 或 pi0.5。",
         "",
         "## Exact final disposition",
         "",
