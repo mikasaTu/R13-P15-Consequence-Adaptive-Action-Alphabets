@@ -156,10 +156,12 @@ def freeze_fresh_split(project_root, output_root=None):
         action_bank = np.asarray(data["residuals"], dtype=np.float64)
     records = []
     demo_hashes = {}
+    executable_supply = {}
     for task in TASKS:
         task_id = task["task_id"]
         demo_path = _demo_path(task)
         demo_hashes[task_id] = sha256_file(demo_path)
+        phase_pools = {phase: [] for phase in PHASES}
         with h5py.File(demo_path, "r") as handle:
             for episode_id in HISTORICAL_EXPLORATORY_EPISODES:
                 group = handle["data"]["demo_%d" % int(episode_id)]
@@ -169,7 +171,6 @@ def freeze_fresh_split(project_root, output_root=None):
                 windows = _phase_windows(anchors, len(actions) - HORIZON)
                 for phase in PHASES:
                     low, high = windows[phase]
-                    candidates = []
                     for index in range(low, high + 1):
                         if (task_id, int(episode_id), index) in used:
                             continue
@@ -185,57 +186,140 @@ def freeze_fresh_split(project_root, output_root=None):
                             phase,
                             index,
                         )
-                        candidates.append((tie, index, continuous))
-                    if not candidates:
-                        raise RuntimeError(
-                            "no executable unused fresh timestep for %s/e%d/%s"
-                            % (task_id, episode_id, phase)
+                        phase_pools[phase].append(
+                            {
+                                "tie": int(tie),
+                                "episode_id": int(episode_id),
+                                "snapshot_index": int(index),
+                                "continuous": np.asarray(continuous, dtype=np.float64),
+                                "base_state": np.asarray(states[index], dtype=np.float64),
+                                "base_actions": np.asarray(
+                                    actions[index : index + HORIZON],
+                                    dtype=np.float64,
+                                ),
+                            }
                         )
-                    _, index, continuous = min(candidates, key=lambda value: value[0])
-                    base_state = np.asarray(states[index], dtype=np.float64)
-                    perturbed = base_state.copy()
-                    joint_id = _seed(
-                        CONFIRMATION_SELECTION_SEED, task_id, episode_id, phase, "joint"
-                    ) % 7
-                    sign = -1 if _seed(
-                        CONFIRMATION_SELECTION_SEED, task_id, episode_id, phase, "sign"
-                    ) % 2 else 1
-                    flat_index = 1 + int(joint_id)
-                    perturbed[flat_index] += sign * PERTURBATION_MAGNITUDE_RAD
-                    base_actions = np.asarray(
-                        actions[index : index + HORIZON], dtype=np.float64
-                    )
-                    key = "%s__e%02d__%s__freshp" % (task_id, episode_id, phase)
-                    records.append(
-                        {
-                            "key": key,
-                            "split": "fresh_confirmation",
-                            "evidence_label": FRESH_LABEL,
-                            "new_episode_claim": False,
-                            "task_id": task_id,
-                            "episode_id": int(episode_id),
-                            "phase": phase,
-                            "snapshot_index": int(index),
-                            "base_recorded_state": base_state.tolist(),
-                            "perturbed_state": perturbed.tolist(),
-                            "base_recorded_state_sha256": _array_hash(base_state),
-                            "snapshot_state_sha256": _array_hash(perturbed),
-                            "base_action_sha256": _array_hash(base_actions),
-                            "state_vector_length": len(perturbed),
-                            "perturbation": {
-                                "kind": "panda_joint_qpos_offset",
-                                "flattened_state_index": flat_index,
-                                "panda_joint_index": int(joint_id),
-                                "delta_radians": sign * PERTURBATION_MAGNITUDE_RAD,
-                                "l2": PERTURBATION_MAGNITUDE_RAD,
-                                "bounded": True,
-                            },
-                            "max_abs_base_continuous": float(np.max(np.abs(continuous))),
-                            "candidate_bank_executable_without_clipping": True,
-                            "support_bank_executable_without_clipping": True,
-                            "source_demo_sha256": demo_hashes[task_id],
-                        }
-                    )
+        for phase in PHASES:
+            pool = phase_pools[phase]
+            by_source_episode = {}
+            for candidate in pool:
+                by_source_episode.setdefault(candidate["episode_id"], []).append(candidate)
+            selected = []
+            selected_identity = set()
+            for episode_id in HISTORICAL_EXPLORATORY_EPISODES:
+                candidates = by_source_episode.get(int(episode_id), [])
+                if not candidates:
+                    continue
+                candidate = min(
+                    candidates,
+                    key=lambda value: (value["tie"], value["snapshot_index"]),
+                )
+                candidate = dict(candidate, selection_reason="episode_hash_minimum")
+                selected.append(candidate)
+                selected_identity.add((candidate["episode_id"], candidate["snapshot_index"]))
+            required = len(HISTORICAL_EXPLORATORY_EPISODES)
+            if len(selected) < required:
+                remaining = sorted(
+                    (
+                        value
+                        for value in pool
+                        if (value["episode_id"], value["snapshot_index"])
+                        not in selected_identity
+                    ),
+                    key=lambda value: (
+                        value["tie"],
+                        value["episode_id"],
+                        value["snapshot_index"],
+                    ),
+                )
+                for value in remaining[: required - len(selected)]:
+                    selected.append(dict(value, selection_reason="pooled_hash_fallback"))
+            if len(selected) != required:
+                raise RuntimeError(
+                    "insufficient executable unused fresh timesteps for %s/%s: %d"
+                    % (task_id, phase, len(selected))
+                )
+            executable_supply["%s/%s" % (task_id, phase)] = {
+                "candidate_count": len(pool),
+                "source_episodes_with_candidate": len(by_source_episode),
+                "selected_count": len(selected),
+                "pooled_fallback_count": sum(
+                    value["selection_reason"] == "pooled_hash_fallback"
+                    for value in selected
+                ),
+            }
+            for phase_slot, candidate in enumerate(
+                sorted(
+                    selected,
+                    key=lambda value: (
+                        value["episode_id"],
+                        value["tie"],
+                        value["snapshot_index"],
+                    ),
+                )
+            ):
+                episode_id = candidate["episode_id"]
+                index = candidate["snapshot_index"]
+                continuous = candidate["continuous"]
+                base_state = candidate["base_state"]
+                base_actions = candidate["base_actions"]
+                perturbed = base_state.copy()
+                joint_id = _seed(
+                    CONFIRMATION_SELECTION_SEED,
+                    task_id,
+                    episode_id,
+                    phase,
+                    index,
+                    "joint",
+                ) % 7
+                sign = -1 if _seed(
+                    CONFIRMATION_SELECTION_SEED,
+                    task_id,
+                    episode_id,
+                    phase,
+                    index,
+                    "sign",
+                ) % 2 else 1
+                flat_index = 1 + int(joint_id)
+                perturbed[flat_index] += sign * PERTURBATION_MAGNITUDE_RAD
+                key = "%s__e%02d__%s__t%04d__freshp" % (
+                    task_id,
+                    episode_id,
+                    phase,
+                    index,
+                )
+                records.append(
+                    {
+                        "key": key,
+                        "split": "fresh_confirmation",
+                        "evidence_label": FRESH_LABEL,
+                        "new_episode_claim": False,
+                        "task_id": task_id,
+                        "episode_id": int(episode_id),
+                        "phase": phase,
+                        "phase_slot": int(phase_slot),
+                        "selection_reason": candidate["selection_reason"],
+                        "snapshot_index": int(index),
+                        "base_recorded_state": base_state.tolist(),
+                        "perturbed_state": perturbed.tolist(),
+                        "base_recorded_state_sha256": _array_hash(base_state),
+                        "snapshot_state_sha256": _array_hash(perturbed),
+                        "base_action_sha256": _array_hash(base_actions),
+                        "state_vector_length": len(perturbed),
+                        "perturbation": {
+                            "kind": "panda_joint_qpos_offset",
+                            "flattened_state_index": flat_index,
+                            "panda_joint_index": int(joint_id),
+                            "delta_radians": sign * PERTURBATION_MAGNITUDE_RAD,
+                            "l2": PERTURBATION_MAGNITUDE_RAD,
+                            "bounded": True,
+                        },
+                        "max_abs_base_continuous": float(np.max(np.abs(continuous))),
+                        "candidate_bank_executable_without_clipping": True,
+                        "support_bank_executable_without_clipping": True,
+                        "source_demo_sha256": demo_hashes[task_id],
+                    }
+                )
     if len(records) != len(TASKS) * len(HISTORICAL_EXPLORATORY_EPISODES) * len(PHASES):
         raise AssertionError(len(records))
     payload = {
@@ -247,11 +331,23 @@ def freeze_fresh_split(project_root, output_root=None):
         "source_2_status": "NO_FROZEN_NOMINAL_GENERATOR_AVAILABLE",
         "selection_seed": CONFIRMATION_SELECTION_SEED,
         "selection_rule": (
-            "For each task, episode 40-49 and phase, select one hash-minimum "
-            "unused executable H=4 timestep inside the frozen phase window; "
-            "apply an exact +/-0.0015 rad offset to one hash-selected Panda "
-            "arm qpos coordinate in the serialized state."
+            "For every task/phase, first select the hash-minimum unused executable "
+            "H=4 timestep from each source episode that supplies one. If fewer than "
+            "10 source episodes supply that phase, fill to exactly 10 with the "
+            "hash-minimum remaining executable timestep pooled over episodes; then "
+            "apply an exact +/-0.0015 rad offset to one hash-selected Panda arm "
+            "qpos coordinate in the serialized state."
         ),
+        "selection_balance": "exactly 10 states per task/phase; source episodes preferred but not fabricated",
+        "offline_freeze_incidents_before_file_creation": [
+            {
+                "attempted_rule": "exactly one state per task/episode/phase",
+                "failure": "plate_push/e42/pre_contact had zero fully executable unused H=4 timesteps",
+                "simulator_executed": False,
+                "split_file_created": False,
+            }
+        ],
+        "executable_supply": executable_supply,
         "state_perturbation_generated_without_simulator": True,
         "simulator_branch_execution_before_this_file": False,
         "sacrificial_replay_evidence": "snapshot_restore_validation.json",
