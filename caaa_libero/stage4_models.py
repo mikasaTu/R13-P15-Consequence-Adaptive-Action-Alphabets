@@ -593,16 +593,16 @@ def _model_path(output_root, family, control, member_index):
 
 def _calibration_pairs(cache, train_pairs_path):
     # Margins remain train-only.  Generate calibration examples with those
-    # frozen margins and never use calibration to fit a margin.
-    import pandas as pd
-
-    train_frame = pd.read_parquet(train_pairs_path)
+    # frozen margins and never use calibration to fit a margin.  Metadata is
+    # authoritative because a valid state-invariant stratum can contain zero
+    # realized training pairs and therefore has no parquet row to inspect.
+    metadata_path = os.path.join(
+        os.path.dirname(train_pairs_path), "context_reversal_metadata.json"
+    )
+    with open(metadata_path, "r", encoding="utf-8") as handle:
+        metadata = json.load(handle)
     margins = {
-        (task, phase): float(
-            train_frame[
-                (train_frame.task_id == task) & (train_frame.phase == phase)
-            ].margin.iloc[0]
-        )
+        (task, phase): float(metadata["margins"][f"{task}/{phase}"])
         for task in TASK_IDS
         for phase in PHASES
     }

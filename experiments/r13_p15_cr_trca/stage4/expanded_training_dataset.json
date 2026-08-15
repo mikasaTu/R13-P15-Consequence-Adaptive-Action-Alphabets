@@ -1,0 +1,18 @@
+{
+  "cache_bytes": 67408062,
+  "cache_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cr_trca/stage4_work/derived/train_matrix_cache.npz",
+  "cache_sha256": "af59e74e122c3078f105dbeea305eac36adcfde622000972530d3db276c0ba38",
+  "candidate_comparisons": 18874368,
+  "consequence_scaling_evidence": {
+    "path": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/code/r13-p15-caaa-v2-libero/experiments/r13_p15_ncer_aa/stage3/model_scalers.npz",
+    "refit_for_stage4": false,
+    "sha256": "df8e0a9f4ea24c67e9305d8459a40ea50745c4b1a75060743d3798acbbcafda5",
+    "source": "frozen Stage 3 train-only model_scalers.npz"
+  },
+  "query_count": 73728,
+  "scaler_fit_split": "expanded train episodes 16-31 only",
+  "scaler_path": "experiments/r13_p15_cr_trca/stage4/stage4_scalers.npz",
+  "scaler_sha256": "8d3eef9723c5a2305bdb0976ad72f9e06420bdc35a9b7cacd8981cd2aa1cb834",
+  "schema_version": "stage4-context-distance-cache-v1",
+  "state_count": 768
+}

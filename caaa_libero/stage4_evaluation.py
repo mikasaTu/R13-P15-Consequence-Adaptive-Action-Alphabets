@@ -798,17 +798,15 @@ def evaluate_context_reversals(project_root, output_root=None, device_name="cpu"
     project_root = os.path.abspath(project_root)
     output_root = output_root or os.path.join(project_root, OUTPUT_RELATIVE)
     device = _device(device_name)
-    import pandas as pd
-
-    pair_frame = pd.read_parquet(
-        os.path.join(output_root, "CONTEXT_REVERSAL_PAIRS.parquet")
+    # Read all preregistered robust margins from metadata rather than inferring
+    # them from realized pairs.  A physically state-invariant stratum (notably
+    # free space) can correctly contain zero strict reversals; indexing a pair
+    # row would either crash or tempt an invalid relaxed/fabricated label.
+    reversal_metadata = _load_json(
+        os.path.join(output_root, "context_reversal_metadata.json")
     )
     margins = {
-        (task, phase): float(
-            pair_frame[
-                (pair_frame.task_id == task) & (pair_frame.phase == phase)
-            ].margin.iloc[0]
-        )
+        (task, phase): float(reversal_metadata["margins"][f"{task}/{phase}"])
         for task in TASK_IDS
         for phase in PHASES
     }
