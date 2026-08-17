@@ -1,0 +1,2 @@
+status,evidence,reason,rows
+NOT_EXECUTED_BY_PREREGISTERED_FIREWALL,FRESH_POLICY_TRAJECTORY_CONFIRMATION,fresh trajectory supply incomplete; confirmation firewall forbids branch execution,0

@@ -1,0 +1,7 @@
+{
+  "executed": false,
+  "gate": "FRESH_CONFIRMATION_GATE",
+  "not_interpreted_as_metric_failure": true,
+  "passed": false,
+  "reason": "fresh trajectory supply incomplete; confirmation firewall forbids branch execution"
+}

@@ -26,7 +26,7 @@
     {
       "command": "python -m pytest -q",
       "exit_code": 0,
-      "result": "50 passed in 25.04s"
+      "result": "50 passed in 15.68s"
     }
   ],
   "complete_existing_suite_executed": true,

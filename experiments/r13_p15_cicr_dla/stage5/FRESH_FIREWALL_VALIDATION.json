@@ -1,0 +1,12 @@
+{
+  "date_utc": "2026-08-18",
+  "command": "python -m caaa_libero.stage5_branch_collection --project-root <repo> collect-task --task-id bowl_on_plate",
+  "expected_exit_code": 1,
+  "observed_exit_code": 1,
+  "expected_error": "BLOCKED_NO_FRESH_TRAJECTORIES",
+  "observed_error": "BLOCKED_NO_FRESH_TRAJECTORIES",
+  "passed": true,
+  "simulator_runtime_created": false,
+  "confirmation_branch_count_after_test": 0,
+  "interpretation": "The committed incomplete fresh split stops collection before LiberoTaskRuntime construction; no confirmation state was executed."
+}

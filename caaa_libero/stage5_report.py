@@ -21,6 +21,7 @@ from .stage5_config import (
     OUTPUT_RELATIVE,
     SCRATCH_ROOT,
     TASK_IDS,
+    rollout_seeds,
 )
 from .stage5_logic import choose_disposition, exact_one_disposition
 from .storage import atomic_json, atomic_text, sha256_file, validate_complete
@@ -114,6 +115,35 @@ def _blocked_confirmation(output_root, split):
     }
     atomic_json(os.path.join(output_root, "CONFIRMATION_GATE.json"), gate)
     return gate
+
+
+def _export_generator_attempts(output_root, scratch_root=SCRATCH_ROOT):
+    rows = []
+    for task in TASK_IDS:
+        for seed in rollout_seeds()[task]:
+            path = os.path.join(
+                scratch_root,
+                "fresh_attempts",
+                task,
+                "seed_%d.json" % int(seed),
+            )
+            if not os.path.isfile(path):
+                continue
+            value = _json(path)
+            rows.append(
+                {
+                    "task_id": task,
+                    "seed": int(seed),
+                    "success": bool(value["success"]),
+                    "steps": int(value["steps"]),
+                    "final_progress": float(value["final_progress"]),
+                    "checkpoint_sha256": value["checkpoint_sha256"],
+                    "trajectory_sha256": value.get("trajectory_sha256") or "",
+                    "metric_scores_read": bool(value["metric_scores_read"]),
+                }
+            )
+    _write_csv(os.path.join(output_root, "FRESH_GENERATOR_ATTEMPTS.csv"), rows)
+    return rows
 
 
 def _bootstrap_from_parquet(path, method, baseline, seed):
@@ -327,18 +357,7 @@ def _report(output_root, final, mechanism, bootstraps, confirmation_gate):
         b2v = _summary(dev, b2, level="phase", phase=phase)
         p1v = _summary(dev, p1, level="phase", phase=phase)
         phase_rows.append((phase, _num(b2v), _num(p1v), _pct(_gain(b2v, p1v))))
-    methods = (
-        "B0_CURRENT_CONTACT_KMEANS__FULL",
-        b1,
-        b2,
-        p1,
-        "CONTROL_PHASE_ONLY__FULL",
-        "CONTROL_CONTEXT_SHUFFLED__FULL",
-        "CONTROL_CONSEQUENCE_LABEL_SHUFFLED__FULL",
-        "CONTROL_NO_REVERSAL_LOSS__FULL",
-        "B2_STATIC_CONSEQUENCE__K64",
-        "P1_CONTEXT_GATED_PSD__K64",
-    )
+    methods = sorted({row["method"] for row in dev})
     method_rows = []
     for method in methods:
         method_rows.append(
@@ -351,6 +370,10 @@ def _report(output_root, final, mechanism, bootstraps, confirmation_gate):
         )
     successes = {
         task: split["trajectory_summaries"][task]["success_count"]
+        for task in TASK_IDS
+    }
+    attempts = {
+        task: split["trajectory_summaries"][task]["attempt_count"]
         for task in TASK_IDS
     }
     historical_rows = [
@@ -375,6 +398,8 @@ def _report(output_root, final, mechanism, bootstraps, confirmation_gate):
         "## 环境、控制与审计边界",
         "",
         "- LIBERO commit: `%s`；source tree SHA256: `%s`。" % (binding["libero"]["commit"], binding["libero"]["source_tree_sha256"]),
+        "- repository pre-result commit `%s`，tree `%s`；Stage 4 published commit `%s`。" % (binding["repository_input"]["commit"], binding["repository_input"]["tree"], binding["repository_input"]["stage4_result_commit"]),
+        "- 环境锁 SHA256: `%s`；simulation Python 3.8.13，model Python %s，PyTorch %s（CPU execution）。" % (binding["environment_lock"]["sha256"], generator["runtime"]["python"].split()[0], generator["runtime"]["torch"]),
         "- Panda `OSC_POSE`，20 Hz，H=4，settle=3；M=128，primary K=64。",
         "- local bank SHA256: `%s`；fresh target bank 与 local/historical overlap 均为 0。" % local["npz"]["sha256"],
         "- 模型训练/推理和仿真均在本地完成；GPU 使用数 0，PAI job 数 0。计划要求只有本地技术上不可行才启用 PAI，因此没有提交 PAI。",
@@ -427,7 +452,7 @@ def _report(output_root, final, mechanism, bootstraps, confirmation_gate):
         "",
         "## Fresh policy-trajectory confirmation",
         "",
-        "每任务预注册 200 个升序 rollout seed；成功任务在第 12 个成功处停止，不足任务扫完全部 200 个。冻结 success counts: `%s`。" % json.dumps(successes, sort_keys=True),
+        "每任务预注册 200 个升序 rollout seed；成功任务的 acceptance 在第 12 个升序成功处冻结，不足任务扫完全部 200 个。冻结 acceptance attempts=`%s`，successes=`%s`；并发 shard 在 cutoff 后已完成的少量高 seed 仅保留在 attempts audit，不进入 acceptance。" % (json.dumps(attempts, sort_keys=True), json.dumps(successes, sort_keys=True)),
         (
             "48 条轨迹与 192 个 phase states 均已冻结并完成 confirmation branch/gate。"
             if split["complete"]
@@ -489,6 +514,7 @@ def _report(output_root, final, mechanism, bootstraps, confirmation_gate):
 
 def _verify(project_root, output_root, final, bootstraps):
     required = (
+        "STEP6_PLAN.md",
         "PREREGISTRATION.md",
         "HISTORICAL_BINDING.json",
         "DATA_PROTOCOL.json",
@@ -500,18 +526,24 @@ def _verify(project_root, output_root, final, bootstraps):
         "CONTEXT_REVERSAL_METADATA.json",
         "MODEL_DEFINITIONS.json",
         "MODEL_SELECTION.json",
+        "MODEL_TRAINING_MANIFEST.json",
         "DEVELOPMENT_RANKING.csv",
         "DEVELOPMENT_REALIZED.csv",
         "DEVELOPMENT_CONTROLS.csv",
         "DEVELOPMENT_GATE.json",
         "NOMINAL_GENERATOR_BINDING.json",
         "FRESH_TRAJECTORY_SEEDS.json",
+        "FRESH_GENERATOR_ATTEMPTS.csv",
         "FRESH_CONFIRMATION_SPLIT.json",
+        "FRESH_REPLAY_VALIDATION.json",
         "FRESH_BRANCH_MANIFEST.json",
         "CONFIRMATION_RANKING.csv",
         "CONFIRMATION_REALIZED.csv",
+        "CONFIRMATION_GATE.json",
         "BOOTSTRAP_RESULTS.json",
         "FINAL_DISPOSITION.json",
+        "MECHANISM_REVERSE_ENGINEERING.json",
+        "TEST_RESULTS.json",
         "STAGE5_REPORT.md",
     )
     files = {name: os.path.isfile(os.path.join(output_root, name)) for name in required}
@@ -530,6 +562,16 @@ def _verify(project_root, output_root, final, bootstraps):
         )
     split = _json(os.path.join(output_root, "FRESH_CONFIRMATION_SPLIT.json"))
     branch = _json(os.path.join(output_root, "FRESH_BRANCH_MANIFEST.json"))
+    split_bindings = {
+        "model_selection": split["model_selection_sha256"]
+        == sha256_file(os.path.join(output_root, "MODEL_SELECTION.json")),
+        "phase_selection_rule": split["phase_selection_rule_sha256"]
+        == sha256_file(os.path.join(output_root, "FRESH_PHASE_SELECTION_RULE.json")),
+        "local_bank": split["local_bank_sha256"]
+        == sha256_file(os.path.join(output_root, "LOCAL_BANK.npz")),
+        "fresh_target_bank": split["fresh_target_bank_sha256"]
+        == sha256_file(os.path.join(output_root, "FRESH_TARGET_BANK.npz")),
+    }
     completion = []
     if split["complete"]:
         for task_manifest in branch["task_manifests"]:
@@ -572,6 +614,8 @@ def _verify(project_root, output_root, final, bootstraps):
         "checkpoints": checkpoints,
         "all_checkpoint_hashes_match": all(row["matched"] for row in checkpoints),
         "fresh_split_complete": bool(split["complete"]),
+        "split_bindings": split_bindings,
+        "all_split_bindings_match": all(split_bindings.values()),
         "fresh_branch_counts": {
             "states": int(branch["states"]),
             "total_short_rollouts": int(branch["total_short_rollouts"]),
@@ -593,6 +637,7 @@ def _verify(project_root, output_root, final, bootstraps):
         (
             verification["all_required_artifacts_present"],
             verification["all_checkpoint_hashes_match"],
+            verification["all_split_bindings_match"],
             verification["all_executed_completion_markers_valid"],
             verification["all_executed_bootstraps_have_10000_replicates"],
             verification["exact_one_disposition"],
@@ -608,6 +653,7 @@ def _verify(project_root, output_root, final, bootstraps):
 def finalize(project_root, output_root=None):
     project_root = os.path.abspath(project_root)
     output_root = output_root or os.path.join(project_root, OUTPUT_RELATIVE)
+    _export_generator_attempts(output_root)
     split = _json(os.path.join(output_root, "FRESH_CONFIRMATION_SPLIT.json"))
     if split["complete"]:
         confirmation_gate = _json(os.path.join(output_root, "CONFIRMATION_GATE.json"))

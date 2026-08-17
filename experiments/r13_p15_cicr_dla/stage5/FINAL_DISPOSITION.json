@@ -1,0 +1,17 @@
+{
+  "decisive_rule": "Gate 1 failed and B2 static consequence gate passed",
+  "exactly_one": true,
+  "final_disposition": "STATIC_CONSEQUENCE_METRIC_ONLY",
+  "later_negative_or_blocked_runs_cannot_upgrade_disposition": true,
+  "next_experiment": "Do not advance the context-gated dynamic alphabet; optionally evaluate frozen B2 only as a preregistered static-retrieval safety baseline.",
+  "precedence_trace": {
+    "confirmation_gate": false,
+    "context_gate_1": false,
+    "dynamic_k64_gate_2": false,
+    "fresh_trajectory_supply": false,
+    "historical_binding": true,
+    "oracle_gate_0": true,
+    "static_consequence_gate": true
+  },
+  "stage_stopped": true
+}

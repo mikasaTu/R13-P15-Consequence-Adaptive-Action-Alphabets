@@ -1,0 +1,284 @@
+{
+  "cluster_unit": "source episode",
+  "development": {
+    "B2_FULL_vs_B1_FULL": {
+      "baseline": "B1_ACTION_ONLY__FULL",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            0.018162512609307235,
+            0.0918977548037704
+          ],
+          "point": 0.049228544902851556
+        },
+        "plate_push": {
+          "ci95": [
+            0.04565007099655217,
+            0.0693891212724343
+          ],
+          "point": 0.05805320594981198
+        },
+        "stove_turn_on": {
+          "ci95": [
+            0.06668883037504457,
+            0.12490598878091513
+          ],
+          "point": 0.10012073899627191
+        },
+        "wine_rack": {
+          "ci95": [
+            0.0278516345293554,
+            0.04415373441048251
+          ],
+          "point": 0.03449617837470405
+        }
+      },
+      "method": "B2_STATIC_CONSEQUENCE__FULL",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          0.048106512843599375,
+          0.07340273747310176
+        ],
+        "point": 0.06047466705590987,
+        "probability_positive": 1.0
+      },
+      "replicates": 10000,
+      "seed": 13150505
+    },
+    "P1_FULL_vs_B2_FULL": {
+      "baseline": "B2_STATIC_CONSEQUENCE__FULL",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            -0.021264852441294863,
+            0.002834106109323775
+          ],
+          "point": -0.0071444354463534865
+        },
+        "plate_push": {
+          "ci95": [
+            -0.0042126599793090025,
+            0.0008105003474763936
+          ],
+          "point": -0.0024340729743372383
+        },
+        "stove_turn_on": {
+          "ci95": [
+            0.002341206157802124,
+            0.011991312275526078
+          ],
+          "point": 0.006498192803372663
+        },
+        "wine_rack": {
+          "ci95": [
+            -0.005988968802903935,
+            0.0032374023302014637
+          ],
+          "point": -0.0012663168583188222
+        }
+      },
+      "method": "P1_CONTEXT_GATED_PSD__FULL",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          -0.00484510031552432,
+          0.0022086182885167217
+        ],
+        "point": -0.001086658118909221,
+        "probability_positive": 0.2881
+      },
+      "replicates": 10000,
+      "seed": 13150504
+    },
+    "P1_K64_vs_B2_K64": {
+      "baseline": "B2_STATIC_CONSEQUENCE__K64",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            -0.02809730109740527,
+            0.009901698674089951
+          ],
+          "point": -0.008621285912811458
+        },
+        "plate_push": {
+          "ci95": [
+            -0.0024810372167768796,
+            0.015937611828127654
+          ],
+          "point": 0.006728287305675387
+        },
+        "stove_turn_on": {
+          "ci95": [
+            -0.009130507944837496,
+            0.01961280034245569
+          ],
+          "point": 0.005241146198809096
+        },
+        "wine_rack": {
+          "ci95": [
+            -0.0010946485162112232,
+            0.01697732169520904
+          ],
+          "point": 0.006419333521003819
+        }
+      },
+      "method": "P1_CONTEXT_GATED_PSD__K64",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          -0.004566762073386764,
+          0.009418229865224134
+        ],
+        "point": 0.0024418702781692113,
+        "probability_positive": 0.755
+      },
+      "replicates": 10000,
+      "seed": 13150506
+    }
+  },
+  "fresh_confirmation": {
+    "executed": false,
+    "reason": "fresh trajectory supply incomplete; confirmation firewall forbids branch execution",
+    "replicates": 0
+  },
+  "historical_exploratory": {
+    "B2_FULL_vs_B1_FULL": {
+      "baseline": "B1_ACTION_ONLY__FULL",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            0.04340743090096597,
+            0.07526447181258229
+          ],
+          "point": 0.05988943948428651
+        },
+        "plate_push": {
+          "ci95": [
+            0.05522665822598125,
+            0.08373319639306236
+          ],
+          "point": 0.06979776438666066
+        },
+        "stove_turn_on": {
+          "ci95": [
+            0.07827470681327126,
+            0.12257482401951234
+          ],
+          "point": 0.1016933082790874
+        },
+        "wine_rack": {
+          "ci95": [
+            -0.0011897048018678852,
+            0.046043376359353565
+          ],
+          "point": 0.023757184108575337
+        }
+      },
+      "method": "B2_STATIC_CONSEQUENCE__FULL",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          0.053763848256306195,
+          0.07320737563826607
+        ],
+        "point": 0.06378442406465248,
+        "probability_positive": 1.0
+      },
+      "replicates": 10000,
+      "seed": 13150515
+    },
+    "P1_FULL_vs_B2_FULL": {
+      "baseline": "B2_STATIC_CONSEQUENCE__FULL",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            -0.014360739160167165,
+            -0.00012983557461534719
+          ],
+          "point": -0.0071380157729480755
+        },
+        "plate_push": {
+          "ci95": [
+            -0.0018028267749149894,
+            0.006106794589672884
+          ],
+          "point": 0.002150404090779473
+        },
+        "stove_turn_on": {
+          "ci95": [
+            -0.0035909499813581193,
+            0.0036683084517316784
+          ],
+          "point": 0.0004993853659313125
+        },
+        "wine_rack": {
+          "ci95": [
+            0.0020151654245133812,
+            0.011918744509162481
+          ],
+          "point": 0.006463636304257484
+        }
+      },
+      "method": "P1_CONTEXT_GATED_PSD__FULL",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          -0.0021317832535369344,
+          0.0030741097110810484
+        ],
+        "point": 0.0004938524970050484,
+        "probability_positive": 0.6491
+      },
+      "replicates": 10000,
+      "seed": 13150514
+    },
+    "P1_K64_vs_B2_K64": {
+      "baseline": "B2_STATIC_CONSEQUENCE__K64",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            -0.018576659439017106,
+            0.008006684382621452
+          ],
+          "point": -0.005460516711139884
+        },
+        "plate_push": {
+          "ci95": [
+            -0.0060563408511455225,
+            0.003836355106144729
+          ],
+          "point": -0.0008568941621536457
+        },
+        "stove_turn_on": {
+          "ci95": [
+            -0.009640289785684911,
+            0.005488774872030367
+          ],
+          "point": -0.002386513314787707
+        },
+        "wine_rack": {
+          "ci95": [
+            -0.024670333712886818,
+            0.012975883930637573
+          ],
+          "point": -0.005846048819258034
+        }
+      },
+      "method": "P1_CONTEXT_GATED_PSD__K64",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          -0.009790657041535663,
+          0.0025434833678611383
+        ],
+        "point": -0.003637493251834818,
+        "probability_positive": 0.126
+      },
+      "replicates": 10000,
+      "seed": 13150516
+    }
+  },
+  "paired": true,
+  "replicates_per_executed_comparison": 10000
+}

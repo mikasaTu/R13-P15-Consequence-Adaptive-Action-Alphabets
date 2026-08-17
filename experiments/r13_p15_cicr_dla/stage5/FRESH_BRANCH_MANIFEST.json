@@ -1,0 +1,26 @@
+{
+  "blocked_by_firewall": true,
+  "candidate_branches": 0,
+  "clipped": 0,
+  "evidence_label": "FRESH_POLICY_TRAJECTORY_CONFIRMATION",
+  "executed": false,
+  "nominal_branches": 0,
+  "reason": "fresh trajectory supply incomplete; confirmation firewall forbids branch execution",
+  "shortages": [
+    {
+      "reason": "fewer_than_12_environment_successes",
+      "success_count": 3,
+      "task_id": "plate_push"
+    },
+    {
+      "reason": "fewer_than_12_environment_successes",
+      "success_count": 0,
+      "task_id": "wine_rack"
+    }
+  ],
+  "split_complete": false,
+  "split_record_count": 96,
+  "states": 0,
+  "target_branches": 0,
+  "total_short_rollouts": 0
+}

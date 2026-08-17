@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "exported_at_utc": "2026-08-17T12:18:52Z",
+  "exported_at_utc": "2026-08-17T19:04:31Z",
   "export_format": "lark-doc-v2-markdown",
   "source_root": {
     "title": "R13-P15：Consequence-Adaptive Action Alphabets",
@@ -162,6 +162,32 @@
       "path": "step5/REPORT.md",
       "bytes": 11631,
       "sha256": "4a9f0bef33c587294fafb1e4865ebe94d31819e3a06733406d22a1583ad50455"
+    },
+    {
+      "key": "step6_plan",
+      "step": "step6",
+      "kind": "plan",
+      "title": "step6",
+      "wiki_node_token": "QJ7mwyX3vipUzikpDEEcQDaInAb",
+      "document_token": "DRVgdB8tKoX4MZxBrj4cotcanWh",
+      "revision_id": 6,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/QJ7mwyX3vipUzikpDEEcQDaInAb",
+      "path": "step6/PLAN.md",
+      "bytes": 21614,
+      "sha256": "7f54920b7fa78bc068e49b3280e7eb98ee7fbc5ce51e47d61d1ddf5126996228"
+    },
+    {
+      "key": "step6_report",
+      "step": "step6",
+      "kind": "report",
+      "title": "实验报告",
+      "wiki_node_token": "JSQdwxvy8ifwDxkkkJIchLTSnne",
+      "document_token": "JIQ8d5ViyonBMAxaOyxccnGJnCh",
+      "revision_id": 3,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/JSQdwxvy8ifwDxkkkJIchLTSnne",
+      "path": "step6/REPORT.md",
+      "bytes": 9562,
+      "sha256": "f932000c70f93f1dd4b4fb15f98d2833e01dd0608e5cd5bbc49eebe101c16e2f"
     }
   ]
 }

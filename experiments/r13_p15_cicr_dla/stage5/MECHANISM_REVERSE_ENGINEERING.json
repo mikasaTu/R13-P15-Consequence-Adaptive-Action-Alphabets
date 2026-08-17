@@ -1,0 +1,305 @@
+{
+  "conclusion": "static consequence supervision survives; learned context-specific geometry does not",
+  "context_modulation_failure": {
+    "B2_joint_reversal_accuracy": 0.0297845373891,
+    "B2_metric_condition_number": 1.04927885532,
+    "P1_joint_reversal_accuracy": 0.041825095057,
+    "P1_relative_gain": -0.004154222296795345,
+    "development_B2_error": 0.261579193737,
+    "development_P1_error": 0.262665851856,
+    "development_metric_condition_number": 12.5928348154,
+    "fraction_of_maximum_norm": 0.9640468702448767,
+    "historical_B2_error": 0.226224051667,
+    "historical_P1_error": 0.22573019917,
+    "historical_P1_relative_gain": 0.0021830238357101513,
+    "interpretation": "The only context path is a bounded diagonal reweighting of a frozen B2 embedding. It cannot rotate or change that representation. Training drives the 24-D modulation close to its tanh boundary while barely reducing the reversal loss; the resulting high-condition metric changes codes but does not generalize state-specific order reversals. Coarse phase/contact controls equal or beat P1, so the apparent context response is not identifiable.",
+    "mean_modulation_norm": 5.903557300567627,
+    "mean_reversal_loss_final": 1.4473134676615398,
+    "mean_reversal_loss_initial": 1.4683330059051514,
+    "phase_only_error": 0.257696540455,
+    "phase_only_vs_P1_gain": 0.018918756914485742,
+    "registered_reversal_threshold": 0.35,
+    "theoretical_maximum_modulation_norm": 6.123724356957945
+  },
+  "dynamic_k64": {
+    "B2_K64_error": 0.282722133217,
+    "P1_FULL_error": 0.262665851856,
+    "P1_K64_error": 0.280280262939,
+    "P1_K64_vs_B2_K64_gain": 0.00863699721837788,
+    "interpretation": "State-dependent reweighting changes the medoid set, but those changes are not supported by accurate reversal rankings. Compression therefore adds effect error and preserves only a small, non-gated difference from B2.",
+    "registered_gain_threshold": 0.08
+  },
+  "method": "code-first mechanism reverse engineering; no new idea generated",
+  "offset_solver_incident": {
+    "optimizer_steps_changed": false,
+    "reason": "fixed [-40,40] root bracket did not enclose six trained-logit roots",
+    "repaired_checkpoints": [
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.0446334641756039e-07,
+          "mean_modulation_norm": 5.924408435821533
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150517.pt",
+        "sha256": "2a54fced42be8774fb8b2be83ff6c76782c70974436251aaae314207a8d469fa"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.2631138563156128e-07,
+          "mean_modulation_norm": 5.930002689361572
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150529.pt",
+        "sha256": "85c52b8eb8c0edb2d40ee706c54501e735a39c446c59f6032302135bcfb8e59e"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.8874804652568855e-07,
+          "mean_modulation_norm": 5.856260776519775
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150543.pt",
+        "sha256": "461b0b6836eb66ca318f8c2080dcee729dc55bb3a2687a254d879424859ced6f"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150517.pt",
+        "sha256": "15ad1cc4deeaca768f07718c7443f6e8952986359c1fe918e7846b7c6ace4fb8"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150529.pt",
+        "sha256": "0310f2a20ef8748ae94b611e97f42a1f2dc81528f6fc5d91f6585320b986328e"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150543.pt",
+        "sha256": "3bad965011b02786bfac83be4dba78e77cb839afe979ade4bc4e124153df1627"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.6344711184501648e-07,
+          "mean_modulation_norm": 5.9564361572265625
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150517.pt",
+        "sha256": "6801ef167bcd6a17b59811e0a8b798ae49d50a65a4e649f127004d7fdd36ce39"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.731879646944435e-07,
+          "mean_modulation_norm": 5.859077453613281
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150529.pt",
+        "sha256": "2a318563a3d29106483459aea992f89853aee2dfe7c0844be04cb9829f48d94f"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.25418111451836e-07,
+          "mean_modulation_norm": 5.922191143035889
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150543.pt",
+        "sha256": "02c7572b84a561e8d224c28d53c0d8857af9802a35cbbc88f50d3c47749a7a9c"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 3.0671557738060073e-07,
+          "mean_modulation_norm": 5.9436421394348145
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150517.pt",
+        "sha256": "4c88a4bb73308615c82fd15dd877c5038ea7cc471d1d38ebd7519fb81cfa1da9"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.3189932107925415e-07,
+          "mean_modulation_norm": 5.94689416885376
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150529.pt",
+        "sha256": "5c50202f4266a7a58c6fcf63af4151e8e002f50fe8c8bcffcfd11fe87df5d23b"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.3659398234722175e-07,
+          "mean_modulation_norm": 5.8753132820129395
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150543.pt",
+        "sha256": "d5429c799c8184bca32262f2c8bdf76eb1842105c42b6a42f946e31f70051f74"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.4404456294414558e-07,
+          "mean_modulation_norm": 5.8703789710998535
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150517.pt",
+        "sha256": "155795a6d64c0b92eb2c83376458f1ca54baf58e8a5aa6eecb0529299169c420"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.21033886305122e-07,
+          "mean_modulation_norm": 5.992880344390869
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150529.pt",
+        "sha256": "d715df69bdc29a1fbefc97cd48db24b3e3fb6fd7e534e45efe9bfdb7561ee7ad"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.601874828338623e-07,
+          "mean_modulation_norm": 5.914787292480469
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150543.pt",
+        "sha256": "cccbfc7e98059cf379ea488903c19e483a1ae52cf9b182f4866a4b0e6d8575ad"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.648440957069397e-07,
+          "mean_modulation_norm": 5.953813552856445
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150517.pt",
+        "sha256": "22229bb9ae7312d056f90865f95d0b3947f551724809836fe972569343290780"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.1858841020284672e-07,
+          "mean_modulation_norm": 5.949666976928711
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150529.pt",
+        "sha256": "35baf6e17b003ca45632355ee8e0ede5421fdbb55713940afd181bef1456a89e"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.1579444247900028e-07,
+          "mean_modulation_norm": 5.9711127281188965
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150543.pt",
+        "sha256": "ed2995ffeea368fc5b50ec5783e292dfaefc8f705087ccaa01813974e055792d"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 9.437402326284428e-08,
+          "mean_modulation_norm": 5.870606899261475
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150517.pt",
+        "sha256": "fd69d57d5580cac1f7cf9e5e5a5c993d9a0653a79f57a002e26907be7f60a95a"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.51805579662323e-07,
+          "mean_modulation_norm": 5.834897518157959
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150529.pt",
+        "sha256": "1f91089985846e4a08426504e19608266c0f6ec44497a551764421c977ba41f9"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.8579885363578796e-07,
+          "mean_modulation_norm": 5.862380504608154
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150543.pt",
+        "sha256": "7fd3dc3bf1ede30d398078a9f8f20ae579fdf4971fa19c4777c36a785bcb19ed"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.211126685142517,
+          "maximum_absolute_train_mean": 1.9076590263011894e-07,
+          "mean_modulation_norm": 2.2347636222839355
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150517.pt",
+        "sha256": "2e51119d2350f2a01fe7785871429c40553d1062b4b558d6c8d79a6f148270f4"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1741511821746826,
+          "maximum_absolute_train_mean": 2.5533759639984055e-07,
+          "mean_modulation_norm": 2.078611135482788
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150529.pt",
+        "sha256": "ab1d5777197a8b39e228e8de1e92f1264aded9a3e5b6dc642818215955a052ea"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1731723546981812,
+          "maximum_absolute_train_mean": 2.377200871706009e-07,
+          "mean_modulation_norm": 2.2902777194976807
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150543.pt",
+        "sha256": "4d96d8583e239abfe97a88765833c2a28b3808f6360336813b2f684fe72adb55"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1993814706802368,
+          "maximum_absolute_train_mean": 5.903032729293045e-07,
+          "mean_modulation_norm": 2.0656492710113525
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150517.pt",
+        "sha256": "58637d8811bedea74f90c830471462276de56f61366af125a7aed8454b984fbb"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.182060956954956,
+          "maximum_absolute_train_mean": 4.262741128968628e-07,
+          "mean_modulation_norm": 1.8658517599105835
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150529.pt",
+        "sha256": "435c1b6e2aba53e190d3eedb9efcc2a28b1392a3db57e85134e6fb0ed9bc3fba"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1640737056732178,
+          "maximum_absolute_train_mean": 7.444565994774166e-07,
+          "mean_modulation_norm": 1.9315742254257202
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150543.pt",
+        "sha256": "a2f4adae6cbd37a5def7b7fa760d2bab8d145bf51d9ec7c026e6269125905b3e"
+      }
+    ],
+    "trained_parameters_changed": false
+  },
+  "oracle_context_supply": {
+    "interpretation": "True state-specific headroom and real reversal examples exist; the negative P1 result is model/identifiability failure, not absence of oracle signal.",
+    "state_vs_static_or_contact_gain": 0.8762967093780287,
+    "strict_reversal_pairs": 6954
+  },
+  "source_paths": {
+    "bounded_modulation": "caaa_libero.stage5_models.create_context_metric.ContextMetric.modulation",
+    "context_metric": "caaa_libero.stage5_models.create_context_metric",
+    "dynamic_atlas": "caaa_libero.stage5_evaluation._atlas_decodings",
+    "positive_weight": "caaa_libero.stage5_models.create_context_metric.ContextMetric.positive_weight",
+    "reversal_loss": "caaa_libero.stage5_models._reversal_loss",
+    "static_metric": "caaa_libero.stage5_models.create_static_metric"
+  },
+  "static_consequence_improvement": {
+    "all_four_tasks_improve": true,
+    "development_B1_error": 0.322053860793,
+    "development_B2_error": 0.261579193737,
+    "historical_B1_error": 0.290008475731,
+    "historical_B2_error": 0.226224051667,
+    "interpretation": "The action encoder and diagonal weights trained on physical-consequence distances learn a stable global ordering unavailable to action-only geometry.",
+    "relative_gain": 0.18777811545898557
+  }
+}
