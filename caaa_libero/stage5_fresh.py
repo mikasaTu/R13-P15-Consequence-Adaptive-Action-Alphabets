@@ -104,6 +104,47 @@ def rollout_once(runtime, generator, task_index, seed, maximum_steps=None):
     }
 
 
+def _rollout_attempt(runtime, generator, task_index, task_id, seed, checkpoint, scratch_root):
+    """Execute or load one frozen seed without consulting any metric output."""
+    attempt_path = _attempt_path(scratch_root, task_id, seed)
+    checkpoint_sha = sha256_file(checkpoint)
+    if os.path.isfile(attempt_path):
+        attempt = _load_json(attempt_path)
+        if attempt.get("checkpoint_sha256") != checkpoint_sha:
+            raise RuntimeError("attempt used another generator checkpoint")
+        return attempt, True
+    values = rollout_once(runtime, generator, task_index, seed)
+    trajectory_path = _trajectory_path(scratch_root, task_id, seed)
+    if bool(values["success"].item()):
+        atomic_npz(trajectory_path, **values)
+        mark_complete(
+            trajectory_path,
+            {
+                "kind": "stage5_fresh_nominal_trajectory",
+                "schema_version": TRAJECTORY_SCHEMA,
+                "task_id": task_id,
+                "seed": int(seed),
+                "metric_scores_read": False,
+            },
+        )
+        trajectory_sha = sha256_file(trajectory_path)
+    else:
+        trajectory_sha = None
+    attempt = {
+        "task_id": task_id,
+        "seed": int(seed),
+        "success": bool(values["success"].item()),
+        "steps": int(len(values["executed_action"])),
+        "final_progress": float(values["task_progress"][-1]) if len(values["task_progress"]) else 0.0,
+        "trajectory_path": trajectory_path if trajectory_sha else None,
+        "trajectory_sha256": trajectory_sha,
+        "checkpoint_sha256": checkpoint_sha,
+        "metric_scores_read": False,
+    }
+    atomic_json(attempt_path, attempt)
+    return attempt, False
+
+
 def rollout_task(
     project_root,
     task_id,
@@ -126,47 +167,13 @@ def rollout_task(
     started = time.time()
     try:
         for seed in rollout_seeds()[task_id]:
-            attempt_path = _attempt_path(scratch_root, task_id, seed)
-            if os.path.isfile(attempt_path):
-                attempt = _load_json(attempt_path)
-                if attempt.get("checkpoint_sha256") != sha256_file(checkpoint):
-                    raise RuntimeError("attempt used another generator checkpoint")
-                attempts.append(attempt)
-                if attempt["success"]:
-                    successes.append(attempt)
-            else:
-                values = rollout_once(runtime, generator, task_index, seed)
-                trajectory_path = _trajectory_path(scratch_root, task_id, seed)
-                if bool(values["success"].item()):
-                    atomic_npz(trajectory_path, **values)
-                    mark_complete(
-                        trajectory_path,
-                        {
-                            "kind": "stage5_fresh_nominal_trajectory",
-                            "schema_version": TRAJECTORY_SCHEMA,
-                            "task_id": task_id,
-                            "seed": int(seed),
-                            "metric_scores_read": False,
-                        },
-                    )
-                    trajectory_sha = sha256_file(trajectory_path)
-                else:
-                    trajectory_sha = None
-                attempt = {
-                    "task_id": task_id,
-                    "seed": int(seed),
-                    "success": bool(values["success"].item()),
-                    "steps": int(len(values["executed_action"])),
-                    "final_progress": float(values["task_progress"][-1]) if len(values["task_progress"]) else 0.0,
-                    "trajectory_path": trajectory_path if trajectory_sha else None,
-                    "trajectory_sha256": trajectory_sha,
-                    "checkpoint_sha256": sha256_file(checkpoint),
-                    "metric_scores_read": False,
-                }
-                atomic_json(attempt_path, attempt)
-                attempts.append(attempt)
-                if attempt["success"]:
-                    successes.append(attempt)
+            attempt, cached = _rollout_attempt(
+                runtime, generator, task_index, task_id, seed, checkpoint, scratch_root
+            )
+            attempts.append(attempt)
+            if attempt["success"]:
+                successes.append(attempt)
+            if not cached:
                 print(
                     "fresh-rollout task=%s seed=%d success=%s steps=%d successes=%d elapsed=%.1fs"
                     % (task_id, seed, attempt["success"], attempt["steps"], len(successes), time.time() - started),
@@ -186,6 +193,104 @@ def rollout_task(
         "accepted": successes[:GENERATOR_REQUIRED_SUCCESSES_PER_TASK],
         "acceptance": "first environment-success trajectories in ascending frozen seed order",
         "metric_scores_read": False,
+    }
+    atomic_json(os.path.join(output_root, "FRESH_TRAJECTORY_%s.json" % task_id.upper()), summary)
+    return summary
+
+
+def rollout_task_shard(
+    project_root,
+    task_id,
+    worker_index,
+    worker_count,
+    libero_source=config.LIBERO_SOURCE_DEFAULT,
+    dataset_root=config.DATASET_ROOT_DEFAULT,
+    output_root=None,
+    scratch_root=SCRATCH_ROOT,
+):
+    """Run a disjoint CPU scheduling shard; scientific seed order is unchanged."""
+    project_root = os.path.abspath(project_root)
+    output_root = output_root or os.path.join(project_root, OUTPUT_RELATIVE)
+    worker_index, worker_count = int(worker_index), int(worker_count)
+    if worker_count < 1 or worker_index < 0 or worker_index >= worker_count:
+        raise ValueError("invalid worker shard")
+    checkpoint = checkpoint_path(output_root)
+    generator = load_numpy_generator(checkpoint)
+    task = _task(task_id)
+    task_index = [value["task_id"] for value in TASKS].index(task_id)
+    selected = [
+        seed
+        for position, seed in enumerate(rollout_seeds()[task_id])
+        if position % worker_count == worker_index
+    ]
+    runtime = LiberoTaskRuntime(task, libero_source, dataset_root)
+    rows = []
+    started = time.time()
+    try:
+        for position, seed in enumerate(selected):
+            attempt, cached = _rollout_attempt(
+                runtime, generator, task_index, task_id, seed, checkpoint, scratch_root
+            )
+            rows.append(attempt)
+            if not cached:
+                print(
+                    "fresh-shard task=%s worker=%d/%d seed=%d success=%s progress=%d/%d elapsed=%.1fs"
+                    % (
+                        task_id,
+                        worker_index,
+                        worker_count,
+                        seed,
+                        attempt["success"],
+                        position + 1,
+                        len(selected),
+                        time.time() - started,
+                    ),
+                    flush=True,
+                )
+    finally:
+        runtime.close()
+    return {
+        "task_id": task_id,
+        "worker_index": worker_index,
+        "worker_count": worker_count,
+        "seed_count": len(selected),
+        "success_count": int(sum(row["success"] for row in rows)),
+        "metric_scores_read": False,
+        "complete": len(rows) == len(selected),
+    }
+
+
+def summarize_task(project_root, task_id, output_root=None, scratch_root=SCRATCH_ROOT):
+    """Freeze ascending-seed acceptance only after all 200 attempts exist."""
+    project_root = os.path.abspath(project_root)
+    output_root = output_root or os.path.join(project_root, OUTPUT_RELATIVE)
+    checkpoint = checkpoint_path(output_root)
+    attempts = []
+    missing = []
+    for seed in rollout_seeds()[task_id]:
+        path = _attempt_path(scratch_root, task_id, seed)
+        if not os.path.isfile(path):
+            missing.append(int(seed))
+            continue
+        attempt = _load_json(path)
+        if attempt.get("checkpoint_sha256") != sha256_file(checkpoint):
+            raise RuntimeError("attempt used another generator checkpoint")
+        attempts.append(attempt)
+    if missing:
+        raise RuntimeError("missing frozen rollout attempts: %s" % missing[:20])
+    successes = [row for row in attempts if row["success"]]
+    summary = {
+        "task_id": task_id,
+        "generator_checkpoint_sha256": sha256_file(checkpoint),
+        "attempt_count": len(attempts),
+        "success_count": len(successes),
+        "required_success_count": GENERATOR_REQUIRED_SUCCESSES_PER_TASK,
+        "sufficient": len(successes) >= GENERATOR_REQUIRED_SUCCESSES_PER_TASK,
+        "accepted": successes[:GENERATOR_REQUIRED_SUCCESSES_PER_TASK],
+        "acceptance": "first environment-success trajectories in ascending frozen seed order",
+        "metric_scores_read": False,
+        "all_frozen_seeds_executed": True,
+        "scheduling": "disjoint worker shards only; no scientific input changed",
     }
     atomic_json(os.path.join(output_root, "FRESH_TRAJECTORY_%s.json" % task_id.upper()), summary)
     return summary
@@ -385,6 +490,12 @@ def main(argv=None):
     sub = parser.add_subparsers(dest="command", required=True)
     rollout = sub.add_parser("rollout-task")
     rollout.add_argument("--task-id", required=True, choices=[task["task_id"] for task in TASKS])
+    shard = sub.add_parser("rollout-task-shard")
+    shard.add_argument("--task-id", required=True, choices=[task["task_id"] for task in TASKS])
+    shard.add_argument("--worker-index", required=True, type=int)
+    shard.add_argument("--worker-count", required=True, type=int)
+    summarize = sub.add_parser("summarize-task")
+    summarize.add_argument("--task-id", required=True, choices=[task["task_id"] for task in TASKS])
     sub.add_parser("replay-validation")
     sub.add_parser("freeze-split")
     parser.add_argument("--project-root", default=os.getcwd())
@@ -395,6 +506,19 @@ def main(argv=None):
     args = parser.parse_args(argv)
     if args.command == "rollout-task":
         result = rollout_task(args.project_root, args.task_id, args.libero_source, args.dataset_root, args.output_root, args.scratch_root)
+    elif args.command == "rollout-task-shard":
+        result = rollout_task_shard(
+            args.project_root,
+            args.task_id,
+            args.worker_index,
+            args.worker_count,
+            args.libero_source,
+            args.dataset_root,
+            args.output_root,
+            args.scratch_root,
+        )
+    elif args.command == "summarize-task":
+        result = summarize_task(args.project_root, args.task_id, args.output_root, args.scratch_root)
     elif args.command == "replay-validation":
         result = replay_validation(args.project_root, args.libero_source, args.dataset_root, args.output_root)
     else:
