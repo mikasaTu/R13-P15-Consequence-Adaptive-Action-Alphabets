@@ -1,0 +1,24 @@
+{
+  "kind": "pre-development metric-independent fresh phase-state selection rule",
+  "metric_scores_read": false,
+  "success_acceptance": "environment task-success predicate only; first 12 ascending frozen seeds per task",
+  "executable_state_requirement": {
+    "all_128_local_candidates_valid_without_clipping": true,
+    "all_96_fresh_targets_valid_without_clipping": true,
+    "action_bounds": [-1.0, 1.0],
+    "gripper": "copied from the nominal generator chunk and never perturbed"
+  },
+  "contact_anchor": "first current observable relevant-contact true index",
+  "contact_absent_fallback": "argmax one-step positive observable task-progress increment; recorded as fallback",
+  "desired_indices": {
+    "free_space": "earliest executable no-contact index no later than floor(anchor/3)",
+    "pre_contact": "latest executable no-contact index strictly before anchor",
+    "contact_onset": "nearest executable index to anchor, preferring the exact false-to-true transition",
+    "post_contact": "earliest executable index strictly after anchor, preferring current contact true"
+  },
+  "tie_break": "smallest absolute distance to desired index, then smallest timestep",
+  "uniqueness": "four distinct timesteps per trajectory; if a preferred pool is empty, nearest globally executable unused index is used and labeled fallback",
+  "shortage": "never clip, synthesize, change the accepted success list, or substitute a demonstration; record BLOCKED_NO_FRESH_TRAJECTORIES if the frozen supply cannot produce 12 complete trajectories per task",
+  "phase_is_metadata_only": true,
+  "phase_is_proposed_model_input": false
+}
