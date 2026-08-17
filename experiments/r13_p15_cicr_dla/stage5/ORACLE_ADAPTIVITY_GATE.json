@@ -1,0 +1,73 @@
+{
+  "artifact_hashes": {
+    "atlas_json": "536502de53b0c606b99925ab36c79537568533d89ef68bf1cb1db5dd59a08eee",
+    "audit_csv": "5801af8212b6852e92201aa4ad7aac90aee11fc2def05054e87ad988b174faa8",
+    "raw_rows_parquet": "cae4ca61764f3794baf9d96e6f75f59c7888dfae0ceaca46519f2191312e9db1"
+  },
+  "checks": {
+    "contact_onset_post_contact_gain": {
+      "passed": true,
+      "threshold": 0.12,
+      "value": 0.8907335003379071
+    },
+    "contact_phases_with_reversal_rate": {
+      "passed": true,
+      "threshold": 2,
+      "value": 3
+    },
+    "contact_sensitive_tasks_improved": {
+      "passed": true,
+      "threshold": 2,
+      "value": 3
+    },
+    "pooled_gain": {
+      "passed": true,
+      "threshold": 0.08,
+      "value": 0.8762967093780287
+    },
+    "strict_pair_count": {
+      "passed": true,
+      "threshold": 1000,
+      "value": 6954
+    }
+  },
+  "contact_onset_post_contact_gain": 0.8907335003379071,
+  "contact_sensitive_task_gains": {
+    "plate_push": 0.903394388479582,
+    "stove_turn_on": 0.9074129660294512,
+    "wine_rack": 0.8693546879269273
+  },
+  "failure_disposition": "STATIC_EFFECT_GEOMETRY_SUFFICIENT",
+  "full_to_k64_compression_loss": 0.26389056695487567,
+  "gate": "ORACLE_ADAPTIVITY_GATE_0",
+  "passed": true,
+  "pooled_errors": {
+    "O_CONTACT_FULL": 0.44973477767569997,
+    "O_PHASE_FULL": 0.447839186600614,
+    "O_STATE_FULL": 0.054724717261790845,
+    "O_STATE_K64": 0.0691660539264501,
+    "O_STATIC_FULL": 0.4423869161979354
+  },
+  "primary_bank_size": 128,
+  "remaining_registered_experiments_execute_after_failure": true,
+  "split": "development episodes 36-39",
+  "state_specific_vs_static_or_contact_gain": 0.8762967093780287,
+  "state_vs_privileged_phase_gain": 0.8778027495155427,
+  "strict_reversal": {
+    "contact_phases_passing": [
+      "pre_contact",
+      "contact_onset",
+      "post_contact"
+    ],
+    "exact_tuple_overlap_count": 0,
+    "pair_count": 6954,
+    "split_disjoint": true,
+    "train_phase_rates": {
+      "contact_onset": 0.4099737532808399,
+      "free_space": 0.0028319697923222154,
+      "post_contact": 0.2968168279970216,
+      "pre_contact": 0.37895875173798854
+    }
+  },
+  "strongest_static_or_contact_method": "O_STATIC_FULL"
+}

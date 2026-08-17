@@ -1,0 +1,31 @@
+{
+  "candidates": [
+    {
+      "mean_ndcg_at_16": 0.577431931964742,
+      "mean_oracle_regret": 0.2186595330896779,
+      "mean_realized_effect_error": 0.2690051669533678,
+      "temperature": 0.1
+    },
+    {
+      "mean_ndcg_at_16": 0.5727413412119801,
+      "mean_oracle_regret": 0.22307050698530873,
+      "mean_realized_effect_error": 0.2734161408489986,
+      "temperature": 0.15
+    },
+    {
+      "mean_ndcg_at_16": 0.565140172562907,
+      "mean_oracle_regret": 0.22876323759275863,
+      "mean_realized_effect_error": 0.2791088714564485,
+      "temperature": 0.2
+    }
+  ],
+  "criterion": [
+    "lowest mean realized BALANCED_TASK_EFFECT",
+    "lowest mean oracle regret",
+    "highest NDCG@16",
+    "smallest temperature"
+  ],
+  "development_read": false,
+  "selected_temperature": 0.1,
+  "split": "calibration episodes 32-35 only"
+}

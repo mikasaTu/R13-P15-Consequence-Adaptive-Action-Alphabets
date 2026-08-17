@@ -1,0 +1,5248 @@
+{
+  "context_offset_repair_before_development": {
+    "optimizer_steps_changed": false,
+    "reason": "fixed [-40,40] root bracket did not enclose six trained-logit roots",
+    "repaired_checkpoints": [
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.0446334641756039e-07,
+          "mean_modulation_norm": 5.924408435821533
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150517.pt",
+        "sha256": "2a54fced42be8774fb8b2be83ff6c76782c70974436251aaae314207a8d469fa"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.2631138563156128e-07,
+          "mean_modulation_norm": 5.930002689361572
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150529.pt",
+        "sha256": "85c52b8eb8c0edb2d40ee706c54501e735a39c446c59f6032302135bcfb8e59e"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.8874804652568855e-07,
+          "mean_modulation_norm": 5.856260776519775
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150543.pt",
+        "sha256": "461b0b6836eb66ca318f8c2080dcee729dc55bb3a2687a254d879424859ced6f"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150517.pt",
+        "sha256": "15ad1cc4deeaca768f07718c7443f6e8952986359c1fe918e7846b7c6ace4fb8"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150529.pt",
+        "sha256": "0310f2a20ef8748ae94b611e97f42a1f2dc81528f6fc5d91f6585320b986328e"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150543.pt",
+        "sha256": "3bad965011b02786bfac83be4dba78e77cb839afe979ade4bc4e124153df1627"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.6344711184501648e-07,
+          "mean_modulation_norm": 5.9564361572265625
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150517.pt",
+        "sha256": "6801ef167bcd6a17b59811e0a8b798ae49d50a65a4e649f127004d7fdd36ce39"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.731879646944435e-07,
+          "mean_modulation_norm": 5.859077453613281
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150529.pt",
+        "sha256": "2a318563a3d29106483459aea992f89853aee2dfe7c0844be04cb9829f48d94f"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.25418111451836e-07,
+          "mean_modulation_norm": 5.922191143035889
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150543.pt",
+        "sha256": "02c7572b84a561e8d224c28d53c0d8857af9802a35cbbc88f50d3c47749a7a9c"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 3.0671557738060073e-07,
+          "mean_modulation_norm": 5.9436421394348145
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150517.pt",
+        "sha256": "4c88a4bb73308615c82fd15dd877c5038ea7cc471d1d38ebd7519fb81cfa1da9"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.3189932107925415e-07,
+          "mean_modulation_norm": 5.94689416885376
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150529.pt",
+        "sha256": "5c50202f4266a7a58c6fcf63af4151e8e002f50fe8c8bcffcfd11fe87df5d23b"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.3659398234722175e-07,
+          "mean_modulation_norm": 5.8753132820129395
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150543.pt",
+        "sha256": "d5429c799c8184bca32262f2c8bdf76eb1842105c42b6a42f946e31f70051f74"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.4404456294414558e-07,
+          "mean_modulation_norm": 5.8703789710998535
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150517.pt",
+        "sha256": "155795a6d64c0b92eb2c83376458f1ca54baf58e8a5aa6eecb0529299169c420"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.21033886305122e-07,
+          "mean_modulation_norm": 5.992880344390869
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150529.pt",
+        "sha256": "d715df69bdc29a1fbefc97cd48db24b3e3fb6fd7e534e45efe9bfdb7561ee7ad"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.601874828338623e-07,
+          "mean_modulation_norm": 5.914787292480469
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150543.pt",
+        "sha256": "cccbfc7e98059cf379ea488903c19e483a1ae52cf9b182f4866a4b0e6d8575ad"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.648440957069397e-07,
+          "mean_modulation_norm": 5.953813552856445
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150517.pt",
+        "sha256": "22229bb9ae7312d056f90865f95d0b3947f551724809836fe972569343290780"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.1858841020284672e-07,
+          "mean_modulation_norm": 5.949666976928711
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150529.pt",
+        "sha256": "35baf6e17b003ca45632355ee8e0ede5421fdbb55713940afd181bef1456a89e"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.1579444247900028e-07,
+          "mean_modulation_norm": 5.9711127281188965
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150543.pt",
+        "sha256": "ed2995ffeea368fc5b50ec5783e292dfaefc8f705087ccaa01813974e055792d"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 9.437402326284428e-08,
+          "mean_modulation_norm": 5.870606899261475
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150517.pt",
+        "sha256": "fd69d57d5580cac1f7cf9e5e5a5c993d9a0653a79f57a002e26907be7f60a95a"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.51805579662323e-07,
+          "mean_modulation_norm": 5.834897518157959
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150529.pt",
+        "sha256": "1f91089985846e4a08426504e19608266c0f6ec44497a551764421c977ba41f9"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.8579885363578796e-07,
+          "mean_modulation_norm": 5.862380504608154
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150543.pt",
+        "sha256": "7fd3dc3bf1ede30d398078a9f8f20ae579fdf4971fa19c4777c36a785bcb19ed"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.211126685142517,
+          "maximum_absolute_train_mean": 1.9076590263011894e-07,
+          "mean_modulation_norm": 2.2347636222839355
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150517.pt",
+        "sha256": "2e51119d2350f2a01fe7785871429c40553d1062b4b558d6c8d79a6f148270f4"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1741511821746826,
+          "maximum_absolute_train_mean": 2.5533759639984055e-07,
+          "mean_modulation_norm": 2.078611135482788
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150529.pt",
+        "sha256": "ab1d5777197a8b39e228e8de1e92f1264aded9a3e5b6dc642818215955a052ea"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1731723546981812,
+          "maximum_absolute_train_mean": 2.377200871706009e-07,
+          "mean_modulation_norm": 2.2902777194976807
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150543.pt",
+        "sha256": "4d96d8583e239abfe97a88765833c2a28b3808f6360336813b2f684fe72adb55"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1993814706802368,
+          "maximum_absolute_train_mean": 5.903032729293045e-07,
+          "mean_modulation_norm": 2.0656492710113525
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150517.pt",
+        "sha256": "58637d8811bedea74f90c830471462276de56f61366af125a7aed8454b984fbb"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.182060956954956,
+          "maximum_absolute_train_mean": 4.262741128968628e-07,
+          "mean_modulation_norm": 1.8658517599105835
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150529.pt",
+        "sha256": "435c1b6e2aba53e190d3eedb9efcc2a28b1392a3db57e85134e6fb0ed9bc3fba"
+      },
+      {
+        "audit": {
+          "maximum_absolute_modulation": 1.1640737056732178,
+          "maximum_absolute_train_mean": 7.444565994774166e-07,
+          "mean_modulation_norm": 1.9315742254257202
+        },
+        "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150543.pt",
+        "sha256": "a2f4adae6cbd37a5def7b7fa760d2bab8d145bf51d9ec7c026e6269125905b3e"
+      }
+    ],
+    "trained_parameters_changed": false
+  },
+  "development_data_read": false,
+  "device": "cpu",
+  "entries": [
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 22.50189713295549,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.08322653919458389,
+              "gate": 0.0,
+              "listwise": 4.850216388702393,
+              "pairwise": 0.6930345892906189,
+              "reversal": 1.464887261390686,
+              "step": 1,
+              "total": 4.31973934173584
+            },
+            {
+              "distance": 0.0358656644821167,
+              "gate": 8.679079996909422e-07,
+              "listwise": 4.699769973754883,
+              "pairwise": 0.6657923460006714,
+              "reversal": 1.4606308937072754,
+              "step": 250,
+              "total": 4.179277420043945
+            },
+            {
+              "distance": 0.04752875119447708,
+              "gate": 1.0714815061874106e-06,
+              "listwise": 4.42941951751709,
+              "pairwise": 0.644300103187561,
+              "reversal": 1.4532023668289185,
+              "step": 500,
+              "total": 4.037590980529785
+            },
+            {
+              "distance": 0.029520221054553986,
+              "gate": 1.2958134902874008e-06,
+              "listwise": 4.618721961975098,
+              "pairwise": 0.6579333543777466,
+              "reversal": 1.4653489589691162,
+              "step": 750,
+              "total": 4.133196830749512
+            },
+            {
+              "distance": 0.04189670830965042,
+              "gate": 1.5807629552000435e-06,
+              "listwise": 4.76448917388916,
+              "pairwise": 0.6590670347213745,
+              "reversal": 1.4565467834472656,
+              "step": 1000,
+              "total": 4.210221290588379
+            },
+            {
+              "distance": 0.05936703830957413,
+              "gate": 1.4786663768973085e-06,
+              "listwise": 4.771542549133301,
+              "pairwise": 0.6626253128051758,
+              "reversal": 1.4572128057479858,
+              "step": 1250,
+              "total": 4.233663558959961
+            },
+            {
+              "distance": 0.03620543330907822,
+              "gate": 1.6068188415374607e-06,
+              "listwise": 4.582298278808594,
+              "pairwise": 0.6520078182220459,
+              "reversal": 1.4609659910202026,
+              "step": 1500,
+              "total": 4.114324569702148
+            },
+            {
+              "distance": 0.04348278418183327,
+              "gate": 1.7044034166247002e-06,
+              "listwise": 4.539392948150635,
+              "pairwise": 0.6524085402488708,
+              "reversal": 1.4564697742462158,
+              "step": 1750,
+              "total": 4.095853328704834
+            },
+            {
+              "distance": 0.08955511450767517,
+              "gate": 1.889049485725991e-06,
+              "listwise": 4.5353546142578125,
+              "pairwise": 0.6531606316566467,
+              "reversal": 1.464882731437683,
+              "step": 2000,
+              "total": 4.148695468902588
+            },
+            {
+              "distance": 0.05068891867995262,
+              "gate": 2.2192677988641663e-06,
+              "listwise": 4.5824480056762695,
+              "pairwise": 0.6618843078613281,
+              "reversal": 1.461165428161621,
+              "step": 2250,
+              "total": 4.134020805358887
+            },
+            {
+              "distance": 0.0897781029343605,
+              "gate": 2.1410219233075622e-06,
+              "listwise": 4.6847076416015625,
+              "pairwise": 0.670680820941925,
+              "reversal": 1.456271767616272,
+              "step": 2500,
+              "total": 4.223743915557861
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.10_seed_13150517.pt",
+      "sha256": "229fccc316a564ae9cc95761a0639520f5970de20a91e2977e1d4444f44bb753"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 22.016580452094786,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.1558161973953247,
+              "gate": 0.0,
+              "listwise": 4.8498430252075195,
+              "pairwise": 0.6930019855499268,
+              "reversal": 1.4576811790466309,
+              "step": 1,
+              "total": 4.384920120239258
+            },
+            {
+              "distance": 0.030270904302597046,
+              "gate": 7.48208663026162e-07,
+              "listwise": 4.814248561859131,
+              "pairwise": 0.6684095859527588,
+              "reversal": 1.4625710248947144,
+              "step": 250,
+              "total": 4.234170913696289
+            },
+            {
+              "distance": 0.04126497358083725,
+              "gate": 1.4352026482811198e-06,
+              "listwise": 4.8649516105651855,
+              "pairwise": 0.6645659804344177,
+              "reversal": 1.4588311910629272,
+              "step": 500,
+              "total": 4.264854907989502
+            },
+            {
+              "distance": 0.03311710059642792,
+              "gate": 1.6479536952829221e-06,
+              "listwise": 4.634201526641846,
+              "pairwise": 0.6557564735412598,
+              "reversal": 1.4588623046875,
+              "step": 750,
+              "total": 4.136958122253418
+            },
+            {
+              "distance": 0.035425782203674316,
+              "gate": 1.727846665744437e-06,
+              "listwise": 4.603165149688721,
+              "pairwise": 0.660222589969635,
+              "reversal": 1.4591354131698608,
+              "step": 1000,
+              "total": 4.126255035400391
+            },
+            {
+              "distance": 0.05240128934383392,
+              "gate": 1.6806070561870001e-06,
+              "listwise": 4.6074934005737305,
+              "pairwise": 0.6483190655708313,
+              "reversal": 1.4566205739974976,
+              "step": 1250,
+              "total": 4.136928081512451
+            },
+            {
+              "distance": 0.04379916936159134,
+              "gate": 1.733736326059443e-06,
+              "listwise": 4.569609642028809,
+              "pairwise": 0.6638876795768738,
+              "reversal": 1.4578731060028076,
+              "step": 1500,
+              "total": 4.118420600891113
+            },
+            {
+              "distance": 0.0654209777712822,
+              "gate": 1.8060047750623198e-06,
+              "listwise": 4.532528877258301,
+              "pairwise": 0.6524264812469482,
+              "reversal": 1.4566075801849365,
+              "step": 1750,
+              "total": 4.114506244659424
+            },
+            {
+              "distance": 0.04475324973464012,
+              "gate": 1.7227830539923161e-06,
+              "listwise": 4.639863014221191,
+              "pairwise": 0.6529896855354309,
+              "reversal": 1.4603798389434814,
+              "step": 2000,
+              "total": 4.151559352874756
+            },
+            {
+              "distance": 0.06451887637376785,
+              "gate": 1.8070047644869192e-06,
+              "listwise": 4.623465538024902,
+              "pairwise": 0.6622700095176697,
+              "reversal": 1.4519991874694824,
+              "step": 2250,
+              "total": 4.159385681152344
+            },
+            {
+              "distance": 0.04047233983874321,
+              "gate": 1.7237422298421734e-06,
+              "listwise": 4.668700695037842,
+              "pairwise": 0.6693750023841858,
+              "reversal": 1.4549105167388916,
+              "step": 2500,
+              "total": 4.1644206047058105
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.10_seed_13150529.pt",
+      "sha256": "a2240e4b7b9fef69e2ce28e07696bcef90c58d5a4cab2a86a8cabc6705fc295a"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 21.37353245401755,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.017481215298175812,
+              "gate": 0.0,
+              "listwise": 4.85101318359375,
+              "pairwise": 0.6930339932441711,
+              "reversal": 1.4561386108398438,
+              "step": 1,
+              "total": 4.245643615722656
+            },
+            {
+              "distance": 0.05534490570425987,
+              "gate": 1.1337527894283994e-06,
+              "listwise": 4.671102523803711,
+              "pairwise": 0.6629334092140198,
+              "reversal": 1.4580788612365723,
+              "step": 250,
+              "total": 4.180441856384277
+            },
+            {
+              "distance": 0.10474900156259537,
+              "gate": 2.37125595958787e-06,
+              "listwise": 4.580355644226074,
+              "pairwise": 0.6675087809562683,
+              "reversal": 1.46018648147583,
+              "step": 500,
+              "total": 4.188867568969727
+            },
+            {
+              "distance": 0.04135458171367645,
+              "gate": 2.6202349090453936e-06,
+              "listwise": 4.577051162719727,
+              "pairwise": 0.6600931286811829,
+              "reversal": 1.456695556640625,
+              "step": 750,
+              "total": 4.116621971130371
+            },
+            {
+              "distance": 0.04863163083791733,
+              "gate": 2.746490281424485e-06,
+              "listwise": 4.744884490966797,
+              "pairwise": 0.6684486269950867,
+              "reversal": 1.4554239511489868,
+              "step": 1000,
+              "total": 4.210721969604492
+            },
+            {
+              "distance": 0.02904702164232731,
+              "gate": 2.8477625164669007e-06,
+              "listwise": 4.7402753829956055,
+              "pairwise": 0.6587142944335938,
+              "reversal": 1.4580121040344238,
+              "step": 1250,
+              "total": 4.186553955078125
+            },
+            {
+              "distance": 0.043797604739665985,
+              "gate": 2.936311375378864e-06,
+              "listwise": 4.608168601989746,
+              "pairwise": 0.6668782234191895,
+              "reversal": 1.4576138257980347,
+              "step": 1500,
+              "total": 4.138935089111328
+            },
+            {
+              "distance": 0.018850816413760185,
+              "gate": 3.3534163321746746e-06,
+              "listwise": 4.718482494354248,
+              "pairwise": 0.6484517455101013,
+              "reversal": 1.4541631937026978,
+              "step": 1750,
+              "total": 4.1564812660217285
+            },
+            {
+              "distance": 0.023391151800751686,
+              "gate": 3.1342910915554967e-06,
+              "listwise": 4.56356954574585,
+              "pairwise": 0.654308021068573,
+              "reversal": 1.4561669826507568,
+              "step": 2000,
+              "total": 4.088497161865234
+            },
+            {
+              "distance": 0.033007003366947174,
+              "gate": 3.1251090604200726e-06,
+              "listwise": 4.670674800872803,
+              "pairwise": 0.66163569688797,
+              "reversal": 1.4569319486618042,
+              "step": 2250,
+              "total": 4.156094074249268
+            },
+            {
+              "distance": 0.07686449587345123,
+              "gate": 3.179767873007222e-06,
+              "listwise": 4.51933479309082,
+              "pairwise": 0.6701560616493225,
+              "reversal": 1.4545406103134155,
+              "step": 2500,
+              "total": 4.126150608062744
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.10_seed_13150543.pt",
+      "sha256": "af1582ea03aa6e98b6fab0913cf77532a3598588224b2e114744d51b53ab093f"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150517,
+        "temperature": 0.15,
+        "training": {
+          "elapsed_seconds": 25.066611882997677,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.1491294503211975,
+              "gate": 0.0,
+              "listwise": 4.851492404937744,
+              "pairwise": 0.6931348443031311,
+              "reversal": 1.456881046295166,
+              "step": 1,
+              "total": 4.378324031829834
+            },
+            {
+              "distance": 0.07322759181261063,
+              "gate": 7.095611636032118e-07,
+              "listwise": 4.755706310272217,
+              "pairwise": 0.6645248532295227,
+              "reversal": 1.4680061340332031,
+              "step": 250,
+              "total": 4.251349449157715
+            },
+            {
+              "distance": 0.02993687242269516,
+              "gate": 1.5233887324939133e-06,
+              "listwise": 4.798870086669922,
+              "pairwise": 0.6485732197761536,
+              "reversal": 1.4638829231262207,
+              "step": 500,
+              "total": 4.217541694641113
+            },
+            {
+              "distance": 0.05106180161237717,
+              "gate": 1.5036455351946643e-06,
+              "listwise": 4.701708793640137,
+              "pairwise": 0.6543737053871155,
+              "reversal": 1.4594345092773438,
+              "step": 750,
+              "total": 4.18853759765625
+            },
+            {
+              "distance": 0.011918261647224426,
+              "gate": 1.5379376918644994e-06,
+              "listwise": 4.746338367462158,
+              "pairwise": 0.650067150592804,
+              "reversal": 1.4602270126342773,
+              "step": 1000,
+              "total": 4.170348167419434
+            },
+            {
+              "distance": 0.0503971129655838,
+              "gate": 1.7303858612649492e-06,
+              "listwise": 4.760600566864014,
+              "pairwise": 0.660136878490448,
+              "reversal": 1.4587455987930298,
+              "step": 1250,
+              "total": 4.21951150894165
+            },
+            {
+              "distance": 0.04524945095181465,
+              "gate": 1.820111037886818e-06,
+              "listwise": 4.715123176574707,
+              "pairwise": 0.6642975211143494,
+              "reversal": 1.4512944221496582,
+              "step": 1500,
+              "total": 4.186254501342773
+            },
+            {
+              "distance": 0.03824238106608391,
+              "gate": 1.881951789073355e-06,
+              "listwise": 4.830275058746338,
+              "pairwise": 0.6771529316902161,
+              "reversal": 1.4559463262557983,
+              "step": 1750,
+              "total": 4.247902870178223
+            },
+            {
+              "distance": 0.03242943063378334,
+              "gate": 1.926901859405916e-06,
+              "listwise": 4.744509220123291,
+              "pairwise": 0.6406179070472717,
+              "reversal": 1.4623126983642578,
+              "step": 2000,
+              "total": 4.187305450439453
+            },
+            {
+              "distance": 0.0696871355175972,
+              "gate": 2.25335793402337e-06,
+              "listwise": 4.585846900939941,
+              "pairwise": 0.6631155014038086,
+              "reversal": 1.4599453210830688,
+              "step": 2250,
+              "total": 4.15411376953125
+            },
+            {
+              "distance": 0.10408957302570343,
+              "gate": 2.2576984974875813e-06,
+              "listwise": 4.769222736358643,
+              "pairwise": 0.6701822280883789,
+              "reversal": 1.4582182168960571,
+              "step": 2500,
+              "total": 4.282010078430176
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.15_seed_13150517.pt",
+      "sha256": "f614fc70bcda85ae014c52578d6ebcf406b73a6bd88bed2d7f456e0a5d4818b7"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150529,
+        "temperature": 0.15,
+        "training": {
+          "elapsed_seconds": 25.409278918989003,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.08533234894275665,
+              "gate": 0.0,
+              "listwise": 4.850872039794922,
+              "pairwise": 0.6930392384529114,
+              "reversal": 1.4551846981048584,
+              "step": 1,
+              "total": 4.312472343444824
+            },
+            {
+              "distance": 0.06108024716377258,
+              "gate": 1.0743232223831e-06,
+              "listwise": 4.783112525939941,
+              "pairwise": 0.6671366095542908,
+              "reversal": 1.461918830871582,
+              "step": 250,
+              "total": 4.248123645782471
+            },
+            {
+              "distance": 0.03139453008770943,
+              "gate": 2.1171756543481024e-06,
+              "listwise": 4.731899261474609,
+              "pairwise": 0.6577317118644714,
+              "reversal": 1.4579238891601562,
+              "step": 500,
+              "total": 4.184134006500244
+            },
+            {
+              "distance": 0.052001774311065674,
+              "gate": 2.1631642539432505e-06,
+              "listwise": 4.675210952758789,
+              "pairwise": 0.6646800637245178,
+              "reversal": 1.457071304321289,
+              "step": 750,
+              "total": 4.179018497467041
+            },
+            {
+              "distance": 0.04757915064692497,
+              "gate": 2.1221969745965907e-06,
+              "listwise": 4.753133773803711,
+              "pairwise": 0.6543974280357361,
+              "reversal": 1.4600441455841064,
+              "step": 1000,
+              "total": 4.21138858795166
+            },
+            {
+              "distance": 0.01885472983121872,
+              "gate": 2.18970353671466e-06,
+              "listwise": 4.669102191925049,
+              "pairwise": 0.6501942276954651,
+              "reversal": 1.4601269960403442,
+              "step": 1250,
+              "total": 4.138629913330078
+            },
+            {
+              "distance": 0.04776879772543907,
+              "gate": 2.545380539231701e-06,
+              "listwise": 4.661855220794678,
+              "pairwise": 0.6560226082801819,
+              "reversal": 1.4512879848480225,
+              "step": 1500,
+              "total": 4.157995700836182
+            },
+            {
+              "distance": 0.0695107951760292,
+              "gate": 2.9155175980122294e-06,
+              "listwise": 4.661291122436523,
+              "pairwise": 0.6583195924758911,
+              "reversal": 1.4613051414489746,
+              "step": 1750,
+              "total": 4.190621376037598
+            },
+            {
+              "distance": 0.05611748620867729,
+              "gate": 3.0355081435118336e-06,
+              "listwise": 4.768394470214844,
+              "pairwise": 0.6585761904716492,
+              "reversal": 1.4534947872161865,
+              "step": 2000,
+              "total": 4.223097801208496
+            },
+            {
+              "distance": 0.03333578258752823,
+              "gate": 2.9878865461796522e-06,
+              "listwise": 4.806727409362793,
+              "pairwise": 0.6593539714813232,
+              "reversal": 1.4587421417236328,
+              "step": 2250,
+              "total": 4.225118637084961
+            },
+            {
+              "distance": 0.04437275230884552,
+              "gate": 3.3287808491877513e-06,
+              "listwise": 4.661454677581787,
+              "pairwise": 0.6648895740509033,
+              "reversal": 1.450577974319458,
+              "step": 2500,
+              "total": 4.158123016357422
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.15_seed_13150529.pt",
+      "sha256": "d0610c6dd1ef92fc837c707af0d54377c8e5f97b229b4cb12c1e5fe72a7be794"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150543,
+        "temperature": 0.15,
+        "training": {
+          "elapsed_seconds": 22.31892837502528,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.08421117067337036,
+              "gate": 0.0,
+              "listwise": 4.851460933685303,
+              "pairwise": 0.6930506825447083,
+              "reversal": 1.4565598964691162,
+              "step": 1,
+              "total": 4.3130269050598145
+            },
+            {
+              "distance": 0.06753453612327576,
+              "gate": 8.224062639783369e-07,
+              "listwise": 4.778324127197266,
+              "pairwise": 0.6612180471420288,
+              "reversal": 1.4545683860778809,
+              "step": 250,
+              "total": 4.241873741149902
+            },
+            {
+              "distance": 0.04626809060573578,
+              "gate": 2.0258548829588108e-06,
+              "listwise": 4.764561176300049,
+              "pairwise": 0.6564817428588867,
+              "reversal": 1.456925868988037,
+              "step": 500,
+              "total": 4.213715553283691
+            },
+            {
+              "distance": 0.07467833906412125,
+              "gate": 2.0331344785518013e-06,
+              "listwise": 4.767241954803467,
+              "pairwise": 0.6503989100456238,
+              "reversal": 1.4617514610290527,
+              "step": 750,
+              "total": 4.245250225067139
+            },
+            {
+              "distance": 0.04483006149530411,
+              "gate": 2.2403271486837184e-06,
+              "listwise": 4.683290481567383,
+              "pairwise": 0.6534236669540405,
+              "reversal": 1.4589647054672241,
+              "step": 1000,
+              "total": 4.172152042388916
+            },
+            {
+              "distance": 0.035914596170186996,
+              "gate": 2.1811199530930026e-06,
+              "listwise": 4.75175142288208,
+              "pairwise": 0.6667001843452454,
+              "reversal": 1.4599567651748657,
+              "step": 1250,
+              "total": 4.205097198486328
+            },
+            {
+              "distance": 0.03164427727460861,
+              "gate": 2.3408399556501536e-06,
+              "listwise": 4.67626953125,
+              "pairwise": 0.6541044116020203,
+              "reversal": 1.463813304901123,
+              "step": 1500,
+              "total": 4.16064453125
+            },
+            {
+              "distance": 0.02189044840633869,
+              "gate": 2.472921778462478e-06,
+              "listwise": 4.7259111404418945,
+              "pairwise": 0.6538438200950623,
+              "reversal": 1.4527883529663086,
+              "step": 1750,
+              "total": 4.164556503295898
+            },
+            {
+              "distance": 0.02781478874385357,
+              "gate": 2.5300430479546776e-06,
+              "listwise": 4.756426811218262,
+              "pairwise": 0.6507256031036377,
+              "reversal": 1.4531826972961426,
+              "step": 2000,
+              "total": 4.184573650360107
+            },
+            {
+              "distance": 0.03450816124677658,
+              "gate": 2.662229007910355e-06,
+              "listwise": 4.781804084777832,
+              "pairwise": 0.6530832648277283,
+              "reversal": 1.442602515220642,
+              "step": 2250,
+              "total": 4.194554328918457
+            },
+            {
+              "distance": 0.021548671647906303,
+              "gate": 2.787158564387937e-06,
+              "listwise": 4.787612438201904,
+              "pairwise": 0.6434419751167297,
+              "reversal": 1.4500945806503296,
+              "step": 2500,
+              "total": 4.187170505523682
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.15_seed_13150543.pt",
+      "sha256": "7147633ae1b3d3c36a1ad30d7706dec6f6fa810b050bd75e9f0ea175e39f129c"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150517,
+        "temperature": 0.2,
+        "training": {
+          "elapsed_seconds": 22.01212641305756,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.08026867359876633,
+              "gate": 0.0,
+              "listwise": 4.851465225219727,
+              "pairwise": 0.6930283904075623,
+              "reversal": 1.452666997909546,
+              "step": 1,
+              "total": 4.305182456970215
+            },
+            {
+              "distance": 0.07632425427436829,
+              "gate": 1.1686188372550532e-06,
+              "listwise": 4.789568901062012,
+              "pairwise": 0.6632330417633057,
+              "reversal": 1.457918405532837,
+              "step": 250,
+              "total": 4.26064395904541
+            },
+            {
+              "distance": 0.054227154701948166,
+              "gate": 1.5173802694334881e-06,
+              "listwise": 4.706350803375244,
+              "pairwise": 0.6509034037590027,
+              "reversal": 1.454362154006958,
+              "step": 500,
+              "total": 4.187216758728027
+            },
+            {
+              "distance": 0.06247733533382416,
+              "gate": 1.6906125210880418e-06,
+              "listwise": 4.784021854400635,
+              "pairwise": 0.6515882611274719,
+              "reversal": 1.4550950527191162,
+              "step": 750,
+              "total": 4.235377311706543
+            },
+            {
+              "distance": 0.04257471486926079,
+              "gate": 1.917617055369192e-06,
+              "listwise": 4.760685443878174,
+              "pairwise": 0.6619699001312256,
+              "reversal": 1.4593595266342163,
+              "step": 1000,
+              "total": 4.21326208114624
+            },
+            {
+              "distance": 0.04210119694471359,
+              "gate": 2.3965656055224827e-06,
+              "listwise": 4.638010501861572,
+              "pairwise": 0.647667646408081,
+              "reversal": 1.452942967414856,
+              "step": 1250,
+              "total": 4.137883186340332
+            },
+            {
+              "distance": 0.04812254756689072,
+              "gate": 2.9910088414908387e-06,
+              "listwise": 4.844433784484863,
+              "pairwise": 0.6508284211158752,
+              "reversal": 1.4581650495529175,
+              "step": 1500,
+              "total": 4.253918647766113
+            },
+            {
+              "distance": 0.034742992371320724,
+              "gate": 3.046731080758036e-06,
+              "listwise": 4.750441074371338,
+              "pairwise": 0.6576082706451416,
+              "reversal": 1.4516950845718384,
+              "step": 1750,
+              "total": 4.190462589263916
+            },
+            {
+              "distance": 0.06727719306945801,
+              "gate": 2.9107500267855357e-06,
+              "listwise": 4.770027160644531,
+              "pairwise": 0.6631963849067688,
+              "reversal": 1.4442708492279053,
+              "step": 2000,
+              "total": 4.2281599044799805
+            },
+            {
+              "distance": 0.04285859316587448,
+              "gate": 3.2489410841662902e-06,
+              "listwise": 4.82504415512085,
+              "pairwise": 0.6628355383872986,
+              "reversal": 1.4389740228652954,
+              "step": 2250,
+              "total": 4.225772380828857
+            },
+            {
+              "distance": 0.032688435167074203,
+              "gate": 3.2816237762745004e-06,
+              "listwise": 4.828037261962891,
+              "pairwise": 0.6558663249015808,
+              "reversal": 1.459861397743225,
+              "step": 2500,
+              "total": 4.234501838684082
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.20_seed_13150517.pt",
+      "sha256": "2961c90fcabd900e6103d7780ba2b3ac114b416d08a326b695a3edb6d64db8cb"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150529,
+        "temperature": 0.2,
+        "training": {
+          "elapsed_seconds": 21.8345017520478,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.14097163081169128,
+              "gate": 0.0,
+              "listwise": 4.851513862609863,
+              "pairwise": 0.6930416226387024,
+              "reversal": 1.45875084400177,
+              "step": 1,
+              "total": 4.372000217437744
+            },
+            {
+              "distance": 0.04482819512486458,
+              "gate": 1.0074061265186174e-06,
+              "listwise": 4.742305755615234,
+              "pairwise": 0.6569131016731262,
+              "reversal": 1.4650049209594727,
+              "step": 250,
+              "total": 4.209442615509033
+            },
+            {
+              "distance": 0.030661895871162415,
+              "gate": 2.405063924015849e-06,
+              "listwise": 4.70459508895874,
+              "pairwise": 0.6491898894309998,
+              "reversal": 1.4542287588119507,
+              "step": 500,
+              "total": 4.161783218383789
+            },
+            {
+              "distance": 0.07911813259124756,
+              "gate": 2.6028926640719874e-06,
+              "listwise": 4.679349899291992,
+              "pairwise": 0.6357114911079407,
+              "reversal": 1.4572657346725464,
+              "step": 750,
+              "total": 4.193914413452148
+            },
+            {
+              "distance": 0.042674943804740906,
+              "gate": 2.7003270588465966e-06,
+              "listwise": 4.716135025024414,
+              "pairwise": 0.6456970572471619,
+              "reversal": 1.4601982831954956,
+              "step": 1000,
+              "total": 4.183789253234863
+            },
+            {
+              "distance": 0.0765964686870575,
+              "gate": 2.724360228967271e-06,
+              "listwise": 4.73151969909668,
+              "pairwise": 0.6561872363090515,
+              "reversal": 1.4583197832107544,
+              "step": 1250,
+              "total": 4.228769779205322
+            },
+            {
+              "distance": 0.05372254550457001,
+              "gate": 2.7313685677654576e-06,
+              "listwise": 4.737292289733887,
+              "pairwise": 0.6461463570594788,
+              "reversal": 1.4510078430175781,
+              "step": 1500,
+              "total": 4.1964497566223145
+            },
+            {
+              "distance": 0.025058727711439133,
+              "gate": 2.589858468127204e-06,
+              "listwise": 4.799189567565918,
+              "pairwise": 0.6601250171661377,
+              "reversal": 1.4511762857437134,
+              "step": 1750,
+              "total": 4.205892086029053
+            },
+            {
+              "distance": 0.025317007675766945,
+              "gate": 2.791338829410961e-06,
+              "listwise": 4.727231025695801,
+              "pairwise": 0.6469830870628357,
+              "reversal": 1.457191824913025,
+              "step": 2000,
+              "total": 4.169615745544434
+            },
+            {
+              "distance": 0.0592891164124012,
+              "gate": 2.8273643692955375e-06,
+              "listwise": 4.846726417541504,
+              "pairwise": 0.6325194239616394,
+              "reversal": 1.451460599899292,
+              "step": 2250,
+              "total": 4.250372886657715
+            },
+            {
+              "distance": 0.049967411905527115,
+              "gate": 3.1393794870382408e-06,
+              "listwise": 4.7635369300842285,
+              "pairwise": 0.6427009701728821,
+              "reversal": 1.438495397567749,
+              "step": 2500,
+              "total": 4.191581726074219
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.20_seed_13150529.pt",
+      "sha256": "6b5580d8c8290f616f5debb9845bd1ff9ef663a52fce18b6de31c1a92875a024"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": true,
+        "future_inputs_used": false,
+        "method": "B2_STATIC_CONSEQUENCE",
+        "seed": 13150543,
+        "temperature": 0.2,
+        "training": {
+          "elapsed_seconds": 23.3385142799234,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.1116422787308693,
+              "gate": 0.0,
+              "listwise": 4.851736068725586,
+              "pairwise": 0.6931426525115967,
+              "reversal": 1.4538286924362183,
+              "step": 1,
+              "total": 4.337910175323486
+            },
+            {
+              "distance": 0.040254101157188416,
+              "gate": 8.065292718129058e-07,
+              "listwise": 4.790572166442871,
+              "pairwise": 0.6596807837486267,
+              "reversal": 1.4596611261367798,
+              "step": 250,
+              "total": 4.22504186630249
+            },
+            {
+              "distance": 0.032643336802721024,
+              "gate": 1.541041115160624e-06,
+              "listwise": 4.776549339294434,
+              "pairwise": 0.6504097580909729,
+              "reversal": 1.4605920314788818,
+              "step": 500,
+              "total": 4.206714630126953
+            },
+            {
+              "distance": 0.04028201103210449,
+              "gate": 1.8584710232971702e-06,
+              "listwise": 4.7961578369140625,
+              "pairwise": 0.6584494113922119,
+              "reversal": 1.4525346755981445,
+              "step": 750,
+              "total": 4.220120429992676
+            },
+            {
+              "distance": 0.0911015048623085,
+              "gate": 1.6737837995606242e-06,
+              "listwise": 4.778665065765381,
+              "pairwise": 0.642414391040802,
+              "reversal": 1.4666036367416382,
+              "step": 1000,
+              "total": 4.268244743347168
+            },
+            {
+              "distance": 0.0425138957798481,
+              "gate": 1.908782905957196e-06,
+              "listwise": 4.781004905700684,
+              "pairwise": 0.6467882990837097,
+              "reversal": 1.455426812171936,
+              "step": 1250,
+              "total": 4.211837291717529
+            },
+            {
+              "distance": 0.08250157535076141,
+              "gate": 2.1891287360631395e-06,
+              "listwise": 4.819571018218994,
+              "pairwise": 0.6697726845741272,
+              "reversal": 1.4573355913162231,
+              "step": 1500,
+              "total": 4.284509181976318
+            },
+            {
+              "distance": 0.05802125483751297,
+              "gate": 2.0971158392057987e-06,
+              "listwise": 4.708125591278076,
+              "pairwise": 0.6451194882392883,
+              "reversal": 1.4502886533737183,
+              "step": 1750,
+              "total": 4.184932231903076
+            },
+            {
+              "distance": 0.032114189118146896,
+              "gate": 2.070715027002734e-06,
+              "listwise": 4.712642669677734,
+              "pairwise": 0.64570552110672,
+              "reversal": 1.4573242664337158,
+              "step": 2000,
+              "total": 4.168612480163574
+            },
+            {
+              "distance": 0.030989598482847214,
+              "gate": 1.990487362490967e-06,
+              "listwise": 4.731990814208984,
+              "pairwise": 0.6351791024208069,
+              "reversal": 1.4442214965820312,
+              "step": 2250,
+              "total": 4.158796310424805
+            },
+            {
+              "distance": 0.08410809934139252,
+              "gate": 1.9855667687807e-06,
+              "listwise": 4.592175483703613,
+              "pairwise": 0.6442099213600159,
+              "reversal": 1.450537919998169,
+              "step": 2500,
+              "total": 4.152838706970215
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.20_seed_13150543.pt",
+      "sha256": "62887e5f6b77c81483165bf80aee965948fdb46b5ea2e2b30c419fb1fa20f024"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": false,
+        "future_inputs_used": false,
+        "method": "B1_ACTION_ONLY",
+        "seed": 13150517,
+        "strict_consequence_reversal_tuples_used": false,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 17.219236752018332,
+          "label_kind": "action_only",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.2385539710521698,
+              "gate": 0.0,
+              "listwise": 4.848724365234375,
+              "pairwise": 0.692979633808136,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 3.009406089782715
+            },
+            {
+              "distance": 0.08202764391899109,
+              "gate": 1.9166279798810137e-06,
+              "listwise": 4.119390487670898,
+              "pairwise": 0.6095411777496338,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.44649338722229
+            },
+            {
+              "distance": 0.04058834910392761,
+              "gate": 3.2252723940473516e-06,
+              "listwise": 3.831496477127075,
+              "pairwise": 0.576119601726532,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.244396448135376
+            },
+            {
+              "distance": 0.03997533395886421,
+              "gate": 3.358760295668617e-06,
+              "listwise": 3.876026153564453,
+              "pairwise": 0.5800797343254089,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.2680282592773438
+            },
+            {
+              "distance": 0.050231970846652985,
+              "gate": 3.2393970741395606e-06,
+              "listwise": 4.150918960571289,
+              "pairwise": 0.5833142995834351,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.417348623275757
+            },
+            {
+              "distance": 0.03518419712781906,
+              "gate": 3.138634156130138e-06,
+              "listwise": 3.9549942016601562,
+              "pairwise": 0.5756537318229675,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.3005082607269287
+            },
+            {
+              "distance": 0.03680374100804329,
+              "gate": 2.986430672535789e-06,
+              "listwise": 3.845020294189453,
+              "pairwise": 0.564243733882904,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.2414357662200928
+            },
+            {
+              "distance": 0.02397039718925953,
+              "gate": 4.68145071863546e-06,
+              "listwise": 3.7036380767822266,
+              "pairwise": 0.5626627802848816,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.157120704650879
+            },
+            {
+              "distance": 0.02247832901775837,
+              "gate": 4.95985023007961e-06,
+              "listwise": 3.915558099746704,
+              "pairwise": 0.5553134083747864,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.2579140663146973
+            },
+            {
+              "distance": 0.01820443384349346,
+              "gate": 5.2770410547964275e-06,
+              "listwise": 3.6898512840270996,
+              "pairwise": 0.5626944303512573,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.144477367401123
+            },
+            {
+              "distance": 0.020058922469615936,
+              "gate": 5.175403202883899e-06,
+              "listwise": 3.767947196960449,
+              "pairwise": 0.5640410780906677,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.1860530376434326
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B1_ACTION_ONLY/seed_13150517.pt",
+      "sha256": "c67cc8344a5f7f8eafd4ce167933bcb3c39e772d6ae6d6d4c356183fea7b1f30"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": false,
+        "future_inputs_used": false,
+        "method": "B1_ACTION_ONLY",
+        "seed": 13150529,
+        "strict_consequence_reversal_tuples_used": false,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 17.39312618400436,
+          "label_kind": "action_only",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.24813491106033325,
+              "gate": 0.0,
+              "listwise": 4.846625328063965,
+              "pairwise": 0.6928601861000061,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 3.0178775787353516
+            },
+            {
+              "distance": 0.059858791530132294,
+              "gate": 6.795445415264112e-07,
+              "listwise": 3.906230926513672,
+              "pairwise": 0.5968428254127502,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.3113956451416016
+            },
+            {
+              "distance": 0.03292696177959442,
+              "gate": 2.4757316623436054e-06,
+              "listwise": 3.9021449089050293,
+              "pairwise": 0.584777295589447,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.276388168334961
+            },
+            {
+              "distance": 0.052486371248960495,
+              "gate": 2.0248596683813957e-06,
+              "listwise": 4.197237014770508,
+              "pairwise": 0.5936526656150818,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.4479312896728516
+            },
+            {
+              "distance": 0.03603622317314148,
+              "gate": 2.4185301299439743e-06,
+              "listwise": 3.9283859729766846,
+              "pairwise": 0.5658155083656311,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.2831368446350098
+            },
+            {
+              "distance": 0.025534972548484802,
+              "gate": 2.673982635315042e-06,
+              "listwise": 3.5761516094207764,
+              "pairwise": 0.560725748538971,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.0939736366271973
+            },
+            {
+              "distance": 0.040919721126556396,
+              "gate": 2.809084662658279e-06,
+              "listwise": 4.163634777069092,
+              "pairwise": 0.5731008648872375,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.409287452697754
+            },
+            {
+              "distance": 0.02606096677482128,
+              "gate": 3.021053771590232e-06,
+              "listwise": 4.045767307281494,
+              "pairwise": 0.5821629166603088,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.3400261402130127
+            },
+            {
+              "distance": 0.021309198811650276,
+              "gate": 3.226270337108872e-06,
+              "listwise": 3.670938014984131,
+              "pairwise": 0.5716531872749329,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.1426048278808594
+            },
+            {
+              "distance": 0.02025890350341797,
+              "gate": 3.7567331219179323e-06,
+              "listwise": 3.50993013381958,
+              "pairwise": 0.5487975478172302,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.0496227741241455
+            },
+            {
+              "distance": 0.019060859456658363,
+              "gate": 4.009733856946696e-06,
+              "listwise": 3.5697054862976074,
+              "pairwise": 0.5552480220794678,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.0815377235412598
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B1_ACTION_ONLY/seed_13150529.pt",
+      "sha256": "99a3006d44cff40b2bc8efeb21df86d89a6fa2646e05ea70b5a0b9922c27702b"
+    },
+    {
+      "metadata": {
+        "consequence_labels_used": false,
+        "future_inputs_used": false,
+        "method": "B1_ACTION_ONLY",
+        "seed": 13150543,
+        "strict_consequence_reversal_tuples_used": false,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 20.43001649994403,
+          "label_kind": "action_only",
+          "optimizer_steps": 2500,
+          "parameter_count": 21008,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.2469559758901596,
+              "gate": 0.0,
+              "listwise": 4.847461700439453,
+              "pairwise": 0.6928994059562683,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 3.017136573791504
+            },
+            {
+              "distance": 0.06818285584449768,
+              "gate": 8.162585913851217e-07,
+              "listwise": 3.9840340614318848,
+              "pairwise": 0.6028552651405334,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.3616275787353516
+            },
+            {
+              "distance": 0.04242759197950363,
+              "gate": 1.8797042002915987e-06,
+              "listwise": 3.9293251037597656,
+              "pairwise": 0.5835779309272766,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.2988791465759277
+            },
+            {
+              "distance": 0.02394772879779339,
+              "gate": 2.8336664854577975e-06,
+              "listwise": 3.5857226848602295,
+              "pairwise": 0.5617308020591736,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.0976743698120117
+            },
+            {
+              "distance": 0.02381853200495243,
+              "gate": 2.6938146220345516e-06,
+              "listwise": 3.7147881984710693,
+              "pairwise": 0.5572064518928528,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.159815788269043
+            },
+            {
+              "distance": 0.0246492400765419,
+              "gate": 2.850778628271655e-06,
+              "listwise": 3.7255587577819824,
+              "pairwise": 0.5582746267318726,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.1665658950805664
+            },
+            {
+              "distance": 0.027967382222414017,
+              "gate": 2.8752540401910665e-06,
+              "listwise": 3.939107656478882,
+              "pairwise": 0.5669084191322327,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.280975341796875
+            },
+            {
+              "distance": 0.024137381464242935,
+              "gate": 2.730576170506538e-06,
+              "listwise": 3.883500576019287,
+              "pairwise": 0.5651436448097229,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.248459577560425
+            },
+            {
+              "distance": 0.023517007008194923,
+              "gate": 2.690244400582742e-06,
+              "listwise": 3.7937402725219727,
+              "pairwise": 0.5669377446174622,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.2038559913635254
+            },
+            {
+              "distance": 0.01632203906774521,
+              "gate": 2.7293115181237226e-06,
+              "listwise": 3.65407657623291,
+              "pairwise": 0.5557162165641785,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.12121844291687
+            },
+            {
+              "distance": 0.01883595809340477,
+              "gate": 3.0481260182568803e-06,
+              "listwise": 3.7590317726135254,
+              "pairwise": 0.5686877369880676,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.1826956272125244
+            }
+          ],
+          "trainable_parameter_count": 21008
+        }
+      },
+      "path": "STATIC_METRIC_CHECKPOINTS/B1_ACTION_ONLY/seed_13150543.pt",
+      "sha256": "34790516d5d396c4e47851c27b843b7986a60993893caf602d9eece8b49d260b"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "PROPOSED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 23.332653995021246,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.04439730569720268,
+              "gate": 0.6604776978492737,
+              "listwise": 4.560849666595459,
+              "pairwise": 0.6347500681877136,
+              "reversal": 1.4602735042572021,
+              "step": 1,
+              "total": 4.10907506942749
+            },
+            {
+              "distance": 0.017366789281368256,
+              "gate": 0.4256967604160309,
+              "listwise": 4.716492652893066,
+              "pairwise": 0.6583059430122375,
+              "reversal": 1.4485971927642822,
+              "step": 250,
+              "total": 4.157620429992676
+            },
+            {
+              "distance": 0.05573243647813797,
+              "gate": 0.9035060405731201,
+              "listwise": 4.656078338623047,
+              "pairwise": 0.643742024898529,
+              "reversal": 1.449018955230713,
+              "step": 500,
+              "total": 4.163696765899658
+            },
+            {
+              "distance": 0.022789902985095978,
+              "gate": 0.6902788281440735,
+              "listwise": 4.844783306121826,
+              "pairwise": 0.646564781665802,
+              "reversal": 1.453279733657837,
+              "step": 750,
+              "total": 4.228646278381348
+            },
+            {
+              "distance": 0.03043387457728386,
+              "gate": 0.4550043046474457,
+              "listwise": 4.726832389831543,
+              "pairwise": 0.6566731929779053,
+              "reversal": 1.4507358074188232,
+              "step": 1000,
+              "total": 4.177472114562988
+            },
+            {
+              "distance": 0.030348816886544228,
+              "gate": 0.5106219053268433,
+              "listwise": 4.741757869720459,
+              "pairwise": 0.6558623909950256,
+              "reversal": 1.4516042470932007,
+              "step": 1250,
+              "total": 4.1858696937561035
+            },
+            {
+              "distance": 0.030031846836209297,
+              "gate": 0.43516796827316284,
+              "listwise": 4.2672038078308105,
+              "pairwise": 0.6408781409263611,
+              "reversal": 1.4562656879425049,
+              "step": 1500,
+              "total": 3.944690227508545
+            },
+            {
+              "distance": 0.0402238592505455,
+              "gate": 0.7297185063362122,
+              "listwise": 4.672809600830078,
+              "pairwise": 0.6670370101928711,
+              "reversal": 1.4527987241744995,
+              "step": 1750,
+              "total": 4.170242786407471
+            },
+            {
+              "distance": 0.03728124499320984,
+              "gate": 0.6088737845420837,
+              "listwise": 4.60767126083374,
+              "pairwise": 0.6464858055114746,
+              "reversal": 1.4514392614364624,
+              "step": 2000,
+              "total": 4.121887683868408
+            },
+            {
+              "distance": 0.039806168526411057,
+              "gate": 0.8000904321670532,
+              "listwise": 4.541381359100342,
+              "pairwise": 0.6638103127479553,
+              "reversal": 1.4526927471160889,
+              "step": 2250,
+              "total": 4.103095531463623
+            },
+            {
+              "distance": 0.03151753544807434,
+              "gate": 0.5853472352027893,
+              "listwise": 4.715298652648926,
+              "pairwise": 0.6422346830368042,
+              "reversal": 1.448294997215271,
+              "step": 2500,
+              "total": 4.164433002471924
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.0446334641756039e-07,
+          "mean_modulation_norm": 5.924408435821533
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150517.pt",
+      "sha256": "2a54fced42be8774fb8b2be83ff6c76782c70974436251aaae314207a8d469fa"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "PROPOSED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 23.118005400989205,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.04949246346950531,
+              "gate": 0.9925405979156494,
+              "listwise": 4.38300085067749,
+              "pairwise": 0.6463379859924316,
+              "reversal": 1.465415358543396,
+              "step": 1,
+              "total": 4.0395026206970215
+            },
+            {
+              "distance": 0.08274392038583755,
+              "gate": 0.6676702499389648,
+              "listwise": 4.667259216308594,
+              "pairwise": 0.6507778763771057,
+              "reversal": 1.4574790000915527,
+              "step": 250,
+              "total": 4.205918312072754
+            },
+            {
+              "distance": 0.04169764369726181,
+              "gate": 0.8605284094810486,
+              "listwise": 4.646247863769531,
+              "pairwise": 0.6631942987442017,
+              "reversal": 1.460404396057129,
+              "step": 500,
+              "total": 4.165428638458252
+            },
+            {
+              "distance": 0.056771181523799896,
+              "gate": 0.9545743465423584,
+              "listwise": 4.552012920379639,
+              "pairwise": 0.653552770614624,
+              "reversal": 1.446177363395691,
+              "step": 750,
+              "total": 4.115277290344238
+            },
+            {
+              "distance": 0.03870371729135513,
+              "gate": 0.7248812317848206,
+              "listwise": 4.454464912414551,
+              "pairwise": 0.6506978869438171,
+              "reversal": 1.4523539543151855,
+              "step": 1000,
+              "total": 4.0508880615234375
+            },
+            {
+              "distance": 0.06121000647544861,
+              "gate": 0.6470263600349426,
+              "listwise": 4.632043361663818,
+              "pairwise": 0.6597015261650085,
+              "reversal": 1.4517138004302979,
+              "step": 1250,
+              "total": 4.165266513824463
+            },
+            {
+              "distance": 0.02911207266151905,
+              "gate": 0.7017258405685425,
+              "listwise": 5.121377944946289,
+              "pairwise": 0.6448994278907776,
+              "reversal": 1.4427396059036255,
+              "step": 1500,
+              "total": 4.3620076179504395
+            },
+            {
+              "distance": 0.0439537838101387,
+              "gate": 0.2973394989967346,
+              "listwise": 4.652132034301758,
+              "pairwise": 0.6557242274284363,
+              "reversal": 1.4555772542953491,
+              "step": 1750,
+              "total": 4.156432628631592
+            },
+            {
+              "distance": 0.043995216488838196,
+              "gate": 0.8396613597869873,
+              "listwise": 4.6630539894104,
+              "pairwise": 0.6677647233009338,
+              "reversal": 1.4501971006393433,
+              "step": 2000,
+              "total": 4.167998313903809
+            },
+            {
+              "distance": 0.013389140367507935,
+              "gate": 0.23186255991458893,
+              "listwise": 4.612146854400635,
+              "pairwise": 0.6593436598777771,
+              "reversal": 1.4466055631637573,
+              "step": 2250,
+              "total": 4.098058700561523
+            },
+            {
+              "distance": 0.09209982305765152,
+              "gate": 0.7209267020225525,
+              "listwise": 4.475753307342529,
+              "pairwise": 0.6674477458000183,
+              "reversal": 1.438201665878296,
+              "step": 2500,
+              "total": 4.109111309051514
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.2631138563156128e-07,
+          "mean_modulation_norm": 5.930002689361572
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150529.pt",
+      "sha256": "85c52b8eb8c0edb2d40ee706c54501e735a39c446c59f6032302135bcfb8e59e"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "PROPOSED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 23.063067593961023,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.040894765406847,
+              "gate": 0.3844761252403259,
+              "listwise": 4.660165786743164,
+              "pairwise": 0.6272699236869812,
+              "reversal": 1.479310154914856,
+              "step": 1,
+              "total": 4.167767524719238
+            },
+            {
+              "distance": 0.05370871722698212,
+              "gate": 0.9213221669197083,
+              "listwise": 4.39469051361084,
+              "pairwise": 0.6471786499023438,
+              "reversal": 1.4589837789535522,
+              "step": 250,
+              "total": 4.042840480804443
+            },
+            {
+              "distance": 0.09778496623039246,
+              "gate": 0.9688828587532043,
+              "listwise": 5.06772518157959,
+              "pairwise": 0.6701891422271729,
+              "reversal": 1.447679877281189,
+              "step": 500,
+              "total": 4.4241108894348145
+            },
+            {
+              "distance": 0.08014766126871109,
+              "gate": 0.7427831292152405,
+              "listwise": 4.761940956115723,
+              "pairwise": 0.650564968585968,
+              "reversal": 1.4500584602355957,
+              "step": 750,
+              "total": 4.243886470794678
+            },
+            {
+              "distance": 0.041787371039390564,
+              "gate": 0.5960416793823242,
+              "listwise": 4.512823104858398,
+              "pairwise": 0.6551507115364075,
+              "reversal": 1.448494553565979,
+              "step": 1000,
+              "total": 4.08022928237915
+            },
+            {
+              "distance": 0.026647605001926422,
+              "gate": 0.5245861411094666,
+              "listwise": 4.595668792724609,
+              "pairwise": 0.6563180685043335,
+              "reversal": 1.4442691802978516,
+              "step": 1250,
+              "total": 4.102156162261963
+            },
+            {
+              "distance": 0.06658560037612915,
+              "gate": 0.5509388446807861,
+              "listwise": 4.578408241271973,
+              "pairwise": 0.6586419939994812,
+              "reversal": 1.4581599235534668,
+              "step": 1500,
+              "total": 4.14877986907959
+            },
+            {
+              "distance": 0.05731339007616043,
+              "gate": 0.5445166230201721,
+              "listwise": 4.529074668884277,
+              "pairwise": 0.6573352813720703,
+              "reversal": 1.4444304704666138,
+              "step": 1750,
+              "total": 4.100393772125244
+            },
+            {
+              "distance": 0.04650108516216278,
+              "gate": 0.8454493880271912,
+              "listwise": 4.483766555786133,
+              "pairwise": 0.6477194428443909,
+              "reversal": 1.4545464515686035,
+              "step": 2000,
+              "total": 4.075244903564453
+            },
+            {
+              "distance": 0.04501602426171303,
+              "gate": 0.6270049214363098,
+              "listwise": 4.6431050300598145,
+              "pairwise": 0.6595996022224426,
+              "reversal": 1.4451298713684082,
+              "step": 2250,
+              "total": 4.147768020629883
+            },
+            {
+              "distance": 0.03290358558297157,
+              "gate": 0.5061676502227783,
+              "listwise": 4.163108825683594,
+              "pairwise": 0.638773500919342,
+              "reversal": 1.4554437398910522,
+              "step": 2500,
+              "total": 3.894350051879883
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.8874804652568855e-07,
+          "mean_modulation_norm": 5.856260776519775
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150543.pt",
+      "sha256": "461b0b6836eb66ca318f8c2080dcee729dc55bb3a2687a254d879424859ced6f"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B1_ACTION_ONLY",
+        "control": "ACTION_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 15.906873220927082,
+          "label_kind": "action_only",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.016854913905262947,
+              "gate": 0.00847172737121582,
+              "listwise": 3.763275623321533,
+              "pairwise": 0.5600630044937134,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 2.1786088943481445
+            },
+            {
+              "distance": 0.024625349789857864,
+              "gate": 0.0013639092212542892,
+              "listwise": 4.174646854400635,
+              "pairwise": 0.5676738619804382,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.395799398422241
+            },
+            {
+              "distance": 0.021063020452857018,
+              "gate": 0.0023584100417792797,
+              "listwise": 3.620694875717163,
+              "pairwise": 0.562688946723938,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.112778425216675
+            },
+            {
+              "distance": 0.016112852841615677,
+              "gate": 0.0022735153324902058,
+              "listwise": 3.43904185295105,
+              "pairwise": 0.5462273955345154,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.008770227432251
+            },
+            {
+              "distance": 0.01838524453341961,
+              "gate": 0.0018811736954376101,
+              "listwise": 3.7876014709472656,
+              "pairwise": 0.5605478286743164,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.192478656768799
+            },
+            {
+              "distance": 0.017566431313753128,
+              "gate": 0.0020068034064024687,
+              "listwise": 3.800553560256958,
+              "pairwise": 0.5538944005966187,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.194810390472412
+            },
+            {
+              "distance": 0.019450442865490913,
+              "gate": 0.002138522220775485,
+              "listwise": 3.545342206954956,
+              "pairwise": 0.5589950084686279,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.0716404914855957
+            },
+            {
+              "distance": 0.01657586172223091,
+              "gate": 0.002198872622102499,
+              "listwise": 3.8425984382629395,
+              "pairwise": 0.5528053045272827,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.2142996788024902
+            },
+            {
+              "distance": 0.017717136070132256,
+              "gate": 0.002332676900550723,
+              "listwise": 3.7574052810668945,
+              "pairwise": 0.5607980489730835,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.176842212677002
+            },
+            {
+              "distance": 0.01590636745095253,
+              "gate": 0.0019843780901283026,
+              "listwise": 3.5081982612609863,
+              "pairwise": 0.5497146248817444,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.0448825359344482
+            },
+            {
+              "distance": 0.019056111574172974,
+              "gate": 0.002260975306853652,
+              "listwise": 3.690938711166382,
+              "pairwise": 0.5602889657020569,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.1446926593780518
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150517.pt",
+      "sha256": "15ad1cc4deeaca768f07718c7443f6e8952986359c1fe918e7846b7c6ace4fb8"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B1_ACTION_ONLY",
+        "control": "ACTION_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 16.770229473011568,
+          "label_kind": "action_only",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.02359025925397873,
+              "gate": 0.009548118337988853,
+              "listwise": 3.756913661956787,
+              "pairwise": 0.5771398544311523,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 2.1907124519348145
+            },
+            {
+              "distance": 0.018315846100449562,
+              "gate": 0.002998752985149622,
+              "listwise": 3.8944554328918457,
+              "pairwise": 0.5730034112930298,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.2520751953125
+            },
+            {
+              "distance": 0.017754722386598587,
+              "gate": 0.0012730805901810527,
+              "listwise": 3.597783327102661,
+              "pairwise": 0.5589826107025146,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.0961503982543945
+            },
+            {
+              "distance": 0.02026006020605564,
+              "gate": 0.0016890678089112043,
+              "listwise": 3.823198080062866,
+              "pairwise": 0.5612919330596924,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.212522029876709
+            },
+            {
+              "distance": 0.021149510517716408,
+              "gate": 0.0012216827599331737,
+              "listwise": 3.9051361083984375,
+              "pairwise": 0.5523608326911926,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.2499101161956787
+            },
+            {
+              "distance": 0.019735071808099747,
+              "gate": 0.0008379449136555195,
+              "listwise": 3.799755811691284,
+              "pairwise": 0.5709052681922913,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.2050740718841553
+            },
+            {
+              "distance": 0.015237241052091122,
+              "gate": 0.002059707185253501,
+              "listwise": 3.679905414581299,
+              "pairwise": 0.565380871295929,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.1379008293151855
+            },
+            {
+              "distance": 0.015704020857810974,
+              "gate": 0.0009644953534007072,
+              "listwise": 3.592378854751587,
+              "pairwise": 0.5601688623428345,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.091987371444702
+            },
+            {
+              "distance": 0.018576104193925858,
+              "gate": 0.001115871942602098,
+              "listwise": 3.7936673164367676,
+              "pairwise": 0.563551127910614,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.1971964836120605
+            },
+            {
+              "distance": 0.015819061547517776,
+              "gate": 0.002258920343592763,
+              "listwise": 3.3906898498535156,
+              "pairwise": 0.5597569942474365,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 1.9910650253295898
+            },
+            {
+              "distance": 0.02439521998167038,
+              "gate": 0.0010794156696647406,
+              "listwise": 4.07334566116333,
+              "pairwise": 0.5623939633369446,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.342275857925415
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150529.pt",
+      "sha256": "0310f2a20ef8748ae94b611e97f42a1f2dc81528f6fc5d91f6585320b986328e"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B1_ACTION_ONLY",
+        "control": "ACTION_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 15.783466941094957,
+          "label_kind": "action_only",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.017521653324365616,
+              "gate": 0.009328893385827541,
+              "listwise": 3.733355760574341,
+              "pairwise": 0.5539838075637817,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 2.1612846851348877
+            },
+            {
+              "distance": 0.012279071845114231,
+              "gate": 0.0010822826297953725,
+              "listwise": 3.4264791011810303,
+              "pairwise": 0.541485071182251,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 1.9962719678878784
+            },
+            {
+              "distance": 0.014391334727406502,
+              "gate": 0.0014814655296504498,
+              "listwise": 3.7625162601470947,
+              "pairwise": 0.5591936707496643,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.1752610206604004
+            },
+            {
+              "distance": 0.01532744336873293,
+              "gate": 0.002131713554263115,
+              "listwise": 3.5474939346313477,
+              "pairwise": 0.5558115243911743,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.0670013427734375
+            },
+            {
+              "distance": 0.01357220858335495,
+              "gate": 0.0018752949545159936,
+              "listwise": 3.9163713455200195,
+              "pairwise": 0.5557723641395569,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.2496628761291504
+            },
+            {
+              "distance": 0.013322601094841957,
+              "gate": 0.0015565514331683517,
+              "listwise": 3.5257036685943604,
+              "pairwise": 0.5534589290618896,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.052919387817383
+            },
+            {
+              "distance": 0.015077386051416397,
+              "gate": 0.0017050810856744647,
+              "listwise": 3.8324100971221924,
+              "pairwise": 0.5576050877571106,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.210102081298828
+            },
+            {
+              "distance": 0.015173961408436298,
+              "gate": 0.0017674037953838706,
+              "listwise": 4.1054582595825195,
+              "pairwise": 0.5725094676017761,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.354175567626953
+            },
+            {
+              "distance": 0.015004070475697517,
+              "gate": 0.0016862867632880807,
+              "listwise": 3.5052032470703125,
+              "pairwise": 0.5666577219963074,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.0509514808654785
+            },
+            {
+              "distance": 0.01368225459009409,
+              "gate": 0.001638753921724856,
+              "listwise": 3.4617040157318115,
+              "pairwise": 0.5463489890098572,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.0177252292633057
+            },
+            {
+              "distance": 0.015097456984221935,
+              "gate": 0.0013862220803275704,
+              "listwise": 3.6846354007720947,
+              "pairwise": 0.5647810101509094,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.139819622039795
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 0.0,
+          "maximum_absolute_train_mean": 0.0,
+          "mean_modulation_norm": 0.0
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/ACTION_ONLY/seed_13150543.pt",
+      "sha256": "3bad965011b02786bfac83be4dba78e77cb839afe979ade4bc4e124153df1627"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CONTEXT_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 19.875372715992853,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.05190097540616989,
+              "gate": 0.868829607963562,
+              "listwise": 4.729300498962402,
+              "pairwise": 0.6556966304779053,
+              "reversal": 1.4657297134399414,
+              "step": 1,
+              "total": 4.218817710876465
+            },
+            {
+              "distance": 0.06862487643957138,
+              "gate": 1.1009917259216309,
+              "listwise": 4.630834102630615,
+              "pairwise": 0.6617649793624878,
+              "reversal": 1.4526190757751465,
+              "step": 250,
+              "total": 4.178553104400635
+            },
+            {
+              "distance": 0.03441978991031647,
+              "gate": 0.9450696706771851,
+              "listwise": 4.548309326171875,
+              "pairwise": 0.6588082313537598,
+              "reversal": 1.4588236808776855,
+              "step": 500,
+              "total": 4.106253147125244
+            },
+            {
+              "distance": 0.034449078142642975,
+              "gate": 0.9456639289855957,
+              "listwise": 4.830224990844727,
+              "pairwise": 0.6723677515983582,
+              "reversal": 1.4596836566925049,
+              "step": 750,
+              "total": 4.254885673522949
+            },
+            {
+              "distance": 0.058152586221694946,
+              "gate": 0.8377985954284668,
+              "listwise": 4.58409309387207,
+              "pairwise": 0.6605019569396973,
+              "reversal": 1.4587678909301758,
+              "step": 1000,
+              "total": 4.14759635925293
+            },
+            {
+              "distance": 0.04050704464316368,
+              "gate": 0.646165132522583,
+              "listwise": 4.721864223480225,
+              "pairwise": 0.6613276600837708,
+              "reversal": 1.453048825263977,
+              "step": 1250,
+              "total": 4.19161319732666
+            },
+            {
+              "distance": 0.030895518139004707,
+              "gate": 0.5079883933067322,
+              "listwise": 4.703397274017334,
+              "pairwise": 0.6659384965896606,
+              "reversal": 1.4545485973358154,
+              "step": 1500,
+              "total": 4.175191402435303
+            },
+            {
+              "distance": 0.026561537757515907,
+              "gate": 0.6249871850013733,
+              "listwise": 4.4900360107421875,
+              "pairwise": 0.6421481370925903,
+              "reversal": 1.4550848007202148,
+              "step": 1750,
+              "total": 4.053987979888916
+            },
+            {
+              "distance": 0.0459815077483654,
+              "gate": 0.618005633354187,
+              "listwise": 4.748605251312256,
+              "pairwise": 0.6677280068397522,
+              "reversal": 1.4623429775238037,
+              "step": 2000,
+              "total": 4.222671031951904
+            },
+            {
+              "distance": 0.07803992927074432,
+              "gate": 0.550432562828064,
+              "listwise": 4.713743686676025,
+              "pairwise": 0.6579247117042542,
+              "reversal": 1.4555541276931763,
+              "step": 2250,
+              "total": 4.2249321937561035
+            },
+            {
+              "distance": 0.06289634108543396,
+              "gate": 0.36424946784973145,
+              "listwise": 4.536202430725098,
+              "pairwise": 0.6448710560798645,
+              "reversal": 1.456344485282898,
+              "step": 2500,
+              "total": 4.113420009613037
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.6344711184501648e-07,
+          "mean_modulation_norm": 5.9564361572265625
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150517.pt",
+      "sha256": "6801ef167bcd6a17b59811e0a8b798ae49d50a65a4e649f127004d7fdd36ce39"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CONTEXT_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 24.75616791995708,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.0593847893178463,
+              "gate": 0.5350068807601929,
+              "listwise": 4.465030193328857,
+              "pairwise": 0.6527456641197205,
+              "reversal": 1.4682154655456543,
+              "step": 1,
+              "total": 4.091838359832764
+            },
+            {
+              "distance": 0.04523969441652298,
+              "gate": 1.1973754167556763,
+              "listwise": 4.753433704376221,
+              "pairwise": 0.6512408256530762,
+              "reversal": 1.4542715549468994,
+              "step": 250,
+              "total": 4.213822364807129
+            },
+            {
+              "distance": 0.022061415016651154,
+              "gate": 0.7392047047615051,
+              "listwise": 4.778641223907471,
+              "pairwise": 0.6736421585083008,
+              "reversal": 1.4543859958648682,
+              "step": 500,
+              "total": 4.2099809646606445
+            },
+            {
+              "distance": 0.07200349122285843,
+              "gate": 0.8862704634666443,
+              "listwise": 4.337796211242676,
+              "pairwise": 0.6545388102531433,
+              "reversal": 1.4544531106948853,
+              "step": 750,
+              "total": 4.031486511230469
+            },
+            {
+              "distance": 0.028321344405412674,
+              "gate": 0.756524384021759,
+              "listwise": 4.5285868644714355,
+              "pairwise": 0.6464971899986267,
+              "reversal": 1.44587242603302,
+              "step": 1000,
+              "total": 4.069300651550293
+            },
+            {
+              "distance": 0.035509731620550156,
+              "gate": 0.47647279500961304,
+              "listwise": 4.569353103637695,
+              "pairwise": 0.6568118929862976,
+              "reversal": 1.4495128393173218,
+              "step": 1250,
+              "total": 4.102869510650635
+            },
+            {
+              "distance": 0.024376897141337395,
+              "gate": 0.7182968258857727,
+              "listwise": 4.503213405609131,
+              "pairwise": 0.6405700445175171,
+              "reversal": 1.448313593864441,
+              "step": 1500,
+              "total": 4.051765441894531
+            },
+            {
+              "distance": 0.07556014508008957,
+              "gate": 0.5375260710716248,
+              "listwise": 4.664367198944092,
+              "pairwise": 0.6682186126708984,
+              "reversal": 1.4589353799819946,
+              "step": 1750,
+              "total": 4.2061638832092285
+            },
+            {
+              "distance": 0.026160087436437607,
+              "gate": 0.2293543815612793,
+              "listwise": 4.637880325317383,
+              "pairwise": 0.6457571387290955,
+              "reversal": 1.452971339225769,
+              "step": 2000,
+              "total": 4.123243808746338
+            },
+            {
+              "distance": 0.048833008855581284,
+              "gate": 0.40299317240715027,
+              "listwise": 4.8121337890625,
+              "pairwise": 0.6477673053741455,
+              "reversal": 1.4528396129608154,
+              "step": 2250,
+              "total": 4.235652923583984
+            },
+            {
+              "distance": 0.05208980292081833,
+              "gate": 0.3998885154724121,
+              "listwise": 4.66249418258667,
+              "pairwise": 0.6591545939445496,
+              "reversal": 1.4518073797225952,
+              "step": 2500,
+              "total": 4.168720245361328
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.731879646944435e-07,
+          "mean_modulation_norm": 5.859077453613281
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150529.pt",
+      "sha256": "2a318563a3d29106483459aea992f89853aee2dfe7c0844be04cb9829f48d94f"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CONTEXT_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 24.53306694503408,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.021159501746296883,
+              "gate": 0.5072974562644958,
+              "listwise": 5.0524444580078125,
+              "pairwise": 0.6485064029693604,
+              "reversal": 1.467110276222229,
+              "step": 1,
+              "total": 4.343818187713623
+            },
+            {
+              "distance": 0.04478243365883827,
+              "gate": 0.6470066905021667,
+              "listwise": 4.7285943031311035,
+              "pairwise": 0.6617034673690796,
+              "reversal": 1.4629225730895996,
+              "step": 250,
+              "total": 4.209324359893799
+            },
+            {
+              "distance": 0.03320761024951935,
+              "gate": 0.523784339427948,
+              "listwise": 4.619770050048828,
+              "pairwise": 0.638603150844574,
+              "reversal": 1.4602118730545044,
+              "step": 500,
+              "total": 4.127844333648682
+            },
+            {
+              "distance": 0.11236295104026794,
+              "gate": 0.6237385869026184,
+              "listwise": 4.451893329620361,
+              "pairwise": 0.6570286750793457,
+              "reversal": 1.4571080207824707,
+              "step": 750,
+              "total": 4.13016939163208
+            },
+            {
+              "distance": 0.03137071803212166,
+              "gate": 0.5097454786300659,
+              "listwise": 4.656931400299072,
+              "pairwise": 0.6518277525901794,
+              "reversal": 1.4603224992752075,
+              "step": 1000,
+              "total": 4.151170253753662
+            },
+            {
+              "distance": 0.036342449486255646,
+              "gate": 0.9306655526161194,
+              "listwise": 4.661311626434326,
+              "pairwise": 0.6502458453178406,
+              "reversal": 1.4617383480072021,
+              "step": 1250,
+              "total": 4.163166046142578
+            },
+            {
+              "distance": 0.044169072061777115,
+              "gate": 0.8225368857383728,
+              "listwise": 4.616256237030029,
+              "pairwise": 0.6584535241127014,
+              "reversal": 1.4543800354003906,
+              "step": 1500,
+              "total": 4.144129753112793
+            },
+            {
+              "distance": 0.037455640733242035,
+              "gate": 1.0759526491165161,
+              "listwise": 4.671905040740967,
+              "pairwise": 0.6471291184425354,
+              "reversal": 1.4531869888305664,
+              "step": 1750,
+              "total": 4.160919189453125
+            },
+            {
+              "distance": 0.05150178074836731,
+              "gate": 0.6797244548797607,
+              "listwise": 4.655659198760986,
+              "pairwise": 0.6707663536071777,
+              "reversal": 1.4579048156738281,
+              "step": 2000,
+              "total": 4.179416656494141
+            },
+            {
+              "distance": 0.08908797055482864,
+              "gate": 0.3675844371318817,
+              "listwise": 4.588800430297852,
+              "pairwise": 0.6648171544075012,
+              "reversal": 1.4598020315170288,
+              "step": 2250,
+              "total": 4.179374694824219
+            },
+            {
+              "distance": 0.06011521816253662,
+              "gate": 1.328187108039856,
+              "listwise": 4.633841514587402,
+              "pairwise": 0.6576595902442932,
+              "reversal": 1.4546979665756226,
+              "step": 2500,
+              "total": 4.1738457679748535
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.25418111451836e-07,
+          "mean_modulation_norm": 5.922191143035889
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CONTEXT_SHUFFLED/seed_13150543.pt",
+      "sha256": "02c7572b84a561e8d224c28d53c0d8857af9802a35cbbc88f50d3c47749a7a9c"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "NOMINAL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 23.096332805929706,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.04730643332004547,
+              "gate": 0.8944090604782104,
+              "listwise": 4.9191412925720215,
+              "pairwise": 0.6595557332038879,
+              "reversal": 1.4599248170852661,
+              "step": 1,
+              "total": 4.305523872375488
+            },
+            {
+              "distance": 0.04770452156662941,
+              "gate": 0.7441315650939941,
+              "listwise": 4.655204772949219,
+              "pairwise": 0.6502606272697449,
+              "reversal": 1.457518458366394,
+              "step": 250,
+              "total": 4.1653971672058105
+            },
+            {
+              "distance": 0.0384782999753952,
+              "gate": 1.0482146739959717,
+              "listwise": 4.632450103759766,
+              "pairwise": 0.667961061000824,
+              "reversal": 1.4484068155288696,
+              "step": 500,
+              "total": 4.147572994232178
+            },
+            {
+              "distance": 0.03749994933605194,
+              "gate": 0.3788480758666992,
+              "listwise": 4.759922027587891,
+              "pairwise": 0.6587316989898682,
+              "reversal": 1.4584403038024902,
+              "step": 750,
+              "total": 4.209055423736572
+            },
+            {
+              "distance": 0.04995640367269516,
+              "gate": 0.612817645072937,
+              "listwise": 4.641210079193115,
+              "pairwise": 0.6488641500473022,
+              "reversal": 1.4580427408218384,
+              "step": 1000,
+              "total": 4.1591644287109375
+            },
+            {
+              "distance": 0.04368293657898903,
+              "gate": 1.026381015777588,
+              "listwise": 4.751946926116943,
+              "pairwise": 0.6697415709495544,
+              "reversal": 1.4507806301116943,
+              "step": 1250,
+              "total": 4.215571880340576
+            },
+            {
+              "distance": 0.028206942602992058,
+              "gate": 0.5663551688194275,
+              "listwise": 4.5937180519104,
+              "pairwise": 0.652786910533905,
+              "reversal": 1.447443962097168,
+              "step": 1500,
+              "total": 4.104567050933838
+            },
+            {
+              "distance": 0.04655775800347328,
+              "gate": 0.7402446866035461,
+              "listwise": 4.679112434387207,
+              "pairwise": 0.6629582047462463,
+              "reversal": 1.4429279565811157,
+              "step": 1750,
+              "total": 4.167923450469971
+            },
+            {
+              "distance": 0.07202963531017303,
+              "gate": 0.5132384896278381,
+              "listwise": 4.393196105957031,
+              "pairwise": 0.6465588212013245,
+              "reversal": 1.458954095840454,
+              "step": 2000,
+              "total": 4.055993556976318
+            },
+            {
+              "distance": 0.020762518048286438,
+              "gate": 0.562934160232544,
+              "listwise": 4.682614326477051,
+              "pairwise": 0.6702213883399963,
+              "reversal": 1.4463703632354736,
+              "step": 2250,
+              "total": 4.1491804122924805
+            },
+            {
+              "distance": 0.06427377462387085,
+              "gate": 0.7236799001693726,
+              "listwise": 4.603401184082031,
+              "pairwise": 0.6676385998725891,
+              "reversal": 1.4572969675064087,
+              "step": 2500,
+              "total": 4.164327621459961
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 3.0671557738060073e-07,
+          "mean_modulation_norm": 5.9436421394348145
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150517.pt",
+      "sha256": "4c88a4bb73308615c82fd15dd877c5038ea7cc471d1d38ebd7519fb81cfa1da9"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "NOMINAL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 20.979190620942973,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.08730441331863403,
+              "gate": 0.9936512112617493,
+              "listwise": 4.987457752227783,
+              "pairwise": 0.6377221941947937,
+              "reversal": 1.4702702760696411,
+              "step": 1,
+              "total": 4.380101203918457
+            },
+            {
+              "distance": 0.04209762066602707,
+              "gate": 0.6572101712226868,
+              "listwise": 4.552692413330078,
+              "pairwise": 0.6584966778755188,
+              "reversal": 1.4550971984863281,
+              "step": 250,
+              "total": 4.10936164855957
+            },
+            {
+              "distance": 0.04303286224603653,
+              "gate": 0.7545866966247559,
+              "listwise": 4.93546724319458,
+              "pairwise": 0.6536738276481628,
+              "reversal": 1.46549654006958,
+              "step": 500,
+              "total": 4.310645580291748
+            },
+            {
+              "distance": 0.05313185229897499,
+              "gate": 1.2425087690353394,
+              "listwise": 4.742319583892822,
+              "pairwise": 0.6618279218673706,
+              "reversal": 1.4503371715545654,
+              "step": 750,
+              "total": 4.217967510223389
+            },
+            {
+              "distance": 0.07291087508201599,
+              "gate": 0.3356347978115082,
+              "listwise": 4.538730621337891,
+              "pairwise": 0.6522207856178284,
+              "reversal": 1.4620494842529297,
+              "step": 1000,
+              "total": 4.133792400360107
+            },
+            {
+              "distance": 0.010432696901261806,
+              "gate": 0.6609032154083252,
+              "listwise": 4.520063877105713,
+              "pairwise": 0.6348215937614441,
+              "reversal": 1.4548978805541992,
+              "step": 1250,
+              "total": 4.049382209777832
+            },
+            {
+              "distance": 0.03686847910284996,
+              "gate": 1.0538020133972168,
+              "listwise": 4.6071882247924805,
+              "pairwise": 0.6737349629402161,
+              "reversal": 1.4627315998077393,
+              "step": 1500,
+              "total": 4.150599479675293
+            },
+            {
+              "distance": 0.07332821190357208,
+              "gate": 0.7212792634963989,
+              "listwise": 4.499902725219727,
+              "pairwise": 0.6567620635032654,
+              "reversal": 1.454992651939392,
+              "step": 1750,
+              "total": 4.113865852355957
+            },
+            {
+              "distance": 0.05099460110068321,
+              "gate": 0.9496527910232544,
+              "listwise": 4.679297924041748,
+              "pairwise": 0.6477546095848083,
+              "reversal": 1.455623745918274,
+              "step": 2000,
+              "total": 4.179641246795654
+            },
+            {
+              "distance": 0.05672117695212364,
+              "gate": 0.7278289198875427,
+              "listwise": 4.587618827819824,
+              "pairwise": 0.6559925675392151,
+              "reversal": 1.4606072902679443,
+              "step": 2250,
+              "total": 4.1464128494262695
+            },
+            {
+              "distance": 0.04699667915701866,
+              "gate": 0.3260533809661865,
+              "listwise": 4.629134654998779,
+              "pairwise": 0.6716361045837402,
+              "reversal": 1.455196738243103,
+              "step": 2500,
+              "total": 4.155839443206787
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.3189932107925415e-07,
+          "mean_modulation_norm": 5.94689416885376
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150529.pt",
+      "sha256": "5c50202f4266a7a58c6fcf63af4151e8e002f50fe8c8bcffcfd11fe87df5d23b"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "NOMINAL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 22.459738885983825,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.0387222096323967,
+              "gate": 0.3467227518558502,
+              "listwise": 4.806022644042969,
+              "pairwise": 0.6551149487495422,
+              "reversal": 1.4754263162612915,
+              "step": 1,
+              "total": 4.2481842041015625
+            },
+            {
+              "distance": 0.10739360004663467,
+              "gate": 1.369950771331787,
+              "listwise": 4.706974506378174,
+              "pairwise": 0.6625341176986694,
+              "reversal": 1.4587173461914062,
+              "step": 250,
+              "total": 4.264564514160156
+            },
+            {
+              "distance": 0.035781532526016235,
+              "gate": 0.2537511885166168,
+              "listwise": 4.588169574737549,
+              "pairwise": 0.6372401118278503,
+              "reversal": 1.452254295349121,
+              "step": 500,
+              "total": 4.103278160095215
+            },
+            {
+              "distance": 0.02680410072207451,
+              "gate": 0.36768731474876404,
+              "listwise": 4.682729244232178,
+              "pairwise": 0.667247474193573,
+              "reversal": 1.4559792280197144,
+              "step": 750,
+              "total": 4.1614484786987305
+            },
+            {
+              "distance": 0.0876232460141182,
+              "gate": 0.7843154668807983,
+              "listwise": 4.554492473602295,
+              "pairwise": 0.6547624468803406,
+              "reversal": 1.4480476379394531,
+              "step": 1000,
+              "total": 4.148141384124756
+            },
+            {
+              "distance": 0.07775906473398209,
+              "gate": 1.1529536247253418,
+              "listwise": 4.672632217407227,
+              "pairwise": 0.6621417999267578,
+              "reversal": 1.4600366353988647,
+              "step": 1250,
+              "total": 4.21671199798584
+            },
+            {
+              "distance": 0.055208466947078705,
+              "gate": 1.00676691532135,
+              "listwise": 4.821435928344727,
+              "pairwise": 0.6757823824882507,
+              "reversal": 1.453256607055664,
+              "step": 1500,
+              "total": 4.267141819000244
+            },
+            {
+              "distance": 0.09977787733078003,
+              "gate": 0.5857481360435486,
+              "listwise": 4.613480567932129,
+              "pairwise": 0.6574494242668152,
+              "reversal": 1.4496018886566162,
+              "step": 1750,
+              "total": 4.190702438354492
+            },
+            {
+              "distance": 0.05432863533496857,
+              "gate": 0.6737457513809204,
+              "listwise": 4.7930402755737305,
+              "pairwise": 0.6547360420227051,
+              "reversal": 1.459500789642334,
+              "step": 2000,
+              "total": 4.244454860687256
+            },
+            {
+              "distance": 0.061754073947668076,
+              "gate": 0.5065819025039673,
+              "listwise": 4.602851867675781,
+              "pairwise": 0.6493561267852783,
+              "reversal": 1.457680344581604,
+              "step": 2250,
+              "total": 4.150604248046875
+            },
+            {
+              "distance": 0.042252495884895325,
+              "gate": 0.698612630367279,
+              "listwise": 4.672255516052246,
+              "pairwise": 0.6587050557136536,
+              "reversal": 1.4515457153320312,
+              "step": 2500,
+              "total": 4.166264533996582
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.3659398234722175e-07,
+          "mean_modulation_norm": 5.8753132820129395
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/NOMINAL_SHUFFLED/seed_13150543.pt",
+      "sha256": "d5429c799c8184bca32262f2c8bdf76eb1842105c42b6a42f946e31f70051f74"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "JOINT_STATE_NOMINAL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 20.97900756506715,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.025303928181529045,
+              "gate": 0.7676883339881897,
+              "listwise": 4.922647476196289,
+              "pairwise": 0.6368653178215027,
+              "reversal": 1.4649183750152588,
+              "step": 1,
+              "total": 4.277655601501465
+            },
+            {
+              "distance": 0.07335034757852554,
+              "gate": 0.6539064049720764,
+              "listwise": 4.591231346130371,
+              "pairwise": 0.6764212250709534,
+              "reversal": 1.4466073513031006,
+              "step": 250,
+              "total": 4.160322666168213
+            },
+            {
+              "distance": 0.04001425579190254,
+              "gate": 0.8347256779670715,
+              "listwise": 4.690587997436523,
+              "pairwise": 0.6496686339378357,
+              "reversal": 1.454123854637146,
+              "step": 500,
+              "total": 4.172613620758057
+            },
+            {
+              "distance": 0.0555538609623909,
+              "gate": 0.5930554270744324,
+              "listwise": 4.594820022583008,
+              "pairwise": 0.6598389148712158,
+              "reversal": 1.4465620517730713,
+              "step": 750,
+              "total": 4.135375499725342
+            },
+            {
+              "distance": 0.046203408390283585,
+              "gate": 0.7170284390449524,
+              "listwise": 4.565217018127441,
+              "pairwise": 0.661182701587677,
+              "reversal": 1.4485032558441162,
+              "step": 1000,
+              "total": 4.115076541900635
+            },
+            {
+              "distance": 0.05430298671126366,
+              "gate": 0.6897847056388855,
+              "listwise": 4.750384330749512,
+              "pairwise": 0.6760650277137756,
+              "reversal": 1.4591491222381592,
+              "step": 1250,
+              "total": 4.233574867248535
+            },
+            {
+              "distance": 0.03611398860812187,
+              "gate": 0.6195513606071472,
+              "listwise": 4.5641889572143555,
+              "pairwise": 0.6552948355674744,
+              "reversal": 1.45005464553833,
+              "step": 1500,
+              "total": 4.102106094360352
+            },
+            {
+              "distance": 0.06047866493463516,
+              "gate": 0.3249082863330841,
+              "listwise": 4.782406806945801,
+              "pairwise": 0.6661715507507324,
+              "reversal": 1.4456411600112915,
+              "step": 1750,
+              "total": 4.233658313751221
+            },
+            {
+              "distance": 0.01610763929784298,
+              "gate": 0.5791919827461243,
+              "listwise": 4.772414684295654,
+              "pairwise": 0.6577306389808655,
+              "reversal": 1.4619507789611816,
+              "step": 2000,
+              "total": 4.198923110961914
+            },
+            {
+              "distance": 0.0556994304060936,
+              "gate": 0.6570602655410767,
+              "listwise": 4.58731746673584,
+              "pairwise": 0.665086567401886,
+              "reversal": 1.451889991760254,
+              "step": 2250,
+              "total": 4.14036226272583
+            },
+            {
+              "distance": 0.0417812243103981,
+              "gate": 0.3324287235736847,
+              "listwise": 4.576412677764893,
+              "pairwise": 0.6616328358650208,
+              "reversal": 1.4620585441589355,
+              "step": 2500,
+              "total": 4.126187324523926
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.4404456294414558e-07,
+          "mean_modulation_norm": 5.8703789710998535
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150517.pt",
+      "sha256": "155795a6d64c0b92eb2c83376458f1ca54baf58e8a5aa6eecb0529299169c420"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "JOINT_STATE_NOMINAL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 49.538153248955496,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.04864676296710968,
+              "gate": 0.5836625099182129,
+              "listwise": 4.992954254150391,
+              "pairwise": 0.639034628868103,
+              "reversal": 1.4831873178482056,
+              "step": 1,
+              "total": 4.353664875030518
+            },
+            {
+              "distance": 0.030287081375718117,
+              "gate": 1.1553415060043335,
+              "listwise": 4.832949161529541,
+              "pairwise": 0.661276638507843,
+              "reversal": 1.4628275632858276,
+              "step": 250,
+              "total": 4.251780986785889
+            },
+            {
+              "distance": 0.05999264493584633,
+              "gate": 0.32514697313308716,
+              "listwise": 4.79095458984375,
+              "pairwise": 0.6532687544822693,
+              "reversal": 1.4595155715942383,
+              "step": 500,
+              "total": 4.244871616363525
+            },
+            {
+              "distance": 0.04702601209282875,
+              "gate": 0.8751726150512695,
+              "listwise": 4.695706367492676,
+              "pairwise": 0.6686039566993713,
+              "reversal": 1.4639153480529785,
+              "step": 750,
+              "total": 4.20184850692749
+            },
+            {
+              "distance": 0.036679357290267944,
+              "gate": 0.6435527801513672,
+              "listwise": 4.645603656768799,
+              "pairwise": 0.6564069390296936,
+              "reversal": 1.4606175422668457,
+              "step": 1000,
+              "total": 4.15473747253418
+            },
+            {
+              "distance": 0.0951797291636467,
+              "gate": 0.7554993629455566,
+              "listwise": 4.573826789855957,
+              "pairwise": 0.6467159390449524,
+              "reversal": 1.4630167484283447,
+              "step": 1250,
+              "total": 4.176022529602051
+            },
+            {
+              "distance": 0.08318448811769485,
+              "gate": 1.0461188554763794,
+              "listwise": 4.604516983032227,
+              "pairwise": 0.6511662602424622,
+              "reversal": 1.4695426225662231,
+              "step": 1500,
+              "total": 4.191030025482178
+            },
+            {
+              "distance": 0.0927509218454361,
+              "gate": 0.5151206254959106,
+              "listwise": 4.591116428375244,
+              "pairwise": 0.6778144836425781,
+              "reversal": 1.4586055278778076,
+              "step": 1750,
+              "total": 4.190972805023193
+            },
+            {
+              "distance": 0.020368335768580437,
+              "gate": 1.127970576286316,
+              "listwise": 4.738790512084961,
+              "pairwise": 0.6534414887428284,
+              "reversal": 1.4536776542663574,
+              "step": 2000,
+              "total": 4.181441783905029
+            },
+            {
+              "distance": 0.023377547040581703,
+              "gate": 0.8255698680877686,
+              "listwise": 4.7350358963012695,
+              "pairwise": 0.6520605087280273,
+              "reversal": 1.4553264379501343,
+              "step": 2250,
+              "total": 4.180507659912109
+            },
+            {
+              "distance": 0.040576376020908356,
+              "gate": 0.6622619032859802,
+              "listwise": 4.678502559661865,
+              "pairwise": 0.6717666983604431,
+              "reversal": 1.4636238813400269,
+              "step": 2500,
+              "total": 4.185957908630371
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 2.21033886305122e-07,
+          "mean_modulation_norm": 5.992880344390869
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150529.pt",
+      "sha256": "d715df69bdc29a1fbefc97cd48db24b3e3fb6fd7e534e45efe9bfdb7561ee7ad"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "JOINT_STATE_NOMINAL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 22.852281288011,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.029637979343533516,
+              "gate": 0.3545975685119629,
+              "listwise": 4.875067234039307,
+              "pairwise": 0.6447587609291077,
+              "reversal": 1.4411190748214722,
+              "step": 1,
+              "total": 4.23421573638916
+            },
+            {
+              "distance": 0.07728205621242523,
+              "gate": 0.7279295921325684,
+              "listwise": 4.669177055358887,
+              "pairwise": 0.6669482588768005,
+              "reversal": 1.4509117603302002,
+              "step": 250,
+              "total": 4.203536033630371
+            },
+            {
+              "distance": 0.052644167095422745,
+              "gate": 0.45793449878692627,
+              "listwise": 4.727871894836426,
+              "pairwise": 0.6611395478248596,
+              "reversal": 1.4583067893981934,
+              "step": 500,
+              "total": 4.210036277770996
+            },
+            {
+              "distance": 0.05514022707939148,
+              "gate": 0.5061156749725342,
+              "listwise": 4.92828893661499,
+              "pairwise": 0.6605095863342285,
+              "reversal": 1.4629886150360107,
+              "step": 750,
+              "total": 4.317589282989502
+            },
+            {
+              "distance": 0.07659801840782166,
+              "gate": 0.6002432107925415,
+              "listwise": 4.777738571166992,
+              "pairwise": 0.6699206233024597,
+              "reversal": 1.4535359144210815,
+              "step": 1000,
+              "total": 4.259965896606445
+            },
+            {
+              "distance": 0.0374629832804203,
+              "gate": 0.8706651329994202,
+              "listwise": 4.666785717010498,
+              "pairwise": 0.6618524789810181,
+              "reversal": 1.4552743434906006,
+              "step": 1250,
+              "total": 4.165762901306152
+            },
+            {
+              "distance": 0.05030597746372223,
+              "gate": 1.4420647621154785,
+              "listwise": 4.78634786605835,
+              "pairwise": 0.6607210040092468,
+              "reversal": 1.4642008543014526,
+              "step": 1500,
+              "total": 4.252461910247803
+            },
+            {
+              "distance": 0.045385003089904785,
+              "gate": 0.4870254099369049,
+              "listwise": 4.761866092681885,
+              "pairwise": 0.6555789113044739,
+              "reversal": 1.449296474456787,
+              "step": 1750,
+              "total": 4.2082743644714355
+            },
+            {
+              "distance": 0.03670709952712059,
+              "gate": 0.996284544467926,
+              "listwise": 4.638869762420654,
+              "pairwise": 0.6655789017677307,
+              "reversal": 1.459820032119751,
+              "step": 2000,
+              "total": 4.158714294433594
+            },
+            {
+              "distance": 0.052884865552186966,
+              "gate": 1.1593586206436157,
+              "listwise": 4.744210720062256,
+              "pairwise": 0.6730964779853821,
+              "reversal": 1.454085111618042,
+              "step": 2250,
+              "total": 4.227217674255371
+            },
+            {
+              "distance": 0.02830449491739273,
+              "gate": 0.7076394557952881,
+              "listwise": 4.743563652038574,
+              "pairwise": 0.6656898856163025,
+              "reversal": 1.454071283340454,
+              "step": 2500,
+              "total": 4.19407844543457
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.601874828338623e-07,
+          "mean_modulation_norm": 5.914787292480469
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/JOINT_STATE_NOMINAL_SHUFFLED/seed_13150543.pt",
+      "sha256": "cccbfc7e98059cf379ea488903c19e483a1ae52cf9b182f4866a4b0e6d8575ad"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CONSEQUENCE_LABEL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 22.80511991190724,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.03685006499290466,
+              "gate": 0.9225865602493286,
+              "listwise": 4.923605918884277,
+              "pairwise": 0.6464961767196655,
+              "reversal": 1.4030189514160156,
+              "step": 1,
+              "total": 4.2341461181640625
+            },
+            {
+              "distance": 0.02432313561439514,
+              "gate": 0.4243009090423584,
+              "listwise": 4.530360698699951,
+              "pairwise": 0.6527993083000183,
+              "reversal": 1.3729135990142822,
+              "step": 250,
+              "total": 3.9930596351623535
+            },
+            {
+              "distance": 0.0156891867518425,
+              "gate": 0.8286341428756714,
+              "listwise": 4.66667366027832,
+              "pairwise": 0.6333258152008057,
+              "reversal": 1.4003270864486694,
+              "step": 500,
+              "total": 4.074302673339844
+            },
+            {
+              "distance": 0.08383551985025406,
+              "gate": 0.9632287621498108,
+              "listwise": 4.6189799308776855,
+              "pairwise": 0.6641892790794373,
+              "reversal": 1.4005039930343628,
+              "step": 750,
+              "total": 4.135556221008301
+            },
+            {
+              "distance": 0.0794961005449295,
+              "gate": 0.9311571717262268,
+              "listwise": 4.634934902191162,
+              "pairwise": 0.6572118401527405,
+              "reversal": 1.3943711519241333,
+              "step": 1000,
+              "total": 4.1292524337768555
+            },
+            {
+              "distance": 0.04073582589626312,
+              "gate": 0.5127012133598328,
+              "listwise": 4.770778656005859,
+              "pairwise": 0.6667352318763733,
+              "reversal": 1.3755624294281006,
+              "step": 1250,
+              "total": 4.1401824951171875
+            },
+            {
+              "distance": 0.028632644563913345,
+              "gate": 1.1011431217193604,
+              "listwise": 4.7171244621276855,
+              "pairwise": 0.6470481753349304,
+              "reversal": 1.4051713943481445,
+              "step": 1500,
+              "total": 4.126902103424072
+            },
+            {
+              "distance": 0.06522073596715927,
+              "gate": 0.7879956364631653,
+              "listwise": 4.923696041107178,
+              "pairwise": 0.6462190747261047,
+              "reversal": 1.3813055753707886,
+              "step": 1750,
+              "total": 4.239363670349121
+            },
+            {
+              "distance": 0.03989493101835251,
+              "gate": 0.48066219687461853,
+              "listwise": 4.665501594543457,
+              "pairwise": 0.6541904807090759,
+              "reversal": 1.4155616760253906,
+              "step": 2000,
+              "total": 4.1201090812683105
+            },
+            {
+              "distance": 0.05792403966188431,
+              "gate": 0.6772854328155518,
+              "listwise": 4.839442253112793,
+              "pairwise": 0.664714515209198,
+              "reversal": 1.384613275527954,
+              "step": 2250,
+              "total": 4.201388359069824
+            },
+            {
+              "distance": 0.022185880690813065,
+              "gate": 0.9075145125389099,
+              "listwise": 4.741926670074463,
+              "pairwise": 0.6568896174430847,
+              "reversal": 1.4160484075546265,
+              "step": 2500,
+              "total": 4.146717548370361
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.648440957069397e-07,
+          "mean_modulation_norm": 5.953813552856445
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150517.pt",
+      "sha256": "22229bb9ae7312d056f90865f95d0b3947f551724809836fe972569343290780"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CONSEQUENCE_LABEL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 21.073567140032537,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.04907941818237305,
+              "gate": 0.5921374559402466,
+              "listwise": 4.849870681762695,
+              "pairwise": 0.6437376141548157,
+              "reversal": 1.3991645574569702,
+              "step": 1,
+              "total": 4.200969696044922
+            },
+            {
+              "distance": 0.08089950680732727,
+              "gate": 0.751910924911499,
+              "listwise": 5.017616271972656,
+              "pairwise": 0.6482154726982117,
+              "reversal": 1.3859939575195312,
+              "step": 250,
+              "total": 4.307328701019287
+            },
+            {
+              "distance": 0.04370798543095589,
+              "gate": 0.22336392104625702,
+              "listwise": 4.658259391784668,
+              "pairwise": 0.6552233695983887,
+              "reversal": 1.3841768503189087,
+              "step": 500,
+              "total": 4.086859703063965
+            },
+            {
+              "distance": 0.027196289971470833,
+              "gate": 0.7319402098655701,
+              "listwise": 4.720023155212402,
+              "pairwise": 0.6458747982978821,
+              "reversal": 1.377150058746338,
+              "step": 750,
+              "total": 4.0946149826049805
+            },
+            {
+              "distance": 0.038139209151268005,
+              "gate": 0.620050847530365,
+              "listwise": 4.882582664489746,
+              "pairwise": 0.637066125869751,
+              "reversal": 1.3704302310943604,
+              "step": 1000,
+              "total": 4.174594402313232
+            },
+            {
+              "distance": 0.022083554416894913,
+              "gate": 0.7026134729385376,
+              "listwise": 4.643089771270752,
+              "pairwise": 0.6399237513542175,
+              "reversal": 1.3703680038452148,
+              "step": 1250,
+              "total": 4.040984630584717
+            },
+            {
+              "distance": 0.06942565739154816,
+              "gate": 1.30289626121521,
+              "listwise": 4.903534412384033,
+              "pairwise": 0.6515195965766907,
+              "reversal": 1.4192073345184326,
+              "step": 1500,
+              "total": 4.279189109802246
+            },
+            {
+              "distance": 0.04583338648080826,
+              "gate": 1.3027839660644531,
+              "listwise": 4.770254135131836,
+              "pairwise": 0.6678081154823303,
+              "reversal": 1.3995838165283203,
+              "step": 1750,
+              "total": 4.177475929260254
+            },
+            {
+              "distance": 0.035203758627176285,
+              "gate": 0.885642409324646,
+              "listwise": 4.773736953735352,
+              "pairwise": 0.6474977135658264,
+              "reversal": 1.3923603296279907,
+              "step": 2000,
+              "total": 4.147037506103516
+            },
+            {
+              "distance": 0.05121832340955734,
+              "gate": 0.5631945729255676,
+              "listwise": 4.709528923034668,
+              "pairwise": 0.6544727683067322,
+              "reversal": 1.4006197452545166,
+              "step": 2250,
+              "total": 4.13947057723999
+            },
+            {
+              "distance": 0.0509214922785759,
+              "gate": 0.4032192528247833,
+              "listwise": 4.662531852722168,
+              "pairwise": 0.6439027786254883,
+              "reversal": 1.3973370790481567,
+              "step": 2500,
+              "total": 4.105507850646973
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.1858841020284672e-07,
+          "mean_modulation_norm": 5.949666976928711
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150529.pt",
+      "sha256": "35baf6e17b003ca45632355ee8e0ede5421fdbb55713940afd181bef1456a89e"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CONSEQUENCE_LABEL_SHUFFLED",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 21.849817781010643,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.05759868398308754,
+              "gate": 0.6171051263809204,
+              "listwise": 4.597376346588135,
+              "pairwise": 0.611717164516449,
+              "reversal": 1.4025577306747437,
+              "step": 1,
+              "total": 4.070874214172363
+            },
+            {
+              "distance": 0.02747294120490551,
+              "gate": 0.7577476501464844,
+              "listwise": 4.727794170379639,
+              "pairwise": 0.6578083634376526,
+              "reversal": 1.4092658758163452,
+              "step": 250,
+              "total": 4.137117385864258
+            },
+            {
+              "distance": 0.08269871771335602,
+              "gate": 0.5319125056266785,
+              "listwise": 4.763845920562744,
+              "pairwise": 0.670400083065033,
+              "reversal": 1.385341763496399,
+              "step": 500,
+              "total": 4.1904826164245605
+            },
+            {
+              "distance": 0.0364382266998291,
+              "gate": 0.7475706934928894,
+              "listwise": 4.622179985046387,
+              "pairwise": 0.6642736792564392,
+              "reversal": 1.4001188278198242,
+              "step": 750,
+              "total": 4.087259769439697
+            },
+            {
+              "distance": 0.049520235508680344,
+              "gate": 0.8474670052528381,
+              "listwise": 4.779178619384766,
+              "pairwise": 0.6621723771095276,
+              "reversal": 1.4188936948776245,
+              "step": 1000,
+              "total": 4.197564125061035
+            },
+            {
+              "distance": 0.023240622133016586,
+              "gate": 0.5765029191970825,
+              "listwise": 4.741703033447266,
+              "pairwise": 0.6527528762817383,
+              "reversal": 1.392053484916687,
+              "step": 1250,
+              "total": 4.118287086486816
+            },
+            {
+              "distance": 0.019263166934251785,
+              "gate": 0.34930098056793213,
+              "listwise": 4.767301082611084,
+              "pairwise": 0.6598286628723145,
+              "reversal": 1.3948243856430054,
+              "step": 1500,
+              "total": 4.131145477294922
+            },
+            {
+              "distance": 0.03676965460181236,
+              "gate": 0.6483167409896851,
+              "listwise": 4.823367118835449,
+              "pairwise": 0.6413894295692444,
+              "reversal": 1.3940974473953247,
+              "step": 1750,
+              "total": 4.1697282791137695
+            },
+            {
+              "distance": 0.056778889149427414,
+              "gate": 0.8199189305305481,
+              "listwise": 4.335869789123535,
+              "pairwise": 0.6512543559074402,
+              "reversal": 1.4223881959915161,
+              "step": 2000,
+              "total": 3.980928421020508
+            },
+            {
+              "distance": 0.017404993996024132,
+              "gate": 0.187507763504982,
+              "listwise": 4.715780258178711,
+              "pairwise": 0.657710075378418,
+              "reversal": 1.399588704109192,
+              "step": 2250,
+              "total": 4.105613708496094
+            },
+            {
+              "distance": 0.026607099920511246,
+              "gate": 0.5715300440788269,
+              "listwise": 4.70153284072876,
+              "pairwise": 0.6435366272926331,
+              "reversal": 1.3899717330932617,
+              "step": 2500,
+              "total": 4.0948286056518555
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.1579444247900028e-07,
+          "mean_modulation_norm": 5.9711127281188965
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CONSEQUENCE_LABEL_SHUFFLED/seed_13150543.pt",
+      "sha256": "ed2995ffeea368fc5b50ec5783e292dfaefc8f705087ccaa01813974e055792d"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "NO_REVERSAL_LOSS",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 17.742118266993202,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.03440924733877182,
+              "gate": 0.333778977394104,
+              "listwise": 5.112923622131348,
+              "pairwise": 0.635138213634491,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 2.911777973175049
+            },
+            {
+              "distance": 0.032169848680496216,
+              "gate": 0.6245169639587402,
+              "listwise": 4.571516990661621,
+              "pairwise": 0.6518148183822632,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.650080919265747
+            },
+            {
+              "distance": 0.027662208303809166,
+              "gate": 0.5912845730781555,
+              "listwise": 4.717691421508789,
+              "pairwise": 0.6508199572563171,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.7178306579589844
+            },
+            {
+              "distance": 0.04862867668271065,
+              "gate": 0.9166792035102844,
+              "listwise": 4.7638020515441895,
+              "pairwise": 0.6728308200836182,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.7761118412017822
+            },
+            {
+              "distance": 0.05253167450428009,
+              "gate": 1.0051579475402832,
+              "listwise": 4.517313480377197,
+              "pairwise": 0.6517956256866455,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.6471376419067383
+            },
+            {
+              "distance": 0.0461900532245636,
+              "gate": 0.42525988817214966,
+              "listwise": 4.458139419555664,
+              "pairwise": 0.6526517271995544,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.6058382987976074
+            },
+            {
+              "distance": 0.06532830744981766,
+              "gate": 0.9084265232086182,
+              "listwise": 4.441949844360352,
+              "pairwise": 0.6520969271659851,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.6214358806610107
+            },
+            {
+              "distance": 0.03448595851659775,
+              "gate": 0.60312420129776,
+              "listwise": 4.456634998321533,
+              "pairwise": 0.6385877728462219,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.5881285667419434
+            },
+            {
+              "distance": 0.07166075706481934,
+              "gate": 0.587836503982544,
+              "listwise": 4.723888397216797,
+              "pairwise": 0.6596976518630981,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.76933217048645
+            },
+            {
+              "distance": 0.05512556433677673,
+              "gate": 0.672322154045105,
+              "listwise": 4.422183990478516,
+              "pairwise": 0.6550040245056152,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.60044264793396
+            },
+            {
+              "distance": 0.030264923349022865,
+              "gate": 0.5008844137191772,
+              "listwise": 4.454113483428955,
+              "pairwise": 0.6398033499717712,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.5822322368621826
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 9.437402326284428e-08,
+          "mean_modulation_norm": 5.870606899261475
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150517.pt",
+      "sha256": "fd69d57d5580cac1f7cf9e5e5a5c993d9a0653a79f57a002e26907be7f60a95a"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "NO_REVERSAL_LOSS",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 16.36396974697709,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.01983637735247612,
+              "gate": 1.0586163997650146,
+              "listwise": 4.799861431121826,
+              "pairwise": 0.6372783780097961,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 2.748992443084717
+            },
+            {
+              "distance": 0.07331277430057526,
+              "gate": 0.9631530046463013,
+              "listwise": 4.388500213623047,
+              "pairwise": 0.6582221388816833,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.6063055992126465
+            },
+            {
+              "distance": 0.05813692882657051,
+              "gate": 0.9674721360206604,
+              "listwise": 4.714601516723633,
+              "pairwise": 0.6697353720664978,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.7599802017211914
+            },
+            {
+              "distance": 0.02993514947593212,
+              "gate": 0.35601916909217834,
+              "listwise": 4.720458984375,
+              "pairwise": 0.6618668437004089,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.724658250808716
+            },
+            {
+              "distance": 0.05814554914832115,
+              "gate": 0.4960537254810333,
+              "listwise": 4.511003017425537,
+              "pairwise": 0.6396205425262451,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.638417959213257
+            },
+            {
+              "distance": 0.05756223574280739,
+              "gate": 1.4125734567642212,
+              "listwise": 4.501903057098389,
+              "pairwise": 0.6552006602287292,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.650239944458008
+            },
+            {
+              "distance": 0.026557665318250656,
+              "gate": 0.5469639897346497,
+              "listwise": 4.5938849449157715,
+              "pairwise": 0.65403813123703,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.6559886932373047
+            },
+            {
+              "distance": 0.0359237939119339,
+              "gate": 0.8342515230178833,
+              "listwise": 4.502861976623535,
+              "pairwise": 0.6541123986244202,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.622753381729126
+            },
+            {
+              "distance": 0.03884977102279663,
+              "gate": 0.3231286406517029,
+              "listwise": 4.62197732925415,
+              "pairwise": 0.6535237431526184,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.6798315048217773
+            },
+            {
+              "distance": 0.05939371883869171,
+              "gate": 0.21744953095912933,
+              "listwise": 4.567300796508789,
+              "pairwise": 0.6644218564033508,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.677429437637329
+            },
+            {
+              "distance": 0.044193677604198456,
+              "gate": 1.0251697301864624,
+              "listwise": 4.7332987785339355,
+              "pairwise": 0.6606629490852356,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.7514262199401855
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.51805579662323e-07,
+          "mean_modulation_norm": 5.834897518157959
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150529.pt",
+      "sha256": "1f91089985846e4a08426504e19608266c0f6ec44497a551764421c977ba41f9"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "NO_REVERSAL_LOSS",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 15.667109095025808,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": false,
+          "trace": [
+            {
+              "distance": 0.03951089829206467,
+              "gate": 0.6860355138778687,
+              "listwise": 4.630705833435059,
+              "pairwise": 0.634650468826294,
+              "reversal": 0.0,
+              "step": 1,
+              "total": 2.679049253463745
+            },
+            {
+              "distance": 0.04505663737654686,
+              "gate": 0.8218299746513367,
+              "listwise": 4.534050941467285,
+              "pairwise": 0.6457958817481995,
+              "reversal": 0.0,
+              "step": 250,
+              "total": 2.643198251724243
+            },
+            {
+              "distance": 0.041386041790246964,
+              "gate": 0.46937042474746704,
+              "listwise": 4.606043815612793,
+              "pairwise": 0.6589719653129578,
+              "reversal": 0.0,
+              "step": 500,
+              "total": 2.6785876750946045
+            },
+            {
+              "distance": 0.04030895605683327,
+              "gate": 0.4121922552585602,
+              "listwise": 4.635525226593018,
+              "pairwise": 0.6556467413902283,
+              "reversal": 0.0,
+              "step": 750,
+              "total": 2.690016984939575
+            },
+            {
+              "distance": 0.019312063232064247,
+              "gate": 0.7716005444526672,
+              "listwise": 4.751170635223389,
+              "pairwise": 0.6568539142608643,
+              "reversal": 0.0,
+              "step": 1000,
+              "total": 2.7310402393341064
+            },
+            {
+              "distance": 0.07110995054244995,
+              "gate": 0.7759335041046143,
+              "listwise": 4.605220317840576,
+              "pairwise": 0.6657913327217102,
+              "reversal": 0.0,
+              "step": 1250,
+              "total": 2.7143750190734863
+            },
+            {
+              "distance": 0.036707207560539246,
+              "gate": 0.896465539932251,
+              "listwise": 4.587357997894287,
+              "pairwise": 0.6636918187141418,
+              "reversal": 0.0,
+              "step": 1500,
+              "total": 2.671196699142456
+            },
+            {
+              "distance": 0.08241505175828934,
+              "gate": 0.8546331524848938,
+              "listwise": 4.4706315994262695,
+              "pairwise": 0.6636646389961243,
+              "reversal": 0.0,
+              "step": 1750,
+              "total": 2.658109426498413
+            },
+            {
+              "distance": 0.047656748443841934,
+              "gate": 0.35762399435043335,
+              "listwise": 4.482597827911377,
+              "pairwise": 0.6507421135902405,
+              "reversal": 0.0,
+              "step": 2000,
+              "total": 2.617902994155884
+            },
+            {
+              "distance": 0.05286233127117157,
+              "gate": 0.8353375196456909,
+              "listwise": 4.584831237792969,
+              "pairwise": 0.647300124168396,
+              "reversal": 0.0,
+              "step": 2250,
+              "total": 2.677281618118286
+            },
+            {
+              "distance": 0.05908729135990143,
+              "gate": 0.5887835025787354,
+              "listwise": 4.351251602172852,
+              "pairwise": 0.6508226990699768,
+              "reversal": 0.0,
+              "step": 2500,
+              "total": 2.566012144088745
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.25,
+          "maximum_absolute_train_mean": 1.8579885363578796e-07,
+          "mean_modulation_norm": 5.862380504608154
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/NO_REVERSAL_LOSS/seed_13150543.pt",
+      "sha256": "7fd3dc3bf1ede30d398078a9f8f20ae579fdf4971fa19c4777c36a785bcb19ed"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "PHASE_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": true,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 25.799999849055894,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.02970225177705288,
+              "gate": 0.008548947982490063,
+              "listwise": 4.621683120727539,
+              "pairwise": 0.6586454510688782,
+              "reversal": 1.4613046646118164,
+              "step": 1,
+              "total": 4.131256580352783
+            },
+            {
+              "distance": 0.0507623516023159,
+              "gate": 0.008772565051913261,
+              "listwise": 4.5491766929626465,
+              "pairwise": 0.6515792012214661,
+              "reversal": 1.4560520648956299,
+              "step": 250,
+              "total": 4.1072797775268555
+            },
+            {
+              "distance": 0.04966188594698906,
+              "gate": 0.02416663058102131,
+              "listwise": 4.561284065246582,
+              "pairwise": 0.6603091359138489,
+              "reversal": 1.453740119934082,
+              "step": 500,
+              "total": 4.114440441131592
+            },
+            {
+              "distance": 0.13805177807807922,
+              "gate": 0.02280905283987522,
+              "listwise": 4.424633502960205,
+              "pairwise": 0.6662223935127258,
+              "reversal": 1.4533065557479858,
+              "step": 750,
+              "total": 4.137014389038086
+            },
+            {
+              "distance": 0.09511193633079529,
+              "gate": 0.01825939305126667,
+              "listwise": 4.42503547668457,
+              "pairwise": 0.6580089330673218,
+              "reversal": 1.4537767171859741,
+              "step": 1000,
+              "total": 4.090593338012695
+            },
+            {
+              "distance": 0.05140317231416702,
+              "gate": 0.040187083184719086,
+              "listwise": 4.57963752746582,
+              "pairwise": 0.6465383172035217,
+              "reversal": 1.462787389755249,
+              "step": 1250,
+              "total": 4.12768030166626
+            },
+            {
+              "distance": 0.0576731376349926,
+              "gate": 0.035652533173561096,
+              "listwise": 4.542398929595947,
+              "pairwise": 0.6616525650024414,
+              "reversal": 1.4568461179733276,
+              "step": 1500,
+              "total": 4.116901874542236
+            },
+            {
+              "distance": 0.02688775584101677,
+              "gate": 0.12005916982889175,
+              "listwise": 4.821177005767822,
+              "pairwise": 0.6534058451652527,
+              "reversal": 1.457292079925537,
+              "step": 1750,
+              "total": 4.222671985626221
+            },
+            {
+              "distance": 0.052569638937711716,
+              "gate": 0.038595229387283325,
+              "listwise": 4.5725603103637695,
+              "pairwise": 0.6592650413513184,
+              "reversal": 1.4604079723358154,
+              "step": 2000,
+              "total": 4.129275798797607
+            },
+            {
+              "distance": 0.02606799267232418,
+              "gate": 0.06881939619779587,
+              "listwise": 4.48156213760376,
+              "pairwise": 0.6593076586723328,
+              "reversal": 1.4525883197784424,
+              "step": 2250,
+              "total": 4.049779415130615
+            },
+            {
+              "distance": 0.0617532916367054,
+              "gate": 0.07839430123567581,
+              "listwise": 4.715580940246582,
+              "pairwise": 0.6559903025627136,
+              "reversal": 1.4640793800354004,
+              "step": 2500,
+              "total": 4.21240234375
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.211126685142517,
+          "maximum_absolute_train_mean": 1.9076590263011894e-07,
+          "mean_modulation_norm": 2.2347636222839355
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150517.pt",
+      "sha256": "2e51119d2350f2a01fe7785871429c40553d1062b4b558d6c8d79a6f148270f4"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "PHASE_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": true,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 23.57899528706912,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.037529490888118744,
+              "gate": 0.009692647494375706,
+              "listwise": 4.528744220733643,
+              "pairwise": 0.6584768295288086,
+              "reversal": 1.4558597803115845,
+              "step": 1,
+              "total": 4.087096691131592
+            },
+            {
+              "distance": 0.025573041290044785,
+              "gate": 0.01100385095924139,
+              "listwise": 4.648494720458984,
+              "pairwise": 0.669654369354248,
+              "reversal": 1.460008144378662,
+              "step": 250,
+              "total": 4.144765853881836
+            },
+            {
+              "distance": 0.04672183468937874,
+              "gate": 0.0243593230843544,
+              "listwise": 4.6063432693481445,
+              "pairwise": 0.6622702479362488,
+              "reversal": 1.456230878829956,
+              "step": 500,
+              "total": 4.137503147125244
+            },
+            {
+              "distance": 0.06126515939831734,
+              "gate": 0.056542571634054184,
+              "listwise": 4.6202545166015625,
+              "pairwise": 0.658922016620636,
+              "reversal": 1.4647082090377808,
+              "step": 750,
+              "total": 4.1661272048950195
+            },
+            {
+              "distance": 0.023524492979049683,
+              "gate": 0.019042348489165306,
+              "listwise": 4.519960880279541,
+              "pairwise": 0.641758143901825,
+              "reversal": 1.4573476314544678,
+              "step": 1000,
+              "total": 4.0619215965271
+            },
+            {
+              "distance": 0.052062783390283585,
+              "gate": 0.04093450680375099,
+              "listwise": 4.564092636108398,
+              "pairwise": 0.656234085559845,
+              "reversal": 1.4590950012207031,
+              "step": 1250,
+              "total": 4.121730327606201
+            },
+            {
+              "distance": 0.01742928847670555,
+              "gate": 0.12658189237117767,
+              "listwise": 4.631023406982422,
+              "pairwise": 0.656075656414032,
+              "reversal": 1.4529017210006714,
+              "step": 1500,
+              "total": 4.115146636962891
+            },
+            {
+              "distance": 0.0513746440410614,
+              "gate": 0.03864242136478424,
+              "listwise": 4.732603549957275,
+              "pairwise": 0.6681533455848694,
+              "reversal": 1.4575681686401367,
+              "step": 1750,
+              "total": 4.209707260131836
+            },
+            {
+              "distance": 0.038512155413627625,
+              "gate": 0.1168152391910553,
+              "listwise": 4.413050651550293,
+              "pairwise": 0.6637462973594666,
+              "reversal": 1.4470094442367554,
+              "step": 2000,
+              "total": 4.025088310241699
+            },
+            {
+              "distance": 0.04684276133775711,
+              "gate": 0.04669000208377838,
+              "listwise": 4.704005718231201,
+              "pairwise": 0.6384745240211487,
+              "reversal": 1.4582175016403198,
+              "step": 2250,
+              "total": 4.176767349243164
+            },
+            {
+              "distance": 0.03812001645565033,
+              "gate": 0.051878999918699265,
+              "listwise": 4.728630065917969,
+              "pairwise": 0.6212341785430908,
+              "reversal": 1.4562368392944336,
+              "step": 2500,
+              "total": 4.1698079109191895
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.1741511821746826,
+          "maximum_absolute_train_mean": 2.5533759639984055e-07,
+          "mean_modulation_norm": 2.078611135482788
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150529.pt",
+      "sha256": "ab1d5777197a8b39e228e8de1e92f1264aded9a3e5b6dc642818215955a052ea"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "PHASE_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": true,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 22.929533257964067,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.07751743495464325,
+              "gate": 0.009365036152303219,
+              "listwise": 4.610638618469238,
+              "pairwise": 0.663550853729248,
+              "reversal": 1.4542572498321533,
+              "step": 1,
+              "total": 4.1689629554748535
+            },
+            {
+              "distance": 0.08787506818771362,
+              "gate": 0.007041031960397959,
+              "listwise": 4.566600799560547,
+              "pairwise": 0.6536949872970581,
+              "reversal": 1.4486826658248901,
+              "step": 250,
+              "total": 4.14677619934082
+            },
+            {
+              "distance": 0.09217565506696701,
+              "gate": 0.03747749328613281,
+              "listwise": 4.6689653396606445,
+              "pairwise": 0.6603926420211792,
+              "reversal": 1.4569839239120483,
+              "step": 500,
+              "total": 4.2142133712768555
+            },
+            {
+              "distance": 0.019666099920868874,
+              "gate": 0.04755819961428642,
+              "listwise": 4.707902908325195,
+              "pairwise": 0.6596394181251526,
+              "reversal": 1.4614431858062744,
+              "step": 750,
+              "total": 4.165356159210205
+            },
+            {
+              "distance": 0.07174313068389893,
+              "gate": 0.02551824040710926,
+              "listwise": 4.552645683288574,
+              "pairwise": 0.6583065986633301,
+              "reversal": 1.4629771709442139,
+              "step": 1000,
+              "total": 4.140451908111572
+            },
+            {
+              "distance": 0.01222564559429884,
+              "gate": 0.027878861874341965,
+              "listwise": 4.479986190795898,
+              "pairwise": 0.6403769850730896,
+              "reversal": 1.4609389305114746,
+              "step": 1250,
+              "total": 4.03362512588501
+            },
+            {
+              "distance": 0.07983090728521347,
+              "gate": 0.027427174150943756,
+              "listwise": 4.5703325271606445,
+              "pairwise": 0.6634343266487122,
+              "reversal": 1.4548808336257935,
+              "step": 1500,
+              "total": 4.151869297027588
+            },
+            {
+              "distance": 0.05905705690383911,
+              "gate": 0.05141765996813774,
+              "listwise": 4.425667762756348,
+              "pairwise": 0.6474047899246216,
+              "reversal": 1.4652179479599,
+              "step": 1750,
+              "total": 4.061325550079346
+            },
+            {
+              "distance": 0.047692421823740005,
+              "gate": 0.09032885730266571,
+              "listwise": 4.515820503234863,
+              "pairwise": 0.6559614539146423,
+              "reversal": 1.4624896049499512,
+              "step": 2000,
+              "total": 4.096976280212402
+            },
+            {
+              "distance": 0.07366582751274109,
+              "gate": 0.05009617283940315,
+              "listwise": 4.541579723358154,
+              "pairwise": 0.6506715416908264,
+              "reversal": 1.4596810340881348,
+              "step": 2250,
+              "total": 4.129973888397217
+            },
+            {
+              "distance": 0.02614232897758484,
+              "gate": 0.0780261904001236,
+              "listwise": 4.738608360290527,
+              "pairwise": 0.649483859539032,
+              "reversal": 1.4599063396453857,
+              "step": 2500,
+              "total": 4.180874824523926
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.1731723546981812,
+          "maximum_absolute_train_mean": 2.377200871706009e-07,
+          "mean_modulation_norm": 2.2902777194976807
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/PHASE_ONLY/seed_13150543.pt",
+      "sha256": "4d96d8583e239abfe97a88765833c2a28b3808f6360336813b2f684fe72adb55"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CURRENT_CONTACT_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150517,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 22.632354709901847,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.08184656500816345,
+              "gate": 0.008466962724924088,
+              "listwise": 4.580541610717773,
+              "pairwise": 0.6607155799865723,
+              "reversal": 1.4638822078704834,
+              "step": 1,
+              "total": 4.166441917419434
+            },
+            {
+              "distance": 0.03319152444601059,
+              "gate": 0.009047637693583965,
+              "listwise": 4.477991104125977,
+              "pairwise": 0.6435874104499817,
+              "reversal": 1.4578797817230225,
+              "step": 250,
+              "total": 4.0519514083862305
+            },
+            {
+              "distance": 0.023120984435081482,
+              "gate": 0.017433760687708855,
+              "listwise": 4.712626934051514,
+              "pairwise": 0.6532856225967407,
+              "reversal": 1.4568853378295898,
+              "step": 500,
+              "total": 4.163137435913086
+            },
+            {
+              "distance": 0.05385518819093704,
+              "gate": 0.025596145540475845,
+              "listwise": 4.594030857086182,
+              "pairwise": 0.6612676978111267,
+              "reversal": 1.4559812545776367,
+              "step": 750,
+              "total": 4.137741565704346
+            },
+            {
+              "distance": 0.05358225107192993,
+              "gate": 0.028437133878469467,
+              "listwise": 4.509881973266602,
+              "pairwise": 0.6715545654296875,
+              "reversal": 1.4589310884475708,
+              "step": 1000,
+              "total": 4.103515625
+            },
+            {
+              "distance": 0.06483399122953415,
+              "gate": 0.05566171929240227,
+              "listwise": 4.512463569641113,
+              "pairwise": 0.659440815448761,
+              "reversal": 1.4523463249206543,
+              "step": 1250,
+              "total": 4.103688716888428
+            },
+            {
+              "distance": 0.061739612370729446,
+              "gate": 0.03740213066339493,
+              "listwise": 4.679771900177002,
+              "pairwise": 0.671326220035553,
+              "reversal": 1.4545221328735352,
+              "step": 1500,
+              "total": 4.1921844482421875
+            },
+            {
+              "distance": 0.03324500471353531,
+              "gate": 0.06752181053161621,
+              "listwise": 4.618377685546875,
+              "pairwise": 0.6554285883903503,
+              "reversal": 1.4552134275436401,
+              "step": 1750,
+              "total": 4.126036643981934
+            },
+            {
+              "distance": 0.045509740710258484,
+              "gate": 0.06940571218729019,
+              "listwise": 4.609548568725586,
+              "pairwise": 0.6648041605949402,
+              "reversal": 1.4638441801071167,
+              "step": 2000,
+              "total": 4.147224426269531
+            },
+            {
+              "distance": 0.03508105129003525,
+              "gate": 0.05439598113298416,
+              "listwise": 4.5268449783325195,
+              "pairwise": 0.65482097864151,
+              "reversal": 1.4689289331436157,
+              "step": 2250,
+              "total": 4.095386981964111
+            },
+            {
+              "distance": 0.026676572859287262,
+              "gate": 0.03853357955813408,
+              "listwise": 4.599205017089844,
+              "pairwise": 0.6506949663162231,
+              "reversal": 1.457082748413086,
+              "step": 2500,
+              "total": 4.109094619750977
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.1993814706802368,
+          "maximum_absolute_train_mean": 5.903032729293045e-07,
+          "mean_modulation_norm": 2.0656492710113525
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150517.pt",
+      "sha256": "58637d8811bedea74f90c830471462276de56f61366af125a7aed8454b984fbb"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CURRENT_CONTACT_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150529,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 21.559865258052014,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.0403166189789772,
+              "gate": 0.009609084576368332,
+              "listwise": 4.389779567718506,
+              "pairwise": 0.6487976312637329,
+              "reversal": 1.4535472393035889,
+              "step": 1,
+              "total": 4.013248443603516
+            },
+            {
+              "distance": 0.07740067690610886,
+              "gate": 0.013738245703279972,
+              "listwise": 4.453507423400879,
+              "pairwise": 0.6504232883453369,
+              "reversal": 1.4584389925003052,
+              "step": 250,
+              "total": 4.087942123413086
+            },
+            {
+              "distance": 0.07871338725090027,
+              "gate": 0.01779625006020069,
+              "listwise": 4.566349029541016,
+              "pairwise": 0.6721274852752686,
+              "reversal": 1.4598573446273804,
+              "step": 500,
+              "total": 4.157986640930176
+            },
+            {
+              "distance": 0.0799538791179657,
+              "gate": 0.021696478128433228,
+              "listwise": 4.601244926452637,
+              "pairwise": 0.6644842028617859,
+              "reversal": 1.4539477825164795,
+              "step": 750,
+              "total": 4.166983127593994
+            },
+            {
+              "distance": 0.029217444360256195,
+              "gate": 0.04193262383341789,
+              "listwise": 4.680122375488281,
+              "pairwise": 0.6637877225875854,
+              "reversal": 1.4586666822433472,
+              "step": 1000,
+              "total": 4.1602582931518555
+            },
+            {
+              "distance": 0.06866536289453506,
+              "gate": 0.05312284454703331,
+              "listwise": 4.681412696838379,
+              "pairwise": 0.6659504175186157,
+              "reversal": 1.4582959413528442,
+              "step": 1250,
+              "total": 4.201174259185791
+            },
+            {
+              "distance": 0.03732070326805115,
+              "gate": 0.022683143615722656,
+              "listwise": 4.66053581237793,
+              "pairwise": 0.6609278321266174,
+              "reversal": 1.465206265449524,
+              "step": 1500,
+              "total": 4.163485527038574
+            },
+            {
+              "distance": 0.011568036861717701,
+              "gate": 0.02889903262257576,
+              "listwise": 4.623579502105713,
+              "pairwise": 0.658057451248169,
+              "reversal": 1.4595911502838135,
+              "step": 1750,
+              "total": 4.112266540527344
+            },
+            {
+              "distance": 0.06009754538536072,
+              "gate": 0.027336418628692627,
+              "listwise": 4.69956111907959,
+              "pairwise": 0.6602197289466858,
+              "reversal": 1.4565175771713257,
+              "step": 2000,
+              "total": 4.196778774261475
+            },
+            {
+              "distance": 0.04970645532011986,
+              "gate": 0.035102132707834244,
+              "listwise": 4.851309776306152,
+              "pairwise": 0.6546558737754822,
+              "reversal": 1.4586650133132935,
+              "step": 2250,
+              "total": 4.26170539855957
+            },
+            {
+              "distance": 0.027629049494862556,
+              "gate": 0.07600796967744827,
+              "listwise": 4.6189165115356445,
+              "pairwise": 0.6587812304496765,
+              "reversal": 1.4558477401733398,
+              "step": 2500,
+              "total": 4.123085975646973
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.182060956954956,
+          "maximum_absolute_train_mean": 4.262741128968628e-07,
+          "mean_modulation_norm": 1.8658517599105835
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150529.pt",
+      "sha256": "435c1b6e2aba53e190d3eedb9efcc2a28b1392a3db57e85134e6fb0ed9bc3fba"
+    },
+    {
+      "metadata": {
+        "base_frozen": true,
+        "base_source": "B2_STATIC_CONSEQUENCE",
+        "control": "CURRENT_CONTACT_ONLY",
+        "future_inputs_used": false,
+        "method": "P1_CONTEXT_GATED_PSD",
+        "offset_solver": "per-dimension observed-logit bracket with 20-unit exterior margin",
+        "only_modulator_trained": true,
+        "phase_input_used": false,
+        "seed": 13150543,
+        "temperature": 0.1,
+        "training": {
+          "elapsed_seconds": 25.725972470012493,
+          "label_kind": "consequence",
+          "optimizer_steps": 2500,
+          "parameter_count": 72040,
+          "reversal_enabled": true,
+          "trace": [
+            {
+              "distance": 0.028688447549939156,
+              "gate": 0.009297172538936138,
+              "listwise": 4.681252956390381,
+              "pairwise": 0.6773979067802429,
+              "reversal": 1.4601494073867798,
+              "step": 1,
+              "total": 4.1682562828063965
+            },
+            {
+              "distance": 0.029257455840706825,
+              "gate": 0.0065430267713963985,
+              "listwise": 4.744290351867676,
+              "pairwise": 0.6707570552825928,
+              "reversal": 1.4526430368423462,
+              "step": 250,
+              "total": 4.189489364624023
+            },
+            {
+              "distance": 0.05859854817390442,
+              "gate": 0.039552412927150726,
+              "listwise": 4.601747512817383,
+              "pairwise": 0.6550931930541992,
+              "reversal": 1.454801082611084,
+              "step": 500,
+              "total": 4.142215251922607
+            },
+            {
+              "distance": 0.06293599307537079,
+              "gate": 0.04684826731681824,
+              "listwise": 4.636342525482178,
+              "pairwise": 0.6496717929840088,
+              "reversal": 1.4515891075134277,
+              "step": 750,
+              "total": 4.158000469207764
+            },
+            {
+              "distance": 0.046147264540195465,
+              "gate": 0.03612498193979263,
+              "listwise": 4.457596778869629,
+              "pairwise": 0.6485403180122375,
+              "reversal": 1.4628826379776,
+              "step": 1000,
+              "total": 4.062459945678711
+            },
+            {
+              "distance": 0.03048543632030487,
+              "gate": 0.029060453176498413,
+              "listwise": 4.652143478393555,
+              "pairwise": 0.661154568195343,
+              "reversal": 1.460434913635254,
+              "step": 1250,
+              "total": 4.147860050201416
+            },
+            {
+              "distance": 0.03744000941514969,
+              "gate": 0.018040211871266365,
+              "listwise": 4.646856307983398,
+              "pairwise": 0.6616383194923401,
+              "reversal": 1.4585386514663696,
+              "step": 1500,
+              "total": 4.150406360626221
+            },
+            {
+              "distance": 0.027307283133268356,
+              "gate": 0.025600744411349297,
+              "listwise": 4.683704376220703,
+              "pairwise": 0.667241632938385,
+              "reversal": 1.4572538137435913,
+              "step": 1750,
+              "total": 4.160290241241455
+            },
+            {
+              "distance": 0.07374156266450882,
+              "gate": 0.03695407882332802,
+              "listwise": 4.591386318206787,
+              "pairwise": 0.6742991805076599,
+              "reversal": 1.4635217189788818,
+              "step": 2000,
+              "total": 4.170475482940674
+            },
+            {
+              "distance": 0.00848263967782259,
+              "gate": 0.02604241855442524,
+              "listwise": 4.649004936218262,
+              "pairwise": 0.6471506953239441,
+              "reversal": 1.4622224569320679,
+              "step": 2250,
+              "total": 4.119043350219727
+            },
+            {
+              "distance": 0.024106545373797417,
+              "gate": 0.028661103919148445,
+              "listwise": 4.444418430328369,
+              "pairwise": 0.643437385559082,
+              "reversal": 1.4515467882156372,
+              "step": 2500,
+              "total": 4.019867897033691
+            }
+          ],
+          "trainable_parameter_count": 51032
+        },
+        "zero_mean_offset_audit": {
+          "maximum_absolute_modulation": 1.1640737056732178,
+          "maximum_absolute_train_mean": 7.444565994774166e-07,
+          "mean_modulation_norm": 1.9315742254257202
+        }
+      },
+      "path": "CONTEXT_METRIC_CHECKPOINTS/CURRENT_CONTACT_ONLY/seed_13150543.pt",
+      "sha256": "a2f4adae6cbd37a5def7b7fa760d2bab8d145bf51d9ec7c026e6269125905b3e"
+    }
+  ],
+  "matched_parameter_counts": {
+    "ACTION_ONLY": [
+      72040
+    ],
+    "CONSEQUENCE_LABEL_SHUFFLED": [
+      72040
+    ],
+    "CONTEXT_SHUFFLED": [
+      72040
+    ],
+    "CURRENT_CONTACT_ONLY": [
+      72040
+    ],
+    "JOINT_STATE_NOMINAL_SHUFFLED": [
+      72040
+    ],
+    "NOMINAL_SHUFFLED": [
+      72040
+    ],
+    "NO_REVERSAL_LOSS": [
+      72040
+    ],
+    "PHASE_ONLY": [
+      72040
+    ],
+    "PROPOSED": [
+      72040
+    ]
+  },
+  "model_seeds": [
+    13150517,
+    13150529,
+    13150543
+  ],
+  "pai_jobs_submitted": 0,
+  "selected_temperature": 0.1,
+  "temperature_calibration_artifact": "TEMPERATURE_CALIBRATION.json",
+  "torch_threads": 16,
+  "training_steps_per_final_checkpoint": 2500
+}
