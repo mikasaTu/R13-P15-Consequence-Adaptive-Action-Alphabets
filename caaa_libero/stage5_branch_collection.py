@@ -245,6 +245,35 @@ def _load_shard(path):
         return {name: np.asarray(data[name]).copy() for name in data.files}
 
 
+def load_fresh_records(project_root, output_root=None, scratch_root=SCRATCH_ROOT):
+    """Load committed fresh-confirmation shards in the frozen split order."""
+    project_root = os.path.abspath(project_root)
+    output_root = output_root or os.path.join(project_root, OUTPUT_RELATIVE)
+    split = _require_committed_split(project_root, output_root)
+    records = []
+    for row in split["records"]:
+        paths = _paths(scratch_root, row["state_key"])
+        records.append(
+            {
+                "meta": {
+                    "key": row["state_key"],
+                    "task_id": row["task_id"],
+                    "episode_id": int(row["source_episode_id"]),
+                    "split": "fresh_confirmation",
+                    "phase": row["phase"],
+                    "snapshot_index": int(row["state_index"]),
+                },
+                "context": _load_shard(paths["context"]),
+                "support": _load_shard(paths["support"]),
+                "candidate": _load_shard(paths["candidate"]),
+                "context_path": paths["context"],
+                "support_path": paths["support"],
+                "candidate_path": paths["candidate"],
+            }
+        )
+    return records
+
+
 def build_fresh_cache(project_root, output_root=None, scratch_root=SCRATCH_ROOT):
     project_root = os.path.abspath(project_root)
     output_root = output_root or os.path.join(project_root, OUTPUT_RELATIVE)

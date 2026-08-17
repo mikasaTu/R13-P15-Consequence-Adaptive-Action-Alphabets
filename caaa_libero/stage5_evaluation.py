@@ -19,6 +19,7 @@ from .stage3_metrics import (
     write_csv,
 )
 from .stage4_data import historical_records
+from .stage5_branch_collection import load_fresh_records
 from .stage5_config import (
     BOOTSTRAP_REPLICATES,
     BOOTSTRAP_SEED,
@@ -327,11 +328,11 @@ def _realized_rows(records, cache, decoded, bundle, split):
                     latency_ms=float(bundle[method]["latency_ms_per_query"]),
                     extra={
                         "split": split,
-                        "evidence": (
-                            "STAGE5_DEVELOPMENT"
-                            if split == "development"
-                            else "STAGE5_HISTORICAL_EXPLORATORY"
-                        ),
+                        "evidence": {
+                            "development": "STAGE5_DEVELOPMENT",
+                            "historical_exploratory": "STAGE5_HISTORICAL_EXPLORATORY",
+                            "fresh_confirmation": "FRESH_POLICY_TRAJECTORY_CONFIRMATION",
+                        }[split],
                         "base_method": method,
                         "retrieval_path": path,
                         "atlas_size": LOCAL_BANK_SIZE if path == "FULL" else PRIMARY_K,
@@ -585,17 +586,248 @@ def _gate_development(output_root, cache, bundle, ranking_summary, realized_summ
     }
 
 
+def _single_seed_k64_errors(output_root, cache, bundle, models_by_method, method, device):
+    """Evaluate each registered member with its own deterministic K=64 atlas."""
+    candidates = np.asarray(cache["candidate_residual"], dtype=np.float32)
+    source_ids = np.asarray(cache["candidate_source_index"], dtype=np.int64)
+    truth = np.asarray(cache["true_distance"], dtype=np.float64)
+    if method == "B0_CURRENT_CONTACT_KMEANS":
+        models = [None] * len(MODEL_SEEDS)
+        seed_scores = [bundle[method]["scores"]] * len(MODEL_SEEDS)
+        shared_distance = _candidate_action_distance(output_root)
+    else:
+        models = models_by_method[method]
+        seed_scores = bundle[method]["seed_scores"]
+        shared_distance = None
+    output = []
+    for seed_index, seed in enumerate(MODEL_SEEDS):
+        selected = np.empty(truth.shape[:2], dtype=np.int64)
+        for state in range(len(truth)):
+            if shared_distance is not None:
+                candidate_distance = shared_distance
+            else:
+                if method.startswith("CONTROL_"):
+                    control = method[len("CONTROL_") :]
+                    context, nominal = _evaluation_inputs(cache, control)
+                else:
+                    context, nominal = cache["context"], cache["nominal_action"]
+                candidate_distance = _candidate_metric_distance(
+                    models[seed_index],
+                    np.asarray(context[state], dtype=np.float32),
+                    np.asarray(nominal[state], dtype=np.float32),
+                    candidates,
+                    device,
+                )
+            medoids = deterministic_kmedoids_precomputed(
+                candidate_distance, PRIMARY_K, source_ids
+            )
+            selected[state] = _assign(
+                np.asarray(seed_scores[seed_index][state], dtype=np.float64),
+                medoids,
+                source_ids,
+            )
+        grid = np.indices(selected.shape)
+        output.append(
+            {
+                "seed": int(seed),
+                "mean_realized_effect_error": float(
+                    np.mean(truth[grid[0], grid[1], selected])
+                ),
+            }
+        )
+    return output
+
+
+def _fresh_oracle_headroom(cache):
+    """Diagnostic state-specific headroom against pooled/contact oracle surfaces."""
+    truth = np.asarray(cache["true_distance"], dtype=np.float64)
+    contact = np.asarray(cache["current_contact"], dtype=np.int64)
+    state_error = float(np.mean(np.min(truth, axis=2)))
+    static_surface = np.mean(truth, axis=0)
+    static_selected = np.argmin(static_surface, axis=1)
+    static_error = float(
+        np.mean(truth[:, np.arange(truth.shape[1]), static_selected[None, :]])
+    )
+    contact_values = []
+    for state in range(len(truth)):
+        members = truth[contact == contact[state]]
+        surface = np.mean(members, axis=0)
+        selected = np.argmin(surface, axis=1)
+        contact_values.extend(
+            truth[state, np.arange(truth.shape[1]), selected].tolist()
+        )
+    contact_error = float(np.mean(contact_values))
+    strongest_name, strongest = min(
+        (("O_STATIC_FULL", static_error), ("O_CONTACT_FULL", contact_error)),
+        key=lambda row: (row[1], row[0]),
+    )
+    gain = _gain(strongest, state_error)
+    return {
+        "diagnostic_only": True,
+        "fit_surface": "fresh-confirmation aggregate; not a deployable model",
+        "O_STATE_FULL": state_error,
+        "O_STATIC_FULL": static_error,
+        "O_CONTACT_FULL": contact_error,
+        "strongest_static_or_contact": strongest_name,
+        "state_specific_headroom": gain,
+    }
+
+
+def _gate_confirmation(
+    output_root,
+    cache,
+    bundle,
+    models_by_method,
+    ranking_summary,
+    realized_summary,
+    realized_raw,
+    device,
+):
+    proposed = CONTEXT_METHOD + "__K64"
+    candidates = (
+        "B0_CURRENT_CONTACT_KMEANS__K64",
+        "B1_ACTION_ONLY__K64",
+        "B2_STATIC_CONSEQUENCE__K64",
+    )
+    baseline = min(
+        candidates,
+        key=lambda method: _method_summary(
+            realized_summary, method, "balanced_task_effect_error"
+        ),
+    )
+    base_method = baseline.rsplit("__", 1)[0]
+    proposed_error = _method_summary(
+        realized_summary, proposed, "balanced_task_effect_error"
+    )
+    baseline_error = _method_summary(
+        realized_summary, baseline, "balanced_task_effect_error"
+    )
+    gain = _gain(baseline_error, proposed_error)
+    bootstrap = paired_episode_bootstrap(
+        realized_raw,
+        proposed,
+        baseline,
+        BOOTSTRAP_REPLICATES,
+        BOOTSTRAP_SEED + 20,
+    )
+    task_gains = {
+        task: _gain(
+            _method_summary(
+                realized_summary,
+                baseline,
+                "balanced_task_effect_error",
+                "task",
+                task,
+            ),
+            _method_summary(
+                realized_summary,
+                proposed,
+                "balanced_task_effect_error",
+                "task",
+                task,
+            ),
+        )
+        for task in TASK_IDS
+    }
+    increment = baseline_error - proposed_error
+    retention = {}
+    for control in ("CONTEXT_SHUFFLED", "CONSEQUENCE_LABEL_SHUFFLED"):
+        value = _method_summary(
+            realized_summary,
+            "CONTROL_%s__K64" % control,
+            "balanced_task_effect_error",
+        )
+        retention[control] = (
+            (baseline_error - value) / increment if increment > 0.0 else None
+        )
+    proposed_seed = _single_seed_k64_errors(
+        output_root,
+        cache,
+        bundle,
+        models_by_method,
+        CONTEXT_METHOD,
+        device,
+    )
+    baseline_seed = _single_seed_k64_errors(
+        output_root,
+        cache,
+        bundle,
+        models_by_method,
+        base_method,
+        device,
+    )
+    seed_directions = []
+    for left, right in zip(proposed_seed, baseline_seed):
+        if left["seed"] != right["seed"]:
+            raise RuntimeError("seed pairing changed")
+        seed_directions.append(
+            {
+                "seed": left["seed"],
+                "proposed_error": left["mean_realized_effect_error"],
+                "baseline_error": right["mean_realized_effect_error"],
+                "improved": left["mean_realized_effect_error"]
+                < right["mean_realized_effect_error"],
+            }
+        )
+    base_rmse = _method_summary(
+        realized_summary, baseline, "action_reconstruction_rmse"
+    )
+    proposed_rmse = _method_summary(
+        realized_summary, proposed, "action_reconstruction_rmse"
+    )
+    base_contact = _method_summary(
+        realized_summary, baseline, "contact_mode_preserved"
+    )
+    proposed_contact = _method_summary(
+        realized_summary, proposed, "contact_mode_preserved"
+    )
+    utilization = _method_summary(
+        realized_summary, proposed, "normalized_code_utilization"
+    )
+    clipping = _method_summary(realized_summary, proposed, "clipped")
+    oracle = _fresh_oracle_headroom(cache)
+    checks = {
+        "pooled_realized_gain": {"value": gain, "threshold": 0.10, "passed": gain >= 0.10},
+        "paired_ci_lower": {"value": float(bootstrap["pooled"]["ci95"][0]), "threshold": 0.0, "passed": float(bootstrap["pooled"]["ci95"][0]) > 0.0},
+        "tasks_improved": {"value": int(sum(value > 0 for value in task_gains.values())), "threshold": 3, "passed": sum(value > 0 for value in task_gains.values()) >= 3},
+        "contact_tasks_improved": {"value": int(sum(task_gains[task] > 0 for task in CONTACT_SENSITIVE_TASKS)), "threshold": 2, "passed": sum(task_gains[task] > 0 for task in CONTACT_SENSITIVE_TASKS) >= 2},
+        "context_shuffle_retention": {"value": retention["CONTEXT_SHUFFLED"], "defined": increment > 0.0, "threshold_max": 0.25, "passed": increment > 0.0 and retention["CONTEXT_SHUFFLED"] <= 0.25},
+        "label_shuffle_retention": {"value": retention["CONSEQUENCE_LABEL_SHUFFLED"], "defined": increment > 0.0, "threshold_max": 0.25, "passed": increment > 0.0 and retention["CONSEQUENCE_LABEL_SHUFFLED"] <= 0.25},
+        "action_rmse_degradation": {"value": (proposed_rmse - base_rmse) / max(base_rmse, 1e-12), "threshold_max": 0.20, "passed": (proposed_rmse - base_rmse) / max(base_rmse, 1e-12) <= 0.20},
+        "contact_preservation_drop": {"value": base_contact - proposed_contact, "threshold_max": 0.01, "passed": base_contact - proposed_contact <= 0.01},
+        "normalized_utilization": {"value": utilization, "threshold": 0.25, "passed": utilization >= 0.25},
+        "clipping": {"value": clipping, "threshold_max": 0.0, "passed": clipping <= 0.0},
+        "all_seed_directions": {"value": [row["improved"] for row in seed_directions], "threshold": [True, True, True], "passed": all(row["improved"] for row in seed_directions)},
+        "oracle_adaptive_headroom": {"value": oracle["state_specific_headroom"], "threshold": 0.08, "passed": oracle["state_specific_headroom"] >= 0.08},
+    }
+    return {
+        "gate": "FRESH_CONFIRMATION_GATE",
+        "evidence": "FRESH_POLICY_TRAJECTORY_CONFIRMATION",
+        "baseline": baseline,
+        "checks": checks,
+        "task_gains": task_gains,
+        "seed_directions": seed_directions,
+        "control_gain_retention": retention,
+        "oracle_headroom": oracle,
+        "bootstrap": bootstrap,
+        "passed": all(value["passed"] for value in checks.values()),
+    }
+
+
 def evaluate_split(project_root, split, output_root=None, scratch_root=SCRATCH_ROOT, device_name="cpu"):
     project_root = os.path.abspath(project_root)
     output_root = output_root or os.path.join(project_root, OUTPUT_RELATIVE)
-    if split not in ("development", "historical_exploratory"):
+    if split not in ("development", "historical_exploratory", "fresh_confirmation"):
         raise KeyError(split)
     if split == "historical_exploratory" and not os.path.isfile(os.path.join(output_root, "MODEL_SELECTION.json")):
         raise RuntimeError("development choices must be frozen before exploratory evaluation")
     device = _device(device_name)
     cache = load_cache(cache_path(scratch_root, split))
-    record_split = "development" if split == "development" else "confirmation"
-    records = historical_records(record_split)
+    if split == "fresh_confirmation":
+        records = load_fresh_records(project_root, output_root, scratch_root)
+    else:
+        record_split = "development" if split == "development" else "confirmation"
+        records = historical_records(record_split)
     bundle, models_by_method, manifest = _load_score_bundle(project_root, output_root, cache, device)
     decoded, atlases = _atlas_decodings(output_root, cache, bundle, models_by_method, device)
     ranking_raw = _ranking_rows(cache, bundle, decoded, atlases, split)
@@ -609,7 +841,11 @@ def evaluate_split(project_root, split, output_root=None, scratch_root=SCRATCH_R
     )
     import pandas as pd
 
-    prefix = "DEVELOPMENT" if split == "development" else "HISTORICAL_EXPLORATORY"
+    prefix = {
+        "development": "DEVELOPMENT",
+        "historical_exploratory": "HISTORICAL_EXPLORATORY",
+        "fresh_confirmation": "CONFIRMATION",
+    }[split]
     pd.DataFrame(ranking_raw).to_parquet(os.path.join(output_root, prefix.lower() + "_ranking_rows.parquet"), index=False)
     pd.DataFrame(realized_raw).to_parquet(os.path.join(output_root, prefix.lower() + "_realized_rows.parquet"), index=False)
     write_csv(os.path.join(output_root, prefix + "_RANKING.csv"), ranking_summary)
@@ -673,13 +909,29 @@ def evaluate_split(project_root, split, output_root=None, scratch_root=SCRATCH_R
         }
         atomic_json(os.path.join(output_root, "MODEL_SELECTION.json"), selection)
         result["gate"] = gate
+    elif split == "fresh_confirmation":
+        gate = _gate_confirmation(
+            output_root,
+            cache,
+            bundle,
+            models_by_method,
+            ranking_summary,
+            realized_summary,
+            realized_raw,
+            device,
+        )
+        atomic_json(os.path.join(output_root, "CONFIRMATION_GATE.json"), gate)
+        result["gate"] = gate
     atomic_json(os.path.join(output_root, prefix + "_EVALUATION.json"), result)
     return result
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("split", choices=("development", "historical_exploratory"))
+    parser.add_argument(
+        "split",
+        choices=("development", "historical_exploratory", "fresh_confirmation"),
+    )
     parser.add_argument("--project-root", default=os.getcwd())
     parser.add_argument("--output-root", default=None)
     parser.add_argument("--scratch-root", default=SCRATCH_ROOT)
