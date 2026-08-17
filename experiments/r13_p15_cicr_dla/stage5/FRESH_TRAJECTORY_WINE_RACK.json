@@ -1,0 +1,13 @@
+{
+  "acceptance": "first environment-success trajectories in ascending frozen seed order",
+  "accepted": [],
+  "all_frozen_seeds_executed": true,
+  "attempt_count": 200,
+  "generator_checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+  "metric_scores_read": false,
+  "required_success_count": 12,
+  "scheduling": "disjoint worker shards only; no scientific input changed",
+  "success_count": 0,
+  "sufficient": false,
+  "task_id": "wine_rack"
+}

@@ -1,0 +1,47 @@
+{
+  "acceptance": "first environment-success trajectories in ascending frozen seed order",
+  "accepted": [
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.45060983300209045,
+      "metric_scores_read": false,
+      "seed": 131507005,
+      "steps": 277,
+      "success": true,
+      "task_id": "plate_push",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/plate_push/seed_131507005.npz",
+      "trajectory_sha256": "d6e474000453a037dedc786d9c5525791e2b2f5c607a8a417962cbd2e7f56887"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.45168066024780273,
+      "metric_scores_read": false,
+      "seed": 131507113,
+      "steps": 239,
+      "success": true,
+      "task_id": "plate_push",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/plate_push/seed_131507113.npz",
+      "trajectory_sha256": "156751369db56a0db327295c59fccd7a73a385680528f8125e5d46a839fda04e"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.4576915502548218,
+      "metric_scores_read": false,
+      "seed": 131507177,
+      "steps": 316,
+      "success": true,
+      "task_id": "plate_push",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/plate_push/seed_131507177.npz",
+      "trajectory_sha256": "12a8f2aac9cb0c98f8a5793f747ae1d4665fb4c1f7f9e1a277f82f96c8c918bc"
+    }
+  ],
+  "all_frozen_seeds_executed": true,
+  "attempt_count": 200,
+  "generator_checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+  "metric_scores_read": false,
+  "required_success_count": 12,
+  "scheduling": "disjoint worker shards only; no scientific input changed",
+  "success_count": 3,
+  "sufficient": false,
+  "task_id": "plate_push"
+}

@@ -1,0 +1,144 @@
+{
+  "acceptance": "first environment-success trajectories in ascending frozen seed order",
+  "accepted": [
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7725019454956055,
+      "metric_scores_read": false,
+      "seed": 131506018,
+      "steps": 206,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506018.npz",
+      "trajectory_sha256": "9b8f4667ca738192f06fbd221801f7e764eac0bd3454afb1426f8607c684777b"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7817021608352661,
+      "metric_scores_read": false,
+      "seed": 131506021,
+      "steps": 224,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506021.npz",
+      "trajectory_sha256": "d022479290a2123afdf229fa22235d4f85a9b49b5ab625b68b99be5334db82df"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7621625065803528,
+      "metric_scores_read": false,
+      "seed": 131506029,
+      "steps": 213,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506029.npz",
+      "trajectory_sha256": "11a93149f4d673f86ebbd762465e70e789bd17a737b21ef8e3eb6d82999e1dec"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7820020914077759,
+      "metric_scores_read": false,
+      "seed": 131506032,
+      "steps": 200,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506032.npz",
+      "trajectory_sha256": "97b8038398a29c3fed6aa5898c09b66aab690706c15c1c4757c528e51c53b7ac"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7400981783866882,
+      "metric_scores_read": false,
+      "seed": 131506034,
+      "steps": 197,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506034.npz",
+      "trajectory_sha256": "3e139fb72e4de7a720970ef01f7ace1e7272ef00e456761b9fde8fbc56f6dcc4"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.8393997550010681,
+      "metric_scores_read": false,
+      "seed": 131506037,
+      "steps": 318,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506037.npz",
+      "trajectory_sha256": "6f5af9c796d92ecb8917f3cf0721c7380ae8a7aef016fbd37ba4c1668d1e84ed"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.8652648329734802,
+      "metric_scores_read": false,
+      "seed": 131506043,
+      "steps": 177,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506043.npz",
+      "trajectory_sha256": "3f9621ada1f285b654da0616cee2e1b7b559165264196f4e48ee2cf9c8903aa1"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7722834944725037,
+      "metric_scores_read": false,
+      "seed": 131506049,
+      "steps": 324,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506049.npz",
+      "trajectory_sha256": "0dd6c781f4657227b5d435ccf7adc2ae3de33b612c75d6385f5eaab926427256"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.850922703742981,
+      "metric_scores_read": false,
+      "seed": 131506050,
+      "steps": 118,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506050.npz",
+      "trajectory_sha256": "67db380d3b0b2815deffb6a541fa450a9ee3bfda6b1289b236bca91b8fbfa7b4"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.6997194290161133,
+      "metric_scores_read": false,
+      "seed": 131506052,
+      "steps": 158,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506052.npz",
+      "trajectory_sha256": "9593ee390ae04f9b6f4c8b615d62a34474bd2a72db8f08b7b2e2a595755d0b86"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7798325419425964,
+      "metric_scores_read": false,
+      "seed": 131506075,
+      "steps": 155,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506075.npz",
+      "trajectory_sha256": "b724a9b227b828e28864d37dc917e41943b683611c4db3edc10e650a6e0dd7d5"
+    },
+    {
+      "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+      "final_progress": 0.7673360109329224,
+      "metric_scores_read": false,
+      "seed": 131506084,
+      "steps": 161,
+      "success": true,
+      "task_id": "bowl_on_plate",
+      "trajectory_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/fresh_trajectories/bowl_on_plate/seed_131506084.npz",
+      "trajectory_sha256": "88cd162fdefc469e24a2cb2b99109874ec9fdf23fa7932424cddb2c3122db1ff"
+    }
+  ],
+  "attempt_count": 85,
+  "generator_checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+  "metric_scores_read": false,
+  "required_success_count": 12,
+  "success_count": 12,
+  "sufficient": true,
+  "task_id": "bowl_on_plate"
+}
