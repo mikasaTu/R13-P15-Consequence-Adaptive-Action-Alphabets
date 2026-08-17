@@ -10,6 +10,7 @@ from collections import defaultdict
 
 import numpy as np
 
+from .stage2_analysis import PRIMARY_GROUPS
 from .stage3_data import CONTEXT_SLICES
 from .stage3_metrics import (
     paired_episode_bootstrap,
@@ -368,12 +369,7 @@ REALIZED_METRICS = (
     "clipped",
     "valid_bank_size",
     "inference_latency_ms",
-    "error_group_object_pose",
-    "error_group_tcp_object_relative_pose",
-    "error_group_contact_constraint",
-    "error_group_gripper_articulation",
-    "error_group_task_progress",
-)
+) + tuple("error_group_" + name for name in PRIMARY_GROUPS)
 
 
 def _summaries(rows, metrics, utilization=False):
@@ -504,7 +500,9 @@ def _gate_development(output_root, cache, bundle, ranking_summary, realized_summ
     for control in ("ACTION_ONLY", "JOINT_STATE_NOMINAL_SHUFFLED", "CONSEQUENCE_LABEL_SHUFFLED", "NO_REVERSAL_LOSS"):
         method = "CONTROL_%s__FULL" % control
         value = _method_summary(realized_summary, method, "balanced_task_effect_error")
-        control_retention[control] = (b2_error - value) / max(increment, 1e-12)
+        control_retention[control] = (
+            (b2_error - value) / increment if increment > 0.0 else None
+        )
     gate1_checks = {
         "realized_pooled_gain": {"value": p1_gain, "threshold": GATES["context_identifiable"]["realized_pooled_gain_min"], "passed": p1_gain >= GATES["context_identifiable"]["realized_pooled_gain_min"]},
         "paired_ci_lower": {"value": float(bootstrap_p1["pooled"]["ci95"][0]), "threshold": 0.0, "passed": float(bootstrap_p1["pooled"]["ci95"][0]) > 0.0},
@@ -515,10 +513,10 @@ def _gate_development(output_root, cache, bundle, ranking_summary, realized_summ
         "joint_reversal_accuracy": {"value": p1_reversal, "threshold": 0.35, "passed": p1_reversal >= 0.35},
         "joint_reversal_gain": {"value": p1_reversal - b2_reversal, "threshold": 0.15, "passed": p1_reversal - b2_reversal >= 0.15},
         "all_seed_directions": {"value": [row["improved"] for row in seed_directions], "threshold": [True, True, True], "passed": all(row["improved"] for row in seed_directions)},
-        "joint_shuffle_retention": {"value": control_retention["JOINT_STATE_NOMINAL_SHUFFLED"], "threshold_max": 0.25, "passed": control_retention["JOINT_STATE_NOMINAL_SHUFFLED"] <= 0.25},
-        "label_shuffle_retention": {"value": control_retention["CONSEQUENCE_LABEL_SHUFFLED"], "threshold_max": 0.25, "passed": control_retention["CONSEQUENCE_LABEL_SHUFFLED"] <= 0.25},
-        "action_only_retention": {"value": control_retention["ACTION_ONLY"], "threshold_max": 0.50, "passed": control_retention["ACTION_ONLY"] <= 0.50},
-        "no_reversal_does_not_reproduce": {"value": control_retention["NO_REVERSAL_LOSS"], "threshold_max": 1.0, "passed": control_retention["NO_REVERSAL_LOSS"] < 1.0},
+        "joint_shuffle_retention": {"value": control_retention["JOINT_STATE_NOMINAL_SHUFFLED"], "defined": increment > 0.0, "threshold_max": 0.25, "passed": increment > 0.0 and control_retention["JOINT_STATE_NOMINAL_SHUFFLED"] <= 0.25},
+        "label_shuffle_retention": {"value": control_retention["CONSEQUENCE_LABEL_SHUFFLED"], "defined": increment > 0.0, "threshold_max": 0.25, "passed": increment > 0.0 and control_retention["CONSEQUENCE_LABEL_SHUFFLED"] <= 0.25},
+        "action_only_retention": {"value": control_retention["ACTION_ONLY"], "defined": increment > 0.0, "threshold_max": 0.50, "passed": increment > 0.0 and control_retention["ACTION_ONLY"] <= 0.50},
+        "no_reversal_does_not_reproduce": {"value": control_retention["NO_REVERSAL_LOSS"], "defined": increment > 0.0, "threshold_max": 1.0, "passed": increment > 0.0 and control_retention["NO_REVERSAL_LOSS"] < 1.0},
     }
     gate1_passed = all(row["passed"] for row in gate1_checks.values())
     # Static B2 screen against the stronger deployable B0/B1 comparator.
@@ -567,10 +565,10 @@ def _gate_development(output_root, cache, bundle, ranking_summary, realized_summ
     utilization = _method_summary(realized_summary, p1_k64, "normalized_code_utilization")
     clipping = _method_summary(realized_summary, p1_k64, "clipped")
     valid = _method_summary(realized_summary, p1_k64, "valid_bank_size")
-    retention = k64_gain / max(p1_gain, 1e-12)
+    retention = k64_gain / p1_gain if p1_gain > 0.0 else None
     gate2_checks = {
         "realized_gain": {"value": k64_gain, "threshold": 0.08, "passed": k64_gain >= 0.08},
-        "full_gain_retention": {"value": retention, "threshold": 0.75, "passed": retention >= 0.75},
+        "full_gain_retention": {"value": retention, "defined": p1_gain > 0.0, "threshold": 0.75, "passed": p1_gain > 0.0 and retention >= 0.75},
         "tasks_improved": {"value": int(sum(value > 0 for value in k64_task_gains.values())), "threshold": 3, "passed": sum(value > 0 for value in k64_task_gains.values()) >= 3},
         "contact_tasks_improved": {"value": int(sum(k64_task_gains[task] > 0 for task in CONTACT_SENSITIVE_TASKS)), "threshold": 2, "passed": sum(k64_task_gains[task] > 0 for task in CONTACT_SENSITIVE_TASKS) >= 2},
         "action_rmse_degradation": {"value": (p1_rmse - base_rmse) / max(base_rmse, 1e-12), "threshold_max": 0.20, "passed": (p1_rmse - base_rmse) / max(base_rmse, 1e-12) <= 0.20},

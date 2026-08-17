@@ -1,0 +1,303 @@
+{
+  "gate1_context_identifiable": {
+    "bootstrap": {
+      "baseline": "B2_STATIC_CONSEQUENCE__FULL",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            -0.021264852441294863,
+            0.002834106109323775
+          ],
+          "point": -0.0071444354463534865
+        },
+        "plate_push": {
+          "ci95": [
+            -0.0042126599793090025,
+            0.0008105003474763936
+          ],
+          "point": -0.0024340729743372383
+        },
+        "stove_turn_on": {
+          "ci95": [
+            0.002341206157802124,
+            0.011991312275526078
+          ],
+          "point": 0.006498192803372663
+        },
+        "wine_rack": {
+          "ci95": [
+            -0.005988968802903935,
+            0.0032374023302014637
+          ],
+          "point": -0.0012663168583188222
+        }
+      },
+      "method": "P1_CONTEXT_GATED_PSD__FULL",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          -0.00484510031552432,
+          0.0022086182885167217
+        ],
+        "point": -0.001086658118909221,
+        "probability_positive": 0.2881
+      },
+      "replicates": 10000,
+      "seed": 13150504
+    },
+    "checks": {
+      "action_only_retention": {
+        "defined": false,
+        "passed": false,
+        "threshold_max": 0.5,
+        "value": null
+      },
+      "all_seed_directions": {
+        "passed": false,
+        "threshold": [
+          true,
+          true,
+          true
+        ],
+        "value": [
+          false,
+          false,
+          false
+        ]
+      },
+      "contact_tasks_improved": {
+        "passed": false,
+        "threshold": 2,
+        "value": 1
+      },
+      "joint_reversal_accuracy": {
+        "passed": false,
+        "threshold": 0.35,
+        "value": 0.04182509505703422
+      },
+      "joint_reversal_gain": {
+        "passed": false,
+        "threshold": 0.15,
+        "value": 0.01204055766793409
+      },
+      "joint_shuffle_retention": {
+        "defined": false,
+        "passed": false,
+        "threshold_max": 0.25,
+        "value": null
+      },
+      "label_shuffle_retention": {
+        "defined": false,
+        "passed": false,
+        "threshold_max": 0.25,
+        "value": null
+      },
+      "ndcg16_gain": {
+        "passed": false,
+        "threshold": 0.05,
+        "value": -0.0006761969961590619
+      },
+      "no_reversal_does_not_reproduce": {
+        "defined": false,
+        "passed": false,
+        "threshold_max": 1.0,
+        "value": null
+      },
+      "oracle_regret_reduction": {
+        "passed": false,
+        "threshold": 0.1,
+        "value": -0.005253249599017718
+      },
+      "paired_ci_lower": {
+        "passed": false,
+        "threshold": 0.0,
+        "value": -0.00484510031552432
+      },
+      "realized_pooled_gain": {
+        "passed": false,
+        "threshold": 0.05,
+        "value": -0.004154222296450347
+      },
+      "tasks_improved": {
+        "passed": false,
+        "threshold": 3,
+        "value": 1
+      }
+    },
+    "control_gain_retention": {
+      "ACTION_ONLY": null,
+      "CONSEQUENCE_LABEL_SHUFFLED": null,
+      "JOINT_STATE_NOMINAL_SHUFFLED": null,
+      "NO_REVERSAL_LOSS": null
+    },
+    "passed": false,
+    "seed_directions": [
+      {
+        "gain": -0.018831835950477455,
+        "improved": false,
+        "seed": 13150517
+      },
+      {
+        "gain": -0.007536159119156574,
+        "improved": false,
+        "seed": 13150529
+      },
+      {
+        "gain": -0.008525608059905003,
+        "improved": false,
+        "seed": 13150543
+      }
+    ],
+    "task_gains": {
+      "bowl_on_plate": -0.015083159415684907,
+      "plate_push": -0.011222281254674536,
+      "stove_turn_on": 0.03588301407138836,
+      "wine_rack": -0.007250315479544972
+    }
+  },
+  "gate2_dynamic_k64": {
+    "baseline": "B2_STATIC_CONSEQUENCE__K64",
+    "checks": {
+      "action_rmse_degradation": {
+        "passed": true,
+        "threshold_max": 0.2,
+        "value": 0.02327949613106361
+      },
+      "clipping": {
+        "passed": true,
+        "threshold_max": 0.0,
+        "value": 0.0
+      },
+      "contact_preservation_drop": {
+        "passed": true,
+        "threshold_max": 0.01,
+        "value": 0.006022135416666741
+      },
+      "contact_tasks_improved": {
+        "passed": true,
+        "threshold": 2,
+        "value": 3
+      },
+      "full_gain_retention": {
+        "defined": false,
+        "passed": false,
+        "threshold": 0.75,
+        "value": null
+      },
+      "normalized_utilization": {
+        "passed": true,
+        "threshold": 0.25,
+        "value": 0.3027680544849581
+      },
+      "realized_gain": {
+        "passed": false,
+        "threshold": 0.08,
+        "value": 0.00863699721837788
+      },
+      "tasks_improved": {
+        "passed": true,
+        "threshold": 3,
+        "value": 3
+      },
+      "valid_bank_size": {
+        "passed": true,
+        "threshold": 96,
+        "value": 128.0
+      }
+    },
+    "passed": false,
+    "task_gains": {
+      "bowl_on_plate": -0.01777141652139868,
+      "plate_push": 0.027551655938785564,
+      "stove_turn_on": 0.025525225132991648,
+      "wine_rack": 0.03271342838652045
+    }
+  },
+  "static_consequence_value": {
+    "baseline": "B1_ACTION_ONLY__FULL",
+    "bootstrap": {
+      "baseline": "B1_ACTION_ONLY__FULL",
+      "by_task": {
+        "bowl_on_plate": {
+          "ci95": [
+            0.018162512609307235,
+            0.0918977548037704
+          ],
+          "point": 0.049228544902851556
+        },
+        "plate_push": {
+          "ci95": [
+            0.04565007099655217,
+            0.0693891212724343
+          ],
+          "point": 0.05805320594981198
+        },
+        "stove_turn_on": {
+          "ci95": [
+            0.06668883037504457,
+            0.12490598878091513
+          ],
+          "point": 0.10012073899627191
+        },
+        "wine_rack": {
+          "ci95": [
+            0.0278516345293554,
+            0.04415373441048251
+          ],
+          "point": 0.03449617837470405
+        }
+      },
+      "method": "B2_STATIC_CONSEQUENCE__FULL",
+      "paired_difference_definition": "baseline error - method error",
+      "pooled": {
+        "ci95": [
+          0.048106512843599375,
+          0.07340273747310176
+        ],
+        "point": 0.06047466705590987,
+        "probability_positive": 1.0
+      },
+      "replicates": 10000,
+      "seed": 13150505
+    },
+    "checks": {
+      "contact_tasks_improved": {
+        "passed": true,
+        "threshold": 2,
+        "value": 3
+      },
+      "ndcg16_gain": {
+        "passed": true,
+        "threshold": 0.05,
+        "value": 0.14660251655328949
+      },
+      "oracle_regret_reduction": {
+        "passed": true,
+        "threshold": 0.1,
+        "value": 0.22621801256131877
+      },
+      "paired_ci_lower": {
+        "passed": true,
+        "threshold": 0.0,
+        "value": 0.048106512843599375
+      },
+      "realized_pooled_gain": {
+        "passed": true,
+        "threshold": 0.05,
+        "value": 0.18777811545883066
+      },
+      "tasks_improved": {
+        "passed": true,
+        "threshold": 3,
+        "value": 4
+      }
+    },
+    "passed": true,
+    "task_gains": {
+      "bowl_on_plate": 0.09414555568609416,
+      "plate_push": 0.21114121992389523,
+      "stove_turn_on": 0.3560296888201303,
+      "wine_rack": 0.16493276646444674
+    }
+  }
+}
