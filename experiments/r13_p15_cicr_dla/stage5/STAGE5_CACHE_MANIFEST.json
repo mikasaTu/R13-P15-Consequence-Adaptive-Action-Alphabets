@@ -1,0 +1,47 @@
+{
+  "caches": [
+    {
+      "bytes": 33955615,
+      "candidates": 128,
+      "minimum_valid_candidates": 128,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_train_cache.npz",
+      "sha256": "45f8f5d583eef93315bd59686c4ad0ff84e29686d36949e1355e2ed05a62141b",
+      "split": "train",
+      "states": 768,
+      "targets": 96
+    },
+    {
+      "bytes": 2854422,
+      "candidates": 128,
+      "minimum_valid_candidates": 128,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_calibration_cache.npz",
+      "sha256": "1796e0892f4cd8c3285da9616602d445613bf2f352c0b844a6859076313f57d4",
+      "split": "calibration",
+      "states": 64,
+      "targets": 96
+    },
+    {
+      "bytes": 2860484,
+      "candidates": 128,
+      "minimum_valid_candidates": 128,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_development_cache.npz",
+      "sha256": "a27d749118f44f0b9f9e86ad8a6b9be7ee9c05336f37dce76b6b205c8c8bbcb6",
+      "split": "development",
+      "states": 64,
+      "targets": 96
+    },
+    {
+      "bytes": 7115400,
+      "candidates": 128,
+      "minimum_valid_candidates": 128,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_historical_exploratory_cache.npz",
+      "sha256": "96f9bb72aefda8249570978a9f60928bb1d6ed95a6996234050a6e3f02f1ad94",
+      "split": "historical_exploratory",
+      "states": 160,
+      "targets": 96
+    }
+  ],
+  "development_values_inspected_during_build": false,
+  "local_bank_sha256": "21ba12712891533237796992529d1c460705c21465bff6c47d7943122d41c255",
+  "schema_version": "stage5-local-m128-cache-v1"
+}

@@ -1,0 +1,676 @@
+{
+  "episode_overlap": {
+    "calibration__development": [],
+    "train__calibration": [],
+    "train__development": []
+  },
+  "exact_tuple_overlap_count": 0,
+  "exact_tuple_overlap_hashes": [],
+  "kind": "stage5_strict_context_reversal_benchmark",
+  "labels_fabricated": false,
+  "margin_fit_split": "train episodes 16-31 only",
+  "margin_quantile": 0.25,
+  "margin_relaxed": false,
+  "margin_sample_counts": {
+    "bowl_on_plate/contact_onset": 3072,
+    "bowl_on_plate/free_space": 3072,
+    "bowl_on_plate/post_contact": 3072,
+    "bowl_on_plate/pre_contact": 3072,
+    "plate_push/contact_onset": 3072,
+    "plate_push/free_space": 3072,
+    "plate_push/post_contact": 3072,
+    "plate_push/pre_contact": 3072,
+    "stove_turn_on/contact_onset": 3072,
+    "stove_turn_on/free_space": 3072,
+    "stove_turn_on/post_contact": 3072,
+    "stove_turn_on/pre_contact": 3072,
+    "wine_rack/contact_onset": 3072,
+    "wine_rack/free_space": 3072,
+    "wine_rack/post_contact": 3072,
+    "wine_rack/pre_contact": 3072
+  },
+  "margins": {
+    "bowl_on_plate/contact_onset": 0.09549059346318245,
+    "bowl_on_plate/free_space": 0.03023713454604149,
+    "bowl_on_plate/post_contact": 0.07456769235432148,
+    "bowl_on_plate/pre_contact": 0.08481565117835999,
+    "plate_push/contact_onset": 0.0524984747171402,
+    "plate_push/free_space": 0.031513381749391556,
+    "plate_push/post_contact": 0.11614879220724106,
+    "plate_push/pre_contact": 0.048144225031137466,
+    "stove_turn_on/contact_onset": 0.08354153484106064,
+    "stove_turn_on/free_space": 0.029309432953596115,
+    "stove_turn_on/post_contact": 0.09384876489639282,
+    "stove_turn_on/pre_contact": 0.0959574542939663,
+    "wine_rack/contact_onset": 0.06427809968590736,
+    "wine_rack/free_space": 0.02539647836238146,
+    "wine_rack/post_contact": 0.05869373306632042,
+    "wine_rack/pre_contact": 0.07949966192245483
+  },
+  "pair_count": 6954,
+  "pair_counts_by_split": {
+    "calibration": 1536,
+    "development": 1578,
+    "train": 3840
+  },
+  "pair_counts_by_split_task_phase": {
+    "calibration/bowl_on_plate/contact_onset": 128,
+    "calibration/bowl_on_plate/post_contact": 128,
+    "calibration/bowl_on_plate/pre_contact": 128,
+    "calibration/plate_push/contact_onset": 128,
+    "calibration/plate_push/post_contact": 128,
+    "calibration/plate_push/pre_contact": 128,
+    "calibration/stove_turn_on/contact_onset": 128,
+    "calibration/stove_turn_on/post_contact": 128,
+    "calibration/stove_turn_on/pre_contact": 128,
+    "calibration/wine_rack/contact_onset": 128,
+    "calibration/wine_rack/post_contact": 128,
+    "calibration/wine_rack/pre_contact": 128,
+    "development/bowl_on_plate/contact_onset": 128,
+    "development/bowl_on_plate/post_contact": 128,
+    "development/bowl_on_plate/pre_contact": 128,
+    "development/plate_push/contact_onset": 128,
+    "development/plate_push/post_contact": 128,
+    "development/plate_push/pre_contact": 128,
+    "development/stove_turn_on/contact_onset": 128,
+    "development/stove_turn_on/post_contact": 128,
+    "development/stove_turn_on/pre_contact": 128,
+    "development/wine_rack/contact_onset": 128,
+    "development/wine_rack/free_space": 42,
+    "development/wine_rack/post_contact": 128,
+    "development/wine_rack/pre_contact": 128,
+    "train/bowl_on_plate/contact_onset": 256,
+    "train/bowl_on_plate/free_space": 256,
+    "train/bowl_on_plate/post_contact": 256,
+    "train/bowl_on_plate/pre_contact": 256,
+    "train/plate_push/contact_onset": 256,
+    "train/plate_push/free_space": 256,
+    "train/plate_push/post_contact": 256,
+    "train/plate_push/pre_contact": 256,
+    "train/stove_turn_on/contact_onset": 256,
+    "train/stove_turn_on/post_contact": 256,
+    "train/stove_turn_on/pre_contact": 256,
+    "train/wine_rack/contact_onset": 256,
+    "train/wine_rack/free_space": 256,
+    "train/wine_rack/post_contact": 256,
+    "train/wine_rack/pre_contact": 256
+  },
+  "parquet_sha256": "6ccb3b89424bc3f461a742bdbef03c0a9870fe529575fa265c666faec7fbae8e",
+  "rate_sampling": {
+    "definition": "same-contact state pair when available; i sampled from s1 top32, j sampled from s2 top32; fixed 8192 attempts per split/task/phase",
+    "phase_rates": {
+      "calibration/contact_onset": 0.4551094102033888,
+      "calibration/free_space": 0.0,
+      "calibration/post_contact": 0.41038639876352395,
+      "calibration/pre_contact": 0.4381443298969072,
+      "development/contact_onset": 0.4035515750463249,
+      "development/free_space": 0.0,
+      "development/post_contact": 0.30057642246188176,
+      "development/pre_contact": 0.44184467218175083,
+      "train/contact_onset": 0.4099737532808399,
+      "train/free_space": 0.0028319697923222154,
+      "train/post_contact": 0.2968168279970216,
+      "train/pre_contact": 0.37895875173798854
+    },
+    "rows": [
+      {
+        "attempts": 8192,
+        "eligible": 7973,
+        "phase": "free_space",
+        "reversal_rate": 0.011162674024833815,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "bowl_on_plate",
+        "valid": 89
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8091,
+        "phase": "pre_contact",
+        "reversal_rate": 0.4310962798170807,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "bowl_on_plate",
+        "valid": 3488
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8101,
+        "phase": "contact_onset",
+        "reversal_rate": 0.3915565979508703,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "bowl_on_plate",
+        "valid": 3172
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8102,
+        "phase": "post_contact",
+        "reversal_rate": 0.38274500123426314,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "bowl_on_plate",
+        "valid": 3101
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7940,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "plate_push",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8088,
+        "phase": "pre_contact",
+        "reversal_rate": 0.39688427299703266,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "plate_push",
+        "valid": 3210
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8101,
+        "phase": "contact_onset",
+        "reversal_rate": 0.5061103567460807,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "plate_push",
+        "valid": 4100
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8072,
+        "phase": "post_contact",
+        "reversal_rate": 0.34167492566897917,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "plate_push",
+        "valid": 2758
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7942,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "stove_turn_on",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8091,
+        "phase": "pre_contact",
+        "reversal_rate": 0.310715609936967,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "stove_turn_on",
+        "valid": 2514
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8110,
+        "phase": "contact_onset",
+        "reversal_rate": 0.33020961775585694,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "stove_turn_on",
+        "valid": 2678
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8038,
+        "phase": "post_contact",
+        "reversal_rate": 0.2871361035083354,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "stove_turn_on",
+        "valid": 2308
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7925,
+        "phase": "free_space",
+        "reversal_rate": 0.00012618296529968455,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "wine_rack",
+        "valid": 1
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8095,
+        "phase": "pre_contact",
+        "reversal_rate": 0.37714638665843114,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "wine_rack",
+        "valid": 3053
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8073,
+        "phase": "contact_onset",
+        "reversal_rate": 0.4121144555927165,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "wine_rack",
+        "valid": 3327
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8020,
+        "phase": "post_contact",
+        "reversal_rate": 0.1745635910224439,
+        "same_contact_pair_fraction": 1.0,
+        "split": "train",
+        "task_id": "wine_rack",
+        "valid": 1400
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7969,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "bowl_on_plate",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8086,
+        "phase": "pre_contact",
+        "reversal_rate": 0.45325253524610437,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "bowl_on_plate",
+        "valid": 3665
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8094,
+        "phase": "contact_onset",
+        "reversal_rate": 0.4174697306646899,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "bowl_on_plate",
+        "valid": 3379
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8119,
+        "phase": "post_contact",
+        "reversal_rate": 0.5480970562877202,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "bowl_on_plate",
+        "valid": 4450
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7954,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "plate_push",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8113,
+        "phase": "pre_contact",
+        "reversal_rate": 0.5518303956612843,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "plate_push",
+        "valid": 4477
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8102,
+        "phase": "contact_onset",
+        "reversal_rate": 0.49790175265366576,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "plate_push",
+        "valid": 4034
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8074,
+        "phase": "post_contact",
+        "reversal_rate": 0.2685162249194947,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "plate_push",
+        "valid": 2168
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7920,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "stove_turn_on",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8090,
+        "phase": "pre_contact",
+        "reversal_rate": 0.3658838071693449,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "stove_turn_on",
+        "valid": 2960
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8097,
+        "phase": "contact_onset",
+        "reversal_rate": 0.3890329751759911,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "stove_turn_on",
+        "valid": 3150
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8046,
+        "phase": "post_contact",
+        "reversal_rate": 0.3202833706189411,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "stove_turn_on",
+        "valid": 2577
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7948,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "wine_rack",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8109,
+        "phase": "pre_contact",
+        "reversal_rate": 0.3814280429152793,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "wine_rack",
+        "valid": 3093
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8108,
+        "phase": "contact_onset",
+        "reversal_rate": 0.5159102121361618,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "wine_rack",
+        "valid": 4183
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8111,
+        "phase": "post_contact",
+        "reversal_rate": 0.5031438786832696,
+        "same_contact_pair_fraction": 1.0,
+        "split": "calibration",
+        "task_id": "wine_rack",
+        "valid": 4081
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7955,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "bowl_on_plate",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8109,
+        "phase": "pre_contact",
+        "reversal_rate": 0.561968183499815,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "bowl_on_plate",
+        "valid": 4557
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8118,
+        "phase": "contact_onset",
+        "reversal_rate": 0.5268539049026854,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "bowl_on_plate",
+        "valid": 4277
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8111,
+        "phase": "post_contact",
+        "reversal_rate": 0.5644186906669955,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "bowl_on_plate",
+        "valid": 4578
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7943,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "plate_push",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8110,
+        "phase": "pre_contact",
+        "reversal_rate": 0.5649815043156596,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "plate_push",
+        "valid": 4582
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8091,
+        "phase": "contact_onset",
+        "reversal_rate": 0.4618712149301693,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "plate_push",
+        "valid": 3737
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8064,
+        "phase": "post_contact",
+        "reversal_rate": 0.25806051587301587,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "plate_push",
+        "valid": 2081
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7971,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "stove_turn_on",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8077,
+        "phase": "pre_contact",
+        "reversal_rate": 0.26210226569270767,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "stove_turn_on",
+        "valid": 2117
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8076,
+        "phase": "contact_onset",
+        "reversal_rate": 0.2849182763744428,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "stove_turn_on",
+        "valid": 2301
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8016,
+        "phase": "post_contact",
+        "reversal_rate": 0.21170159680638723,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "stove_turn_on",
+        "valid": 1697
+      },
+      {
+        "attempts": 8192,
+        "eligible": 7943,
+        "phase": "free_space",
+        "reversal_rate": 0.0,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "wine_rack",
+        "valid": 0
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8100,
+        "phase": "pre_contact",
+        "reversal_rate": 0.37753086419753085,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "wine_rack",
+        "valid": 3058
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8095,
+        "phase": "contact_onset",
+        "reversal_rate": 0.33996294008647315,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "wine_rack",
+        "valid": 2752
+      },
+      {
+        "attempts": 8192,
+        "eligible": 8077,
+        "phase": "post_contact",
+        "reversal_rate": 0.16627460690850562,
+        "same_contact_pair_fraction": 1.0,
+        "split": "development",
+        "task_id": "wine_rack",
+        "valid": 1343
+      }
+    ]
+  },
+  "requested_quota_per_task_phase": {
+    "calibration": 128,
+    "development": 128,
+    "train": 256
+  },
+  "same_contact_preferred": true,
+  "source_splits": {
+    "calibration": "episodes 32-35",
+    "development": "episodes 36-39",
+    "train": "episodes 16-31"
+  },
+  "split_disjoint": true,
+  "strict_definition": "D_s1(target,i)+margin<D_s1(target,j) and D_s2(target,j)+margin<D_s2(target,i)",
+  "undersupplied_strata": [
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 256,
+      "split": "train",
+      "task_id": "stove_turn_on"
+    },
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 128,
+      "split": "calibration",
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 128,
+      "split": "calibration",
+      "task_id": "plate_push"
+    },
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 128,
+      "split": "calibration",
+      "task_id": "stove_turn_on"
+    },
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 128,
+      "split": "calibration",
+      "task_id": "wine_rack"
+    },
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 128,
+      "split": "development",
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 128,
+      "split": "development",
+      "task_id": "plate_push"
+    },
+    {
+      "phase": "free_space",
+      "realized": 0,
+      "requested": 128,
+      "split": "development",
+      "task_id": "stove_turn_on"
+    },
+    {
+      "phase": "free_space",
+      "realized": 42,
+      "requested": 128,
+      "split": "development",
+      "task_id": "wine_rack"
+    }
+  ]
+}

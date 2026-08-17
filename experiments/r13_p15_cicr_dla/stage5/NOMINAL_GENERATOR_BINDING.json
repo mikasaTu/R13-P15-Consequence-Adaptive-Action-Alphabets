@@ -58,9 +58,10 @@
     "uses_stage5_consequence_labels": false,
     "weight_decay": 1e-05
   },
-  "checkpoint_path": null,
-  "checkpoint_sha256": null,
-  "checkpoint_status": "PENDING_TRAINING_BEFORE_DEVELOPMENT",
+  "checkpoint_path": "experiments/r13_p15_cicr_dla/stage5/nominal_generator/state_h4_bc.npz",
+  "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+  "checkpoint_status": "FROZEN_BEFORE_DEVELOPMENT",
+  "development_data_read": false,
   "fallback_authorized": true,
   "kind": "stage5_nominal_generator_pre_result_binding",
   "may_not_change_after_development": true,
@@ -71,6 +72,8 @@
   },
   "role": "nominal trajectory production only; not an R13-P15 method",
   "rollout_seed_artifact": "FRESH_TRAJECTORY_SEEDS.json",
+  "training_data_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/nominal_generator/training_data.npz",
+  "training_data_sha256": "387bcef3efde0159b63d44b321960a90103962229e7ef1c4327dea59e89afb4f",
   "training_episodes": [
     0,
     1,
@@ -105,6 +108,9 @@
     30,
     31
   ],
+  "training_metrics_artifact": "NOMINAL_GENERATOR_TRAINING.json",
+  "training_metrics_sha256": "e373a0a03e5cec76c5f84ad861c33da41feb679e1dbcc8a1545057c26bc8a2ad",
+  "training_rows": 16143,
   "training_seed": 13150505,
   "uses_images_or_vla": false,
   "uses_stage5_consequence_labels": false

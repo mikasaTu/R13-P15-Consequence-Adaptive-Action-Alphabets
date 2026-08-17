@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "development_data_read": false,
+  "kind": "stage5_state_h4_bc_checkpoint",
+  "payload": "state_h4_bc.npz",
+  "payload_bytes": 480794,
+  "payload_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+  "schema_version": "stage5-state-h4-bc-numpy-v1",
+  "training_data_sha256": "387bcef3efde0159b63d44b321960a90103962229e7ef1c4327dea59e89afb4f"
+}

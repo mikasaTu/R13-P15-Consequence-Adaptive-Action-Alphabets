@@ -1,0 +1,247 @@
+{
+  "architecture": {
+    "batch_size": 512,
+    "execution": "closed-loop receding horizon; execute first predicted action",
+    "gripper_loss_weight": 0.5,
+    "hidden": [
+      256,
+      256,
+      128
+    ],
+    "input": [
+      "current_46d_physical_observable",
+      "46d_observability_mask",
+      "previous_7d_executed_action",
+      "4d_task_one_hot"
+    ],
+    "kind": "shared_state_h4_chunk_bc",
+    "learning_rate": 0.0003,
+    "maximum_rollout_steps": 500,
+    "optimizer": "AdamW",
+    "output": "4x7 normalized OSC_POSE action through tanh",
+    "steps": 10000,
+    "training_episodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "uses_images": false,
+    "uses_stage5_consequence_labels": false,
+    "weight_decay": 1e-05
+  },
+  "checkpoint_path": "nominal_generator/state_h4_bc.npz",
+  "checkpoint_sha256": "b48a4fee2c32c1107c3da2120df0068f974288e7424718dadb8978bdc9120f88",
+  "metrics": {
+    "continuous_rmse": 0.047607410699129105,
+    "development_data_read": false,
+    "full_rmse": 0.06896226853132248,
+    "gripper_rmse": 0.1403273493051529,
+    "selection_or_early_stopping": false,
+    "trace": [
+      {
+        "step": 1,
+        "weighted_mse": 0.15447555482387543
+      },
+      {
+        "step": 250,
+        "weighted_mse": 0.010281608439981937
+      },
+      {
+        "step": 500,
+        "weighted_mse": 0.009082569740712643
+      },
+      {
+        "step": 750,
+        "weighted_mse": 0.0065060751512646675
+      },
+      {
+        "step": 1000,
+        "weighted_mse": 0.006360284518450499
+      },
+      {
+        "step": 1250,
+        "weighted_mse": 0.0065575954504311085
+      },
+      {
+        "step": 1500,
+        "weighted_mse": 0.0071060629561543465
+      },
+      {
+        "step": 1750,
+        "weighted_mse": 0.005517261568456888
+      },
+      {
+        "step": 2000,
+        "weighted_mse": 0.005752867553383112
+      },
+      {
+        "step": 2250,
+        "weighted_mse": 0.005204447545111179
+      },
+      {
+        "step": 2500,
+        "weighted_mse": 0.004670914262533188
+      },
+      {
+        "step": 2750,
+        "weighted_mse": 0.005105131771415472
+      },
+      {
+        "step": 3000,
+        "weighted_mse": 0.005054204259067774
+      },
+      {
+        "step": 3250,
+        "weighted_mse": 0.005478894803673029
+      },
+      {
+        "step": 3500,
+        "weighted_mse": 0.00572619866579771
+      },
+      {
+        "step": 3750,
+        "weighted_mse": 0.004747812170535326
+      },
+      {
+        "step": 4000,
+        "weighted_mse": 0.003933183383196592
+      },
+      {
+        "step": 4250,
+        "weighted_mse": 0.005305202212184668
+      },
+      {
+        "step": 4500,
+        "weighted_mse": 0.004235100466758013
+      },
+      {
+        "step": 4750,
+        "weighted_mse": 0.0044588190503418446
+      },
+      {
+        "step": 5000,
+        "weighted_mse": 0.0038450767751783133
+      },
+      {
+        "step": 5250,
+        "weighted_mse": 0.0050513832829892635
+      },
+      {
+        "step": 5500,
+        "weighted_mse": 0.003945386502891779
+      },
+      {
+        "step": 5750,
+        "weighted_mse": 0.0038194365333765745
+      },
+      {
+        "step": 6000,
+        "weighted_mse": 0.004298029933124781
+      },
+      {
+        "step": 6250,
+        "weighted_mse": 0.0037151852156966925
+      },
+      {
+        "step": 6500,
+        "weighted_mse": 0.003900062758475542
+      },
+      {
+        "step": 6750,
+        "weighted_mse": 0.004374689422547817
+      },
+      {
+        "step": 7000,
+        "weighted_mse": 0.0029564290307462215
+      },
+      {
+        "step": 7250,
+        "weighted_mse": 0.002950752153992653
+      },
+      {
+        "step": 7500,
+        "weighted_mse": 0.0036072602961212397
+      },
+      {
+        "step": 7750,
+        "weighted_mse": 0.003298907307907939
+      },
+      {
+        "step": 8000,
+        "weighted_mse": 0.0032116142101585865
+      },
+      {
+        "step": 8250,
+        "weighted_mse": 0.0036450012121349573
+      },
+      {
+        "step": 8500,
+        "weighted_mse": 0.002864724723622203
+      },
+      {
+        "step": 8750,
+        "weighted_mse": 0.0030535906553268433
+      },
+      {
+        "step": 9000,
+        "weighted_mse": 0.0030097258277237415
+      },
+      {
+        "step": 9250,
+        "weighted_mse": 0.0026374582666903734
+      },
+      {
+        "step": 9500,
+        "weighted_mse": 0.0032218736596405506
+      },
+      {
+        "step": 9750,
+        "weighted_mse": 0.0036669240798801184
+      },
+      {
+        "step": 10000,
+        "weighted_mse": 0.002819370711222291
+      }
+    ],
+    "training_rows": 16143
+  },
+  "runtime": {
+    "device": "cpu",
+    "platform": "Linux-5.10.134-013.9.kangaroo.al8.x86_64-x86_64-with-glibc2.35",
+    "python": "3.11.11 (main, Mar 17 2025, 21:02:09) [Clang 20.1.0 ]",
+    "torch": "2.4.1+cu121",
+    "torch_threads": 16
+  },
+  "schema_version": "stage5-state-h4-bc-numpy-v1",
+  "training_data_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/nominal_generator/training_data.npz",
+  "training_data_sha256": "387bcef3efde0159b63d44b321960a90103962229e7ef1c4327dea59e89afb4f"
+}
