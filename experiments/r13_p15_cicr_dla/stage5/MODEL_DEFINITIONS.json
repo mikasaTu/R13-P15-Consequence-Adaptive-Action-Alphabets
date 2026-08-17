@@ -1,0 +1,186 @@
+{
+  "action_encoder_hidden": [
+    128,
+    96
+  ],
+  "architectures": {
+    "B0": "current-contact residual k-means over the executable local bank",
+    "B1": "matched action encoder trained without consequence labels",
+    "B2": "state-independent diagonal PSD consequence metric",
+    "P1": "frozen B2 representation with bounded observable-context multiplicative diagonal PSD modulation; m=0 exactly recovers B2",
+    "P2": "not enabled in this preregistration"
+  },
+  "candidate_order_permutation_exact_invariance_required": true,
+  "context_modulator_hidden": [
+    128,
+    64
+  ],
+  "controller": {
+    "continuous_action_semantics": "4x6 normalized OSC_POSE coordinates",
+    "control_mode": "OSC_POSE",
+    "frequency_hz": 20,
+    "gripper_semantics": "copied stepwise from the nominal chunk for branch actions",
+    "horizon": 4,
+    "robot": "Panda",
+    "settle_steps": 3
+  },
+  "dynamic_atlas": "deterministic metric-space K-medoids with original-ID tie breaks",
+  "embedding_dim": 24,
+  "execute_all_registered_experiments_after_gate_failure": true,
+  "final_dispositions": [
+    "BLOCKED_HISTORICAL_BINDING_MISMATCH",
+    "STATIC_EFFECT_GEOMETRY_SUFFICIENT",
+    "STATIC_CONSEQUENCE_METRIC_ONLY",
+    "REJECT_LEARNED_CONSEQUENCE_METRIC",
+    "PIVOT_TO_CONSEQUENCE_RETRIEVAL_STEERING",
+    "BLOCKED_NO_FRESH_TRAJECTORIES",
+    "CONFIRMATION_FAILED",
+    "GO_TO_FIXED_POLICY_RERANKING"
+  ],
+  "forbidden_inputs": [
+    "future_state",
+    "future_consequence",
+    "target_simulator_outcome",
+    "candidate_simulator_outcome",
+    "demonstration_phase",
+    "episode_success",
+    "future_reward",
+    "candidate_id",
+    "target_id",
+    "row_index",
+    "confirmation_result",
+    "post_execution_contact",
+    "oracle_atlas_membership"
+  ],
+  "gate_failure_continuation_authority": "explicit user instruction",
+  "generator": {
+    "batch_size": 512,
+    "execution": "closed-loop receding horizon; execute first predicted action",
+    "gripper_loss_weight": 0.5,
+    "hidden": [
+      256,
+      256,
+      128
+    ],
+    "input": [
+      "current_46d_physical_observable",
+      "46d_observability_mask",
+      "previous_7d_executed_action",
+      "4d_task_one_hot"
+    ],
+    "kind": "shared_state_h4_chunk_bc",
+    "learning_rate": 0.0003,
+    "maximum_rollout_steps": 500,
+    "optimizer": "AdamW",
+    "output": "4x7 normalized OSC_POSE action through tanh",
+    "steps": 10000,
+    "training_episodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "uses_images": false,
+    "uses_stage5_consequence_labels": false,
+    "weight_decay": 1e-05
+  },
+  "local_bank": {
+    "clipping_or_action_synthesis_forbidden": true,
+    "covariance_fit": "union of frozen Stage 4 train targets and M=256 bank residuals",
+    "covariance_regularization": 1e-06,
+    "dedup_tolerance": 1e-12,
+    "primary_alphabet_size": 64,
+    "primary_size": 128,
+    "selection": "24 source_phase x family x sign strata; quota 5 plus one for the first 8 lexicographic strata; within-stratum ascending train-covariance-whitened zero-origin residual norm then original ID",
+    "source_size": 256
+  },
+  "loss_weights": {
+    "distance": 1.0,
+    "gate": 0.01,
+    "listwise": 0.5,
+    "pairwise": 0.5,
+    "reversal": 1.0
+  },
+  "matched_controls": [
+    "ACTION_ONLY",
+    "CONTEXT_SHUFFLED",
+    "NOMINAL_SHUFFLED",
+    "JOINT_STATE_NOMINAL_SHUFFLED",
+    "CONSEQUENCE_LABEL_SHUFFLED",
+    "NO_REVERSAL_LOSS",
+    "PHASE_ONLY",
+    "CURRENT_CONTACT_ONLY"
+  ],
+  "maximum_local_training_gpus": 1,
+  "model_seeds": [
+    13150517,
+    13150529,
+    13150543
+  ],
+  "modulation_log_bound": 1.25,
+  "optimizer": {
+    "gradient_clip_norm": 5.0,
+    "learning_rate": 0.0003,
+    "name": "AdamW",
+    "weight_decay": 1e-05
+  },
+  "pai_jobs_allowed_only_if_local_technically_impossible": true,
+  "pairwise_strata": {
+    "action_close_effect_far": 8,
+    "action_far_effect_close": 8,
+    "contact_changing": 8,
+    "oracle_top_positives": 8,
+    "rank_9_32_hard_negatives": 24
+  },
+  "permitted_inputs": [
+    "current_observable_state",
+    "current_observable_state_mask",
+    "previous_two_observable_state_deltas",
+    "previous_two_observable_state_delta_masks",
+    "previous_two_executed_actions",
+    "previous_action_availability_masks",
+    "current_observable_contact",
+    "nominal_h4_action_chunk",
+    "target_residual_action_chunk",
+    "candidate_residual_action_chunk",
+    "task_identity"
+  ],
+  "policy_or_vla_training_forbidden_except_nominal_generator": true,
+  "primary_metric": "frozen Stage 2-4 BALANCED_TASK_EFFECT",
+  "project_id": "r13_p15_cicr_dla_stage5",
+  "temperature_candidates": [
+    0.1,
+    0.15,
+    0.2
+  ],
+  "temperature_selection_split": "calibration episodes 32-35 only",
+  "training_steps": 2500
+}

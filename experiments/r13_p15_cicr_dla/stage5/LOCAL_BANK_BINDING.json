@@ -1,0 +1,322 @@
+{
+  "analytic_executability_under_phase_selector": true,
+  "clipping_or_synthesis": false,
+  "covariance_fit_rows": 352,
+  "covariance_fit_sources": [
+    "Stage 4 train target residuals",
+    "Stage 4 M=256 residual bank"
+  ],
+  "covariance_regularization": 1e-06,
+  "kind": "stage5_deterministic_local_executable_bank",
+  "local_size": 128,
+  "maximum_absolute_residual_component": 0.0884226600085422,
+  "minimum_required_valid_candidates": 96,
+  "near_duplicate_tolerance": 1e-12,
+  "npz": {
+    "bytes": 34748,
+    "relative_path": "experiments/r13_p15_cicr_dla/stage5/LOCAL_BANK.npz",
+    "sha256": "21ba12712891533237796992529d1c460705c21465bff6c47d7943122d41c255"
+  },
+  "residual_array_sha256": "54eee9467fc066b1d8b40e215d95562fd890816690697ea54db0824fdd813689",
+  "selection_axes": [
+    "source_phase",
+    "source_family_id",
+    "source_sign"
+  ],
+  "selection_frozen_before_development": true,
+  "selection_rule": "quota=5 plus one for the first 8 phase/family/sign strata; ascending train-covariance-whitened zero-origin norm, then original ID",
+  "skipped_near_duplicate_source_indices": [],
+  "skipped_target_equal_source_indices": [],
+  "source": {
+    "bytes": 53820,
+    "relative_path": "experiments/r13_p15_ncea/stage2/action_bank.npz",
+    "sha256": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b"
+  },
+  "source_index_array_sha256": "cbc308149abe695f5b72d0696262d31a3f8bd302526a351803c62016860d115c",
+  "source_indices": [
+    199,
+    0,
+    74,
+    76,
+    73,
+    196,
+    72,
+    198,
+    138,
+    3,
+    140,
+    136,
+    201,
+    78,
+    6,
+    7,
+    79,
+    141,
+    142,
+    203,
+    80,
+    83,
+    11,
+    82,
+    206,
+    148,
+    147,
+    14,
+    86,
+    208,
+    149,
+    146,
+    15,
+    87,
+    84,
+    88,
+    90,
+    18,
+    211,
+    212,
+    95,
+    153,
+    151,
+    91,
+    19,
+    94,
+    152,
+    215,
+    96,
+    216,
+    219,
+    156,
+    158,
+    97,
+    217,
+    24,
+    28,
+    160,
+    221,
+    101,
+    30,
+    32,
+    103,
+    161,
+    162,
+    102,
+    222,
+    33,
+    36,
+    169,
+    167,
+    109,
+    106,
+    226,
+    228,
+    41,
+    110,
+    166,
+    111,
+    171,
+    42,
+    234,
+    175,
+    233,
+    115,
+    47,
+    46,
+    114,
+    176,
+    239,
+    53,
+    48,
+    240,
+    116,
+    238,
+    52,
+    49,
+    177,
+    124,
+    241,
+    57,
+    59,
+    55,
+    121,
+    181,
+    184,
+    242,
+    243,
+    186,
+    130,
+    63,
+    129,
+    60,
+    126,
+    62,
+    61,
+    249,
+    247,
+    251,
+    134,
+    254,
+    192,
+    71,
+    191,
+    194,
+    252,
+    133,
+    253
+  ],
+  "source_indices_preserved": true,
+  "source_size": 256,
+  "stratum_counts": {
+    "contact_onset/family_0/sign_+1": 5,
+    "contact_onset/family_0/sign_-1": 5,
+    "contact_onset/family_1/sign_+1": 5,
+    "contact_onset/family_1/sign_-1": 5,
+    "contact_onset/family_2/sign_+1": 5,
+    "contact_onset/family_2/sign_-1": 5,
+    "free_space/family_0/sign_+1": 6,
+    "free_space/family_0/sign_-1": 6,
+    "free_space/family_1/sign_+1": 6,
+    "free_space/family_1/sign_-1": 6,
+    "free_space/family_2/sign_+1": 6,
+    "free_space/family_2/sign_-1": 6,
+    "post_contact/family_0/sign_+1": 5,
+    "post_contact/family_0/sign_-1": 5,
+    "post_contact/family_1/sign_+1": 5,
+    "post_contact/family_1/sign_-1": 5,
+    "post_contact/family_2/sign_+1": 5,
+    "post_contact/family_2/sign_-1": 5,
+    "pre_contact/family_0/sign_+1": 6,
+    "pre_contact/family_0/sign_-1": 6,
+    "pre_contact/family_1/sign_+1": 5,
+    "pre_contact/family_1/sign_-1": 5,
+    "pre_contact/family_2/sign_+1": 5,
+    "pre_contact/family_2/sign_-1": 5
+  },
+  "stratum_order": [
+    [
+      "free_space",
+      0,
+      -1
+    ],
+    [
+      "free_space",
+      0,
+      1
+    ],
+    [
+      "free_space",
+      1,
+      -1
+    ],
+    [
+      "free_space",
+      1,
+      1
+    ],
+    [
+      "free_space",
+      2,
+      -1
+    ],
+    [
+      "free_space",
+      2,
+      1
+    ],
+    [
+      "pre_contact",
+      0,
+      -1
+    ],
+    [
+      "pre_contact",
+      0,
+      1
+    ],
+    [
+      "pre_contact",
+      1,
+      -1
+    ],
+    [
+      "pre_contact",
+      1,
+      1
+    ],
+    [
+      "pre_contact",
+      2,
+      -1
+    ],
+    [
+      "pre_contact",
+      2,
+      1
+    ],
+    [
+      "contact_onset",
+      0,
+      -1
+    ],
+    [
+      "contact_onset",
+      0,
+      1
+    ],
+    [
+      "contact_onset",
+      1,
+      -1
+    ],
+    [
+      "contact_onset",
+      1,
+      1
+    ],
+    [
+      "contact_onset",
+      2,
+      -1
+    ],
+    [
+      "contact_onset",
+      2,
+      1
+    ],
+    [
+      "post_contact",
+      0,
+      -1
+    ],
+    [
+      "post_contact",
+      0,
+      1
+    ],
+    [
+      "post_contact",
+      1,
+      -1
+    ],
+    [
+      "post_contact",
+      1,
+      1
+    ],
+    [
+      "post_contact",
+      2,
+      -1
+    ],
+    [
+      "post_contact",
+      2,
+      1
+    ]
+  ],
+  "target_residual_equality_count": 0,
+  "training_support_source": {
+    "bytes": 16346,
+    "relative_path": "experiments/r13_p15_cr_trca/stage4/training_support_bank.npz",
+    "sha256": "fbd5e867ba176bf202d6dba0283ad77c8cc1800c56c30fa1e0066631906c3bb5"
+  }
+}
