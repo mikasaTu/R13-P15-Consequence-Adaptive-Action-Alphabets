@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "exported_at_utc": "2026-08-17T12:18:52Z",
+  "export_format": "lark-doc-v2-markdown",
+  "source_root": {
+    "title": "R13-P15：Consequence-Adaptive Action Alphabets",
+    "space_id": "7599097990090853600",
+    "wiki_node_token": "BftiwVGSbijquakZvx4cQQEsnve",
+    "document_token": "MHIHdho3toNCbGxYpXfcxJcynBb",
+    "url": "https://icnbwz7kd1ui.feishu.cn/wiki/BftiwVGSbijquakZvx4cQQEsnve"
+  },
+  "source_parent": {
+    "title": "实验规划",
+    "wiki_node_token": "DWrNwjjbUidPYSkoh3kcrO3Qnoh",
+    "document_token": "PRi0d186IoJ0pbx6pIUcqpdanXb",
+    "url": "https://icnbwz7kd1ui.feishu.cn/wiki/DWrNwjjbUidPYSkoh3kcrO3Qnoh"
+  },
+  "notes": [
+    "Each Markdown file is the unmodified content returned by lark-cli docs +fetch --api-version v2 --doc-format markdown.",
+    "step3 has two distinct direct child report nodes in Feishu; both are preserved."
+  ],
+  "documents": [
+    {
+      "key": "step1_plan",
+      "step": "step1",
+      "kind": "plan",
+      "title": "step1",
+      "wiki_node_token": "UUk3wSijKiScJTkyKZSccDnqn1f",
+      "document_token": "YKE5d1eQGoW2RexKbECc0fEyn9e",
+      "revision_id": 7,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/UUk3wSijKiScJTkyKZSccDnqn1f",
+      "path": "step1/PLAN.md",
+      "bytes": 10088,
+      "sha256": "a0fee43de43408fc9abc80d6ed17a76fc276c69c5a11c6a1f8f5580ec230cdfb"
+    },
+    {
+      "key": "step1_report",
+      "step": "step1",
+      "kind": "report",
+      "title": "实验报告",
+      "wiki_node_token": "A1DlwJtcliFNPKkExitcD9RgnPa",
+      "document_token": "LW92dgW0cotHJMxFj3Bcpz84nOe",
+      "revision_id": 4,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/A1DlwJtcliFNPKkExitcD9RgnPa",
+      "path": "step1/REPORT.md",
+      "bytes": 15786,
+      "sha256": "032974fa66c3d4bac57e6797cee34703aeedc218ea4fd7653b8232bc85c3e11d"
+    },
+    {
+      "key": "step2_plan",
+      "step": "step2",
+      "kind": "plan",
+      "title": "step2",
+      "wiki_node_token": "EZcewp9DsiCbXjkaOubc9qsynJf",
+      "document_token": "N2ItdPGxzobbDJx2o7XcUVrAnAr",
+      "revision_id": 3,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/EZcewp9DsiCbXjkaOubc9qsynJf",
+      "path": "step2/PLAN.md",
+      "bytes": 11215,
+      "sha256": "3b11e111edd4abd23da2995331c3044880d4623fe2cb75b99621ea2ea2ab7a32"
+    },
+    {
+      "key": "step2_report",
+      "step": "step2",
+      "kind": "report",
+      "title": "R13-P15 Stage 1.5 Report — Failure Localization and Rescue Audit",
+      "wiki_node_token": "UAJwwiNTcijYibkHKRDcRk9onOe",
+      "document_token": "R6Rddtj37oT5RwxOnH1cEtlAnmL",
+      "revision_id": 4,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/UAJwwiNTcijYibkHKRDcRk9onOe",
+      "path": "step2/REPORT.md",
+      "bytes": 18435,
+      "sha256": "9de4eb36ce3f89affe7b4929cde823cdb01e9f26e2fd08a8434c5c314f1bf67c"
+    },
+    {
+      "key": "step3_plan",
+      "step": "step3",
+      "kind": "plan",
+      "title": "step3",
+      "wiki_node_token": "S36rwHv5KiCIqFkSBNjcJ8LfnUf",
+      "document_token": "LTxLdL8l5oltoExJwbWctlkUnnd",
+      "revision_id": 4,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/S36rwHv5KiCIqFkSBNjcJ8LfnUf",
+      "path": "step3/PLAN.md",
+      "bytes": 13948,
+      "sha256": "3138b5520792c95c7c95c40a991c5389280f94bacb426ea6879eeb3105401dad"
+    },
+    {
+      "key": "step3_report_stage2",
+      "step": "step3",
+      "kind": "report",
+      "title": "R13-P15 Stage 2 实验报告",
+      "wiki_node_token": "AMyWwnjQYiz7XBkZmaUc4nCUnYb",
+      "document_token": "GqGFdRfeOo8xxWxs4M4ckbrtnyc",
+      "revision_id": 4,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/AMyWwnjQYiz7XBkZmaUc4nCUnYb",
+      "path": "step3/REPORT_STAGE2.md",
+      "bytes": 18357,
+      "sha256": "775ac7f80d397d61db9cf538ee441abf438f1b7790cb0c9b9ad4703229e2845a"
+    },
+    {
+      "key": "step3_report",
+      "step": "step3",
+      "kind": "report",
+      "title": "实验报告",
+      "wiki_node_token": "Cab7w8Op5i0S6tkAQnOc6Ncqnce",
+      "document_token": "JemRdS5exoSO1Lx3XTJcXn7fnrc",
+      "revision_id": 7,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/Cab7w8Op5i0S6tkAQnOc6Ncqnce",
+      "path": "step3/REPORT.md",
+      "bytes": 18341,
+      "sha256": "da712c1cac9ab3810015d24d9f24b6c94a73d96abfb8befbdd26bd63ec58f04d"
+    },
+    {
+      "key": "step4_plan",
+      "step": "step4",
+      "kind": "plan",
+      "title": "step4",
+      "wiki_node_token": "TR13wgC6YigXUykvpIkcB11hnZc",
+      "document_token": "FUf4dx8UGoIzg7xaYzJcuvBAnOb",
+      "revision_id": 2,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/TR13wgC6YigXUykvpIkcB11hnZc",
+      "path": "step4/PLAN.md",
+      "bytes": 12796,
+      "sha256": "4a4543dd4156f0d82b02e4f53ebddc84e73862b8869bd8df8f5dfc3f2c5370c6"
+    },
+    {
+      "key": "step4_report",
+      "step": "step4",
+      "kind": "report",
+      "title": "实验报告",
+      "wiki_node_token": "TOubw1id8iFJdxkEK5GcynkVnGb",
+      "document_token": "CfpFdiST6o006rxGu5QchDt4nmg",
+      "revision_id": 3,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/TOubw1id8iFJdxkEK5GcynkVnGb",
+      "path": "step4/REPORT.md",
+      "bytes": 19296,
+      "sha256": "c09990b807199bd54fd713a5aacbb6b4180438f2f913c6b7ae531f2f677a47a9"
+    },
+    {
+      "key": "step5_plan",
+      "step": "step5",
+      "kind": "plan",
+      "title": "step5",
+      "wiki_node_token": "GNqAwwyVoih4DckFWIKcnBF2naf",
+      "document_token": "FbaOdpXk7otf3AxlrzAcl1aDnOg",
+      "revision_id": 4,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/GNqAwwyVoih4DckFWIKcnBF2naf",
+      "path": "step5/PLAN.md",
+      "bytes": 13660,
+      "sha256": "62538cc9e0b936ef5660362e129356fb102b50199ac55b790dc629b68b40a5ec"
+    },
+    {
+      "key": "step5_report",
+      "step": "step5",
+      "kind": "report",
+      "title": "R13-P15 Stage 4 — C3-faithful context-reversal and trust-region audit",
+      "wiki_node_token": "WthhweqjLig27XkTlgBcvoE2nkb",
+      "document_token": "KpE1dh586oWWhpxo7eRcyQKcnIe",
+      "revision_id": 8,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/WthhweqjLig27XkTlgBcvoE2nkb",
+      "path": "step5/REPORT.md",
+      "bytes": 11631,
+      "sha256": "4a9f0bef33c587294fafb1e4865ebe94d31819e3a06733406d22a1583ad50455"
+    }
+  ]
+}
