@@ -1,0 +1,35 @@
+{
+  "date_utc": "2026-08-18",
+  "python": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python",
+  "cuda_visible_devices": "",
+  "commands": [
+    {
+      "command": "python -m py_compile caaa_libero/stage5_branch_collection.py caaa_libero/stage5_evaluation.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "python -m py_compile caaa_libero/stage5_fresh.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "python -m py_compile caaa_libero/stage5_report.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "python -m pytest tests/test_stage5.py -q",
+      "exit_code": 0,
+      "result": "12 passed in 11.65s"
+    },
+    {
+      "command": "python -m pytest -q",
+      "exit_code": 0,
+      "result": "50 passed in 25.04s"
+    }
+  ],
+  "complete_existing_suite_executed": true,
+  "stage5_contract_suite_executed": true,
+  "failures": 0
+}

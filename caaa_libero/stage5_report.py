@@ -427,7 +427,7 @@ def _report(output_root, final, mechanism, bootstraps, confirmation_gate):
         "",
         "## Fresh policy-trajectory confirmation",
         "",
-        "200 个预注册升序 rollout seed/任务已全部执行；success counts: `%s`。" % json.dumps(successes, sort_keys=True),
+        "每任务预注册 200 个升序 rollout seed；成功任务在第 12 个成功处停止，不足任务扫完全部 200 个。冻结 success counts: `%s`。" % json.dumps(successes, sort_keys=True),
         (
             "48 条轨迹与 192 个 phase states 均已冻结并完成 confirmation branch/gate。"
             if split["complete"]
