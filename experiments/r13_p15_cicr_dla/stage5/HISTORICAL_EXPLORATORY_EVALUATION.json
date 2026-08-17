@@ -1,0 +1,21 @@
+{
+  "candidate_count": 128,
+  "methods": [
+    "B0_CURRENT_CONTACT_KMEANS",
+    "B1_ACTION_ONLY",
+    "B2_STATIC_CONSEQUENCE",
+    "CONTROL_ACTION_ONLY",
+    "CONTROL_CONSEQUENCE_LABEL_SHUFFLED",
+    "CONTROL_CONTEXT_SHUFFLED",
+    "CONTROL_CURRENT_CONTACT_ONLY",
+    "CONTROL_JOINT_STATE_NOMINAL_SHUFFLED",
+    "CONTROL_NOMINAL_SHUFFLED",
+    "CONTROL_NO_REVERSAL_LOSS",
+    "CONTROL_PHASE_ONLY",
+    "P1_CONTEXT_GATED_PSD"
+  ],
+  "reversal": [],
+  "split": "historical_exploratory",
+  "states": 160,
+  "targets_per_state": 96
+}
