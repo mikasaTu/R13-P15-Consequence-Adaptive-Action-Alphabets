@@ -1,0 +1,151 @@
+{
+  "confirmation_states_executed": false,
+  "kind": "sacrificial fresh generator deterministic replay validation",
+  "passed": true,
+  "rows": [
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131506900,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131506901,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131506902,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131506903,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131507900,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "plate_push"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131507901,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "plate_push"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131507902,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "plate_push"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131507903,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "plate_push"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131508900,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131508901,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131508902,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131508903,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131509900,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "wine_rack"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131509901,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "wine_rack"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131509902,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "wine_rack"
+    },
+    {
+      "action_exact": true,
+      "passed": true,
+      "seed": 131509903,
+      "state_exact": true,
+      "steps_equal": true,
+      "success_equal": true,
+      "task_id": "wine_rack"
+    }
+  ]
+}
