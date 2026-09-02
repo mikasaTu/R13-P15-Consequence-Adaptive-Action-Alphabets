@@ -1,0 +1,149 @@
+{
+  "chosen_source": "stage5_executed_candidate_consequence_caches",
+  "created_utc": "2026-09-02T11:02:37.143138+00:00",
+  "entries": [
+    {
+      "bytes": 33955615,
+      "candidate_count": 128,
+      "candidate_source_id_max": 254,
+      "candidate_source_id_min": 0,
+      "candidate_source_ids_unique": true,
+      "complete_marker_valid": true,
+      "complete_pair_coverage": true,
+      "marker_evidence": {
+        "candidates": 128,
+        "complete": true,
+        "kind": "stage5_local_bank_matrix_cache",
+        "payload": "stage5_train_cache.npz",
+        "payload_bytes": 33955615,
+        "payload_sha256": "45f8f5d583eef93315bd59686c4ad0ff84e29686d36949e1355e2ed05a62141b",
+        "schema_version": "stage5-local-m128-cache-v1",
+        "split": "train",
+        "states": 768,
+        "targets": 96
+      },
+      "passed": true,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_train_cache.npz",
+      "schema": "stage5-local-m128-cache-v1",
+      "sha256": "45f8f5d583eef93315bd59686c4ad0ff84e29686d36949e1355e2ed05a62141b",
+      "split": "train",
+      "state_target_candidate_shape": [
+        768,
+        96,
+        128
+      ],
+      "target_count": 96
+    },
+    {
+      "bytes": 2854422,
+      "candidate_count": 128,
+      "candidate_source_id_max": 254,
+      "candidate_source_id_min": 0,
+      "candidate_source_ids_unique": true,
+      "complete_marker_valid": true,
+      "complete_pair_coverage": true,
+      "marker_evidence": {
+        "candidates": 128,
+        "complete": true,
+        "kind": "stage5_local_bank_matrix_cache",
+        "payload": "stage5_calibration_cache.npz",
+        "payload_bytes": 2854422,
+        "payload_sha256": "1796e0892f4cd8c3285da9616602d445613bf2f352c0b844a6859076313f57d4",
+        "schema_version": "stage5-local-m128-cache-v1",
+        "split": "calibration",
+        "states": 64,
+        "targets": 96
+      },
+      "passed": true,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_calibration_cache.npz",
+      "schema": "stage5-local-m128-cache-v1",
+      "sha256": "1796e0892f4cd8c3285da9616602d445613bf2f352c0b844a6859076313f57d4",
+      "split": "calibration",
+      "state_target_candidate_shape": [
+        64,
+        96,
+        128
+      ],
+      "target_count": 96
+    },
+    {
+      "bytes": 2860484,
+      "candidate_count": 128,
+      "candidate_source_id_max": 254,
+      "candidate_source_id_min": 0,
+      "candidate_source_ids_unique": true,
+      "complete_marker_valid": true,
+      "complete_pair_coverage": true,
+      "marker_evidence": {
+        "candidates": 128,
+        "complete": true,
+        "kind": "stage5_local_bank_matrix_cache",
+        "payload": "stage5_development_cache.npz",
+        "payload_bytes": 2860484,
+        "payload_sha256": "a27d749118f44f0b9f9e86ad8a6b9be7ee9c05336f37dce76b6b205c8c8bbcb6",
+        "schema_version": "stage5-local-m128-cache-v1",
+        "split": "development",
+        "states": 64,
+        "targets": 96
+      },
+      "passed": true,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_development_cache.npz",
+      "schema": "stage5-local-m128-cache-v1",
+      "sha256": "a27d749118f44f0b9f9e86ad8a6b9be7ee9c05336f37dce76b6b205c8c8bbcb6",
+      "split": "development",
+      "state_target_candidate_shape": [
+        64,
+        96,
+        128
+      ],
+      "target_count": 96
+    },
+    {
+      "bytes": 7115400,
+      "candidate_count": 128,
+      "candidate_source_id_max": 254,
+      "candidate_source_id_min": 0,
+      "candidate_source_ids_unique": true,
+      "complete_marker_valid": true,
+      "complete_pair_coverage": true,
+      "marker_evidence": {
+        "candidates": 128,
+        "complete": true,
+        "kind": "stage5_local_bank_matrix_cache",
+        "payload": "stage5_historical_exploratory_cache.npz",
+        "payload_bytes": 7115400,
+        "payload_sha256": "96f9bb72aefda8249570978a9f60928bb1d6ed95a6996234050a6e3f02f1ad94",
+        "schema_version": "stage5-local-m128-cache-v1",
+        "split": "historical_exploratory",
+        "states": 160,
+        "targets": 96
+      },
+      "passed": true,
+      "path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_historical_exploratory_cache.npz",
+      "schema": "stage5-local-m128-cache-v1",
+      "sha256": "96f9bb72aefda8249570978a9f60928bb1d6ed95a6996234050a6e3f02f1ad94",
+      "split": "historical_exploratory",
+      "state_target_candidate_shape": [
+        160,
+        96,
+        128
+      ],
+      "target_count": 96
+    }
+  ],
+  "failure_disposition": null,
+  "index_space": {
+    "candidate": "0..127 local position; candidate_source_index maps to frozen 256-bank ID",
+    "lookup": "true_distance[state,target,candidate] from already-simulated settled consequence",
+    "state": "cache row; key/task_id/episode_id/phase identify source episode snapshot",
+    "target": "0..95 frozen Stage 2 target residual"
+  },
+  "kind": "stage6a_data_source_binding",
+  "manifest_path": "experiments/r13_p15_cicr_dla/stage5/STAGE5_CACHE_MANIFEST.json",
+  "manifest_sha256": "ccc588eaecd123c0c6e149fc49e906e37774c6a09e0e29b464da0ce39689ab1f",
+  "passed": true,
+  "selection_precedence": [
+    "stage5_caches",
+    "stage2_support_shards"
+  ]
+}

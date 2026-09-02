@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "historical_paths_immutable": true,
+    "stage1": true,
+    "stage1_5": true,
+    "stage2": true,
+    "stage3": true,
+    "stage4": true,
+    "stage5": true
+  },
+  "created_utc": "2026-09-02T11:02:32.362133+00:00",
+  "failure_disposition": null,
+  "historical_dispositions_immutable": {
+    "stage1": "REJECT_CORE_HYPOTHESIS",
+    "stage1_5": "REJECT_P15_FAMILY",
+    "stage2": "ORACLE_ONLY_NO_DEPLOYABLE_MODEL",
+    "stage3": "ORACLE_ONLY_NO_LEARNABLE_RANKER",
+    "stage4": "STATIC_EFFECT_METRIC_ONLY",
+    "stage5": "STATIC_CONSEQUENCE_METRIC_ONLY"
+  },
+  "kind": "stage6a_historical_binding",
+  "passed": true,
+  "source_branch": "r13-p15-stage6a-quantizer-repair-c4-free-replay",
+  "source_commit": "d9ffd5a16c7487707a983f53bf92d08a5421a461",
+  "source_tree": "7631b151ad9ee839beb0d53310170560b35209d8",
+  "stage5_independent_hash_check": {
+    "artifact_count": 96,
+    "artifact_tree_excluding_release_verifier": "7a869041d1c926bcc9d11e79331777a013c8f5f442c397de50decf2b0872c759",
+    "mismatches": [],
+    "tree_file_count": 96
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "D1_quantizer_degeneracy": {
+    "group_mean_squared_normalized_error": {
+      "constraint_violations": 591610.8738318088,
+      "contact_and_force": 486227208773.00946,
+      "gripper_and_articulation": 128861.67135001851,
+      "object_pose": 10204912.801312186,
+      "task_progress": 11992785.261146622,
+      "tcp_object_relative_pose": 115826.168860613
+    },
+    "group_share_of_total": {
+      "constraint_violations": 1.2166798528713651e-06,
+      "contact_and_force": 0.9999526293361927,
+      "gripper_and_articulation": 2.650110169940373e-07,
+      "object_pose": 2.0986956722495e-05,
+      "task_progress": 2.4663813415975154e-05,
+      "tcp_object_relative_pose": 2.3820279903788272e-07
+    },
+    "median_assignment_utilization": 0.015625,
+    "median_realized_clipped_coordinate_fraction": 0.8342013888888888,
+    "parameter_sha256": "9c788eb5d65392887969d7cba221daadf149f06468df4786e9910c7d3be0717d",
+    "source_shards": 128
+  },
+  "D2_pipeline_coverage": {
+    "development_states": 64,
+    "metrics": {
+      "B2": {
+        "candidate_distance_spearman": 0.1136075185852015,
+        "ndcg_at_16": 0.45375068030650767,
+        "oracle_regret": 0.26799216374789836,
+        "realized_effect_error": 0.30817193275131033
+      },
+      "C3": {
+        "candidate_distance_spearman": 0.664871859506,
+        "ndcg_at_16": 0.619579052988,
+        "oracle_regret": 0.242970302492,
+        "realized_effect_error": 0.28315007120230595
+      },
+      "C4": {
+        "candidate_distance_spearman": 0.326638235999,
+        "ndcg_at_16": 0.444898070843,
+        "oracle_regret": 0.318719002371,
+        "realized_effect_error": 0.35889877126473557
+      },
+      "C5": {
+        "candidate_distance_spearman": 0.326638235999,
+        "ndcg_at_16": 0.444898070843,
+        "oracle_regret": 0.334789603628,
+        "realized_effect_error": 0.37496937238955597
+      }
+    },
+    "ranking_source_semantics": "C3/C4/C5: frozen pooled development retrieval row; B2: independently recomputed because no B2 retrieval row was published",
+    "rows_per_method": 6144,
+    "source_hashes": {
+      "action_bank.npz": "d41f0dc748866cae3ef151d9f16e39789485d6e633a0a88f62fe4c570661600b",
+      "baseline_codebooks.npz": "b17d7c144fca0925787149ad279aabd631e3c5ee33c1e9ad1ec47d53b07e7cdb",
+      "development_quantization.csv": "5c1d77b24aaeb6c20703ec7fda8072eea15c70fa30afef25d4f2d5c920c40e81",
+      "retrieval_metrics.csv": "822705b83f9132a4d5015cf2cd0d1209c689c0e2d3b43b189a4b2e3e5c5f34db"
+    }
+  },
+  "D3_coverage_evidence_only": {
+    "checkpoint_hashes": {
+      "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150517.pt": "2a54fced42be8774fb8b2be83ff6c76782c70974436251aaae314207a8d469fa",
+      "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150529.pt": "85c52b8eb8c0edb2d40ee706c54501e735a39c446c59f6032302135bcfb8e59e",
+      "CONTEXT_METRIC_CHECKPOINTS/PROPOSED/seed_13150543.pt": "461b0b6836eb66ca318f8c2080dcee729dc55bb3a2687a254d879424859ced6f"
+    },
+    "fraction_of_bound": 0.9640468442891493,
+    "mean_modulation_norm": 5.903557141621907,
+    "per_seed_mean_modulation_norm": [
+      5.924408435821533,
+      5.930002212524414,
+      5.856260776519775
+    ],
+    "theoretical_bound": 6.123724356957945,
+    "train_cache_sha256": "45f8f5d583eef93315bd59686c4ad0ff84e29686d36949e1355e2ed05a62141b"
+  },
+  "checks": {
+    "d1_assignment_utilization": true,
+    "d1_clipped_fraction": true,
+    "d1_contact_and_force_share": true,
+    "d2_b2_realized": true,
+    "d2_c3_ndcg": true,
+    "d2_c3_realized": true,
+    "d2_c3_regret": true,
+    "d2_c4_ndcg": true,
+    "d2_c4_realized": true,
+    "d2_c4_regret": true,
+    "d2_c5_realized": true,
+    "d3_bound": true,
+    "d3_mean_norm": true
+  },
+  "created_utc": "2026-09-02T11:07:59.555986+00:00",
+  "failure_disposition": null,
+  "kind": "stage6a_defect_reproduction",
+  "passed": true,
+  "relative_tolerance": 0.0001
+}

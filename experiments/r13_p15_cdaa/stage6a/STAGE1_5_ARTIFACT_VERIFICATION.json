@@ -1,0 +1,240 @@
+{
+  "checks": {
+    "artifact_hash:PREREGISTRATION.md": {
+      "expected": "6f13cdeceda9c782f63e20fcea3d085db33b1adabf5a4d0b945b54db7d88b135",
+      "observed": "6f13cdeceda9c782f63e20fcea3d085db33b1adabf5a4d0b945b54db7d88b135",
+      "ok": true
+    },
+    "artifact_hash:STAGE1_INPUT_BINDING.json": {
+      "expected": "ed5d4e87b75442c0d6efbaa9232552ee01b9c959a94f2df110fa849c0acf5810",
+      "observed": "ed5d4e87b75442c0d6efbaa9232552ee01b9c959a94f2df110fa849c0acf5810",
+      "ok": true
+    },
+    "artifact_hash:bootstrap_results.json": {
+      "expected": "f9e0f24b9559c74d2b82e1889e6ebda752407a40725cc17f915647d5ad2aeba6",
+      "observed": "f9e0f24b9559c74d2b82e1889e6ebda752407a40725cc17f915647d5ad2aeba6",
+      "ok": true
+    },
+    "artifact_hash:error_decomposition.csv": {
+      "expected": "64175a1e7ead5c6ca3a1eef1f216671d9b569cce127dc6cf8fb72cc0e25fab65",
+      "observed": "64175a1e7ead5c6ca3a1eef1f216671d9b569cce127dc6cf8fb72cc0e25fab65",
+      "ok": true
+    },
+    "artifact_hash:fresh_branch_rollouts.zarr": {
+      "expected": "f1741bf70e6a114859fa2455ef41b6464afd6320cac4e3ba7e8607d910354f9c",
+      "observed": "f1741bf70e6a114859fa2455ef41b6464afd6320cac4e3ba7e8607d910354f9c",
+      "ok": true
+    },
+    "artifact_hash:fresh_holdout_split.json": {
+      "expected": "19211f3dd56cae72311982c7bafd7ae1a72f6a6acfdd4aa39ddc501702884c47",
+      "observed": "19211f3dd56cae72311982c7bafd7ae1a72f6a6acfdd4aa39ddc501702884c47",
+      "ok": true
+    },
+    "artifact_hash:mechanism_controls.csv": {
+      "expected": "f5284680c1476bc5701c883ccacbb2f64022d568ff18f6dd9b049e866436799b",
+      "observed": "f5284680c1476bc5701c883ccacbb2f64022d568ff18f6dd9b049e866436799b",
+      "ok": true
+    },
+    "artifact_hash:method_definitions.json": {
+      "expected": "a8c659eb1fa1a48ddbd715c1b2749048b24abd5867546c3f12f985b16c5e38ec",
+      "observed": "a8c659eb1fa1a48ddbd715c1b2749048b24abd5867546c3f12f985b16c5e38ec",
+      "ok": true
+    },
+    "artifact_hash:quantization_results_by_phase.csv": {
+      "expected": "20e7654bb903361d166a07d122c8aa95dec7d43b2dd4eb147020b599ff57f8d0",
+      "observed": "20e7654bb903361d166a07d122c8aa95dec7d43b2dd4eb147020b599ff57f8d0",
+      "ok": true
+    },
+    "artifact_hash:quantization_results_by_task.csv": {
+      "expected": "26c0b895be9675b2ae5b4c89ca6797789e88835713ac33002b39d48ea47f27b7",
+      "observed": "26c0b895be9675b2ae5b4c89ca6797789e88835713ac33002b39d48ea47f27b7",
+      "ok": true
+    },
+    "artifact_hash:retrospective_diagnostics.parquet": {
+      "expected": "04aa9f6a47284e83d0cd033360fe72d2b5f7719f4a5c12a9ae78c1da64f85a15",
+      "observed": "04aa9f6a47284e83d0cd033360fe72d2b5f7719f4a5c12a9ae78c1da64f85a15",
+      "ok": true
+    },
+    "bootstrap": {
+      "comparisons": 9,
+      "evidence_status": "retrospective_internal_screen_not_confirmatory",
+      "ok": true,
+      "replicates": 10000
+    },
+    "csv_rows:error_decomposition.csv": {
+      "expected": 59,
+      "observed": 59,
+      "ok": true
+    },
+    "csv_rows:mechanism_controls.csv": {
+      "expected": 45,
+      "observed": 45,
+      "ok": true
+    },
+    "csv_rows:quantization_results_by_phase.csv": {
+      "expected": 160,
+      "observed": 160,
+      "ok": true
+    },
+    "csv_rows:quantization_results_by_task.csv": {
+      "expected": 40,
+      "observed": 40,
+      "ok": true
+    },
+    "final_disposition": {
+      "expected": "REJECT_P15_FAMILY",
+      "manifest_report_sha256": "2a40c1e2731fd778f6e247f11d18d8fc4b15ca8b80324536d5f0f7ed0f4fb9ed",
+      "ok": true,
+      "report_sha256": "2a40c1e2731fd778f6e247f11d18d8fc4b15ca8b80324536d5f0f7ed0f4fb9ed"
+    },
+    "fresh_holdout_stop": {
+      "ok": true,
+      "records": 0,
+      "split_status": "NOT_COLLECTED_INTERNAL_SCREEN_FAILED",
+      "zarr_files": [
+        ".zattrs",
+        ".zgroup"
+      ],
+      "zarr_states": 0,
+      "zarr_status": "NOT_COLLECTED_INTERNAL_SCREEN_FAILED"
+    },
+    "internal_screen": {
+      "decision": "REJECT_P15_FAMILY",
+      "ok": true,
+      "passing_methods": [],
+      "rows": 30720
+    },
+    "old_test_realized_shards": {
+      "failures": [],
+      "ok": true,
+      "plans": 64,
+      "realized_shards": 64,
+      "rows": 18432
+    },
+    "preregistration_first_commit": {
+      "commit": "9a3ac1a4c774103fe618bd283909c2793ed581ec",
+      "expected_paths": [
+        "experiments/r13_p15_caaa_v2/stage1_5/PREREGISTRATION.md",
+        "experiments/r13_p15_caaa_v2/stage1_5/STAGE1_INPUT_BINDING.json"
+      ],
+      "observed_paths": [
+        "experiments/r13_p15_caaa_v2/stage1_5/PREREGISTRATION.md",
+        "experiments/r13_p15_caaa_v2/stage1_5/STAGE1_INPUT_BINDING.json"
+      ],
+      "ok": true
+    },
+    "primary_k_only": {
+      "ok": true,
+      "primary_k": 64,
+      "sensitivity_inspected": false
+    },
+    "required:PREREGISTRATION.md": {
+      "exists": true,
+      "ok": true
+    },
+    "required:STAGE1_5_REPORT.md": {
+      "exists": true,
+      "ok": true
+    },
+    "required:STAGE1_INPUT_BINDING.json": {
+      "exists": true,
+      "ok": true
+    },
+    "required:bootstrap_results.json": {
+      "exists": true,
+      "ok": true
+    },
+    "required:error_decomposition.csv": {
+      "exists": true,
+      "ok": true
+    },
+    "required:fresh_branch_rollouts.zarr": {
+      "exists": true,
+      "ok": true
+    },
+    "required:fresh_holdout_split.json": {
+      "exists": true,
+      "ok": true
+    },
+    "required:mechanism_controls.csv": {
+      "exists": true,
+      "ok": true
+    },
+    "required:method_definitions.json": {
+      "exists": true,
+      "ok": true
+    },
+    "required:quantization_results_by_phase.csv": {
+      "exists": true,
+      "ok": true
+    },
+    "required:quantization_results_by_task.csv": {
+      "exists": true,
+      "ok": true
+    },
+    "required:retrospective_diagnostics.parquet": {
+      "exists": true,
+      "ok": true
+    },
+    "retrospective_diagnostics": {
+      "ok": true,
+      "rows": 256
+    },
+    "stage1_bound_file:environment_lock": {
+      "expected": "f4421974cf948bfa765098e24819d445b209589611cbc3fe11e04c30fb0f0d3e",
+      "observed": "f4421974cf948bfa765098e24819d445b209589611cbc3fe11e04c30fb0f0d3e",
+      "ok": true
+    },
+    "stage1_bound_file:jacobian_metrics": {
+      "expected": "901f33cccf0378184c2d19303a4e1a433d7dfbab4e1abf9370371b3902bcc1ff",
+      "observed": "901f33cccf0378184c2d19303a4e1a433d7dfbab4e1abf9370371b3902bcc1ff",
+      "ok": true
+    },
+    "stage1_bound_file:quantization_results": {
+      "expected": "9ac24b739273216cf2465652dc68cab8cb47956eabd131769a16336e14de2190",
+      "observed": "9ac24b739273216cf2465652dc68cab8cb47956eabd131769a16336e14de2190",
+      "ok": true
+    },
+    "stage1_bound_file:report": {
+      "expected": "5924ee1a77bc8c9339c5f450a8be87b9f8ad1e1a91b683fbf848f5f3f2047dd5",
+      "observed": "5924ee1a77bc8c9339c5f450a8be87b9f8ad1e1a91b683fbf848f5f3f2047dd5",
+      "ok": true
+    },
+    "stage1_bound_tree:branch_rollouts": {
+      "expected": "083893fd04a7e8282fc1ae0ba8ad2d362a87070c92f0bc780b672d8f818df59e",
+      "observed": "083893fd04a7e8282fc1ae0ba8ad2d362a87070c92f0bc780b672d8f818df59e",
+      "ok": true
+    },
+    "stage1_bound_tree:codebooks": {
+      "expected": "56cbc8d020c8dcad14713acbd416ded890ac63783429907198bdd31e233187d3",
+      "observed": "56cbc8d020c8dcad14713acbd416ded890ac63783429907198bdd31e233187d3",
+      "ok": true
+    },
+    "stage1_bound_tree:quantized_shards": {
+      "expected": "3385afd0b6e06567f2e2ad380c83e47937617ddbd8a39bc8cb859bc86d5d0167",
+      "observed": "3385afd0b6e06567f2e2ad380c83e47937617ddbd8a39bc8cb859bc86d5d0167",
+      "ok": true
+    },
+    "stage1_full_tree": {
+      "expected": "047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c",
+      "observed": "047aae35193339a460cd1dbac0e4495d7f9cff4a1cb2799c58b738e86e0e4c5c",
+      "ok": true
+    },
+    "stage1_git_path_identity": {
+      "input_commit": "434427af0f8adc844851c27cfc050b2c9c6752dc",
+      "ok": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    "strict_json": {
+      "failures": [],
+      "files": 143,
+      "ok": true
+    }
+  },
+  "failures": [],
+  "full_stage1_hash_requested": true,
+  "repo_root": ".",
+  "schema_version": 1,
+  "status": "PASS"
+}

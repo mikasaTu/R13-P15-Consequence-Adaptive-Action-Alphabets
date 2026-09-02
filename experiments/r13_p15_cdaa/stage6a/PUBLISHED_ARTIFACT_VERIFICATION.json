@@ -1,0 +1,161 @@
+{
+  "checks": {
+    "artifact:PREREGISTRATION.md": {
+      "expected_sha256": "07e0ac3123dea4c51b18d41c5a8f989e8a18fb7b61a028e08e977a261f274856",
+      "observed_sha256": "07e0ac3123dea4c51b18d41c5a8f989e8a18fb7b61a028e08e977a261f274856",
+      "ok": true
+    },
+    "artifact:alphabet_codebooks": {
+      "expected_sha256": "56cbc8d020c8dcad14713acbd416ded890ac63783429907198bdd31e233187d3",
+      "observed_sha256": "56cbc8d020c8dcad14713acbd416ded890ac63783429907198bdd31e233187d3",
+      "ok": true
+    },
+    "artifact:bootstrap_results.json": {
+      "expected_sha256": "919fc0dcfd3fba71cc64fa7c8ba07d8ef013b14742322b137feff320899fb9fb",
+      "observed_sha256": "919fc0dcfd3fba71cc64fa7c8ba07d8ef013b14742322b137feff320899fb9fb",
+      "ok": true
+    },
+    "artifact:branch_replay_validation.json": {
+      "expected_sha256": "7ae428605a824ba7f36786ccffa7ef32e7a7bf795fa8f866b29d099baacb5cf9",
+      "observed_sha256": "7ae428605a824ba7f36786ccffa7ef32e7a7bf795fa8f866b29d099baacb5cf9",
+      "ok": true
+    },
+    "artifact:branch_rollouts.zarr": {
+      "expected_sha256": "083893fd04a7e8282fc1ae0ba8ad2d362a87070c92f0bc780b672d8f818df59e",
+      "observed_sha256": "083893fd04a7e8282fc1ae0ba8ad2d362a87070c92f0bc780b672d8f818df59e",
+      "ok": true
+    },
+    "artifact:consequence_schema.json": {
+      "expected_sha256": "0d6545ef9917a2cd25f0016547a67157c674628d9cae79bca0b8a6fde66fced1",
+      "observed_sha256": "0d6545ef9917a2cd25f0016547a67157c674628d9cae79bca0b8a6fde66fced1",
+      "ok": true
+    },
+    "artifact:environment_lock.json": {
+      "expected_sha256": "f4421974cf948bfa765098e24819d445b209589611cbc3fe11e04c30fb0f0d3e",
+      "observed_sha256": "f4421974cf948bfa765098e24819d445b209589611cbc3fe11e04c30fb0f0d3e",
+      "ok": true
+    },
+    "artifact:jacobian_metrics.parquet": {
+      "expected_sha256": "901f33cccf0378184c2d19303a4e1a433d7dfbab4e1abf9370371b3902bcc1ff",
+      "observed_sha256": "901f33cccf0378184c2d19303a4e1a433d7dfbab4e1abf9370371b3902bcc1ff",
+      "ok": true
+    },
+    "artifact:mechanism_controls.csv": {
+      "expected_sha256": "e505cd93d56881d97be5bd535c3fa8e702dc91bbead20dea7b65ef232adbbba6",
+      "observed_sha256": "e505cd93d56881d97be5bd535c3fa8e702dc91bbead20dea7b65ef232adbbba6",
+      "ok": true
+    },
+    "artifact:results_by_phase.csv": {
+      "expected_sha256": "78fc2d836ff83223e5f32341cedf307ab5e60f55f439c105b8a99a27d1ff9ad9",
+      "observed_sha256": "78fc2d836ff83223e5f32341cedf307ab5e60f55f439c105b8a99a27d1ff9ad9",
+      "ok": true
+    },
+    "artifact:results_by_task.csv": {
+      "expected_sha256": "7b4a190e03d4134463d10e64870d157217f62a9210587c88330d0c747ee4953b",
+      "observed_sha256": "7b4a190e03d4134463d10e64870d157217f62a9210587c88330d0c747ee4953b",
+      "ok": true
+    },
+    "artifact:task_and_seed_split.json": {
+      "expected_sha256": "7b11ac5dc44877d0b5011c355d178dda44558b35d33e4af7f705fba1bfe1cc22",
+      "observed_sha256": "7b11ac5dc44877d0b5011c355d178dda44558b35d33e4af7f705fba1bfe1cc22",
+      "ok": true
+    },
+    "atomic_shards:branch": {
+      "expected": 256,
+      "marker_failures": [],
+      "observed": 256,
+      "ok": true
+    },
+    "atomic_shards:jacobians": {
+      "expected": 256,
+      "marker_failures": [],
+      "observed": 256,
+      "ok": true
+    },
+    "atomic_shards:quantization_plans": {
+      "expected": 128,
+      "marker_failures": [],
+      "observed": 128,
+      "ok": true
+    },
+    "atomic_shards:quantized": {
+      "expected": 128,
+      "marker_failures": [],
+      "observed": 128,
+      "ok": true
+    },
+    "codebooks": {
+      "expected": 27,
+      "marker_failures": [],
+      "observed": 27,
+      "ok": true
+    },
+    "final_disposition": {
+      "expected": "REJECT_CORE_HYPOTHESIS",
+      "ok": true
+    },
+    "formal_replay": {
+      "expected": 256,
+      "failed_tests": [],
+      "observed": 256,
+      "ok": true
+    },
+    "formal_source_commit_present": {
+      "commit": "34995e8e7c3069b22785ad04536f0d429e75c0fc",
+      "ok": true
+    },
+    "local_smoke": {
+      "failed_tests": [],
+      "ok": true,
+      "passed": true
+    },
+    "pai_attempt_statuses": {
+      "expected": {
+        "r13p15-caaa-v2-stage1-20260812-d": "Failed",
+        "r13p15-caaa-v2-stage1-20260812-e": "Failed",
+        "r13p15-caaa-v2-stage1-20260812-f": "Succeeded"
+      },
+      "observed": {
+        "r13p15-caaa-v2-stage1-20260812-d": "Failed",
+        "r13p15-caaa-v2-stage1-20260812-e": "Failed",
+        "r13p15-caaa-v2-stage1-20260812-f": "Succeeded"
+      },
+      "ok": true
+    },
+    "pai_completion": {
+      "created_utc": "2026-08-12T16:07:09.896588+00:00",
+      "disposition": "REJECT_CORE_HYPOTHESIS",
+      "formal_output_root": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_caaa_v2/stage1",
+      "nonce": "ba11fa5b332d5b2514b0fd4521d550ea",
+      "ok": true,
+      "quantized_rows": 69120,
+      "report_sha256": "5924ee1a77bc8c9339c5f450a8be87b9f8ad1e1a91b683fbf848f5f3f2047dd5",
+      "run_id": "r13p15-caaa-v2-stage1-20260812-f",
+      "status": "STAGE1_COMPLETE"
+    },
+    "rows:results_by_phase.csv": {
+      "expected": 432,
+      "observed": 432,
+      "ok": true
+    },
+    "rows:results_by_task.csv": {
+      "expected": 108,
+      "observed": 108,
+      "ok": true
+    },
+    "rows:work/jacobian_metrics.jsonl": {
+      "expected": 2304,
+      "observed": 2304,
+      "ok": true
+    },
+    "rows:work/quantization_results.jsonl": {
+      "expected": 69120,
+      "observed": 69120,
+      "ok": true
+    }
+  },
+  "failures": [],
+  "repo_root": ".",
+  "schema_version": 1,
+  "status": "PASS"
+}

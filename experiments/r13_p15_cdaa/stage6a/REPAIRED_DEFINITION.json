@@ -1,0 +1,164 @@
+{
+  "alphabet": {
+    "algorithm": "deterministic_id_stable_kmedoids",
+    "forbidden_k_before_disposition": [
+      32,
+      96,
+      128
+    ],
+    "k": 64,
+    "seed": 13150601,
+    "space": "frozen_C3_biencoder_embedding",
+    "tie_break": "lowest_frozen_candidate_source_id"
+  },
+  "bootstrap": {
+    "cluster": "source_episode",
+    "replicates": 10000,
+    "seed": 13150603
+  },
+  "candidate_set": {
+    "action_synthesis": false,
+    "coordinate_clipping": false,
+    "pseudo_inverse_decode": false,
+    "selection_returns_executed_bank_index": true,
+    "source": "DATA_SOURCE_BINDING.json",
+    "target_residual_equality_required": false
+  },
+  "checkpoints": {
+    "C3": [
+      {
+        "path": "experiments/r13_p15_ncer_aa/stage3/models/C3_NC_BIENCODER_member_0.pt",
+        "sha256": "b10f3e5def68a89ad33918fbbd9c0435f8de36215a1bf74d6e1f95e42e5d6b5d"
+      },
+      {
+        "path": "experiments/r13_p15_ncer_aa/stage3/models/C3_NC_BIENCODER_member_1.pt",
+        "sha256": "539c3ef4c2e4854265b61791f6f1c2e949b6ed86120c10d7df464dbf6fc8676b"
+      },
+      {
+        "path": "experiments/r13_p15_ncer_aa/stage3/models/C3_NC_BIENCODER_member_2.pt",
+        "sha256": "fb314c29cda098357de70996dd9ae1071812dc2aa51634fa8ad4c8e664c82ced"
+      }
+    ],
+    "Stage5_B1_B2": [
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.10_seed_13150517.pt",
+        "sha256": "229fccc316a564ae9cc95761a0639520f5970de20a91e2977e1d4444f44bb753"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.10_seed_13150529.pt",
+        "sha256": "a2240e4b7b9fef69e2ce28e07696bcef90c58d5a4cab2a86a8cabc6705fc295a"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.10_seed_13150543.pt",
+        "sha256": "af1582ea03aa6e98b6fab0913cf77532a3598588224b2e114744d51b53ab093f"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.15_seed_13150517.pt",
+        "sha256": "f614fc70bcda85ae014c52578d6ebcf406b73a6bd88bed2d7f456e0a5d4818b7"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.15_seed_13150529.pt",
+        "sha256": "d0610c6dd1ef92fc837c707af0d54377c8e5f97b229b4cb12c1e5fe72a7be794"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.15_seed_13150543.pt",
+        "sha256": "7147633ae1b3d3c36a1ad30d7706dec6f6fa810b050bd75e9f0ea175e39f129c"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.20_seed_13150517.pt",
+        "sha256": "2961c90fcabd900e6103d7780ba2b3ac114b416d08a326b695a3edb6d64db8cb"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.20_seed_13150529.pt",
+        "sha256": "6b5580d8c8290f616f5debb9845bd1ff9ef663a52fce18b6de31c1a92875a024"
+      },
+      {
+        "method": "B2_STATIC_CONSEQUENCE",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B2_STATIC_CONSEQUENCE/tau_0.20_seed_13150543.pt",
+        "sha256": "62887e5f6b77c81483165bf80aee965948fdb46b5ea2e2b30c419fb1fa20f024"
+      },
+      {
+        "method": "B1_ACTION_ONLY",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B1_ACTION_ONLY/seed_13150517.pt",
+        "sha256": "c67cc8344a5f7f8eafd4ce167933bcb3c39e772d6ae6d6d4c356183fea7b1f30"
+      },
+      {
+        "method": "B1_ACTION_ONLY",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B1_ACTION_ONLY/seed_13150529.pt",
+        "sha256": "99a3006d44cff40b2bc8efeb21df86d89a6fa2646e05ea70b5a0b9922c27702b"
+      },
+      {
+        "method": "B1_ACTION_ONLY",
+        "path": "experiments/r13_p15_cicr_dla/stage5/STATIC_METRIC_CHECKPOINTS/B1_ACTION_ONLY/seed_13150543.pt",
+        "sha256": "34790516d5d396c4e47851c27b843b7986a60993893caf602d9eece8b49d260b"
+      }
+    ]
+  },
+  "final_dispositions": [
+    "BLOCKED_HISTORICAL_BINDING_MISMATCH",
+    "BLOCKED_NO_EXECUTED_CANDIDATE_CACHE",
+    "BLOCKED_DEFECT_NOT_REPRODUCED",
+    "QUANTIZER_STILL_DEGENERATE",
+    "GAIN_NOT_DENSITY_SPECIFIC",
+    "C4_REMOVAL_INSUFFICIENT",
+    "REPAIR_CONFIRMED_ADVANCE_TO_STAGE6B"
+  ],
+  "frozen_before_stage6a_performance": true,
+  "gate_a": {
+    "bootstrap_ci_lower_bound_strictly_greater_than": 0.0,
+    "maximum_action_rmse_degradation": 0.2,
+    "maximum_contact_preservation_drop": 0.01,
+    "maximum_label_shuffle_gain_retention": 0.25,
+    "maximum_random_gain_retention": 0.5,
+    "maximum_uniform_gain_retention": 0.5,
+    "minimum_improved_contact_sensitive_tasks": 2,
+    "minimum_improved_tasks": 3,
+    "minimum_recovered_fraction": 0.2,
+    "minimum_relative_improvement": 0.08
+  },
+  "gate_h": {
+    "action_reconstruction_rmse_ratio_at_most": 1.25,
+    "median_normalized_assignment_utilization_strictly_greater_than": 0.5,
+    "median_realized_clipped_coordinate_fraction_less_than": 0.05,
+    "minimum_valid_candidates_per_state": 96,
+    "pooled_dead_code_fraction_less_than": 0.1
+  },
+  "kind": "stage6a_repaired_definition",
+  "metric": {
+    "capped_huber": true,
+    "equal_group_weights": true,
+    "groups": [
+      "object_pose",
+      "tcp_object_relative_pose",
+      "contact_mode_and_penetration",
+      "gripper_and_articulation",
+      "task_progress_and_constraint"
+    ],
+    "name": "BALANCED_TASK_EFFECT",
+    "raw_force_excluded": true,
+    "refit_or_reweight": false,
+    "source": "frozen Stage 2-5",
+    "train_only_robust_scales": true
+  },
+  "scope": {
+    "pai_submission": false,
+    "simulation": false,
+    "stage6b": false,
+    "training": false
+  },
+  "selection": {
+    "c4_pair_ranker_in_call_graph": false,
+    "c5_or_c6_path": false,
+    "intra_atlas_score": "C3_biencoder_squared_euclidean_distance_only",
+    "listwise_reranker": false,
+    "soft_mixture": false
+  }
+}
