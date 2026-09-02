@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "exported_at_utc": "2026-08-17T19:04:31Z",
+  "exported_at_utc": "2026-09-02T12:47:02Z",
   "export_format": "lark-doc-v2-markdown",
   "source_root": {
     "title": "R13-P15：Consequence-Adaptive Action Alphabets",
@@ -17,7 +17,8 @@
   },
   "notes": [
     "Each Markdown file is the unmodified content returned by lark-cli docs +fetch --api-version v2 --doc-format markdown.",
-    "step3 has two distinct direct child report nodes in Feishu; both are preserved."
+    "step3 has two distinct direct child report nodes in Feishu; both are preserved.",
+    "step7 was created and read back through lark-cli user identity after the Stage 6-A Gate H stop."
   ],
   "documents": [
     {
@@ -188,6 +189,32 @@
       "path": "step6/REPORT.md",
       "bytes": 9562,
       "sha256": "f932000c70f93f1dd4b4fb15f98d2833e01dd0608e5cd5bbc49eebe101c16e2f"
+    },
+    {
+      "key": "step7_plan",
+      "step": "step7",
+      "kind": "plan",
+      "title": "step7",
+      "wiki_node_token": "RiVRw6xbJihidvkVzqzc9FcVn4f",
+      "document_token": "PSKHdlzpOoQYlwxDh1RcH4iUnWe",
+      "revision_id": 4,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/RiVRw6xbJihidvkVzqzc9FcVn4f",
+      "path": "step7/PLAN.md",
+      "bytes": 13646,
+      "sha256": "47551a65c28365540b09ea29a844f5e02fc4ac6ff3fde7facaf13a4ddabedad6"
+    },
+    {
+      "key": "step7_report",
+      "step": "step7",
+      "kind": "report",
+      "title": "实验报告",
+      "wiki_node_token": "ILqGwJtqAi3VZOkxTP3cUkEMnid",
+      "document_token": "Iq3Hdn2saor8mdxn0fRcVnlunfh",
+      "revision_id": 3,
+      "url": "https://icnbwz7kd1ui.feishu.cn/wiki/ILqGwJtqAi3VZOkxTP3cUkEMnid",
+      "path": "step7/REPORT.md",
+      "bytes": 3424,
+      "sha256": "6c44d57a478fcc260b005315f4e09e52c5dce3e2cab84cfdb2538e8a7449b489"
     }
   ]
 }

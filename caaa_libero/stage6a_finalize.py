@@ -33,6 +33,7 @@ REQUIRED = (
     "STAGE6A_REPORT.md",
     "MECHANISM_REVERSE_ENGINEERING.json",
     "TEST_RESULTS.json",
+    "FEISHU_PUBLICATION.json",
 )
 
 
@@ -248,6 +249,9 @@ def release_verify(project_root, output_root=None):
         "no_effect_comparison_after_gate_h_failure": final.get("effect_error_comparisons_computed") is False,
         "no_stage6b": final.get("stage6b_started") is False,
         "all_tests_passed": _load(os.path.join(output_root, "TEST_RESULTS.json"))["all_passed"],
+        "feishu_readback_verified": _load(
+            os.path.join(output_root, "FEISHU_PUBLICATION.json")
+        )["readback_verified"],
     }
     result = {
         "kind": "stage6a_release_verification",

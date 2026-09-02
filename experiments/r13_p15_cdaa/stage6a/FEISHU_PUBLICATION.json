@@ -1,0 +1,34 @@
+{
+  "published_at_utc": "2026-09-02T12:47:02Z",
+  "step": {
+    "title": "step7",
+    "wiki_node_token": "RiVRw6xbJihidvkVzqzc9FcVn4f",
+    "document_token": "PSKHdlzpOoQYlwxDh1RcH4iUnWe",
+    "revision_id": 4,
+    "url": "https://icnbwz7kd1ui.feishu.cn/wiki/RiVRw6xbJihidvkVzqzc9FcVn4f",
+    "source_plan_sha256": "bfe8b5cd2af5526b86f4f0d29aa9d3b652ebeb784f63159788ac4e60a880f633",
+    "readback_path": "docs/feishu/experiment_planning/step7/PLAN.md",
+    "readback_bytes": 13646,
+    "readback_sha256": "47551a65c28365540b09ea29a844f5e02fc4ac6ff3fde7facaf13a4ddabedad6"
+  },
+  "report": {
+    "title": "实验报告",
+    "wiki_node_token": "ILqGwJtqAi3VZOkxTP3cUkEMnid",
+    "document_token": "Iq3Hdn2saor8mdxn0fRcVnlunfh",
+    "revision_id": 3,
+    "url": "https://icnbwz7kd1ui.feishu.cn/wiki/ILqGwJtqAi3VZOkxTP3cUkEMnid",
+    "local_report_path": "experiments/r13_p15_cdaa/stage6a/STAGE6A_REPORT.md",
+    "local_report_bytes": 3397,
+    "local_report_sha256": "a9480aa0d5198e4166bdc366f73abf60305d236b6b9e89df02ebd3db2ea8a10b",
+    "readback_path": "docs/feishu/experiment_planning/step7/REPORT.md",
+    "readback_bytes": 3424,
+    "readback_sha256": "6c44d57a478fcc260b005315f4e09e52c5dce3e2cab84cfdb2538e8a7449b489",
+    "readback_contains_exact_disposition": true,
+    "readback_contains_gate_h_status": true,
+    "readback_contains_stage6b_stop": true
+  },
+  "write_command_result": "success",
+  "readback_verified": true,
+  "lark_cli_version": "1.0.87",
+  "lark_cli_latest_notice": "1.0.93"
+}

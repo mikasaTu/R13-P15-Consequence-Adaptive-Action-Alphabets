@@ -3,7 +3,7 @@
 This directory is a revision-pinned Markdown snapshot of the step plans and experiment reports under the Feishu knowledge-base node [R13-P15: Consequence-Adaptive Action Alphabets](https://icnbwz7kd1ui.feishu.cn/wiki/BftiwVGSbijquakZvx4cQQEsnve).
 
 - Source parent: [实验规划](https://icnbwz7kd1ui.feishu.cn/wiki/DWrNwjjbUidPYSkoh3kcrO3Qnoh)
-- Exported at: `2026-08-17T19:04:31Z`
+- Exported at: `2026-09-02T12:47:02Z`
 - Export format: `lark-doc v2 Markdown`
 - Integrity and source metadata: [MANIFEST.json](MANIFEST.json)
 
@@ -15,5 +15,6 @@ This directory is a revision-pinned Markdown snapshot of the step plans and expe
 | step4 | [PLAN.md](step4/PLAN.md) (rev 2) | [REPORT.md](step4/REPORT.md) (rev 3) | [step4](https://icnbwz7kd1ui.feishu.cn/wiki/TR13wgC6YigXUykvpIkcB11hnZc) |
 | step5 | [PLAN.md](step5/PLAN.md) (rev 4) | [REPORT.md](step5/REPORT.md) (rev 8) | [step5](https://icnbwz7kd1ui.feishu.cn/wiki/GNqAwwyVoih4DckFWIKcnBF2naf) |
 | step6 | [PLAN.md](step6/PLAN.md) (rev 6) | [REPORT.md](step6/REPORT.md) (rev 3) | [step6](https://icnbwz7kd1ui.feishu.cn/wiki/QJ7mwyX3vipUzikpDEEcQDaInAb) |
+| step7 | [PLAN.md](step7/PLAN.md) (rev 4) | [REPORT.md](step7/REPORT.md) (rev 3) | [step7](https://icnbwz7kd1ui.feishu.cn/wiki/RiVRw6xbJihidvkVzqzc9FcVn4f) |
 
 The two reports under `step3` are separate direct children in Feishu and are intentionally retained as separate files. The document bodies were not rewritten during export; metadata is kept in this index and the manifest.

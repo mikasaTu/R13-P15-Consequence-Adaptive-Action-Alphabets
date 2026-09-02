@@ -28,6 +28,10 @@
       "bytes": 100,
       "sha256": "f67cb0b76f813b30762c34cb7caae16a4abaf2cfdc971e80d3c62948f37cef1b"
     },
+    "FEISHU_PUBLICATION.json": {
+      "bytes": 1503,
+      "sha256": "3fb9dd95b77968d39d75db437180dde0042140f93d5aca2dca446e0c39ce5470"
+    },
     "FINAL_DISPOSITION.json": {
       "bytes": 887,
       "sha256": "f1dd3ecb9fdfa9273bf0e5b8ade70a39ed655f39d7327f5511ad90f9c4364d18"
@@ -69,8 +73,8 @@
       "sha256": "a9480aa0d5198e4166bdc366f73abf60305d236b6b9e89df02ebd3db2ea8a10b"
     },
     "TEST_RESULTS.json": {
-      "bytes": 520,
-      "sha256": "fe1ee573c4d15f65252e73cfb4ccd1571b035c8bc4caabfb03cf105458f6024e"
+      "bytes": 686,
+      "sha256": "3f0fd5fe89a89941e529a9253411aba6ab9898eee478f18997a4822d81d09aeb"
     },
     "development_realized_rows.parquet": {
       "bytes": 1840,
@@ -80,13 +84,14 @@
   "checks": {
     "all_tests_passed": true,
     "exactly_one_disposition": true,
+    "feishu_readback_verified": true,
     "history_immutable": true,
     "no_effect_comparison_after_gate_h_failure": true,
     "no_stage6b": true,
     "registered_disposition": true,
     "required_artifacts_present": true
   },
-  "created_utc": "2026-09-02T11:31:39.378871+00:00",
+  "created_utc": "2026-09-02T12:49:00.800056+00:00",
   "final_disposition": "QUANTIZER_STILL_DEGENERATE",
   "kind": "stage6a_release_verification",
   "missing": [],

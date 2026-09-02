@@ -15,5 +15,11 @@
     "failed": 0,
     "duration_seconds": 294.35
   },
+  "post_publication_stage6a_tests": {
+    "command": "python -m pytest -q tests/test_stage6a.py",
+    "passed": 9,
+    "failed": 0,
+    "duration_seconds": 1.06
+  },
   "all_passed": true
 }
