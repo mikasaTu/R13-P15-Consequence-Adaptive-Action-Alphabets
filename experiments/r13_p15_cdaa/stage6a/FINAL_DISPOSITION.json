@@ -1,0 +1,37 @@
+{
+  "allowed_dispositions": [
+    "BLOCKED_HISTORICAL_BINDING_MISMATCH",
+    "BLOCKED_NO_EXECUTED_CANDIDATE_CACHE",
+    "BLOCKED_DEFECT_NOT_REPRODUCED",
+    "QUANTIZER_STILL_DEGENERATE",
+    "GAIN_NOT_DENSITY_SPECIFIC",
+    "C4_REMOVAL_INSUFFICIENT",
+    "REPAIR_CONFIRMED_ADVANCE_TO_STAGE6B"
+  ],
+  "effect_error_comparisons_computed": false,
+  "exactly_one_disposition": true,
+  "final_disposition": "QUANTIZER_STILL_DEGENERATE",
+  "precedence_trace": [
+    {
+      "condition": "historical_binding",
+      "passed": true
+    },
+    {
+      "condition": "executed_cache_binding",
+      "passed": true
+    },
+    {
+      "condition": "defect_reproduction",
+      "passed": true
+    },
+    {
+      "condition": "gate_h",
+      "passed": false
+    },
+    {
+      "condition": "stop_on_first_failure",
+      "selected": "QUANTIZER_STILL_DEGENERATE"
+    }
+  ],
+  "stage6b_started": false
+}

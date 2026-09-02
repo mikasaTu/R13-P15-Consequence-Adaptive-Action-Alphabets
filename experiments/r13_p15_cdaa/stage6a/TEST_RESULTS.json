@@ -1,0 +1,19 @@
+{
+  "kind": "stage6a_test_results",
+  "python": "/mnt/cpfs/zbl-cpfs-new/USERS/leon/envs/openpi_py311/bin/python",
+  "cuda_visible_devices": "",
+  "preregistration_commit": "89588fca6029cd2d5fa87c76afa8a294e5333144",
+  "stage6a_tests": {
+    "command": "python -m pytest -q tests/test_stage6a.py",
+    "passed": 9,
+    "failed": 0,
+    "duration_seconds": 12.12
+  },
+  "complete_suite": {
+    "command": "python -m pytest -q",
+    "passed": 59,
+    "failed": 0,
+    "duration_seconds": 294.35
+  },
+  "all_passed": true
+}

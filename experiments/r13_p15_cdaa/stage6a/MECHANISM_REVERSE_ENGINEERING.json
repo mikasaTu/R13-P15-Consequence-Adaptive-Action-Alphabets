@@ -1,0 +1,159 @@
+{
+  "causal_scope": "This localizes a structural occupancy failure before effect lookup. It does not estimate whether C4 deletion would improve or hurt physical-effect error.",
+  "kind": "stage6a_mechanism_reverse_engineering",
+  "method": "code_first_execution_path_and_tensor_audit",
+  "new_idea_generated": false,
+  "observed_repairs": {
+    "balanced_metric_binding": {
+      "legacy_contact_and_force_error_share": 0.9999526293361927,
+      "mechanism": "The health gate no longer uses the force-dominated Stage 1 normalization; Stage 2-5 balanced consequence semantics remain frozen."
+    },
+    "direct_executable_index_decode": {
+      "clipped_coordinate_fraction_after": 0.0,
+      "clipped_coordinate_fraction_before": 0.8342013888888888,
+      "mechanism": "Selection now returns a frozen executable candidate index; pseudo-inverse synthesis and coordinate clipping are absent."
+    }
+  },
+  "remaining_failure": {
+    "failed_check": "median_normalized_assignment_utilization_strictly_greater_than_0.50",
+    "mechanism": "K-medoids spreads 64 medoids across the 128 candidate C3 embeddings, but the 96 frozen target queries occupy a narrower local C3 region. Nearest-neighbor selection therefore activates a median 28 of 64 codes. Removing C4 cannot repair this pre-selection occupancy collapse because C4 is downstream of atlas construction and target-to-code assignment.",
+    "not_explained_by": [
+      "coordinate clipping (zero)",
+      "missing candidates (128 available)",
+      "pooled bank-wide dead codes (0.07874, passing)",
+      "action reconstruction blow-up (ratio 1.03539, passing)"
+    ],
+    "observed": 0.4375,
+    "threshold": 0.5
+  },
+  "task_phase_structural_utilization": [
+    {
+      "maximum_utilization": 0.46875,
+      "mean_utilization": 0.43359375,
+      "minimum_utilization": 0.390625,
+      "phase": "contact_onset",
+      "states": 4,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "maximum_utilization": 0.453125,
+      "mean_utilization": 0.41015625,
+      "minimum_utilization": 0.390625,
+      "phase": "free_space",
+      "states": 4,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "maximum_utilization": 0.453125,
+      "mean_utilization": 0.41015625,
+      "minimum_utilization": 0.359375,
+      "phase": "post_contact",
+      "states": 4,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "maximum_utilization": 0.46875,
+      "mean_utilization": 0.4453125,
+      "minimum_utilization": 0.40625,
+      "phase": "pre_contact",
+      "states": 4,
+      "task_id": "bowl_on_plate"
+    },
+    {
+      "maximum_utilization": 0.5,
+      "mean_utilization": 0.46484375,
+      "minimum_utilization": 0.421875,
+      "phase": "contact_onset",
+      "states": 4,
+      "task_id": "plate_push"
+    },
+    {
+      "maximum_utilization": 0.421875,
+      "mean_utilization": 0.3984375,
+      "minimum_utilization": 0.390625,
+      "phase": "free_space",
+      "states": 4,
+      "task_id": "plate_push"
+    },
+    {
+      "maximum_utilization": 0.40625,
+      "mean_utilization": 0.3984375,
+      "minimum_utilization": 0.390625,
+      "phase": "post_contact",
+      "states": 4,
+      "task_id": "plate_push"
+    },
+    {
+      "maximum_utilization": 0.453125,
+      "mean_utilization": 0.44140625,
+      "minimum_utilization": 0.4375,
+      "phase": "pre_contact",
+      "states": 4,
+      "task_id": "plate_push"
+    },
+    {
+      "maximum_utilization": 0.46875,
+      "mean_utilization": 0.4609375,
+      "minimum_utilization": 0.4375,
+      "phase": "contact_onset",
+      "states": 4,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "maximum_utilization": 0.453125,
+      "mean_utilization": 0.41015625,
+      "minimum_utilization": 0.359375,
+      "phase": "free_space",
+      "states": 4,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "maximum_utilization": 0.53125,
+      "mean_utilization": 0.5,
+      "minimum_utilization": 0.453125,
+      "phase": "post_contact",
+      "states": 4,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "maximum_utilization": 0.453125,
+      "mean_utilization": 0.40625,
+      "minimum_utilization": 0.34375,
+      "phase": "pre_contact",
+      "states": 4,
+      "task_id": "stove_turn_on"
+    },
+    {
+      "maximum_utilization": 0.4375,
+      "mean_utilization": 0.421875,
+      "minimum_utilization": 0.40625,
+      "phase": "contact_onset",
+      "states": 4,
+      "task_id": "wine_rack"
+    },
+    {
+      "maximum_utilization": 0.46875,
+      "mean_utilization": 0.45703125,
+      "minimum_utilization": 0.4375,
+      "phase": "free_space",
+      "states": 4,
+      "task_id": "wine_rack"
+    },
+    {
+      "maximum_utilization": 0.484375,
+      "mean_utilization": 0.45703125,
+      "minimum_utilization": 0.421875,
+      "phase": "post_contact",
+      "states": 4,
+      "task_id": "wine_rack"
+    },
+    {
+      "maximum_utilization": 0.453125,
+      "mean_utilization": 0.43359375,
+      "minimum_utilization": 0.390625,
+      "phase": "pre_contact",
+      "states": 4,
+      "task_id": "wine_rack"
+    }
+  ]
+}

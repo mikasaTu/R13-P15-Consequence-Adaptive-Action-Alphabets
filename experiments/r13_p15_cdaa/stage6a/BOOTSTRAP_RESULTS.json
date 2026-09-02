@@ -1,0 +1,7 @@
+{
+  "cluster_unit": "source_episode",
+  "executed": false,
+  "executed_replicates": 0,
+  "reason": "GATE_H_FAILED_EFFECT_ERROR_FORBIDDEN",
+  "registered_replicates": 10000
+}

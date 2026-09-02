@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "action_rmse": true,
+    "candidate_coverage": true,
+    "clipping": true,
+    "dead_code": true,
+    "utilization": false
+  },
+  "evaluated_before_effect_error": true,
+  "failure_disposition": "QUANTIZER_STILL_DEGENERATE",
+  "gate": "H",
+  "passed": false
+}

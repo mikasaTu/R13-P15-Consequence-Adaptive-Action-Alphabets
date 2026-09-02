@@ -1,0 +1,38 @@
+{
+  "cache_path": "/mnt/cpfs/zbl-cpfs-new/dataset/leon/experiments/r13_p15_cicr_dla/stage5_work/derived/stage5_development_cache.npz",
+  "cache_sha256": "a27d749118f44f0b9f9e86ad8a6b9be7ee9c05336f37dce76b6b205c8c8bbcb6",
+  "checks": {
+    "action_rmse": true,
+    "candidate_coverage": true,
+    "clipping": true,
+    "dead_code": true,
+    "utilization": false
+  },
+  "created_utc": "2026-09-02T11:16:20.389658+00:00",
+  "kind": "stage6a_quantizer_health",
+  "metrics": {
+    "action_reconstruction_rmse": 0.02137743975963432,
+    "action_reconstruction_rmse_ratio": 1.035388065630763,
+    "baseline_action_reconstruction_rmse": 0.02064678980688375,
+    "coordinate_clipping_operations": 0,
+    "development_states": 64,
+    "effect_error_values_read": false,
+    "median_normalized_assignment_utilization": 0.4375,
+    "median_realized_clipped_coordinate_fraction": 0.0,
+    "minimum_normalized_assignment_utilization": 0.34375,
+    "pooled_atlas_source_code_count": 127,
+    "pooled_dead_code_fraction": 0.07874015748031493,
+    "pooled_selected_source_code_count": 117,
+    "strongest_deployable_k64_baseline": "B2_STATIC_CONSEQUENCE_K64",
+    "targets_per_state": 96,
+    "valid_candidates_per_state_min": 128
+  },
+  "passed": false,
+  "thresholds": {
+    "action_reconstruction_rmse_ratio_at_most": 1.25,
+    "median_normalized_assignment_utilization_strictly_greater_than": 0.5,
+    "median_realized_clipped_coordinate_fraction_less_than": 0.05,
+    "minimum_valid_candidates_per_state": 96,
+    "pooled_dead_code_fraction_less_than": 0.1
+  }
+}

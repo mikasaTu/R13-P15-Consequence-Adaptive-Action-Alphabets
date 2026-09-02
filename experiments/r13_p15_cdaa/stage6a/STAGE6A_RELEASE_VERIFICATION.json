@@ -1,0 +1,94 @@
+{
+  "artifact_hashes": {
+    "ATLAS_K64.json": {
+      "bytes": 281463,
+      "sha256": "d7039487ebd3801700e0e45ff734b6c68f851ddeb835a896b14a41aa9c29b09f"
+    },
+    "BOOTSTRAP_RESULTS.json": {
+      "bytes": 174,
+      "sha256": "d0420bb8fb29d426e9e80831bbc54ee7f817228340a412bfe19536c14a2a150f"
+    },
+    "DATA_SOURCE_BINDING.json": {
+      "bytes": 5399,
+      "sha256": "84ac6ae72ab02c4b2adce2f6e03d6b18670acf1fd62d84970d2148f9ee95cb26"
+    },
+    "DEFECT_REPRODUCTION.json": {
+      "bytes": 3881,
+      "sha256": "2a6245287afd9a8d423ab3119345de2c4beceddbc0a68ca955dc15813e7561f2"
+    },
+    "DEVELOPMENT_CONTROLS.csv": {
+      "bytes": 100,
+      "sha256": "df8269a1dc979551a34e4fdc02574baf485336940f8c7c0d90bea1a3e574e26b"
+    },
+    "DEVELOPMENT_RANKING.csv": {
+      "bytes": 99,
+      "sha256": "f79ead6a593b07d29e55a14bb2a704bcff9cc3efa36f8f7425ebb950b3af8502"
+    },
+    "DEVELOPMENT_REALIZED.csv": {
+      "bytes": 100,
+      "sha256": "f67cb0b76f813b30762c34cb7caae16a4abaf2cfdc971e80d3c62948f37cef1b"
+    },
+    "FINAL_DISPOSITION.json": {
+      "bytes": 887,
+      "sha256": "f1dd3ecb9fdfa9273bf0e5b8ade70a39ed655f39d7327f5511ad90f9c4364d18"
+    },
+    "GATE_A.json": {
+      "bytes": 85,
+      "sha256": "74cd11fa4549aa4392f48d401de1bbae40f832831bca2184b42e305fe4508d79"
+    },
+    "GATE_H.json": {
+      "bytes": 279,
+      "sha256": "80d191a4e02b8b2af2dcc875772c62fa0334ffcc3739159d544d5e2283e0af63"
+    },
+    "HISTORICAL_BINDING.json": {
+      "bytes": 1062,
+      "sha256": "140ba6daa7622f28446b1e761e1f4cb906a5ec3c9ab75214737ae395f190bedb"
+    },
+    "MECHANISM_REVERSE_ENGINEERING.json": {
+      "bytes": 5035,
+      "sha256": "8b05d66cb06828aa49be044f5ba1112d17e3022e5d5d4d49ddff990d4ea74360"
+    },
+    "PREREGISTRATION.md": {
+      "bytes": 2680,
+      "sha256": "c45a097252652985bddcf6d7062e1eef76124167bd20082d3539f9a83ecf2ed6"
+    },
+    "QUANTIZER_HEALTH.json": {
+      "bytes": 1552,
+      "sha256": "bed477a1d61d1772587e0f847068f7b2ec6e8b7082c2fb7aa191d697835a6c04"
+    },
+    "RECOVERY_ACCOUNTING.json": {
+      "bytes": 111,
+      "sha256": "87ff68688096ee5489aff1e7c94f2c8bcca65b1dda4a12f332176e262146e574"
+    },
+    "REPAIRED_DEFINITION.json": {
+      "bytes": 6449,
+      "sha256": "573bc5a8fb073eccf1030bd3086890fefc10dfbc79d067d6534e75d3b8503be4"
+    },
+    "STAGE6A_REPORT.md": {
+      "bytes": 3397,
+      "sha256": "a9480aa0d5198e4166bdc366f73abf60305d236b6b9e89df02ebd3db2ea8a10b"
+    },
+    "TEST_RESULTS.json": {
+      "bytes": 520,
+      "sha256": "fe1ee573c4d15f65252e73cfb4ccd1571b035c8bc4caabfb03cf105458f6024e"
+    },
+    "development_realized_rows.parquet": {
+      "bytes": 1840,
+      "sha256": "d26b175cb35dd74dabf4f4776c884f3160d4c09f415beb439bc06b732482923a"
+    }
+  },
+  "checks": {
+    "all_tests_passed": true,
+    "exactly_one_disposition": true,
+    "history_immutable": true,
+    "no_effect_comparison_after_gate_h_failure": true,
+    "no_stage6b": true,
+    "registered_disposition": true,
+    "required_artifacts_present": true
+  },
+  "created_utc": "2026-09-02T11:31:39.378871+00:00",
+  "final_disposition": "QUANTIZER_STILL_DEGENERATE",
+  "kind": "stage6a_release_verification",
+  "missing": [],
+  "passed": true
+}
